@@ -40,10 +40,11 @@ def submit_subject_test(
     user: models.User = Depends(get_current_db_user),
     db: Session = Depends(get_db),
 ):
+    rewards.lock_wallet(db, user.id)
     attempt = (
         db.query(models.TestAttempt)
-        .options(joinedload(models.TestAttempt.test))
-        .filter(models.TestAttempt.id == attempt_id)
+        .filter(models.TestAttempt.id == attempt_id, models.TestAttempt.user_id == user.id)
+        .with_for_update().populate_existing()
         .first()
     )
     if not attempt or attempt.user_id != user.id:
@@ -115,6 +116,7 @@ def submit_subject_test(
                 models.StudentSubtopicStats.user_id == user.id,
                 models.StudentSubtopicStats.subtopic_id == question.subtopic_id,
             )
+            .with_for_update().populate_existing()
             .first()
         )
         if not stats:

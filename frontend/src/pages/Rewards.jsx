@@ -26,7 +26,18 @@ const REASON_LABEL = {
 }
 
 function fmtDate(iso) {
-  return new Date(iso).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })
+  if (!iso) return 'Date unavailable'
+  // MySQL timestamps arrive without a timezone. Treat those as UTC.
+  const utc = /(?:Z|[+-]\d{2}:\d{2})$/i.test(iso) ? iso : `${iso}Z`
+  return new Date(utc).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Kolkata' })
+}
+
+function transactionDate(transaction) {
+  // The ledger note is the actual earning day, independent of DB timezone.
+  if (transaction.reason === 'daily_question' && /^\d{4}-\d{2}-\d{2}$/.test(transaction.note || '')) {
+    return fmtDate(`${transaction.note}T12:00:00Z`)
+  }
+  return fmtDate(transaction.created_at)
 }
 
 export default function Rewards() {
@@ -153,6 +164,7 @@ export default function Rewards() {
 
         <div className="panel" style={{ marginTop: 20 }}>
           <h2 className="panel-title">Transaction history</h2>
+          <p className="muted">Dates follow India Standard Time. Daily-question rewards reset at midnight IST.</p>
           {wallet.transactions.length === 0 ? (
             <p className="muted">No coin activity yet — solve today's daily question to start earning.</p>
           ) : (
@@ -161,7 +173,7 @@ export default function Rewards() {
                 <div key={t.id} className="row">
                   <div className="row-main">
                     <div style={{ fontWeight: 600 }}>{REASON_LABEL[t.reason] || t.reason}</div>
-                    <div className="faint" style={{ fontSize: 13 }}>{fmtDate(t.created_at)}</div>
+                    <div className="faint" style={{ fontSize: 13 }}>{transactionDate(t)}</div>
                   </div>
                   <span className="row-value" style={{ color: t.amount >= 0 ? 'var(--good)' : 'var(--bad)' }}>
                     {t.amount >= 0 ? '+' : ''}{t.amount}

@@ -101,10 +101,12 @@ def _create_assignment(db: Session, user: models.User, today) -> models.DailyQue
 
 @router.get("", response_model=schemas.DailyQuestionOut)
 def get_today(user: models.User = Depends(get_current_db_user), db: Session = Depends(get_db)):
+    rewards.lock_wallet(db, user.id)
     today = rewards.today_ist()
     assignment = (
         db.query(models.DailyQuestionAssignment)
         .filter(models.DailyQuestionAssignment.user_id == user.id, models.DailyQuestionAssignment.assigned_date == today)
+        .with_for_update().populate_existing()
         .first()
     )
     if assignment is None:
@@ -119,6 +121,7 @@ def get_today(user: models.User = Depends(get_current_db_user), db: Session = De
     attempt = (
         db.query(models.TestAttempt)
         .filter(models.TestAttempt.test_id == assignment.test_id, models.TestAttempt.user_id == user.id)
+        .with_for_update().populate_existing()
         .first()
     )
 

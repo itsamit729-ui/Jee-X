@@ -8,7 +8,6 @@ commit boundary (see subject_test_attempts.py).
 
 from datetime import date, datetime, timedelta, timezone
 
-from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app import models
@@ -25,13 +24,23 @@ def today_ist() -> date:
     return datetime.now(IST).date()
 
 
+def lock_wallet(db: Session, user_id: int):
+    """Serialize reward writers and refresh stale ORM state after waiting.
+
+    Keep this lock until the caller commits. All writers acquire wallet before
+    attempt/ledger locks, including redemption and daily assignment creation.
+    """
+    return (db.query(models.StudentProfile).filter_by(user_id=user_id)
+            .with_for_update().populate_existing().one())
+
+
 def total_correct_answers(db: Session, user_id: int) -> int:
-    return (
-        db.query(func.count(models.QuestionResponse.id))
-        .filter(models.QuestionResponse.user_id == user_id, models.QuestionResponse.outcome == "correct")
-        .scalar()
-        or 0
-    )
+    # A locking read sees submissions committed while this request waited for
+    # the wallet, even if authentication already opened a MySQL RR snapshot.
+    return len(db.query(models.QuestionResponse.id).filter(
+        models.QuestionResponse.user_id == user_id,
+        models.QuestionResponse.outcome == "correct").with_for_update().all())
+
 
 
 def award_coins(
@@ -42,8 +51,12 @@ def award_coins(
     reference_id: int | None = None,
     note: str | None = None,
 ) -> models.EdgeCoinTransaction:
-    profile = user.student_profile
-    txn = models.EdgeCoinTransaction(user_id=user.id, amount=amount, reason=reason, reference_id=reference_id, note=note)
+    profile = lock_wallet(db, user.id)
+    return _award_locked(db, profile, user.id, amount, reason, reference_id, note)
+
+
+def _award_locked(db, profile, user_id, amount, reason, reference_id=None, note=None):
+    txn = models.EdgeCoinTransaction(user_id=user_id, amount=amount, reason=reason, reference_id=reference_id, note=note)
     db.add(txn)
     profile.edge_coins = (profile.edge_coins or 0) + amount
     db.flush()
@@ -72,6 +85,7 @@ def _streak_bonus_already_awarded(db: Session, user_id: int, note: str) -> bool:
             models.EdgeCoinTransaction.reason == "streak_bonus",
             models.EdgeCoinTransaction.note == note,
         )
+        .with_for_update()
         .first()
         is not None
     )
@@ -83,9 +97,15 @@ def update_streak_and_award(db: Session, user: models.User, activity_date: date 
     streak re-hitting the same threshold twice via a ledger lookup, not just an in-memory check.
     Returns the total coins awarded this call (daily coin + any streak bonus)."""
     activity_date = activity_date or today_ist()
-    profile = user.student_profile
-
-    if profile.last_streak_date == activity_date:
+    profile = lock_wallet(db, user.id)
+    # Check the ledger as well as the cached streak; old/reset profile state
+    # must never make an already-awarded day eligible again.
+    awarded = db.query(models.EdgeCoinTransaction.id).filter(
+        models.EdgeCoinTransaction.user_id == user.id,
+        models.EdgeCoinTransaction.reason == "daily_question",
+        models.EdgeCoinTransaction.note == str(activity_date),
+    ).with_for_update().first()
+    if awarded or (profile.last_streak_date and profile.last_streak_date >= activity_date):
         return 0
 
     if profile.last_streak_date == activity_date - timedelta(days=1):
@@ -95,14 +115,14 @@ def update_streak_and_award(db: Session, user: models.User, activity_date: date 
     profile.last_streak_date = activity_date
     profile.longest_streak = max(profile.longest_streak or 0, profile.current_streak)
 
-    award_coins(db, user, DAILY_QUESTION_COINS, reason="daily_question", note=str(activity_date))
+    _award_locked(db, profile, user.id, DAILY_QUESTION_COINS, reason="daily_question", note=str(activity_date))
     earned = DAILY_QUESTION_COINS
 
     bonus = STREAK_BONUSES.get(profile.current_streak)
     if bonus:
         note = f"streak_{profile.current_streak}"
         if not _streak_bonus_already_awarded(db, user.id, note):
-            award_coins(db, user, bonus, reason="streak_bonus", note=note)
+            _award_locked(db, profile, user.id, bonus, reason="streak_bonus", note=note)
             earned += bonus
 
     return earned
@@ -110,7 +130,7 @@ def update_streak_and_award(db: Session, user: models.User, activity_date: date 
 
 def redeem(db: Session, user: models.User, catalog_item: models.RewardCatalogItem, shipping: dict) -> models.RewardRedemption:
     """Raises ValueError on insufficient balance — routers map that to a 409."""
-    profile = user.student_profile
+    profile = lock_wallet(db, user.id)
     if (profile.edge_coins or 0) < catalog_item.cost_coins:
         raise ValueError("Insufficient Edge Coins balance.")
 
@@ -123,5 +143,5 @@ def redeem(db: Session, user: models.User, catalog_item: models.RewardCatalogIte
     )
     db.add(redemption)
     db.flush()
-    award_coins(db, user, -catalog_item.cost_coins, reason="redemption", reference_id=redemption.id, note=catalog_item.name)
+    _award_locked(db, profile, user.id, -catalog_item.cost_coins, reason="redemption", reference_id=redemption.id, note=catalog_item.name)
     return redemption
