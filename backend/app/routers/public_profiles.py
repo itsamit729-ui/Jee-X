@@ -42,7 +42,8 @@ def public_read(request: Request, response: Response):
 
 class SettingsIn(BaseModel):
     model_config = ConfigDict(extra='forbid', str_strip_whitespace=True)
-    enabled: bool
+    # Accepted for older clients; visibility is always public.
+    enabled: bool = True
     show_activity: bool
     display_name: str = Field(default='', max_length=80)
     bio: str = Field(default='', max_length=280)
@@ -54,7 +55,7 @@ def active_student(user):
 
 
 def settings_out(row):
-    return dict(enabled=bool(row and row.enabled), show_activity=bool(row and row.show_activity),
+    return dict(enabled=True, show_activity=bool(row and row.show_activity),
                 display_name=row.display_name if row else '', bio=row.bio if row else '')
 
 
@@ -75,6 +76,7 @@ def save_settings(body: SettingsIn, response: Response, user=Depends(get_current
         db.add(row)
     for key, value in body.model_dump().items():
         setattr(row, key, value)
+    row.enabled = True
     db.commit()
     response.headers['Cache-Control'] = 'no-store'
     return settings_out(row)
@@ -84,9 +86,8 @@ def resolve(db, username):
     username = username.strip().lower()
     if not re.fullmatch(r'[a-z0-9_]{3,20}', username):
         raise HTTPException(404, 'Profile unavailable.', headers={'Cache-Control': 'no-store'})
-    found = db.query(models.User, PublicProfile).join(PublicProfile, PublicProfile.user_id == models.User.id).filter(
-        models.User.username == username, models.User.status == 'active', models.User.role == 'student',
-        PublicProfile.enabled.is_(True)).first()
+    found = db.query(models.User, PublicProfile).outerjoin(PublicProfile, PublicProfile.user_id == models.User.id).filter(
+        models.User.username == username, models.User.status == 'active', models.User.role == 'student').first()
     if not found or not found[0].student_profile:
         raise HTTPException(404, 'Profile unavailable.', headers={'Cache-Control': 'no-store'})
     return found
@@ -123,7 +124,7 @@ def get_public_profile(username: str, db: Session = Depends(get_db)):
             JeeXRating.last_rated_at >= datetime.utcnow()-timedelta(days=30), JeeXRating.rating > account.rating).count()
     recent = events_for(db, user).order_by(RatedContest.closes_at.desc(), RatedContest.id.desc()).limit(100).all()
     activity = None
-    if public.show_activity:
+    if public and public.show_activity:
         from app.services.rewards import today_ist
         since = today_ist()-timedelta(days=181)
         dates = db.query(models.DailyQuestionAssignment.assigned_date).join(
@@ -136,7 +137,7 @@ def get_public_profile(username: str, db: Session = Depends(get_db)):
             current = 0
         activity = dict(current_streak=current, longest_streak=p.longest_streak or 0,
                         dates=[d[0].isoformat() for d in dates])
-    return dict(username=user.username, display_name=public.display_name, bio=public.bio,
+    return dict(username=user.username, display_name=public.display_name if public else '', bio=public.bio if public else '',
                 exam=p.target_exam, target_year=p.target_year, rating=rating, rank=rank,
                 history=[event_out(e,c) for e,c in reversed(recent)], activity=activity)
 

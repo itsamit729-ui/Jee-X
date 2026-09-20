@@ -41,28 +41,32 @@ def enable(c, **extra):
     return c.patch('/api/profile/public-settings', json=dict(enabled=True, show_activity=False, display_name='', bio='', **extra))
 
 
-def test_private_default_opt_in_and_revocation(setup):
+def test_public_without_settings_and_legacy_hidden_records(setup):
     db,c,_,_=setup
-    assert c.get('/api/profile/public-settings').json()['enabled'] is False
-    for path in ['/api/public-profiles/student1','/api/public-profiles/student1/contests','/api/public-profiles/missing']:
-        assert c.get(path).status_code == 404
-    assert enable(c).status_code == 200
+    assert c.get('/api/profile/public-settings').json()['enabled'] is True
     res=c.get('/api/public-profiles/STUDENT1')
     assert res.status_code == 200 and res.headers['cache-control']=='no-store'
     data=res.json()
     assert set(data)=={'username','display_name','bio','exam','target_year','rating','rank','history','activity'}
     assert data['activity'] is None and data['rating']['rating'] is None
+    assert data['display_name']=='' and data['bio']==''
     assert 'private' not in res.text.lower() and '2008' not in res.text
-    assert c.patch('/api/profile/public-settings',json={'enabled':False,'show_activity':False}).status_code==200
-    assert c.get('/api/public-profiles/student1').status_code==404
-    assert c.get('/api/public-profiles/student1/contests').status_code==404
+    assert c.get('/api/public-profiles/student1/contests').status_code==200
+    assert c.get('/api/public-profiles/missing').status_code==404
+    db.add(models.PublicProfile(user_id=1,enabled=False,show_activity=False,display_name='',bio=''))
+    db.commit()
+    assert c.get('/api/public-profiles/student1').status_code==200
+    result=c.patch('/api/profile/public-settings',json={'enabled':False,'show_activity':False})
+    assert result.status_code==200 and result.json()['enabled'] is True
+    assert c.get('/api/public-profiles/student1').status_code==200
+    assert c.get('/api/public-profiles/student1/contests').status_code==200
 
 
 def test_settings_cannot_edit_other_user_or_rating(setup):
     db,c,active,app=setup
     assert c.patch('/api/profile/public-settings',json={'enabled':True,'show_activity':False,'user_id':2}).status_code==422
     enable(c); active[0]=2
-    assert c.get('/api/profile/public-settings').json()['enabled'] is False
+    assert c.get('/api/profile/public-settings').json()['enabled'] is True
     assert c.patch('/api/profile/public-settings',json={'enabled':True,'show_activity':False,'bio':'x'*281}).status_code==422
     app.dependency_overrides.pop(get_current_db_user)
     assert c.get('/api/profile/public-settings').status_code in (401,403)

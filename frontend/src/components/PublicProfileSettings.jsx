@@ -7,7 +7,6 @@ import '../public-profile.css'
 export default function PublicProfileSettings({ username }) {
   const { getAccessTokenSilently } = useAuth0()
   const [form, setForm] = useState(null)
-  const [published, setPublished] = useState(false)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
@@ -18,7 +17,7 @@ export default function PublicProfileSettings({ username }) {
     ;(async () => {
       try {
         const data = await request('/api/profile/public-settings', { token: await getAccessTokenSilently() })
-        if (active) { setForm(data); setPublished(data.enabled) }
+        if (active) { setForm(data) }
       } catch (e) { if (active) setError(e.message) }
     })()
     return () => { active = false }
@@ -28,7 +27,7 @@ export default function PublicProfileSettings({ username }) {
     e.preventDefault(); setBusy(true); setError(''); setMessage('')
     try {
       const data = await request('/api/profile/public-settings', { method: 'PATCH', token: await getAccessTokenSilently(), body: form })
-      setForm(data); setPublished(data.enabled); setMessage(data.enabled ? 'Your public profile is live.' : 'Your public profile is hidden.')
+      setForm(data); setMessage('Public profile updated.')
     } catch (e) { setError(e.message) } finally { setBusy(false) }
   }
   async function copy() {
@@ -37,13 +36,12 @@ export default function PublicProfileSettings({ username }) {
   }
   return <section className="public-settings pp-card">
     <p className="pp-eyebrow">YOUR PRESENCE</p><h2>Public profile</h2>
-    <p className="pp-muted">Share your rating and achievements. Your email, date of birth, shipping details and test answers stay private. Leaderboard visibility is managed separately in Rankings.</p>
+    <p className="pp-muted">Every student has a public profile. Your email, date of birth, shipping details and test answers stay private. Leaderboard visibility is managed separately in Rankings.</p>
     {error && <p role="alert">{error} {!form && <button onClick={() => setRetry(n => n+1)}>Retry</button>}</p>}
-    {!form && !error && <p role="status">Loading privacy settings…</p>}
+    {!form && !error && <p role="status">Loading profile settings…</p>}
     {form && <form onSubmit={save}>
       <fieldset disabled={busy} className="pp-fields">
-        <label className="pp-check"><input type="checkbox" checked={form.enabled} onChange={e => update('enabled', e.target.checked)} />Enable public profile</label>
-        <p className="pp-muted">When enabled, anyone with your username or link can view your current exam cohort, rating, badges and finalized rated contest history.</p>
+        <p className="pp-muted">Anyone with your username or link can view your current exam cohort, rating, badges and finalized rated contest history.</p>
         <label htmlFor="public-name">Public display name <span className="pp-muted">(optional)</span></label>
         <input id="public-name" className="input" maxLength={80} value={form.display_name} onChange={e => update('display_name', e.target.value)} placeholder="Use a name you’re comfortable sharing" />
         <label htmlFor="public-bio">Short bio</label>
@@ -53,7 +51,7 @@ export default function PublicProfileSettings({ username }) {
         <button className="btn btn-primary" type="submit">{busy ? 'Saving…' : 'Save public profile'}</button>
       </fieldset>
     </form>}
-    {published && <div className="pp-actions"><Link className="btn btn-secondary" to={`/u/${encodeURIComponent(username)}`}>View public profile</Link><button className="btn btn-secondary" onClick={copy}>Copy profile link</button></div>}
+    <div className="pp-actions"><Link className="btn btn-secondary" to={`/u/${encodeURIComponent(username)}`}>View public profile</Link><button className="btn btn-secondary" onClick={copy}>Copy profile link</button></div>
     {message && <p role="status">{message}</p>}
   </section>
 }
