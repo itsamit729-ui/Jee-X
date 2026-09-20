@@ -1,3 +1,4 @@
+import PublicProfileSettings from '../components/PublicProfileSettings.jsx'
 import RatingSummary from '../components/RatingSummary.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -196,6 +197,7 @@ export default function Profile() {
           {saved && !editing && <p className="hint hint-ok" style={{ marginTop: 18 }} role="status">Changes saved.</p>}
         </div>
 
+        <PublicProfileSettings username={profile.username} />
         <RatingSummary />
         <div style={{ marginTop: 20 }}>
           <StreakCalendar />

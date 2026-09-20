@@ -92,3 +92,5 @@ __all__ = [
 ]
 
 from app.models.ranking import JeeXRating, RatedContest, ContestEntry
+
+from app.models.public_profile import PublicProfile
