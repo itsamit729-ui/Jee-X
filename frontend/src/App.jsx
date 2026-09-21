@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react'
-import { Loader } from './components/Brand.jsx'
+import { IITianFactToast, Loader } from './components/Brand.jsx'
 import { Routes, Route } from 'react-router-dom'
 const PublicProfile = lazy(() => import('./pages/PublicProfile.jsx'))
 const Syllabus = lazy(() => import('./pages/Syllabus.jsx'))
@@ -20,7 +20,7 @@ import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 export default function App() {
   return (
-    <Suspense fallback={<Loader fullScreen label="Opening your study space" />}><Routes>
+    <><IITianFactToast /><Suspense fallback={<Loader fullScreen label="Opening your study space" />}><Routes>
       <Route path="/u/:username" element={<PublicProfile />} />
       <Route path="/students" element={<PublicProfile />} />
       <Route path="/syllabus" element={<Syllabus />} />
@@ -100,6 +100,6 @@ export default function App() {
           </ProtectedRoute>
         }
       />
-    </Routes></Suspense>
+    </Routes></Suspense></>
   )
 }

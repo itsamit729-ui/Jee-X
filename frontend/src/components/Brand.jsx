@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const IITIAN_FACTS = [
@@ -54,12 +54,28 @@ export function Logo({ to = '/' }) {
 
 export function Loader({ label, fullScreen = false }) {
   const [factIndex, setFactIndex] = useState(() => Math.floor(Math.random() * IITIAN_FACTS.length))
+  const factRef = useRef(IITIAN_FACTS[factIndex])
+  const factShownAtRef = useRef(Date.now())
+
+  useEffect(() => {
+    factRef.current = IITIAN_FACTS[factIndex]
+    factShownAtRef.current = Date.now()
+  }, [factIndex])
 
   useEffect(() => {
     const timer = window.setInterval(() => {
       setFactIndex((current) => (current + 1) % IITIAN_FACTS.length)
     }, 4800)
-    return () => window.clearInterval(timer)
+    return () => {
+      window.clearInterval(timer)
+      const timeAlreadyVisible = Date.now() - factShownAtRef.current
+      const remainingReadingTime = Math.max(0, 7500 - timeAlreadyVisible)
+      if (remainingReadingTime > 500) {
+        window.dispatchEvent(new CustomEvent('jeex:loading-fact-complete', {
+          detail: { fact: factRef.current, duration: remainingReadingTime },
+        }))
+      }
+    }
   }, [])
 
   const fact = IITIAN_FACTS[factIndex]
@@ -74,5 +90,36 @@ export function Loader({ label, fullScreen = false }) {
         <span className="loader-fact-count">{String(factIndex + 1).padStart(2, '0')} / {String(IITIAN_FACTS.length).padStart(2, '0')}</span>
       </div>
     </div>
+  )
+}
+
+export function IITianFactToast() {
+  const [fact, setFact] = useState(null)
+  const [duration, setDuration] = useState(7500)
+  const timerRef = useRef(null)
+
+  useEffect(() => {
+    const showFact = (event) => {
+      window.clearTimeout(timerRef.current)
+      setFact(event.detail.fact)
+      setDuration(event.detail.duration)
+      timerRef.current = window.setTimeout(() => setFact(null), event.detail.duration)
+    }
+    window.addEventListener('jeex:loading-fact-complete', showFact)
+    return () => {
+      window.removeEventListener('jeex:loading-fact-complete', showFact)
+      window.clearTimeout(timerRef.current)
+    }
+  }, [])
+
+  if (!fact) return null
+  return (
+    <aside className="fact-toast" aria-live="polite" aria-label="IITian fact">
+      <button type="button" className="fact-toast-close" onClick={() => setFact(null)} aria-label="Dismiss IITian fact">×</button>
+      <span className="fact-toast-kicker">IITIAN STORY</span>
+      <strong>{fact.name}</strong>
+      <p>{fact.text}</p>
+      <span className="fact-toast-progress" style={{ '--fact-duration': `${duration}ms` }} aria-hidden="true" />
+    </aside>
   )
 }
