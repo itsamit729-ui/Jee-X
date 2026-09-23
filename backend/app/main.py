@@ -17,6 +17,7 @@ from app.routers import (
     rewards,
     ranking,
     public_profiles,
+    admin_dashboard,
 )
 
 load_dotenv()
@@ -45,6 +46,7 @@ app.include_router(daily_question.router)
 app.include_router(rewards.router)
 app.include_router(ranking.router)
 app.include_router(public_profiles.router)
+app.include_router(admin_dashboard.router)
 
 
 @app.get("/health")

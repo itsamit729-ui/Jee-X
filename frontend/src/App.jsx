@@ -1,6 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { IITianFactToast, Loader } from './components/Brand.jsx'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 const PublicProfile = lazy(() => import('./pages/PublicProfile.jsx'))
 const Syllabus = lazy(() => import('./pages/Syllabus.jsx'))
 const Ranking = lazy(() => import('./pages/Ranking.jsx'))
@@ -16,11 +16,16 @@ const Profile = lazy(() => import('./pages/Profile.jsx'))
 const SubjectTest = lazy(() => import('./pages/SubjectTest.jsx'))
 const DailyQuestion = lazy(() => import('./pages/DailyQuestion.jsx'))
 const Rewards = lazy(() => import('./pages/Rewards.jsx'))
+const Admin = lazy(() => import('./pages/Admin.jsx'))
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 export default function App() {
+  const location = useLocation()
+  const isAdmin = location.pathname === '/admin'
+
   return (
-    <><IITianFactToast /><Suspense fallback={<Loader fullScreen label="Opening your study space" />}><Routes>
+    <>{!isAdmin && <IITianFactToast />}<Suspense fallback={<Loader fullScreen label={isAdmin ? "Opening admin console" : "Opening your study space"} />}><Routes>
+      <Route path="/admin" element={<Admin />} />
       <Route path="/u/:username" element={<PublicProfile />} />
       <Route path="/students" element={<PublicProfile />} />
       <Route path="/syllabus" element={<Syllabus />} />
