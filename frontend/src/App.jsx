@@ -17,6 +17,7 @@ const SubjectTest = lazy(() => import('./pages/SubjectTest.jsx'))
 const DailyQuestion = lazy(() => import('./pages/DailyQuestion.jsx'))
 const Rewards = lazy(() => import('./pages/Rewards.jsx'))
 const Admin = lazy(() => import('./pages/Admin.jsx'))
+const ImageQuestions = lazy(() => import('./pages/ImageQuestions.jsx'))
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 export default function App() {
@@ -33,6 +34,7 @@ export default function App() {
       <Route path="/ranked-test/:id" element={<ProtectedRoute><RankedTest /></ProtectedRoute>} />
       <Route path="/" element={<Home />} />
       <Route path="/free-test" element={<FreeTest />} />
+      <Route path="/image-questions" element={<ImageQuestions />} />
       <Route
         path="/test"
         element={
@@ -108,3 +110,4 @@ export default function App() {
     </Routes></Suspense></>
   )
 }
+

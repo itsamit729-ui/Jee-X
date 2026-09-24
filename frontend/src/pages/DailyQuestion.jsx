@@ -5,6 +5,7 @@ import { Flame, Coins } from 'lucide-react'
 import { dailyQuestionService } from '../lib/dailyQuestion.js'
 import { subjectTestGraderService } from '../lib/subjectTests.js'
 import MathText from '../components/MathText.jsx'
+import QuestionAssets from '../components/QuestionAssets.jsx'
 import AppHeader from '../components/AppHeader.jsx'
 import { Loader } from '../components/Brand.jsx'
 import { GOOD, BAD } from '../crackjee/ui.js'
@@ -145,6 +146,7 @@ export default function DailyQuestion() {
           </div>
           {q.passage && <div className="passage"><MathText text={q.passage} /></div>}
           <div className="qtext"><MathText text={q.stem} /></div>
+            <QuestionAssets assets={q.assets} />
 
           {q.type === 'numerical' ? (
             <div className="field" style={{ maxWidth: 280, marginBottom: 0 }}>
@@ -179,3 +181,4 @@ export default function DailyQuestion() {
     </div>
   )
 }
+

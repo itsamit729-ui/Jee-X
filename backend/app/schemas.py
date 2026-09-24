@@ -1,7 +1,7 @@
 import re
 from datetime import date, datetime
 from typing import Literal
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, Field, field_validator
 
 USERNAME_RE = re.compile(r"^[a-zA-Z0-9_]{3,20}$")
 
@@ -164,11 +164,17 @@ class TestOptionOut(BaseModel):
     content: str
 
 
+class QuestionAssetOut(BaseModel):
+    url: str | None = None
+    alt_text: str = ""
+
+
 class TestQuestionOut(BaseModel):
     question_id: int
     ref: str
     type: str
     stem: str
+    assets: list[QuestionAssetOut] = Field(default_factory=list)
     passage: str | None = None
     options: list[TestOptionOut]
     marks_correct: int
@@ -340,3 +346,4 @@ class WalletOut(BaseModel):
     transactions: list[EdgeCoinTransactionOut]
     catalog: list[RewardCatalogItemOut]
     redemptions: list[RewardRedemptionOut]
+

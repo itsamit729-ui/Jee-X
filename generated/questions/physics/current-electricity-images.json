@@ -1,0 +1,162 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Current Electricity",
+    "slug": "current-electricity",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 16
+  },
+  "subtopics": [
+    {
+      "slug": "combination-of-resistors",
+      "name": "Combination of resistors",
+      "position": 1
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PHY-CUR-IMG-001",
+      "subtopic": "combination-of-resistors",
+      "type": "single_correct",
+      "difficulty": 2,
+      "expected_time_sec": 60,
+      "source_type": "adapted",
+      "exam": "jee_main",
+      "year": null,
+      "shift": null,
+      "status": "published",
+      "stem": "For the series circuit shown, what current does the ideal battery supply?",
+      "image": {
+        "url": "/question-images/openstax-series.svg",
+        "alt": "An ideal 12 V battery connected to 1 ohm, 6 ohm and 13 ohm resistors in series."
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "0.600 A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "2.00 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "12.0 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "20.0 A",
+          "is_correct": false
+        }
+      ],
+      "solution": "$R_s=1+6+13=20\\,\\Omega$. Hence $I=12/20=0.600\\,\\mathrm{A}$.",
+      "source": {
+        "title": "OpenStax College Physics, section 21.1, Example 21.1",
+        "url": "https://pressbooks.bccampus.ca/collegephysics/chapter/resistors-in-series-and-parallel/",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Single-choice adaptation; original redrawn diagram."
+      }
+    },
+    {
+      "ref": "PHY-CUR-IMG-002",
+      "subtopic": "combination-of-resistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "adapted",
+      "exam": "jee_main",
+      "year": null,
+      "shift": null,
+      "status": "published",
+      "stem": "For the parallel circuit shown, what is the equivalent resistance (to three significant figures)?",
+      "image": {
+        "url": "/question-images/openstax-parallel.svg",
+        "alt": "An ideal 12 V battery with 1 ohm, 6 ohm and 13 ohm resistors on three parallel branches."
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "20.0 Ω",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.804 Ω",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4.11 Ω",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1.24 Ω",
+          "is_correct": false
+        }
+      ],
+      "solution": "$R_p=(1/1+1/6+1/13)^{-1}=78/97\\approx0.804\\,\\Omega$.",
+      "source": {
+        "title": "OpenStax College Physics, section 21.1, Example 21.2",
+        "url": "https://pressbooks.bccampus.ca/collegephysics/chapter/resistors-in-series-and-parallel/",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Single-choice adaptation; original redrawn diagram."
+      }
+    },
+    {
+      "ref": "PHY-CUR-IMG-003",
+      "subtopic": "combination-of-resistors",
+      "type": "single_correct",
+      "difficulty": 4,
+      "expected_time_sec": 120,
+      "source_type": "adapted",
+      "exam": "jee_main",
+      "year": null,
+      "shift": null,
+      "status": "published",
+      "stem": "For the mixed circuit shown, what current flows through the 6 Ω resistor (to three significant figures)?",
+      "image": {
+        "url": "/question-images/openstax-mixed.svg",
+        "alt": "An ideal 12 V battery connected to a 1 ohm resistor in series with a parallel combination of 6 ohm and 13 ohm resistors."
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "0.600 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.742 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.61 A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2.00 A",
+          "is_correct": false
+        }
+      ],
+      "solution": "$R_p=6(13)/(6+13)=78/19\\,\\Omega$. Total resistance is $97/19\\,\\Omega$; total current is $228/97\\,\\mathrm{A}$. Current division gives $I_2=(228/97)(13/19)=156/97\\approx1.61\\,\\mathrm{A}$.",
+      "source": {
+        "title": "OpenStax College Physics, section 21.1, Example 21.3",
+        "url": "https://pressbooks.bccampus.ca/collegephysics/chapter/resistors-in-series-and-parallel/",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "changes": "Single-choice adaptation; original redrawn diagram."
+      }
+    }
+  ]
+}

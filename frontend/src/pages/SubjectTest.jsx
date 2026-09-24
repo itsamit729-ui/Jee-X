@@ -4,6 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { ArrowLeft } from 'lucide-react'
 import { catalogService, subjectTestBuilderService, subjectTestGraderService } from '../lib/subjectTests.js'
 import MathText from '../components/MathText.jsx'
+import QuestionAssets from '../components/QuestionAssets.jsx'
 import AppHeader from '../components/AppHeader.jsx'
 import Palette from '../components/Palette.jsx'
 import RankPredictor from '../components/RankPredictor.jsx'
@@ -196,6 +197,7 @@ export default function SubjectTest() {
             </div>
             {q.passage && <div className="passage"><MathText text={q.passage} /></div>}
             <div className="qtext"><MathText text={q.stem} /></div>
+            <QuestionAssets assets={q.assets} />
 
             {q.type === 'numerical' ? (
               <div className="field" style={{ maxWidth: 280, marginBottom: 0 }}>
@@ -299,3 +301,4 @@ export default function SubjectTest() {
     </div>
   )
 }
+

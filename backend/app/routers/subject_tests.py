@@ -86,6 +86,8 @@ def create_subject_test(
             ref=q.ref,
             type=q.type,
             stem=q.stem,
+            assets=[schemas.QuestionAssetOut(url=a.url, alt_text=a.alt_text)
+                    for a in list(q.assets) + (list(q.passage.assets) if q.passage else [])],
             passage=q.passage.content if q.passage else None,
             options=[schemas.TestOptionOut(id=o.id, label=o.label, content=o.content) for o in q.options],
             marks_correct=4,
@@ -102,3 +104,4 @@ def create_subject_test(
         duration_sec=test.duration_sec,
         questions=questions_out,
     )
+

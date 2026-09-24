@@ -135,6 +135,8 @@ def get_today(user: models.User = Depends(get_current_db_user), db: Session = De
             ref=question.ref,
             type=question.type,
             stem=question.stem,
+            assets=[schemas.QuestionAssetOut(url=a.url, alt_text=a.alt_text)
+                    for a in list(question.assets) + (list(question.passage.assets) if question.passage else [])],
             passage=question.passage.content if question.passage else None,
             options=[schemas.TestOptionOut(id=o.id, label=o.label, content=o.content) for o in question.options],
             marks_correct=4,
@@ -164,3 +166,4 @@ def get_calendar(user: models.User = Depends(get_current_db_user), db: Session =
         current_streak=profile.current_streak or 0,
         longest_streak=profile.longest_streak or 0,
     )
+
