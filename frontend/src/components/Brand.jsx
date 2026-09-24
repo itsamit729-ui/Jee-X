@@ -36,6 +36,9 @@ const IITIAN_FACTS = [
   },
 ]
 
+const FACT_REVEAL_DELAY_MS = 350
+const FACT_READING_TIME_MS = 7500
+
 // The Jee Edge mark.
 export function LogoMark() {
   return (
@@ -53,37 +56,49 @@ export function Logo({ to = '/' }) {
 }
 
 export function Loader({ label, fullScreen = false }) {
-  const [factIndex, setFactIndex] = useState(() => Math.floor(Math.random() * IITIAN_FACTS.length))
-  const factRef = useRef(IITIAN_FACTS[factIndex])
-  const factShownAtRef = useRef(Date.now())
+  const [factIndex] = useState(() => Math.floor(Math.random() * IITIAN_FACTS.length))
+  const [factVisible, setFactVisible] = useState(false)
+  const factVisibleAtRef = useRef(null)
+  const fact = IITIAN_FACTS[factIndex]
 
   useEffect(() => {
-    factRef.current = IITIAN_FACTS[factIndex]
-    factShownAtRef.current = Date.now()
-  }, [factIndex])
+    // A new loading state should never compete visually with an old fact toast.
+    window.dispatchEvent(new CustomEvent('jeex:loading-start'))
 
-  useEffect(() => {
-    const timer = window.setInterval(() => {
-      setFactIndex((current) => (current + 1) % IITIAN_FACTS.length)
-    }, 4800)
+    let cancelled = false
+    const revealTimer = window.setTimeout(() => {
+      if (cancelled) return
+      factVisibleAtRef.current = Date.now()
+      setFactVisible(true)
+    }, FACT_REVEAL_DELAY_MS)
+
     return () => {
-      window.clearInterval(timer)
-      const timeAlreadyVisible = Date.now() - factShownAtRef.current
-      const remainingReadingTime = Math.max(0, 7500 - timeAlreadyVisible)
-      if (remainingReadingTime > 500) {
+      cancelled = true
+      window.clearTimeout(revealTimer)
+
+      // React StrictMode intentionally runs an early effect cleanup in development.
+      // Only hand a fact to the toast if it was actually visible to the student.
+      if (!factVisibleAtRef.current) return
+
+      const timeAlreadyVisible = Date.now() - factVisibleAtRef.current
+      const remainingReadingTime = Math.max(0, FACT_READING_TIME_MS - timeAlreadyVisible)
+
+      if (remainingReadingTime > 600) {
         window.dispatchEvent(new CustomEvent('jeex:loading-fact-complete', {
-          detail: { fact: factRef.current, duration: remainingReadingTime },
+          detail: { fact, duration: remainingReadingTime },
         }))
       }
     }
-  }, [])
+  }, [fact])
 
-  const fact = IITIAN_FACTS[factIndex]
   return (
     <div className={fullScreen ? 'centered-screen loader-screen' : 'loader loader-screen'} role="status" aria-live="polite" aria-atomic="true">
       <span className="loader-orbit" aria-hidden="true"><i /></span>
       <span className="loader-label">{label}</span>
-      <div className="loader-fact" key={factIndex}>
+      <div
+        className={`loader-fact ${factVisible ? 'is-visible' : 'is-pending'}`}
+        aria-hidden={!factVisible}
+      >
         <span className="loader-fact-kicker">WHILE YOU WAIT · IITIAN STORY</span>
         <strong>{fact.name}</strong>
         <p>{fact.text}</p>
@@ -94,32 +109,53 @@ export function Loader({ label, fullScreen = false }) {
 }
 
 export function IITianFactToast() {
-  const [fact, setFact] = useState(null)
-  const [duration, setDuration] = useState(7500)
+  const [toast, setToast] = useState(null)
   const timerRef = useRef(null)
+  const sequenceRef = useRef(0)
 
   useEffect(() => {
-    const showFact = (event) => {
+    const clearToast = () => {
       window.clearTimeout(timerRef.current)
-      setFact(event.detail.fact)
-      setDuration(event.detail.duration)
-      timerRef.current = window.setTimeout(() => setFact(null), event.detail.duration)
+      timerRef.current = null
+      setToast(null)
     }
+
+    const showFact = (event) => {
+      const fact = event.detail?.fact
+      const duration = Number(event.detail?.duration)
+      if (!fact || !Number.isFinite(duration) || duration <= 0) return
+
+      window.clearTimeout(timerRef.current)
+      const id = ++sequenceRef.current
+      setToast({ fact, duration, id })
+      timerRef.current = window.setTimeout(() => setToast(null), duration)
+    }
+
+    window.addEventListener('jeex:loading-start', clearToast)
     window.addEventListener('jeex:loading-fact-complete', showFact)
+
     return () => {
+      window.removeEventListener('jeex:loading-start', clearToast)
       window.removeEventListener('jeex:loading-fact-complete', showFact)
       window.clearTimeout(timerRef.current)
     }
   }, [])
 
-  if (!fact) return null
+  if (!toast) return null
+
+  const dismissToast = () => {
+    window.clearTimeout(timerRef.current)
+    timerRef.current = null
+    setToast(null)
+  }
+
   return (
-    <aside className="fact-toast" aria-live="polite" aria-label="IITian fact">
-      <button type="button" className="fact-toast-close" onClick={() => setFact(null)} aria-label="Dismiss IITian fact">×</button>
+    <aside key={toast.id} className="fact-toast" aria-live="polite" aria-label="IITian fact">
+      <button type="button" className="fact-toast-close" onClick={dismissToast} aria-label="Dismiss IITian fact">×</button>
       <span className="fact-toast-kicker">IITIAN STORY</span>
-      <strong>{fact.name}</strong>
-      <p>{fact.text}</p>
-      <span className="fact-toast-progress" style={{ '--fact-duration': `${duration}ms` }} aria-hidden="true" />
+      <strong>{toast.fact.name}</strong>
+      <p>{toast.fact.text}</p>
+      <span className="fact-toast-progress" style={{ '--fact-duration': `${toast.duration}ms` }} aria-hidden="true" />
     </aside>
   )
 }
