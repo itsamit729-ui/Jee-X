@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Pencil } from 'lucide-react'
-import { api } from '../lib/api.js'
+import { API_URL, api } from '../lib/api.js'
 import AppHeader from '../components/AppHeader.jsx'
 import { Loader } from '../components/Brand.jsx'
 import StreakCalendar from '../components/StreakCalendar.jsx'
@@ -34,6 +34,10 @@ export default function Profile() {
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState('')
   const [saved, setSaved] = useState(false)
+  const [avatarBusy, setAvatarBusy] = useState(false)
+  const [avatarError, setAvatarError] = useState('')
+  const [avatarMessage, setAvatarMessage] = useState('')
+  const [avatarVersion, setAvatarVersion] = useState(0)
   const debounceRef = useRef(null)
 
   useEffect(() => {
@@ -115,6 +119,40 @@ export default function Profile() {
     }
   }
 
+  const changeAvatar = async (event) => {
+    const file = event.target.files?.[0]
+    event.target.value = ''
+    if (!file) return
+    setAvatarMessage('')
+    setAvatarError('')
+    if (!['image/jpeg', 'image/png', 'image/webp'].includes(file.type) || file.size > 4 * 1024 * 1024) {
+      setAvatarError('Choose a JPEG, PNG or WebP image under 4 MB.')
+      return
+    }
+    setAvatarBusy(true)
+    try {
+      const token = await getAccessTokenSilently()
+      const result = await api.uploadAvatar(token, file)
+      setProfile(current => ({ ...current, avatar_url: result.avatar_url }))
+      setAvatarVersion(n => n + 1)
+      setAvatarMessage('Photo updated.')
+    } catch (err) { setAvatarError(err.message) }
+    finally { setAvatarBusy(false) }
+  }
+
+  const removeAvatar = async () => {
+    setAvatarBusy(true)
+    setAvatarError('')
+    setAvatarMessage('')
+    try {
+      const token = await getAccessTokenSilently()
+      await api.removeAvatar(token)
+      setProfile(current => ({ ...current, avatar_url: null }))
+      setAvatarMessage('Photo removed.')
+    } catch (err) { setAvatarError(err.message) }
+    finally { setAvatarBusy(false) }
+  }
+
   if (loading || !profile) return <Loader fullScreen label="Loading your profile" />
 
   const classText = (c) => (c === 'dropper' ? 'Dropper' : `Class ${c}`)
@@ -129,7 +167,9 @@ export default function Profile() {
 
         <div className="panel">
           <div className="profile-head">
-            <div className="avatar" aria-hidden="true">{initials(profile.name)}</div>
+            <div className="avatar" role="img" aria-label={profile.avatar_url ? 'Your profile photo' : `Initials ${initials(profile.name)}`}>
+              {profile.avatar_url ? <img src={`${API_URL}${profile.avatar_url}?v=${avatarVersion}`} alt="" /> : initials(profile.name)}
+            </div>
             <div style={{ flex: 1, minWidth: 0 }}>
               <h2>{profile.name}</h2>
               <p className="muted">@{profile.username}</p>
@@ -140,6 +180,15 @@ export default function Profile() {
               </button>
             )}
           </div>
+
+          <div className="profile-photo-actions">
+            <input id="profile-photo" className="visually-hidden" type="file" accept="image/jpeg,image/png,image/webp" onChange={changeAvatar} disabled={avatarBusy} />
+            <label htmlFor="profile-photo" className={`btn btn-secondary btn-sm ${avatarBusy ? 'profile-photo-disabled' : ''}`}>{avatarBusy ? 'Updating photo…' : profile.avatar_url ? 'Change photo' : 'Add photo'}</label>
+            {profile.avatar_url && <button type="button" className="btn btn-quiet btn-sm" disabled={avatarBusy} onClick={removeAvatar}>Remove photo</button>}
+            <span className="muted">JPEG, PNG or WebP · up to 4 MB</span>
+          </div>
+          {avatarError && <p className="alert" role="alert">{avatarError}</p>}
+          {avatarMessage && <p className="hint hint-ok" role="status">{avatarMessage}</p>}
 
           {!editing ? (
             <dl className="dl">

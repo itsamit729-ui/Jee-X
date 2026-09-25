@@ -516,6 +516,11 @@ select.input {
   border-radius: 16px; background: var(--pen); color: #fff;
   font-weight: 800; font-size: 24px; letter-spacing: -0.03em;
 }
+.avatar img { width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
+.profile-photo-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: -12px 0 26px; }
+.profile-photo-actions .muted { font-size: 12px; }
+.profile-photo-disabled { opacity: .5; pointer-events: none; }
+.profile-photo-actions input:focus-visible + label { outline: 2px solid var(--pen); outline-offset: 2px; }
 .profile-head { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
 .profile-head h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
 .dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 20px; margin: 0; }

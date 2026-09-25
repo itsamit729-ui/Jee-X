@@ -25,6 +25,7 @@ class User(Base):
     student_profile = relationship(
         "StudentProfile", back_populates="user", uselist=False, cascade="all, delete-orphan"
     )
+    avatar = relationship("ProfileAvatar", uselist=False, cascade="all, delete-orphan")
     guardian_consents = relationship("GuardianConsent", back_populates="user", cascade="all, delete-orphan")
     test_attempts = relationship(
         "TestAttempt", back_populates="user", cascade="all, delete-orphan", foreign_keys="TestAttempt.user_id"

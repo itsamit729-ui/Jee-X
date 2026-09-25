@@ -4,7 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts'
 import { Logo } from '../components/Brand.jsx'
 import RatingBadge from '../components/RatingBadge.jsx'
-import { request } from '../lib/api.js'
+import { API_URL, request } from '../lib/api.js'
 import '../public-profile.css'
 
 const dateLabel = value => new Date(value).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' })
@@ -48,7 +48,7 @@ export default function PublicProfile() {
       {username && !profile && !error && <p role="status">Loading profile…</p>}
       {error && <section className="pp-card" role="alert"><h1>Profile unavailable</h1><p>{error}</p><p className="pp-muted">The account may be unavailable, or the username may have changed.</p><button className="btn btn-secondary" onClick={() => setRetry(x => x+1)}>Try again</button></section>}
       {profile && <>
-        <section className="pp-card pp-hero"><div className="pp-avatar" aria-hidden="true">{profile.username.slice(0,2).toUpperCase()}</div><div className="pp-identity"><p className="pp-eyebrow">{cohort}</p><h1>{profile.display_name || profile.username}</h1><p className="pp-muted">@{profile.username}</p>{profile.bio && <p className="pp-bio">{profile.bio}</p>}</div><button className="btn btn-secondary" onClick={copy}>Share profile</button></section>
+        <section className="pp-card pp-hero"><div className="pp-avatar" aria-hidden="true">{profile.avatar_url ? <img src={`${API_URL}${profile.avatar_url}`} alt="" /> : profile.username.slice(0,2).toUpperCase()}</div><div className="pp-identity"><p className="pp-eyebrow">{cohort}</p><h1>{profile.display_name || profile.username}</h1><p className="pp-muted">@{profile.username}</p>{profile.bio && <p className="pp-bio">{profile.bio}</p>}</div><button className="btn btn-secondary" onClick={copy}>Share profile</button></section>
         {message && <p role="status">{message}</p>}
         <section className="pp-stats" aria-label="Rating overview"><div className="pp-card"><small>Current rating · {r.title}</small><strong>{r.rating ?? 'Unrated'}</strong>{r.rating === null && <span>{r.placements_completed}/3 placement contests</span>}</div><div className="pp-card"><small>Peak rating</small><strong>{r.peak ?? '—'}</strong></div><div className="pp-card"><small>Cohort rank</small><strong>{profile.rank ? `#${profile.rank}` : '—'}</strong><span>{profile.rank ? cohort : 'Not currently ranked'}</span></div><div className="pp-card"><small>Rated contests</small><strong>{r.contests}</strong></div></section>
         <section className="pp-card"><div className="pp-section-heading"><h2>Rating journey</h2><span className="pp-muted">Latest 100 rated results · {cohort}</span></div>
@@ -66,3 +66,4 @@ export default function PublicProfile() {
     </main>
   </div>
 }
+

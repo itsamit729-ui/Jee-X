@@ -29,6 +29,7 @@ def _user_out(user: models.User) -> schemas.UserOut:
         dob=profile.dob if profile else None,
         class_level=_class_level_from_years(profile.class_12_year, profile.target_year) if profile else None,
         email=user.email,
+        avatar_url=f"/api/public-profiles/{user.username}/avatar" if user.avatar else None,
     )
 
 

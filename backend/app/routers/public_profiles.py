@@ -1,11 +1,13 @@
 """Allowlisted public responses. Never serialize private user/profile models."""
 from collections import OrderedDict, deque
 from datetime import datetime, timedelta
+from io import BytesIO
 from threading import Lock
 from time import monotonic
 import re
 
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
+from PIL import Image, ImageOps, UnidentifiedImageError
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy.orm import Session
 
@@ -52,6 +54,69 @@ class SettingsIn(BaseModel):
 def active_student(user):
     if user.status != 'active' or user.role != 'student' or not user.student_profile:
         raise HTTPException(403, 'An active student profile is required.')
+
+
+def avatar_url(user):
+    return f'/api/public-profiles/{user.username}/avatar' if user.avatar else None
+
+
+@router.put('/profile/avatar')
+async def save_avatar(request: Request, response: Response, user=Depends(get_current_db_user), db: Session = Depends(get_db)):
+    active_student(user)
+    if request.headers.get('content-type', '').split(';')[0] not in ('image/jpeg', 'image/png', 'image/webp'):
+        raise HTTPException(415, 'Choose a JPEG, PNG or WebP image.')
+    try:
+        declared_size = int(request.headers.get('content-length') or 0)
+    except ValueError as exc:
+        raise HTTPException(400, 'Invalid image length.') from exc
+    if declared_size > 4 * 1024 * 1024:
+        raise HTTPException(413, 'Image must be 4 MB or smaller.')
+    raw = bytearray()
+    async for chunk in request.stream():
+        raw.extend(chunk)
+        if len(raw) > 4 * 1024 * 1024:
+            raise HTTPException(413, 'Image must be 4 MB or smaller.')
+    try:
+        with Image.open(BytesIO(raw)) as source:
+            if source.format not in ('JPEG', 'PNG', 'WEBP') or max(source.size) > 4096 or source.width * source.height > 16_000_000:
+                raise ValueError('Unsupported image size or format.')
+            image = ImageOps.exif_transpose(source)
+            image.thumbnail((256, 256), Image.Resampling.LANCZOS)
+            rgba = image.convert('RGBA')
+            background = Image.new('RGB', rgba.size, 'white')
+            background.paste(rgba, mask=rgba.getchannel('A'))
+            output = BytesIO()
+            background.save(output, format='JPEG', quality=82, optimize=True)
+    except (UnidentifiedImageError, OSError, ValueError, Image.DecompressionBombError) as exc:
+        raise HTTPException(422, 'That image cannot be processed. Try another JPEG, PNG or WebP.') from exc
+    db.query(models.User).filter_by(id=user.id).with_for_update().one()
+    avatar = db.get(models.ProfileAvatar, user.id)
+    if avatar is None:
+        avatar = models.ProfileAvatar(user_id=user.id)
+        db.add(avatar)
+        user.avatar = avatar
+    avatar.image = output.getvalue()
+    db.commit()
+    response.headers['Cache-Control'] = 'no-store'
+    return {'avatar_url': avatar_url(user)}
+
+
+@router.delete('/profile/avatar')
+def delete_avatar(response: Response, user=Depends(get_current_db_user), db: Session = Depends(get_db)):
+    active_student(user)
+    db.query(models.ProfileAvatar).filter_by(user_id=user.id).delete()
+    db.expire(user, ['avatar'])
+    db.commit()
+    response.headers['Cache-Control'] = 'no-store'
+    return {'avatar_url': None}
+
+
+@router.get('/public-profiles/{username}/avatar', dependencies=[Depends(public_read)])
+def get_avatar(username: str, db: Session = Depends(get_db)):
+    user, _ = resolve(db, username)
+    if not user.avatar:
+        raise HTTPException(404, 'Avatar unavailable.', headers={'Cache-Control': 'no-store'})
+    return Response(user.avatar.image, media_type='image/jpeg', headers={'Cache-Control': 'no-store', 'X-Content-Type-Options': 'nosniff'})
 
 
 def settings_out(row):
@@ -137,7 +202,7 @@ def get_public_profile(username: str, db: Session = Depends(get_db)):
             current = 0
         activity = dict(current_streak=current, longest_streak=p.longest_streak or 0,
                         dates=[d[0].isoformat() for d in dates])
-    return dict(username=user.username, display_name=public.display_name if public else '', bio=public.bio if public else '',
+    return dict(username=user.username, display_name=public.display_name if public else '', bio=public.bio if public else '', avatar_url=avatar_url(user),
                 exam=p.target_exam, target_year=p.target_year, rating=rating, rank=rank,
                 history=[event_out(e,c) for e,c in reversed(recent)], activity=activity)
 

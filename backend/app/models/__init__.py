@@ -17,6 +17,7 @@ from app.models.admin import (
 )
 from app.models.content import Asset, Chapter, Passage, Question, QuestionOption, QuestionSubtopic, Subject, Subtopic
 from app.models.identity import GuardianConsent, StudentProfile, User
+from app.models.profile_avatar import ProfileAvatar
 from app.models.learning import StudentChapterCoverage, StudentSubtopicStats
 from app.models.predictor import (
     PredictorAdvancedMarksRankAnchor,
@@ -44,6 +45,7 @@ from app.models.tests import QuestionResponse, ResponseOption, Test, TestAttempt
 
 __all__ = [
     "User",
+    "ProfileAvatar",
     "StudentProfile",
     "GuardianConsent",
     "Subject",

@@ -75,6 +75,7 @@ class UserOut(BaseModel):
     dob: date
     class_level: str
     email: str | None = None
+    avatar_url: str | None = None
 
     class Config:
         from_attributes = True
@@ -346,4 +347,3 @@ class WalletOut(BaseModel):
     transactions: list[EdgeCoinTransactionOut]
     catalog: list[RewardCatalogItemOut]
     redemptions: list[RewardRedemptionOut]
-

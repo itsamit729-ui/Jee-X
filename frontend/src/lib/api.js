@@ -28,6 +28,13 @@ export const api = {
   checkUsername: (username) => request(`/api/username-check/${encodeURIComponent(username)}`),
   onboard: (token, payload) => request('/api/onboarding', { token, method: 'POST', body: payload }),
   updateProfile: (token, payload) => request('/api/profile', { token, method: 'PATCH', body: payload }),
+  uploadAvatar: async (token, file) => {
+    const res = await fetch(`${API_URL}/api/profile/avatar`, { method: 'PUT', headers: { Authorization: `Bearer ${token}`, 'Content-Type': file.type }, body: file })
+    const data = await res.json().catch(() => null)
+    if (!res.ok) throw new Error(data?.detail || 'Could not upload the image.')
+    return data
+  },
+  removeAvatar: (token) => request('/api/profile/avatar', { token, method: 'DELETE' }),
   submitTestAttempt: (token, payload) => request('/api/test-attempts', { token, method: 'POST', body: payload }),
   listTestAttempts: (token) => request('/api/test-attempts', { token }),
 }
