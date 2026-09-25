@@ -39,6 +39,7 @@ from app.models.rewards import (
     RewardCatalogItem,
     RewardRedemption,
 )
+from app.models.scenarios import ScenarioRun
 from app.models.tests import QuestionResponse, ResponseOption, Test, TestAttempt, TestQuestion
 
 __all__ = [
@@ -89,6 +90,7 @@ __all__ = [
     "RewardCatalogItem",
     "RewardRedemption",
     "DailyQuestionAssignment",
+    "ScenarioRun",
 ]
 
 from app.models.ranking import JeeXRating, RatedContest, ContestEntry

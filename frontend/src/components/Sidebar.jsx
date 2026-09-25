@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
-import { LayoutGrid, FileText, BarChart3, BookOpen, User, LogOut, Trophy } from 'lucide-react'
+import { LayoutGrid, FileText, BarChart3, BookOpen, User, LogOut, Trophy, Timer } from 'lucide-react'
 
 const linkClass = ({ isActive }) => 'dash-link' + (isActive ? ' active' : '')
 
@@ -29,6 +29,7 @@ export default function Sidebar() {
           <BookOpen size={17} strokeWidth={2} />
           Subject tests
         </NavLink>
+        <NavLink to="/scenarios" className={linkClass}><Timer size={17} />Exam situations</NavLink>
         <NavLink to="/ranking" className={linkClass}><Trophy size={17} />Rankings</NavLink>
         <NavLink to="/profile" className={linkClass}>
           <User size={17} strokeWidth={2} />

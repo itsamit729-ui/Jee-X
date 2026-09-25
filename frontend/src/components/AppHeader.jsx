@@ -1,11 +1,12 @@
 import { NavLink } from 'react-router-dom'
 import { useAuth0 } from '@auth0/auth0-react'
-import { LayoutDashboard, BookOpen, Flame, Coins, MessageCircle, UserRound, LogOut, Trophy, Library } from 'lucide-react'
+import { LayoutDashboard, BookOpen, Flame, Coins, MessageCircle, UserRound, LogOut, Trophy, Library, Timer } from 'lucide-react'
 import { Logo } from './Brand.jsx'
 
 const LINKS = [
   ['/dashboard', 'Overview', LayoutDashboard],
   ['/subject-test', 'Practice', BookOpen],
+  ['/scenarios', 'Situations', Timer],
   ['/daily', 'Daily', Flame],
   ['/syllabus', 'Syllabus', Library],
   ['/ranking', 'Rankings', Trophy],
