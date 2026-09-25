@@ -35,11 +35,11 @@
 .scenario-context { display: flex; gap: 12px; flex-wrap: wrap; margin: 14px 0 26px; }
 .scenario-context span { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 11px; font-size: 12px; color: var(--ink-2); }
 .scenario-paper { display: grid; grid-template-columns: 240px minmax(0, 1fr); align-items: start; gap: 22px; }
-.scenario-palette { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
+.scenario-palette { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 18px; }
 .scenario-palette > strong { font-size: 15px; }
 .scenario-palette p { color: var(--ink-3); font-size: 12px; line-height: 1.5; }
-.scenario-palette > div { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 18px 0; }
-.scenario-palette-item { height: 33px; border-radius: 7px; border: 1px solid var(--line); background: var(--page); color: var(--ink); font-weight: 700; cursor: pointer; }
+.scenario-palette > div { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin: 18px 0; }
+.scenario-palette-item { display: grid; place-items: center; min-width: 0; width: 100%; aspect-ratio: 1; padding: 0; border-radius: 7px; border: 1px solid var(--line); background: var(--page); color: var(--ink); font-weight: 700; cursor: pointer; }
 .scenario-palette-item.answered { background: var(--ink); color: white; }
 .scenario-palette-item.review { background: var(--pen-soft); color: var(--pen); border-color: var(--pen); }
 .scenario-palette-item.current { outline: 2px solid var(--pen); outline-offset: 2px; }
@@ -72,6 +72,5 @@
   .scenario-paper { grid-template-columns: 1fr; }
   .scenario-session-head { flex-wrap: wrap; }
   .scenario-clock { width: 100%; }
-  .scenario-palette > div { display: flex; overflow-x: auto; padding: 3px; }
-  .scenario-palette-item { min-width: 34px; }
+  .scenario-palette > div { grid-template-columns: repeat(auto-fill, minmax(38px, 1fr)); }
 }
