@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="{{locale}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sign in · Jee Edge</title>
+  {%- auth0:head -%}
+  <style>
+    :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; }
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; margin: 0; }
+    body { background: #F5F5F7; color: #202126; }
+    .auth-shell { display: grid; grid-template-columns: minmax(0, 1fr) minmax(480px, 1fr); min-height: 100vh; }
+    .auth-story { position: relative; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; padding: clamp(32px, 6vw, 92px); background: #202126; color: #fff; }
+    .auth-story::before { content: ""; position: absolute; inset: 0; opacity: .17; background-image: linear-gradient(#696B78 1px, transparent 1px), linear-gradient(90deg, #696B78 1px, transparent 1px); background-size: 48px 48px; pointer-events: none; }
+    .auth-story > * { position: relative; }
+    .auth-brand { display: flex; align-items: center; gap: 13px; width: fit-content; color: #fff; font-size: 27px; font-weight: 800; letter-spacing: -.065em; text-decoration: none; }
+    .auth-brand svg { width: 42px; height: 42px; }
+    .auth-brand em { color: #F0A17E; font-style: normal; }
+    .auth-story-main { max-width: 690px; padding: 44px 0 38px; }
+    .auth-eyebrow { color: #F0A17E; font-size: 12px; font-weight: 800; letter-spacing: .17em; text-transform: uppercase; }
+    .auth-story h1 { margin: 22px 0 19px; font-size: clamp(43px, 4.2vw, 68px); line-height: 1.04; letter-spacing: -.055em; }
+    .auth-story p { max-width: 480px; margin: 0; color: #C4C4CD; font-size: 18px; line-height: 1.6; }
+    .auth-paper { max-width: 560px; margin-top: 52px; padding: 25px 29px; border: 1px solid #5B5B66; border-radius: 13px; background: #313238; }
+    .auth-paper-label { color: #C6C6CF; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .auth-paper strong { display: block; margin: 13px 0 19px; font-size: 23px; letter-spacing: -.04em; }
+    .auth-questions { display: flex; gap: 8px; }
+    .auth-questions span { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 6px; background: #494A52; font-size: 15px; font-weight: 700; }
+    .auth-questions span:last-child { background: #BA431F; }
+    .auth-footnote { color: #A7A8B1; font-size: 13px; }
+    .auth-form-side { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 0; padding: 50px 24px; }
+    .auth-form-heading { width: min(100%, 420px); padding: 0 8px; }
+    .auth-form-heading span { color: #BA431F; font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .auth-form-heading p { margin: 11px 0 18px; color: #5F6069; font-size: 15px; line-height: 1.5; }
+    .auth-widget { width: min(100%, 420px); }
+    .auth-form-footer { width: min(100%, 420px); margin: 24px 0 0; padding: 0 8px; color: #71727C; font-size: 12px; }
+    .auth-form-footer a { color: #BA431F; }
+    @media (max-width: 850px) {
+      .auth-shell { display: block; }
+      .auth-story { min-height: 0; padding: 27px 24px; }
+      .auth-story-main, .auth-footnote { display: none; }
+      .auth-form-side { min-height: calc(100vh - 96px); padding: 35px 18px 60px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="auth-shell">
+    <section class="auth-story" aria-label="About Jee Edge">
+      <div class="auth-brand" aria-label="Jee Edge">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="11" fill="#BA431F"/><path d="m12 26 10 10 14-23" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>jee<em>edge</em></span>
+      </div>
+      <div class="auth-story-main">
+        <div class="auth-eyebrow">A smarter way to prepare</div>
+        <h1>Practice with a clearer picture.</h1>
+        <p>Focused questions. Real exam pressure. Progress you can actually see.</p>
+        <div class="auth-paper" aria-hidden="true">
+          <div class="auth-paper-label">Your next session</div>
+          <strong>One question at a time.</strong>
+          <div class="auth-questions"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span></div>
+        </div>
+      </div>
+      <div class="auth-footnote">Built for the way JEE actually feels.</div>
+    </section>
+    <section class="auth-form-side" aria-label="Secure sign in">
+      <div class="auth-form-heading"><span>Jee Edge</span><p>Sign in to pick up where you left off.</p></div>
+      <div class="auth-widget">{%- auth0:widget -%}</div>
+      <p class="auth-form-footer">Sign in is securely handled by Auth0.</p>
+    </section>
+  </main>
+</body>
+</html>
