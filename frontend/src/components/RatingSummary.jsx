@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
 import { ArrowUpRight } from 'lucide-react'
 import { request } from '../lib/api.js'
 import RatingBadge from './RatingBadge.jsx'
 
 export default function RatingSummary() {
-  const { getAccessTokenSilently } = useAuth0()
+
   const [rating, setRating] = useState(null)
   const [error, setError] = useState(false)
 
@@ -14,13 +13,12 @@ export default function RatingSummary() {
     let active = true
     ;(async () => {
       try {
-        const token = await getAccessTokenSilently()
-        const data = await request('/api/ranking/me', { token })
+        const data = await request('/api/ranking/me', {})
         if (active) setRating(data)
       } catch { if (active) setError(true) }
     })()
     return () => { active = false }
-  }, [getAccessTokenSilently])
+  }, [])
 
   const index = rating?.tiers?.findIndex((t) => t.title === rating.title) ?? -1
 

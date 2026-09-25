@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { LayoutGrid, FileText, BarChart3, BookOpen, User, LogOut, Trophy, Timer } from 'lucide-react'
 
 const linkClass = ({ isActive }) => 'dash-link' + (isActive ? ' active' : '')
 
 export default function Sidebar() {
-  const { logout } = useAuth0()
+  const { logout } = useAuth()
 
   return (
     <aside className="dash-sidebar">
@@ -40,7 +40,7 @@ export default function Sidebar() {
       <button
         className="dash-link logout"
         type="button"
-        onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+        onClick={() => logout()}
       >
         <LogOut size={17} strokeWidth={2} />
         Log out

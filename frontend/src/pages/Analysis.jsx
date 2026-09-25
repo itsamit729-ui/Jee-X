@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { AnalysisDashboard } from '../crackjee/screens.jsx'
 import AppHeader from '../components/AppHeader.jsx'
 import RankPredictor from '../components/RankPredictor.jsx'
@@ -33,7 +33,7 @@ function toAttemptPayload(result) {
 export default function Analysis() {
   const navigate = useNavigate()
   const { state } = useLocation()
-  const { isAuthenticated, getAccessTokenSilently } = useAuth0()
+  const { isAuthenticated } = useAuth()
   const result = state?.result
   const submittedRef = useRef(false)
   const [attemptId, setAttemptId] = useState(null)
@@ -46,8 +46,7 @@ export default function Analysis() {
     ;(async () => {
       try {
         if (!isAuthenticated) throw new Error('not-authenticated')
-        const token = await getAccessTokenSilently()
-        const saved = await api.submitTestAttempt(token, payload)
+        const saved = await api.submitTestAttempt(payload)
         setAttemptId(saved.id)
       } catch {
         // Not signed in / not onboarded yet — bridge it through localStorage
@@ -55,7 +54,7 @@ export default function Analysis() {
         savePendingFreeTest(payload)
       }
     })()
-  }, [result, isAuthenticated, getAccessTokenSilently])
+  }, [result, isAuthenticated])
 
   return (
     <div className="crackjee-root">

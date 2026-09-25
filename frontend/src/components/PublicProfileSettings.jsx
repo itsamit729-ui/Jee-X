@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
 import { request } from '../lib/api.js'
 import '../public-profile.css'
 
 export default function PublicProfileSettings({ username }) {
-  const { getAccessTokenSilently } = useAuth0()
+
   const [form, setForm] = useState(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
@@ -16,17 +15,17 @@ export default function PublicProfileSettings({ username }) {
     setError('')
     ;(async () => {
       try {
-        const data = await request('/api/profile/public-settings', { token: await getAccessTokenSilently() })
+        const data = await request('/api/profile/public-settings', { })
         if (active) { setForm(data) }
       } catch (e) { if (active) setError(e.message) }
     })()
     return () => { active = false }
-  }, [getAccessTokenSilently, retry])
+  }, [retry])
   function update(key, value) { setForm(f => ({ ...f, [key]: value })); setMessage('') }
   async function save(e) {
     e.preventDefault(); setBusy(true); setError(''); setMessage('')
     try {
-      const data = await request('/api/profile/public-settings', { method: 'PATCH', token: await getAccessTokenSilently(), body: form })
+      const data = await request('/api/profile/public-settings', { method: 'PATCH', body: form })
       setForm(data); setMessage('Public profile updated.')
     } catch (e) { setError(e.message) } finally { setBusy(false) }
   }

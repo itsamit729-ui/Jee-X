@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
 import { Swords, ArrowUpRight, LockKeyhole } from 'lucide-react'
 import AppHeader from '../components/AppHeader.jsx'
 import RatingBadge from '../components/RatingBadge.jsx'
@@ -10,7 +9,7 @@ import '../ranking.css'
 
 export default function Ranking() {
   useCrackJeeStyles()
-  const { getAccessTokenSilently } = useAuth0()
+
   const [data, setData] = useState(null)
   const [board, setBoard] = useState(null)
   const [contests, setContests] = useState([])
@@ -23,21 +22,19 @@ export default function Ranking() {
     setError('')
     ;(async () => {
       try {
-        const token = await getAccessTokenSilently()
         // One round trip instead of four (settle, then me/leaderboard/contests
         // separately) — each round trip to the DB carries real latency, and
         // that was stacking up into several seconds of load time.
-        const { me, leaderboard, contests: events } = await request(`/api/ranking/dashboard?page=${page}`, { token })
+        const { me, leaderboard, contests: events } = await request(`/api/ranking/dashboard?page=${page}`, {})
         if (!cancelled) { setData(me); setBoard(leaderboard); setContests(events) }
       } catch (e) { if (!cancelled) setError(e.message) }
     })()
     return () => { cancelled = true }
-  }, [getAccessTokenSilently, page, retry])
+  }, [page, retry])
   async function toggleVisibility() {
     setBusy(true)
     try {
-      const token = await getAccessTokenSilently()
-      await request('/api/ranking/visibility', { token, method: 'PATCH', body: { visibility: data.visibility === 'hidden' ? 'username' : 'hidden' } })
+      await request('/api/ranking/visibility', { method: 'PATCH', body: { visibility: data.visibility === 'hidden' ? 'username' : 'hidden' } })
       setRetry(x => x + 1)
     } catch (e) { setError(e.message) } finally { setBusy(false) }
   }

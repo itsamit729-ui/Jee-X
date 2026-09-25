@@ -1,56 +1,73 @@
+"""Cookie sessions and CSRF validation for first-party authentication."""
+import hashlib
+import hmac
 import os
-from functools import lru_cache
+from datetime import datetime, timezone
+from urllib.parse import urlsplit
+from fastapi import Depends, HTTPException, Request, Response
+from sqlalchemy.orm import Session
+from app.database import get_db
+from app.models.authentication import AuthAccount, AuthSession
+from app.models.identity import User
 
-import requests
-from dotenv import load_dotenv
-from fastapi import Depends, HTTPException, status
-from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
-from jose import jwt
-
-load_dotenv()
-
-AUTH0_DOMAIN = os.getenv("AUTH0_DOMAIN")
-AUTH0_AUDIENCE = os.getenv("AUTH0_AUDIENCE")
-ALGORITHMS = ["RS256"]
-
-bearer_scheme = HTTPBearer()
+COOKIE_NAME = 'jee_session'
 
 
-class AuthError(HTTPException):
-    def __init__(self, detail: str):
-        super().__init__(status_code=status.HTTP_401_UNAUTHORIZED, detail=detail)
+def utcnow():
+    return datetime.now(timezone.utc).replace(tzinfo=None)
 
 
-@lru_cache
-def get_jwks() -> dict:
-    resp = requests.get(f"https://{AUTH0_DOMAIN}/.well-known/jwks.json", timeout=5)
-    resp.raise_for_status()
-    return resp.json()
+def digest(value: str):
+    return hashlib.sha256(value.encode()).hexdigest()
 
 
-def verify_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_scheme)) -> dict:
-    token = credentials.credentials
-    if not AUTH0_DOMAIN or not AUTH0_AUDIENCE:
-        raise AuthError("Server is missing AUTH0_DOMAIN / AUTH0_AUDIENCE configuration.")
-    try:
-        unverified_header = jwt.get_unverified_header(token)
-    except Exception:
-        raise AuthError("Malformed token header.")
+def trusted_origins():
+    raw = os.getenv('CORS_ORIGINS', 'http://localhost:5173').split(',')
+    raw.append(os.getenv('PUBLIC_APP_URL', 'http://localhost:5173'))
+    return {f'{p.scheme}://{p.netloc}' for v in raw if (p := urlsplit(v.strip())).scheme in {'http', 'https'} and p.netloc}
 
-    jwks = get_jwks()
-    rsa_key = {}
-    for key in jwks.get("keys", []):
-        if key.get("kid") == unverified_header.get("kid"):
-            rsa_key = {"kty": key["kty"], "kid": key["kid"], "use": key["use"], "n": key["n"], "e": key["e"]}
-            break
-    if not rsa_key:
-        raise AuthError("Unable to find an appropriate signing key.")
-    try:
-        payload = jwt.decode(token, rsa_key, algorithms=ALGORITHMS, audience=AUTH0_AUDIENCE, issuer=f"https://{AUTH0_DOMAIN}/")
-    except jwt.ExpiredSignatureError:
-        raise AuthError("Token has expired.")
-    except jwt.JWTClaimsError:
-        raise AuthError("Incorrect claims — check the audience and issuer.")
-    except Exception:
-        raise AuthError("Unable to parse or verify token.")
-    return payload
+
+def require_browser_request(request: Request):
+    if request.headers.get('origin', '').rstrip('/') not in trusted_origins() or request.headers.get('x-jee-request') != '1':
+        raise HTTPException(403, 'This request did not come from an allowed website.')
+
+
+def cookie_options():
+    secure = os.getenv('AUTH_COOKIE_SECURE', 'true').lower() == 'true'
+    same_site = os.getenv('AUTH_COOKIE_SAMESITE', 'lax').lower()
+    if same_site not in {'lax', 'strict', 'none'} or (same_site == 'none' and not secure):
+        raise RuntimeError('Invalid authentication cookie configuration.')
+    return dict(httponly=True, secure=secure, samesite=same_site, path='/')
+
+
+def clear_session_cookie(response: Response):
+    response.delete_cookie(COOKIE_NAME, **cookie_options())
+
+
+def find_session(request: Request, db: Session):
+    raw = request.cookies.get(COOKIE_NAME, '')
+    if not raw or len(raw) > 128:
+        return None
+    session = db.get(AuthSession, digest(raw))
+    if not session or session.expires_at <= utcnow():
+        return None
+    return session
+
+
+def get_auth_account(request: Request, db: Session = Depends(get_db)) -> AuthAccount:
+    session = find_session(request, db)
+    if not session:
+        raise HTTPException(401, 'Your session has expired. Please sign in again.')
+    account = db.get(AuthAccount, session.account_id)
+    if not account or account.disabled:
+        raise HTTPException(401, 'Please sign in again.')
+    if not account.verified_at:
+        raise HTTPException(403, 'Verify your email before continuing.')
+    user = db.get(User, account.user_id) if account.user_id else None
+    if user and user.status != 'active':
+        raise HTTPException(403, 'This account is suspended.')
+    if request.method not in {'GET', 'HEAD', 'OPTIONS'}:
+        require_browser_request(request)
+        if not hmac.compare_digest(session.csrf_token, request.headers.get('x-csrf-token', '')):
+            raise HTTPException(403, 'Your security token is invalid. Reload the page and try again.')
+    return account

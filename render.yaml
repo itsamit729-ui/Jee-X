@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: jee-edge
+    runtime: docker
+    plan: free
+    branch: feature/version-1
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: DB_SSL_CA
+        value: /etc/secrets/ca.pem
+      - key: PUBLIC_APP_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: AUTH_COOKIE_SECURE
+        value: "true"
+      - key: AUTH_COOKIE_SAMESITE
+        value: lax
+      - key: AUTH_EMAIL_PROVIDER
+        value: brevo
+      - key: BREVO_API_KEY
+        sync: false
+      - key: AUTH_EMAIL_FROM
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false

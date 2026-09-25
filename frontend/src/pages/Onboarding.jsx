@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { api } from '../lib/api.js'
 import { readPendingFreeTest, clearPendingFreeTest } from '../lib/pendingFreeTest.js'
 import { Logo } from '../components/Brand.jsx'
@@ -8,7 +8,7 @@ import { Logo } from '../components/Brand.jsx'
 const CLASSES = [['11', 'Class 11'], ['12', 'Class 12'], ['dropper', 'Dropper']]
 
 export default function Onboarding() {
-  const { getAccessTokenSilently, user } = useAuth0()
+  const { user, refreshSession } = useAuth()
   const navigate = useNavigate()
 
   const [form, setForm] = useState({
@@ -26,14 +26,13 @@ export default function Onboarding() {
   useEffect(() => {
     (async () => {
       try {
-        const token = await getAccessTokenSilently()
-        const me = await api.me(token)
+        const me = await api.me()
         if (me.onboarded) navigate('/dashboard', { replace: true })
       } catch {
         // ignore — user can still fill the form
       }
     })()
-  }, [getAccessTokenSilently, navigate])
+  }, [navigate])
 
   const handleUsernameChange = (value) => {
     const clean = value.replace(/\s/g, '').toLowerCase()
@@ -72,14 +71,14 @@ export default function Onboarding() {
 
     setSubmitting(true)
     try {
-      const token = await getAccessTokenSilently()
-      await api.onboard(token, form)
+      await api.onboard(form)
+      await refreshSession()
 
       const pending = readPendingFreeTest()
       if (pending) {
         const { savedAt, ...payload } = pending
         try {
-          await api.submitTestAttempt(token, payload)
+          await api.submitTestAttempt(payload)
         } catch {
           // Non-fatal — don't block getting into the app over this.
         } finally {

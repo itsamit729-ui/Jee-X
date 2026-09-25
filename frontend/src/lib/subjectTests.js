@@ -11,9 +11,8 @@ export const catalogService = {
 // Service 2 — build a subject-wise test (optionally scoped to one chapter) and
 // get back the question paper with no answers in it.
 export const subjectTestBuilderService = {
-  start: (token, { subjectCode, chapterId = null, count = 10 }) =>
+  start: ({ subjectCode, chapterId = null, count = 10 }) =>
     request('/api/subject-tests', {
-      token,
       method: 'POST',
       body: { subject_code: subjectCode, chapter_id: chapterId, count },
     }),
@@ -22,9 +21,8 @@ export const subjectTestBuilderService = {
 // Service 3 — submit answers for grading; returns score, per-subtopic mastery
 // updates (server-side), and per-question solutions.
 export const subjectTestGraderService = {
-  submit: (token, attemptId, answers) =>
+  submit: (attemptId, answers) =>
     request(`/api/subject-tests/attempts/${attemptId}/submit`, {
-      token,
       method: 'POST',
       body: { answers },
     }),

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useAuth0 } from '@auth0/auth0-react'
 import { Coins, Gift } from 'lucide-react'
 import { rewardsService } from '../lib/rewards.js'
 import AppHeader from '../components/AppHeader.jsx'
@@ -41,7 +40,7 @@ function transactionDate(transaction) {
 }
 
 export default function Rewards() {
-  const { getAccessTokenSilently } = useAuth0()
+
   const [state, setState] = useState('loading') // loading | ready | error
   const [wallet, setWallet] = useState(null)
   const [error, setError] = useState('')
@@ -53,8 +52,7 @@ export default function Rewards() {
   const load = async () => {
     setState('loading')
     try {
-      const token = await getAccessTokenSilently()
-      const data = await rewardsService.getWallet(token)
+      const data = await rewardsService.getWallet()
       setWallet(data)
       setState('ready')
     } catch (e) {
@@ -63,7 +61,7 @@ export default function Rewards() {
     }
   }
 
-  useEffect(() => { load() }, [getAccessTokenSilently]) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { load() }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const openRedeem = (item) => {
     setRedeemingItem(item)
@@ -76,8 +74,7 @@ export default function Rewards() {
     setRedeemError('')
     setRedeeming(true)
     try {
-      const token = await getAccessTokenSilently()
-      await rewardsService.redeem(token, { catalog_item_id: redeemingItem.id, shipping })
+      await rewardsService.redeem({ catalog_item_id: redeemingItem.id, shipping })
       setRedeemingItem(null)
       await load()
     } catch (e) {

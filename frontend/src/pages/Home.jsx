@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { ArrowUpRight, ArrowRight, Check, Clock3, ChevronDown, Menu, X } from 'lucide-react'
 import { Logo } from '../components/Brand.jsx'
 
@@ -33,7 +33,7 @@ function PracticePreview() {
 
 export default function Home() {
   const navigate = useNavigate()
-  const { isAuthenticated, loginWithRedirect } = useAuth0()
+  const { isAuthenticated, openLogin } = useAuth()
   const [menuOpen, setMenuOpen] = useState(false)
   const freeTest = () => navigate('/free-test')
   return <div className="editorial-home">
@@ -41,7 +41,7 @@ export default function Home() {
     <header className="site-header"><div className="wrap site-header-row">
       <Logo />
       <nav className="desktop-nav" aria-label="Main navigation"><a href="#method">Test formats</a><a href="#subjects">Subjects</a><a href="#questions">FAQs</a></nav>
-      <div className="site-header-actions"><button className="login-link" onClick={() => isAuthenticated ? navigate('/dashboard') : loginWithRedirect()}>{isAuthenticated ? 'My dashboard' : 'Log in'}<ArrowUpRight size={15} /></button><button className="btn btn-primary btn-sm" onClick={freeTest}>Free test <ArrowRight size={15} /></button><button className="menu-toggle" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button></div>
+      <div className="site-header-actions"><button className="login-link" onClick={() => isAuthenticated ? navigate('/dashboard') : openLogin()}>{isAuthenticated ? 'My dashboard' : 'Log in'}<ArrowUpRight size={15} /></button><button className="btn btn-primary btn-sm" onClick={freeTest}>Free test <ArrowRight size={15} /></button><button className="menu-toggle" aria-label={menuOpen ? 'Close navigation' : 'Open navigation'} aria-expanded={menuOpen} aria-controls="mobile-nav" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? <X size={21} /> : <Menu size={21} />}</button></div>
     </div>{menuOpen && <nav id="mobile-nav" className="mobile-nav" aria-label="Mobile navigation">{[['#method', 'Test formats'], ['#subjects', 'Subjects'], ['#questions', 'FAQs']].map(([href, label]) => <a key={href} href={href} onClick={() => setMenuOpen(false)}>{label}<ArrowUpRight size={16}/></a>)}</nav>}</header>
     <main id="main-content">
       <section className="editorial-hero wrap">

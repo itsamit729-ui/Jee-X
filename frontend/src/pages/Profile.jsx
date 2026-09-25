@@ -1,8 +1,8 @@
 import PublicProfileSettings from '../components/PublicProfileSettings.jsx'
 import RatingSummary from '../components/RatingSummary.jsx'
 import { useEffect, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { Pencil } from 'lucide-react'
 import { API_URL, api } from '../lib/api.js'
 import AppHeader from '../components/AppHeader.jsx'
@@ -23,7 +23,7 @@ function formatDate(iso) {
 }
 
 export default function Profile() {
-  const { getAccessTokenSilently, user } = useAuth0()
+  const { user } = useAuth()
   const navigate = useNavigate()
 
   const [profile, setProfile] = useState(null)
@@ -43,8 +43,7 @@ export default function Profile() {
   useEffect(() => {
     (async () => {
       try {
-        const token = await getAccessTokenSilently()
-        const me = await api.me(token)
+        const me = await api.me()
         if (!me.onboarded) {
           navigate('/onboarding', { replace: true })
           return
@@ -57,7 +56,7 @@ export default function Profile() {
         setLoading(false)
       }
     })()
-  }, [getAccessTokenSilently, navigate])
+  }, [navigate])
 
   const handleUsernameChange = (value) => {
     const clean = value.replace(/\s/g, '').toLowerCase()
@@ -107,8 +106,7 @@ export default function Profile() {
     }
     setSaving(true)
     try {
-      const token = await getAccessTokenSilently()
-      const updated = await api.updateProfile(token, form)
+      const updated = await api.updateProfile(form)
       setProfile(updated)
       setEditing(false)
       setSaved(true)
@@ -131,8 +129,7 @@ export default function Profile() {
     }
     setAvatarBusy(true)
     try {
-      const token = await getAccessTokenSilently()
-      const result = await api.uploadAvatar(token, file)
+      const result = await api.uploadAvatar(file)
       setProfile(current => ({ ...current, avatar_url: result.avatar_url }))
       setAvatarVersion(n => n + 1)
       setAvatarMessage('Photo updated.')
@@ -145,8 +142,7 @@ export default function Profile() {
     setAvatarError('')
     setAvatarMessage('')
     try {
-      const token = await getAccessTokenSilently()
-      await api.removeAvatar(token)
+      await api.removeAvatar()
       setProfile(current => ({ ...current, avatar_url: null }))
       setAvatarMessage('Photo removed.')
     } catch (err) { setAvatarError(err.message) }
@@ -162,7 +158,7 @@ export default function Profile() {
       <AppHeader />
       <main className="wrap-narrow page">
         <div className="page-head">
-          <h1 className="page-title">Profile</h1>
+          <h1 className="page-title">Profile</h1><Link to="/account/security" className="btn btn-secondary btn-sm">Change password</Link>
         </div>
 
         <div className="panel">

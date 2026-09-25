@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
 import { ArrowLeft } from 'lucide-react'
 import { catalogService, subjectTestBuilderService, subjectTestGraderService } from '../lib/subjectTests.js'
 import MathText from '../components/MathText.jsx'
@@ -18,7 +17,7 @@ export default function SubjectTest() {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const requestedSubject = searchParams.get('subject')
-  const { getAccessTokenSilently } = useAuth0()
+
 
   const [subjects, setSubjects] = useState(null) // null = loading
   const [chapters, setChapters] = useState([])
@@ -68,8 +67,7 @@ export default function SubjectTest() {
     setError('')
     setStarting(true)
     try {
-      const token = await getAccessTokenSilently()
-      const created = await subjectTestBuilderService.start(token, {
+      const created = await subjectTestBuilderService.start({
         subjectCode,
         chapterId: chapterId ? Number(chapterId) : null,
         count: Number(count),
@@ -104,14 +102,13 @@ export default function SubjectTest() {
     setError('')
     setSubmitting(true)
     try {
-      const token = await getAccessTokenSilently()
       const payload = test.questions.map((q) => ({
         question_id: q.question_id,
         option_ids: answers[q.question_id]?.option_ids || [],
         numeric_answer: answers[q.question_id]?.numeric_answer ?? null,
         time_taken_sec: 0,
       }))
-      const res = await subjectTestGraderService.submit(token, test.attempt_id, payload)
+      const res = await subjectTestGraderService.submit(test.attempt_id, payload)
       setResult(res)
     } catch (e) {
       setError(e.message)

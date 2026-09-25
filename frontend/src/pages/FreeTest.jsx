@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { Clock, Check, X as XIcon } from 'lucide-react'
 import { freeTestQuestions, SECONDS_PER_QUESTION } from '../data/freeTestQuestions.js'
 import { api } from '../lib/api.js'
@@ -15,7 +15,7 @@ import { GOOD, BAD, SUBJECT_COLOR } from '../crackjee/ui.js'
 const LETTER = (i) => String.fromCharCode(65 + i)
 
 export default function FreeTest() {
-  const { loginWithRedirect, isAuthenticated, getAccessTokenSilently } = useAuth0()
+  const { openLogin, isAuthenticated } = useAuth()
   const navigate = useNavigate()
   const [phase, setPhase] = useState('story') // story | question | results
   const [index, setIndex] = useState(0)
@@ -108,8 +108,7 @@ export default function FreeTest() {
       setSaveState('saving')
       ;(async () => {
         try {
-          const token = await getAccessTokenSilently()
-          const saved = await api.submitTestAttempt(token, payload)
+          const saved = await api.submitTestAttempt(payload)
           setAttemptId(saved.id)
           setSaveState('saved')
         } catch {
@@ -121,9 +120,9 @@ export default function FreeTest() {
       savePendingFreeTest(payload)
       setSaveState('pending-signup')
     }
-  }, [phase, results, isAuthenticated, getAccessTokenSilently, total])
+  }, [phase, results, isAuthenticated, total])
 
-  const goToSignup = () => loginWithRedirect({ authorizationParams: { screen_hint: 'signup' } })
+  const goToSignup = () => openLogin({ signup: true })
 
   // What was actually recorded for this question (a timeout records no choice).
   const recorded = answers[index]

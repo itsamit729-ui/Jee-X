@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts'
 import { Logo } from '../components/Brand.jsx'
 import RatingBadge from '../components/RatingBadge.jsx'
@@ -11,7 +11,7 @@ const dateLabel = value => new Date(value).toLocaleDateString(undefined, { month
 export default function PublicProfile() {
   const { username } = useParams()
   const navigate = useNavigate()
-  const { isAuthenticated } = useAuth0()
+  const { isAuthenticated } = useAuth()
   const [search, setSearch] = useState('')
   const [profile, setProfile] = useState(null)
   const [history, setHistory] = useState(null)

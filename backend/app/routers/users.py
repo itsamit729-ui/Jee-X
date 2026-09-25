@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 
 from app import models, schemas
-from app.auth import verify_token
+from app.auth import get_auth_account
 from app.database import get_db
 from app.utils import class_level_to_years
 
@@ -34,8 +34,8 @@ def _user_out(user: models.User) -> schemas.UserOut:
 
 
 @router.get("/me")
-def read_me(payload: dict = Depends(verify_token), db: Session = Depends(get_db)):
-    user = db.query(models.User).filter(models.User.auth0_sub == payload["sub"]).first()
+def read_me(account: models.AuthAccount = Depends(get_auth_account), db: Session = Depends(get_db)):
+    user = db.get(models.User, account.user_id) if account.user_id else None
     if not user or not user.student_profile:
         return {"onboarded": False, "profile": None}
     return {"onboarded": True, "profile": _user_out(user)}
@@ -49,10 +49,11 @@ def check_username(username: str, db: Session = Depends(get_db)):
 
 
 @router.post("/onboarding", response_model=schemas.UserOut, status_code=status.HTTP_201_CREATED)
-def complete_onboarding(body: schemas.OnboardingIn, payload: dict = Depends(verify_token), db: Session = Depends(get_db)):
-    sub = payload["sub"]
-    email = payload.get("email")
-    existing = db.query(models.User).filter(models.User.auth0_sub == sub).first()
+def complete_onboarding(body: schemas.OnboardingIn, account: models.AuthAccount = Depends(get_auth_account), db: Session = Depends(get_db)):
+    account = db.query(models.AuthAccount).filter_by(id=account.id).with_for_update().populate_existing().one()
+    existing = db.get(models.User, account.user_id) if account.user_id else None
+    email = account.email
+    sub = "local:" + account.id
     if existing:
         raise HTTPException(status_code=409, detail="Profile already exists for this account.")
     if db.query(models.User).filter(models.User.username == body.username).first():
@@ -62,6 +63,7 @@ def complete_onboarding(body: schemas.OnboardingIn, payload: dict = Depends(veri
     user = models.User(auth0_sub=sub, email=email, name=body.name, username=body.username, role="student", status="active")
     db.add(user)
     db.flush()
+    account.user_id = user.id
     profile = models.StudentProfile(
         user_id=user.id,
         dob=body.dob,
@@ -78,17 +80,16 @@ def complete_onboarding(body: schemas.OnboardingIn, payload: dict = Depends(veri
 @router.patch("/profile", response_model=schemas.UserOut)
 def update_profile(
     body: schemas.ProfileUpdate,
-    payload: dict = Depends(verify_token),
+    account: models.AuthAccount = Depends(get_auth_account),
     db: Session = Depends(get_db),
 ):
-    sub = payload["sub"]
-    user = db.query(models.User).filter(models.User.auth0_sub == sub).first()
+    user = db.get(models.User, account.user_id) if account.user_id else None
     if not user or not user.student_profile:
         raise HTTPException(status_code=404, detail="Complete onboarding before editing your profile.")
 
     taken = (
         db.query(models.User)
-        .filter(models.User.username == body.username, models.User.auth0_sub != sub)
+        .filter(models.User.username == body.username, models.User.id != account.user_id)
         .first()
     )
     if taken:

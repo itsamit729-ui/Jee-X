@@ -2,6 +2,6 @@
 import { request } from './api.js'
 
 export const rewardsService = {
-  getWallet: (token) => request('/api/rewards', { token }),
-  redeem: (token, payload) => request('/api/rewards/redeem', { token, method: 'POST', body: payload }),
+  getWallet: () => request('/api/rewards', {}),
+  redeem: (payload) => request('/api/rewards/redeem', { method: 'POST', body: payload }),
 }

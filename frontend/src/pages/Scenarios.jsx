@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
 import AppHeader from '../components/AppHeader.jsx'
 import MathText from '../components/MathText.jsx'
 import QuestionAssets from '../components/QuestionAssets.jsx'
@@ -41,7 +40,7 @@ function DecisionReview({ result, remaining }) {
 }
 
 function PresetList() {
-  const { getAccessTokenSilently } = useAuth0()
+
   const navigate = useNavigate()
   const [presets, setPresets] = useState(null)
   const [starting, setStarting] = useState('')
@@ -56,8 +55,7 @@ function PresetList() {
     setStarting(preset.key)
     setError('')
     try {
-      const token = await getAccessTokenSilently()
-      const run = await scenarioService.start(token, preset.key)
+      const run = await scenarioService.start(preset.key)
       navigate(`/scenarios/${run.id}`)
     } catch (e) {
       setError(e.message)
@@ -87,7 +85,7 @@ function PresetList() {
 }
 
 function Session({ runId }) {
-  const { getAccessTokenSilently } = useAuth0()
+
   const [run, setRun] = useState(null)
   const [answers, setAnswers] = useState({})
   const [index, setIndex] = useState(0)
@@ -117,10 +115,10 @@ function Session({ runId }) {
     let alive = true
     setRun(null)
     setError('')
-    getAccessTokenSilently().then(token => scenarioService.get(token, runId)).then(payload => { if (alive) loadSession(payload) })
+    scenarioService.get(runId).then(payload => { if (alive) loadSession(payload) })
       .catch(e => { if (alive) setError(e.message) })
     return () => { alive = false }
-  }, [runId, getAccessTokenSilently])
+  }, [runId])
 
   useEffect(() => {
     if (!run || run.status !== 'active') return undefined
@@ -135,8 +133,7 @@ function Session({ runId }) {
     pendingSaves.current += 1
     setSaving(true)
     saveQueue.current = saveQueue.current.catch(() => {}).then(async () => {
-      const token = await getAccessTokenSilently()
-      await scenarioService.save(token, runId, question.id, answer)
+      await scenarioService.save(runId, question.id, answer)
     }).catch(e => {
       setError(`Your latest answer could not be saved: ${e.message}`)
       throw e
@@ -175,8 +172,7 @@ function Session({ runId }) {
       } catch (saveError) {
         // A final save can arrive just after the server deadline. In that case
         // the server has already ended the run and we can still show its result.
-        const token = await getAccessTokenSilently()
-        const current = await scenarioService.get(token, runId)
+        const current = await scenarioService.get(runId)
         if (current.status === 'finished') {
           loadSession(current)
           setError('')
@@ -184,8 +180,7 @@ function Session({ runId }) {
         }
         throw saveError
       }
-      const token = await getAccessTokenSilently()
-      const payload = await scenarioService.finish(token, runId)
+      const payload = await scenarioService.finish(runId)
       loadSession(payload)
       setError('')
     } catch (e) {
@@ -203,8 +198,7 @@ function Session({ runId }) {
     setBusy(true)
     try {
       await saveQueue.current.catch(() => {})
-      const token = await getAccessTokenSilently()
-      for (const [id, answer] of Object.entries(answersRef.current)) await scenarioService.save(token, runId, id, answer)
+      for (const [id, answer] of Object.entries(answersRef.current)) await scenarioService.save(runId, id, answer)
     } catch (e) { setError(`Could not save answers: ${e.message}`) }
     finally { setBusy(false) }
   }
@@ -231,7 +225,7 @@ function Session({ runId }) {
       <h3>Decision review</h3><DecisionReview result={run.result} remaining={Math.max(0, 180 - p.start_minute - p.duration_minutes)} />
       <div className="scenario-result-actions"><Link className="btn btn-secondary" to="/scenarios">Try another situation</Link><button type="button" className="btn btn-primary" disabled={busy} onClick={async () => {
         setBusy(true)
-        try { const token = await getAccessTokenSilently(); const next = await scenarioService.start(token, p.key); window.location.assign(`/scenarios/${next.id}`) }
+        try { const next = await scenarioService.start(p.key); window.location.assign(`/scenarios/${next.id}`) }
         catch (e) { setError(e.message); setBusy(false) }
       }}>Replay this situation</button></div>
       <h3>Question review</h3>{run.questions.map((question, i) => {

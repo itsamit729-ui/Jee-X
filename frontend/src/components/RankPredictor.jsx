@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useAuth0 } from '@auth0/auth0-react'
 import { predictorService } from '../lib/predictor.js'
 import { GOOD, PEN } from '../crackjee/ui.js'
 
@@ -20,7 +19,7 @@ const fmtPercentile = (n) => (n == null ? '—' : `${n.toFixed(2)}%`)
 // and its cautions — this is historical reference data, not an official
 // NTA percentile or an admission promise.
 export default function RankPredictor({ attemptId }) {
-  const { getAccessTokenSilently } = useAuth0()
+
   const [state, setState] = useState('loading') // loading | ready | error
   const [prediction, setPrediction] = useState(null)
   const [error, setError] = useState('')
@@ -33,8 +32,7 @@ export default function RankPredictor({ attemptId }) {
     setShowAllColleges(false)
     ;(async () => {
       try {
-        const token = await getAccessTokenSilently()
-        const data = await predictorService.getPrediction(token, attemptId)
+        const data = await predictorService.getPrediction(attemptId)
         if (!cancelled) {
           setPrediction(data)
           setState('ready')
@@ -47,7 +45,7 @@ export default function RankPredictor({ attemptId }) {
       }
     })()
     return () => { cancelled = true }
-  }, [attemptId, getAccessTokenSilently])
+  }, [attemptId])
 
   if (!attemptId) return null
 

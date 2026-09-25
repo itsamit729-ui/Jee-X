@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { BookOpen, ChevronDown, Coins, Flame, Library, LogOut, Menu, MessageCircle, MonitorPlay, Timer, Trophy, UserRound, X } from 'lucide-react'
 import { Logo } from './Brand.jsx'
 import './app-header.css'
@@ -29,12 +29,12 @@ function MenuLink({ item, close, compact = false }) {
 
 export default function AppHeader() {
   const { pathname } = useLocation()
-  const { isAuthenticated, loginWithRedirect, logout } = useAuth0()
+  const { isAuthenticated, openLogin, logout } = useAuth()
   const ref = useRef(null)
   const [open, setOpen] = useState(null)
   const close = () => setOpen(null)
   const toggle = name => setOpen(current => current === name ? null : name)
-  const signOut = () => logout({ logoutParams: { returnTo: window.location.origin } })
+  const signOut = () => logout()
 
   useEffect(close, [pathname])
   useEffect(() => {
@@ -77,7 +77,7 @@ export default function AppHeader() {
           <MenuLink item={{ to: '/profile', title: 'Your profile', hint: 'Account and public profile', Icon: UserRound }} close={close} />
           <button type="button" className="jee-nav__item" onClick={signOut}><span className="jee-nav__item-icon"><LogOut size={18} /></span><strong>Log out</strong></button>
         </div>}
-      </div> : <button type="button" className="btn btn-primary btn-sm jee-nav__login" onClick={() => loginWithRedirect()}>Log in</button>}
+      </div> : <button type="button" className="btn btn-primary btn-sm jee-nav__login" onClick={() => openLogin()}>Log in</button>}
       {isAuthenticated && <button type="button" className="jee-nav__mobile-button" data-trigger="mobile"
         aria-label={open === 'mobile' ? 'Close navigation' : 'Open navigation'} aria-expanded={open === 'mobile'}
         aria-controls="jee-nav-mobile" onClick={() => toggle('mobile')}>

@@ -1,7 +1,7 @@
 import RatingSummary from '../components/RatingSummary.jsx'
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { api } from '../lib/api.js'
 import { readPendingFreeTest, clearPendingFreeTest } from '../lib/pendingFreeTest.js'
 import { DashboardOverview, useCrackJeeStyles } from '../crackjee/screens.jsx'
@@ -56,7 +56,7 @@ function buildDashboardData(attempts) {
 
 export default function Dashboard() {
   useCrackJeeStyles()
-  const { getAccessTokenSilently, logout } = useAuth0()
+  const { logout } = useAuth()
   const navigate = useNavigate()
   const [profile, setProfile] = useState(null)
   const [attempts, setAttempts] = useState([])
@@ -66,8 +66,7 @@ export default function Dashboard() {
   useEffect(() => {
     (async () => {
       try {
-        const token = await getAccessTokenSilently()
-        const me = await api.me(token)
+        const me = await api.me()
         if (!me.onboarded) {
           navigate('/onboarding', { replace: true })
           return
@@ -80,14 +79,14 @@ export default function Dashboard() {
         if (pending) {
           const { savedAt, ...payload } = pending
           try {
-            await api.submitTestAttempt(token, payload)
+            await api.submitTestAttempt(payload)
             clearPendingFreeTest()
           } catch {
             // Non-fatal — leave it in place to retry on the next visit.
           }
         }
 
-        const list = await api.listTestAttempts(token)
+        const list = await api.listTestAttempts()
         setAttempts(list)
       } catch {
         setError('Your study desk couldn’t load. Please check your connection and try again.')
@@ -95,7 +94,7 @@ export default function Dashboard() {
         setLoading(false)
       }
     })()
-  }, [getAccessTokenSilently, navigate])
+  }, [navigate])
 
   const { statCards, history, subjectTrends } = useMemo(
     () => buildDashboardData(attempts),
@@ -119,7 +118,7 @@ export default function Dashboard() {
         onFreeTest={() => navigate('/free-test')}
         onSubjectTest={() => navigate('/subject-test')}
         onProfile={() => navigate('/profile')}
-        onLogout={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+        onLogout={() => logout()}
         onHome={() => navigate('/')}
       />}
       {!error && <div className="wrap" style={{ paddingBottom: 40 }}><div className="panel" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>

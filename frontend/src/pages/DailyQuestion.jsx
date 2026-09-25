@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
 import { Flame, Coins } from 'lucide-react'
 import { dailyQuestionService } from '../lib/dailyQuestion.js'
 import { subjectTestGraderService } from '../lib/subjectTests.js'
@@ -14,7 +13,7 @@ const OUTCOME = { correct: 'correct', wrong: 'wrong' }
 
 export default function DailyQuestion() {
   const navigate = useNavigate()
-  const { getAccessTokenSilently } = useAuth0()
+
 
   const [state, setState] = useState('loading') // loading | question | already-answered | error
   const [today, setToday] = useState(null)
@@ -27,8 +26,7 @@ export default function DailyQuestion() {
   useEffect(() => {
     (async () => {
       try {
-        const token = await getAccessTokenSilently()
-        const data = await dailyQuestionService.getToday(token)
+        const data = await dailyQuestionService.getToday()
         setToday(data)
         setState(data.already_answered ? 'already-answered' : 'question')
       } catch (e) {
@@ -36,13 +34,12 @@ export default function DailyQuestion() {
         setState('error')
       }
     })()
-  }, [getAccessTokenSilently])
+  }, [])
 
   const submit = async () => {
     setError('')
     setSubmitting(true)
     try {
-      const token = await getAccessTokenSilently()
       const q = today.question
       const payload = [{
         question_id: q.question_id,
@@ -50,7 +47,7 @@ export default function DailyQuestion() {
         numeric_answer: numericAnswer === '' ? null : Number(numericAnswer),
         time_taken_sec: 0,
       }]
-      const res = await subjectTestGraderService.submit(token, today.attempt_id, payload)
+      const res = await subjectTestGraderService.submit(today.attempt_id, payload)
       setResult(res)
     } catch (e) {
       setError(e.message)

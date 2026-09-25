@@ -1,8 +1,8 @@
 /**
- * Bridges a free-test result across the Auth0 signup redirect.
+ * Bridges a free-test result across the account signup flow.
  *
  * The free test is taken before the student has an account. If they choose
- * to save it, we stash the result in localStorage, send them through Auth0
+ * to save it, we stash the result in localStorage, send them through signup
  * signup, and once they land back in the app (authenticated, onboarded),
  * Dashboard picks the pending result up and POSTs it to the backend.
  *

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useAuth0 } from '@auth0/auth0-react'
 import { Flame, Trophy } from 'lucide-react'
 import { dailyQuestionService } from '../lib/dailyQuestion.js'
 
@@ -52,7 +51,7 @@ function monthLabels(weeks) {
 }
 
 export default function StreakCalendar() {
-  const { getAccessTokenSilently } = useAuth0()
+
   const [state, setState] = useState('loading') // loading | ready | error
   const [data, setData] = useState(null)
   const [error, setError] = useState('')
@@ -61,8 +60,7 @@ export default function StreakCalendar() {
     let cancelled = false
     ;(async () => {
       try {
-        const token = await getAccessTokenSilently()
-        const res = await dailyQuestionService.getCalendar(token)
+        const res = await dailyQuestionService.getCalendar()
         if (!cancelled) {
           setData(res)
           setState('ready')
@@ -75,7 +73,7 @@ export default function StreakCalendar() {
       }
     })()
     return () => { cancelled = true }
-  }, [getAccessTokenSilently])
+  }, [])
 
   if (state === 'loading') {
     return (

@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
 import { request } from '../lib/api.js'
 import MathText from '../components/MathText.jsx'
 import QuestionAssets from '../components/QuestionAssets.jsx'
@@ -11,21 +10,20 @@ import '../ranking.css'
 export default function RankedTest() {
   useCrackJeeStyles()
   const { id } = useParams()
-  const { getAccessTokenSilently } = useAuth0()
+
   const [attempt,setAttempt]=useState(null), [answers,setAnswers]=useState({}), [error,setError]=useState(''), [status,setStatus]=useState(''), [remaining,setRemaining]=useState(0), [done,setDone]=useState(false), [busy,setBusy]=useState(false)
   const latest=useRef({}), queue=useRef(Promise.resolve()), offset=useRef(0)
   useEffect(()=>{
     let alive=true
     ;(async()=>{try {
-      const token=await getAccessTokenSilently()
-      const a=await request(`/api/ranking/contests/${id}/start`,{token,method:'POST'})
+      const a=await request(`/api/ranking/contests/${id}/start`,{method:'POST'})
       if(!alive)return
       offset.current=Date.parse(a.server_time)-Date.now()
       latest.current=a.answers; setAnswers(a.answers); setAttempt(a)
       setRemaining(Math.max(0,Math.ceil((Date.parse(a.deadline)-Date.now()-offset.current)/1000)))
     }catch(e){if(alive)setError(e.message)}})()
     return()=>{alive=false}
-  },[id,getAccessTokenSilently])
+  },[id])
   useEffect(()=>{
     if(!attempt||done)return
     const tick=()=>{const n=Math.max(0,Math.ceil((Date.parse(attempt.deadline)-Date.now()-offset.current)/1000));setRemaining(n);if(n===0){setDone(true);setStatus('Time is up. Answers saved before the deadline will be graded.')}}
@@ -42,8 +40,7 @@ export default function RankedTest() {
     setStatus('Saving…')
     // Serialize requests so an older autosave cannot overwrite a newer answer.
     const job=queue.current.catch(()=>{}).then(async()=>{
-      const token=await getAccessTokenSilently()
-      await request(`/api/ranking/entries/${attempt.id}`,{token,method:'PUT',body:{answers:Object.values(next),submit}})
+      await request(`/api/ranking/entries/${attempt.id}`,{method:'PUT',body:{answers:Object.values(next),submit}})
       setError('');setStatus(submit?'Submitted. Results arrive after the contest closes.':'All answers saved')
       if(submit)setDone(true)
     })

@@ -4,5 +4,5 @@
 import { request } from './api.js'
 
 export const predictorService = {
-  getPrediction: (token, attemptId) => request(`/api/test-attempts/${attemptId}/prediction`, { token }),
+  getPrediction: (attemptId) => request(`/api/test-attempts/${attemptId}/prediction`, {}),
 }

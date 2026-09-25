@@ -3,6 +3,6 @@
 import { request } from './api.js'
 
 export const dailyQuestionService = {
-  getToday: (token) => request('/api/daily-question', { token }),
-  getCalendar: (token) => request('/api/daily-question/calendar', { token }),
+  getToday: () => request('/api/daily-question', {}),
+  getCalendar: () => request('/api/daily-question/calendar', {}),
 }

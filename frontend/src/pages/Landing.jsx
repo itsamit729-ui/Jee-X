@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 
 function useCountUp(target, { decimals = 0, duration = 1100 } = {}) {
   const [value, setValue] = useState(0)
@@ -95,13 +95,13 @@ const STEPS = [
 ]
 
 export default function Landing() {
-  const { loginWithRedirect, isAuthenticated, isLoading } = useAuth0()
+  const { openLogin, isAuthenticated, isLoading } = useAuth()
   const navigate = useNavigate()
   const rank = useCountUp(1284)
   const percentile = useCountUp(98.71, { decimals: 2 })
 
   // If someone lands here already authenticated (e.g. returning from the
-  // Auth0 hosted login page), send them straight into the app instead of
+  // account login page), send them straight into the app instead of
   // leaving them stranded on the marketing page.
   useEffect(() => {
     if (!isLoading && isAuthenticated) {
@@ -110,8 +110,8 @@ export default function Landing() {
   }, [isLoading, isAuthenticated, navigate])
 
   const goToSignup = () =>
-    loginWithRedirect({ authorizationParams: { screen_hint: 'signup' } })
-  const goToLogin = () => loginWithRedirect()
+    openLogin({ signup: true })
+  const goToLogin = () => openLogin()
   const goToFreeTest = () => navigate('/free-test')
 
   return (

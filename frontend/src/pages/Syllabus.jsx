@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
-import { useAuth0 } from '@auth0/auth0-react'
+import { useAuth } from '../auth/AuthContext.jsx'
 import { ExternalLink, FileText, ArrowLeft } from 'lucide-react'
 import { Logo } from '../components/Brand.jsx'
 import AppHeader from '../components/AppHeader.jsx'
 import syllabus from '../data/officialSyllabi.json'
 
 export default function Syllabus() {
-  const { isAuthenticated } = useAuth0()
+  const { isAuthenticated } = useAuth()
   return <>
     {isAuthenticated ? <AppHeader/> : <header className="appbar"><div className="wrap appbar-row"><Logo to="/"/><Link to="/" className="btn btn-quiet btn-sm"><ArrowLeft size={15}/> Home</Link></div></header>}
     <main className="wrap-narrow page">
