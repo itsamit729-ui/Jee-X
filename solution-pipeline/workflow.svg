@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1330" width="1000" height="1330" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <title>Jee Edge solution pipeline</title>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475069"/>
+    </marker>
+    <style>
+      .t{font-size:15px;fill:#1d2230;font-weight:600}
+      .s{font-size:12.5px;fill:#4a5263}
+      .l{font-size:12px;fill:#475069;font-weight:600}
+      .edge{stroke:#475069;stroke-width:1.6;fill:none;marker-end:url(#a)}
+      .agent{fill:#efe9ff;stroke:#7b5cd6;stroke-width:1.6}
+      .script{fill:#eef2f7;stroke:#8a96ad;stroke-width:1.4}
+      .dec{fill:#fff7e6;stroke:#d99a2b;stroke-width:1.5}
+      .ok{fill:#e3f6ec;stroke:#2e9d6a;stroke-width:1.6}
+      .bad{fill:#fdeaea;stroke:#d9534f;stroke-width:1.6}
+      .data{fill:#ffffff;stroke:#8a96ad;stroke-width:1.4;stroke-dasharray:5 3}
+      .zone{fill:#f8f9fc;stroke:#c9cfdb;stroke-width:1.2}
+      .zt{font-size:13px;fill:#6a7386;font-weight:700;letter-spacing:.5px}
+    </style>
+  </defs>
+  <rect width="1000" height="1330" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" style="font-size:21px;font-weight:700;fill:#1d2230">Jee Edge — verified solution pipeline</text>
+  <text x="500" y="56" text-anchor="middle" class="s">Claude Code headless (claude -p) · Opus 5.5 · one question at a time · only verified solutions are published</text>
+
+  <!-- 1. Export -->
+  <rect x="40" y="78" width="920" height="118" rx="12" class="zone"/>
+  <text x="58" y="100" class="zt">1 · EXPORT (your laptop, needs database)</text>
+  <rect x="70" y="112" width="250" height="66" rx="8" class="script"/>
+  <text x="195" y="139" text-anchor="middle" class="t">export_questions.py</text>
+  <text x="195" y="160" text-anchor="middle" class="s">published questions without a</text>
+  <text x="195" y="174" text-anchor="middle" class="s">verified solution, from MySQL</text>
+  <rect x="400" y="112" width="250" height="66" rx="8" class="data"/>
+  <text x="525" y="139" text-anchor="middle" class="t">data/questions.jsonl</text>
+  <text x="525" y="160" text-anchor="middle" class="s">question pack + answer keys</text>
+  <text x="525" y="174" text-anchor="middle" class="s">(copy to friend's laptop)</text>
+  <path d="M320 145 L398 145" class="edge"/>
+  <rect x="730" y="112" width="200" height="66" rx="8" class="data"/>
+  <text x="830" y="139" text-anchor="middle" class="t">Shards</text>
+  <text x="830" y="160" text-anchor="middle" class="s">you: --shard 1/2</text>
+  <text x="830" y="174" text-anchor="middle" class="s">friend: --shard 2/2</text>
+  <path d="M650 145 L728 145" class="edge"/>
+
+  <!-- 2. Per-question loop -->
+  <rect x="40" y="214" width="920" height="760" rx="12" class="zone"/>
+  <text x="58" y="236" class="zt">2 · SOLVE &amp; VERIFY (every 5 h via Task Scheduler / cron · run_batch.py)</text>
+
+  <rect x="330" y="252" width="340" height="74" rx="10" class="agent"/>
+  <text x="500" y="278" text-anchor="middle" class="t">Agent 1 · jee-solver (Opus 5.5)</text>
+  <text x="500" y="298" text-anchor="middle" class="s">solves blind — never sees the key · no tools</text>
+  <text x="500" y="314" text-anchor="middle" class="s">figure attached inline · returns JSON (solution, answer)</text>
+
+  <path d="M500 326 L500 366" class="edge"/>
+  <polygon points="500,368 640,420 500,472 360,420" class="dec"/>
+  <text x="500" y="416" text-anchor="middle" class="t">answer = key?</text>
+  <text x="500" y="435" text-anchor="middle" class="s">(script, 0 tokens)</text>
+
+  <path d="M500 472 L500 510" class="edge"/>
+  <text x="510" y="495" class="l">yes</text>
+  <polygon points="500,512 640,562 500,612 360,562" class="dec"/>
+  <text x="500" y="558" text-anchor="middle" class="t">format OK?</text>
+  <text x="500" y="577" text-anchor="middle" class="s">LaTeX · lines · $ balanced</text>
+
+  <path d="M500 612 L500 648" class="edge"/>
+  <text x="510" y="634" class="l">yes</text>
+  <rect x="330" y="650" width="340" height="74" rx="10" class="agent"/>
+  <text x="500" y="676" text-anchor="middle" class="t">Agent 2 · jee-checker (Opus 5.5)</text>
+  <text x="500" y="696" text-anchor="middle" class="s">fresh session · sees the key · checks every step</text>
+  <text x="500" y="712" text-anchor="middle" class="s">re-runs all arithmetic in Python · figure attached</text>
+
+  <path d="M500 724 L500 760" class="edge"/>
+  <polygon points="500,762 640,812 500,862 360,812" class="dec"/>
+  <text x="500" y="809" text-anchor="middle" class="t">verdict correct?</text>
+
+  <path d="M500 862 L500 900" class="edge"/>
+  <text x="510" y="886" class="l">yes</text>
+  <rect x="360" y="902" width="280" height="54" rx="10" class="ok"/>
+  <text x="500" y="926" text-anchor="middle" class="t">VERIFIED</text>
+  <text x="500" y="944" text-anchor="middle" class="s">data/results/&lt;ref&gt;.json</text>
+
+  <!-- retry lane -->
+  <rect x="740" y="480" width="190" height="170" rx="10" class="dec"/>
+  <text x="835" y="506" text-anchor="middle" class="t">attempt 1?</text>
+  <text x="835" y="530" text-anchor="middle" class="s">→ retry once with</text>
+  <text x="835" y="547" text-anchor="middle" class="s">the reason:</text>
+  <text x="835" y="568" text-anchor="middle" class="s">• "re-derive from scratch"</text>
+  <text x="835" y="585" text-anchor="middle" class="s">• formatting problems</text>
+  <text x="835" y="602" text-anchor="middle" class="s">• checker's objections</text>
+  <text x="835" y="624" text-anchor="middle" class="s">(never the answer)</text>
+  <path d="M640 420 L800 420 L800 478" class="edge"/>
+  <text x="700" y="412" class="l">no</text>
+  <path d="M640 562 L738 562" class="edge"/>
+  <text x="668" y="554" class="l">no</text>
+  <path d="M640 812 L705 812 L705 612 L738 612" class="edge"/>
+  <text x="652" y="804" class="l">no</text>
+  <path d="M900 480 L900 289 L672 289" class="edge"/>
+  <text x="890" y="380" text-anchor="end" class="l">yes → solve again</text>
+
+  <!-- flag -->
+  <path d="M835 650 L835 698" class="edge"/>
+  <text x="845" y="678" class="l">no (attempt 2)</text>
+  <rect x="740" y="700" width="190" height="118" rx="10" class="bad"/>
+  <text x="835" y="724" text-anchor="middle" class="t">FLAGGED</text>
+  <text x="835" y="746" text-anchor="middle" class="s">key_mismatch → the key</text>
+  <text x="835" y="762" text-anchor="middle" class="s">may be wrong</text>
+  <text x="835" y="784" text-anchor="middle" class="s">checker_rejected → no</text>
+  <text x="835" y="800" text-anchor="middle" class="s">sound solution yet</text>
+
+  <!-- usage limit note -->
+  <rect x="70" y="480" width="220" height="92" rx="10" class="data"/>
+  <text x="180" y="505" text-anchor="middle" class="t">Usage limit hit?</text>
+  <text x="180" y="527" text-anchor="middle" class="s">the batch stops cleanly;</text>
+  <text x="180" y="543" text-anchor="middle" class="s">the next scheduled run</text>
+  <text x="180" y="559" text-anchor="middle" class="s">continues where it stopped</text>
+
+  <!-- 3. Weekly -->
+  <rect x="40" y="992" width="920" height="226" rx="12" class="zone"/>
+  <text x="58" y="1014" class="zt">3 · WEEKLY (your laptop)</text>
+  <rect x="70" y="1030" width="250" height="78" rx="8" class="script"/>
+  <text x="195" y="1057" text-anchor="middle" class="t">merge results</text>
+  <text x="195" y="1077" text-anchor="middle" class="s">copy friend's data/results/*.json</text>
+  <text x="195" y="1093" text-anchor="middle" class="s">into your data/results</text>
+  <rect x="375" y="1030" width="250" height="78" rx="8" class="script"/>
+  <text x="500" y="1057" text-anchor="middle" class="t">review.py → you</text>
+  <text x="500" y="1077" text-anchor="middle" class="s">all flagged + 5% random verified</text>
+  <text x="500" y="1093" text-anchor="middle" class="s">(HTML page, maths rendered)</text>
+  <rect x="680" y="1030" width="250" height="78" rx="8" class="script"/>
+  <text x="805" y="1057" text-anchor="middle" class="t">publish.py</text>
+  <text x="805" y="1077" text-anchor="middle" class="s">dry run → --apply · verified only</text>
+  <text x="805" y="1093" text-anchor="middle" class="s">skips changed questions / keys</text>
+  <path d="M320 1069 L373 1069" class="edge"/>
+  <path d="M625 1069 L678 1069" class="edge"/>
+  <rect x="520" y="1138" width="410" height="62" rx="8" class="ok"/>
+  <text x="725" y="1162" text-anchor="middle" class="t">MySQL: questions.solution + "verified-solution" revision</text>
+  <text x="725" y="1182" text-anchor="middle" class="s">+ repo question files updated · students see the solution</text>
+  <path d="M805 1108 L805 1136" class="edge"/>
+  <rect x="70" y="1138" width="410" height="62" rx="8" class="bad"/>
+  <text x="275" y="1162" text-anchor="middle" class="t">Flagged: fix the key / write the solution</text>
+  <text x="275" y="1182" text-anchor="middle" class="s">shown without a solution until then</text>
+
+  <text x="500" y="1250" text-anchor="middle" class="s">Tokens (calibration, Opus 5.5): ~5.5k per question text or figure · +6–8k when a retry is needed</text>
+  <text x="500" y="1270" text-anchor="middle" class="s">Connectors off per call (saves ~23k tokens) · figure sent inline (no extra turn) · scripts do all bookkeeping</text>
+  <text x="500" y="1300" text-anchor="middle" class="l">agents/jee-solver.md · agents/jee-checker.md · config.json · pipeline/*.py</text>
+</svg>
