@@ -1,4 +1,5 @@
 import os
+import logging
 import secrets
 from threading import BoundedSemaphore
 from datetime import timedelta
@@ -12,6 +13,8 @@ from sqlalchemy import update, delete
 from sqlalchemy.exc import IntegrityError
 from app.auth import digest, utcnow
 from app.models.authentication import AuthAccount, AuthEmailToken, AuthRateLimit
+
+logger = logging.getLogger(__name__)
 
 # OWASP Argon2id minimum, with bounded memory on small instances.
 hasher = PasswordHasher(time_cost=2, memory_cost=19456, parallelism=1)
@@ -79,7 +82,14 @@ def send_account_email(email, purpose, raw_token):
                 headers={'Authorization': f'Bearer {os.environ["RESEND_API_KEY"]}'},
                 json={'from': os.environ['AUTH_EMAIL_FROM'], 'to': [email], 'subject': title, 'html': html})
         result.raise_for_status()
-    except requests.RequestException:
+    except requests.HTTPError as exc:
+        # Never log the request, recipient, provider response, or verification link.
+        logger.error('Account email provider rejected %s: HTTP %s', purpose,
+                     exc.response.status_code if exc.response is not None else 'unknown')
+        raise HTTPException(503, 'We could not send the email. Please try again later.') from None
+    except requests.RequestException as exc:
+        logger.error('Account email provider connection failed for %s: %s', purpose,
+                     type(exc).__name__)
         raise HTTPException(503, 'We could not send the email. Please try again later.') from None
 
 
