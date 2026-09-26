@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-1c394a3e645c",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "C",
+ "verdict": "verified",
+ "solution": "Key concepts: the Stephen reduction turns a nitrile into an aldehyde. Ozonolysis splits a C=C bond into two carbonyl compounds. Two different aldehydes that both have α‑H give a crossed aldol condensation, which forms four products.\nStep 1 – Find $x$ (Stephen reduction): $\\mathrm{CH_3CH_2C{\\equiv}N \\xrightarrow{SnCl_2/HCl} CH_3CH_2CH{=}NH\\cdot HCl \\xrightarrow{H_2O} CH_3CH_2CHO}$. So $x$ = propanal.\nStep 2 – Find $y$ (ozonolysis): $\\mathrm{CH_3CH{=}CHCH_3 \\xrightarrow{O_3,\\ Zn/H_2O} 2\\,CH_3CHO}$. So $y$ = ethanal.\nStep 3 – Both aldehydes have α‑H. With dilute alkali and heat they give a crossed aldol condensation, which produces four α,β‑unsaturated aldehydes.\nStep 4 – Propanal + propanal (self condensation): $\\mathrm{CH_3CH_2CH{=}C(CH_3)CHO}$ = 2‑methylpent‑2‑enal (A).\nStep 5 – Ethanal + ethanal (self condensation): $\\mathrm{CH_3CH{=}CHCHO}$ = but‑2‑enal.\nStep 6 – The carbanion from ethanal attacks the C=O of propanal: $\\mathrm{CH_3CH_2CH{=}CHCHO}$ = pent‑2‑enal (D).\nStep 7 – The carbanion from propanal attacks the C=O of ethanal: $\\mathrm{CH_3CH{=}C(CH_3)CHO}$ = 2‑methylbut‑2‑enal (B).\nStep 8 – 3‑Methylbut‑2‑enal is $\\mathrm{(CH_3)_2C{=}CHCHO}$. Making it would need acetone as the carbonyl partner, and acetone is not present. So this product cannot form.\nAnswer: (C) 3‑Methylbut‑2‑enal",
+ "final_answer": "C",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "C",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Key concepts: the Stephen reduction turns a nitrile into an aldehyde. Ozonolysis splits a C=C bond into two carbonyl compounds. Two different aldehydes that both have α‑H give a crossed aldol condensation, which forms four products.\nStep 1 – Find $x$ (Stephen reduction): $\\mathrm{CH_3CH_2C{\\equiv}N \\xrightarrow{SnCl_2/HCl} CH_3CH_2CH{=}NH\\cdot HCl \\xrightarrow{H_2O} CH_3CH_2CHO}$. So $x$ = propanal.\nStep 2 – Find $y$ (ozonolysis): $\\mathrm{CH_3CH{=}CHCH_3 \\xrightarrow{O_3,\\ Zn/H_2O} 2\\,CH_3CHO}$. So $y$ = ethanal.\nStep 3 – Both aldehydes have α‑H. With dilute alkali and heat they give a crossed aldol condensation, which produces four α,β‑unsaturated aldehydes.\nStep 4 – Propanal + propanal (self condensation): $\\mathrm{CH_3CH_2CH{=}C(CH_3)CHO}$ = 2‑methylpent‑2‑enal (A).\nStep 5 – Ethanal + ethanal (self condensation): $\\mathrm{CH_3CH{=}CHCHO}$ = but‑2‑enal.\nStep 6 – The carbanion from ethanal attacks the C=O of propanal: $\\mathrm{CH_3CH_2CH{=}CHCHO}$ = pent‑2‑enal (D).\nStep 7 – The carbanion from propanal attacks the C=O of ethanal: $\\mathrm{CH_3CH{=}C(CH_3)CHO}$ = 2‑methylbut‑2‑enal (B).\nStep 8 – 3‑Methylbut‑2‑enal is $\\mathrm{(CH_3)_2C{=}CHCHO}$. Making it would need acetone as the carbonyl partner, and acetone is not present. So this product cannot form.\nAnswer: (C) 3‑Methylbut‑2‑enal",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 710,
+   "cache_read": 1023,
+   "output": 1827,
+   "thinking": 217,
+   "api_cost_usd": 0.0424326,
+   "turns": 2,
+   "seconds": 17.7,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1504,
+   "cache_read": 1199,
+   "output": 677,
+   "thinking": 69,
+   "api_cost_usd": 0.025819799999999997,
+   "turns": 2,
+   "seconds": 9.8,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:26:46+00:00"
+}

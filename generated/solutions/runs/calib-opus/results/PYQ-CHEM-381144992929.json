@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-CHEM-381144992929",
+ "subject": "CHEM",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 4.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "4",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Concept: Nernst equation, $E_{cell}=E^\\circ_{cell}-\\dfrac{0.059}{n}\\log Q$ at 298 K.\nAnode (oxidation): $\\mathrm{HSnO_2^- + H_2O + 3OH^- \\rightarrow Sn(OH)_6^{2-} + 2e^-}$\nCathode (reduction): $\\mathrm{Bi_2O_3 + 3H_2O + 6e^- \\rightarrow 2Bi + 6OH^-}$\nOverall (anode reaction multiplied by 3): $\\mathrm{Bi_2O_3 + 3HSnO_2^- + 3OH^- + 6H_2O \\rightarrow 2Bi + 3Sn(OH)_6^{2-}}$, so $n=6$.\n$E^\\circ_{cell}=E^\\circ_{cathode}-E^\\circ_{anode}=-0.44\\,\\text{V}-(-0.90\\,\\text{V})=0.46\\,\\text{V}$\n$E_{cell}=0.46\\,\\text{V}-\\dfrac{0.059\\,\\text{V}}{6}\\log 10^6=0.46\\,\\text{V}-0.059\\,\\text{V}=0.401\\,\\text{V}$\n$E_{cell}\\approx 4.01\\times10^{-1}\\,\\text{V}$, so the nearest integer is 4.\nAnswer: 4",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 930,
+   "cache_read": 928,
+   "output": 1246,
+   "thinking": 142,
+   "api_cost_usd": 0.0325536,
+   "turns": 2,
+   "seconds": 12.8,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1454,
+   "cache_read": 1541,
+   "output": 999,
+   "thinking": 413,
+   "api_cost_usd": 0.031928200000000004,
+   "turns": 2,
+   "seconds": 11.4,
+   "error": false
+  }
+ ]
+}

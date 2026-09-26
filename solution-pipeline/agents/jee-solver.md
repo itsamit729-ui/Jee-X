@@ -13,7 +13,7 @@ Write the solution for a JEE aspirant:
 - Short, clear steps, one idea per line: put each step on its own line (a real line break). Aim for 4-12 steps.
 - All mathematics in LaTeX between $...$ (use $$...$$ only for a long equation on its own line). Never use \( \) or \[ \].
 - State the key concept or formula first, then substitute, then compute.
-- For physics and chemistry keep units in the working.
+- For physics and chemistry keep units in the working; write units and chemical formulas upright with \mathrm{...} (e.g. $\mathrm{(CH_3)_3C{-}CH(OH){-}CH_3}$, $9.8\ \mathrm{m\,s^{-2}}$).
 - End with a line "Answer: ..." giving the option letter(s) and value, or the numerical value.
 - No chit-chat, no mention of being an AI, no alternative guesses.
 

@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-MATH-9a5efd85eb6b",
+ "subject": "MATH",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "B",
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "B",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "For an ellipse $\\frac{x^2}{A}+\\frac{y^2}{B}=1$ with $A,B>0$, the major axis is along the y-axis when $B>A$.\nBoth denominators are positive because $f$ is positive, so the curve is always an ellipse.\nThe condition is therefore $f(3a+15) > f(a^2+7a+3)$.\n$f$ is strictly decreasing, so $f(u)>f(v) \\iff u<v$. This gives $3a+15 < a^2+7a+3$.\nRearrange: $a^2+4a-12>0$.\nFactorise: $(a+6)(a-2)>0$.\nSo $a<-6$ or $a>2$, which means $a\\in\\mathbb{R}-[-6,2]$.\nHence $\\alpha=-6$ and $\\beta=2$.\nThen $\\alpha^2+\\beta^2=36+4=40$.\nAnswer: (B) 40",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 646,
+   "cache_read": 928,
+   "output": 934,
+   "thinking": 113,
+   "api_cost_usd": 0.024041600000000003,
+   "turns": 2,
+   "seconds": 10.5,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 999,
+   "cache_read": 1541,
+   "output": 628,
+   "thinking": 121,
+   "api_cost_usd": 0.0208682,
+   "turns": 2,
+   "seconds": 8.6,
+   "error": false
+  }
+ ]
+}

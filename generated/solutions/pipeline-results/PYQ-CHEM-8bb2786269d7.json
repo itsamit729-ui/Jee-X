@@ -1,0 +1,62 @@
+{
+ "ref": "PYQ-CHEM-8bb2786269d7",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "A",
+ "verdict": "key_mismatch",
+ "solution": null,
+ "final_answer": null,
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "C",
+   "matches_key": false,
+   "confidence": "high",
+   "solution": "A secondary alcohol has –OH on a carbon bonded to two carbons: $R_2CH–OH$.\n(I) $HOOC–N(CH_2CH_2OH)_2$: both alcohols are $–CH_2OH$ (primary); the –COOH –OH is not an alcohol. No $2^\\circ$.\n(II) $CH_3CH_2–CH(OH)–CH_2OH$: C‑2 is $2^\\circ$. Yes.\n(III) Ring C–OH is $3^\\circ$; the side chain $–CH(OH)CH_3$ is $2^\\circ$. Yes.\n(IV) The side chain $HOCH_2–CH(OH)–$ and the ring CH(OH) are $2^\\circ$. Yes.\n(V) $CH_3CH_2C(OH)(CH_3)–CH(OH)CH_3$: the $CH(OH)CH_3$ carbon is $2^\\circ$. Yes.\n(VI) $(CH_3)_2C(OH)–C(CH_3)(OH)–CH_2OH$: two $3^\\circ$ and one $1^\\circ$ alcohol. No $2^\\circ$.\nCompounds with a $2^\\circ$ alcohol: II, III, IV, V, so the total is 4.\nAnswer: (C) Four"
+  },
+  {
+   "attempt": 2,
+   "final_answer": "C",
+   "matches_key": false,
+   "confidence": "medium",
+   "solution": "Secondary alcohol: the carbon bearing –OH is bonded to exactly two carbons ($R_2CH\\text{–}OH$).\n(I) $HOOC\\text{–}N(CH_2CH_2OH)_2$: both –OH are on $CH_2$ (primary); the –COOH OH is not an alcohol. No 2° alcohol.\n(II) $CH_3CH_2CH(OH)CH_2OH$: C-2 is $CH(OH)$, a 2° alcohol. Yes.\n(III) Ring C–OH is 3° (bonded to 3 carbons); side chain $CH(OH)CH_3$ is 2°. Yes.\n(IV) Side chain $HOCH_2\\text{–}CH(OH)\\text{–}$ is 2°; ring $CH(OH)$ is 2°; ring $C(OH)CH_3$ is 3°. Yes.\n(V) $CH_3CH_2C(OH)(CH_3)CH(OH)CH_3$: $CH(OH)CH_3$ is 2°. Yes.\n(VI) $(CH_3)_2C(OH)\\text{–}C(CH_3)(OH)\\text{–}CH_2OH$: 3°, 3°, 1°. No 2° alcohol.\nCompounds with a 2° alcohol: II, III, IV, V, which is 4.\nAnswer: (C) Four"
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 833,
+   "cache_read": 940,
+   "output": 1723,
+   "thinking": 489,
+   "api_cost_usd": 0.041319999999999996,
+   "turns": 2,
+   "seconds": 19.4,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "solve2",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 877,
+   "cache_read": 940,
+   "output": 2297,
+   "thinking": 896,
+   "api_cost_usd": 0.053152000000000005,
+   "turns": 2,
+   "seconds": 24.5,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:09:31+00:00"
+}

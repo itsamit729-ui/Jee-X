@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-MATH-2029a55ef5f1",
+ "subject": "MATH",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "D",
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Rewrite the condition: $\\frac{3}{2} \\le \\left|z-\\frac{3}{2}(1+i)\\right| \\le \\frac{7}{2}$.\nSo $S$ is an annulus with centre $C\\left(\\frac32,\\frac32\\right)$, inner radius $\\frac32$ and outer radius $\\frac72$.\n$\\left|z+\\frac12(5+3i)\\right|$ is the distance of $z$ from $P\\left(-\\frac52,-\\frac32\\right)$.\n$CP=\\sqrt{4^2+3^2}=5$.\nSince $5>\\frac72$, $P$ lies outside the outer circle.\nThe minimum distance is $CP-\\frac72=5-\\frac72=\\frac32$.\nAnswer: (D) $\\frac32$",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 629,
+   "cache_read": 928,
+   "output": 1064,
+   "thinking": 102,
+   "api_cost_usd": 0.026505600000000004,
+   "turns": 2,
+   "seconds": 11.8,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 929,
+   "cache_read": 1541,
+   "output": 592,
+   "thinking": 78,
+   "api_cost_usd": 0.0195882,
+   "turns": 2,
+   "seconds": 8.0,
+   "error": false
+  }
+ ]
+}

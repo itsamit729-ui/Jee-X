@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-CHEM-1301ebf27bec",
+ "subject": "CHEM",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 435.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "435",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Key idea: all the sulphur in the compound ends up as $\\mathrm{BaSO_4}$. Since 1 mol $\\mathrm{BaSO_4}$ contains 1 mol S: $\\%S = \\frac{32}{233}\\times\\frac{m_{BaSO_4}}{m_{compound}}\\times100$\nMass of compound X: $m = 2.0\\times10^{-3}\\,\\mathrm{mol}\\times76\\,\\mathrm{g\\,mol^{-1}} = 0.152\\,\\mathrm{g}$\nMoles of $\\mathrm{BaSO_4}$: $n = \\frac{0.4813\\,\\mathrm{g}}{233\\,\\mathrm{g\\,mol^{-1}}} = 2.0657\\times10^{-3}\\,\\mathrm{mol}$\nMass of sulphur: $m_S = 2.0657\\times10^{-3}\\,\\mathrm{mol}\\times32\\,\\mathrm{g\\,mol^{-1}} = 0.06610\\,\\mathrm{g}$\nPercentage of sulphur: $\\%S = \\frac{0.06610\\,\\mathrm{g}}{0.152\\,\\mathrm{g}}\\times100 = 43.49\\%$\nIn the requested form: $43.49\\% = 434.9\\times10^{-1}\\%$, which rounds to $435\\times10^{-1}\\%$.\nAnswer: 435",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 668,
+   "cache_read": 928,
+   "output": 1328,
+   "thinking": 214,
+   "api_cost_usd": 0.032097600000000004,
+   "turns": 2,
+   "seconds": 14.1,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1184,
+   "cache_read": 1541,
+   "output": 637,
+   "thinking": 151,
+   "api_cost_usd": 0.022528199999999998,
+   "turns": 2,
+   "seconds": 9.4,
+   "error": false
+  }
+ ]
+}

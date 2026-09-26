@@ -1,0 +1,123 @@
+{
+ "ref": "PYQ-CHEM-dfd34d532091",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": "175.0",
+ "verdict": "verified",
+ "solution": "Dilute $\\mathrm{HNO_3}$ nitrates phenol to give a mixture of o‑nitrophenol and p‑nitrophenol.\no‑Nitrophenol has an intramolecular hydrogen bond, so it is steam volatile. p‑Nitrophenol forms intermolecular hydrogen bonds, so it is not. Therefore X is o‑nitrophenol, $\\mathrm{C_6H_5NO_3}$.\nPhenol ($\\mathrm{C_6H_6O}$): $M = 72+6+16 = 94\\ \\mathrm{g\\,mol^{-1}}$\n$\\%\\,\\mathrm{O} = \\frac{16}{94}\\times100 = 17.02\\%$\no‑Nitrophenol ($\\mathrm{C_6H_5NO_3}$): $M = 72+5+14+48 = 139\\ \\mathrm{g\\,mol^{-1}}$\n$\\%\\,\\mathrm{O} = \\frac{48}{139}\\times100 = 34.53\\%$\nIncrease: $34.53\\% - 17.02\\% = 17.51\\% \\approx 175\\times10^{-1}\\ \\%$\nAnswer: 175",
+ "final_answer": "175",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "175",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Dilute $\\mathrm{HNO_3}$ nitrates phenol to give a mixture of o‑nitrophenol and p‑nitrophenol.\no‑Nitrophenol has an intramolecular hydrogen bond, so it is steam volatile. p‑Nitrophenol forms intermolecular hydrogen bonds, so it is not. Therefore X is o‑nitrophenol, $\\mathrm{C_6H_5NO_3}$.\nPhenol ($\\mathrm{C_6H_6O}$): $M = 72+6+16 = 94\\ \\mathrm{g\\,mol^{-1}}$\n$\\%\\,\\mathrm{O} = \\frac{16}{94}\\times100 = 17.02\\%$\no‑Nitrophenol ($\\mathrm{C_6H_5NO_3}$): $M = 72+5+14+48 = 139\\ \\mathrm{g\\,mol^{-1}}$\n$\\%\\,\\mathrm{O} = \\frac{48}{139}\\times100 = 34.53\\%$\nIncrease: $34.53\\% - 17.02\\% = 17.51\\% \\approx 175\\times10^{-1}\\ \\%$\nAnswer: 175",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": [
+     {
+      "expression": "72+6+16",
+      "claimed": "94"
+     },
+     {
+      "expression": "16/94*100",
+      "claimed": "17.02"
+     },
+     {
+      "expression": "72+5+14+48",
+      "claimed": "139"
+     },
+     {
+      "expression": "48/139*100",
+      "claimed": "34.53"
+     },
+     {
+      "expression": "34.53-17.02",
+      "claimed": "17.51"
+     },
+     {
+      "expression": "round((48/139*100-16/94*100)*10)",
+      "claimed": "175"
+     }
+    ]
+   },
+   "calc_check": [
+    {
+     "expression": "72+6+16",
+     "claimed": "94",
+     "value": 94.0,
+     "status": "ok"
+    },
+    {
+     "expression": "16/94*100",
+     "claimed": "17.02",
+     "value": 17.02127659574468,
+     "status": "ok"
+    },
+    {
+     "expression": "72+5+14+48",
+     "claimed": "139",
+     "value": 139.0,
+     "status": "ok"
+    },
+    {
+     "expression": "48/139*100",
+     "claimed": "34.53",
+     "value": 34.53237410071942,
+     "status": "ok"
+    },
+    {
+     "expression": "34.53-17.02",
+     "claimed": "17.51",
+     "value": 17.51,
+     "status": "ok"
+    },
+    {
+     "expression": "round((48/139*100-16/94*100)*10)",
+     "claimed": "175",
+     "value": 175.0,
+     "status": "ok"
+    }
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 685,
+   "cache_read": 940,
+   "output": 1154,
+   "thinking": 156,
+   "api_cost_usd": 0.028756000000000004,
+   "turns": 2,
+   "seconds": 12.9,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1131,
+   "cache_read": 1199,
+   "output": 945,
+   "thinking": 348,
+   "api_cost_usd": 0.0281958,
+   "turns": 2,
+   "seconds": 12.5,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:09:56+00:00"
+}

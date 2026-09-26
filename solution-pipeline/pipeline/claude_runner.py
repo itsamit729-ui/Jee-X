@@ -16,7 +16,9 @@ from pathlib import Path
 
 from common import CONFIG
 
-USAGE_LIMIT = re.compile(r"usage limit|rate limit|limit reached|resets at|out of (extra )?usage|429", re.I)
+# e.g. "You've hit your session limit · resets 4:10am (Asia/Kolkata)", "weekly limit", "usage limit reached"
+USAGE_LIMIT = re.compile(r"(session|usage|weekly|rate|opus) limit|hit your .{0,20}limit|limit reached|resets? (at )?\d"
+                         r"|out of (extra )?usage|\b429\b", re.I)
 
 
 class UsageLimitReached(Exception):
@@ -27,7 +29,9 @@ def call(agent: dict, prompt: str, schema: dict, workdir: Path, image: Path | No
     model = model or agent["model"]
     cmd = ["claude", "-p", "--model", model, "--input-format", "stream-json", "--output-format", "stream-json",
            "--verbose", "--no-session-persistence", "--strict-mcp-config", "--mcp-config", '{"mcpServers":{}}',
-           "--system-prompt", agent["prompt"], "--json-schema", json.dumps(schema), "--tools", agent.get("tools", "")]
+           "--system-prompt", agent["prompt"], "--json-schema", json.dumps(schema),
+           # both shell names are listed for the checker: Windows offers PowerShell, macOS/Linux Bash
+           "--tools", agent.get("tools", "").replace(" ", "")]
     if agent["allowed"]:
         cmd += ["--allowedTools", *agent["allowed"]]
     if CONFIG.get("effort"):
@@ -44,12 +48,17 @@ def call(agent: dict, prompt: str, schema: dict, workdir: Path, image: Path | No
                           cwd=workdir, timeout=CONFIG["call_timeout_seconds"])
     seconds = round(time.time() - started, 1)
     result = None
+    shell_runs = []  # commands the model actually ran (checker: its Python recomputations)
     for line in proc.stdout.splitlines():
         if line.startswith("{"):
             try:
                 event = json.loads(line)
             except json.JSONDecodeError:
                 continue
+            if event.get("type") == "assistant":
+                for block in (event.get("message") or {}).get("content") or []:
+                    if block.get("type") == "tool_use" and block.get("name") in ("Bash", "PowerShell"):
+                        shell_runs.append(str((block.get("input") or {}).get("command", ""))[:300])
             if event.get("type") == "result":
                 result = event
     if result is None:
@@ -66,6 +75,8 @@ def call(agent: dict, prompt: str, schema: dict, workdir: Path, image: Path | No
         "cache_read": usage.get("cache_read_input_tokens", 0), "output": usage.get("output_tokens", 0),
         "thinking": (usage.get("output_tokens_details") or {}).get("thinking_tokens", 0),
         "api_cost_usd": result.get("total_cost_usd", 0), "turns": result.get("num_turns"), "seconds": seconds,
+        "shell_runs": shell_runs,
+        "permission_denials": len(result.get("permission_denials") or []),
         "error": result.get("result") if result.get("is_error") else None,
     }
     return result.get("structured_output"), stats

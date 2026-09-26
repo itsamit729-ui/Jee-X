@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-PHY-3c3f876acabc",
+ "subject": "PHY",
+ "type": "numerical",
+ "has_figure": true,
+ "answer_key": 17.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "17",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Figure: T-shape; vertical rod hangs from $P$, horizontal rod's midpoint is joined at the lower end, a distance $L$ below $P$.\nVertical rod about its end: $I_1 = \\frac{ML^2}{3} = \\frac{4ML^2}{12}$\nHorizontal rod: centre at distance $L$ from $P$; parallel axis theorem gives $I_2 = \\frac{ML^2}{12} + ML^2 = \\frac{13ML^2}{12}$\nTotal: $I = \\frac{4+13}{12}ML^2 = \\frac{17}{12}ML^2 \\text{ kg m}^2$\nSo $x = 17$\nAnswer: 17",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 4,
+   "cache_create": 857,
+   "cache_read": 3716,
+   "output": 925,
+   "thinking": 512,
+   "api_cost_usd": 0.0261152,
+   "turns": 3,
+   "seconds": 12.0,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 4,
+   "cache_create": 1147,
+   "cache_read": 4006,
+   "output": 626,
+   "thinking": 430,
+   "api_cost_usd": 0.022513199999999997,
+   "turns": 3,
+   "seconds": 9.9,
+   "error": false
+  }
+ ]
+}

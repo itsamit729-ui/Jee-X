@@ -1,0 +1,83 @@
+{
+ "ref": "PYQ-CHEM-9f8f99c3b0b8",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "C",
+ "verdict": "verified",
+ "solution": "The question text is cut off after \"50\"; it is assumed to read \"on treatment with 50% KOH\".\nMolar ratio $\\mathrm{C:O:H}=1:1:1$, so the empirical formula is $\\mathrm{CHO}$ with empirical formula mass $12+1+16=29\\ \\mathrm{g\\,mol^{-1}}$.\n$n=\\dfrac{58}{29}=2$, so the molecular formula is $\\mathrm{C_2H_2O_2}$.\n$\\mathrm{C_2H_2O_2}$ is glyoxal, $\\mathrm{OHC{-}CHO}$, which has no α-hydrogen.\nKey concept: a dialdehyde with no α-H undergoes an intramolecular Cannizzaro reaction with 50% $\\mathrm{KOH}$. One $\\mathrm{{-}CHO}$ group is oxidised to $\\mathrm{{-}COO^-}$ and the other is reduced to $\\mathrm{{-}CH_2OH}$.\n$$\\mathrm{OHC{-}CHO \\xrightarrow{50\\%\\ KOH} HOCH_2{-}COO^-K^+ \\xrightarrow{H_3O^+} HOCH_2{-}COOH}$$\nThe product is glycolic acid, $\\mathrm{HO{-}CH_2{-}COOH}$, which matches option (C).\nAnswer: (C) $\\mathrm{HOCH_2{-}COOH}$ (glycolic acid)",
+ "final_answer": "C",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "C",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "The question text is cut off after \"50\"; it is assumed to read \"on treatment with 50% KOH\".\nMolar ratio $\\mathrm{C:O:H}=1:1:1$, so the empirical formula is $\\mathrm{CHO}$ with empirical formula mass $12+1+16=29\\ \\mathrm{g\\,mol^{-1}}$.\n$n=\\dfrac{58}{29}=2$, so the molecular formula is $\\mathrm{C_2H_2O_2}$.\n$\\mathrm{C_2H_2O_2}$ is glyoxal, $\\mathrm{OHC{-}CHO}$, which has no α-hydrogen.\nKey concept: a dialdehyde with no α-H undergoes an intramolecular Cannizzaro reaction with 50% $\\mathrm{KOH}$. One $\\mathrm{{-}CHO}$ group is oxidised to $\\mathrm{{-}COO^-}$ and the other is reduced to $\\mathrm{{-}CH_2OH}$.\n$$\\mathrm{OHC{-}CHO \\xrightarrow{50\\%\\ KOH} HOCH_2{-}COO^-K^+ \\xrightarrow{H_3O^+} HOCH_2{-}COOH}$$\nThe product is glycolic acid, $\\mathrm{HO{-}CH_2{-}COOH}$, which matches option (C).\nAnswer: (C) $\\mathrm{HOCH_2{-}COOH}$ (glycolic acid)",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": [
+     {
+      "expression": "12+1+16",
+      "claimed": "29"
+     },
+     {
+      "expression": "58/29",
+      "claimed": "2"
+     }
+    ]
+   },
+   "calc_check": [
+    {
+     "expression": "12+1+16",
+     "claimed": "29",
+     "value": 29.0,
+     "status": "ok"
+    },
+    {
+     "expression": "58/29",
+     "claimed": "2",
+     "value": 2.0,
+     "status": "ok"
+    }
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 829,
+   "cache_read": 1023,
+   "output": 1498,
+   "thinking": 184,
+   "api_cost_usd": 0.0368046,
+   "turns": 2,
+   "seconds": 15.8,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1378,
+   "cache_read": 1199,
+   "output": 747,
+   "thinking": 171,
+   "api_cost_usd": 0.0262118,
+   "turns": 2,
+   "seconds": 10.6,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:26:16+00:00"
+}

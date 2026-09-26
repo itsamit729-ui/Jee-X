@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-PHY-df643566ba60",
+ "subject": "PHY",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 125.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "125",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Maximum current the Zener can safely carry: $I_{max} = \\dfrac{P_{max}}{V_Z}$\n$I_{max} = \\dfrac{0.4\\ \\text{W}}{10\\ \\text{V}} = 0.04\\ \\text{A}$\nThe protective series resistor takes the extra voltage: $V_R = 15\\ \\text{V} - 10\\ \\text{V} = 5\\ \\text{V}$\nThis same maximum current flows through the resistor, so $R = \\dfrac{V_R}{I_{max}}$\n$R = \\dfrac{5\\ \\text{V}}{0.04\\ \\text{A}} = 125\\ \\Omega$\nAnswer: 125",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1508,
+   "cache_read": 0,
+   "output": 324,
+   "thinking": 0,
+   "api_cost_usd": 0.018552,
+   "turns": 2,
+   "seconds": 8.4,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 2393,
+   "cache_read": 0,
+   "output": 495,
+   "thinking": 108,
+   "api_cost_usd": 0.029052,
+   "turns": 2,
+   "seconds": 8.6,
+   "error": false
+  }
+ ]
+}

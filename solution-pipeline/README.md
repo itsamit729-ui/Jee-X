@@ -11,7 +11,7 @@ For every question:
 1. **Agent 1 — `jee-solver`** solves it **without seeing the answer key**, from the question text and the figure (attached to the message). It returns a LaTeX solution and a final answer as JSON.
 2. **Script: answer = key?** Plain code compares the final answer with the official key (no tokens, the model can't talk itself into a match).
 3. **Script: format OK?** Rejects solutions with no LaTeX, unbalanced `$`, or everything on one line, before any reviewer tokens are spent.
-4. **Agent 2 — `jee-checker`** starts a fresh session, gets the question, the key and the solution, checks every step and **re-runs every calculation in Python**.
+4. **Agent 2 — `jee-checker`** starts a fresh session, gets the question, the key and the solution, checks every step and **lists every calculation, which the script recomputes in Python**.
 5. **Passed → verified.** Anything that fails gets **one retry**: the solver is told *why* (re-derive from scratch / the formatting problems / the checker's objections), never the answer. Failing twice → **flagged** for a person:
    - `key_mismatch`: the solver twice reached a different answer; often the **key is wrong** (e.g. a 2026 maths question keyed 11 whose correct answer is 6)
    - `checker_rejected`: the answer matches but no sound solution was produced
@@ -24,8 +24,8 @@ flowchart TD
   subgraph batch [run_batch.py — every 5 h, one question at a time]
     S1[Agent 1: jee-solver<br/>blind, figure inline] --> K{answer = key?}
     K -- yes --> F{format OK?}
-    F -- yes --> C[Agent 2: jee-checker<br/>sees key, recomputes in Python]
-    C --> V{correct?}
+    F -- yes --> C[Agent 2: jee-checker<br/>sees key, lists calculations] --> CALC{script recomputes<br/>every calculation}
+    CALC --> V{all correct?}
     V -- yes --> OK[verified → data/results]
     K -- no --> R{attempt 1?}
     F -- no --> R
@@ -49,6 +49,7 @@ solution-pipeline/
   pipeline/common.py         key comparison, formatting checks, figure download
   pipeline/status.py         progress and tokens
   pipeline/review.py         review page: flagged + random sample (HTML, maths rendered)
+  pipeline/preview.py        student view of solved questions (options, figure, solution)
   pipeline/export_questions.py   database → question pack   (database machine only)
   pipeline/publish.py            verified results → database (database machine only)
   scripts/                   schedulers (Windows Task Scheduler, cron)
@@ -74,6 +75,7 @@ The database machine also needs: `pip install -r requirements.txt` and a `.env` 
 | Solve the next batch | `python pipeline/run_batch.py` (`--limit 50`, `--shard 1/2`, `--refs PYQ-...`) | any |
 | Progress and tokens | `python pipeline/status.py [--shard 1/2]` | any |
 | Review page | `python pipeline/review.py` → open `data/review/review-*.html` | database machine |
+| Student-view preview | `python pipeline/preview.py [--all] [--refs PYQ-...]` → open `data/review/preview-*.html` | any |
 | Publish (dry run / real) | `python pipeline/publish.py` / `python pipeline/publish.py --apply` | database machine |
 
 **Two laptops, no overlap:** you run `--shard 1/2`, your friend `--shard 2/2`. Each machine always takes the same fixed half of the pack, so nobody solves a question twice and no coordination is needed. Your friend sends their `data/results/*.json` files back (zip, Drive, …); copy them into your `data/results/` before publishing. Already-solved questions are always skipped, so re-running is safe.

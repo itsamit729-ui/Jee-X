@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-CHEM-1e9c25b28f9b",
+ "subject": "CHEM",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "D",
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "X is $CH_3CH=CH–O–C(CH_3)=CH_2$, a divinyl ether. Under mild acid, each half is released as an enol that tautomerises to a carbonyl compound.\nFirst half: $CH_3CH=CH–OH \\rightarrow CH_3CH_2CHO$ (propanal, Y), $M = 58\\ \\text{g mol}^{-1}$.\nSecond half: $CH_2=C(CH_3)OH \\rightarrow CH_3COCH_3$ (acetone, Z), $M = 58\\ \\text{g mol}^{-1}$.\n(A) Y and Z are both $C_3H_6O$, so their molar masses are equal. Correct.\n(B) Neither compound is acidic enough to react with $NaHCO_3$, so it cannot distinguish them. Incorrect.\n(C) The aldehyde is less hindered and more electrophilic, so propanal adds HCN faster than acetone. Incorrect.\n(D) Both carbonyls add 2,4-DNP (addition followed by elimination) to give 2,4-dinitrophenylhydrazones. Correct.\nOnly A and D are correct.\nAnswer: (D) A and D only",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 4,
+   "cache_create": 885,
+   "cache_read": 3807,
+   "output": 1290,
+   "thinking": 710,
+   "api_cost_usd": 0.0336574,
+   "turns": 3,
+   "seconds": 16.2,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 4,
+   "cache_create": 1336,
+   "cache_read": 4259,
+   "output": 833,
+   "thinking": 637,
+   "api_cost_usd": 0.0282158,
+   "turns": 3,
+   "seconds": 12.1,
+   "error": false
+  }
+ ]
+}

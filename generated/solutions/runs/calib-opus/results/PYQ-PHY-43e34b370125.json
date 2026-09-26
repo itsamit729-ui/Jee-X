@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-PHY-43e34b370125",
+ "subject": "PHY",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 120.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "120",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "For a reversible adiabatic process, $PV^\\gamma=$ constant and the work done by the gas is $W=\\dfrac{P_1V_1-P_2V_2}{\\gamma-1}$.\nFind $\\gamma$: $\\gamma=\\dfrac{c_p}{c_v}=\\dfrac{3R}{2R}=1.5$.\nInitial state: $P_1V_1=8\\times10^5\\,\\text{Pa}\\times0.15\\,\\text{m}^3=1.2\\times10^5\\,\\text{J}$.\nFinal volume: $V_2=V_1\\left(\\dfrac{P_1}{P_2}\\right)^{1/\\gamma}=0.15\\times8^{2/3}\\,\\text{m}^3=0.6\\,\\text{m}^3$.\nFinal state: $P_2V_2=10^5\\,\\text{Pa}\\times0.6\\,\\text{m}^3=0.6\\times10^5\\,\\text{J}$.\nWork done: $W=\\dfrac{1.2\\times10^5-0.6\\times10^5}{0.5}\\,\\text{J}=1.2\\times10^5\\,\\text{J}=120\\,\\text{kJ}$.\nThe temperature of 140°C is not needed, because $P_1V_1$ is known directly.\nAnswer: 120",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1523,
+   "cache_read": 0,
+   "output": 1178,
+   "thinking": 135,
+   "api_cost_usd": 0.035752000000000006,
+   "turns": 2,
+   "seconds": 13.8,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1068,
+   "cache_read": 1541,
+   "output": 692,
+   "thinking": 87,
+   "api_cost_usd": 0.022700199999999997,
+   "turns": 2,
+   "seconds": 9.6,
+   "error": false
+  }
+ ]
+}

@@ -1,5 +1,6 @@
 """Shared pieces: config, agent definitions, question text, answer checking, formatting checks."""
 
+import ast
 import hashlib
 import json
 import math
@@ -112,6 +113,74 @@ _LITERAL_NEWLINE = re.compile(r"\\n(?!(?:%s)(?![A-Za-z]))" % "|".join(sorted((c[
 def clean_solution(text: str) -> str:
     text = _LITERAL_NEWLINE.sub("\n", text.replace("\r\n", "\n"))
     return "\n".join(line.rstrip() for line in text.strip().splitlines())
+
+
+# ---------------------------------------------------------------- arithmetic check
+
+_FUNCS = {name: getattr(math, name) for name in ("sqrt", "log", "log10", "log2", "exp", "sin", "cos", "tan", "asin",
+                                                  "acos", "atan", "radians", "degrees", "factorial", "comb")}
+_FUNCS.update(abs=abs, round=round)
+_CONSTS = {"pi": math.pi, "e": math.e}
+_BINOPS = {ast.Add: lambda a, b: a + b, ast.Sub: lambda a, b: a - b, ast.Mult: lambda a, b: a * b,
+           ast.Div: lambda a, b: a / b, ast.Pow: lambda a, b: a ** b, ast.Mod: lambda a, b: a % b,
+           ast.FloorDiv: lambda a, b: a // b}
+
+
+def safe_eval(expression: str) -> float:
+    """Evaluate a numeric expression: numbers, + - * / ** % //, parentheses and a few math functions only."""
+    def ev(node):
+        if isinstance(node, ast.Expression):
+            return ev(node.body)
+        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)):
+            return node.value
+        if isinstance(node, ast.BinOp) and type(node.op) in _BINOPS:
+            left, right = ev(node.left), ev(node.right)
+            if isinstance(node.op, ast.Pow) and abs(right) > 1000:
+                raise ValueError("exponent too large")
+            return _BINOPS[type(node.op)](left, right)
+        if isinstance(node, ast.UnaryOp) and isinstance(node.op, (ast.USub, ast.UAdd)):
+            return -ev(node.operand) if isinstance(node.op, ast.USub) else ev(node.operand)
+        if isinstance(node, ast.Name) and node.id in _CONSTS:
+            return _CONSTS[node.id]
+        if (isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id in _FUNCS
+                and not node.keywords):
+            return _FUNCS[node.func.id](*[ev(a) for a in node.args])
+        raise ValueError(f"not allowed: {ast.dump(node)[:60]}")
+    return float(ev(ast.parse(expression.replace("^", "**"), mode="eval")))
+
+
+def _close_enough(value: float, claimed_text: str) -> bool:
+    claimed = float(claimed_text)
+    if math.isclose(value, claimed, rel_tol=0.01, abs_tol=1e-12):
+        return True
+    # a claimed value rounded to its shown decimals is fine (17.02 for 17.0213)
+    decimals = len(claimed_text.split(".")[1].split("e")[0].split("E")[0]) if "." in claimed_text else 0
+    if "e" not in claimed_text.lower():
+        return abs(value - claimed) <= 0.5 * 10 ** (-decimals) + 1e-12
+    return False
+
+
+def check_calculations(calculations: list[dict]) -> tuple[list[str], list[dict]]:
+    """Recompute every calculation the checker listed. Returns (mismatch issues, per-calculation log)."""
+    issues, log = [], []
+    for c in calculations or []:
+        expr, claimed = str(c.get("expression", "")).strip(), str(c.get("claimed", "")).strip()
+        entry = {"expression": expr, "claimed": claimed}
+        try:
+            value = safe_eval(expr)
+            entry["value"] = value
+            m = re.fullmatch(r"-?\d+(?:\.\d+)?(?:[eE][-+]?\d+)?", claimed.replace(",", ""))
+            if not m:
+                entry["status"] = "unparsed_claim"
+            elif _close_enough(value, m.group(0)):
+                entry["status"] = "ok"
+            else:
+                entry["status"] = "mismatch"
+                issues.append(f"The solution states {claimed} for {expr}, but it evaluates to {value:.6g}.")
+        except (ValueError, SyntaxError, TypeError, ZeroDivisionError, OverflowError) as e:
+            entry["status"] = f"not_evaluated: {e.__class__.__name__}"
+        log.append(entry)
+    return issues, log
 
 
 def format_problems(solution: str) -> list[str]:

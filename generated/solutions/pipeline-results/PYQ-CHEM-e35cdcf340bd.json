@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-e35cdcf340bd",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "A",
+ "verdict": "verified",
+ "solution": "Target: $(CH_3)_3C-CH(OH)-CH_3$ (3,3-dimethyl-2-butanol).\nA: $(CH_3)_3C-CHO + CH_3MgBr \\xrightarrow{H_3O^+} (CH_3)_3C-CH(OH)CH_3$, so A gives the target.\nB: The alkene is $CH_3CH_2C(CH_3)_2CH=CH_2$ ($C_7$). Hydration gives only a $C_7$ alcohol, so B cannot give the target.\nC: Ozonolysis of $(CH_3)_3C-C(CH_3)=CH-C(CH_3)_3$ gives $(CH_3)_3C-CO-CH_3 + (CH_3)_3C-CHO$. $NaBH_4$ reduces the ketone to the target, so C gives the target.\nD: $LiAlH_4$ reduces $(CH_3)_3C-CO-CH_3$ to $(CH_3)_3C-CH(OH)CH_3$, so D gives the target.\nE: $Hg^{2+}/H^+$ hydration of $(CH_3)_3C-C\\equiv CH$ gives the ketone $(CH_3)_3C-CO-CH_3$, not the alcohol. So E cannot give the target.\nOnly B and E fail.\nAnswer: (A) B and E only",
+ "final_answer": "A",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "A",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Target: $(CH_3)_3C-CH(OH)-CH_3$ (3,3-dimethyl-2-butanol).\nA: $(CH_3)_3C-CHO + CH_3MgBr \\xrightarrow{H_3O^+} (CH_3)_3C-CH(OH)CH_3$, so A gives the target.\nB: The alkene is $CH_3CH_2C(CH_3)_2CH=CH_2$ ($C_7$). Hydration gives only a $C_7$ alcohol, so B cannot give the target.\nC: Ozonolysis of $(CH_3)_3C-C(CH_3)=CH-C(CH_3)_3$ gives $(CH_3)_3C-CO-CH_3 + (CH_3)_3C-CHO$. $NaBH_4$ reduces the ketone to the target, so C gives the target.\nD: $LiAlH_4$ reduces $(CH_3)_3C-CO-CH_3$ to $(CH_3)_3C-CH(OH)CH_3$, so D gives the target.\nE: $Hg^{2+}/H^+$ hydration of $(CH_3)_3C-C\\equiv CH$ gives the ketone $(CH_3)_3C-CO-CH_3$, not the alcohol. So E cannot give the target.\nOnly B and E fail.\nAnswer: (A) B and E only",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 779,
+   "cache_read": 940,
+   "output": 1851,
+   "thinking": 493,
+   "api_cost_usd": 0.043448,
+   "turns": 2,
+   "seconds": 20.6,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1285,
+   "cache_read": 1199,
+   "output": 1032,
+   "thinking": 516,
+   "api_cost_usd": 0.031167799999999996,
+   "turns": 2,
+   "seconds": 13.4,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:09:02+00:00"
+}

@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-1e9f9f2c92b6",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "Key idea: for A to give a single cross-aldol product with acetophenone, A must have no $\\alpha$-H, so it cannot enolise and self-condense. Only acetophenone forms the enolate.\nFor A to undergo the Cannizzaro reaction with conc. NaOH (giving a benzyl alcohol plus a carboxylate), A must be an aromatic aldehyde with no $\\alpha$-H.\nCheck the molecular formula $\\mathrm{C_8H_8O_2}$ for each option:\n(A) 2-hydroxyacetophenone, $\\mathrm{C_8H_8O_2}$: it is a ketone with $\\alpha$-H (the $\\mathrm{CH_3}$), so it can self-condense and cannot undergo Cannizzaro. Rejected.\n(B) 4-hydroxybenzaldehyde, $\\mathrm{HO{-}C_6H_4{-}CHO}$, is $\\mathrm{C_7H_6O_2}$, so the formula does not match. Rejected.\n(C) 4-methylbenzoic acid, $\\mathrm{C_8H_8O_2}$: it is an acid, so it gives neither aldol condensation nor Cannizzaro. Rejected.\n(D) 4-methoxybenzaldehyde, $\\mathrm{CH_3O{-}C_6H_4{-}CHO}$, is $\\mathrm{C_8H_8O_2}$ and has no $\\alpha$-H. Its cross-aldol with acetophenone gives a single product, the chalcone $\\mathrm{CH_3O{-}C_6H_4{-}CH{=}CH{-}CO{-}C_6H_5}$.\nCannizzaro of (D): $2\\,\\mathrm{CH_3OC_6H_4CHO} + \\mathrm{NaOH} \\rightarrow \\mathrm{CH_3OC_6H_4CH_2OH} + \\mathrm{CH_3OC_6H_4COONa}$. One product is 4-methoxybenzyl alcohol, a substituted benzyl alcohol.\nAnswer: (D) 4-methoxybenzaldehyde",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Key idea: for A to give a single cross-aldol product with acetophenone, A must have no $\\alpha$-H, so it cannot enolise and self-condense. Only acetophenone forms the enolate.\nFor A to undergo the Cannizzaro reaction with conc. NaOH (giving a benzyl alcohol plus a carboxylate), A must be an aromatic aldehyde with no $\\alpha$-H.\nCheck the molecular formula $\\mathrm{C_8H_8O_2}$ for each option:\n(A) 2-hydroxyacetophenone, $\\mathrm{C_8H_8O_2}$: it is a ketone with $\\alpha$-H (the $\\mathrm{CH_3}$), so it can self-condense and cannot undergo Cannizzaro. Rejected.\n(B) 4-hydroxybenzaldehyde, $\\mathrm{HO{-}C_6H_4{-}CHO}$, is $\\mathrm{C_7H_6O_2}$, so the formula does not match. Rejected.\n(C) 4-methylbenzoic acid, $\\mathrm{C_8H_8O_2}$: it is an acid, so it gives neither aldol condensation nor Cannizzaro. Rejected.\n(D) 4-methoxybenzaldehyde, $\\mathrm{CH_3O{-}C_6H_4{-}CHO}$, is $\\mathrm{C_8H_8O_2}$ and has no $\\alpha$-H. Its cross-aldol with acetophenone gives a single product, the chalcone $\\mathrm{CH_3O{-}C_6H_4{-}CH{=}CH{-}CO{-}C_6H_5}$.\nCannizzaro of (D): $2\\,\\mathrm{CH_3OC_6H_4CHO} + \\mathrm{NaOH} \\rightarrow \\mathrm{CH_3OC_6H_4CH_2OH} + \\mathrm{CH_3OC_6H_4COONa}$. One product is 4-methoxybenzyl alcohol, a substituted benzyl alcohol.\nAnswer: (D) 4-methoxybenzaldehyde",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 662,
+   "cache_read": 1023,
+   "output": 906,
+   "thinking": 83,
+   "api_cost_usd": 0.0236286,
+   "turns": 2,
+   "seconds": 11.9,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1428,
+   "cache_read": 1199,
+   "output": 993,
+   "thinking": 342,
+   "api_cost_usd": 0.0315318,
+   "turns": 2,
+   "seconds": 12.4,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:26:40+00:00"
+}

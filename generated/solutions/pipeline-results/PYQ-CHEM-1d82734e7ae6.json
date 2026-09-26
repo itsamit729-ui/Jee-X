@@ -1,0 +1,83 @@
+{
+ "ref": "PYQ-CHEM-1d82734e7ae6",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "A",
+ "verdict": "verified",
+ "solution": "**Reaction A:** phenol is acidic, so it reacts with the active metal sodium and releases hydrogen gas.\n$$2\\,\\mathrm{C_6H_5OH} + 2\\,\\mathrm{Na} \\rightarrow 2\\,\\mathrm{C_6H_5ONa} + \\mathrm{H_2}\\uparrow$$\nSo gas $x = \\mathrm{H_2}$, with molar mass $2\\ \\mathrm{g\\,mol^{-1}}$.\n\n**Reaction B:** benzoic acid is a stronger acid than carbonic acid, so it reacts with $\\mathrm{NaHCO_3}$ and releases carbon dioxide (effervescence).\n$$\\mathrm{C_6H_5COOH} + \\mathrm{NaHCO_3} \\rightarrow \\mathrm{C_6H_5COONa} + \\mathrm{H_2O} + \\mathrm{CO_2}\\uparrow$$\nSo gas $y = \\mathrm{CO_2}$, with molar mass $12 + 2(16) = 44\\ \\mathrm{g\\,mol^{-1}}$.\n\n**Sum of molar masses:**\n$2 + 44 = 46\\ \\mathrm{g\\,mol^{-1}}$\n\nAnswer: (A) 46",
+ "final_answer": "A",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "A",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "**Reaction A:** phenol is acidic, so it reacts with the active metal sodium and releases hydrogen gas.\n$$2\\,\\mathrm{C_6H_5OH} + 2\\,\\mathrm{Na} \\rightarrow 2\\,\\mathrm{C_6H_5ONa} + \\mathrm{H_2}\\uparrow$$\nSo gas $x = \\mathrm{H_2}$, with molar mass $2\\ \\mathrm{g\\,mol^{-1}}$.\n\n**Reaction B:** benzoic acid is a stronger acid than carbonic acid, so it reacts with $\\mathrm{NaHCO_3}$ and releases carbon dioxide (effervescence).\n$$\\mathrm{C_6H_5COOH} + \\mathrm{NaHCO_3} \\rightarrow \\mathrm{C_6H_5COONa} + \\mathrm{H_2O} + \\mathrm{CO_2}\\uparrow$$\nSo gas $y = \\mathrm{CO_2}$, with molar mass $12 + 2(16) = 44\\ \\mathrm{g\\,mol^{-1}}$.\n\n**Sum of molar masses:**\n$2 + 44 = 46\\ \\mathrm{g\\,mol^{-1}}$\n\nAnswer: (A) 46",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": [
+     {
+      "expression": "12+2*16",
+      "claimed": "44"
+     },
+     {
+      "expression": "2+44",
+      "claimed": "46"
+     }
+    ]
+   },
+   "calc_check": [
+    {
+     "expression": "12+2*16",
+     "claimed": "44",
+     "value": 44.0,
+     "status": "ok"
+    },
+    {
+     "expression": "2+44",
+     "claimed": "46",
+     "value": 46.0,
+     "status": "ok"
+    }
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 700,
+   "cache_read": 1023,
+   "output": 564,
+   "thinking": 32,
+   "api_cost_usd": 0.0170926,
+   "turns": 2,
+   "seconds": 9.2,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1175,
+   "cache_read": 1199,
+   "output": 139,
+   "thinking": 0,
+   "api_cost_usd": 0.012427800000000001,
+   "turns": 2,
+   "seconds": 6.6,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:27:23+00:00"
+}

@@ -29,7 +29,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from claude_runner import UsageLimitReached, call  # noqa: E402
-from common import (CONFIG, answer_key, clean_solution, figure_file, format_problems, in_shard,  # noqa: E402
+from common import (CONFIG, answer_key, check_calculations, clean_solution, figure_file, format_problems, in_shard,  # noqa: E402
                     load_agent, load_questions, matches_key, path, question_text)
 
 SOLVER_SCHEMA = {
@@ -46,9 +46,12 @@ CHECKER_SCHEMA = {
     "properties": {
         "verdict": {"type": "string", "enum": ["correct", "incorrect"]},
         "issues": {"type": "array", "items": {"type": "string"}},
-        "recomputed_with_python": {"type": "boolean"},
+        "calculations": {"type": "array", "items": {
+            "type": "object",
+            "properties": {"expression": {"type": "string"}, "claimed": {"type": "string"}},
+            "required": ["expression", "claimed"]}},
     },
-    "required": ["verdict", "issues", "recomputed_with_python"],
+    "required": ["verdict", "issues", "calculations"],
 }
 
 _lock = threading.Lock()
@@ -93,6 +96,13 @@ def solve_one(q, solver, checker, results_dir: Path, calls_log: Path):
             chk, cst = call(checker, check_prompt, CHECKER_SCHEMA, work, figure)
             calls.append({"stage": f"check{attempt}", **cst})
             record["checker"] = chk or {"error": cst.get("error")}
+            if chk:
+                # Recompute every calculation the checker listed, in Python, here (no model tokens).
+                mismatches, calc_log = check_calculations(chk.get("calculations"))
+                record["calc_check"] = calc_log
+                if mismatches:
+                    chk = {**chk, "verdict": "incorrect", "issues": list(chk.get("issues") or []) + mismatches}
+                    record["checker"] = chk
             if chk and chk["verdict"] == "correct":
                 verdict = "verified"
                 break
@@ -132,7 +142,9 @@ def main():
 
     solver, checker = load_agent("jee-solver"), load_agent("jee-checker")
     results_dir = path("results_dir")
-    done = {p.stem for p in results_dir.glob("*.json")}
+    # "error" results (network failures, timeouts) are retried; verified and flagged ones are final.
+    done = {p.stem for p in results_dir.glob("*.json")
+            if json.loads(p.read_text(encoding="utf-8")).get("verdict") != "error"}
     todo = [q for q in load_questions()
             if q["ref"] not in done and in_shard(q["ref"], args.shard) and (not args.refs or q["ref"] in args.refs)]
     todo = todo[:args.limit]

@@ -1,0 +1,73 @@
+{
+ "ref": "PYQ-CHEM-4e8182049d6c",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "A",
+ "verdict": "verified",
+ "solution": "Concept: A compound dissolves in aqueous NaOH if it has an O–H acidic enough to be deprotonated by $OH^-$ (phenols, $pK_a\\approx10$; carboxylic acids, $pK_a\\approx4$–$5$). Alcohols ($pK_a\\approx16$–$18$) are not deprotonated enough.\n(I) Benzaldehyde has no acidic H, so it does not dissolve.\n(II) 1-Naphthol is a phenol: $ArOH + NaOH \\rightarrow ArO^-Na^+ + H_2O$. It dissolves.\n(III) 4-(Dimethylamino)phenol is a phenol, so it dissolves.\n(IV) p-Cresol is a phenol, so it dissolves.\n(V) Benzoic acid forms sodium benzoate, so it dissolves.\n(VI) N,N-Dimethylcyclohexylamine is a base with no acidic H, so it does not dissolve.\n(VII) 1-Naphthoic acid is a carboxylic acid and forms its sodium salt, so it dissolves.\n(VIII) 1,4-Di-tert-butylbenzene is a hydrocarbon, so it does not dissolve.\n(IX) 1-Naphthylmethanol is an alcohol ($pK_a\\approx16$), so it does not dissolve.\nCount: II, III, IV, V and VII dissolve, giving a total of 5.\nAnswer: (A) 5",
+ "final_answer": "A",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "A",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Concept: A compound dissolves in aqueous NaOH if it has an O–H acidic enough to be deprotonated by $OH^-$ (phenols, $pK_a\\approx10$; carboxylic acids, $pK_a\\approx4$–$5$). Alcohols ($pK_a\\approx16$–$18$) are not deprotonated enough.\n(I) Benzaldehyde has no acidic H, so it does not dissolve.\n(II) 1-Naphthol is a phenol: $ArOH + NaOH \\rightarrow ArO^-Na^+ + H_2O$. It dissolves.\n(III) 4-(Dimethylamino)phenol is a phenol, so it dissolves.\n(IV) p-Cresol is a phenol, so it dissolves.\n(V) Benzoic acid forms sodium benzoate, so it dissolves.\n(VI) N,N-Dimethylcyclohexylamine is a base with no acidic H, so it does not dissolve.\n(VII) 1-Naphthoic acid is a carboxylic acid and forms its sodium salt, so it dissolves.\n(VIII) 1,4-Di-tert-butylbenzene is a hydrocarbon, so it does not dissolve.\n(IX) 1-Naphthylmethanol is an alcohol ($pK_a\\approx16$), so it does not dissolve.\nCount: II, III, IV, V and VII dissolve, giving a total of 5.\nAnswer: (A) 5",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": [
+     {
+      "expression": "1+1+1+1+1",
+      "claimed": "5"
+     }
+    ]
+   },
+   "calc_check": [
+    {
+     "expression": "1+1+1+1+1",
+     "claimed": "5",
+     "value": 5.0,
+     "status": "ok"
+    }
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 805,
+   "cache_read": 940,
+   "output": 1309,
+   "thinking": 68,
+   "api_cost_usd": 0.032816000000000005,
+   "turns": 2,
+   "seconds": 14.3,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1340,
+   "cache_read": 1199,
+   "output": 740,
+   "thinking": 88,
+   "api_cost_usd": 0.0257678,
+   "turns": 2,
+   "seconds": 10.8,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:09:39+00:00"
+}

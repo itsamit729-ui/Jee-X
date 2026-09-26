@@ -1,0 +1,93 @@
+{
+ "ref": "PYQ-CHEM-da5d57cb0d7d",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": "6.0",
+ "verdict": "verified",
+ "solution": "Key idea: A Grignard reagent gives the alkane $\\mathrm{RH}$ with water. It gives the carboxylic acid $\\mathrm{RCOOH}$ with $\\mathrm{CO_2}$ (dry ice) followed by $\\mathrm{H_3O^+}$.\nAt STP, 1 mol of a gas occupies $22.4\\ \\mathrm{dm^3}$.\n$1\\ \\mathrm{g}$ of Q occupies $1.4\\ \\mathrm{dm^3}$, so the molar mass of Q is $M = \\dfrac{22.4}{1.4} = 16\\ \\mathrm{g\\,mol^{-1}}$.\nA gas with $M = 16\\ \\mathrm{g\\,mol^{-1}}$ is methane, so Q is $\\mathrm{CH_4}$. Hence $\\mathrm{R = CH_3}$ and P is $\\mathrm{CH_3MgBr}$.\nWith water: $\\mathrm{CH_3MgBr + H_2O \\rightarrow CH_4 + Mg(OH)Br}$.\nWith dry ice: $\\mathrm{CH_3MgBr + CO_2 \\xrightarrow{dry\\ ether} CH_3COOMgBr \\xrightarrow{H_3O^+} CH_3COOH}$.\nSo Z is acetic acid, $\\mathrm{CH_3COOH}$, with $M = 60\\ \\mathrm{g\\,mol^{-1}}$.\nMass of 0.1 mol of Z $= 0.1 \\times 60 = 6\\ \\mathrm{g}$.\nAnswer: 6",
+ "final_answer": "6",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "6",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Key idea: A Grignard reagent gives the alkane $\\mathrm{RH}$ with water. It gives the carboxylic acid $\\mathrm{RCOOH}$ with $\\mathrm{CO_2}$ (dry ice) followed by $\\mathrm{H_3O^+}$.\nAt STP, 1 mol of a gas occupies $22.4\\ \\mathrm{dm^3}$.\n$1\\ \\mathrm{g}$ of Q occupies $1.4\\ \\mathrm{dm^3}$, so the molar mass of Q is $M = \\dfrac{22.4}{1.4} = 16\\ \\mathrm{g\\,mol^{-1}}$.\nA gas with $M = 16\\ \\mathrm{g\\,mol^{-1}}$ is methane, so Q is $\\mathrm{CH_4}$. Hence $\\mathrm{R = CH_3}$ and P is $\\mathrm{CH_3MgBr}$.\nWith water: $\\mathrm{CH_3MgBr + H_2O \\rightarrow CH_4 + Mg(OH)Br}$.\nWith dry ice: $\\mathrm{CH_3MgBr + CO_2 \\xrightarrow{dry\\ ether} CH_3COOMgBr \\xrightarrow{H_3O^+} CH_3COOH}$.\nSo Z is acetic acid, $\\mathrm{CH_3COOH}$, with $M = 60\\ \\mathrm{g\\,mol^{-1}}$.\nMass of 0.1 mol of Z $= 0.1 \\times 60 = 6\\ \\mathrm{g}$.\nAnswer: 6",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": [
+     {
+      "expression": "22.4/1.4",
+      "claimed": "16"
+     },
+     {
+      "expression": "12*2+4*1+16*2",
+      "claimed": "60"
+     },
+     {
+      "expression": "0.1*60",
+      "claimed": "6"
+     }
+    ]
+   },
+   "calc_check": [
+    {
+     "expression": "22.4/1.4",
+     "claimed": "16",
+     "value": 16.0,
+     "status": "ok"
+    },
+    {
+     "expression": "12*2+4*1+16*2",
+     "claimed": "60",
+     "value": 60.0,
+     "status": "ok"
+    },
+    {
+     "expression": "0.1*60",
+     "claimed": "6",
+     "value": 6.0,
+     "status": "ok"
+    }
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 669,
+   "cache_read": 1023,
+   "output": 1329,
+   "thinking": 79,
+   "api_cost_usd": 0.0321446,
+   "turns": 2,
+   "seconds": 14.3,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1266,
+   "cache_read": 1199,
+   "output": 169,
+   "thinking": 0,
+   "api_cost_usd": 0.0137558,
+   "turns": 2,
+   "seconds": 6.8,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:27:33+00:00"
+}

@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-PHY-6bf222f1f867",
+ "subject": "PHY",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 4.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "4",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Initial charge on P: $Q_0 = C_P V_0 = (10\\times10^{-6}\\,\\text{F})(6.0\\,\\text{V}) = 60\\times10^{-6}\\,\\text{C}$\nWhen P is connected across Q, charge is conserved and both reach a common potential $V$ (parallel).\n$V = \\dfrac{Q_0}{C_P + C_Q} = \\dfrac{60\\times10^{-6}\\,\\text{C}}{30\\times10^{-6}\\,\\text{F}} = 2.0\\,\\text{V}$\nCharge on Q: $q_Q = C_Q V = (20\\times10^{-6}\\,\\text{F})(2.0\\,\\text{V}) = 40\\times10^{-6}\\,\\text{C} = 4\\times10^{-5}\\,\\text{C}$\nCheck: charge on P is $20\\,\\mu\\text{C}$, and $20 + 40 = 60\\,\\mu\\text{C}$, so charge is conserved.\nAnswer: 4",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1619,
+   "cache_read": 0,
+   "output": 948,
+   "thinking": 52,
+   "api_cost_usd": 0.03192,
+   "turns": 2,
+   "seconds": 12.0,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1068,
+   "cache_read": 1541,
+   "output": 485,
+   "thinking": 68,
+   "api_cost_usd": 0.0185602,
+   "turns": 2,
+   "seconds": 7.9,
+   "error": false
+  }
+ ]
+}

@@ -1,0 +1,103 @@
+{
+ "ref": "PYQ-CHEM-cff71a02c46e",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "Starting compound is glucose, $\\mathrm{CHO(CHOH)_4CH_2OH}$.\n(i) Prolonged heating with $\\mathrm{HI}$ reduces glucose completely to n-hexane, $\\mathrm{CH_3(CH_2)_4CH_3}$.\n(ii) $\\mathrm{V_2O_5}$ at $773\\ \\text{K}$ and $10$–$20\\ \\text{atm}$ aromatises n-hexane (cyclisation + dehydrogenation) to benzene, $\\mathrm{C_6H_6}$.\n(iii) Friedel–Crafts acylation of benzene with benzoyl chloride and anhydrous $\\mathrm{AlCl_3}$ gives benzophenone, $\\mathrm{C_6H_5COC_6H_5}$ = X.\nπ electrons: two rings have $2\\times3 = 6$ π bonds, and $\\mathrm{C=O}$ has $1$ π bond, so $7$ π bonds $= 14$ electrons.\nLone-pair electrons: the carbonyl O has $2$ lone pairs $= 4$ electrons.\nTotal $= 14 + 4 = 18$ electrons.\nAnswer: (D) 18",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Starting compound is glucose, $\\mathrm{CHO(CHOH)_4CH_2OH}$.\n(i) Prolonged heating with $\\mathrm{HI}$ reduces glucose completely to n-hexane, $\\mathrm{CH_3(CH_2)_4CH_3}$.\n(ii) $\\mathrm{V_2O_5}$ at $773\\ \\text{K}$ and $10$–$20\\ \\text{atm}$ aromatises n-hexane (cyclisation + dehydrogenation) to benzene, $\\mathrm{C_6H_6}$.\n(iii) Friedel–Crafts acylation of benzene with benzoyl chloride and anhydrous $\\mathrm{AlCl_3}$ gives benzophenone, $\\mathrm{C_6H_5COC_6H_5}$ = X.\nπ electrons: two rings have $2\\times3 = 6$ π bonds, and $\\mathrm{C=O}$ has $1$ π bond, so $7$ π bonds $= 14$ electrons.\nLone-pair electrons: the carbonyl O has $2$ lone pairs $= 4$ electrons.\nTotal $= 14 + 4 = 18$ electrons.\nAnswer: (D) 18",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": [
+     {
+      "expression": "2*3",
+      "claimed": "6"
+     },
+     {
+      "expression": "7*2",
+      "claimed": "14"
+     },
+     {
+      "expression": "2*2",
+      "claimed": "4"
+     },
+     {
+      "expression": "14+4",
+      "claimed": "18"
+     }
+    ]
+   },
+   "calc_check": [
+    {
+     "expression": "2*3",
+     "claimed": "6",
+     "value": 6.0,
+     "status": "ok"
+    },
+    {
+     "expression": "7*2",
+     "claimed": "14",
+     "value": 14.0,
+     "status": "ok"
+    },
+    {
+     "expression": "2*2",
+     "claimed": "4",
+     "value": 4.0,
+     "status": "ok"
+    },
+    {
+     "expression": "14+4",
+     "claimed": "18",
+     "value": 18.0,
+     "status": "ok"
+    }
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 932,
+   "cache_read": 940,
+   "output": 1278,
+   "thinking": 203,
+   "api_cost_usd": 0.033212,
+   "turns": 2,
+   "seconds": 14.6,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1394,
+   "cache_read": 1199,
+   "output": 689,
+   "thinking": 121,
+   "api_cost_usd": 0.025179800000000002,
+   "turns": 2,
+   "seconds": 10.1,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:10:21+00:00"
+}

@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-MATH-17ad35c986b2",
+ "subject": "MATH",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 311.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "311",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Total ordered pairs $(a,b)$ with $a\\ne b$: $100\\times 99 = 9900$.\nLet $d=a-b$ with $10\\le d\\le 99$.\nFor a fixed $d$, $b$ can be $1,2,\\dots,100-d$, so there are $100-d$ pairs.\nFavourable pairs: $\\sum_{d=10}^{99}(100-d) = 1+2+\\dots+90 = \\frac{90\\cdot 91}{2} = 4095$.\n$P=\\frac{4095}{9900}$.\n$\\gcd(4095,9900)=45$, so $P=\\frac{91}{220}$.\n$m+n = 91+220 = 311$.\nAnswer: 311",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 589,
+   "cache_read": 928,
+   "output": 1008,
+   "thinking": 176,
+   "api_cost_usd": 0.025065600000000004,
+   "turns": 2,
+   "seconds": 11.7,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 873,
+   "cache_read": 1541,
+   "output": 624,
+   "thinking": 111,
+   "api_cost_usd": 0.019780199999999998,
+   "turns": 2,
+   "seconds": 8.7,
+   "error": false
+  }
+ ]
+}

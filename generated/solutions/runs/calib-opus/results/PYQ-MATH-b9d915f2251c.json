@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-MATH-b9d915f2251c",
+ "subject": "MATH",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 10.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "10",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "**Key idea:** $[g(x)]$ is discontinuous exactly where the continuous function $g(x)$ passes through an integer value. The endpoints need a separate check.\nLet $g(x) = x^2 - x - \\frac{1}{2}$.\n$g'(x) = 2x - 1 > 0$ for $x \\in [2,4]$, so $g$ is strictly increasing on $[2,4]$.\n$g(2) = 4 - 2 - \\frac{1}{2} = 1.5$\n$g(4) = 16 - 4 - \\frac{1}{2} = 11.5$\nSo $g$ increases continuously from $1.5$ to $11.5$. It passes through each integer $2, 3, \\dots, 11$ exactly once, at an interior point of the interval.\nAt each such point, $[g(x)]$ jumps by $1$, so $f$ is discontinuous there. This gives $11 - 2 + 1 = 10$ points.\nAt the endpoints, $g(2) = 1.5$ and $g(4) = 11.5$ are not integers. So $f$ is continuous at $x = 2$ and $x = 4$.\nTotal number of points of discontinuity $= 10$.\nAnswer: 10",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 574,
+   "cache_read": 928,
+   "output": 1083,
+   "thinking": 178,
+   "api_cost_usd": 0.0264456,
+   "turns": 2,
+   "seconds": 12.0,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1023,
+   "cache_read": 1541,
+   "output": 581,
+   "thinking": 63,
+   "api_cost_usd": 0.020120199999999998,
+   "turns": 2,
+   "seconds": 8.3,
+   "error": false
+  }
+ ]
+}
