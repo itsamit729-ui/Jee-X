@@ -12,6 +12,7 @@ WORKDIR /app
 COPY backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ ./
+COPY docs/JEE-Predictor-Data/jee-predictor-data/ ./predictor-data/
 COPY --from=frontend /build/frontend/dist ./static
 RUN groupadd --gid 1000 appuser && useradd --create-home --uid 1000 --gid 1000 appuser
 USER appuser

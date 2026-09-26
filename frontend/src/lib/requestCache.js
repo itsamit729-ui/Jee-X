@@ -6,6 +6,7 @@ let generation = 0
 let identity = null
 
 export function cachePolicy(path) {
+  if (path.startsWith('/api/colleges/insight?')) return { ttl: 600_000 }
   if (/^\/api\/subjects(?:\/[^/]+\/chapters)?$/.test(path)) return { ttl: 300_000, persist: true }
   if (/^\/api\/(roadmap|me|test-attempts(?:\/dashboard)?|ranking\/me|rewards)$/.test(path)) return { ttl: 30_000 }
   return null // Never cache auth, admin, live exams, daily assignments or mutations.

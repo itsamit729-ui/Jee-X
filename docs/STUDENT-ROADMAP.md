@@ -31,6 +31,8 @@ Generated papers are **not psychometrically calibrated** or guaranteed represent
 
 ## Evidence and college limits
 
+Category/NIT matching now supersedes the original AI-only release restrictions below. See [CATEGORY-NIT-MATCHING.md](CATEGORY-NIT-MATCHING.md) for current rank-list rules, state eligibility, data import and deployment verification. The earlier exclusions are retained below as initial-release context.
+
 The rules reuse practice-engine evidence over the latest 500 submitted responses, deduplicating questions, and avoid inferring weakness from too few answers. First-exposure timestamps exclude repeats from checkpoints. No LLM, national rank derived from platform rating, inferred prerequisite graph or invented marks-gain coefficient is used.
 
 College scenarios use the existing imported historical marks/percentile and CRL data. Values outside supported interpolation ranges remain unavailable. College rows include institute, program, reference year, counselling round, quota, seat type and gender pool.

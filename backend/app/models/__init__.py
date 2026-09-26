@@ -7,6 +7,7 @@ re-exported here so callers can keep doing `from app import models` and
 """
 
 from app.models.roadmap import StudentRoadmap
+from app.models.college_insights import CollegeInsight
 
 from app.models.admin import (
     AuditLog,
