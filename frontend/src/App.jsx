@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { IITianFactToast, Loader } from './components/Brand.jsx'
 import { Routes, Route, useLocation } from 'react-router-dom'
+const Roadmap = lazy(() => import('./pages/Roadmap.jsx'))
 const PublicProfile = lazy(() => import('./pages/PublicProfile.jsx'))
 const Syllabus = lazy(() => import('./pages/Syllabus.jsx'))
 const Ranking = lazy(() => import('./pages/Ranking.jsx'))
@@ -44,7 +45,8 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/free-test" element={<FreeTest />} />
       <Route path="/image-questions" element={<ImageQuestions />} />
-      <Route path="/recommendations" element={<ProtectedRoute><SubjectTest key="recommended" initialMode="recommended" /></ProtectedRoute>} />
+      <Route path="/roadmap" element={<ProtectedRoute><Roadmap /></ProtectedRoute>} />
+      <Route path="/recommendations" element={<ProtectedRoute><SubjectTest key={`recommended-${location.search}`} initialMode="recommended" /></ProtectedRoute>} />
       <Route path="/scenarios" element={<ProtectedRoute><Scenarios /></ProtectedRoute>} />
       <Route path="/scenarios/:runId" element={<ProtectedRoute><Scenarios /></ProtectedRoute>} />
       <Route
@@ -99,7 +101,7 @@ export default function App() {
         path="/subject-test"
         element={
           <ProtectedRoute>
-            <SubjectTest key="topic" initialMode="topic" />
+            <SubjectTest key={`topic-${location.search}`} initialMode="topic" />
           </ProtectedRoute>
         }
       />

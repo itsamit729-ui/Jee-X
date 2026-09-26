@@ -6,6 +6,8 @@ re-exported here so callers can keep doing `from app import models` and
 `models.User`, as before the split.
 """
 
+from app.models.roadmap import StudentRoadmap
+
 from app.models.admin import (
     AuditLog,
     ImportRun,

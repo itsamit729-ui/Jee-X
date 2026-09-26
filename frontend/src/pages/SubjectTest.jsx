@@ -20,6 +20,11 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const requestedSubject = searchParams.get('subject')
+  const requestedChapter = searchParams.get('chapter')
+  const assessment = searchParams.get('assessment') === '1'
+  const [deadline, setDeadline] = useState(null)
+  const [remaining, setRemaining] = useState(10800)
+  const timeoutSubmitted = useRef(false)
 
 
   const [subjects, setSubjects] = useState(null) // null = loading
@@ -52,7 +57,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
 
   useEffect(() => {
     if (!subjects || !requestedSubject) return
-    const match = subjects.find(s => s.name?.toLowerCase() === requestedSubject.toLowerCase())
+    const match = subjects.find(s => s.code === requestedSubject || s.name?.toLowerCase() === requestedSubject.toLowerCase())
     if (match) setSubjectCode(match.code)
   }, [subjects, requestedSubject])
 
@@ -64,7 +69,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
     setChaptersLoading(Boolean(subjectCode))
     if (!subjectCode) return
     catalogService.listChapters(subjectCode)
-      .then(data => { if (active) setChapters(data) })
+      .then(data => { if (active) { setChapters(data); if (data.some(c => String(c.id) === requestedChapter)) setChapterId(requestedChapter) } })
       .catch(e => { if (active) setError(e.message) })
       .finally(() => { if (active) setChaptersLoading(false) })
     return () => { active = false }
@@ -86,19 +91,29 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
     }
   }, [test, index, result, submitting])
 
+  useEffect(() => {
+    if (assessment && test && !result && remaining === 0 && !submitting && !timeoutSubmitted.current) {
+      timeoutSubmitted.current = true
+      submitTest()
+    }
+  }, [remaining, assessment, test, result, submitting])
+
   const startTest = async () => {
     requestFullscreen() // must be called synchronously from this click, before any await
     setError('')
     setStarting(true)
     try {
       const created = await subjectTestBuilderService.start({
-        subjectCode,
+        assessment,
+        subjectCode: assessment ? '' : subjectCode,
         chapterId: chapterId ? Number(chapterId) : null,
         durationMinutes,
         mode,
       })
+      timeoutSubmitted.current = false
       timer.current.reset()
       setTest(created)
+      if (assessment) { setDeadline(Date.now() + 10800000); setRemaining(10800) }
       setIndex(0)
       setAnswers({})
       setResult(null)
@@ -109,6 +124,21 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
     }
   }
 
+  useEffect(() => {
+    if (!assessment || !test || result || !deadline) return
+    const tick = () => setRemaining(Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))
+    tick()
+    const id = setInterval(tick, 1000)
+    return () => clearInterval(id)
+  }, [assessment, test, result, deadline])
+
+  useEffect(() => {
+    if (!assessment || !test || result) return
+    const warn = event => { event.preventDefault(); event.returnValue = '' }
+    window.addEventListener('beforeunload', warn)
+    return () => window.removeEventListener('beforeunload', warn)
+  }, [assessment, test, result])
+
   const exitTest = () => {
     if (!window.confirm('Leave this test? Your answers will be lost.')) return
     setTest(null)
@@ -117,10 +147,12 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   }
 
   const selectOption = (questionId, optionId) => {
+    if (assessment && remaining <= 0) return
     setAnswers((a) => ({ ...a, [questionId]: { option_ids: [optionId] } }))
   }
 
   const setNumeric = (questionId, value) => {
+    if (assessment && remaining <= 0) return
     setAnswers((a) => ({ ...a, [questionId]: { numeric_answer: value === '' ? null : Number(value) } }))
   }
 
@@ -164,7 +196,8 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
           </div>
 
           <div style={{ marginBottom: 20 }}>
-            <RankPredictor attemptId={result.attempt_id} />
+            {!assessment && <RankPredictor attemptId={result.attempt_id} />}
+            {assessment && <button className="btn btn-primary" onClick={() => navigate('/roadmap')}>See my updated roadmap</button>}
           </div>
 
           <div className="panel">
@@ -207,7 +240,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
             <ArrowLeft size={16} aria-hidden="true" />Exit test
           </button>
 
-          <div className="practice-session-bar"><div><span className="practice-eyebrow">{test.title}</span><strong>Question {index + 1} <span>of {test.questions.length}</span></strong></div><span className="faint num">{answeredCount} answered</span><progress max={test.questions.length} value={answeredCount} aria-label="Questions answered"/></div>
+          <div className="practice-session-bar"><div><span className="practice-eyebrow">{test.title}</span><strong>Question {index + 1} <span>of {test.questions.length}</span></strong></div><span className="faint num">{assessment ? `${Math.floor(remaining / 3600)}:${String(Math.floor(remaining % 3600 / 60)).padStart(2, '0')}:${String(remaining % 60).padStart(2, '0')} remaining` : `${answeredCount} answered`}</span><progress max={test.questions.length} value={answeredCount} aria-label="Questions answered"/></div>
           <nav className="practice-question-nav" aria-label="Jump to question">{test.questions.map((item,i) => <button key={item.question_id} type="button" aria-label={`Question ${i+1}${isAnswered(item) ? ', answered' : ', unanswered'}`} aria-current={index===i ? 'step' : undefined} className={isAnswered(item) ? 'answered' : ''} onClick={() => setIndex(i)}>{String(i+1).padStart(2,'0')}</button>)}</nav>
 
           {error && <p className="alert" role="alert">{error}</p>}
@@ -251,7 +284,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
 
           <div className="hero-actions" style={{ justifyContent: 'space-between', marginTop: 20 }}>
             <button type="button" className="btn btn-secondary" disabled={index === 0} onClick={() => setIndex((i) => i - 1)}>Previous</button>
-            {isLast ? (
+            {(isLast || (assessment && remaining === 0)) ? (
               <button type="button" className="btn btn-primary" disabled={submitting} onClick={submitTest}>
                 {submitting ? <><span className="spin" aria-hidden="true" />Submitting</> : 'Submit test'}
               </button>
@@ -263,6 +296,13 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
       </div>
     )
   }
+
+  if (assessment) return <div className="crackjee-root"><AppHeader /><main className="wrap practice-page">
+    <button className="btn btn-quiet" onClick={() => navigate('/roadmap')}><ArrowLeft size={16}/> Your roadmap</button>
+    <header className="practice-intro"><div><span className="practice-eyebrow">FIND YOUR STARTING POINT</span><h1>A clear baseline.<br/><em>A better next step.</em></h1><p>75 fresh questions across Physics, Chemistry and Mathematics. Give yourself three uninterrupted hours.</p></div></header>
+    <section className="practice-builder"><div className="practice-controls"><h2>One honest checkpoint</h2><p>Each subject has 20 multiple-choice and 5 numerical questions. Correct: +4 · Incorrect: −1 · Unanswered: 0.</p><p>The timer submits at three hours. Keep this page open; leaving or refreshing ends your local session.</p><p>This generated assessment measures your starting point. It is not an official or statistically calibrated JEE paper.</p></div><aside className="practice-start"><strong>180 minutes · 300 marks</strong><button className="btn btn-primary" disabled={starting} onClick={startTest}>{starting ? 'Preparing your assessment…' : 'Begin assessment'}</button><small>Your answers are scored on the server.</small></aside></section>
+    {error && <p className="alert" role="alert">{error}</p>}
+  </main></div>
 
   const focusLabel = chapters.find(c => String(c.id) === chapterId)?.name || subjects?.find(s => s.code === subjectCode)?.name || 'Across subjects'
   const modeLabel = { recommended: 'Recommended for you', topic: 'Topic practice', revision: 'Quick revision' }[mode]

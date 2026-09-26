@@ -7,7 +7,7 @@ let identity = null
 
 export function cachePolicy(path) {
   if (/^\/api\/subjects(?:\/[^/]+\/chapters)?$/.test(path)) return { ttl: 300_000, persist: true }
-  if (/^\/api\/(me|test-attempts(?:\/dashboard)?|ranking\/me|rewards)$/.test(path)) return { ttl: 30_000 }
+  if (/^\/api\/(roadmap|me|test-attempts(?:\/dashboard)?|ranking\/me|rewards)$/.test(path)) return { ttl: 30_000 }
   return null // Never cache auth, admin, live exams, daily assignments or mutations.
 }
 function storage() { try { return globalThis.sessionStorage } catch { return null } }

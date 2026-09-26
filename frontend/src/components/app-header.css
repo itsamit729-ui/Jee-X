@@ -23,7 +23,7 @@
 .jee-nav__item.selected .jee-nav__item-icon { color: var(--pen); background: var(--pen-soft); }
 .jee-nav__mobile-button, .jee-nav__mobile { display: none; }
 .jee-nav__login { margin-left: auto; }
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .jee-nav__bar { height: 60px; gap: 10px; }
   .jee-nav__desktop, .jee-nav__account { display: none; }
   .jee-nav__mobile-button { display: inline-flex; margin-left: auto; font-size: 13px; font-weight: 600; }
@@ -41,7 +41,7 @@
 .jee-nav__item{transition:background .12s ease,transform .12s ease}
 .jee-nav__item:hover{transform:translateX(2px)}
 @keyframes nav-reveal{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
-@media(min-width:901px) and (max-width:1000px){.jee-nav__bar{gap:16px}.jee-nav__top{padding-inline:10px}}
-@media(max-width:900px){.jee-nav__quick-recommend{display:inline-flex;align-items:center;gap:6px;margin-left:auto;padding:9px 10px;border-radius:7px;font-size:12px;font-weight:650;text-decoration:none;color:var(--pen);background:var(--pen-soft)}.jee-nav__mobile-button{margin-left:0}.jee-nav__bar{padding-inline:16px}}
+@media(min-width:1081px) and (max-width:1200px){.jee-nav__bar{gap:16px}.jee-nav__top{padding-inline:10px}}
+@media(max-width:1080px){.jee-nav__quick-recommend{display:inline-flex;align-items:center;gap:6px;margin-left:auto;padding:9px 10px;border-radius:7px;font-size:12px;font-weight:650;text-decoration:none;color:var(--pen);background:var(--pen-soft)}.jee-nav__mobile-button{margin-left:0}.jee-nav__bar{padding-inline:16px}}
 @media(max-width:370px){.jee-nav__mobile-button span{display:none}.jee-nav__quick-recommend{padding-inline:8px}}
 @media(prefers-reduced-motion:reduce){.jee-nav__panel{animation:none}.jee-nav__item{transition:none;transform:none}}

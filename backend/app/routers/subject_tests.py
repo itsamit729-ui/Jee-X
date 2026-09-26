@@ -13,7 +13,9 @@ router = APIRouter(prefix='/api/subject-tests', tags=['subject-tests'])
 @router.post('', response_model=schemas.SubjectTestOut, status_code=201)
 def create_subject_test(body: schemas.SubjectTestCreate,
                         user: models.User = Depends(get_current_db_user), db: Session = Depends(get_db)):
-    if body.mode == 'topic' and not body.subject_code:
+    if body.assessment and (body.subject_code or body.chapter_id):
+        raise HTTPException(422, 'A baseline assessment covers all three subjects.')
+    if not body.assessment and body.mode == 'topic' and not body.subject_code:
         raise HTTPException(422, 'Choose a subject for topic practice.')
     subject = db.query(models.Subject).filter_by(code=body.subject_code).first() if body.subject_code else None
     if body.subject_code and not subject:
@@ -32,8 +34,11 @@ def create_subject_test(body: schemas.SubjectTestCreate,
         models.QuestionOption.question_id == models.Question.id, models.QuestionOption.is_correct.is_(True)
     ).correlate(models.Question).scalar_subquery()
     query = (db.query(models.Question.id, models.Question.subtopic_id, models.Question.difficulty,
-                      models.Question.expected_time_sec, models.Subtopic.name.label('topic'))
-             .join(models.Subtopic).join(models.Chapter)
+                      models.Question.expected_time_sec, models.Subtopic.name.label('topic'),
+                      models.Question.type, models.Chapter.subject_id, models.Chapter.id.label('chapter_id'))
+             .select_from(models.Question)
+             .join(models.Subtopic, models.Subtopic.id == models.Question.subtopic_id)
+             .join(models.Chapter, models.Chapter.id == models.Subtopic.chapter_id)
              .filter(models.Question.status == 'published', func.length(func.trim(models.Question.stem)) > 0,
                      func.length(func.trim(models.Question.solution)) > 0,
                      ~models.Question.assets.any(bad_asset),
@@ -45,6 +50,8 @@ def create_subject_test(body: schemas.SubjectTestCreate,
         query = query.filter(models.Chapter.subject_id == subject.id)
     if body.chapter_id:
         query = query.filter(models.Chapter.id == body.chapter_id)
+    if body.assessment:
+        query = query.filter(models.Chapter.in_main.is_(True))
     candidates = query.all()
     if not candidates:
         raise HTTPException(404, 'No complete practice questions are available for this choice yet. Try another topic.')
@@ -57,7 +64,13 @@ def create_subject_test(body: schemas.SubjectTestCreate,
                        models.TestAttempt.submitted_at.isnot(None))
                .order_by(models.QuestionResponse.answered_at.desc(), models.QuestionResponse.id.desc()).limit(500).all())
     count = {5: 3, 15: 8, 30: 16}.get(body.duration_minutes, body.count)
-    selection = choose_questions(candidates, history, count, body.mode)
+    if body.assessment:
+        from app.services.roadmap import assessment_questions
+        subject_ids = dict(db.query(models.Subject.code, models.Subject.id).all())
+        seen = {r[0] for r in db.query(models.QuestionResponse.question_id).filter_by(user_id=user.id).distinct()}
+        selection = assessment_questions(candidates, subject_ids, seen)
+    else:
+        selection = choose_questions(candidates, history, count, body.mode)
     reasons = dict(selection)
     rows = (db.query(models.Question).filter(models.Question.id.in_(reasons))
             .options(selectinload(models.Question.options), selectinload(models.Question.assets),
@@ -67,15 +80,18 @@ def create_subject_test(body: schemas.SubjectTestCreate,
     title = f'{subject.name} practice' if subject else 'Personalised practice'
     if body.mode == 'revision':
         title = 'Quick revision' + (f' · {subject.name}' if subject else '')
-    test = models.Test(title=title, kind='chapter', pattern='jee_main',
-                       duration_sec=(body.duration_minutes * 60 if body.duration_minutes else len(picked) * 90),
+    if body.assessment:
+        title = 'Roadmap baseline assessment'
+    test = models.Test(title=title, kind='mock' if body.assessment else 'chapter', pattern='jee_main',
+                       duration_sec=10800 if body.assessment else (body.duration_minutes * 60 if body.duration_minutes else len(picked) * 90),
                        ranked=False, generated_for_user_id=user.id)
     db.add(test)
     db.flush()
     for position, q in enumerate(picked, 1):
         db.add(models.TestQuestion(test_id=test.id, question_id=q.id, position=position,
-                                  marks_correct=4, marks_wrong=0 if q.type == 'numerical' else 1, partial_marking=False))
-        db.add(models.PracticeRecommendation(test_id=test.id, question_id=q.id, explanation=reasons[q.id]))
+                                  marks_correct=4, marks_wrong=0 if q.type == 'numerical' and not body.assessment else 1, partial_marking=False))
+        if not body.assessment:
+            db.add(models.PracticeRecommendation(test_id=test.id, question_id=q.id, explanation=reasons[q.id]))
     attempt = models.TestAttempt(user_id=user.id, test_id=test.id, attempt_number=1, counts_for_rank=False)
     db.add(attempt)
     db.flush()
@@ -87,7 +103,7 @@ def create_subject_test(body: schemas.SubjectTestCreate,
                     for a in list(q.assets) + (list(q.passage.assets) if q.passage else [])],
             passage=q.passage.content if q.passage else None,
             options=[schemas.TestOptionOut(id=o.id, label=o.label, content=o.content) for o in q.options],
-            marks_correct=4, marks_wrong=0 if q.type == 'numerical' else 1,
-            recommendation=schemas.RecommendationOut(**reasons[q.id])) for q in picked])
+            marks_correct=4, marks_wrong=0 if q.type == 'numerical' and not body.assessment else 1,
+            recommendation=None if body.assessment else schemas.RecommendationOut(**reasons[q.id])) for q in picked])
     db.commit()
     return result

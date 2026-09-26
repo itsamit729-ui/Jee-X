@@ -94,6 +94,7 @@ def list_test_attempts(
         .filter(
             models.TestAttempt.user_id == user.id,
             models.Test.kind.in_(["free_diagnostic", "mock"]),
+            models.Test.generated_for_user_id.is_(None),
             models.TestAttempt.submitted_at.isnot(None),
         )
         .order_by(models.TestAttempt.created_at.desc())

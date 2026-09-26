@@ -7,6 +7,7 @@ bumps each answered subtopic's mastery in the learning profile."""
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
+from sqlalchemy import func
 from sqlalchemy.orm import Session, joinedload
 
 from app import models, schemas
@@ -68,25 +69,23 @@ def submit_subject_test(
     total_time = 0
     subtopic_touch: dict[int, bool] = {}
 
+    questions = {q.id: q for q in db.query(models.Question)
+        .options(joinedload(models.Question.options)).filter(models.Question.id.in_(test_questions)).all()}
+    revisions = dict(db.query(models.QuestionRevision.question_id, func.max(models.QuestionRevision.version))
+        .filter(models.QuestionRevision.question_id.in_(test_questions))
+        .group_by(models.QuestionRevision.question_id).all())
+    stats_by_topic = {s.subtopic_id: s for s in db.query(models.StudentSubtopicStats)
+        .filter(models.StudentSubtopicStats.user_id == user.id,
+                models.StudentSubtopicStats.subtopic_id.in_({q.subtopic_id for q in questions.values()}))
+        .with_for_update().populate_existing().all()}
     for question_id, tq in test_questions.items():
-        question = (
-            db.query(models.Question)
-            .options(joinedload(models.Question.options))
-            .filter(models.Question.id == question_id)
-            .first()
-        )
+        question = questions[question_id]
         answer = answers_by_question.get(question_id, schemas.SubjectTestAnswerIn(question_id=question_id))
 
         outcome, correct_option_ids = _grade_one(question, answer)
         marks_awarded = tq.marks_correct if outcome == "correct" else (-tq.marks_wrong if outcome == "wrong" else 0)
 
-        latest_revision = (
-            db.query(models.QuestionRevision)
-            .filter(models.QuestionRevision.question_id == question.id)
-            .order_by(models.QuestionRevision.version.desc())
-            .first()
-        )
-        question_version = latest_revision.version if latest_revision else question.version
+        question_version = revisions.get(question.id, question.version)
 
         response = models.QuestionResponse(
             attempt_id=attempt.id,
@@ -99,29 +98,21 @@ def submit_subject_test(
             time_taken_sec=answer.time_taken_sec,
         )
         db.add(response)
-        db.flush()
 
         if question.type != "numerical":
             for option_id in answer.option_ids:
-                db.add(models.ResponseOption(response_id=response.id, option_id=option_id))
+                db.add(models.ResponseOption(response=response, option_id=option_id))
 
         total_marks += marks_awarded
         total_time += answer.time_taken_sec
         if outcome == "correct":
             correct_count += 1
 
-        stats = (
-            db.query(models.StudentSubtopicStats)
-            .filter(
-                models.StudentSubtopicStats.user_id == user.id,
-                models.StudentSubtopicStats.subtopic_id == question.subtopic_id,
-            )
-            .with_for_update().populate_existing()
-            .first()
-        )
+        stats = stats_by_topic.get(question.subtopic_id)
         if not stats:
             stats = models.StudentSubtopicStats(user_id=user.id, subtopic_id=question.subtopic_id, attempted=0, correct=0)
             db.add(stats)
+            stats_by_topic[question.subtopic_id] = stats
         if question.subtopic_id not in subtopic_touch:
             stats.attempted += 1
             if outcome == "correct":
@@ -143,15 +134,17 @@ def submit_subject_test(
 
     total_questions = len(test_questions)
     attempted = sum(1 for r in results if r.outcome != "skipped")
-    subject_code = (
-        db.query(models.Subject.code)
-        .join(models.Chapter, models.Chapter.subject_id == models.Subject.id)
-        .join(models.Subtopic, models.Subtopic.chapter_id == models.Chapter.id)
-        .join(models.Question, models.Question.subtopic_id == models.Subtopic.id)
-        .filter(models.Question.id == next(iter(test_questions)))
-        .scalar()
-    )
-    subject_breakdown = {subject_code: {"correct": correct_count, "total": total_questions}}
+    subject_breakdown = {}
+    question_subjects = dict(db.query(models.Question.id, models.Subject.code)
+        .join(models.Subtopic, models.Subtopic.id == models.Question.subtopic_id)
+        .join(models.Chapter, models.Chapter.id == models.Subtopic.chapter_id)
+        .join(models.Subject, models.Subject.id == models.Chapter.subject_id)
+        .filter(models.Question.id.in_(test_questions)).all())
+    for result in results:
+        code = question_subjects[result.question_id]
+        item = subject_breakdown.setdefault(code, {"correct": 0, "total": 0})
+        item["total"] += 1
+        item["correct"] += int(result.outcome == "correct")
 
     attempt.submitted_at = datetime.now(timezone.utc)
     attempt.score = total_marks

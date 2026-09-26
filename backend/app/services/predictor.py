@@ -11,7 +11,7 @@ list (general/CRL only here — see models/predictor.py's module docstring).
 import math
 
 from sqlalchemy import func
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 
 from app import models
 
@@ -132,7 +132,7 @@ def estimate_rank(db: Session, percentile_low: float | None, percentile_high: fl
 
 def _raw_score_and_max(attempt: "models.TestAttempt") -> tuple[float, float]:
     test = attempt.test
-    if test.kind == "chapter":
+    if test.test_questions:
         max_score = sum(tq.marks_correct for tq in test.test_questions)
         if not max_score:
             max_score = (attempt.total_questions or 0) * 4
@@ -147,7 +147,7 @@ def _raw_score_and_max(attempt: "models.TestAttempt") -> tuple[float, float]:
 
 def _confidence(attempt: "models.TestAttempt") -> str:
     test = attempt.test
-    if test.kind == "mock" and (attempt.total_questions or 0) >= FULL_LENGTH_MIN_QUESTIONS:
+    if test.kind == "mock" and len(test.test_questions) == 75:
         return "full_length_mock"
     return "partial_practice"
 
@@ -200,7 +200,7 @@ def predict_for_attempt(db: Session, attempt: "models.TestAttempt") -> "models.P
 MATCH_QUOTAS = ("AI", "OS")
 
 
-def match_colleges(db: Session, rank_low: int | None, rank_high: int | None) -> list[dict]:
+def match_colleges(db: Session, rank_low: int | None, rank_high: int | None, quotas=MATCH_QUOTAS) -> list[dict]:
     """AI (all-India, used by IITs/IIITs) + OS (other-state, one of the two pools every NIT
     splits its seats into) — Gender-Neutral pool + CRL rank list only, deliberately.
 
@@ -228,12 +228,13 @@ def match_colleges(db: Session, rank_low: int | None, rank_high: int | None) -> 
 
     rows = (
         db.query(models.PredictorJosaaCutoff)
+        .options(joinedload(models.PredictorJosaaCutoff.institute), joinedload(models.PredictorJosaaCutoff.program))
         .filter(
             models.PredictorJosaaCutoff.year == year,
             models.PredictorJosaaCutoff.round == round_,
             models.PredictorJosaaCutoff.exam_route == MAIN_EXAM_ROUTE,
             models.PredictorJosaaCutoff.rank_list == CRL,
-            models.PredictorJosaaCutoff.quota.in_(MATCH_QUOTAS),
+            models.PredictorJosaaCutoff.quota.in_(quotas),
             models.PredictorJosaaCutoff.gender_pool == "Gender-Neutral",
             models.PredictorJosaaCutoff.opening_is_preparatory.is_(False),
             models.PredictorJosaaCutoff.closing_is_preparatory.is_(False),

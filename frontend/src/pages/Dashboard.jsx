@@ -113,6 +113,10 @@ export default function Dashboard() {
         onLogout={() => logout()}
         onHome={() => navigate('/')}
       />}
+      {!error && <div className="wrap" style={{ paddingBottom: 24 }}><div className="panel" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
+        <div><span className="section-label">YOUR ROADMAP</span><h2 style={{ margin: '7px 0' }}>Give your next week a direction.</h2><p className="muted" style={{ margin: 0 }}>Find your baseline, set a target and work through a plan built from your answers.</p></div>
+        <button type="button" className="btn btn-primary" onClick={() => navigate('/roadmap')}>Open my roadmap <ArrowUpRight size={16}/></button>
+      </div></div>}
       {!error && <div className="wrap" style={{ paddingBottom: 40 }}><div className="panel" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
         <div><span className="section-label">EXAM SITUATIONS</span><h2 style={{ margin: '7px 0' }}>Practice the moment that matters.</h2><p className="muted" style={{ margin: 0 }}>A three-hour exam in view. Play only the crucial 15–45 minutes.</p></div>
         <button type="button" className="btn btn-primary" onClick={() => navigate('/scenarios')}>Explore situations →</button>

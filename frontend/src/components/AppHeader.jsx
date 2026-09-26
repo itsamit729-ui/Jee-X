@@ -66,6 +66,7 @@ export default function AppHeader() {
       {isAuthenticated && <nav className="jee-nav__desktop" aria-label="Main navigation">
         <NavLink to="/dashboard" end onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Overview</NavLink>
         <NavLink to="/recommendations" onClick={close} className={({ isActive }) => `jee-nav__top jee-nav__recommend${isActive ? ' selected' : ''}`}><Target size={15} aria-hidden="true"/>Recommendations</NavLink>
+        <NavLink to="/roadmap" onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Roadmap</NavLink>
         {dropdown('practice', 'Practice', PRACTICE)}
         <NavLink to="/ranking" onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Rankings</NavLink>
         {dropdown('explore', 'Explore', EXPLORE)}
@@ -89,6 +90,7 @@ export default function AppHeader() {
     {isAuthenticated && open === 'mobile' && <nav className="jee-nav__mobile" id="jee-nav-mobile" aria-label="Mobile navigation">
       <NavLink to="/dashboard" onClick={close} className={({ isActive }) => `jee-nav__mobile-overview${isActive ? ' selected' : ''}`}>Overview</NavLink>
       <MenuLink item={{ to: '/recommendations', title: 'Recommended for you', hint: 'Your personal next step', Icon: Target }} close={close} />
+      <MenuLink item={{ to: '/roadmap', title: 'Your roadmap', hint: 'From today to your next milestone', Icon: Target }} close={close} />
       <span className="jee-nav__heading">Practice</span>
       {PRACTICE.map(item => <MenuLink key={item.to} item={item} close={close} compact />)}
       <span className="jee-nav__heading">Explore</span>
