@@ -42,3 +42,21 @@ Alternatively use `AUTH_EMAIL_PROVIDER=resend`, `RESEND_API_KEY`, and an approve
 Copy the two `.env.example` files, configure your test MySQL and email provider, run `uvicorn app.main:app --reload` in backend and `npm run dev` in frontend. Vite proxies `/api` to port 8000. Local HTTP uses `AUTH_COOKIE_SECURE=false`; never copy that setting to production.
 
 Install backend requirements plus `pytest httpx`, then run `pytest tests/test_native_auth.py` in backend. Tests use an isolated SQLite database and mocked email; they do not touch Aiven. Run `npm ci && npm run build` in frontend. MySQL row-lock behavior, real email delivery, and Render cookies require the live smoke test above.
+
+## Temporarily make email verification optional
+
+In the **jee-edge backend service → Environment**, set:
+
+```env
+REQUIRE_EMAIL_VERIFICATION=false
+```
+
+Save and redeploy. New ordinary accounts can register without an email provider or verification email, then sign in with their email and password and complete onboarding. Existing unverified accounts can also sign in. Password rules, rate limits, CSRF, disabled/suspended-account checks, and session expiry remain enforced. No test-account type or database migration is needed.
+
+Accounts created this way keep `verified_at = NULL`; disabling the requirement does not assert email ownership. The signup confirmation offers sign-in rather than instructions to check email. Duplicate registrations do not change the existing account or password.
+
+To require verification again, set `REQUIRE_EMAIL_VERIFICATION=true` (or remove the variable) and redeploy. Unverified accounts are blocked at login and on their next authenticated API request, including requests using an existing session. They can use **Resend verification email** and verify normally. Configure the email provider before enabling verification. Previously verified accounts continue working.
+
+Only the explicit value `false` disables verification (case-insensitive, whitespace trimmed). Missing or unrecognized values keep it enabled. Apply the same value to every backend instance. This is a backend setting, not a Vite/frontend variable.
+
+Password-reset and explicitly requested verification emails still need the configured email provider. While verification is optional, unverified accounts can request a password-reset email; resetting the password does not mark the address verified.

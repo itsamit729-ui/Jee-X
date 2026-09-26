@@ -20,6 +20,7 @@ HEADERS = {'Origin': 'https://school.example', 'X-Jee-Request': '1'}
 
 @pytest.fixture
 def env(monkeypatch):
+    monkeypatch.delenv('REQUIRE_EMAIL_VERIFICATION', raising=False)
     monkeypatch.setenv('PUBLIC_APP_URL', 'https://school.example')
     monkeypatch.setenv('CORS_ORIGINS', 'https://school.example')
     monkeypatch.setenv('AUTH_COOKIE_SECURE', 'true')
@@ -309,3 +310,85 @@ def test_combined_dashboard_onboarding_and_account_isolation(env):
     # A request without this student's cookie cannot reuse their data.
     with TestClient(app, base_url='https://school.example') as other:
         assert other.get('/api/test-attempts/dashboard').status_code == 401
+
+
+@pytest.mark.parametrize('value,required', [(None, True), ('true', True), ('false', False), (' FALSE ', False), ('', True), ('flase', True), ('0', True)])
+def test_verification_setting_defaults_to_required(monkeypatch, value, required):
+    from app.auth import email_verification_required
+    if value is None:
+        monkeypatch.delenv('REQUIRE_EMAIL_VERIFICATION', raising=False)
+    else:
+        monkeypatch.setenv('REQUIRE_EMAIL_VERIFICATION', value)
+    assert email_verification_required() is required
+
+
+def test_optional_verification_signup_without_email_provider(env, monkeypatch):
+    client, sessions, sent, _ = env
+    monkeypatch.setenv('REQUIRE_EMAIL_VERIFICATION', 'false')
+    monkeypatch.delenv('BREVO_API_KEY')
+    response = post(client, 'register', email=EMAIL, password=PASSWORD)
+    assert response.status_code == 202, response.text
+    assert response.json()['verification_required'] is False
+    assert sent == []
+    with sessions() as db:
+        assert db.query(models.AuthAccount).one().verified_at is None
+        assert db.query(models.AuthEmailToken).count() == 0
+    duplicate = post(client, 'register', email=EMAIL, password='a different long password')
+    assert duplicate.json() == response.json()
+    assert post(client, 'login', email=EMAIL, password='a different long password').status_code == 401
+    result = post(client, 'login', email=EMAIL, password=PASSWORD)
+    assert result.status_code == 200
+    assert result.json()['user']['email_verified'] is False
+    client.headers['X-CSRF-Token'] = result.json()['csrf_token']
+    assert client.get('/api/auth/session').json()['authenticated'] is True
+    assert client.get('/api/me').status_code == 200
+    payload = {'name': 'Student', 'username': 'ordinaryuser', 'dob': '2006-01-01', 'class_level': '12'}
+    assert client.post('/api/onboarding', json=payload, headers={'X-CSRF-Token':'bad'}).status_code == 403
+    assert client.post('/api/onboarding', json=payload).status_code == 201
+    assert client.get('/api/me').json()['profile']['username'] == 'ordinaryuser'
+
+
+def test_reenable_verification_blocks_existing_sessions_until_verified(env, monkeypatch):
+    client, sessions, sent, _ = env
+    monkeypatch.setenv('REQUIRE_EMAIL_VERIFICATION', 'false')
+    assert post(client, 'register', email=EMAIL, password=PASSWORD).status_code == 202
+    assert post(client, 'login', email=EMAIL, password=PASSWORD).status_code == 200
+    monkeypatch.setenv('REQUIRE_EMAIL_VERIFICATION', 'true')
+    assert client.get('/api/me').status_code == 403
+    assert post(client, 'login', email=EMAIL, password=PASSWORD).status_code == 403
+    assert client.get('/api/auth/session').json()['authenticated'] is False
+    assert post(client, 'resend-verification', email=EMAIL).status_code == 200
+    assert post(client, 'verify-email', token=sent[-1][2]).status_code == 200
+    assert post(client, 'login', email=EMAIL, password=PASSWORD).status_code == 200
+    assert client.get('/api/me').status_code == 200
+    with sessions() as db:
+        assert db.query(models.AuthAccount).one().verified_at is not None
+
+
+def test_optional_verification_preserves_disabled_and_expired_checks(env, monkeypatch):
+    client, sessions, _, _ = env
+    monkeypatch.setenv('REQUIRE_EMAIL_VERIFICATION', 'false')
+    post(client, 'register', email=EMAIL, password=PASSWORD)
+    assert post(client, 'login', email=EMAIL, password=PASSWORD).status_code == 200
+    with sessions() as db:
+        db.query(models.AuthSession).one().expires_at = utcnow() - timedelta(seconds=1)
+        db.commit()
+    assert client.get('/api/me').status_code == 401
+    assert post(client, 'login', email=EMAIL, password=PASSWORD).status_code == 200
+    with sessions() as db:
+        db.query(models.AuthAccount).one().disabled = True
+        db.commit()
+    assert client.get('/api/me').status_code == 401
+    assert post(client, 'login', email=EMAIL, password=PASSWORD).status_code == 401
+
+
+def test_optional_verification_password_reset_does_not_verify_account(env, monkeypatch):
+    client, sessions, sent, _ = env
+    monkeypatch.setenv('REQUIRE_EMAIL_VERIFICATION', 'false')
+    post(client, 'register', email=EMAIL, password=PASSWORD)
+    assert post(client, 'forgot-password', email=EMAIL).status_code == 200
+    assert sent[-1][1] == 'reset'
+    assert post(client, 'reset-password', token=sent[-1][2], password='another long passphrase').status_code == 200
+    with sessions() as db:
+        assert db.query(models.AuthAccount).one().verified_at is None
+    assert post(client, 'login', email=EMAIL, password='another long passphrase').status_code == 200

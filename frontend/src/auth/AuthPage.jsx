@@ -33,6 +33,7 @@ export default function AuthPage({ mode = 'login' }) {
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
+  const [verificationRequired, setVerificationRequired] = useState(true)
   const [googleEnabled, setGoogleEnabled] = useState(false)
   const [linkToken] = useState(() => new URLSearchParams(window.location.hash.slice(1)).get('token') || '')
   useEffect(() => {
@@ -60,6 +61,7 @@ export default function AuthPage({ mode = 'login' }) {
         const body = mode === 'signup' ? { email, password } : mode === 'reset' ? { token: linkToken, password }
           : mode === 'verify' && linkToken ? { token: linkToken } : mode === 'change' ? { current_password: currentPassword, password } : { email }
         const result = await request(`/api/auth/${paths[mode]}`, { method: 'POST', body })
+        if (mode === 'signup') setVerificationRequired(result.verification_required !== false)
         setPassword(''); setCurrentPassword('')
         setMessage(mode === 'change' ? 'Password updated. Other devices have been signed out.' : result.message)
         if (mode === 'change' || mode === 'reset') await refreshSession()
@@ -79,9 +81,9 @@ export default function AuthPage({ mode = 'login' }) {
     <main className="native-auth-main"><section className="native-auth-card" aria-labelledby="auth-heading">
       <span className="native-auth-eyebrow">YOUR STUDY SPACE</span><h1 id="auth-heading">{title}</h1><p className="native-auth-subtitle">{subtitle}</p>
       {message ? <div className="native-auth-success" role="status"><CheckCircle2 size={25}/><p>{message}</p>
-        {['signup', 'forgot'].includes(mode) && <small>Use the most recent email. Links expire after 30 minutes.</small>}
-        <Link className="btn btn-primary" to={mode === 'change' ? '/profile' : '/login'}>{mode === 'change' ? 'Back to profile' : 'Back to sign in'}<ArrowRight size={16}/></Link>
-        {mode === 'signup' && <Link to="/verify-email">Resend verification email</Link>}
+        {(mode === 'forgot' || (mode === 'signup' && verificationRequired)) && <small>Use the most recent email. Links expire after 30 minutes.</small>}
+        <Link className="btn btn-primary" to={mode === 'change' ? '/profile' : '/login'}>{mode === 'change' ? 'Back to profile' : mode === 'signup' && !verificationRequired ? 'Sign in' : 'Back to sign in'}<ArrowRight size={16}/></Link>
+        {mode === 'signup' && verificationRequired && <Link to="/verify-email">Resend verification email</Link>}
       </div> : <form onSubmit={submit}>
         {emailVisible && <div className="native-auth-field"><label htmlFor="auth-email">Email address</label><input id="auth-email" type="email" autoComplete="username" placeholder="you@example.com" required maxLength={254} value={email} onChange={e => setEmail(e.target.value)} /></div>}
         {mode === 'change' && <PasswordField id="current-password" label="Current password" value={currentPassword} onChange={e => setCurrentPassword(e.target.value)} />}

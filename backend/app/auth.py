@@ -14,6 +14,11 @@ from app.models.profile_avatar import ProfileAvatar
 COOKIE_NAME = 'jee_session'
 
 
+def email_verification_required():
+    # Only an explicit false disables verification; missing/typo values stay safe.
+    return os.getenv('REQUIRE_EMAIL_VERIFICATION', 'true').strip().lower() != 'false'
+
+
 def utcnow():
     return datetime.now(timezone.utc).replace(tzinfo=None)
 
@@ -72,7 +77,7 @@ def get_auth_account(request: Request, db: Session = Depends(get_db)) -> AuthAcc
     _, account, user = request.state.auth_context
     if not account or account.disabled:
         raise HTTPException(401, 'Please sign in again.')
-    if not account.verified_at:
+    if email_verification_required() and not account.verified_at:
         raise HTTPException(403, 'Verify your email before continuing.')
     if user and user.status != 'active':
         raise HTTPException(403, 'This account is suspended.')

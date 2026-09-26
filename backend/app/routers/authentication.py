@@ -10,7 +10,7 @@ from sqlalchemy import delete
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 from app.auth import (COOKIE_NAME, clear_session_cookie, cookie_options, digest, find_session,
-                      get_auth_account, require_browser_request, utcnow)
+                      get_auth_account, require_browser_request, utcnow, email_verification_required)
 from app.database import get_db
 from app.models.authentication import AuthAccount, AuthSession, AuthEmailToken
 from app.models.identity import User
@@ -104,19 +104,24 @@ def session_status(request: Request, response: Response, db: Session = Depends(g
 @router.post('/register', status_code=202, dependencies=[Depends(require_browser_request)])
 def register(body: RegisterBody, request: Request, db: Session = Depends(get_db)):
     limit(db, request, 'register', body.email)
-    ensure_mail_config()
+    verification_required = email_verification_required()
+    result = {'verification_required': verification_required, 'message': GENERIC_EMAIL if verification_required
+              else 'You can sign in without email verification. If you already have an account, use its existing password.'}
+    if verification_required:
+        ensure_mail_config()
     encoded = hash_password(body.password)
     if db.query(AuthAccount).filter_by(email=body.email).first():
-        return {'message': GENERIC_EMAIL}
+        return result
     account = AuthAccount(id=str(uuid.uuid4()), email=body.email, password_hash=encoded, created_at=utcnow())
     try:
         db.add(account)
         db.flush()
-        issue_email_token(db, account, 'verify')
+        if verification_required:
+            issue_email_token(db, account, 'verify')
         db.commit()
     except IntegrityError:
         db.rollback()
-    return {'message': GENERIC_EMAIL}
+    return result
 
 
 @router.post('/login', dependencies=[Depends(require_browser_request)])
@@ -126,7 +131,7 @@ def login(body: LoginBody, request: Request, response: Response, db: Session = D
     valid = check_password(account.password_hash if account else None, body.password)
     if not account or not valid or account.disabled:
         raise HTTPException(401, 'Email or password is incorrect.')
-    if not account.verified_at:
+    if email_verification_required() and not account.verified_at:
         raise HTTPException(403, 'Verify your email first. You can request a new verification link below.')
     user = db.get(User, account.user_id) if account.user_id else None
     if user and user.status != 'active':
@@ -177,7 +182,7 @@ def forgot(body: EmailBody, request: Request, db: Session = Depends(get_db)):
     limit(db, request, 'reset-email', body.email)
     ensure_mail_config()
     account = db.query(AuthAccount).filter_by(email=body.email).with_for_update().first()
-    if account and account.verified_at and not account.disabled:
+    if account and (account.verified_at or not email_verification_required()) and not account.disabled:
         issue_email_token(db, account, 'reset')
         db.commit()
     return {'message': GENERIC_EMAIL}
