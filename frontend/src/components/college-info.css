@@ -17,3 +17,8 @@
 .college-info-panel li p { margin:4px 0; font-size:12px; }
 .college-info-panel footer { padding-top:12px; margin-top:16px; border-top:1px solid var(--line); }
 @media (pointer:coarse) { .college-info-trigger,.college-info-close { width:44px; height:44px; } }
+
+.college-info-metrics { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:8px; margin:12px 0; }
+.college-info-metrics div { background:var(--page); border:1px solid var(--line); border-radius:10px; padding:12px; }
+.college-info-metrics span { display:block; font-size:11px; margin-bottom:4px; }
+.college-info-metrics strong { font-size:16px; color:var(--pen); }

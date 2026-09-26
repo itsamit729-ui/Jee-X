@@ -7,6 +7,20 @@ import './college-info.css'
 function Sources({ items }) {
   return <div className="college-info-sources">{items?.map((s, i) => <a key={`${s.url}-${i}`} href={s.url} target="_blank" rel="noopener noreferrer">{s.label || 'Source'} ↗</a>)}</div>
 }
+function Packages({ value }) {
+  const metrics = [['Highest CTC', value?.highest_lpa], ['Average CTC', value?.average_lpa]]
+    .filter(([, amount]) => typeof amount === 'number' && Number.isFinite(amount) && amount > 0)
+  if (!metrics.length) return null
+  return <div className="college-info-section">
+    <h4>{value.scope === 'branch' ? 'Branch packages' : 'Overall B.Tech packages'}{value.year ? ` · ${value.year}` : ''}</h4>
+    {value.scope === 'branch' ? <p className="college-info-note">{value.program}</p> : <p className="college-info-note">Across the college’s B.Tech programs.</p>}
+    <div className="college-info-metrics">{metrics.map(([label, amount]) => <div key={label}><span>{label}</span><strong>₹{amount.toLocaleString('en-IN')} LPA</strong></div>)}</div>
+    {value.note && <p className="college-info-note">{value.note}</p>}
+    <Sources items={value.sources}/>
+    <p className="college-info-note">CTC in lakh per year, not take-home pay. Past outcomes don’t guarantee future offers.</p>
+  </div>
+}
+
 export default function CollegeInfo({ institute, program }) {
   const id = useId()
   const trigger = useRef(null), panel = useRef(null), timer = useRef(null)
@@ -68,6 +82,8 @@ export default function CollegeInfo({ institute, program }) {
       {error && <div role="alert"><p>{error}</p><button type="button" className="btn btn-quiet" onClick={() => setRetry(v => v + 1)}>Try again</button></div>}
       {data && <>
         <p>{data.summary}</p><Sources items={data.sources}/>
+        <Packages value={data.placement}/>
+        <Packages value={data.overall_placement}/>
         {data.alumni?.length > 0 && <div className="college-info-section"><h4>Notable alumni</h4><ul>{data.alumni.map(person => <li key={person.name}><strong>{person.name}</strong><p>{person.description}</p><Sources items={person.sources}/></li>)}</ul></div>}
         {data.verified_on && <footer>Sources checked {data.verified_on}</footer>}
       </>}
