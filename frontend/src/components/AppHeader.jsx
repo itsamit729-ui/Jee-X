@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext.jsx'
-import { BookOpen, ChevronDown, Coins, Flame, Library, LogOut, Menu, MessageCircle, MonitorPlay, Timer, Trophy, UserRound, X } from 'lucide-react'
+import { BookOpen, ChevronDown, Coins, Flame, Library, LogOut, Menu, MessageCircle, MonitorPlay, Timer, Target, Trophy, UserRound, X } from 'lucide-react'
 import { Logo } from './Brand.jsx'
 import './app-header.css'
 
 const PRACTICE = [
-  { to: '/subject-test', title: 'Subject tests', hint: 'Practise a topic or subject', Icon: BookOpen },
+  { to: '/subject-test', title: 'Topic practice', hint: 'Practise a topic or subject', Icon: BookOpen },
   { to: '/scenarios', title: 'Exam situations', hint: 'Play the crucial 15–45 minutes', Icon: Timer },
   { to: '/daily', title: 'Daily question', hint: 'Keep your streak going', Icon: Flame },
   { to: '/test', title: 'Full mock', hint: 'Sit the complete paper', Icon: MonitorPlay },
@@ -65,6 +65,7 @@ export default function AppHeader() {
       <Logo to={isAuthenticated ? '/dashboard' : '/'} />
       {isAuthenticated && <nav className="jee-nav__desktop" aria-label="Main navigation">
         <NavLink to="/dashboard" end onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Overview</NavLink>
+        <NavLink to="/recommendations" onClick={close} className={({ isActive }) => `jee-nav__top jee-nav__recommend${isActive ? ' selected' : ''}`}><Target size={15} aria-hidden="true"/>Recommendations</NavLink>
         {dropdown('practice', 'Practice', PRACTICE)}
         <NavLink to="/ranking" onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Rankings</NavLink>
         {dropdown('explore', 'Explore', EXPLORE)}
@@ -78,6 +79,7 @@ export default function AppHeader() {
           <button type="button" className="jee-nav__item" onClick={signOut}><span className="jee-nav__item-icon"><LogOut size={18} /></span><strong>Log out</strong></button>
         </div>}
       </div> : <button type="button" className="btn btn-primary btn-sm jee-nav__login" onClick={() => openLogin()}>Log in</button>}
+      {isAuthenticated && <NavLink to="/recommendations" aria-label="Recommended practice" onClick={close} className={({isActive}) => `jee-nav__quick-recommend${isActive ? ' selected' : ''}`}><Target size={16} aria-hidden="true"/>For you</NavLink>}
       {isAuthenticated && <button type="button" className="jee-nav__mobile-button" data-trigger="mobile"
         aria-label={open === 'mobile' ? 'Close navigation' : 'Open navigation'} aria-expanded={open === 'mobile'}
         aria-controls="jee-nav-mobile" onClick={() => toggle('mobile')}>
@@ -86,6 +88,7 @@ export default function AppHeader() {
     </div>
     {isAuthenticated && open === 'mobile' && <nav className="jee-nav__mobile" id="jee-nav-mobile" aria-label="Mobile navigation">
       <NavLink to="/dashboard" onClick={close} className={({ isActive }) => `jee-nav__mobile-overview${isActive ? ' selected' : ''}`}>Overview</NavLink>
+      <MenuLink item={{ to: '/recommendations', title: 'Recommended for you', hint: 'Your personal next step', Icon: Target }} close={close} />
       <span className="jee-nav__heading">Practice</span>
       {PRACTICE.map(item => <MenuLink key={item.to} item={item} close={close} compact />)}
       <span className="jee-nav__heading">Explore</span>

@@ -16,7 +16,7 @@ import './practice.css'
 
 const OUTCOME = { correct: 'correct', wrong: 'wrong' }
 
-export default function SubjectTest() {
+export default function SubjectTest({ initialMode = 'recommended' }) {
   const navigate = useNavigate()
   const [searchParams] = useSearchParams()
   const requestedSubject = searchParams.get('subject')
@@ -28,7 +28,7 @@ export default function SubjectTest() {
   const [subjectCode, setSubjectCode] = useState('')
   const [chapterId, setChapterId] = useState('')
   const [durationMinutes, setDurationMinutes] = useState(15)
-  const [mode, setMode] = useState(requestedSubject ? 'topic' : 'recommended')
+  const [mode, setMode] = useState(requestedSubject ? 'topic' : initialMode)
   const timer = useRef(createPracticeTimer())
   const [error, setError] = useState('')
   const [starting, setStarting] = useState(false)
@@ -198,7 +198,6 @@ export default function SubjectTest() {
   if (test) {
     const q = test.questions[index]
     const isLast = index === test.questions.length - 1
-    const states = test.questions.map((qq, i) => (i === index ? 'current' : isAnswered(qq) ? 'answered' : 'idle'))
     return (
       <div className="crackjee-root">
         <AppHeader />
@@ -208,10 +207,8 @@ export default function SubjectTest() {
             <ArrowLeft size={16} aria-hidden="true" />Exit test
           </button>
 
-          <div className="test-top">
-            <Palette states={states} label="Progress" />
-            <span className="faint num">{answeredCount} of {test.questions.length} answered</span>
-          </div>
+          <div className="practice-session-bar"><div><span className="practice-eyebrow">{test.title}</span><strong>Question {index + 1} <span>of {test.questions.length}</span></strong></div><span className="faint num">{answeredCount} answered</span><progress max={test.questions.length} value={answeredCount} aria-label="Questions answered"/></div>
+          <nav className="practice-question-nav" aria-label="Jump to question">{test.questions.map((item,i) => <button key={item.question_id} type="button" aria-label={`Question ${i+1}${isAnswered(item) ? ', answered' : ', unanswered'}`} aria-current={index===i ? 'step' : undefined} className={isAnswered(item) ? 'answered' : ''} onClick={() => setIndex(i)}>{String(i+1).padStart(2,'0')}</button>)}</nav>
 
           {error && <p className="alert" role="alert">{error}</p>}
 
@@ -221,7 +218,7 @@ export default function SubjectTest() {
               <span className="tag">{q.ref}</span>
             </div>
             {q.recommendation && <aside className="practice-why" aria-label="Why this question">
-              <span className="practice-eyebrow">WHY THIS QUESTION</span>
+              <span className="practice-eyebrow"><Target size={14} aria-hidden="true"/> WHY THIS QUESTION</span>
               <p>{q.recommendation.reason}</p>
               <details><summary>Your learning goal</summary><p>{q.recommendation.learning_goal}</p></details>
             </aside>}
@@ -267,13 +264,16 @@ export default function SubjectTest() {
     )
   }
 
+  const focusLabel = chapters.find(c => String(c.id) === chapterId)?.name || subjects?.find(s => s.code === subjectCode)?.name || 'Across subjects'
+  const modeLabel = { recommended: 'Recommended for you', topic: 'Topic practice', revision: 'Quick revision' }[mode]
   // ---------------------------------------------------------------- SETUP
   return <div className="crackjee-root"><AppHeader />
     <main className="wrap practice-page">
       <header className="practice-intro"><div><span className="practice-eyebrow">YOUR NEXT STEP</span>
-        <h1>A little more clarity.<br /><em>One question at a time.</em></h1>
-        <p>Work on what needs attention, revisit what you know, or follow your curiosity.</p></div>
-        <div className="practice-note"><Target size={24}/><strong>Practice with a purpose.</strong><span>Every question comes with a reason. Your submitted answers shape the next session.</span></div>
+        <h1>Less guessing.<br /><em>Better practice.</em></h1>
+        <p>Pick your focus. Make time for it. Leave knowing what to work on next.</p>
+        <div className="practice-intro-tags"><span><Target size={14}/> A reason for every question</span><span><Clock3 size={14}/> Built around your time</span></div></div>
+        <div className="practice-note"><span className="practice-eyebrow">HOW IT WORKS</span><ol><li><b>01</b><span>Find your starting point<small>Your recent answers guide the choice.</small></span></li><li><b>02</b><span>Work through the why<small>See the purpose of every question.</small></span></li><li><b>03</b><span>Take the next step<small>Review, learn, and come back stronger.</small></span></li></ol></div>
       </header>
       <section className="practice-paths" aria-label="Practice approach">
         {[['recommended', Target, '01', 'Recommended for you', 'A session shaped by your recent answers. New here? Start by finding your strengths.'],
@@ -284,7 +284,7 @@ export default function SubjectTest() {
           </button>)}
       </section>
       <section className="practice-builder" aria-label="Set up practice">
-        <div className="practice-controls"><span className="practice-eyebrow">MAKE IT YOURS</span><h2>Where do you want to focus?</h2>
+        <div className="practice-controls"><div className="practice-step-heading"><span>01</span><div><span className="practice-eyebrow">CHOOSE YOUR FOCUS</span><h2>What are we working on?</h2></div></div>
           <div className="practice-subjects" role="group" aria-label="Subject">
             {mode !== 'topic' && <button type="button" aria-pressed={!subjectCode} onClick={() => setSubjectCode('')}>All subjects</button>}
             {subjects === null ? <span role="status">Loading subjects…</span> : subjects.map(s => <button key={s.code} type="button" aria-pressed={subjectCode === s.code} onClick={() => setSubjectCode(s.code)}>{s.name}</button>)}
@@ -293,12 +293,14 @@ export default function SubjectTest() {
             <select id="chapter" className="input" value={chapterId} disabled={chaptersLoading} onChange={e => setChapterId(e.target.value)}><option value="">Across this subject</option>{chapters.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}</select>
             {chaptersLoading && <p className="hint" role="status">Loading chapters…</p>}
           </div>}
-          <h3 className="practice-time-label"><Clock3 size={17}/> How much time have you got?</h3>
+          <h3 className="practice-time-label"><span className="practice-step-number">02</span> Set your pace</h3>
           <div className="practice-durations" role="group" aria-label="Session length">{[[5,'Quick'],[15,'Focused'],[30,'Deep practice']].map(([minutes,label]) => <button key={minutes} type="button" aria-pressed={durationMinutes === minutes} onClick={() => setDurationMinutes(minutes)}><strong>{minutes} min</strong><span>{label}</span></button>)}</div>
         </div>
-        <aside className="practice-start"><span className="practice-eyebrow">YOUR SESSION</span><h2>{durationMinutes} minutes.<br />A useful next step.</h2><p>Fresh questions first. A clear reason for each choice. Review your answers when you finish.</p><small>Time is a guide, not a countdown. Your session size depends on suitable questions being available.</small>
-          <button type="button" className="btn btn-primary btn-lg" disabled={starting || chaptersLoading || (mode === 'topic' && !subjectCode)} onClick={startTest}>{starting ? 'Preparing your session…' : 'Start practice'}{!starting && <ArrowUpRight size={18}/>}</button>
-          {mode === 'topic' && !subjectCode && <small>Choose a subject to continue.</small>}
+        <aside className="practice-start"><span className="practice-eyebrow">READY WHEN YOU ARE</span><div className="practice-session-time"><strong>{durationMinutes}</strong><span>minutes<br />well spent</span><Clock3 size={28}/></div>
+          <dl className="practice-plan" aria-live="polite"><div><dt>Approach</dt><dd>{modeLabel}</dd></div><div><dt>Focus</dt><dd>{focusLabel}</dd></div><div><dt>Finish with</dt><dd>Answers & explanations</dd></div></dl>
+          <button type="button" className="btn btn-primary btn-lg" disabled={starting || chaptersLoading || (mode === 'topic' && !subjectCode)} onClick={startTest}>{starting ? 'Choosing your questions…' : 'Let’s practise'}{!starting && <ArrowUpRight size={18}/>}</button>
+          <small>{mode === 'topic' && !subjectCode ? 'Choose a subject to continue.' : 'No countdown. Take the time you need to understand.'}</small>
+          {starting && <p role="status" className="practice-preparing">Matching available questions to your recent answers…</p>}
         </aside>
       </section>
       {error && <div className="alert" role="alert">{error} <button type="button" className="btn btn-secondary btn-sm" onClick={() => setLoadVersion(v => v + 1)}>Retry loading</button></div>}

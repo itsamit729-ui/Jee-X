@@ -1,3 +1,4 @@
+import { ArrowUpRight, Target, Clock3, ArrowRight } from 'lucide-react'
 import RatingSummary from '../components/RatingSummary.jsx'
 import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -95,12 +96,11 @@ export default function Dashboard() {
   if (loading) return <Loader fullScreen label="Loading your dashboard" />
 
   return (
-    <div className="crackjee-root">
+    <div className="crackjee-root dashboard-experience">
       <AppHeader />
       {error && <div className="wrap" role="alert" style={{ paddingTop: 24 }}><div className="panel"><p>{error}</p><button className="btn btn-secondary btn-sm" style={{ marginTop: 12 }} onClick={() => setLoadVersion(v => v + 1)}>Try again</button></div></div>}
-      {!error && <div className="wrap" style={{paddingTop:24}}><section className="panel" style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:20,flexWrap:'wrap'}}><div><span className="section-label">RECOMMENDED FOR YOU</span><h2 style={{margin:'8px 0'}}>Make your next session count.</h2><p className="muted">Questions chosen from your recent answers, with a reason for every recommendation.</p></div><button className="btn btn-primary" onClick={() => navigate('/subject-test')}>Find my next questions →</button></section></div>}
-      {!error && <div className="wrap"><RatingSummary initialRating={rating} /></div>}
       {!error && <DashboardOverview
+        featured={<div className="dashboard-feature-grid"><section className="dashboard-next"><div className="dashboard-next-copy"><span className="eyebrow"><Target size={14}/> RECOMMENDED FOR YOU</span><h2>Your next session.<br /><span>With a little direction.</span></h2><p>Spend less time choosing. Get questions matched to your recent answers, with a reason behind every one.</p><button className="btn btn-primary" onClick={() => navigate('/recommendations')}>Find my next questions <ArrowUpRight size={18}/></button><small><Clock3 size={13}/> 5, 15 or 30 minutes · You set the pace</small></div><div className="dashboard-next-steps" aria-label="Practice flow"><div><span>01</span><strong>Your answers</strong></div><ArrowRight size={18}/><div><span>02</span><strong>Your next questions</strong></div><ArrowRight size={18}/><div><span>03</span><strong>Your review</strong></div></div></section><aside className="dashboard-side"><span className="eyebrow">YOUR PROGRESS</span><RatingSummary initialRating={rating}/><div className="dashboard-side-note"><strong>Small sessions add up.</strong><p>Start with a focus, finish with a review. Your next recommendation learns from submitted answers.</p><button className="btn btn-quiet btn-sm" onClick={() => navigate('/profile')}>View your profile <ArrowUpRight size={14}/></button></div></aside></div>}
         profile={profile}
         statCards={statCards}
         history={history}

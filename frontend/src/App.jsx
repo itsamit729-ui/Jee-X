@@ -44,6 +44,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/free-test" element={<FreeTest />} />
       <Route path="/image-questions" element={<ImageQuestions />} />
+      <Route path="/recommendations" element={<ProtectedRoute><SubjectTest key="recommended" initialMode="recommended" /></ProtectedRoute>} />
       <Route path="/scenarios" element={<ProtectedRoute><Scenarios /></ProtectedRoute>} />
       <Route path="/scenarios/:runId" element={<ProtectedRoute><Scenarios /></ProtectedRoute>} />
       <Route
@@ -98,7 +99,7 @@ export default function App() {
         path="/subject-test"
         element={
           <ProtectedRoute>
-            <SubjectTest />
+            <SubjectTest key="topic" initialMode="topic" />
           </ProtectedRoute>
         }
       />

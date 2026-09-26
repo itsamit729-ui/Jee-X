@@ -1,6 +1,6 @@
 # Personalised practice
 
-The dashboard links to `/subject-test`, redesigned around Recommended for you, Choose a topic and Quick revision. Students choose a 5/15/30-minute guide (up to 3/8/16 questions). Subject/chapter bank totals are not shown in this screen; session progress remains visible. Time is an estimate, not an exam countdown.
+The top navigation and dashboard link to `/recommendations`, which opens Recommended for you. `/subject-test` opens Choose a topic. Both offer Recommended for you, Choose a topic and Quick revision. Students choose a 5/15/30-minute guide (up to 3/8/16 questions). Subject/chapter bank totals are not shown in this screen; session progress remains visible. Time is an estimate, not an exam countdown.
 
 ## Selection and evidence
 

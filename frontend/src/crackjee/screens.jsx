@@ -694,7 +694,7 @@ export function AnalysisDashboard({ result, onHome, onBuddy }) {
    ================================================================ */
 const START_SQUARES = ["answered", "answered", "unanswered", "answered", "marked", "answered", "idle", "idle", "idle", "idle"];
 
-export function DashboardOverview({ onStart, onFreeTest, onSubjectTest, profile, statCards, history, subjectTrends }) {
+export function DashboardOverview({ featured, onStart, onFreeTest, onSubjectTest, profile, statCards, history, subjectTrends }) {
   const first = profile?.name?.split(" ")[0];
   const classText = profile?.class_level ? (profile.class_level === "dropper" ? "dropper" : `Class ${profile.class_level}`) : null;
   const hasData = statCards && statCards.length > 0;
@@ -710,7 +710,8 @@ export function DashboardOverview({ onStart, onFreeTest, onSubjectTest, profile,
         </div>
       </div>
 
-      <span className="section-label">START A SESSION</span>
+      {featured}
+      <span className="section-label">OTHER WAYS TO PRACTISE</span>
       <section className="start" aria-label="Start a test">
         <div className="start-tile start-main">
           <Palette states={START_SQUARES} size="sm" decorative />
