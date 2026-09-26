@@ -39,7 +39,7 @@ def test_exact_branch_degree_and_missing_metrics():
     assert fallback['coverage'] == 'catalog_only' and fallback['verified_on'] is None
 
 
-@pytest.mark.parametrize('mutation', ['unsafe_url', 'bad_average', 'nan', 'missing_program', 'missing_source'])
+@pytest.mark.parametrize('mutation', ['unsafe_url', 'bad_average', 'nan', 'missing_program', 'missing_source', 'bad_median', 'zero_median'])
 def test_invalid_facts_rejected(mutation):
     r = copy.deepcopy(json.loads(DATA_PATH.read_text())['records'][0])
     if mutation == 'unsafe_url': r['sources'][0]['url'] = 'javascript:alert(1)'
@@ -47,6 +47,8 @@ def test_invalid_facts_rejected(mutation):
     if mutation == 'nan': r['placements'][0]['highest_lpa'] = float('nan')
     if mutation == 'missing_program': del r['placements'][0]['program']
     if mutation == 'missing_source': r['alumni'][0]['sources'] = []
+    if mutation == 'bad_median': r['placements'][0]['median_lpa'] = 999
+    if mutation == 'zero_median': r['placements'][0]['median_lpa'] = 0
     with pytest.raises(ValueError): validate_bundle([r])
 
 
@@ -96,5 +98,47 @@ def test_new_package_scopes_are_preserved_and_persisted(setup):
         sync_insights(db)
         assert sync_insights(db) == {'added': 0, 'updated': 0}
         persisted = [db.get(models.CollegeInsight, i).content for i in range(1000, 1000 + len(records))]
-        assert sum(len(r['placements']) for r in persisted) == 37
+        assert sum(len(r['placements']) for r in persisted) == sum(len(r['placements']) for r in records)
         assert all(r['placements'] for r in persisted)
+
+
+def test_median_cohorts_keep_year_scope_and_campus():
+    records = {r['institute']: r for r in json.loads(DATA_PATH.read_text())['records']}
+    madras = records['Indian Institute of Technology Madras']
+    result = for_program(madras, 'Mechanical Engineering (4 Years, Bachelor of Technology)')
+    assert result['placement'] is None
+    assert result['overall_placement'] is None
+    cohorts = {p['scope']: p for p in result['salary_context']}
+    assert cohorts['ug4_overall']['median_lpa'] == 17.5
+    assert cohorts['ug4_overall']['year'] == '2023-24'  # not the NIRF publication year
+    assert cohorts['ug5_overall']['median_lpa'] == 19.4
+    assert 'average_lpa' not in cohorts['ug4_overall']
+    spa = for_program(records['School of Planning & Architecture, New Delhi'], 'Architecture (5 Years, Bachelor of Architecture)')
+    scopes = {p['scope']: p['median_lpa'] for p in spa['salary_context']}
+    assert scopes == {'bplan_overall': 5.23, 'barch_overall': 7.5}
+    diu = records['Indian Institute of Information Technology, Vadodara International Campus Diu (IIITVICD)']
+    assert for_program(diu, 'Computer Science and Engineering (4 Years, Bachelor of Technology)')['overall_placement']['highest_lpa'] == 26.5
+    assert for_program(catalog_profile('No reported salaries'), '')['salary_context'] == []
+
+
+def test_all_catalog_nits_and_iits_have_salary_context():
+    from pathlib import Path
+    catalog_path = Path(__file__).resolve().parents[2] / 'docs/JEE-Predictor-Data/jee-predictor-data/data/josaa_2026_round_5.json'
+    catalog = json.loads(catalog_path.read_text())['records']
+    records = {r['institute']: r for r in json.loads(DATA_PATH.read_text())['records']}
+    for row in catalog:
+        if 'National Institute of Technology' in row['institute'] or row['institute'].startswith('Indian Institute of Technology '):
+            assert records[row['institute']]['placements']
+
+
+def test_covered_colleges_show_salary_context_for_every_catalog_degree():
+    from pathlib import Path
+    catalog_path = Path(__file__).resolve().parents[2] / 'docs/JEE-Predictor-Data/jee-predictor-data/data/josaa_2026_round_5.json'
+    records = {r['institute']: r for r in json.loads(DATA_PATH.read_text())['records']}
+    for row in json.loads(catalog_path.read_text())['records']:
+        if row['institute'] not in records:
+            continue
+        result = for_program(records[row['institute']], row['program'])
+        assert any(result[k] for k in ('placement', 'overall_placement', 'college_placement', 'salary_context')), (row['institute'], row['program'])
+        if result['overall_placement']:
+            assert result['overall_placement']['scope'] not in {p['scope'] for p in result['salary_context']}

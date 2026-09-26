@@ -4,11 +4,23 @@ Recommendations in Roadmap and RankPredictor use the same accessible information
 
 ## Sources and coverage
 
-`backend/app/data/college_insights.json` contains reviewed facts and HTTPS source links for each profile, placement record and alumnus. The expanded bundle includes **15 institutes and 37 placement records**, with package coverage for MNNIT Allahabad, NITK Surathkal, NIT Trichy, NIT Rourkela, IIITDM Kancheepuram, NIT Hamirpur, NIT Patna, NIT Calicut, NIT Kurukshetra, NIT Uttarakhand, IIIT Vadodara, IIIT Dharwad, IIIT Sri City, NIT Durgapur and VNIT Nagpur. Coverage can be branch-only, undergraduate-wide or institute-wide; not every branch has its own report. Remaining catalog institutes receive concise catalog profiles. Unavailable details are omitted from the UI.
+`backend/app/data/college_insights.json` now contains **121 institutes and 174 placement records**, covering every IIT and NIT in the 138-institute catalog. `docs/college-salary-coverage.json` audits all 138 institutes and identifies the 17 for which this collection found no usable dated salary statistic. This is source coverage, not proof that unpublished outcomes do not exist. Missing metrics and empty sections stay absent from the student UI.
 
-The September 2026 collection uses official placement pages and institute brochures. Each record retains the source URL, reporting year and relevant snapshot date or historical caveat. NIT Trichy’s available ICE and Mechanical records are historical (2021 and 2021–22); they are not presented as current outcomes. NIT Durgapur’s 2025 homepage supplies the highest package only. IIIT Sri City’s branch averages are separate from its overall maximum. Conflicting reports and ambiguous branch-name aliases were not merged.
+Sources include 66 downloaded official NIRF institution submissions, institute placement pages and brochures, and attributed reporting from Shiksha, Careers360, College Pravesh, Collegedunia, Indian Express and Times of India. Student reviews, advertisements, estimated packages and parent-campus substitutions are excluded. Secondary sources are labelled by publisher rather than presented as official institute reports. Historical figures retain their actual reporting year. In-progress reports retain snapshot notes where available.
 
-Match placements only by exact institute and full JoSAA program title. Never apply B.Tech results to dual degrees, apply one department's results to another, or relabel institute-wide results as branch-specific. Store CTC in INR lakh per annum, preserve report year and scope, and leave unpublished/unverified metrics null. Cards render only positive, finite package metrics. Branch, overall B.Tech, undergraduate and college-wide records are shown separately with explicit scope labels. College-wide totals can include multiple degree levels and are never labelled as a selected branch’s outcomes. Alumni descriptions use stable achievements or dated roles, not assumed current jobs. The API tracks source age for future maintenance; the card shows the source-check date when available.
+Highest CTC, average CTC and median annual salary remain distinct metrics. NIRF records use the **graduation cohort year**, not the publication year. Four-year UG, five-year UG, architecture, planning, integrated postgraduate and two-year postgraduate cohorts have separate labels. These appear as college context for any selected programme; they are never assigned to its branch. University-wide submissions are explicitly identified, and IISc’s historical UG cohort is noted as predating the first B.Tech graduating class. Postgraduate-only salary context is clearly labelled as postgraduate outcomes.
+
+Branch matches still require an exact institute and full JoSAA program title. B.Tech overall figures are matched only to four-year B.Tech selections; other degrees can still see those reports as explicitly labelled college context. No statistics are copied between campuses or merged across years. The API preserves each cohort’s latest available report. Cards round LPA for readability while the stored values retain precision.
+
+### Reproducing NIRF extraction
+
+`docs/college-salary-nirf-sources.json` records exact institute mappings, source URLs and SHA-256 hashes. With Poppler installed:
+
+```sh
+python scripts/collect_nirf_salary_context.py --cache-dir /tmp/nirf-sources --output /tmp/nirf-candidates.json
+```
+
+The collector downloads public reports outside student requests, checks hashes and extracts median salary candidates with source rows for review. Changed PDFs fail for manual review. It writes candidates only, not the serving bundle or database. Inspect cohort labels and source tables before merging candidates into `college_insights.json`; NIRF salary is not average CTC. No scheduled scraping is added.
 
 ## Database lifecycle
 

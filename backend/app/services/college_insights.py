@@ -10,6 +10,7 @@ from app.services.admissions import NIT_STATES
 
 DATA_PATH = Path(__file__).resolve().parents[1] / 'data/college_insights.json'
 CATALOG_SOURCE = 'https://josaa.nic.in/or-cr/'
+COHORT_SCOPES = ('ug4_overall', 'ug5_overall', 'barch_overall', 'bplan_overall', 'integrated5_overall', 'pg2_overall')
 
 
 def valid_url(url):
@@ -29,17 +30,17 @@ def validate_bundle(records):
             if not sources or any(not valid_url(s['url']) for s in sources):
                 raise ValueError('Every insight must have HTTPS source attribution.')
         for item in record.get('placements', []):
-            if item['scope'] not in ('branch', 'btech_overall', 'ug_overall', 'college_overall'):
+            if item['scope'] not in ('branch', 'btech_overall', 'ug_overall', 'college_overall', *COHORT_SCOPES):
                 raise ValueError('Unknown placement scope.')
             if item['scope'] == 'branch' and not item.get('program'):
                 raise ValueError('Branch figures require an exact program title.')
-            values = [item.get('highest_lpa'), item.get('average_lpa')]
+            values = [item.get('highest_lpa'), item.get('average_lpa'), item.get('median_lpa')]
             if not item.get('year') or all(v is None for v in values):
                 raise ValueError('Placement record requires a year and reported metric.')
             if any(v is not None and (isinstance(v, bool) or not isinstance(v, (int, float)) or not 0 < v < 1000) for v in values):
                 raise ValueError('Invalid placement amount.')
-            if all(v is not None for v in values) and values[0] < values[1]:
-                raise ValueError('Average exceeds highest package; review source scope.')
+            if values[0] is not None and any(v is not None and v > values[0] for v in values[1:]):
+                raise ValueError('Salary statistic exceeds highest package; review source scope.')
 
 
 def catalog_profile(name):
@@ -89,11 +90,20 @@ def for_program(content, program, today=None):
         overall = max(ug, key=lambda p: p['year'])
     college = [p for p in content.get('placements', []) if p['scope'] == 'college_overall']
     college = max(college, key=lambda p: p['year']) if college else None
+    # These are college context, not estimates for the selected branch/degree.
+    # Keep each cohort and reporting year separate, including historical PG-only data.
+    cohorts = []
+    for scope in (*COHORT_SCOPES, 'btech_overall', 'ug_overall'):
+        if overall and overall['scope'] == scope:
+            continue
+        reports = [p for p in content.get('placements', []) if p['scope'] == scope]
+        if reports:
+            cohorts.append(max(reports, key=lambda p: p['year']))
     checked = content.get('verified_on')
     return {'institute': content['institute'], 'program': program, 'summary': catalog_profile(content['institute'])['summary'] if content.get('coverage') == 'catalog_only' else content['summary'],
             'coverage': content.get('coverage', 'reviewed'), 'verified_on': checked,
             'review_due': bool(checked and (today - date.fromisoformat(checked)).days > 180),
-            'placement': placement, 'overall_placement': overall, 'college_placement': college,
+            'placement': placement, 'overall_placement': overall, 'college_placement': college, 'salary_context': cohorts,
             'alumni': content.get('alumni', [])[:3], 'sources': content['sources'],
             'placement_note': 'CTC in INR lakh per year; not take-home pay. Historical outcomes do not guarantee future offers.',
             'missing_note': 'Verified highest and average packages for this exact branch are not available in our records.' if not placement else None}

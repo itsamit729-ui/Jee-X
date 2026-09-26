@@ -8,23 +8,29 @@ function Sources({ items }) {
   return <div className="college-info-sources">{items?.map((s, i) => <a key={`${s.url}-${i}`} href={s.url} target="_blank" rel="noopener noreferrer">{s.label || 'Source'} ↗</a>)}</div>
 }
 function Packages({ value }) {
-  const metrics = [['Highest CTC', value?.highest_lpa], ['Average CTC', value?.average_lpa]]
+  const metrics = [['Highest CTC', value?.highest_lpa], ['Average CTC', value?.average_lpa], ['Median salary', value?.median_lpa]]
     .filter(([, amount]) => typeof amount === 'number' && Number.isFinite(amount) && amount > 0)
   if (!metrics.length) return null
   const scopes = {
     branch: ['Branch packages', value.program],
-    btech_overall: ['Overall B.Tech packages', 'Across the college’s B.Tech programs.'],
-    ug_overall: ['Undergraduate packages', 'Across undergraduate programs in the report.'],
+    btech_overall: ['Overall B.Tech packages', 'College context across B.Tech programs; not results for the selected branch or degree.'],
+    ug_overall: ['Undergraduate packages', 'College context across undergraduate programs in the report; not results for the selected branch or degree.'],
     college_overall: ['College-wide packages', 'Institute-wide figures across the programs covered by the report.'],
+    ug4_overall: ['4-year undergraduate salaries', 'College context across the reported 4-year undergraduate cohort; not a branch-specific figure.'],
+    ug5_overall: ['5-year undergraduate salaries', 'College context across the reported 5-year undergraduate cohort; not a branch-specific figure.'],
+    barch_overall: ['Architecture salaries', 'College context for the reported 5-year architecture cohort.'],
+    bplan_overall: ['Planning salaries', 'College context for the reported 4-year planning cohort.'],
+    integrated5_overall: ['5-year integrated salaries', 'College context for the reported integrated postgraduate cohort.'],
+    pg2_overall: ['2-year postgraduate salaries', 'College context for postgraduate programmes; these are not undergraduate outcomes.'],
   }
   const [title, description] = scopes[value.scope] || ['Reported packages', '']
   return <div className="college-info-section">
     <h4>{title}{value.year ? ` · ${value.year}` : ''}</h4>
     {description && <p className="college-info-note">{description}</p>}
-    <div className="college-info-metrics">{metrics.map(([label, amount]) => <div key={label}><span>{label}</span><strong>₹{amount.toLocaleString('en-IN')} LPA</strong></div>)}</div>
+    <div className="college-info-metrics">{metrics.map(([label, amount]) => <div key={label}><span>{label}</span><strong>₹{amount.toLocaleString('en-IN', { maximumFractionDigits: 2 })} LPA</strong></div>)}</div>
     {value.note && <p className="college-info-note">{value.note}</p>}
     <Sources items={value.sources}/>
-    <p className="college-info-note">CTC in lakh per year, not take-home pay. Past outcomes don’t guarantee future offers.</p>
+    <p className="college-info-note">INR lakh per year. Reported salary or CTC is not take-home pay. Past outcomes don’t guarantee future offers.</p>
   </div>
 }
 
@@ -92,6 +98,7 @@ export default function CollegeInfo({ institute, program }) {
         <Packages value={data.placement}/>
         <Packages value={data.overall_placement}/>
         <Packages value={data.college_placement}/>
+        {data.salary_context?.map(value => <Packages key={`${value.scope}-${value.year}`} value={value}/>) }
         {data.alumni?.length > 0 && <div className="college-info-section"><h4>Notable alumni</h4><ul>{data.alumni.map(person => <li key={person.name}><strong>{person.name}</strong><p>{person.description}</p><Sources items={person.sources}/></li>)}</ul></div>}
         {data.verified_on && <footer>Sources checked {data.verified_on}</footer>}
       </>}
