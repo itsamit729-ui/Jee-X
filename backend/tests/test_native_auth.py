@@ -11,7 +11,7 @@ from sqlalchemy.pool import StaticPool
 from app import models
 from app.database import Base, get_db
 from app.auth import COOKIE_NAME, digest, utcnow
-from app.routers import authentication, users
+from app.routers import authentication, users, google_login
 from app.services import authentication as service
 
 PASSWORD = 'a long unique passphrase'
@@ -29,11 +29,12 @@ def env(monkeypatch):
     monkeypatch.setenv('AUTH_EMAIL_FROM', 'hello@example.com')
     engine = create_engine('sqlite://', connect_args={'check_same_thread': False}, poolclass=StaticPool)
     tables = [models.User.__table__, models.StudentProfile.__table__, models.ProfileAvatar.__table__,
-              models.AuthAccount.__table__, models.AuthSession.__table__, models.AuthEmailToken.__table__, models.AuthRateLimit.__table__]
+              models.AuthAccount.__table__, models.AuthSession.__table__, models.AuthEmailToken.__table__, models.AuthRateLimit.__table__, models.GoogleIdentity.__table__]
     Base.metadata.create_all(engine, tables=tables)
     sessions = sessionmaker(bind=engine)
     app = FastAPI()
     app.include_router(authentication.router)
+    app.include_router(google_login.router)
     app.include_router(users.router)
     def database():
         with sessions() as db:
@@ -182,3 +183,71 @@ def test_mail_failure_rolls_back_new_account(env, monkeypatch):
     with sessions() as db:
         assert db.query(models.AuthAccount).count() == 0
         assert db.query(models.AuthEmailToken).count() == 0
+
+
+def test_google_signin_uses_subject_and_does_not_take_password_account(env, monkeypatch):
+    client, sessions, _, _ = env
+    monkeypatch.setenv('GOOGLE_CLIENT_ID', 'client-id')
+    monkeypatch.setenv('GOOGLE_CLIENT_SECRET', 'secret')
+    class Reply:
+        def __init__(self, payload): self.payload = payload
+        def raise_for_status(self): pass
+        def json(self): return self.payload
+    identity = {'sub': 'stable-google-id', 'email': 'google@example.com', 'email_verified': True}
+    monkeypatch.setattr(google_login.requests, 'post', lambda *a, **kw: Reply({'access_token': 'fake'}))
+    monkeypatch.setattr(google_login.requests, 'get', lambda *a, **kw: Reply(identity))
+
+    def start():
+        auth = client.get('/api/auth/google/start', follow_redirects=False)
+        assert auth.status_code == 302
+        from urllib.parse import parse_qs, urlsplit
+        return parse_qs(urlsplit(auth.headers['location']).query)['state'][0]
+
+    assert client.get('/api/auth/google/callback?code=one&state=wrong', follow_redirects=False).status_code == 303
+    assert client.get('/api/auth/session').json()['authenticated'] is False
+    state = start()
+    reply = client.get(f'/api/auth/google/callback?code=one&state={state}', follow_redirects=False)
+    assert reply.status_code == 303
+    with sessions() as db:
+        account = db.query(models.AuthAccount).filter_by(email='google@example.com').one()
+        assert db.query(models.GoogleIdentity).one().account_id == account.id
+    assert client.get('/api/auth/session').json()['authenticated'] is True
+
+    state = start()
+    assert client.get(f'/api/auth/google/callback?code=two&state={state}', follow_redirects=False).status_code == 303
+    with sessions() as db:
+        assert db.query(models.AuthAccount).filter_by(email='google@example.com').count() == 1
+
+    identity.update(sub='another-sub', email='student@example.com')
+    signup(env)
+    state = start()
+    result = client.get(f'/api/auth/google/callback?code=three&state={state}', follow_redirects=False)
+    assert result.headers['location'].endswith('/login?google_error=existing')
+    with sessions() as db:
+        assert db.query(models.GoogleIdentity).count() == 1
+
+
+def test_google_link_requires_password_session_and_csrf(env, monkeypatch):
+    client, sessions, _, _ = env
+    monkeypatch.setenv('GOOGLE_CLIENT_ID', 'client-id')
+    monkeypatch.setenv('GOOGLE_CLIENT_SECRET', 'secret')
+    assert client.post('/api/auth/google/link').status_code == 401
+    login(env)
+    assert client.post('/api/auth/google/link', headers={'X-CSRF-Token': 'wrong'}).status_code == 403
+    result = client.post('/api/auth/google/link')
+    assert result.status_code == 200
+    from urllib.parse import parse_qs, urlsplit
+    state = parse_qs(urlsplit(result.json()['url']).query)['state'][0]
+    class Reply:
+        def __init__(self, payload): self.payload = payload
+        def raise_for_status(self): pass
+        def json(self): return self.payload
+    monkeypatch.setattr(google_login.requests, 'post', lambda *a, **kw: Reply({'access_token': 'fake'}))
+    monkeypatch.setattr(google_login.requests, 'get', lambda *a, **kw: Reply({
+        'sub': 'linked-google-id', 'email': 'other@gmail.com', 'email_verified': True}))
+    callback = client.get(f'/api/auth/google/callback?code=one&state={state}', follow_redirects=False)
+    assert callback.headers['location'].endswith('/account/security?google_connected=1')
+    with sessions() as db:
+        account = db.query(models.AuthAccount).filter_by(email=EMAIL).one()
+        assert db.query(models.GoogleIdentity).one().account_id == account.id
+        assert db.query(models.AuthAccount).count() == 1

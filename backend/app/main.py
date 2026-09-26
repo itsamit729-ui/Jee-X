@@ -12,6 +12,7 @@ from app.database import Base, engine
 from app.routers import (
     users,
     authentication,
+    google_login,
     test_attempts,
     subjects,
     subject_tests,
@@ -44,6 +45,7 @@ app.add_middleware(
 )
 
 app.include_router(authentication.router)
+app.include_router(google_login.router)
 app.include_router(users.router)
 app.include_router(test_attempts.router)
 app.include_router(subjects.router)

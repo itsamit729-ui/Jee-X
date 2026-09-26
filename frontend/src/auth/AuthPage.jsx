@@ -33,10 +33,16 @@ export default function AuthPage({ mode = 'login' }) {
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const [message, setMessage] = useState('')
+  const [googleEnabled, setGoogleEnabled] = useState(false)
   const [linkToken] = useState(() => new URLSearchParams(window.location.hash.slice(1)).get('token') || '')
   useEffect(() => {
     if (window.location.hash) window.history.replaceState(null, '', window.location.pathname + window.location.search)
   }, [])
+  useEffect(() => {
+    if (['login', 'signup'].includes(mode)) {
+      request('/api/auth/google/enabled').then(data => setGoogleEnabled(Boolean(data.enabled))).catch(() => {})
+    }
+  }, [mode])
   const [title, subtitle, label] = COPY[mode]
   const emailVisible = ['login', 'signup', 'forgot'].includes(mode) || (mode === 'verify' && !linkToken)
   const passwordVisible = ['login', 'signup', 'reset', 'change'].includes(mode)
@@ -61,6 +67,13 @@ export default function AuthPage({ mode = 'login' }) {
     } catch (err) { setError(err.message) } finally { setBusy(false) }
   }
 
+  async function connectGoogle() {
+    try {
+      const { url } = await request('/api/auth/google/link', { method: 'POST' })
+      window.location.assign(url)
+    } catch (err) { setError(err.message) }
+  }
+
   return <div className="native-auth-page">
     <header className="native-auth-header"><Logo /><Link to="/" className="native-auth-back"><ArrowLeft size={15}/>Back to Jee Edge</Link></header>
     <main className="native-auth-main"><section className="native-auth-card" aria-labelledby="auth-heading">
@@ -79,6 +92,17 @@ export default function AuthPage({ mode = 'login' }) {
         {error && <p className="native-auth-error" role="alert">{error}</p>}
         <button className="btn btn-primary native-auth-submit" disabled={busy || (mode === 'reset' && !linkToken)}>{busy ? 'Please wait…' : mode === 'verify' && !linkToken ? 'Send verification link' : label}{!busy && <ArrowRight size={17}/>}</button>
       </form>}
+      {!message && googleEnabled && ['login', 'signup'].includes(mode) && <div className="native-auth-google">
+        <span>or</span><a href="/api/auth/google/start" className="native-auth-google-button">Continue with Google</a>
+      </div>}
+      {mode === 'change' && googleEnabled && <div className="native-auth-google">
+        <span>Google sign-in</span><button type="button" className="native-auth-google-button" onClick={connectGoogle}>Connect Google to this account</button>
+      </div>}
+      {mode === 'change' && params.get('google_connected') && <p role="status">Google is connected. You can sign in either way.</p>}
+      {!message && ['login', 'signup'].includes(mode) && params.get('google_error') &&
+        <p className="native-auth-error" role="alert">{params.get('google_error') === 'existing'
+          ? 'This email already has an account. Sign in with your password.'
+          : 'Google sign-in could not finish. Please try again.'}</p>}
       {!message && <div className="native-auth-bottom">
         {mode === 'login' ? <><p>New here? <Link to={`/signup?returnTo=${encodeURIComponent(returnTo)}`}>Create an account</Link></p><Link to="/verify-email">Resend verification email</Link></>
           : mode === 'signup' ? <><p>Already have an account? <Link to="/login">Sign in</Link></p><small>New accounts start with a fresh profile.</small></>

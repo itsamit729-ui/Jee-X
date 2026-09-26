@@ -14,6 +14,12 @@ class AuthAccount(Base):
     created_at = Column(DateTime, nullable=False)
 
 
+class GoogleIdentity(Base):
+    __tablename__ = 'auth_google_identities'
+    google_sub = Column(String(255), primary_key=True)
+    account_id = Column(String(36), ForeignKey('auth_accounts.id', ondelete='CASCADE'), unique=True, nullable=False)
+
+
 class AuthSession(Base):
     __tablename__ = 'auth_sessions'
     token_hash = Column(String(64), primary_key=True)
