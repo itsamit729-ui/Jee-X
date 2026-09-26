@@ -77,7 +77,7 @@
         "min": 10.0,
         "max": 10.0
       },
-      "solution": ""
+      "solution": "**Key idea:** $[g(x)]$ is discontinuous exactly where the continuous function $g(x)$ passes through an integer value. The endpoints need a separate check.\nLet $g(x) = x^2 - x - \\frac{1}{2}$.\n$g'(x) = 2x - 1 > 0$ for $x \\in [2,4]$, so $g$ is strictly increasing on $[2,4]$.\n$g(2) = 4 - 2 - \\frac{1}{2} = 1.5$\n$g(4) = 16 - 4 - \\frac{1}{2} = 11.5$\nSo $g$ increases continuously from $1.5$ to $11.5$. It passes through each integer $2, 3, \\dots, 11$ exactly once, at an interior point of the interval.\nAt each such point, $[g(x)]$ jumps by $1$, so $f$ is discontinuous there. This gives $11 - 2 + 1 = 10$ points.\nAt the endpoints, $g(2) = 1.5$ and $g(4) = 11.5$ are not integers. So $f$ is continuous at $x = 2$ and $x = 4$.\nTotal number of points of discontinuity $= 10$.\nAnswer: 10"
     },
     {
       "ref": "PYQ-MATH-84585fd6579e",

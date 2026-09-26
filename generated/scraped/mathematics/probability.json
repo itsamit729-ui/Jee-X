@@ -208,7 +208,7 @@
         "min": 311.0,
         "max": 311.0
       },
-      "solution": ""
+      "solution": "Total ordered pairs $(a,b)$ with $a\\ne b$: $100\\times 99 = 9900$.\nLet $d=a-b$ with $10\\le d\\le 99$.\nFor a fixed $d$, $b$ can be $1,2,\\dots,100-d$, so there are $100-d$ pairs.\nFavourable pairs: $\\sum_{d=10}^{99}(100-d) = 1+2+\\dots+90 = \\frac{90\\cdot 91}{2} = 4095$.\n$P=\\frac{4095}{9900}$.\n$\\gcd(4095,9900)=45$, so $P=\\frac{91}{220}$.\n$m+n = 91+220 = 311$.\nAnswer: 311"
     },
     {
       "ref": "PYQ-MATH-dd396496515d",

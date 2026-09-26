@@ -1005,7 +1005,7 @@
           "is_correct": false
         }
       ],
-      "solution": ""
+      "solution": "Any point on line $\\frac{x-4}{1}=\\frac{y-9}{2}=\\frac{z-5}{1}$: $(4+t,9+2t,5+t)$.\nFoot $(1,\\mu,2)$: $4+t=1\\Rightarrow t=-3$, so $\\mu=3$, $z=2$ ✓. Foot $=(1,3,2)$.\nPerpendicularity with direction $(1,2,1)$: $(\\lambda-1)+2(2-3)+(3-2)=0\\Rightarrow\\lambda=2$.\nBoth lines have direction $\\vec b=(2,3,6)$, so they are parallel.\nPoints: $A(1,2,-4)$, $B(2,3,-5)$; $\\vec{AB}=(1,1,-1)$, $|\\vec b|=7$.\nDistance between parallel lines: $d=\\frac{|\\vec{AB}\\times\\vec b|}{|\\vec b|}$.\n$\\vec{AB}\\times\\vec b=(1\\cdot6+1\\cdot3,\\,-2-6,\\,3-2)=(9,-8,1)$, magnitude $\\sqrt{146}$.\n$d=\\frac{\\sqrt{146}}{7}$\nAnswer: (C) $\\frac{\\sqrt{146}}{7}$"
     },
     {
       "ref": "PYQ-MATH-81b781a0577c",

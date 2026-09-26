@@ -796,7 +796,7 @@
           "is_correct": false
         }
       ],
-      "solution": ""
+      "solution": "The four source branches are all connected between $A$ and $B$. Each has emf $27\\ \\text{V}$ and resistance $3\\ \\Omega$; the third branch is $14\\ \\text{V}+13\\ \\text{V}=27\\ \\text{V}$. All emfs are assumed to act in the same direction.\nThe diagonal wire $AB$ has two resistor symbols, read as $3\\ \\Omega+3\\ \\Omega=6\\ \\Omega$ (a single $3\\ \\Omega$ would give $21.6\\ \\text{V}$ and $7.2\\ \\text{A}$, matching no option).\nFor identical cells in parallel: $E_{eq}=E=27\\ \\text{V}$ and $r_{eq}=r/n=3/4=0.75\\ \\Omega$.\nCurrent: $I=\\dfrac{E_{eq}}{R+r_{eq}}=\\dfrac{27}{6+0.75}=4\\ \\text{A}$\nVoltage: $V_{AB}=IR=4\\times 6=24\\ \\text{V}$\nCheck: each branch carries $1\\ \\text{A}$, so $V=27-1\\times 3=24\\ \\text{V}$, which agrees.\nAnswer: (B) 24 V, 4 A"
     },
     {
       "ref": "PYQ-PHY-ea93731842d9",
