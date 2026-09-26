@@ -45,7 +45,7 @@ def validate_bundle(records):
 def catalog_profile(name):
     state = NIT_STATES.get(name)
     summary = (f'A National Institute of Technology in {state}, listed in the JoSAA counselling catalog.' if state
-               else 'This institute is listed in the JoSAA counselling catalog. A more detailed verified profile is not available yet.')
+               else 'This institute participates in JoSAA counselling, through which students can explore its listed programs and admission cutoffs.')
     return {'institute': name, 'summary': summary, 'coverage': 'catalog_only', 'verified_on': None,
             'sources': [{'label': 'JoSAA institute and course catalog', 'url': CATALOG_SOURCE}],
             'placements': [], 'alumni': []}
@@ -83,7 +83,7 @@ def for_program(content, program, today=None):
     overall = [p for p in content.get('placements', []) if p['scope'] == 'btech_overall'] if btech else []
     overall = max(overall, key=lambda p: p['year']) if overall else None
     checked = content.get('verified_on')
-    return {'institute': content['institute'], 'program': program, 'summary': content['summary'],
+    return {'institute': content['institute'], 'program': program, 'summary': catalog_profile(content['institute'])['summary'] if content.get('coverage') == 'catalog_only' else content['summary'],
             'coverage': content.get('coverage', 'reviewed'), 'verified_on': checked,
             'review_due': bool(checked and (today - date.fromisoformat(checked)).days > 180),
             'placement': placement, 'overall_placement': overall,

@@ -7,11 +7,6 @@ import './college-info.css'
 function Sources({ items }) {
   return <div className="college-info-sources">{items?.map((s, i) => <a key={`${s.url}-${i}`} href={s.url} target="_blank" rel="noopener noreferrer">{s.label || 'Source'} ↗</a>)}</div>
 }
-function Placement({ value }) {
-  const amount = v => v == null ? 'Not verified' : `₹${Number(v).toLocaleString('en-IN')} LPA`
-  return <><div className="college-info-metrics"><div><span>Highest CTC</span><strong>{amount(value?.highest_lpa)}</strong></div><div><span>Average CTC</span><strong>{amount(value?.average_lpa)}</strong></div></div>{value?.note && <p className="college-info-note">{value.note}</p>}<Sources items={value?.sources}/></>
-}
-
 export default function CollegeInfo({ institute, program }) {
   const id = useId()
   const trigger = useRef(null), panel = useRef(null), timer = useRef(null)
@@ -73,11 +68,8 @@ export default function CollegeInfo({ institute, program }) {
       {error && <div role="alert"><p>{error}</p><button type="button" className="btn btn-quiet" onClick={() => setRetry(v => v + 1)}>Try again</button></div>}
       {data && <>
         <p>{data.summary}</p><Sources items={data.sources}/>
-        <div className="college-info-section"><h4>Your branch{data.placement ? ` · ${data.placement.year}` : ''}</h4><p className="college-info-program">{program}</p><Placement value={data.placement}/>{data.missing_note && <p className="college-info-note">{data.missing_note}</p>}</div>
-        {data.overall_placement && <details className="college-info-overall"><summary>Overall B.Tech context · {data.overall_placement.year}</summary><p className="college-info-note">Institute-wide figures across B.Tech programs. These are not this branch’s results.</p><Placement value={data.overall_placement}/></details>}
-        <p className="college-info-note">{data.placement_note}</p>
-        <div className="college-info-section"><h4>Notable alumni · institute-wide</h4>{data.alumni.length ? <ul>{data.alumni.map(person => <li key={person.name}><strong>{person.name}</strong><p>{person.description}</p><Sources items={person.sources}/></li>)}</ul> : <p className="college-info-note">No verified alumni profiles in our records yet.</p>}</div>
-        <footer>{data.verified_on ? `Sources checked ${data.verified_on}${data.review_due ? ' · Review due; check the linked reports for updates.' : ''}` : 'Catalog profile · placement and alumni details pending verification.'}</footer>
+        {data.alumni?.length > 0 && <div className="college-info-section"><h4>Notable alumni</h4><ul>{data.alumni.map(person => <li key={person.name}><strong>{person.name}</strong><p>{person.description}</p><Sources items={person.sources}/></li>)}</ul></div>}
+        {data.verified_on && <footer>Sources checked {data.verified_on}</footer>}
       </>}
     </section>, document.body)}
   </>
