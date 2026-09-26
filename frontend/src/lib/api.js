@@ -66,6 +66,7 @@ async function networkRequest(path, { token, method, body, raw = false, timeoutM
 
 export const api = {
   me: () => request('/api/me'),
+  dashboard: () => request('/api/test-attempts/dashboard'),
   checkUsername: username => request(`/api/username-check/${encodeURIComponent(username)}`),
   onboard: payload => request('/api/onboarding', { method: 'POST', body: payload }),
   updateProfile: payload => request('/api/profile', { method: 'PATCH', body: payload }),

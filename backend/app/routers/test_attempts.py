@@ -6,6 +6,7 @@ from sqlalchemy.orm import Session, joinedload
 from app import models, schemas
 from app.deps import get_current_db_user
 from app.database import get_db
+from app.auth import get_auth_account
 
 router = APIRouter(prefix="/api/test-attempts", tags=["test-attempts"])
 
@@ -99,3 +100,20 @@ def list_test_attempts(
         .all()
     )
     return [_to_out(a) for a in attempts]
+
+
+@router.get('/dashboard')
+def dashboard(account: models.AuthAccount = Depends(get_auth_account), db: Session = Depends(get_db)):
+    """One authenticated read for the study desk, history and rating summary."""
+    from app.routers.users import _user_out
+    from app.routers.ranking import _build_me
+    user = db.get(models.User, account.user_id) if account.user_id else None
+    profile = user.student_profile if user else None
+    if not profile:
+        return {'onboarded': False, 'profile': None, 'attempts': [], 'rating': None}
+    return {
+        'onboarded': True,
+        'profile': _user_out(user),
+        'attempts': list_test_attempts(user, db),
+        'rating': _build_me(db, user.id, profile.target_exam, profile.target_year, profile.leaderboard_visibility),
+    }

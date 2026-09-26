@@ -1,4 +1,5 @@
 import os
+from time import perf_counter
 
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request, HTTPException
@@ -79,7 +80,9 @@ async def validation_error(request, exc):
 
 @app.middleware("http")
 async def response_security(request: Request, call_next):
+    started = perf_counter()
     response = await call_next(request)
+    response.headers["Server-Timing"] = f"app;dur={(perf_counter() - started) * 1000:.1f}"
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["Referrer-Policy"] = "no-referrer"
     response.headers["X-Frame-Options"] = "DENY"

@@ -60,6 +60,7 @@ export default function Dashboard() {
   const navigate = useNavigate()
   const [profile, setProfile] = useState(null)
   const [attempts, setAttempts] = useState([])
+  const [rating, setRating] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [loadVersion, setLoadVersion] = useState(0)
@@ -70,18 +71,13 @@ export default function Dashboard() {
     setError('')
     ;(async () => {
       try {
-        // Start independent reads together; submission invalidates cached history.
-        const [meResult, historyResult] = await Promise.allSettled([
-          api.me(),
-          syncPendingFreeTest().then(() => api.listTestAttempts()),
-        ])
+        await syncPendingFreeTest()
+        const desk = await api.dashboard()
         if (!active) return
-        if (meResult.status === 'rejected') throw meResult.reason
-        const me = meResult.value
-        if (!me.onboarded) { navigate('/onboarding', { replace: true }); return }
-        setProfile(me.profile)
-        if (historyResult.status === 'rejected') throw historyResult.reason
-        setAttempts(historyResult.value)
+        if (!desk.onboarded) { navigate('/onboarding', { replace: true }); return }
+        setProfile(desk.profile)
+        setAttempts(desk.attempts)
+        setRating(desk.rating)
       } catch (e) {
         if (active) setError(e.message || 'Your study desk couldn’t load. Please try again.')
       } finally {
@@ -102,7 +98,7 @@ export default function Dashboard() {
     <div className="crackjee-root">
       <AppHeader />
       {error && <div className="wrap" role="alert" style={{ paddingTop: 24 }}><div className="panel"><p>{error}</p><button className="btn btn-secondary btn-sm" style={{ marginTop: 12 }} onClick={() => setLoadVersion(v => v + 1)}>Try again</button></div></div>}
-      {!error && <div className="wrap"><RatingSummary /></div>}
+      {!error && <div className="wrap"><RatingSummary initialRating={rating} /></div>}
       {!error && <DashboardOverview
         profile={profile}
         statCards={statCards}

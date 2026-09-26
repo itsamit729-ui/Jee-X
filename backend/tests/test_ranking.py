@@ -185,3 +185,34 @@ def test_finalization_does_not_run_before_close(setup):
     db.refresh(event)
     assert not event.finalized
     assert db.get(JeeXRating,(1,'jee_main',2027)).contests==0
+
+
+def test_contest_list_has_constant_query_count(setup):
+    from sqlalchemy import event
+    from app.routers.ranking import _build_contests
+    db, _, _ = setup
+    for number in range(30):
+        contest(db, title=f'Contest {number}')
+    queries = []
+    def record(conn, cursor, statement, parameters, context, executemany):
+        if statement.lstrip().upper().startswith('SELECT'):
+            queries.append(statement)
+    event.listen(db.bind, 'before_cursor_execute', record)
+    try:
+        results = _build_contests(db, 1, 'jee_main', 2027)
+        assert len(results) == 30
+        assert len(queries) == 2, queries
+    finally:
+        event.remove(db.bind, 'before_cursor_execute', record)
+
+
+def test_settlement_does_not_revisit_finalized_contests(setup, monkeypatch):
+    from app.routers import ranking
+    db, _, _ = setup
+    contest(db, finalized=True, closes_at=datetime.utcnow()-timedelta(minutes=1))
+    pending = contest(db, closes_at=datetime.utcnow()-timedelta(minutes=1))
+    contest(db)  # Still open.
+    visited = []
+    monkeypatch.setattr(ranking, 'finalize', lambda session, row: visited.append(row.id))
+    ranking.settle(db, db.get(models.User, 1))
+    assert visited == [pending.id]

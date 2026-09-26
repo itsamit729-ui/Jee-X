@@ -4,7 +4,7 @@ streak (daily_question.py) — this router only reads the wallet and handles red
 No admin fulfillment UI exists yet; a redemption just creates a 'pending' request row."""
 
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 
 from app import models, schemas
 from app.database import get_db
@@ -32,6 +32,7 @@ def get_wallet(user: models.User = Depends(get_current_db_user), db: Session = D
     )
     redemptions = (
         db.query(models.RewardRedemption)
+        .options(joinedload(models.RewardRedemption.catalog_item))
         .filter(models.RewardRedemption.user_id == user.id)
         .order_by(models.RewardRedemption.requested_at.desc())
         .all()

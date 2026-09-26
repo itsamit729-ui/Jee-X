@@ -5,10 +5,11 @@ import os
 from datetime import datetime, timezone
 from urllib.parse import urlsplit
 from fastapi import Depends, HTTPException, Request, Response
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 from app.database import get_db
 from app.models.authentication import AuthAccount, AuthSession
 from app.models.identity import User
+from app.models.profile_avatar import ProfileAvatar
 
 COOKIE_NAME = 'jee_session'
 
@@ -45,25 +46,34 @@ def clear_session_cookie(response: Response):
 
 
 def find_session(request: Request, db: Session):
+    # Request-local only: revocation and suspension are rechecked on every request.
+    # Keep all entities alive so downstream db.get calls use the identity map.
+    if hasattr(request.state, 'auth_context'):
+        return request.state.auth_context[0]
     raw = request.cookies.get(COOKIE_NAME, '')
     if not raw or len(raw) > 128:
+        request.state.auth_context = (None, None, None)
         return None
-    session = db.get(AuthSession, digest(raw))
-    if not session or session.expires_at <= utcnow():
-        return None
-    return session
+    row = (db.query(AuthSession, AuthAccount, User)
+           .join(AuthAccount, AuthAccount.id == AuthSession.account_id)
+           .outerjoin(User, User.id == AuthAccount.user_id)
+           .options(joinedload(User.student_profile),
+                    joinedload(User.avatar).load_only(ProfileAvatar.user_id))
+           .filter(AuthSession.token_hash == digest(raw), AuthSession.expires_at > utcnow())
+           .first())
+    request.state.auth_context = tuple(row) if row else (None, None, None)
+    return request.state.auth_context[0]
 
 
 def get_auth_account(request: Request, db: Session = Depends(get_db)) -> AuthAccount:
     session = find_session(request, db)
     if not session:
         raise HTTPException(401, 'Your session has expired. Please sign in again.')
-    account = db.get(AuthAccount, session.account_id)
+    _, account, user = request.state.auth_context
     if not account or account.disabled:
         raise HTTPException(401, 'Please sign in again.')
     if not account.verified_at:
         raise HTTPException(403, 'Verify your email before continuing.')
-    user = db.get(User, account.user_id) if account.user_id else None
     if user and user.status != 'active':
         raise HTTPException(403, 'This account is suspended.')
     if request.method not in {'GET', 'HEAD', 'OPTIONS'}:

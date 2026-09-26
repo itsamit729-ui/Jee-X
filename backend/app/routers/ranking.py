@@ -39,7 +39,7 @@ def cohort(db, user):
 
 def settle(db, user):
     # Always settle in chronological order, including contests the caller missed.
-    contests = cohort(db, user).filter(RatedContest.closes_at <= datetime.utcnow()).order_by(RatedContest.closes_at, RatedContest.id).with_for_update().all()
+    contests = cohort(db, user).filter(RatedContest.closes_at <= datetime.utcnow(), RatedContest.finalized.is_(False)).order_by(RatedContest.closes_at, RatedContest.id).with_for_update().all()
     for contest in contests:
         finalize(db, contest)
     db.commit()
@@ -89,10 +89,13 @@ def _build_leaderboard(db, user_id, exam, target_year, page):
 
 def _build_contests(db, user_id, exam, target_year):
     rows = db.query(RatedContest).filter_by(exam=exam, target_year=target_year).order_by(RatedContest.opens_at.desc()).limit(30).all()
+    entries = {entry.contest_id: entry for entry in db.query(ContestEntry).filter(
+        ContestEntry.user_id == user_id, ContestEntry.contest_id.in_([c.id for c in rows])
+    ).all()} if rows else {}
     result = []
     now = datetime.utcnow()
     for c in rows:
-        entry = db.query(ContestEntry).filter_by(contest_id=c.id, user_id=user_id).first()
+        entry = entries.get(c.id)
         result.append(dict(id=c.id, title=c.title, opens_at=c.opens_at.isoformat()+'Z', closes_at=c.closes_at.isoformat()+'Z',
                            duration_sec=c.duration_sec, question_count=len(c.questions), finalized=c.finalized,
                            status='upcoming' if now<c.opens_at else 'closed' if now>=c.closes_at else 'live',
@@ -113,9 +116,8 @@ def dashboard(user=Depends(get_current_db_user), db: Session = Depends(get_db), 
     instead of one connection used four times in a row. Individual endpoints
     below are kept for other callers, but the page itself should use this."""
     p = student(user)
-    settle(db, user)
-
     user_id, exam, target_year, visibility = user.id, p.target_exam, p.target_year, p.leaderboard_visibility
+    settle(db, user)
     me_future = _pool.submit(_run_in_new_session, _build_me, user_id, exam, target_year, visibility)
     board_future = _pool.submit(_run_in_new_session, _build_leaderboard, user_id, exam, target_year, page)
     contests_future = _pool.submit(_run_in_new_session, _build_contests, user_id, exam, target_year)

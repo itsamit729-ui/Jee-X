@@ -251,3 +251,61 @@ def test_google_link_requires_password_session_and_csrf(env, monkeypatch):
         account = db.query(models.AuthAccount).filter_by(email=EMAIL).one()
         assert db.query(models.GoogleIdentity).one().account_id == account.id
         assert db.query(models.AuthAccount).count() == 1
+
+
+def test_session_and_profile_use_one_select_without_avatar_blob(env):
+    from sqlalchemy import event
+    client, sessions, _, _ = env
+    login(env)
+    assert client.post('/api/onboarding', json={
+        'name': 'Student', 'username': 'speedstudent', 'dob': '2006-01-01', 'class_level': '12'
+    }).status_code == 201
+    with sessions() as db:
+        uid = db.query(models.AuthAccount).one().user_id
+        db.add(models.ProfileAvatar(user_id=uid, image=b'large-image-placeholder'))
+        db.commit()
+    queries = []
+    engine = sessions.kw['bind']
+    def record(conn, cursor, statement, parameters, context, executemany):
+        if statement.lstrip().upper().startswith('SELECT'):
+            queries.append(statement)
+    event.listen(engine, 'before_cursor_execute', record)
+    try:
+        for path in ['/api/auth/session', '/api/me']:
+            queries.clear()
+            response = client.get(path)
+            assert response.status_code == 200
+            assert len(queries) == 1, queries
+            assert 'profile_avatars_1.image' not in queries[0]
+        assert response.json()['profile']['avatar_url'].endswith('/avatar')
+    finally:
+        event.remove(engine, 'before_cursor_execute', record)
+    # The request-local optimization must never hide a subsequent suspension.
+    with sessions() as db:
+        db.get(models.User, uid).status = 'suspended'
+        db.commit()
+    assert client.get('/api/me').status_code == 403
+
+
+def test_combined_dashboard_onboarding_and_account_isolation(env):
+    from app.routers import test_attempts
+    client, sessions, _, app = env
+    app.include_router(test_attempts.router)
+    Base.metadata.create_all(sessions.kw['bind'], tables=[
+        models.Test.__table__, models.TestAttempt.__table__, models.JeeXRating.__table__,
+        models.RatedContest.__table__, models.ContestEntry.__table__,
+    ])
+    assert client.get('/api/test-attempts/dashboard').status_code == 401
+    login(env)
+    assert client.get('/api/test-attempts/dashboard').json()['onboarded'] is False
+    client.post('/api/onboarding', json={
+        'name': 'Student', 'username': 'speedstudent', 'dob': '2006-01-01', 'class_level': '12'
+    })
+    result = client.get('/api/test-attempts/dashboard')
+    assert result.status_code == 200, result.text
+    assert result.json()['profile']['username'] == 'speedstudent'
+    assert result.json()['attempts'] == []
+    assert result.json()['rating']['title'] == 'Unrated'
+    # A request without this student's cookie cannot reuse their data.
+    with TestClient(app, base_url='https://school.example') as other:
+        assert other.get('/api/test-attempts/dashboard').status_code == 401

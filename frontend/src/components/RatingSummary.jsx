@@ -4,12 +4,13 @@ import { ArrowUpRight } from 'lucide-react'
 import { request } from '../lib/api.js'
 import RatingBadge from './RatingBadge.jsx'
 
-export default function RatingSummary() {
+export default function RatingSummary({ initialRating = null }) {
 
-  const [rating, setRating] = useState(null)
+  const [rating, setRating] = useState(initialRating)
   const [error, setError] = useState(false)
 
   useEffect(() => {
+    if (initialRating) { setRating(initialRating); return }
     let active = true
     ;(async () => {
       try {
@@ -18,7 +19,7 @@ export default function RatingSummary() {
       } catch { if (active) setError(true) }
     })()
     return () => { active = false }
-  }, [])
+  }, [initialRating])
 
   const index = rating?.tiers?.findIndex((t) => t.title === rating.title) ?? -1
 
