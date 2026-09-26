@@ -1,3 +1,5 @@
+import { api } from './api.js'
+
 /**
  * Bridges a free-test result across the account signup flow.
  *
@@ -43,4 +45,19 @@ export function clearPendingFreeTest() {
   } catch {
     // ignore
   }
+}
+
+// Coalesce effect replays and quick return visits so a pending result is sent once.
+let syncing = null
+export function syncPendingFreeTest() {
+  if (syncing) return syncing
+  const pending = readPendingFreeTest()
+  if (!pending) return Promise.resolve()
+  const { savedAt, ...payload } = pending
+  syncing = api.submitTestAttempt(payload).then(() => {
+    if (readPendingFreeTest()?.savedAt === savedAt) clearPendingFreeTest()
+  }).catch(() => {
+    // Keep the result for a later visit if offline or not onboarded yet.
+  }).finally(() => { syncing = null })
+  return syncing
 }

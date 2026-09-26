@@ -28,6 +28,7 @@ export default function Profile() {
 
   const [profile, setProfile] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [loadVersion, setLoadVersion] = useState(0)
   const [editing, setEditing] = useState(false)
   const [form, setForm] = useState(null)
   const [usernameStatus, setUsernameStatus] = useState(null)
@@ -41,22 +42,27 @@ export default function Profile() {
   const debounceRef = useRef(null)
 
   useEffect(() => {
-    (async () => {
+    let active = true
+    setLoading(true)
+    setError('')
+    ;(async () => {
       try {
         const me = await api.me()
+        if (!active) return
         if (!me.onboarded) {
           navigate('/onboarding', { replace: true })
           return
         }
         setProfile(me.profile)
         setForm(me.profile)
-      } catch {
-        navigate('/onboarding', { replace: true })
+      } catch (e) {
+        if (active) setError(e.message || 'Could not load your profile.')
       } finally {
-        setLoading(false)
+        if (active) setLoading(false)
       }
     })()
-  }, [navigate])
+    return () => { active = false }
+  }, [navigate, loadVersion])
 
   const handleUsernameChange = (value) => {
     const clean = value.replace(/\s/g, '').toLowerCase()
@@ -149,7 +155,8 @@ export default function Profile() {
     finally { setAvatarBusy(false) }
   }
 
-  if (loading || !profile) return <Loader fullScreen label="Loading your profile" />
+  if (loading) return <Loader fullScreen label="Loading your profile" />
+  if (!profile) return <div className="crackjee-root"><AppHeader /><main className="wrap page"><div className="panel" role="alert"><p>{error || 'Could not load your profile.'}</p><button className="btn btn-secondary" onClick={() => setLoadVersion(v => v + 1)}>Try again</button></div></main></div>
 
   const classText = (c) => (c === 'dropper' ? 'Dropper' : `Class ${c}`)
 

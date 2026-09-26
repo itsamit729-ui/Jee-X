@@ -27,6 +27,7 @@ export default function SubjectTest() {
   const [count, setCount] = useState(10)
   const [error, setError] = useState('')
   const [starting, setStarting] = useState(false)
+  const [loadVersion, setLoadVersion] = useState(0)
 
   const [test, setTest] = useState(null) // { attempt_id, questions, ... }
   const [index, setIndex] = useState(0)
@@ -36,10 +37,13 @@ export default function SubjectTest() {
   const { exited: fsExited, resume: fsResume } = useFullscreenLock(Boolean(test) && !result)
 
   useEffect(() => {
+    let active = true
+    setError('')
     catalogService.listSubjects()
-      .then(setSubjects)
-      .catch((e) => { setError(e.message); setSubjects([]) })
-  }, [])
+      .then(data => { if (active) setSubjects(data) })
+      .catch(e => { if (active) { setError(e.message); setSubjects([]) } })
+    return () => { active = false }
+  }, [loadVersion])
 
   useEffect(() => {
     if (!subjects || !requestedSubject) return
@@ -48,14 +52,18 @@ export default function SubjectTest() {
   }, [subjects, requestedSubject])
 
   useEffect(() => {
-    if (!subjectCode) { setChapters([]); return }
+    let active = true
+    setChapters([])
     setChapterId('')
-    setChaptersLoading(true)
+    setError('')
+    setChaptersLoading(Boolean(subjectCode))
+    if (!subjectCode) return
     catalogService.listChapters(subjectCode)
-      .then(setChapters)
-      .catch((e) => setError(e.message))
-      .finally(() => setChaptersLoading(false))
-  }, [subjectCode])
+      .then(data => { if (active) setChapters(data) })
+      .catch(e => { if (active) setError(e.message) })
+      .finally(() => { if (active) setChaptersLoading(false) })
+    return () => { active = false }
+  }, [subjectCode, loadVersion])
 
   const selectedSubject = subjects?.find((s) => s.code === subjectCode)
   const availableCount = chapterId
@@ -246,7 +254,7 @@ export default function SubjectTest() {
           </div>
         </div>
 
-        {error && <p className="alert" role="alert">{error}</p>}
+        {error && <div className="alert" role="alert">{error} <button className="btn btn-secondary btn-sm" onClick={() => setLoadVersion(v => v + 1)}>Retry loading</button></div>}
 
         <div className="panel">
           <div className="field">
@@ -290,7 +298,7 @@ export default function SubjectTest() {
             <p className="alert">No published questions for this choice yet. Try another subject or chapter.</p>
           )}
 
-          <button type="button" className="btn btn-primary btn-lg" disabled={!subjectCode || availableCount === 0 || starting} onClick={startTest}>
+          <button type="button" className="btn btn-primary btn-lg" disabled={!subjectCode || chaptersLoading || availableCount === 0 || starting} onClick={startTest}>
             {starting ? <><span className="spin" aria-hidden="true" />Starting</> : 'Start test'}
           </button>
         </div>

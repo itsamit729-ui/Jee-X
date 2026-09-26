@@ -6,6 +6,7 @@ from fastapi.exceptions import RequestValidationError
 from fastapi.responses import JSONResponse, FileResponse
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.gzip import GZipMiddleware
 
 from app import models  # noqa: F401 -- registers every table on Base.metadata
 from app.database import Base, engine
@@ -43,6 +44,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
 
 app.include_router(authentication.router)
 app.include_router(google_login.router)
@@ -96,7 +99,9 @@ if (static_dir / 'index.html').is_file():
         if not target.is_relative_to(static_dir):
             raise HTTPException(404, 'Not found')
         if target.is_file():
-            return FileResponse(target)
+            # Vite assets have content hashes; HTML and unversioned files must revalidate.
+            cache = 'public, max-age=31536000, immutable' if path.startswith('assets/') else 'no-cache'
+            return FileResponse(target, headers={'Cache-Control': cache})
         if path.startswith(('assets/', 'question-images/')):
             raise HTTPException(404, 'Not found')
         return FileResponse(static_dir / 'index.html', headers={'Cache-Control': 'no-cache'})

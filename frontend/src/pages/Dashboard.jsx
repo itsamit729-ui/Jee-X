@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext.jsx'
 import { api } from '../lib/api.js'
-import { readPendingFreeTest, clearPendingFreeTest } from '../lib/pendingFreeTest.js'
+import { syncPendingFreeTest } from '../lib/pendingFreeTest.js'
 import { DashboardOverview, useCrackJeeStyles } from '../crackjee/screens.jsx'
 import { PHYSICS, CHEM, MATHS, AMBER, SLATE } from '../crackjee/ui.js'
 import AppHeader from '../components/AppHeader.jsx'
@@ -62,39 +62,34 @@ export default function Dashboard() {
   const [attempts, setAttempts] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const [loadVersion, setLoadVersion] = useState(0)
 
   useEffect(() => {
-    (async () => {
+    let active = true
+    setLoading(true)
+    setError('')
+    ;(async () => {
       try {
-        const me = await api.me()
-        if (!me.onboarded) {
-          navigate('/onboarding', { replace: true })
-          return
-        }
+        // Start independent reads together; submission invalidates cached history.
+        const [meResult, historyResult] = await Promise.allSettled([
+          api.me(),
+          syncPendingFreeTest().then(() => api.listTestAttempts()),
+        ])
+        if (!active) return
+        if (meResult.status === 'rejected') throw meResult.reason
+        const me = meResult.value
+        if (!me.onboarded) { navigate('/onboarding', { replace: true }); return }
         setProfile(me.profile)
-
-        // A test taken before this account existed (or before onboarding
-        // finished) is sitting in localStorage — save it now.
-        const pending = readPendingFreeTest()
-        if (pending) {
-          const { savedAt, ...payload } = pending
-          try {
-            await api.submitTestAttempt(payload)
-            clearPendingFreeTest()
-          } catch {
-            // Non-fatal — leave it in place to retry on the next visit.
-          }
-        }
-
-        const list = await api.listTestAttempts()
-        setAttempts(list)
-      } catch {
-        setError('Your study desk couldn’t load. Please check your connection and try again.')
+        if (historyResult.status === 'rejected') throw historyResult.reason
+        setAttempts(historyResult.value)
+      } catch (e) {
+        if (active) setError(e.message || 'Your study desk couldn’t load. Please try again.')
       } finally {
-        setLoading(false)
+        if (active) setLoading(false)
       }
     })()
-  }, [navigate])
+    return () => { active = false }
+  }, [navigate, loadVersion])
 
   const { statCards, history, subjectTrends } = useMemo(
     () => buildDashboardData(attempts),
@@ -106,7 +101,7 @@ export default function Dashboard() {
   return (
     <div className="crackjee-root">
       <AppHeader />
-      {error && <div className="wrap" role="alert" style={{ paddingTop: 24 }}><div className="panel"><p>{error}</p><button className="btn btn-secondary btn-sm" style={{ marginTop: 12 }} onClick={() => window.location.reload()}>Try again</button></div></div>}
+      {error && <div className="wrap" role="alert" style={{ paddingTop: 24 }}><div className="panel"><p>{error}</p><button className="btn btn-secondary btn-sm" style={{ marginTop: 12 }} onClick={() => setLoadVersion(v => v + 1)}>Try again</button></div></div>}
       {!error && <div className="wrap"><RatingSummary /></div>}
       {!error && <DashboardOverview
         profile={profile}

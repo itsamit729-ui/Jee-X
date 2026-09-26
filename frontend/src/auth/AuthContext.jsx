@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { request, setCsrfToken } from '../lib/api.js'
+import { setCacheIdentity, invalidateCache } from '../lib/requestCache.js'
 import './auth.css'
 
 const AuthContext = createContext(null)
@@ -19,6 +20,7 @@ export function AuthProvider({ children }) {
     setError('')
     try {
       const session = await request('/api/auth/session')
+      setCacheIdentity(session.authenticated ? String(session.user.id ?? session.user.email) : null)
       setUser(session.authenticated ? session.user : null)
       return session
     } catch (e) { setError('We could not check your session. Please try again.'); throw e }
@@ -26,7 +28,7 @@ export function AuthProvider({ children }) {
   }, [])
   useEffect(() => { refreshSession().catch(() => {}) }, [refreshSession])
   useEffect(() => {
-    const onExpired = () => setExpired(true)
+    const onExpired = () => { invalidateCache(); setExpired(true) }
     window.addEventListener('jee-session-expired', onExpired)
     return () => window.removeEventListener('jee-session-expired', onExpired)
   }, [])
@@ -42,7 +44,7 @@ export function AuthProvider({ children }) {
     setError('')
     try {
       await request('/api/auth/logout', { method: 'POST' })
-      setUser(null); setCsrfToken(null); setExpired(false); navigate('/', { replace: true })
+      setCacheIdentity(null); setUser(null); setCsrfToken(null); setExpired(false); navigate('/', { replace: true })
     } catch (e) { setError('Could not sign out. Please retry when your connection is available.') }
   }, [navigate])
   const openLogin = useCallback(({ signup = false, returnTo = '/dashboard' } = {}) => {
