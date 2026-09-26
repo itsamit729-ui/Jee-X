@@ -13,10 +13,35 @@ const practiceLink = task => `/subject-test?subject=${task.subject}${task.chapte
 function Outlook({ scenario, label, target }) {
   return <article className="roadmap-outlook"><span className="roadmap-kicker">{label}</span>
     <h3>{scenario.rank_low == null ? 'More evidence needed' : `CRL ${number(scenario.rank_low)}${scenario.rank_high !== scenario.rank_low ? `–${number(scenario.rank_high)}` : ''}`}</h3>
-    <p>{scenario.basis === 'entered_crl' ? (target ? 'Your chosen rank scenario.' : 'The CRL you entered; not independently verified.') : scenario.reference_year ? `Historical marks model: ${scenario.reference_year} · Rank reference: ${scenario.rank_reference_year}.` : 'Add a CRL or complete a baseline. Estimates appear only within the available reference range.'}</p>
+    <p>{scenario.basis === 'college_cutoff' ? 'Reference for your comparable college choices, based on historical closing ranks.' : scenario.basis === 'entered_crl' ? 'A rank scenario.' : scenario.reference_year ? `Historical marks model: ${scenario.reference_year} · Rank reference: ${scenario.rank_reference_year}.` : 'Complete a baseline or choose a goal with available reference data. Estimates appear only within the available reference range.'}</p>
     {scenario.percentile_low != null && <p>Estimated percentile {scenario.percentile_low.toFixed(2)}–{scenario.percentile_high.toFixed(2)}</p>}
     {scenario.colleges.length ? <ul className="roadmap-colleges">{scenario.colleges.map((college, i) => <li key={`${college.institute}-${college.program}-${i}`}><strong>{college.institute}</strong><span>{college.program}</span><small>{college.reference_year} · Round {college.reference_round} · {college.quota} · {college.seat_type} · {college.gender_pool}</small><small>Closing rank {number(college.closing_rank)} · {college.meets_conservative_estimate ? 'Within the full estimated range' : 'Only overlaps the optimistic estimate'}</small></li>)}</ul> : <div className="roadmap-empty">{scenario.rank_low == null ? 'No college comparison yet.' : 'No matching cutoffs in our current All India dataset. This does not mean you have no admission options.'}</div>}
   </article>
+}
+
+function CollegePicker({ draft, setDraft }) {
+  const [query, setQuery] = useState('')
+  const [options, setOptions] = useState([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  useEffect(() => {
+    let active = true
+    setLoading(true); setError('')
+    const timer = setTimeout(() => {
+      request(`/api/roadmap/colleges?q=${encodeURIComponent(query)}`).then(rows => { if (active) setOptions(rows) })
+        .catch(e => { if (active) setError(e.message) }).finally(() => { if (active) setLoading(false) })
+    }, 250)
+    return () => { active = false; clearTimeout(timer) }
+  }, [query])
+  const choices = draft.choices || []
+  const choose = item => setDraft(current => current.college_choices.length >= 3 || current.college_choices.includes(item.id) ? current : ({ ...current, choices: [...(current.choices || []), item], college_choices: [...current.college_choices, item.id] }))
+  const remove = id => setDraft(current => ({ ...current, choices: current.choices.filter(c => c.id !== id), college_choices: current.college_choices.filter(x => x !== id) }))
+  return <div className="roadmap-college-picker"><p>Choose up to three college and branch combinations. We’ll work out the available historical benchmarks.</p>
+    <ol className="roadmap-choices">{choices.map((c, i) => <li key={c.id}><span className="roadmap-step">{i + 1}</span><div><strong>{c.institute}</strong><small>{c.program}</small></div><button type="button" className="btn btn-quiet" onClick={() => remove(c.id)} aria-label={`Remove ${c.institute}, ${c.program}`}>Remove</button></li>)}</ol>
+    {choices.length < 3 && <><label className="roadmap-search-label">Find a college or branch<input type="search" value={query} placeholder="Search institute name or branch" onChange={e => setQuery(e.target.value)}/></label>
+    <div className="roadmap-search-results" aria-label="College and branch search results">{loading ? <p role="status">Finding choices…</p> : options.filter(o => !draft.college_choices.includes(o.id)).map(o => <button key={o.id} type="button" onClick={() => choose(o)}><span><strong>{o.institute}</strong><small>{o.program}</small></span><span aria-hidden="true">+</span></button>)}{!loading && options.length === 0 && <p>No matching programs in our catalog yet. Try another name, or use a marks goal.</p>}</div></>}
+    {choices.length === 3 && <p role="status">All three choices added. Remove one to change it.</p>}{error && <p role="alert">{error}</p>}
+  </div>
 }
 
 export default function Roadmap() {
@@ -40,10 +65,9 @@ export default function Roadmap() {
     setBusy(true); setError(''); setNotice('')
     try {
       const value = await request('/api/roadmap', { method: 'PUT', body: {
-        ...draft, exam_date: draft.exam_date || null,
-        weekly_hours: Number(draft.weekly_hours), target_marks: Number(draft.target_marks),
-        current_crl: draft.current_crl ? Number(draft.current_crl) : null,
-        target_crl: draft.target_crl ? Number(draft.target_crl) : null,
+        goal_type: draft.goal_type,
+        target_marks: draft.goal_type === 'marks' ? Number(draft.target_marks) : null,
+        college_choices: draft.goal_type === 'colleges' ? draft.college_choices : [],
       } })
       setData(value); setDraft(value.settings); setEditing(false); setNotice('Your next seven days are ready. Previous checkpoints are saved below.')
     } catch (e) { setError(e.message) }
@@ -53,7 +77,7 @@ export default function Roadmap() {
   const tasks = data?.plan.tasks || []
   const next = tasks.find(task => !task.progress.met) || tasks[0]
   const completed = tasks.filter(task => task.progress.met).length
-  const gap = data?.baseline.score == null ? null : Math.max(0, data.settings.target_marks - data.baseline.score)
+  const gap = data?.baseline.score == null || data?.settings.target_marks == null ? null : Math.max(0, data.settings.target_marks - data.baseline.score)
   const days = data?.settings.exam_date ? Math.max(0, Math.ceil((new Date(`${data.settings.exam_date}T23:59:59+05:30`) - Date.now()) / 86400000)) : null
 
   return <div className="crackjee-root"><AppHeader/><main className="wrap roadmap-page">
@@ -63,17 +87,18 @@ export default function Roadmap() {
     {!data && !error && <div className="roadmap-loading" role="status"><span className="spin"/> Reading your recent practice and building your next steps…</div>}
     {data && <>
       {(editing || !data.saved) && <form className="roadmap-goals" onSubmit={save}><div className="roadmap-section-heading"><div><span className="roadmap-kicker">MAKE IT YOURS</span><h2>{data.saved ? 'A plan that fits your week' : 'Start with a goal you care about'}</h2></div><Flag size={22}/></div>
-        <div className="roadmap-fields">
-          <label>Study hours per week<input required type="number" min="2" max="60" value={draft.weekly_hours} onChange={e => field('weekly_hours', e.target.value)}/></label>
-          <label>Target marks / 300<input required type="number" min="1" max="300" value={draft.target_marks} onChange={e => field('target_marks', e.target.value)}/></label>
-          <label>Exam date <small>optional</small><input type="date" value={draft.exam_date || ''} onChange={e => field('exam_date', e.target.value)}/></label>
-          <label>College or branch goal <small>optional</small><input maxLength="120" placeholder="e.g. Mechanical at NIT Trichy" value={draft.target_college} onChange={e => field('target_college', e.target.value)}/></label>
+        <div className="roadmap-goal-switch" role="group" aria-label="Choose your goal type">
+          <button type="button" aria-pressed={draft.goal_type === 'marks'} onClick={() => setDraft(d => ({ ...d, goal_type: 'marks', target_marks: d.target_marks || 150 }))}><Target size={20}/><strong>I have a marks target</strong><span>Choose the score you want to work towards.</span></button>
+          <button type="button" aria-pressed={draft.goal_type === 'colleges'} onClick={() => setDraft(d => ({ ...d, goal_type: 'colleges' }))}><Flag size={20}/><strong>I have colleges in mind</strong><span>Add up to three college and branch choices.</span></button>
         </div>
-        <details className="roadmap-rank-inputs"><summary>Have a JEE Main CRL, or a target rank?</summary><p>Enter Common Rank List ranks only. These override the marks-based college scenarios; category ranks are not supported here.</p><div className="roadmap-fields"><label>Current CRL <small>optional, self-reported</small><input type="number" min="1" max="3000000" value={draft.current_crl || ''} onChange={e => field('current_crl', e.target.value)}/></label><label>Target CRL <small>optional, what-if scenario</small><input type="number" min="1" max="3000000" value={draft.target_crl || ''} onChange={e => field('target_crl', e.target.value)}/></label></div></details>
-        <div className="roadmap-form-footer"><p>Saving starts a new seven-day plan and archives current checkpoints.</p><button className="btn btn-primary" disabled={busy}>{busy ? 'Building your plan…' : data.saved ? 'Save goals & rebuild plan' : 'Create my roadmap'}<ArrowRight size={16}/></button></div>
+        {draft.goal_type === 'marks' ? <div className="roadmap-fields"><label>Target marks / 300<input required type="number" min="1" max="300" value={draft.target_marks ?? ''} onChange={e => field('target_marks', e.target.value)}/></label></div> : <CollegePicker draft={draft} setDraft={setDraft}/>}
+        <p className="roadmap-help">We handle the schedule, suggested pace and assessment checkpoints using your profile and practice history.</p>
+        <div className="roadmap-form-footer"><p>Saving starts a new seven-day plan and archives current checkpoints.</p><button className="btn btn-primary" disabled={busy || (draft.goal_type === 'colleges' && !draft.college_choices.length)}>{busy ? 'Building your plan…' : data.saved ? 'Save goals & rebuild plan' : 'Create my roadmap'}<ArrowRight size={16}/></button></div>
       </form>}
-      <section className="roadmap-position" aria-label="Current position and goal"><article><span className="roadmap-kicker">WHERE YOU STAND</span><div className="roadmap-number">{data.baseline.score == null ? 'Let’s find out' : number(data.baseline.score)}{data.baseline.score != null && <small>/ 300</small>}</div><p>{data.baseline.count ? `${data.baseline.count} recent assessment${data.baseline.count === 1 ? '' : 's'} · median score` : 'Topic practice shapes your plan. A balanced assessment establishes your exam baseline.'}</p><Link to="/recommendations?assessment=1">{data.baseline.count ? 'Take another checkpoint' : 'Take a baseline assessment'} <ArrowUpRight size={16}/></Link></article><article><span className="roadmap-kicker">WHERE YOU WANT TO GO</span><div className="roadmap-number">{data.settings.target_marks}<small>/ 300</small></div><p>{gap == null ? 'A chosen target. Your baseline will show the gap.' : gap > 0 ? `${number(gap)} marks from your current baseline. Progress must be demonstrated in fresh assessments.` : 'You have reached this marks target in your recent baseline. Work on consistency or set a new goal.'}</p><span className="roadmap-tag">{days == null ? `${data.settings.weekly_hours} hours available each week` : `${days} days to your chosen exam date`}</span></article></section>
-      {data.settings.target_college && <p className="roadmap-goal-line"><Flag size={16}/> Working towards <strong>{data.settings.target_college}</strong><span>Your personal goal, not an admission prediction.</span></p>}
+      <section className="roadmap-position" aria-label="Current position and goal"><article><span className="roadmap-kicker">WHERE YOU STAND</span><div className="roadmap-number">{data.baseline.score == null ? 'Let’s find out' : number(data.baseline.score)}{data.baseline.score != null && <small>/ 300</small>}</div><p>{data.baseline.count ? `${data.baseline.count} recent assessment${data.baseline.count === 1 ? '' : 's'} · median score` : 'Topic practice shapes your plan. A balanced assessment establishes your exam baseline.'}</p><Link to="/recommendations?assessment=1">{data.baseline.count ? 'Take another checkpoint' : 'Take a baseline assessment'} <ArrowUpRight size={16}/></Link></article><article><span className="roadmap-kicker">WHERE YOU WANT TO GO</span>{data.settings.goal_type === 'marks' ? <><div className="roadmap-number">{data.settings.target_marks}<small>/ 300</small></div><p>{gap == null ? 'Your chosen target. Your baseline will show the gap.' : gap > 0 ? `${number(gap)} marks from your current baseline. Progress must be demonstrated in fresh assessments.` : 'You have reached this marks target. Work on consistency or choose a new goal.'}</p></> : <><div className="roadmap-number">{data.settings.choices.length}<small>college & branch choices</small></div><p>{data.settings.target_crl ? `Historical reference: CRL ${number(data.settings.target_crl)} for the most demanding comparable choice. This is a past cutoff, not a guaranteed admission target.` : 'Your choices are saved. We need applicable cutoff data before calculating a rank benchmark.'}</p></>}<span className="roadmap-tag">{days == null ? `${data.settings.target_year} target year` : `${days} days to the configured exam date`}</span></article></section>
+      <div className="roadmap-auto-plan"><span className="roadmap-kicker">PLANNED FOR YOU</span><strong>{data.settings.weekly_hours} suggested hours / week</strong><p>{data.settings.pace_basis} {data.settings.timeline_note}</p></div>
+      {data.settings.goal_type === 'colleges' && <ol className="roadmap-choices roadmap-selected-goals">{data.settings.choices.map((c, i) => <li key={c.id}><span className="roadmap-step">{i + 1}</span><div><strong>{c.institute}</strong><span>{c.program}</span><small>{c.rank ? `${c.year} · Round ${c.round} · AI / OPEN / Gender-Neutral · Closing CRL ${number(c.rank)}` : 'No applicable All India OPEN cutoff available. State/category eligibility or a different exam route may be required.'}</small></div></li>)}</ol>}
+
       <div className="roadmap-workspace"><section>
         <div className="roadmap-section-heading"><div><span className="roadmap-kicker">{data.saved ? `${date(data.plan.created_at)} — ${date(data.plan.review_at)}` : 'PREVIEW YOUR FIRST WEEK'}</span><h2>Your next seven days</h2></div><span className="roadmap-tag">{completed}/{tasks.length} checkpoints</span></div>
         {data.saved && next && <div className="roadmap-next"><div><span className="roadmap-kicker">{completed === tasks.length ? 'KEEP THE MOMENTUM' : 'START HERE'}</span><h3>{next.title}</h3><p>{completed === tasks.length ? 'Your chapter checkpoints are met. Take a balanced assessment to check exam readiness.' : next.goal}</p></div><Link className="btn btn-primary" to={completed === tasks.length ? '/recommendations?assessment=1' : practiceLink(next)}>{completed === tasks.length ? 'Assess progress' : 'Start a 15-min session'}<ArrowUpRight size={16}/></Link></div>}

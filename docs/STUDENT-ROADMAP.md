@@ -4,15 +4,16 @@ Available at `/roadmap` from the main navigation, mobile menu and dashboard. Use
 
 ## Deployment
 
-Deploy backend and frontend from the same commit. No new service, secret or dependency is required. Existing `Base.metadata.create_all` startup creates the additive `student_roadmaps` table. No existing rows are rewritten. The database account needs the same table-creation permission already used at startup.
+Deploy backend and frontend from the same commit. No new service, secret or dependency is required. Operators can configure verified JEE Main dates with `JEE_MAIN_EXAM_DATES`, a JSON object mapping target year strings to ISO dates. Leave it `{}` when an official date is not configured; the UI explicitly uses a rolling 12-week planning horizon instead. Past, malformed or missing dates never become an exam countdown. Existing `Base.metadata.create_all` startup creates the additive `student_roadmaps` table. No existing rows are rewritten. The database account needs the same table-creation permission already used at startup.
 
 ## Student flow
 
-1. Read a preview or save goals: 2–60 study hours/week, target marks, optional exam date and college/branch aspiration. Optional current and target **CRL** override marks-based college scenarios and are labelled self-reported/scenario values.
+1. Choose exactly one goal: target marks, or one to three distinct college-and-branch program IDs from the searchable imported catalog. There are no student inputs for dates, ranks or study hours. The server validates program IDs and rejects duplicate/extra choices. `GET /api/roadmap/colleges?q=...` provides authenticated, bounded search.
+   JeeX derives the target year from the student profile, manages verified exam dates centrally, and suggests a weekly pace (five hours initially; 3–15 hours from observed timed practice plus review). This is a suggested pace, not an assertion of available time. Existing saved marks goals remain readable without a migration; old manual timeline/rank fields are ignored.
 2. A saved plan contains up to three chapter priorities, each with the evidence behind it, concept review, 15-minute practice and a 15-minute fresh-question check. Small weekly budgets receive fewer priorities; blocks are capped at 90 minutes, leaving remaining time for independent study/full assessment.
 3. Practice links preselect the subject and chapter. Fresh distinct answers after plan creation update checkpoints; repeating a previously seen question never counts as fresh. Four correct in the latest five fresh answers is a checkpoint, not a mastery claim.
 4. Rebuilding archives the previous checkpoint state (latest 12 reviews retained) and starts another seven-day plan. GET does not create or rewrite a plan. Assessment results and task progress update when the page is revisited; navigation reads use private 30-second memory caching and mutations invalidate it.
-5. Goals are chosen by the student, not model-predicted gains. The date countdown and marks gap communicate the target; neither task completion nor study hours automatically increases an estimated score/rank.
+5. Goals are chosen by the student, not model-predicted gains. For college goals the lowest historical applicable closing CRL among comparable selected choices becomes the reference target. Each preference retains its own cutoff/year/round; missing or inapplicable data is explicitly shown and is never replaced by a guessed cutoff. The target college list shows the selected comparable choices. The date countdown and marks gap communicate the target; neither task completion nor study hours automatically increases an estimated score/rank.
 
 ## Baseline assessment
 
@@ -34,7 +35,7 @@ The rules reuse practice-engine evidence over the latest 500 submitted responses
 
 College scenarios use the existing imported historical marks/percentile and CRL data. Values outside supported interpolation ranges remain unavailable. College rows include institute, program, reference year, counselling round, quota, seat type and gender pool.
 
-The roadmap deliberately requests **All India / CRL / Gender-Neutral** comparisons only. Institute-state mappings, category rank data and verified eligibility are not available in this schema; HS/OS and category-specific recommendations must not be guessed. The page states these exclusions. Empty results do not imply no admission options. The college goal is a personal aspiration, not a filter or eligibility claim.
+The roadmap deliberately requests **All India / CRL / Gender-Neutral** comparisons only. Institute-state mappings, category rank data and verified eligibility are not available in this schema; HS/OS and category-specific recommendations must not be guessed. The page states these exclusions. Empty results do not imply no admission options. College choices are personal aspirations and guide the displayed historical benchmark; they are not eligibility claims. If none has applicable data, the rank goal stays unavailable. Marks and college modes are mutually exclusive.
 
 Before expanding admission coverage, import verified institute state-of-eligibility mappings and category-specific rank inputs, collect relevant student eligibility details, validate data completeness, and add matching tests. Broader growth forecasts require longitudinal validation against held-out assessments and actual student outcomes.
 

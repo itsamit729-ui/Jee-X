@@ -3,6 +3,9 @@ from collections import defaultdict
 from datetime import datetime, timedelta
 from statistics import median
 import random
+import os
+import json
+from datetime import date
 from fastapi import HTTPException
 from sqlalchemy import func
 from sqlalchemy.orm import selectinload
@@ -10,7 +13,7 @@ from app import models
 from app.services import predictor
 from app.services.practice import choose_questions
 
-DEFAULTS = {'weekly_hours': 5, 'target_marks': 150, 'exam_date': None, 'target_college': '', 'current_crl': None, 'target_crl': None}
+DEFAULTS = {'goal_type': 'marks', 'weekly_hours': 5, 'target_marks': 150, 'college_choices': []}
 
 
 def assessment_questions(candidates, subject_ids, seen):
@@ -148,10 +151,59 @@ def scenario(db, marks=None, crl=None):
     return result
 
 
+def resolve_settings(db, user_id, stored, rows, now, validate=False):
+    goal_type = stored.get('goal_type', 'marks')
+    ids = stored.get('college_choices', []) if goal_type == 'colleges' else []
+    programs = (db.query(models.PredictorProgram).options(selectinload(models.PredictorProgram.institute))
+                .filter(models.PredictorProgram.id.in_(ids)).all()) if ids else []
+    by_id = {p.id: p for p in programs}
+    if validate and any(i not in by_id for i in ids):
+        raise HTTPException(422, 'A selected college or branch is no longer available. Choose another option.')
+    choices = []
+    for pid in ids:
+        program = by_id.get(pid)
+        if not program:
+            continue
+        cutoff = (db.query(models.PredictorJosaaCutoff).filter(
+            models.PredictorJosaaCutoff.program_id == pid,
+            models.PredictorJosaaCutoff.exam_route == predictor.MAIN_EXAM_ROUTE,
+            models.PredictorJosaaCutoff.rank_list == 'CRL', models.PredictorJosaaCutoff.seat_type == 'OPEN',
+            models.PredictorJosaaCutoff.quota == 'AI', models.PredictorJosaaCutoff.gender_pool == 'Gender-Neutral',
+            models.PredictorJosaaCutoff.closing_is_preparatory.is_(False),
+            models.PredictorJosaaCutoff.opening_is_preparatory.is_(False),
+            models.PredictorJosaaCutoff.closing_rank.isnot(None))
+            .order_by(models.PredictorJosaaCutoff.year.desc(), models.PredictorJosaaCutoff.round.desc()).first())
+        choices.append({'id': pid, 'institute': program.institute.name, 'program': program.name,
+                        'rank': cutoff.closing_rank if cutoff else None,
+                        'year': cutoff.year if cutoff else None, 'round': cutoff.round if cutoff else None})
+    profile = db.get(models.StudentProfile, user_id)
+    target_year = profile.target_year if profile else now.year + (now.month >= 6)
+    # Operator-managed verified dates only. Never manufacture an official examination date.
+    try:
+        configured = json.loads(os.getenv('JEE_MAIN_EXAM_DATES', '{}')).get(str(target_year))
+        exam_date = date.fromisoformat(configured) if configured else None
+    except (ValueError, TypeError, AttributeError):
+        exam_date = None
+    if exam_date and exam_date < now.date():
+        exam_date = None
+    cutoff_date = now - timedelta(days=28)
+    timed = [r for r in rows if r.answered_at >= cutoff_date and 0 < r.time_taken_sec <= 1800]
+    # Practice time is only an observed lower bound, not total availability.
+    hours = min(15, max(3, round(sum(r.time_taken_sec for r in timed) / 3600 / 4 * 2))) if len(timed) >= 10 else 5
+    known_ranks = [c['rank'] for c in choices if c['rank'] is not None]
+    return {'goal_type': goal_type, 'target_marks': (stored.get('target_marks') or 150) if goal_type == 'marks' else None,
+            'college_choices': ids, 'choices': choices, 'weekly_hours': hours,
+            'pace_basis': 'Suggested from recent timed practice, including time for review.' if len(timed) >= 10 else 'A starting suggestion of five hours per week; adjusted as practice evidence grows.',
+            'target_year': target_year, 'exam_date': exam_date.isoformat() if exam_date else None,
+            'timeline_note': f'Exam date managed by JeeX for your {target_year} target year.' if exam_date else f'Official date not configured for {target_year}. We use a rolling 12-week planning horizon, not an assumed exam date.',
+            'planning_until': (min(exam_date, now.date() + timedelta(weeks=12)) if exam_date else now.date() + timedelta(weeks=12)).isoformat(),
+            'target_crl': min(known_ranks) if known_ranks else None}
+
+
 def build_view(db, user_id, record=None, now=None):
     now = now or datetime.utcnow()
-    settings = record.settings if record else DEFAULTS.copy()
     rows = evidence(db, user_id)
+    settings = resolve_settings(db, user_id, record.settings if record else DEFAULTS.copy(), rows, now)
     plan = record.plan if record else make_plan(rows, settings, now)
     since = datetime.fromisoformat(plan['created_at'])
     tasks = [{**task, 'progress': task_progress(task, rows, since)} for task in plan['tasks']]
@@ -162,9 +214,16 @@ def build_view(db, user_id, record=None, now=None):
             by_subject[r.subject].setdefault(r.question_id, r.outcome)
     subjects = [{'code': code, 'answered': len(items), 'accuracy': round(100 * sum(v == 'correct' for v in items.values()) / len(items))}
                 for code, items in by_subject.items() if items]
+    target = scenario(db, settings['target_marks'], settings.get('target_crl'))
+    if settings['goal_type'] == 'colleges' and target['rank_low'] is not None:
+        target['basis'] = 'college_cutoff'
+        target['colleges'] = [{'institute': c['institute'], 'program': c['program'],
+            'reference_year': c['year'], 'reference_round': c['round'], 'quota': 'AI',
+            'seat_type': 'OPEN', 'gender_pool': 'Gender-Neutral', 'closing_rank': c['rank'],
+            'meets_conservative_estimate': True} for c in settings['choices'] if c['rank'] is not None]
     return {'saved': record is not None, 'settings': settings, 'plan': {**plan, 'tasks': tasks},
             'baseline': standing, 'subjects': subjects, 'checkpoints': record.checkpoints if record else [],
-            'current': scenario(db, standing['score'], settings.get('current_crl')),
-            'target': scenario(db, settings['target_marks'], settings.get('target_crl')),
+            'current': scenario(db, standing['score']),
+            'target': target,
             'college_note': 'Historical JEE Main OPEN / CRL, All India, Gender-Neutral seats only. Home-state, other-state and category-specific pools are not included. Eligibility is not verified; these are comparisons, not admission offers.',
             'updated_at': now.isoformat()}

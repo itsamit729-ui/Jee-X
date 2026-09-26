@@ -66,10 +66,10 @@ def test_plan_persistence_validation_and_user_isolation(setup):
     assert not initial['saved'] and initial['baseline']['score'] is None
     assert initial['current']['rank_low'] is None
     assert client.put('/api/roadmap', json={'weekly_hours': 0}).status_code == 422
-    saved = client.put('/api/roadmap', json={'weekly_hours': 2, 'target_marks': 160}).json()
-    assert saved['saved'] and sum(t['minutes'] for t in saved['plan']['tasks']) <= 120
+    saved = client.put('/api/roadmap', json={'goal_type': 'marks', 'target_marks': 160}).json()
+    assert saved['saved'] and sum(t['minutes'] for t in saved['plan']['tasks']) <= saved['settings']['weekly_hours'] * 60
     assert client.get('/api/roadmap').json()['plan'] == saved['plan']
-    again = client.put('/api/roadmap', json={'weekly_hours': 3, 'target_marks': 180}).json()
+    again = client.put('/api/roadmap', json={'goal_type': 'marks', 'target_marks': 180}).json()
     assert len(again['checkpoints']) == 1
     active[0] = 2
     other = client.get('/api/roadmap').json()
@@ -140,3 +140,39 @@ def test_college_scenarios_exclude_unresolved_state_and_category_pools(setup):
         matches = scenario(db, crl=25000)['colleges']
         assert len(matches) == 1 and matches[0]['quota'] == 'AI' and matches[0]['seat_type'] == 'OPEN'
         assert scenario(db, marks=150)['rank_low'] is None
+
+
+def test_college_goal_choices_and_automatic_settings(setup, monkeypatch):
+    client, factory, _ = setup
+    with factory() as db:
+        db.add(models.PredictorInstitute(id=1, name='Test Institute'))
+        db.flush()
+        for i in range(1, 5):
+            db.add(models.PredictorProgram(id=i, institute_id=1, name=f'Branch {i}'))
+        db.flush()
+        db.add(models.PredictorJosaaCutoff(year=2025, counselling='JoSAA', round=6,
+            institute_id=1, program_id=1, quota='AI', seat_type='OPEN', gender_pool='Gender-Neutral',
+            exam_route='JEE_MAIN_PAPER1', rank_list='CRL', opening_rank=1, closing_rank=12000))
+        db.commit()
+    options = client.get('/api/roadmap/colleges?q=Test').json()
+    assert len(options) == 4 and options[0]['institute'] == 'Test Institute'
+    assert client.get('/api/roadmap/colleges?q=%25').json() == []
+    payload = {'goal_type': 'colleges', 'target_marks': None, 'college_choices': [1, 2, 3]}
+    response = client.put('/api/roadmap', json=payload)
+    assert response.status_code == 200, response.text
+    view = response.json()
+    assert view['settings']['target_marks'] is None
+    assert len(view['settings']['choices']) == 3 and view['settings']['target_crl'] == 12000
+    assert view['settings']['choices'][1]['rank'] is None
+    assert view['target']['basis'] == 'college_cutoff'
+    assert view['target']['colleges'][0]['program'] == 'Branch 1'
+    for choices in ([], [1, 1], [1, 2, 3, 4], [999]):
+        assert client.put('/api/roadmap', json={**payload, 'college_choices': choices}).status_code == 422
+    assert client.put('/api/roadmap', json={**payload, 'target_marks': 200}).status_code == 422
+    assert client.put('/api/roadmap', json={'exam_date': '2028-01-01'}).status_code == 422
+    year = view['settings']['target_year']
+    monkeypatch.setenv('JEE_MAIN_EXAM_DATES', '{"%s":"%s-12-31"}' % (year, year))
+    assert client.get('/api/roadmap').json()['settings']['exam_date'] == f'{year}-12-31'
+    monkeypatch.setenv('JEE_MAIN_EXAM_DATES', 'not json')
+    assert client.get('/api/roadmap').json()['settings']['exam_date'] is None
+    assert client.get('/api/roadmap').json()['settings']['college_choices'] == [1, 2, 3]
