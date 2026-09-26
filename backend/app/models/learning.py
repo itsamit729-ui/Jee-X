@@ -1,4 +1,4 @@
-from sqlalchemy import CheckConstraint, Column, DateTime, Float, ForeignKey, Integer, String, func
+from sqlalchemy import JSON, CheckConstraint, Column, DateTime, Float, ForeignKey, Integer, String, func
 
 from app.database import Base
 
@@ -28,3 +28,10 @@ class StudentChapterCoverage(Base):
     __table_args__ = (
         CheckConstraint("status IN ('not_started','in_progress','done')", name="ck_student_chapter_coverage_status"),
     )
+
+
+class PracticeRecommendation(Base):
+    __tablename__ = 'practice_recommendations'
+    test_id = Column(Integer, ForeignKey('tests.id', ondelete='CASCADE'), primary_key=True)
+    question_id = Column(Integer, ForeignKey('questions.id'), primary_key=True)
+    explanation = Column(JSON, nullable=False)

@@ -147,7 +147,9 @@ class ChapterOut(BaseModel):
 
 
 class SubjectTestCreate(BaseModel):
-    subject_code: Literal["PHY", "CHEM", "MATH"]
+    subject_code: Literal["PHY", "CHEM", "MATH"] | None = None
+    mode: Literal["recommended", "topic", "revision"] = "topic"
+    duration_minutes: Literal[5, 15, 30] | None = None
     chapter_id: int | None = None
     count: int = 10
 
@@ -170,6 +172,14 @@ class QuestionAssetOut(BaseModel):
     alt_text: str = ""
 
 
+class RecommendationOut(BaseModel):
+    reason_code: str
+    reason: str
+    learning_goal: str
+    evidence: dict
+    repeated: bool = False
+
+
 class TestQuestionOut(BaseModel):
     question_id: int
     ref: str
@@ -180,6 +190,7 @@ class TestQuestionOut(BaseModel):
     options: list[TestOptionOut]
     marks_correct: int
     marks_wrong: int
+    recommendation: RecommendationOut | None = None
 
 
 class SubjectTestOut(BaseModel):
@@ -195,7 +206,7 @@ class SubjectTestAnswerIn(BaseModel):
     question_id: int
     option_ids: list[int] = []
     numeric_answer: float | None = None
-    time_taken_sec: int = 0
+    time_taken_sec: int = Field(default=0, ge=0, le=86400)
 
 
 class SubjectTestSubmitIn(BaseModel):

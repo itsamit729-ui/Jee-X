@@ -11,10 +11,10 @@ export const catalogService = {
 // Service 2 — build a subject-wise test (optionally scoped to one chapter) and
 // get back the question paper with no answers in it.
 export const subjectTestBuilderService = {
-  start: ({ subjectCode, chapterId = null, count = 10 }) =>
+  start: ({ subjectCode, chapterId = null, count = 10, mode = 'topic', durationMinutes }) =>
     request('/api/subject-tests', {
       method: 'POST',
-      body: { subject_code: subjectCode, chapter_id: chapterId, count },
+      body: { subject_code: subjectCode || null, chapter_id: chapterId, count, mode, duration_minutes: durationMinutes },
     }),
 }
 

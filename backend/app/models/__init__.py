@@ -18,7 +18,7 @@ from app.models.admin import (
 from app.models.content import Asset, Chapter, Passage, Question, QuestionOption, QuestionSubtopic, Subject, Subtopic
 from app.models.identity import GuardianConsent, StudentProfile, User
 from app.models.profile_avatar import ProfileAvatar
-from app.models.learning import StudentChapterCoverage, StudentSubtopicStats
+from app.models.learning import StudentChapterCoverage, StudentSubtopicStats, PracticeRecommendation
 from app.models.predictor import (
     PredictorAdvancedMarksRankAnchor,
     PredictorAdvancedQualifyingCutoff,
@@ -44,6 +44,7 @@ from app.models.scenarios import ScenarioRun
 from app.models.tests import QuestionResponse, ResponseOption, Test, TestAttempt, TestQuestion
 
 __all__ = [
+    "PracticeRecommendation",
     "User",
     "ProfileAvatar",
     "StudentProfile",

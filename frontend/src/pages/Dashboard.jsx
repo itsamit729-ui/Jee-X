@@ -98,6 +98,7 @@ export default function Dashboard() {
     <div className="crackjee-root">
       <AppHeader />
       {error && <div className="wrap" role="alert" style={{ paddingTop: 24 }}><div className="panel"><p>{error}</p><button className="btn btn-secondary btn-sm" style={{ marginTop: 12 }} onClick={() => setLoadVersion(v => v + 1)}>Try again</button></div></div>}
+      {!error && <div className="wrap" style={{paddingTop:24}}><section className="panel" style={{display:'flex',alignItems:'center',justifyContent:'space-between',gap:20,flexWrap:'wrap'}}><div><span className="section-label">RECOMMENDED FOR YOU</span><h2 style={{margin:'8px 0'}}>Make your next session count.</h2><p className="muted">Questions chosen from your recent answers, with a reason for every recommendation.</p></div><button className="btn btn-primary" onClick={() => navigate('/subject-test')}>Find my next questions →</button></section></div>}
       {!error && <div className="wrap"><RatingSummary initialRating={rating} /></div>}
       {!error && <DashboardOverview
         profile={profile}
