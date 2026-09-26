@@ -29,7 +29,7 @@ def validate_bundle(records):
             if not sources or any(not valid_url(s['url']) for s in sources):
                 raise ValueError('Every insight must have HTTPS source attribution.')
         for item in record.get('placements', []):
-            if item['scope'] not in ('branch', 'btech_overall'):
+            if item['scope'] not in ('branch', 'btech_overall', 'ug_overall', 'college_overall'):
                 raise ValueError('Unknown placement scope.')
             if item['scope'] == 'branch' and not item.get('program'):
                 raise ValueError('Branch figures require an exact program title.')
@@ -82,11 +82,18 @@ def for_program(content, program, today=None):
     btech = bool(re.search(r'\(4 Years, Bachelor of Technology\)$', program or ''))
     overall = [p for p in content.get('placements', []) if p['scope'] == 'btech_overall'] if btech else []
     overall = max(overall, key=lambda p: p['year']) if overall else None
+    # UG and institute-wide totals retain their own scope; never call them branch results.
+    undergraduate = btech or bool(re.search(r'\(5 Years, Bachelor of Architecture\)$', program or ''))
+    ug = [p for p in content.get('placements', []) if p['scope'] == 'ug_overall'] if undergraduate else []
+    if overall is None and ug:
+        overall = max(ug, key=lambda p: p['year'])
+    college = [p for p in content.get('placements', []) if p['scope'] == 'college_overall']
+    college = max(college, key=lambda p: p['year']) if college else None
     checked = content.get('verified_on')
     return {'institute': content['institute'], 'program': program, 'summary': catalog_profile(content['institute'])['summary'] if content.get('coverage') == 'catalog_only' else content['summary'],
             'coverage': content.get('coverage', 'reviewed'), 'verified_on': checked,
             'review_due': bool(checked and (today - date.fromisoformat(checked)).days > 180),
-            'placement': placement, 'overall_placement': overall,
+            'placement': placement, 'overall_placement': overall, 'college_placement': college,
             'alumni': content.get('alumni', [])[:3], 'sources': content['sources'],
             'placement_note': 'CTC in INR lakh per year; not take-home pay. Historical outcomes do not guarantee future offers.',
             'missing_note': 'Verified highest and average packages for this exact branch are not available in our records.' if not placement else None}

@@ -72,3 +72,29 @@ def test_db_sync_idempotent_refresh_and_route_identity(setup, tmp_path):
     assert client.get('/api/colleges/insight', params={**params,'institute':'Catalog only institute'}).status_code == 404
     assert client.get('/api/colleges/insight', params={**params,'program':'Wrong degree'}).status_code == 404
     assert client.get('/api/colleges/insight', params={**params,'institute':'Unknown'}).status_code == 404
+
+
+def test_new_package_scopes_are_preserved_and_persisted(setup):
+    _, factory, _ = setup
+    records = json.loads(DATA_PATH.read_text())['records']
+    program = 'Mechanical Engineering (4 Years, Bachelor of Technology)'
+    dual = 'Mechanical Engineering (5 Years, Bachelor and Master of Technology (Dual Degree))'
+    patna = next(r for r in records if r['institute'] == 'National Institute of Technology Patna')
+    assert for_program(patna, program)['overall_placement']['scope'] == 'ug_overall'
+    assert for_program(patna, dual)['overall_placement'] is None
+    calicut = next(r for r in records if r['institute'] == 'National Institute of Technology Calicut')
+    response = for_program(calicut, program)
+    assert response['overall_placement']['average_lpa'] == 13.3
+    assert response['overall_placement']['highest_lpa'] is None
+    assert response['college_placement']['highest_lpa'] == 43.2
+    assert response['college_placement']['scope'] == 'college_overall'
+    assert response['placement'] is None
+    with factory() as db:
+        for i, record in enumerate(records, 1000):
+            db.add(models.PredictorInstitute(id=i, name=record['institute']))
+        db.commit()
+        sync_insights(db)
+        assert sync_insights(db) == {'added': 0, 'updated': 0}
+        persisted = [db.get(models.CollegeInsight, i).content for i in range(1000, 1000 + len(records))]
+        assert sum(len(r['placements']) for r in persisted) == 37
+        assert all(r['placements'] for r in persisted)
