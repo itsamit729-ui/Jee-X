@@ -53,6 +53,9 @@ def run_reference_import():
             try:
                 with Session(bind=connection) as db:
                     totals = import_missing(db, root)
+                    from app.services.college_insights import sync_insights
+                    insight_totals = sync_insights(db)
+                    log.info('College insight import complete: %s', insight_totals)
                 STATUS.update(state='ready', message='Bundled reference data is available.', **totals)
                 log.info('Predictor reference import complete: %s', totals)
             finally:

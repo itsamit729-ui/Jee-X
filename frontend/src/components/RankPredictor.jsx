@@ -1,3 +1,4 @@
+import CollegeInfo from './CollegeInfo.jsx'
 import { useEffect, useState } from 'react'
 import { predictorService } from '../lib/predictor.js'
 import { GOOD, PEN } from '../crackjee/ui.js'
@@ -122,7 +123,7 @@ export default function RankPredictor({ attemptId }) {
                       title={c.meets_conservative_estimate ? 'Within your conservative estimate' : 'Within your optimistic estimate only'}
                     />
                     <div className="row-main">
-                      <div style={{ fontWeight: 600 }}>{c.institute}</div>
+                      <div style={{ fontWeight: 600 }}>{c.institute}<CollegeInfo institute={c.institute} program={c.program}/></div>
                       <div className="faint" style={{ fontSize: 13 }}>
                         {c.program}
                         {c.nirf_rank ? <span style={{ whiteSpace: 'nowrap' }}> · NIRF #{c.nirf_rank}</span> : ''}

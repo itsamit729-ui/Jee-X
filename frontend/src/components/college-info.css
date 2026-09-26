@@ -1,0 +1,26 @@
+.college-info-trigger { display:inline-flex; align-items:center; justify-content:center; vertical-align:middle; width:32px; height:32px; margin-left:3px; padding:0; border:0; border-radius:50%; color:var(--pen); background:transparent; cursor:pointer; flex-shrink:0; }
+.college-info-trigger:hover,.college-info-trigger[aria-expanded="true"] { background:var(--pen-soft); }
+.college-info-trigger:focus-visible,.college-info-panel:focus-visible,.college-info-close:focus-visible { outline:2px solid var(--pen); outline-offset:2px; }
+.college-info-panel { position:fixed; z-index:1000; width:min(380px,calc(100vw - 24px)); box-sizing:border-box; max-height:calc(100dvh - 24px); overflow:auto; overscroll-behavior:contain; padding:20px; background:var(--surface,#fff); color:var(--ink,#292524); border:1px solid var(--line,#ddd); border-radius:18px; box-shadow:0 16px 48px #0003; font-size:13px; line-height:1.55; text-align:left; }
+.college-info-heading { display:flex; align-items:flex-start; gap:12px; justify-content:space-between; }
+.college-info-panel h3 { font-size:16px; line-height:1.4; margin:5px 0 8px; color:var(--ink); }
+.college-info-eyebrow { color:var(--pen); font-size:10px; font-weight:700; letter-spacing:.12em; }
+.college-info-close { display:grid; place-items:center; flex-shrink:0; width:32px; height:32px; border:0; border-radius:50%; background:var(--page); color:var(--ink); cursor:pointer; }
+.college-info-panel p { margin:8px 0; }
+.college-info-panel h4 { margin:0 0 8px; font-size:13px; }
+.college-info-section { margin-top:16px; padding-top:16px; border-top:1px solid var(--line); }
+.college-info-program { font-size:12px; }
+.college-info-metrics { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:12px 0; }
+.college-info-metrics div { background:var(--page); border:1px solid var(--line); border-radius:10px; padding:12px; }
+.college-info-metrics span { display:block; font-size:11px; margin-bottom:4px; }
+.college-info-metrics strong { font-size:16px; color:var(--pen); }
+.college-info-sources { display:flex; flex-wrap:wrap; gap:6px 12px; font-size:11px; }
+.college-info-sources a { color:var(--pen); text-decoration:underline; text-underline-offset:3px; }
+.college-info-note,.college-info-panel footer { font-size:11px; line-height:1.55; opacity:.8; }
+.college-info-overall { margin-top:16px; padding:12px; border:1px solid var(--line); border-radius:10px; }
+.college-info-overall summary { cursor:pointer; font-size:12px; font-weight:600; }
+.college-info-panel ul { list-style:none; margin:0; padding:0; }
+.college-info-panel li { margin:12px 0; }
+.college-info-panel li p { margin:4px 0; font-size:12px; }
+.college-info-panel footer { padding-top:12px; margin-top:16px; border-top:1px solid var(--line); }
+@media (pointer:coarse) { .college-info-trigger,.college-info-close { width:44px; height:44px; } }

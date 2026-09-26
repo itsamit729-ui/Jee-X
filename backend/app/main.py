@@ -27,6 +27,7 @@ from app.routers import (
     admin_dashboard,
     scenarios,
     roadmap,
+    college_insights,
 )
 
 load_dotenv()
@@ -64,6 +65,7 @@ app.include_router(public_profiles.router)
 app.include_router(admin_dashboard.router)
 app.include_router(scenarios.router)
 app.include_router(roadmap.router)
+app.include_router(college_insights.router)
 
 
 @app.on_event('startup')
