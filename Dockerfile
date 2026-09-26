@@ -12,7 +12,7 @@ COPY backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ ./
 COPY --from=frontend /build/dist ./static
-RUN useradd --create-home appuser
+RUN groupadd --gid 1000 appuser && useradd --create-home --uid 1000 --gid 1000 appuser
 USER appuser
 EXPOSE 10000
 CMD ["sh", "-c", "exec uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-10000} --proxy-headers --forwarded-allow-ips='*'"]
