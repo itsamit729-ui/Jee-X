@@ -1,0 +1,986 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Definite Integrals",
+    "slug": "definite-integrals",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 20
+  },
+  "subtopics": [
+    {
+      "slug": "properties-of-definite-integrals",
+      "name": "Properties of Definite Integrals",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-2b55104628c7",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\alpha=\\int\\limits_{0}^{2\\sqrt{3}} \\log_{2}(x^{2}+4)dx+\\int\\limits_{2}^{4} \\sqrt{2^{x}-4}dx$, then $\\alpha^{2}$ is equal to _______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 192.0,
+        "max": 192.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-40480328e06c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let [∙] denote the greatest integer function. Then the value of $\\int\\limits_{0}^{3} \\left( \\frac{e^{x}+e^{-x}}{[x]!} \\right) dx$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{2} + e^{3} - \\frac{1}{e^{2}} - \\frac{1}{e^{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2} \\left( e^{2} + e^{3} - \\frac{1}{e^{2}} - \\frac{1}{e^{3}} \\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$e^{2} + e^{3} - \\frac{1}{2 e^{2}} - \\frac{1}{2 e^{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2} \\left( e^{2} + e^{3} \\right) - \\frac{1}{e^{2}} - \\frac{1}{e^{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-54efb505554a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\int\\limits_{0}^{20\\pi} (\\sin^{4} x + \\cos^{4} x) \\, dx$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{15\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "25 π",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "15 π",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{25\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c54188f90622",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\int\\limits_{-\\frac{\\pi}{6}}^{\\frac{\\pi}{6}} \\left( \\;\\frac{\\pi+4 x^{11}}{1-\\sin\\left(|x|+\\frac{\\pi}{6}\\right)} \\right) dx$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d0374bed39fa",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "$6 \\int\\limits_{0}^{\\pi} \\left| \\sin 3x + \\sin 2x + \\sin x \\right| \\, dx$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 17.0,
+        "max": 17.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-579ae4c0baac",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $[\\cdot]$ denote the greatest integer function and $f(x)=\\lim\\limits_{n \\to \\infty}\\;\\frac{1}{n^3} \\sum\\limits_{k=1}^{n}\\left[\\;\\frac{k^2}{3^x}\\right]$. Then $12 \\sum\\limits_{j=1}^{\\infty} f(i)$ is equal to",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-75c9bb11fe15",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\limits_{0}^{1} 4 \\cot^{-1}(1-2x+4x^2) dx = a \\tan^{-1}(2) - b \\log_{e}(5)$, where $a, b \\in N$, then $(2a + b)$ is equal to",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 9.0,
+        "max": 9.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0004fecf3d2b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f:[1,\\infty)\\to R$ be a differentiable function. If $6\\int\\limits_{1}^{x} f(t)\\,dt=3x f(x)+x^{3}-4$ for all $x\\ge 1$, then the value of $f(2)-f(3)$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "-4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8c6dc98ea5ed",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\int\\limits_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\left( \\frac{1}{\\lfloor x \\rfloor + 4} \\right) \\, dx$, where $\\lfloor \\cdot \\rfloor$ denotes the greatest integer function, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{60} (21\\pi - 1)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{60} (\\pi - 7)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7}{60} (\\pi - 3)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{60} (3\\pi - 1)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7705a1c3e4fa",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let [.] be the greatest integer function. If $α = \\int\\limits_{0}^{64} (x^{1/3} - \\lfloor x^{1/3} \\rfloor) dx$, then $\\; \\frac{1}{\\pi} \\int\\limits_{0}^{\\alpha \\pi} \\left( \\; \\frac{\\sin^2 \\theta}{\\sin^6 \\theta + \\cos^6 \\theta} \\right) d\\theta$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 36.0,
+        "max": 36.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e0502371f233",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of the integral $\\int\\limits_{\\frac{\\pi}{24}}^{\\frac{5\\pi}{24}} \\frac{dx}{1+\\;\\sqrt[3]{\\tan 2x}}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{18}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{12}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f5e367077f4c",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The number of elements in the set $S = \\{ x : x \\in [0,100].$ and $\\int\\limits_{0}^{x} t^2 \\sin\\; (x-t) dt = x^2 \\}$ is",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-644b991b453b",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let a differentiable function $f$ satisfy the equation $\\int\\limits_{0}^{36} f\\left(\\;\\frac{t x}{36}\\right) dt=4 \\alpha f(x)$. If $y=f(x)$ is a standard parabola passing through the points $(2,1)$ and $(-4, \\beta)$, then $\\beta^\\alpha$ is equal to $\\_\\_\\_\\_$。",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 64.0,
+        "max": 64.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dcbb790dbf19",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)$ satisfies the relation $f(x)=e^x+\\int\\limits_{0}^{1} (y+x e^x) f(y) d y$, then $e+f(0)$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-03ed432d27d9",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\sum\\limits_{r=1}^{20} \\left( \\left| \\sqrt{ \\pi \\left( \\int\\limits_{0}^{r} x |\\sin \\pi x| \\, dx \\right) } \\right| \\right)$ is",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 210.0,
+        "max": 210.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dee8adf4ac53",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f$ be a polynomial function such that $f (x^2+1) =x^4+5 x^2+2$, for all $x \\in R$.\nThen $\\int\\limits_{0}^{3} f(x) dx$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{33}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{5}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{27}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{41}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5f3144eca44e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let [.] denote the greatest integer function. Then $\\int\\limits_{-\\frac{\\pi}{2}}^{\\frac{\\pi}{2}} \\left( \\frac{12(3+[x])}{3+[\\sin x]+[\\cos x]} \\right) dx$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12\\pi+5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$11\\pi+2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$15\\pi+4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$13\\pi+1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9a61dd96ff40",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f$ be a differentiable function satisfying $f(x)=1-2 x+\\int\\limits_{0}^{x} e^{(x-t)} f(t) dt, x \\in R$ and let $g(x)=\\int_{0}^{x} (f(t)+2)^{15}(t-4)^6(t+12)^{17} dt, x \\in R$ If $p$ and $q$ are respectively the points of local minima and local maxima of $g$, then the value of $|p+q|$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 9.0,
+        "max": 9.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5d7bbfd12d89",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let f be a real polynomial of degree n such that $f(x)=f'(x)f''(x)$, for all $x \\in \\mathbb{R}$. If $f(0)=0$, then 36 $\\left(f'(2)+f''(2)+\\int\\limits_{0}^{2} f(x) dx\\right)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "42",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "46",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "56",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "66",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-64f71cb2bf06",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\int\\limits_{-2}^{2} \\left( \\left| \\sin x \\right| + [x \\sin x] \\right) dx = 2(3-\\cos 2)+\\beta$, where $[\\cdot]$ is the greatest integer function . Then $\\beta \\sin \\left( \\frac{\\beta}{2} \\right)$ equals.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4f2c2a311223",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\alpha=1$ and $\\beta = 1 + \\frac{i}{\\sqrt{2}}$, where $i = \\sqrt{-1}$ are two roots of the equation $x^{3} + a x^{2} + b x + c = 0,\\ a,\\ b,\\ c \\in \\mathbb{R}$ , then $\\int\\limits_{-1}^{1} (x^{3} + a x^{2} + b x + c) \\, dx$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "-8",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "-10",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c7797e3c929a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The integral $\\int\\limits_{0}^{1} \\cot^{-1} (1+x+x^{2}) dx$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2 \\tan^{-1} 2 + \\frac{1}{2} \\log_{e} \\left( \\frac{5}{4} \\right) + \\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2 \\tan^{-1} 2 + \\frac{1}{2} \\log_{e} \\left( \\frac{5}{4} \\right) - \\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2 \\tan^{-1} 2 - \\frac{1}{2} \\log_{e} \\left( \\frac{5}{4} \\right) + \\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2 \\tan^{-1} 2 - \\frac{1}{2} \\log_{e} \\left( \\frac{5}{4} \\right) - \\frac{\\pi}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8659749d52eb",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of the integral $\\int\\limits_{\\frac{\\pi}{6}}^{\\frac{\\pi}{3}} \\left( \\frac{4 - \\csc^2 x}{\\cos^4 x} \\right) dx$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{11}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{16}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{32}{3\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{64}{3\\sqrt{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c0e56da138e1",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of the integral $\\int\\limits_{0}^{\\infty} \\;\\frac{\\log_{e}(x)}{x^2+4} dx$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi \\log_{e}(2)}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi \\log_{e}(2)}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1+\\pi \\log_{e}(2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2+\\pi \\log_{e}(2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9a3cbfa75bdd",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $(2^{1-a}+2^{1+a}) , f(a), (3^{a}+3^{-a})$ be a A. P. and α be the minimum value of $f(a)$. Then the value of the integral $\\int\\limits_{\\log_{e}(\\alpha-1)}^{\\log_{e}(\\alpha)} \\;\\frac{dx}{e^{2x} - e^{-2x}}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{1}{2}\\log_{e}\\left(\\;\\frac{4}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{1}{4}\\log_{e}\\left(\\;\\frac{4}{3}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{1}{2}\\log_{e}\\left(\\;\\frac{8}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{1}{4}\\log_{e}\\left(\\;\\frac{8}{5}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5fa5796cfcbf",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of the integral $\\int\\limits_{-\\frac{\\pi}{4}}^{\\frac{\\pi}{4}} \\left(\\frac{32 \\cos^4 x}{1+e^{\\sin x}}\\right) dx$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\pi+2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\pi+8$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3\\pi+4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4\\pi+3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1460cfaa0964",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $A = \\begin{vmatrix} 1 & 3 & -1 \\\\ 2 & 1 & \\alpha \\\\ 0 & 1 & -1 \\end{vmatrix}$ be a singular matrix. Let $f(x) = \\int\\limits_{0}^{x} (t^{2} + 2t + 3) dt, x \\in [1, \\alpha]$. If M and m are respectively the maximum and the minimum values of f in [1, α] then $3(M-m)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "64",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "68",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "72",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "76",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9d39d0809de8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of the integral $\\int\\limits_{-1}^{1} \\left( \\frac{x^{3}+|x|+1}{x^{2}+2|x|+1} \\right) dx$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3 \\log_{e} 2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2 \\log_{e} 2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5 \\log_{e} 3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3 \\log_{e} 3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-48a16ebda907",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x) = \\begin{cases} \\frac{1}{3} & x \\le \\pi/2 \\\\ \\frac{b(1-\\sin x)}{(\\pi-2x)^2} & x > \\pi/2 \\end{cases}$, If f is continuous at $x = \\pi/2$, then the value of $\\int\\limits_{0}^{3b-6} \\left| x^2+2x-3 \\right| \\, dx$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d350e4940491",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of the integral $\\int\\limits_{0}^{2} \\; \\frac{\\sqrt{x (x^{2}+x+1)}}{(\\sqrt{x+1})(\\sqrt{x^{4}+x^{2}+1})} dx$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3} \\log_{e}(3-2\\sqrt{2})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{3} \\log_{e}(4+\\sqrt{2})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3} \\log_{e}(3+2\\sqrt{2})$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3} \\log_{e}(1+6\\sqrt{2})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f63fb339bd22",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\limits_{\\pi/6}^{\\pi/4} \\left( \\cot\\left(x - \\frac{\\pi}{3}\\right) \\cot\\left(x + \\frac{\\pi}{3}\\right) + 1 \\right) dx = \\alpha \\log_e \\left( \\sqrt{3} - 1 \\right)$, then $9 \\alpha^{2}$ is equal to ______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 12.0,
+        "max": 12.0
+      },
+      "solution": ""
+    }
+  ]
+}

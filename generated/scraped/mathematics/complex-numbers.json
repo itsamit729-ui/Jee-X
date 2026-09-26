@@ -1,0 +1,695 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Complex Numbers",
+    "slug": "complex-numbers",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 3
+  },
+  "subtopics": [
+    {
+      "slug": "geometry-of-complex-numbers",
+      "name": "Geometry and loci of complex numbers",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-268f69bfab3b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let x and y be real number such that $50\\left(\\frac{2x}{1+3i} - \\frac{y}{1-2i}\\right) = 31+17i, i = \\sqrt{-1}$. Then the value of $10(x-3y)$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "20",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "31",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "35",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "75",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a20f2ef26aa8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let the circle $C_{1}: |z| = r$ and $C_{2}: |z-3-4i| = 5, z \\in C$, be such that $C_{2}$ lies within $C_{1}$. If $z_{1}$ moves on $C_{1}, z_{2}$ moves on $C_{2}$ and $\\min |z_{1}-z_{2}| = 2$, then max $|z_{1}-z_{2}|$ is equal to :-",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "17",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "22",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "24",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-26a51f7a29c6",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $x^2+x+1=0$, then the value of $\\left(x+\\frac{1}{x}\\right)^4+\\left(x^2+\\frac{1}{x^2}\\right)^4+\\left(x^3+\\frac{1}{x^3}\\right)^4+\\dots+\\left(x^{25}+\\frac{1}{x^{25}}\\right)^4$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "162",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "145",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "128",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "175",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bf8520f2e534",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $z$ be the complex number satisfying $|z-5| \\le 3$ and having maximum positive principal argument.\nThen $34 \\left| \\frac{5z-12}{5iz+16} \\right|^2$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "20",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "26",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "16",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-93930cf87319",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $α = \\; \\frac{-1 + i \\sqrt{3}}{2}$ and $β = \\; \\frac{-1 - i \\sqrt{3}}{2}, i = \\sqrt{-1}$. If $(7-7\\alpha+9\\beta)^{20}+(9+7\\alpha-7\\beta)^{20}+(-7+9\\alpha+7\\beta)^{20}+(14+7\\alpha+7\\beta)^{20}=m^{10},$ then $m$ is $\\_\\_\\_\\_$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 49.0,
+        "max": 49.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1b4d2f80be6e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $S = \\{z \\in C : 4 z^2 + \\overline{z} = 0\\}$. Then $\\sum_{z \\in S} |z|^2$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{5}{64}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{7}{64}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{3}{16}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2029a55ef5f1",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $S = \\{z: 3 \\le |2z-3(1+i)| \\le 7\\}$ be a set of complex numbers. Then $\\underset{z \\in S}{\\min} \\left| z + \\frac{1}{2}(5+3i) \\right|$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{3}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fe410c1bfb1e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $z=\\frac{\\sqrt{3}}{2}+\\;\\frac{i}{2},\\ i=\\sqrt{-1}$, then $(z^{201}-i)^8$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "-1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "256",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-20f976282947",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $S = \\{ z \\in C : \\left| \\frac{z-6i}{z-2i} \\right| = 1.$ and $\\left| \\frac{z-8+2i}{z+2i} \\right| = \\frac{3}{5} \\}$.\nThen $\\sum\\limits_{z \\in s} |z|^2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "413",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "398",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "385",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "423",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-729448c9c450",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $z=(1+i)(1+2i)(1+3i)\\dots(1+ni)$, where $i=\\sqrt{-1}$. If $|z|^2=44200$, then $n$ is equal to $\\_\\_\\_\\_$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 5.0,
+        "max": 5.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5868cda2a93a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $z$ be a complex number such that $|z-6|=5$ and $|z+2-6 i|=5$. Then the value of $z^3+3 z^2-15 z+141$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "61",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "37",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "42",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "50",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-05d1f2c55d45",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let\n$A=\\{z \\in C : |z-2| \\leq 4\\}$ and\n$B=\\{z \\in C : |z-2|+|z+2|=5\\} .$\nThen the max $\\{ |z_1 - z_2| : z_1 \\in A.$ and $z_2 \\in B\\}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{17}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{15}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dfaed380978b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let z be a complex number such that $\\left|z+2\\right| = \\left|z-2\\right|$ and $\\arg \\left( \\frac{z+3}{z-i} \\right) = \\frac{\\pi}{4}$. Then $\\left|z\\right|^{2}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "9",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d9f82030c04f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $S = \\{ z \\in C : z^{2} + 4z + 16 = 0 \\}$. Then $\\sum\\limits_{z \\in S} | z + \\sqrt{3} i |^{2}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "42",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "23",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "27",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "38",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3c0ca178bd81",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $a, b \\in C$. Let α, β be the roots of the equation $x^{2}+ax+b=0$. If $\\beta-\\alpha=\\sqrt{11}$ and $\\beta^{2}-\\alpha^{2}=3 i \\sqrt{11}$, then $(\\beta^{3}-\\alpha^{3})^{2}$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "160",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "176",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "194",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "187",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8dfe9da0b294",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $z_{1}, z_{2} \\in C$ be the distinct solutions of the equation $z^{2}+4z-(1+12i)=0$. Then $|z_{1}|^{2}+|z_{2}|^{2}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "18",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "22",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "29",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "34",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f05e705d21ba",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the set of all values of $k \\in R$ such that the equation $z(\\overline{z}+2+i)+k(2+3i)=0, z \\in C$, has at least one solution, be the interval [α, β]. Then $9(\\alpha+\\beta)$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-10",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "-8",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10\\sqrt{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8\\sqrt{13}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8204126d8e32",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $S = \\{ z \\in C : z^{2} + \\sqrt{6} i z - 3 = 0 \\}$. Then $\\sum\\limits_{z \\in S} z^{8}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "162",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "184",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "262",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "324",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c1c11fce825a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The number of values of $z \\in C$, satisfying the equations $|z-(4+8i)| = \\sqrt{10} \\text{ and } |z-(3+5i)| + |z-(5+11i)| = 4\\sqrt{5}$, is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

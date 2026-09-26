@@ -1,0 +1,604 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Binomial Theorem",
+    "slug": "binomial-theorem",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 7
+  },
+  "subtopics": [
+    {
+      "slug": "properties-of-binomial-coefficients",
+      "name": "Properties of Binomial Coefficients",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-d719d087c43a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If for $3 \\leq r \\leq 30$, $\\left({}^{30}C_{30-r}\\right) + 3\\left({}^{30}C_{31-r}\\right) + 3\\left({}^{30}C_{32-r}\\right) + \\left({}^{30}C_{33-r}\\right) = {}^{m}C_{r},$ then m equals :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "31",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "32",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "33",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "34",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f977016a6483",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the coefficient of $x$ in the expansion of $(a x^2+b x+c) (1-2 x)^{26}$ is -56 and the coefficients of $x^2$ and $x^3$ are both zero, then $a + b + c$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1483",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1300",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1500",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1403",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b6a71b09d1a4",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\left( \\;\\frac{1}{{}^{15}C_0} + \\;\\frac{1}{{}^{15}C_1} \\right) \\cdots \\left( \\;\\frac{1}{{}^{15}C_{12}} + \\;\\frac{1}{{}^{15}C_{13}} \\right) = \\;\\frac{\\alpha^{13}}{{}^{14}C_0 {}^{14}C_1 \\cdots {}^{14}C_{12}}$, then $30 \\alpha$ is equal to $\\_\\_\\_\\_$。",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 32.0,
+        "max": 32.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c633b370aa1b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The coefficient of $x^{48}$ in $(1+x)+2(1+x)^2+3(1+x)^3+\\dots+100(1+x)^{100}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100 \\cdot \\binom{100}{49} - \\binom{100}{48}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$100 \\cdot \\binom{101}{49} - \\binom{101}{50}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\binom{100}{50} + \\binom{101}{49}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$100 \\cdot \\binom{100}{49} - \\binom{100}{50}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9e1b9bce5d44",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $C_{r}$ denote the coefficient of $x^{r}$ in the binomial expansion of $(1+x)^{n}, n \\in N, 0 \\leq r \\leq n$ . If $P_n=C_0-C_1+\\;\\frac{2^2}{3}C_2-\\;\\frac{2^3}{4}C_3+\\ldots+\\;\\frac{(-2)^n}{n+1}C_n$, then the value of $\\sum\\limits_{n=1}^{25}\\;\\frac{1}{P_{2n}}$ equals.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "675",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "580",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "525",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "650",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-45f44de4c028",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The sum of all possible values of $n \\in N$, so that the coefficients of $x, x^2$ and $x^{3}$ in the expansion of $(1+x^{2})^{2}(1+x)^{n}$, are in arithmetic progression is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "9",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "7",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bee46066d523",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\; \\frac{{}^{100}C_{50}}{51} + \\; \\frac{{}^{100}C_{51}}{52} + \\dots + \\; \\frac{{}^{100}C_{100}}{101}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\; \\frac{2^{101}}{101}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\; \\frac{2^{100}}{101}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\; \\frac{2^{100}}{100}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\; \\frac{2^{101}}{100}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8e54443d455d",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $S = \\;\\frac{1}{25!} + \\;\\frac{1}{3!23!} + \\;\\frac{1}{5!21!} + \\dots$ up to 13 terms. If $13 S = \\;\\frac{2^k}{n!},\\ k \\in N$, then $n+k$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "50",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "52",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "49",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "51",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-64b52d2af78e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Given below are two statements :\nStatement I :\n$25^{13}+20^{13}+8^{13}+3^{13}$ is divisible by 7.\nStatement II :\nThe integral part of $(7+4\\sqrt{3})^{25}$ is an odd number.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Statement I is false but Statement II is true",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Both Statement I and Statement II are false",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Both Statement I and Statement II are true",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Statement I is true but Statement II is false",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-defdd1085fa1",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The sum of the coefficients of $x^{499}$ and $x^{500}$ in $(1+x)^{1000}+x(1+x)^{999}+x^2(1+x)^{998}+. . .+x^{1000}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${ }^{1002} C_{501}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${ }^{1001} C_{501}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${ }^{1000} C_{501}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${ }^{1002} C_{500}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b6e63027a5e1",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the smallest value of $k \\in \\mathbb{N}$, for which the coefficient of $x^{3}$ in $(1+x)^{3}+(1+x)^{4}+(1+x)^{5}+\\dots$ $+(1+x)^{99}+(1+kx)^{100}, x \\neq 0$, is $\\left(43 n + \\frac{101}{4}\\right)$ $({}^{100}C_{3})$ for some $n \\in \\mathbb{N}$, be p. Then the value of p+n is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "11",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "13",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b27423fe82d8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the expansion of $\\left(9x - \\frac{1}{3\\sqrt{x}}\\right)^{18}, x>0$, if the term independent of x is $(221) k$. then k is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "84",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "78",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "168",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "198",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-018d2a0faae5",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the sum of the coefficients of $x^{7}$ and $x^{14}$ in the expansion of $\\left(\\frac{1}{x^{3}}-x^{4}\\right)^{n}, x\\neq 0$, is zero, then the value of n is _______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 21.0,
+        "max": 21.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-67c73372b058",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The coefficient of $x^{2}$ in the expansion of $\\left(2x^{2}+\\frac{1}{x}\\right)^{10}, x \\neq 0$, is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3240",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3360",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3480",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3600",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b5e9fcce49e7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the coefficients of the middle terms in the binomial expansions of $(1+\\alpha x)^{26}$ and $(1-\\alpha x)^{28}$, α ≠ 0, are equal, then the value of α is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{14}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{27}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{27}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-461345a0cc22",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $(1-x^{3})^{10}=\\sum\\limits_{r=0}^{10} a_{r} x^{r}(1-x)^{30-2r}$, then $\\;\\frac{9 a_{9}}{a_{10}}$ is equal to _______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 30.0,
+        "max": 30.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dc66bb5ed5b7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $26 \\left( \\; \\frac{2^{3}}{3} {}^{13}C_{2} + \\; \\frac{2^{5}}{5} {}^{12}C_{4} + \\; \\frac{2^{7}}{7} {}^{12}C_{6} + \\cdots + \\; \\frac{2^{13}}{13} {}^{12}C_{12} \\right)$ $=3^{13}-\\alpha$, then α is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "45",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "48",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "51",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "54",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

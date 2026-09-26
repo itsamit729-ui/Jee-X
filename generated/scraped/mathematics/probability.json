@@ -1,0 +1,607 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Probability",
+    "slug": "probability",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 25
+  },
+  "subtopics": [
+    {
+      "slug": "classical-probability",
+      "name": "Classical Definition of Probability",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-7aad9e9a7477",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $a, b, c \\in \\{1,2,3,4\\}$. If the probability, that $ax^{2}+2\\sqrt{2} bx + c > 0$ for all $x \\in R$, is $\\;\\frac{m}{n}$, $\\gcd(m, n)=1$, then $m + n$ is equal to ______ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 81.0,
+        "max": 81.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2b86b146f7a7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A man throws a fair coin repeatedly. He gets 10 points for each head he throws and 5 points for each tail he throws. If the probability that he gets exactly 30 points is $\\frac{m}{n}$ gcd (m, n) = 1, then m + n is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "53",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "55",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "107",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "105",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e735c8074d54",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the mean and variance of 7 observations $2,4,10, x, 12,14, y, x>y$, be 8 and 16 respectively. Two numbers are chosen from $\\{1,2,3, x-4, y, 5\\}$ one after another without replacement, then the probability, that the smaller number among the two chosen numbers is less than 4 , is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{4}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{3}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3753912a35b8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two distinct numbers $a$ and $b$ are selected at random from $1,2,3, \\ldots, 50$. The probability, that their product $a b$ is divisible by 3 , is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{272}{1225}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{561}{1225}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{664}{1225}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{8}{25}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bcb32f22b0f5",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a random variable$x$has the probability distribution\n$x$ 0 1 2 3 4 5 6 7 $P(x)$ 0 2 k k 3 k $2k^{2}$ 2 k $k^{2}+k$ $7k^{2}$\nthen$P(3 < x \\le 6)$is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.34",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.64",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.22",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.33",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-17ad35c986b2",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "From the first 100 natural numbers, two numbers first $a$ and then $b$ are selected randomly without replacement. If the probability that $a - b \\geq 10$ is $\\; \\frac{m}{n}, \\gcd(m,n)=1$,\nthen $m + n$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 311.0,
+        "max": 311.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dd396496515d",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Bag A contains 9 white and 8 black balls, while bag B contains 6 white and 4 black balls. One ball is randomly picked up from the bag $B$ and mixed up with the balls in the bag $A$. Then a ball is randomly drawn from the bag A . If the probability, that the ball drawn is white, is $\\; \\frac{p}{q}, \\gcd(p,q)=1$, then $p + q$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "24",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "22",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "23",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "21",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-de02d87839c0",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "From a lot containing 10 defective and 90 non-defective bulbs, 8 bulbs are selected one by one with replacement. Then the probability of getting at least $7$ defective bulbs is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{73}{10^8}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{67}{10^8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{7}{10^7}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{81}{10^8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d146f506bdd9",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let S be a set of 5 elements and $P(S)$ denote the power set of S . Let E be an event of choosing an ordered pair $(A,B)$ from the set $P(S) \\times P(S)$ such that $A \\cap B = \\emptyset$. If the probability of the event $E$ is $\\; \\frac{3^p}{2q}$, where $p, q \\in N$, then $p+q$ is equal to",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ac21ffc425bb",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "A bag contains 10 balls out of which $k$ are red and $(10-k)$ are black, where $0 \\leq k \\leq 10$. If three balls are drawn at random without replacement and all of them are found to be black, then the probability that the bag contains 1 red and 9 black balls is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{7}{110}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7}{11}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7}{55}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{14}{55}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3114b4c52c81",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The probability distribution of a random variable X is given below :\nX4k$\\; \\frac{30}{7} k$$\\; \\frac{32}{7} k$$\\; \\frac{34}{7} k$$\\; \\frac{36}{7} k$$\\; \\frac{38}{7} k$$\\; \\frac{40}{7} k$6kP(X)$\\; \\frac{2}{15}$$\\; \\frac{1}{15}$$\\; \\frac{2}{15}$$\\; \\frac{1}{5}$$\\; \\frac{1}{15}$$\\; \\frac{2}{15}$$\\; \\frac{1}{5}$$\\; \\frac{1}{15}$\nIf $E(X)=\\; \\frac{263}{15}$, then $P(X < 20)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\; \\frac{3}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\; \\frac{14}{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\; \\frac{8}{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\; \\frac{11}{15}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7e42f7b26914",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A coin is tossed 8 times. If the probability that exactly 4 heads appear in the first six tosses and exactly 3 heads appear in the last five tosses is p, then 96p is equal to ____ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 9.0,
+        "max": 9.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4f5a2d01f814",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "From a month of 31 days, 3 different dates are selected at random. If the probability that these dates are in an increasing A.P. is equal to $\\;\\frac{a}{b}$ , where $a + b \\in N$ and gcd(a,b) = 1, then a + b is equal to ______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 944.0,
+        "max": 944.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2345469374ec",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A letter is known to have arrived by post either from KANPUR or from ANANTPUR. On the the envelope just two consecutive letters AN are visible. The probability, that the letter came from ANANTPUR, is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\; \\frac{7}{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\; \\frac{10}{17}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\; \\frac{12}{19}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\; \\frac{7}{19}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d1c96d02a46e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The probabilities that players A and B of a team are selected for the captaincy for a tournament are 0.6 and 0.4, respectively. If A is selected the captain, the probability that the team wins the tournament is 0.8 and if B is selected the captain, the probability that the team wins the tournament is 0.7. Then the probability, that the team wins the tournament, is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.74",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.76",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.72",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.78",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-253ff6f28420",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A bag contains (N + 1) coins -N fair coins, and one coin with 'Head' on both sides. A coin is selected at random and tossed. If the probability of getting 'Head' is $\\;\\frac{9}{16}$, then N is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "9",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-54dc7266e481",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A bag contains 6 blue and 6 green balls. Pairs of balls are drawn without replacement until the bag is empty. The probability that each drawn pair consists of one blue and one green ball is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{63}{925}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{17}{231}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{16}{231}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{64}{925}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-981ceb4b90ce",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A candidate has to go to the examination centre to appear in an examination. The candidate uses only one means of transportation for the entire distance out of bus, scooter and car. The probabilities of the candidate going by bus, scooter and car, respectively, are $\\;\\frac{2}{5}, \\;\\frac{1}{5}$ and $\\;\\frac{2}{5}$ . The probabilities that the candidate reaches late at the examination centre are $\\;\\frac{1}{5}, \\;\\frac{1}{3}$ and $\\;\\frac{1}{4}$ if the candidate uses bus, scooter and car, respectively. Given that the candidate reached late at the examination centre, the probability that the candidate travelled by bus is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{11}{37}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{12}{37}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{13}{37}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{14}{37}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

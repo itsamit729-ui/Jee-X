@@ -1,0 +1,268 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Indefinite Integrals",
+    "slug": "indefinite-integrals",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 19
+  },
+  "subtopics": [
+    {
+      "slug": "integration-by-parts",
+      "name": "Integration by Parts and Special Integrals",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-9ba923e0d70b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=\\int \\left(\\frac{16x+24}{x^{2}+2x-15}\\right) dx$. If $f(4)=14 \\log_{e}(3)$ and $f(7)=\\log_{e} (2^{\\alpha} \\cdot 3^{\\beta}) , \\alpha, \\beta \\in \\mathbb{N}$, then $\\alpha+\\beta$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "31",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "37",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "39",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "41",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cd83bbe97eb8",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int (\\sin x)^{\\frac{-11}{2}} (\\cos x)^{\\frac{-5}{2}} \\, dx = -\\frac{p_1}{q_1} (\\cot x)^{\\frac{9}{2}} - \\frac{p_2}{q_2} (\\cot x)^{\\frac{5}{2}} - \\frac{p_3}{q_3} (\\cot x)^{\\frac{1}{2}} + \\frac{p_4}{q_4} (\\cot x)^{\\frac{-3}{2}} + C$, where $p_i$ and $q_i$ are positive integers with $\\gcd(p_i, q_i) = 1$ for $i=1,2,3,4$ and C is the constant of integration, then $\\frac{15 p_1 p_2 p_3 p_4}{q_1 q_2 q_3 q_4}$ is equal to $\\_\\_\\_\\_$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-09df4f35703f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=\\int \\frac{(2-x^2) \\cdot e^x}{(\\sqrt{1+x})(1-x)^{\\frac{3}{2}}} dx$. If $f(0)=0$, then $f\\left(\\,\\frac{1}{2}\\right)$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2e}-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2e}+1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3e}-1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3e}+1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dd8a9b92e6f8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $I (x)=\\int\\;\\frac{3\\,dx}{(4x+6)\\left(\\sqrt{4x^2+8x+3}\\right)}$ and $I (0)=\\;\\frac{\\sqrt{3}}{4}+20$.\nIf $I\\left(\\frac{1}{2}\\right)=\\;\\frac{a\\sqrt{2}}{b}+c$, where $a, b, c \\in N , \\gcd(a,b)=1$, then $a+b+c$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "30",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "29",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "28",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "31",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a49d8e3ae462",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(t)=\\int \\left( \\frac{1- \\sin (\\log_e t)}{1-\\cos(\\log_e t)} \\right) dt, t>1$.\nIf $f\\left(e^{\\frac{\\pi}{2}}\\right) = -e^{\\frac{\\pi}{2}}$ and $f\\left(e^{\\frac{\\pi}{4}}\\right) = \\alpha e^{\\frac{\\pi}{4}}$, then $\\alpha$ equals",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1+\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1-2\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1-\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-1+\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e29987078a28",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\left(\\frac{1-5\\cos^2 x}{\\sin^{5} x \\cos^{2} x}\\right) dx = f(x)+C$, where C is the constant of integration, then $f\\left(\\frac{\\pi}{6}\\right)-f\\left(\\frac{\\pi}{4}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{3}}(26-\\sqrt{3})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{\\sqrt{3}}(8-\\sqrt{6})$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{3}}(26+\\sqrt{3})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{\\sqrt{3}}(4+\\sqrt{6})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cafb12e75077",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=\\int \\frac{dx}{x^{2/3}+2x^{1/2}}$, be such that $f(0)=-26+24\\log_e(2)$. If $f(1)=a+b\\log_e(3)$, where $a, b\\in Z$, then $a+b$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-11",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "-18",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-26",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

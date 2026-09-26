@@ -1,0 +1,876 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Rotational Motion",
+    "slug": "rotational-motion",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 5
+  },
+  "subtopics": [
+    {
+      "slug": "moment-of-inertia",
+      "name": "Moment of inertia",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-9e5d0b77e31f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The position of an object having mass 0.1 kg as a function of time t is given as $\\vec{r} = (10 t^{2} \\hat{i} + 5 t^{3} \\hat{j}) \\text{m}$. At t = 1 s, which of the following statements are correct?\nA. The linear momentum $\\vec{p} = (2 \\hat{i} + 1.5 \\hat{j}) \\text{kg} \\cdot \\text{m/s}.$\nB. The force acting on the object $\\vec{F} = (2 \\hat{i} + 3 \\hat{j}) \\text{N}.$\nC. The angular momentum of the object about its origin $\\vec{L} = 15 \\hat{k} \\text{Js}.$\nD. The torque acting on the object about its origin $\\vec{\\tau} = 20 \\hat{k} \\text{Nm}.$\nChoose the correct answer from the option given below.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A, B and C only",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "B, C and D only",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "A, C and D only",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "A, B and D only",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6ba50b81dc9d",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Moment of inertia about an axis AB for a rod of mass 40 kg and length 3 m is same as that of a solid sphere of mass of 10 kg and radius R about an axis parallel to AB axis with separation of 3 m as shown in figure below. The value of R is given as $\\sqrt{\\frac{\\alpha}{2}}$. The value of α is______.",
+      "image": {
+        "url": "/question-images/pyq/physics/rotational-motion/PYQ-PHY-6ba50b81dc9d.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [],
+      "answer": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3c3f876acabc",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two identical thin rods of mass $M \\text{ kg}$ and length $L \\text{ m}$ are connected as shown in figure. Moment of inertia of the combined rod system about an axis passing through point $P$ and perpendicular to the plane of the rods is $\\; \\frac{x}{12} \\text{ML}^2 \\text{ kg} \\text{ m}^2$. The value of $x$ is $\\_\\_\\_\\_$",
+      "image": {
+        "url": "/question-images/pyq/physics/rotational-motion/PYQ-PHY-3c3f876acabc.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [],
+      "answer": {
+        "min": 17.0,
+        "max": 17.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-779f6ec0ac93",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "A uniform rod of mass $m$ and length $l$ suspended by means of two identical inextensible light strings as shown in figure. Tension in one string immediately after the other string is cut, is $\\_\\_\\_\\_$ . ( $g$ acceleration due to gravity)",
+      "image": {
+        "url": "/question-images/pyq/physics/rotational-motion/PYQ-PHY-779f6ec0ac93.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{mg}{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{m g}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$m g$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{m g}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7ad899eab1ea",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The pulley shown in figure is made using a thin rim and two rods of length equal to diameter of the rim. The rim and each rod have a mass of $M$. Two blocks of mass of $M$ and $m$ are attached to two ends of a light string passing over the pulley, which is hinged to rotate freely in vertical plane about its center. The magnitudes of the acceleration experienced by the blocks is $\\_\\_\\_\\_$ (assume no slipping of string on pulley).",
+      "image": {
+        "url": "/question-images/pyq/physics/rotational-motion/PYQ-PHY-7ad899eab1ea.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\;(M-m)g}{\\left[\\left(\\frac{8}{3}\\right)M+m\\right]}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\;(M-m)g}{2M+m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\;(M-m)g}{M+m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\;(M-m)g}{\\left[\\left(\\frac{13}{6}\\right)M+m\\right]}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-21613b05941a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "A cylindrical tube $A B$ of length $l$, closed at both ends contains an ideal gas of 1 mol having molecular weight $M$. The tube is rotated in a horizontal plane with constant angular velocity $\\omega$ about an axis perpendicular to $A B$ and passing through the edge at end $A$, as shown in the figure. If $P_A$ and $P_B$ are the pressures at $A$ and $B$ respectively, then (Consider the temperature is same at all points in the tube)",
+      "image": {
+        "url": "/question-images/pyq/physics/rotational-motion/PYQ-PHY-21613b05941a.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$P_B = P_A \\exp \\left( \\frac{M \\omega^{2} l^{2}}{3 R T} \\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$P_B = P_A$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$P_B = P_A \\exp \\left( \\frac{M \\omega^{2} l^{2}}{2 R T} \\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$P_B = P_A \\exp \\left( \\frac{M \\omega^{2} l^{2}}{R T} \\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-32805532ff18",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "A solid sphere of mass 5 kg and radius 10 cm is kept in contact with another solid sphere of mass 10 kg and radius 20 cm . The moment of inertia of this pair of spheres about the tangent passing through the point of contact is $\\_\\_\\_\\_$ $kg \\cdot \\text{m}^2$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.18",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.72",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.36",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.63",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-739cbb293eaf",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "A circular disc has radius $R_1$ and thickness $T_1$. Another circular disc made of the same material has radius $R_2$ and thickness $T_2$. If the moment of inertia of both discs are same and $\\; \\frac{R_1}{R_2}=2$ then $\\; \\frac{T_1}{T_2}=\\; \\frac{1}{\\alpha}$. The value of $\\alpha$ is $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-193730b2dd38",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "A uniform bar of length 12 cm and mass 20 m lies on a smooth horizontal table. Two point masses $m$ and $2m$ are moving in opposite directions with same speed of $v$ and in the same plane as the bar, as shown in figure. These masses strike the bar simultaneously and get stuck to it. After collision the entire system is rotating with angular frequency $\\omega$. The ratio of $v$ and $\\omega$ is :",
+      "image": {
+        "url": "/question-images/pyq/physics/rotational-motion/PYQ-PHY-193730b2dd38.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "33",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\sqrt{88}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "32",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "66",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-30bcd52f9522",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two masses $m$ and 2 m are connected by a light string going over a pulley (disc) of mass 30 m with radius $r=0.1\\,\\text{m}$. The pulley is mounted in a vertical plane and it is free to rotate about its axis. The 2 m mass is released from rest and its speed when it has descended through a height of 3.6 m is $\\_\\_\\_\\_$ $\\text{m / s}$. (Assume string does not slip and $g =10\\,\\text{m / s}^2$ )",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-14c2b11a42dc",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The moment of inertia of a square loop made of four uniform solid cylinders, each having radius $R$ and length $L(R < L)$ about an axis passing through the mid points of opposite sides, is (Take the mass of the entire loop as $M$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\; \\frac{3}{4} M R^2+\\; \\frac{1}{6} M L^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\; \\frac{3}{8} M R^2+\\; \\frac{7}{12} M L^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\; \\frac{3}{4} M R^2+\\; \\frac{7}{12} M L^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\; \\frac{3}{8} M R^2+\\; \\frac{1}{6} M L^2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2a7afe8e645f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two small balls with masses $m$ and 2 m are attached to both ends of a rigid rod of length $d$ and negligible mass. If angular momentum of this system is $L$ about an axis",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "passing through its centre of mass and perpendicular to the rod then angular velocity of the system about $A$ is :\n(A) $\\; \\frac{4}{3} \\; \\frac{L}{m d^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\; \\frac{3}{2} \\; \\frac{L}{m d^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\; \\frac{2 L}{5 m d^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\; \\frac{2 L}{m d^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8efade02a45b",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Suppose there is a uniform circular disc of mass $M \\mathrm{kg}$ and radius $r \\mathrm{m}$ shown in figure. The shaded regions are cut out from the disc. The moment of inertia of the remainder about the axis $A$ of the disc is given by $\\; \\frac{x}{256} M r^{2}$. The value of $x$ is $\\_\\_\\_\\_$。",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 109.0,
+        "max": 109.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-32eb789ad643",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two masses 400 g and 350 g are suspended from the ends of a light string passing over a heavy pulley of radius 2 cm . When released from rest the heavier mass is observed to fall 81 cm in 9 s . The rotational inertia of the pulley is $\\_\\_\\_\\_$ $\\text{kg} \\cdot \\text{m}^2 \\cdot (g=9.8 \\text{ m/s}^2)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8.3 \\times 10^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4.75 \\times 10^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.86 \\times 10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9.5 \\times 10^{-3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6646b41907e6",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "A thin uniform rod $(X)$ of mass $M$ and length $L$ is pivoted at a height $\\left( \\; \\frac{L}{3} \\right)$ as shown in the figure. The rod is allowed to fall from a vertical position and lie horizontally on the table. The angular velocity of this rod when it hits the table top, is $\\_\\_\\_\\_$\n( $g =$ gravitational acceleration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{ \\; \\frac{3}{2} \\; \\frac{g}{L} }$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{ \\; \\frac{3g}{L} }$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\; \\frac{3}{\\sqrt{2}} \\sqrt{ \\; \\frac{g}{L} }$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\; \\frac{1}{\\sqrt{2}} \\sqrt{ \\; \\frac{g}{L} }$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a2ae43df0289",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "A uniform solid cylinder of length $L$ and radius $R$ has moment of inertia about its axis equal to $I_1$ . A small co-centric cylinder of length $\\frac{L}{2}$ and radius $\\frac{R}{3}$ carved from this cylinder has moment of inertia about its axis equals to $I_2$. The ratio $\\frac{I_1}{I_2}$ is $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 162.0,
+        "max": 162.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2f0f5e272fcc",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two circular discs of radius each 10 cm are joined at their centres by a rod of length 30 cm and mass 600 gm as shown in figure.\nIf the mass of each disc is 600 gm and applied torque between two discs is $43 \\times 10^5$ dyne.cm, the angular acceleration of the discs about the given axis $A B$ is $\\_\\_\\_\\_$ $\\text{rad}/\\text{s}^2$.",
+      "image": {
+        "url": "/question-images/pyq/physics/rotational-motion/PYQ-PHY-2f0f5e272fcc.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "100",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "22",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "27",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "11",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e5d59d32d160",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "A solid sphere of radius 10 cm is rotating about an axis which is at a distance 15 cm from its centre. The radius of gyration about this axis is $\\sqrt{n}\\,\\mathrm{cm}$. The value of $n$ is",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 265.0,
+        "max": 265.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-00e40700b055",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "A fly wheel having mass 3 kg and radius 5 m is free to rotate about a horizontal axis. A string having negligible mass is wound around the wheel and the loose end of the string is connected to 3 kg mass. The mass is kept at rest initially and released. Kinetic energy of the wheel when the mass descends by 3 m is $\\_\\_\\_\\_$ J. $(g=10\\,\\text{m/s}^2)$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 30.0,
+        "max": 30.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-87e8b3e2cf6c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "When the position vector $\\vec{r}=x\\hat{i}+y\\hat{j}+z\\hat{k}$ changes sign as $-\\vec{r}$, which one of the following vector will not flip under sign change?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Velocity",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Linear momentum",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Acceleration",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Angular momentum",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5d4e022d63cb",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A solid sphere of mas M and radius R is divided into two unequal parts. The smaller part having mass M/8 is converted into a sphere of radius r and the larger part is converted into a circular disc of thickness t and radius 2R. If $I_1$ is moment of inertia of a sphere having radius r about an axis through its centre and $I_2$ is the moment of inertia of a disc about its diameter, the ratio of their moment of inertia $\\frac{I_2}{I_1}$ = _______.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "35",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "70",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "140",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "210",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2914cc6749b3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An object of uniform density rolls up the curved path with the initial velocity $v_0$ as shown in the figure. If the maximum height attained by an object is $\\; \\frac{7 v_{0}^{2}}{10 g}$ (g = acceleration due to gravity), the object is a_______.",
+      "image": {
+        "url": "/question-images/pyq/physics/rotational-motion/PYQ-PHY-2914cc6749b3.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "solid cylinder",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "ring",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "disc",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "solid sphere",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a1aea5d47df1",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A wheel initially at rest is subjected to a uniform angular acceleration about its axis. In the first 2 s it rotates through an angle $\\theta_1$ and in the next 2 s it rotates through an angle $\\theta_2$. The ratio $\\;\\frac{\\theta_2}{\\theta_1}$ is_____.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6af9cc2dab1c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A solid sphere of radius 4 cm and mass 5 kg is rotating (rotation axis is passing through the centre of the sphere) with an angular velocity of 1200 rpm. It is brought to rest in 10 s by applying a constant torque. The torque applied and the number of rotations it made before it comes to rest are _____ and ______ respectively.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.128 π Nm, 100",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.0128 π Nm, 50",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.128 π Nm, 50",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.0128 π Nm, 100",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bd59bdc5516b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solid sphere (A) of mass, 5m and spherical shell (B) of mass m, both having same radius, are placed on a rough surface. When a force of same magnitude is applied tangentially at the highest points of A and B, they start rolling without slipping with an acceleration of $a_A$ and $a_B$ , respectively. The ratio of $a_A$ and $a_B$ is _____.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5 : 21",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "6 : 10",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "21 : 25",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1 : 5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-523e513ddee0",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solid cylinder having radius R and length L is slipping on a rough horizontal plane. At time t = 0 the cylinder has a translational velocity $v_0 = 49 \\text{ m/s}$, perpendicular to its axis and a rotational velocity $\\frac{v_0}{4R}$ about the centre. The time taken by the cylinder to start rolling is ________ seconds. (coefficient of kinetic friction $\\mu_k = 0.25$ = 0.25 and $g = 9.8 \\text{ m/s}^2$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "15",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "7.5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

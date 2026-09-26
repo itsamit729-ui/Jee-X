@@ -1,0 +1,678 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Area Under Curves",
+    "slug": "area-under-curves",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 21
+  },
+  "subtopics": [
+    {
+      "slug": "area-of-bounded-regions",
+      "name": "Area of Bounded Regions",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-927e552e019d",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the area of the region bounded by $16 x^{2}-9 y^{2}=$ 144 and $8 x-3 y=24$ is A , then $3(A+6 \\log_{e}(3))$ is equal to _____ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 24.0,
+        "max": 24.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7a477de970ad",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the region, inside the ellipse $x^2+4 y^2=4$ and outside the region bounded by the curves $y=|x|-1$ and $y=1-|x|$ , is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3(\\pi-1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2(\\pi-1)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi-\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5c173ccdcca0",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the area of the region $\\{(x, y): 1-2x \\le y \\le 4-x^2, x \\ge 0, y \\ge 0\\}$ is $\\; \\frac{\\alpha}{\\beta}, \\alpha, \\beta \\in N, \\gcd(\\alpha, \\beta)=1$, then the value of $(\\alpha + \\beta)$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "73",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "85",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "67",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "91",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-56544663ac03",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the line $x=-1$ divide the area of the region $\\{(x, y): 1+x^2 \\le y \\le 3-x\\}$ in the ratio $m: n, \\gcd(m, n)=1$. Then $m+n$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "27",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "28",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "25",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "26",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-201ad2651e31",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The area of the region $A = \\{(x, y): 4 x^2+y^2 \\le 8.$ and $y^2 \\le 4 x\\}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi + \\; \\frac{2}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\; \\frac{\\pi}{2} + 2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pi + 4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\; \\frac{\\pi}{2} + \\; \\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e0b37d407e2a",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the area of the region bounded by the curve $y=\\max\\{\\sin x,\\cos x\\}$, lines $x=0, x=\\frac{3\\pi}{2}$, and the $x$-axis be A . Then, $A + A^2$ is equal to $\\_\\_\\_\\_$。",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 12.0,
+        "max": 12.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c7960be2ab1f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The area of the region enclosed between the circles $x^2+y^2=4$ and $x^2+(y-2)^2=4$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{2}{3}(4\\pi - 3\\sqrt{3})$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{4}{3}(2\\pi - \\sqrt{3})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{4}{3}(2\\pi - 3\\sqrt{3})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{2}{3}(2\\pi - 3\\sqrt{3})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-afe51a862650",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $A_1$ be the bounded area enclosed by the curves $y=x^2+2, x+y=8$ and $y$-axis that lies in the first quadrant. Let $A_2$ be the bounded area enclosed by the curves $y=x^2+2, y^2=x, x=2$, and $y$-axis that lies in the first quadrant. Then $A_1 - A_2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{2}{3}(2\\sqrt{2}+1)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{2}{3}(3\\sqrt{2}+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{2}{3}(\\sqrt{2}+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{2}{3}(4\\sqrt{2}+1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ad19a05a379e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(\\alpha)$ denote the area of the region in the first quadrant bounded by $x=0, x=1, y^2=x$ and $y=|\\alpha x-5|-|1-\\alpha x|+\\alpha x^2$ .Then $(f(0)+f(1))$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "14",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "7",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c856d300a9d9",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the region $R = \\{(x, y): x y \\le 8, 1 \\le y \\le x^2, x \\ge 0\\}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{2}{3} (20 \\log_e(2)+9)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{1}{3} (40 \\log_e(2)+27)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{1}{3} (49 \\log_e(2)-15)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{2}{3} (24 \\log_e(2)-7)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-38a3173f70ab",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $P_1: y=4x^2$ and $P_2: y=x^2+27$ be two parabolas. If the area of the bounded region enclosed between $P_1$ and $P_2$ is six times the area of the bounded region enclosed between the line $y=\\alpha x, \\alpha>0$ and $P_1$, then $\\alpha$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "12",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "15",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-43478d5e49a8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the region $(x, y) : y \\leq \\pi - |x|, y \\leq |x \\sin x|, y \\geq 0$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1 + \\frac{\\pi^2}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2 + \\frac{\\pi^2}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi^2}{8} - 1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4 + \\frac{\\pi^2}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-98978a7006b8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The area of the region bounded by the curves $x+ 3y^2 = 0$ and $x + 4y^2 = 1$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{4}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{5}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c47847f725e2",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the region $R = \\{ (x, y) : xy \\le 27, 1 \\le y \\le x^{2} \\}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$78 \\log_{e} 3 - \\frac{52}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$54 \\log_{e} 3 - \\frac{52}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$54 \\log_{e} 3 - \\frac{26}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$54 \\log_{e} 3 + \\frac{26}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0c03035842cd",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f: R \\rightarrow R$ be a function such that $f(x)+3f\\left(\\frac{\\pi}{2}-x\\right)=\\sin x,\\; x\\in R$. Let maximum value of f on R be α. If the area of the region bounded by the curves $g(x)=x^{2}$ and $h(x)=\\beta x^{3}$, β>0, is $\\alpha^{2}$, then $30\\beta^{3}$ is equal to ______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0780e4379032",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let e be the base of natural logarithm and let $f:\\{1,2,3,4\\} \\longrightarrow \\{1, e, e^{2}, e^{3}\\}$ and $g: \\{1, e, e^{2}, e^{3}\\} \\longrightarrow \\{1, \\;\\frac{1}{2}, \\;\\frac{1}{3}, \\;\\frac{1}{4}\\}$ be two bijective functions such that f is strictly decreasing and g is strictly increasing. If $\\varphi(x) = \\left[ f^{-1} \\{ g^{-1} \\left(\\;\\frac{1}{2}\\right) \\} \\right]^{x}$, then the area of the region $R = \\{ (x, y) : x^{2} \\leq y \\leq \\varphi(x). , 0 \\leq x \\leq 1 \\}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3-\\log_{e}(2)}{3\\log_{e}(2)}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3\\log_{e}(2)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3+\\log_{e}(2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3+\\log_{e}(2)}{2+\\log_{e}(3)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0cfc926a9026",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the region $\\{ (x, y): 0 \\le y \\le 6-x$, $y^{2} \\ge 4 x - 3, x \\ge 0 \\}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "9",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "15",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ae13ad8e9d5e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The area of the region $\\{(x, y): x^2 - 8x \\le y \\le -x\\}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{343}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{637}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{437}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{523}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f1244c9cd6c9",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f:(1,\\infty) \\longrightarrow R$ be function defined as $f(x)=\\;\\frac{x-1}{x+1}$. Let $f^{i+1}(x) = f ( f^{i}(x) )$, $i=1,2,\\ldots,25$, where $f^{1}(x)=x$. If $g(x)+f^{26}(x)=0$, $x \\in (1,\\infty)$, then the area of the region bounded by the curves $y = g(x), 2y = 2x - 3, y = 0$ and $x=4$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{8} + \\log_{e} 2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4} + \\log_{e} 2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{6} + 3 \\log_{e} 2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{6} + \\log_{e} 2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

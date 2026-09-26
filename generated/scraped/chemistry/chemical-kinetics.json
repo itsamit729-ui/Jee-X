@@ -1,0 +1,711 @@
+{
+  "subject": "CHEM",
+  "chapter": {
+    "name": "Chemical Kinetics",
+    "slug": "chemical-kinetics",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 20
+  },
+  "subtopics": [
+    {
+      "slug": "integrated-rate-laws",
+      "name": "First Order Kinetics",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-CHEM-00f4f7904bee",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For reaction $A \\rightarrow P$, rate constant $k = 1.5 \\times 10^{3} \\mathrm{s}^{-1}$ at $27^{\\circ} \\mathrm{C}$. If activation energy for the above reaction is $60 \\ \\mathrm{kJ} \\ \\mathrm{mol}^{-1}$, then the temperature (in $^{\\circ} \\mathrm{C}$) at which rate constant, $k = 4.5 \\times 10^{3} \\mathrm{s}^{-1}$ is ______. (Nearest integer)\nGiven : $\\log 2 = 0.30, \\log 3 = 0.48, R = 8.3 \\ \\mathrm{J} \\ \\mathrm{K}^{-1} \\ \\mathrm{mol}^{-1}, \\ln 10 = 2.3$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 41.0,
+        "max": 41.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b7fe1a20b961",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$t_{100\\%}$ is the time required for the 100",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$t_{100\\%} = (t_{1/2})^{2}$ and $t_{100\\%} = (t_{1/2})^{-\\infty}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$t_{100\\%} = 2 t_{1/2}$ and $t_{100\\%} = (t_{1/2})^{\\infty}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$t_{100\\%} = 2 t_{1/2}$ and $t_{100\\%} = (2 t_{1/2})^{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$t_{100\\%} = (t_{1/2})^{\\infty}$ and $t_{100\\%} = 2 t_{1/2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6c0a6814a862",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the following gas phase reaction being carried out in a closed vessel at $25^{\\circ}\\,\\mathrm{C}$.\n$2\\,\\mathrm{A}(\\mathrm{g}) \\rightarrow 4\\,\\mathrm{B}(\\mathrm{g})+\\mathrm{C}(\\mathrm{g})$\nThe pressure of C(g) at 30 minutes time interval would be _________mm Hg. (Nearest integer)",
+      "image": {
+        "url": "/question-images/pyq/chemistry/chemical-kinetics/PYQ-CHEM-6c0a6814a862.png",
+        "alt": "Figure for this Chemical Kinetics question"
+      },
+      "options": [],
+      "answer": {
+        "min": 20.0,
+        "max": 20.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d9d0aab27f4b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the reaction $aX \\rightarrow bY$, for which the rate constant at $30^{\\circ} \\mathrm{C}$ is $1 \\times 10^{-3} \\, \\mathrm{mol}^{-1} \\, \\mathrm{Ls}^{-1}$. Which of the following statements are true ?\nA. When concentration of ' X ' is increased to four times, the rate of reaction becomes 16 times.\nB. The reaction is a second order reaction.\nC. The half-life period is independent of the concentration of X .\nD. Decomposition of $\\mathrm{N}_2 \\, \\mathrm{O}_5$ is an example of the above reaction.\nE. is valid for the above reaction.",
+      "image": {
+        "url": "/question-images/pyq/chemistry/chemical-kinetics/PYQ-CHEM-d9d0aab27f4b.png",
+        "alt": "Figure for this Chemical Kinetics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "A and B only",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "A, B and C only",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "A, B, D and E only",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "C and D only",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-25489802a8ca",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "$A \\rightarrow$ product (First order reaction).\nThree sets of experiment were performed for a reaction under similar experimental conditions:\nRun $1 \\Rightarrow 100\\,\\text{mL}$ of 10 M solution of reactant A Run $2 \\Rightarrow 200\\,\\text{mL}$ of 10 M solution of reactant A Run $3 \\Rightarrow 100\\,\\text{mL}$ of 10 M solution of reactant $A +100\\,\\text{mL}$ of $\\mathrm{H}_2\\mathrm{O}$ added.\nThe correct variation of rate of reaction is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Run $1=$ Run $2=$ Run 3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Run $3<$ Run $1<$ Run 2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Run $1< \\text{Run} 2< \\text{Run} 3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Run $3<$ Run $1=$ Run 2",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4f648dee4e77",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Correct statements regarding Arrhenius equation among the following are:\nA. Factor $e^{-\\frac{Ea}{RT}}$ corresponds to fraction of molecules having kinetic energy less than Ea.\nB. At a given temperature, lower the Ea, faster is the reaction.\nC. Increase in temperature by about $10^{\\circ} \\mathrm{C}$ doubles the rate of reaction.\nD. Plot of $\\log k$ vs $\\;\\frac{1}{T}$ gives a straight line with slope $= -\\;\\frac{Ea}{R}$.\nChoose the correct answer from the options given below :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A and B Only",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "B and D Only",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "B and C Only",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "A and C Only",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b276b809b994",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider $A \\xrightarrow{k_1} B$ and $C \\xrightarrow{k_2} D$ are two reactions. If the rate constant $(k_1)$ of the $A \\rightarrow B$ reaction can be expressed by the following equation $\\log_{10} k = 14.34 - \\; \\frac{1.5 \\times 10^4}{T / \\mathrm{K}}$ and activation energy of $C \\rightarrow D$ reaction $(E a_2)$ is $\\; \\frac{1}{5}$ th of the $A \\rightarrow B$ reaction $(E a_1)$, then the value of $(E a_2)$ is $\\_\\_\\_\\_$ $\\mathrm{kJ\\,mol^{-1}}$. (Nearest Integer)",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 57.0,
+        "max": 57.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c30d5a18e84d",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "For the thermal decomposition of reactant $\\mathrm{AB} (\\mathrm{g})$, the following plot is constructed.\nThe half life of the reaction is ' $x' \\text{ min}$.\n$x =$ $\\_\\_\\_\\_$ min. (Nearest integer)",
+      "image": {
+        "url": "/question-images/pyq/chemistry/chemical-kinetics/PYQ-CHEM-c30d5a18e84d.png",
+        "alt": "Figure for this Chemical Kinetics question"
+      },
+      "options": [],
+      "answer": {
+        "min": 10.0,
+        "max": 10.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-04adabd4f22c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Given above is the concentration vs time plot for a dissociation reaction : $A \\longrightarrow nB$.\nBased on the data of the initial phase of the reaction (initial 10 min ), the value of n is $\\_\\_\\_\\_$",
+      "image": {
+        "url": "/question-images/pyq/chemistry/chemical-kinetics/PYQ-CHEM-04adabd4f22c.png",
+        "alt": "Figure for this Chemical Kinetics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4c3c1823935a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Observe the following reactions at $T(\\mathrm{K})$.\nI. $A \\rightarrow$ products.\nII. $5\\mathrm{Br}^{-}(aq) + \\mathrm{BrO}_3^{-}(aq) + 6\\mathrm{H}^{+}(aq) \\rightarrow 3\\mathrm{Br}_2(aq) + 3\\mathrm{H}_2\\mathrm{O}(l)$\nBoth the reactions are started at 10.00 am .\nThe rates of these reactions at 10.10 am are same. The value of $-\\frac{\\Delta [\\mathrm{Br}^{-}]}{\\Delta t}$ at 10.10 am is $2 \\times 10^{-4} \\mathrm{mol} \\mathrm{L}^{-1} \\mathrm{min}^{-1}$. The concentration of A at 10.10 am is $10^{-2} \\mathrm{mol} \\mathrm{L}^{-1} \\mathrm{min}^{-1}$. What is the first order rate constant (in $\\mathrm{min}^{-1}$ ) of reaction $I$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4 \\times 10^{-3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2 \\times 10^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^{-2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c1677658ee05",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "At $27^{\\circ}\\mathrm{C}$ in presence of a catalyst, activation energy of a reaction is lowered by $10\\ \\text{kJ mol}^{-1}$. The logarithm of ratio of $\\frac{k\\;\\text{(catalysed)}\\;}{k\\;\\text{(uncatalysed)}\\;}$ is....\n(Consider that the frequency factor for both the reactions is same)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.741",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0.1741",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "17.41",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3.482",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8bfae6e9dd13",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The half-life of ${}^{65}\\mathrm{Zn}$ is 245 days. After $x$ days, $75\\%$ of original activity remained. The value of $x$ in days is $\\_\\_\\_\\_$ . (Nearest integer)\n(Given: $\\log 3=0.4771$ and $\\log 2=0.3010$ )",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 102.0,
+        "max": 102.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-016aede49076",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "An organic compound undergoes first order decomposition. The time taken for decomposition to $\\left(\\frac{1}{8}\\right)^{\\text{th}}$ and $\\left(\\frac{1}{10}\\right)^{\\text{th}}$ of its initial concentration are $t_{\\frac{1}{8}}$ and $t_{\\frac{1}{10}}$ respectively.\nWhat is the value of $\\frac{t_{\\frac{1}{8}}}{t_{\\frac{1}{10}}} \\times 10$ ?\n$\\left(\\log 2 = 0.3\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "30",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "9",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.9",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e6ed5fe1bdb6",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "$A \\rightarrow B$ (first reaction)\n$C \\rightarrow D$ (second reaction)\nConsider the above two first-order reactions. The rate constant for first reaction at 500 K is double of the same at 300 K . At 500 K , $50 \\%$ of the reaction becomes complete in 2 hour. The activation energy of the second reaction is half of that of first reaction. If the rate constant at 500 K of the second reaction becomes double of the rate constant of first reaction at the same temperature; then rate constant for the second reaction at 300 K is $\\_\\_\\_\\_$ $\\times 10^{-1}$ hour $^{-1}$ (nearest integer).",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 5.0,
+        "max": 5.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-66d04e0e662c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Consider the first order reaction $R \\rightarrow P$.\nThe fraction of molecules decomposed in the given first order reaction can be expressed as",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1 - e^{k_1 t}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1 + e^{k_1 t}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1 + e^{-k_1 t}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1 - e^{-k_1 t}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-55109b82f24e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the given graph showing variation of reactant concentration with time.\nThree different reactions were started with identical initial concentration of reactants. Which of the following statement is correct?",
+      "image": {
+        "url": "/question-images/pyq/chemistry/chemical-kinetics/PYQ-CHEM-55109b82f24e.png",
+        "alt": "Figure for this Chemical Kinetics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "The order of all the three reactions is same.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "The rate constant of reaction 3 is larger than the rate constant of reaction 2 if the order of reaction is same for both.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "The SI unit of rate constant of reaction 1 is $\\mathrm{s}^{-1}$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Thermal decomposition of HI on gold surface is an example of reaction 2.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7b2515c1e342",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a first order reaction $A \\rightarrow B$\nt/min[A]/M00.6500x0.0650200.00065\nx = ______ min. (Nearest integer)",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 7.0,
+        "max": 7.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4eafb5c577b7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "First order gas phase reaction\n$A \\longrightarrow B+C$\n$p_{i}=$ initial pressure of gas A, $p_{t}=$ total pressure of the reaction mixture at time t\nExpression of rate constant (k) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{1}{t} \\ln\\;\\frac{p_{i}}{2p_{i}-p_{t}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{1}{t} \\ln\\;\\frac{p_{i}}{3p_{i}-2p_{t}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{1}{t} \\ln\\;\\frac{3p_{i}}{4p_{i}-p_{t}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;{1}/{t} \\ln \\;{3 p_{i}}/{4 p_{i}-p_{t}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a9886520a741",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the half life of a first order reaction is 6.93 minutes then the time required for completion of 99\n(Given : $\\log 2 = 0.3010$)",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 46.0,
+        "max": 46.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ec75b7337420",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a reaction A ⟶ P at T K, the half life $(t_{1/2})$ is plotted as a function of initial concentration $[A]_0$ of A as given below :\nThe value of x in the given figure is _____ s. (Nearest integer)",
+      "image": {
+        "url": "/question-images/pyq/chemistry/chemical-kinetics/PYQ-CHEM-ec75b7337420.png",
+        "alt": "Figure for this Chemical Kinetics question"
+      },
+      "options": [],
+      "answer": {
+        "min": 90.0,
+        "max": 90.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-59ad8e65ce5f",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Sucrose hydrolyses in acidic medium into glucose and fructose by first order rate law with $t_{\\frac{1}{2}}=3$ hour. The percentage of sucrose remaining after 6 hours is ______. (Nearest integer)\n(Given : $\\log 2=0.3010$ and $\\log 3=0.4771$)",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 25.0,
+        "max": 25.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1c829b14cacc",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Decomposition of a hydrocarbon follows the equation $k = (5.5 \\times 10^{11} \\mathrm{s}^{-1}) e^{\\; \\frac{-28000\\,K}{T}}$. The activation energy of reaction is ______ $\\mathrm{kJ}\\, \\mathrm{mol}^{-1}$. (Nearest Integer)\nGiven : $R = 8.3 \\, \\mathrm{JK}^{-1} \\, \\mathrm{mol}^{-1}.$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 232.0,
+        "max": 232.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b8d8f8cf250e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Given below are two statements :\n$R=8.314\\,\\text{J}\\,\\text{K}^{-1}\\,\\text{mol}^{-1}$ and $1\\,\\text{cal}=4.2\\,\\text{J}$\nStatement I : When $Ea=12.6\\,\\text{kcal/mol}$, the room temperature rate constant is doubled by a $10^{\\circ}\\,\\text{C}$ increase in temperature ( 298 K to 308 K)\nStatement II : For a first order reaction $A \\rightarrow B$,\nHere $[A]_0$ is the initial concentration of A and $t_{1/2}$ is half-life of reaction.\nIn the light of the above statements, choose the correct answer from the option given below :",
+      "image": {
+        "url": "/question-images/pyq/chemistry/chemical-kinetics/PYQ-CHEM-b8d8f8cf250e.png",
+        "alt": "Figure for this Chemical Kinetics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Both Statement I and Statement II are true.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Both Statement I and Statement II are false.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Statement I is true but Statement II are false.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Statement I is false but Statement II are true.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

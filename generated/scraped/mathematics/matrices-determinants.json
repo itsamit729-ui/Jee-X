@@ -1,0 +1,1071 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Matrices and Determinants",
+    "slug": "matrices-determinants",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 15
+  },
+  "subtopics": [
+    {
+      "slug": "system-of-linear-equations",
+      "name": "System of Linear Equations",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-20b6e614cd02",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $α, β ∈ \\mathbb{R}$ be such that the system of linear equations\n$x+2y+z=5$\n$2x+y+\\alpha z=5$\n$8x+4y+\\beta z=18$\nhas no solution. Then $\\;\\frac{\\beta}{\\alpha}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-affc742a4bd7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\begin{pmatrix} 1 & 2 \\\\ 1 & \\alpha \\end{pmatrix}$ and $B=\\begin{pmatrix} 3 & 3 \\\\ \\beta & 2 \\end{pmatrix}$.\nIf $A^{2}-4A+I=O \\text{ and } B^{2}-5B-6I=O$, then among the two statements :\n(S1) : $\\left[(B-A)(B+A)\\right]^{T}=\\begin{pmatrix} 13 & 15 \\\\ 7 & 10 \\end{pmatrix}$ and\n(S2): $\\det(\\operatorname{adj}(A+B))=-5.$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "only (S1) is correct",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "only (S2) is correct",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "both (S1) and (S2) are correct",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "both (S1) and (S2) are wrong",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0cd4119bf75d",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the system of equations\n$x + 5y + 6z = 4,$\n$2x + 3y + 4z = 7,$\n$x + 6y + az = b$\nhas infinitely many solutions, then the point (a, b) lies on the line",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "y – x = 3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "x – y = 3",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "x + y = 11",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "x + y = 12",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d499ec02419c",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the matrices $A = \\begin{bmatrix} 2 & -2 \\\\ 4 & -2 \\end{bmatrix} \\text{ and } B = \\begin{bmatrix} 3 & 9 \\\\ 1 & 3 \\end{bmatrix}$. If matrices P and Q are such that $PA =$ B and $AQ = B$, then the absolute value of the sum of the diagonal elements of $2(P+Q)$ is _____ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 34.0,
+        "max": 34.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7d349487d853",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "For some $\\alpha, \\beta \\in R$, let $A=\\begin{pmatrix} \\alpha & 2 \\\\ 1 & 2 \\end{pmatrix}$ and $B=\\begin{pmatrix} 1 & 1 \\\\ 1 & \\beta \\end{pmatrix}$ be such that $A^2-4A+2I=B^2-3B+I=O$. Then $\\left( \\det \\left( \\operatorname{adj} \\left( A^3-B^3 \\right) \\right) \\right)^2$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 225.0,
+        "max": 225.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ec6384238b37",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "For the matrices $A=\\begin{bmatrix} 3 & -4 \\\\ 1 & -1 \\end{bmatrix}$ and $B=\\begin{bmatrix} -29 & 49 \\\\ -13 & 18 \\end{bmatrix}$, if $(A^{15}+B) \\begin{bmatrix} x \\\\ y \\end{bmatrix} = \\begin{bmatrix} 0 \\\\ 0 \\end{bmatrix}$, then among the following which one is true?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=16, y=3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x=5, y=7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=11, y=2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x=18, y=11$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f69b67c84b38",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the system of equations $\\;3 x+y+4 z=3$\n$\\;2 x+\\alpha y-z=-3$\n$\\;x+2 y+z=4$ has no solution, then the value of $\\alpha$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "13",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "19",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "23",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a9e4a40f3b4c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $A = \\begin{bmatrix} 2 & 3 \\\\ 3 & 5 \\end{bmatrix}$, then the determinant of the matrix $( A^{2025} - 3 A^{2024} + A^{2023} )$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "24",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "28",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "16",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-37582fa98b64",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix}$ is a solution of the system of equations $A X = B$, where $\\operatorname{adj} A = \\begin{pmatrix} 4 & 2 & 2 \\\\ -5 & 0 & 5 \\\\ 1 & -2 & 3 \\end{pmatrix}$ and $B = \\begin{pmatrix} 4 \\\\ 0 \\\\ 2 \\end{pmatrix}$, then $\\left| x+y+z \\right|$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7d028838275f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $n$ be the number obtained on rolling a fair die. If the probability that the system $\\;x-n y+z=6$\n$\\;x+(n-2) y+(n+1) z=8$\n$\\;\\;\\; (n-1) y+z=1$ has a unique solution is $\\;\\frac{k}{6}$, then the sum of $k$ and all possible values of $n$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "22",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "20",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "24",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "21",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-49029bc1a87f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Among the statements :\nI: If $\\begin{vmatrix} 1 & \\cos\\alpha & \\cos\\beta \\\\ \\cos\\alpha & 1 & \\cos\\gamma \\\\ \\cos\\beta & \\cos\\gamma & 1 \\end{vmatrix} = \\begin{vmatrix} 0 & \\cos\\alpha & \\cos\\beta \\\\ \\cos\\alpha & 0 & \\cos\\gamma \\\\ \\cos\\beta & \\cos\\gamma & 0 \\end{vmatrix}$,\nthen $\\cos^2\\alpha + \\cos^2\\beta + \\cos^2\\gamma = \\frac{3}{2}$,\nand II: If $\\begin{vmatrix} x^2+x & x+1 & x-2 \\\\ 2x^2+3x-1 & 3x & 3x-3 \\\\ x^2+2x+3 & 2x-1 & 2x-1 \\end{vmatrix} = p x + q$,\nthen $p^2 = 196 q^2$,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "both are true",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "both are false",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "only I is true",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "only II is true",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7ebd08521987",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\lvert A \\rvert = 6$, where A is a $3 \\times 3$ matrix. If $\\lvert \\operatorname{adj} ( \\operatorname{adj} ( A^2 \\cdot \\operatorname{adj}(2A) ) ) \\rvert = 2^{m} \\cdot 3^{n}, m, n \\in \\mathbb{N}$, then $m + n$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 62.0,
+        "max": 62.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-37345ea40645",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The system of linear equations $\\;x+y+z=6$\n$\\;2 x+5 y+a z=36$\n$\\;x+2 y+3 z=b$ has:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "unique solution for $a=8$ and $b=16$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "infinitely many solutions for $a=8$ and $b=14$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "infinitely many solutions for $a=8$ and $b=16$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "unique solution for $a=8$ and $b=14$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c23e0f0a39be",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\begin{bmatrix} 0 & 2 & -3 \\\\ -2 & 0 & 1 \\\\ 3 & -1 & 0 \\end{bmatrix}$ and $B$ be a matrix such that $B(I-A)=I+A$. Then the sum of the diagonal elements of $B^{T}B$ is equal to $\\_\\_\\_\\_$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b91f24eeded1",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of $3 \\times 2$ matrices A , which can be formed using the elements of the set $\\{-2,-1,0,1,2\\}$ such that the sum of all the diagonal elements of $A^T A$ is 5 , is",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 312.0,
+        "max": 312.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-53f10a35b252",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=\\int \\frac{7 x^{10}+9 x^8}{(1+x^2+2 x^9)^2} \\, dx, x>0, \\lim\\limits_{x\\to 0}f(x)=0$ and $f(1)=\\frac{1}{4}$.\nIf $A = \\begin{bmatrix} 0 & 0 & 1 \\\\ \\frac{1}{4} & f'(1) & 1 \\\\ \\alpha^2 & 4 & 1 \\end{bmatrix}$ and $B = \\operatorname{adj}(\\operatorname{adj} A)$ be such that $|B| = 81$, then $\\alpha^2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6beb0ea21fd6",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $P = [p_{ij}]$ and $Q = [q_{ij}]$ be two square matrices of order 3 such that $q_{ij}=2^{(i+j-1)}p_{ij}$ and $\\det(Q)=2^{10}$. Then the value of $\\det(\\operatorname{adj}(\\operatorname{adj} P))$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "81",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "16",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "124",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "32",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-43a22b474544",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $A, B$ and $C$ be three $2 \\times 2$ matrices with real entries such that $B=(I+A)^{-1}$ and $A + C = I$.\nIf $BC = \\begin{array}{cc} 1 & -5 \\\\ -1 & 2 \\end{array}$ and $CB \\begin{bmatrix} x_1 \\\\ x_2 \\end{bmatrix} = \\begin{bmatrix} 12 \\\\ -6 \\end{bmatrix}$, then $x_1+x_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "-2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-063fa489cfeb",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $A = \\begin{bmatrix} 1 & 1 & 2 \\\\ -2 & 0 & 1 \\\\ 1 & 3 & 5 \\end{bmatrix}$. Then the sum of all elements of the matrix $\\operatorname{adj} \\left( \\operatorname{adj} \\left( 2 (\\operatorname{adj} A)^{-1} \\right) \\right)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "-4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-3",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e94ea70ac880",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let\n$S = \\{ A = \\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix} : a, b, c, d \\in \\{0,1,2,3,4\\} .$ and $A^2 - 4A + 3I = 0 \\}$ be a set of $2 \\times 2$ matrices. Then the number of matrices in S, for which the sum of the diagonal elements is equal to 4, is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "20",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "17",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "21",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "19",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-84a682dea7c0",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the system of equations :\n$x + y + z = 5$\n$x + 2y + 3z = 9$\n$x + 3y + \\lambda z = \\mu$\nhas infinitely many solutions, then the value of $\\lambda + \\mu$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "16",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "18",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "19",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "21",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8e3e5f882085",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $A = \\begin{bmatrix} 1 & 2 & 7 \\\\ 4 & -2 & 8 \\\\ 3 & 8 & -7 \\end{bmatrix}$ and $\\det(A - \\alpha I) = 0$, where α is a real number. If the largest possible value of α is p, then the circle $(x-p)^2 + (y-2p)^2 =$ 320, intersects the co-ordinate axes at",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1 point",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2 points",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3 points",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "4 points",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3a83f5c3478d",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Consider the system of linear equations in x, y, z :\n$x+2y+tz=0,$\n$6x+y+5tz=0,$\n$3x+t^{2}y+f(t)z=0,$\nWhere $f: R \\longrightarrow R$ is a differentiable function. If this system has infinitely many solutions for all $t \\in R$, then f",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "is a constant function",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "is strictly increasing on R",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "is strictly decreasing on R",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "has two critical points",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a14357938d9b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let A be a $3 \\times 3$ matrix such that $A^{T}\\begin{bmatrix}1\\\\0\\\\1\\end{bmatrix}=\\begin{bmatrix}5\\\\2\\\\2\\end{bmatrix},\\;\\; A^{T}\\begin{bmatrix}0\\\\0\\\\1\\end{bmatrix}=\\begin{bmatrix}3\\\\1\\\\1\\end{bmatrix},\\;\\; A\\begin{bmatrix}1\\\\0\\\\1\\end{bmatrix}=\\begin{bmatrix}3\\\\4\\\\4\\end{bmatrix}$ $\\text{and } A\\begin{bmatrix}0\\\\0\\\\1\\end{bmatrix}=\\begin{bmatrix}1\\\\3\\\\1\\end{bmatrix}$ If $\\det(A)=1$, then $\\det(\\operatorname{adj}(A^{2}+A))$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "16",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "25",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "49",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "64",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a6e74a1f0be4",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let M be a $3 \\times 3$ matrix such that $M \\begin{pmatrix}1\\\\0\\\\0\\end{pmatrix} = \\begin{pmatrix}1\\\\2\\\\3\\end{pmatrix}, M \\begin{pmatrix}0\\\\1\\\\0\\end{pmatrix} = \\begin{pmatrix}0\\\\1\\\\2\\end{pmatrix}$ and $M \\begin{pmatrix}0\\\\0\\\\1\\end{pmatrix} = \\begin{pmatrix}-1\\\\1\\\\1\\end{pmatrix}$. If $M \\begin{pmatrix} x \\\\ y \\\\ z \\end{pmatrix} = \\begin{pmatrix} 1 \\\\ 7 \\\\ 11 \\end{pmatrix}$, then $x + y + z$ equals :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "7",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "11",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ce93a2c4acbd",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f: N \\longrightarrow Z$ is defined by $f(n)=\\begin{vmatrix} n & -1 & -5 \\\\ -2n^{2} & 3(2k+1) & 2k+1 \\\\ -3n^{3} & 3k(2k+1) & 3k(k+2)+1 \\end{vmatrix}, k \\in N$ , and $\\sum_{n=1}^{k} f(n)=98$, then k is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ce1b5e13f4d1",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $A = \\begin{bmatrix} -1 & 1 & -1 \\\\ 1 & 0 & 1 \\\\ 0 & 0 & 1 \\end{bmatrix} \\text{ satisfy } A^{2} + \\alpha (\\operatorname{adj}(\\operatorname{adj}(A))) + \\beta (\\operatorname{adj}(A)(\\operatorname{adj}(\\operatorname{adj}(A))))$ $= \\begin{bmatrix} 2 & -2 & 2 \\\\ -2 & 0 & -1 \\\\ 0 & 0 & -1 \\end{bmatrix}$ for Some $\\alpha, \\beta \\in \\mathbb{R}$. Then $(\\alpha - \\beta)^{2}$ is equal to $\\_\\_\\_\\_$.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0b01a81a2145",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\begin{pmatrix} 1 & 0 & 0 \\\\ 3 & 1 & 0 \\\\ 9 & 3 & 1 \\end{pmatrix}$ and $B=[b_{ij}],\\ 1\\le i,\\ j\\le 3$.\nIf $B=A^{99}-I$, then the value of $\\;\\frac{b_{31}-b_{21}}{b_{32}}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "99",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "199",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "149",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "159",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-934cc03e2fa7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The sum of all possible values of $\\theta \\in [0, 2\\pi],$ for which the system of equations :\n$x\\cos 3\\theta - 8y - 12z = 0$\n$x\\cos 2\\theta + 3y + 3z = 0$\n$x + y + 3z = 0$\nhas a non-trivial solution, is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "π",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2π",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3π",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4π",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4524a8c11af0",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the system of linear equations :\n$x + y + z = 6,$\n$x +2y +5z = 10,$\n$2x + 3y + \\lambda z = \\mu.$\nhas infinitely many solutions, then the value of $\\lambda + \\mu$ equals.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "16",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "22",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "28",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-601a66dff820",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\begin{bmatrix} \\alpha & 1 & 2 \\\\ 2 & 3 & 0 \\\\ 0 & 4 & 5 \\end{bmatrix}$ and $B=\\begin{bmatrix} 1 & 0 & 0 \\\\ 0 & -5\\alpha & 0 \\\\ 0 & 4\\alpha & -2\\alpha \\end{bmatrix} + \\operatorname{adj}(A)$. If det(B) = 66, then det(adj (A))equals:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "289",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "361",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "441",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "529",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

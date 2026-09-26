@@ -1,0 +1,399 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Applications of Derivatives",
+    "slug": "application-of-derivatives",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 18
+  },
+  "subtopics": [
+    {
+      "slug": "tangents-and-normals",
+      "name": "Tangents and Normals",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-05b420d65c0d",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of critical points of the function $f(x)=\\begin{cases} \\left|\\dfrac{\\sin x}{x}\\right|, & x\\neq 0 \\\\ 1, & x=0 \\end{cases}$ in the interval $(-2\\pi, 2\\pi)$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "7",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bb475fa1d95e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)$ be a polynomial of degree 5, and have extrema at x = 1 and x=-1. If $\\lim\\limits_{x\\to 0}\\left(\\frac{f(x)}{x^{3}}\\right) =-5$, then $f(2)-f(-2)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "50",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "92",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "112",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cf4ca6199271",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f: R \\longrightarrow R$ be a twice differentiable function such that the quadratic equation $f(x) m^2 - 2 f'(x) m + f''(x) = 0$ in m , has two equal roots for every $x \\in R$. If $f(0)=1, f'(0)=2$, and $(\\alpha, \\beta)$ is the largest interval in which the function $f(\\log_e x - x)$ is increasing, then $\\alpha + \\beta$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f05aa4d2456e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f: \\mathbb{R} \\longrightarrow \\mathbb{R}$ be a twice differentiable function such that $f''(x)>0$ for all $x \\in \\mathbb{R}$ and $f'(a-1)=0$, where $a$ is a real number.\nLet $g(x)=f(\\tan^2 x - 2\\tan x + a), 0< x< \\frac{\\pi}{2}$.\nConsider the following two statements:\n(I) g is increasing in $\\left(0, \\frac{\\pi}{4}\\right)$\n(II) g is decreasing in $\\left(\\frac{\\pi}{4}, \\frac{\\pi}{2}\\right)$ Then,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Both (I) and (II) are True",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Neither (I) nor (II) is True",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Only (I) is True",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Only (II) is True",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ef2d280b6942",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=x^{2025}-x^{2000}, x \\in [0,1]$ and the minimum value of the function $f(x)$ in the interval $[0,1]$ be $(80)^{80}(n)^{-81}$. Then $n$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-40",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-41",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "-80",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-81",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7ce6b6dd13ed",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\alpha$ and $\\beta$ respectively be the maximum and the minimum values of the function $f(\\theta)=4\\left(\\sin^4\\left(\\frac{7\\pi}{2}-\\theta\\right)+\\sin^4(11\\pi+\\theta)\\right)-2\\left(\\sin^6\\left(\\frac{3\\pi}{2}-\\theta\\right)+\\sin^6(9\\pi-\\theta)\\right)$ Then $\\alpha+2\\beta$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-96f44c4469ae",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The least value of $(\\cos^2 \\theta - 6 \\sin\\;\\theta \\cos \\theta + 3 \\sin^2 \\theta + 2)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4 - \\sqrt{10}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "-1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4 + \\sqrt{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e175217ee799",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $(2\\alpha, \\alpha)$ be the largest interval in which the function $f(t)=\\frac{\\left|t+1\\right|}{t^2}, t<0$, is strictly decreasing. Then the local maximum value of the function $g(x)=2\\log_{e}(x-2)+\\alpha x^2+4x-\\alpha, x. > 2$, is $\\_\\_\\_\\_$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-58d6354a6023",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the following three statements for the function $f:(0,\\infty)\\longrightarrow R$ defined by $f(x)=|\\log_e x|-|x-1|$ :\n(I) $f$ is differentiable at all $x>0$.\n(II) $f$ is increasing in $(0,1)$.\n(III) $f$ is decreasing in $(1,\\infty)$.\nThen.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Only (I) is TRUE.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Only (I) and (III) are TRUE.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Only (II) and (III) are TRUE.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "All (I), (II) and (III) are TRUE.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-39912d848ecb",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\max_{0\\le x\\le \\pi}\\left(16\\sin\\left(\\frac{x}{2}\\right)\\cos^{3}\\left(\\frac{x}{2}\\right)\\right)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\sqrt{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-460c4a4d796a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f: R \\to R$ be a differentiable function such that $f\\left(\\frac{x+y}{3}\\right) = \\frac{f(x)+f(y)}{3}$ for all $x, y \\in R$ and $f'(0)=3$. Then the minimum value of the function $g(x)=3+e^{x} f(x),$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\left(\\frac{e+1}{e}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\left(\\frac{e-1}{e}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3-e}{e}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3e",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

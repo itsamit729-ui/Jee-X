@@ -1,0 +1,809 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Continuity and Differentiability",
+    "slug": "continuity-differentiability",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 17
+  },
+  "subtopics": [
+    {
+      "slug": "differentiability",
+      "name": "Differentiability and its applications",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-0e5c9d733180",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\lim\\limits_{x\\to 2}\\frac{\\sin(x^{3}-5x^{2}+ax+b)}{(\\sqrt{x-1}-1)\\log_{e}(x-1)}=m$, then $a+b+m$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "10",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b9d915f2251c",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The number of points in the interval [2,4], at which the function $f(x) = \\left[ x^2 - x - \\; \\frac{1}{2} \\right]$, where $[\\cdot]$ denotes the greatest integer function, is discontinuous, is _____ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 10.0,
+        "max": 10.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-84585fd6579e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f: R \\to (0, \\infty)$ be a twice differentiable function such that $f(3)=18, f'(3)=0$ and $f''(3)=4$.\nThen $\\lim\\limits_{x\\to 1}\\left(\\log_e\\left(\\frac{f(2+x)}{f(3)}\\right)\\right)^{\\frac{18}{(x-1)^2}}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "18",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5f574c707af7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=x^3+x^2 f'(1)+2 x f''(2)+f'''(3), x\\in\\mathbb{R}$. Then the value of $f'(5)$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{657}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{117}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{62}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5c16e92976c7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $[\\cdot]$ denote the greatest integer function, and let $f(x)=\\min\\{\\sqrt{2}x,x^2\\}$.\nLet $S = \\{x \\in (-2,2).$ : the function $g(x)=|x| [x^2]$ is discontinuous at $x\\}$.\nThen $\\sum\\limits_{x\\in S} f(x)$ equals",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2-\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\sqrt{6}-3\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1-\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{6}-2\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9fc459754815",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\lim\\limits_{x\\to 0}\\;\\frac{e^{(a-1)x}+2\\cos b x+(c-2)e^{-x}}{x\\cos x-\\log_{e}(1+x)}=2$, then $a^2+b^2+c^2$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "7",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d227adce28e2",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=\\begin{cases} \\frac{a x^2+2 a x+3}{4 x^2+4 x-3}, & x \\neq -\\frac{3}{2},\\ \\frac{1}{2} \\\\ b, & x = -\\frac{3}{2},\\ \\frac{1}{2} \\end{cases}$\nbe continuous at $x=-\\frac{3}{2}$. If $f \\circ f(x)=\\frac{7}{5}$, then $x$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "0",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-61f921a85fc4",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\begin{cases} \\frac{a|x|+x^2-2(\\sin |x|)(\\cos |x|)}{x}, & x \\neq 0 \\\\ b, & x=0 \\end{cases}$ is continuous at $x=0$, then $a+b$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2778a300613d",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $α, β \\in R$ be such that the function $f(x)=\\begin{cases} 2\\alpha (x^2-2)+2\\beta x, & x<1 \\\\ (\\alpha+3)x+(\\alpha-\\beta), & x\\ge 1 \\end{cases}$ be differentiable at all $x \\in R$. Then $34(\\alpha+\\beta)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "48",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "84",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "36",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "24",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9e916e6efecf",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the function $f(x)=\\; \\frac{e^x (e^{\\tan x-x}-1) + \\log_e(\\sec x+\\tan x)-x}{\\tan x-x}$ is continuous at $x=0$, then the value of $f(0)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{3}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6244d801033b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $[t]$ denote the greatest integer less than or equal to $t$. If the function $f(x)= \\begin{cases} b^2 \\sin \\; \\left( \\; \\frac{\\pi}{2} \\left[ \\; \\frac{\\pi}{2} ( \\cos x + \\sin \\; x ) \\cos x \\right] \\right) & x<0 \\\\ \\frac{ \\sin \\; x - \\frac{1}{2} \\sin \\; 2x }{x^3} & x>0 \\\\ a & x=0 \\end{cases}$ is continuous at $x=0$, then $a^2+b^2$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{5}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{3}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{9}{16}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fc3d9c785037",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $y=y(x)$ be a differentiable function in the interval $(0, \\infty)$ such that $y(1)=2$, and $\\lim\\limits_{t \\to x}\\;\\left( \\frac{t^2 y(x)-x^2 y(t)}{x-t} \\right) = 3$ for each $x > 0$. Then $2 y(2)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "27",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "18",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "23",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "12",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1d0f84a05039",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\lim\\limits_{x \\to 0}\\; \\frac{\\log_e \\left( \\sec(e x) \\cdot \\sec(e^2 x) \\cdot \\dots \\cdot \\sec(e^{10} x) \\right)}{e^2 - e^{2 \\cos x}}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{(e^{10}-1)}{2 e^2 (e^2-1)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{(e^{20}-1)}{2 e^2 (e^2-1)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{(e^{10}-1)}{2 (e^2-1)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{(e^{20}-1)}{2 (e^2-1)}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8586af4ffdbe",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=\\lim\\limits_{\\theta \\to 0}\\left(\\frac{\\cos \\pi x - x x^{\\frac{2}{\\theta}} \\sin(x-1)}{1+x^{\\frac{2}{\\theta}}(x-1)}\\right), x \\in \\mathbb{R}$. Consider the following two statements :\n(I) $f(x)$ is discontinuous at $x=1$.\n(II) $f(x)$ is continuous at $x=-1$.\nThen,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Neither (I) nor (II) is True",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Only (II) is True",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Only (I) is True",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Both (I) and (II) are True",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1b606858e208",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\tan^{-1}\\left(\\frac{3\\cos x-4\\sin x}{4\\cos x+3\\sin x}\\right)+2\\tan^{-1}\\left(\\frac{x}{1+\\sqrt{1-x^{2}}}\\right)$, then $\\frac{dy}{dx}$ at $x=\\frac{\\sqrt{3}}{2}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7420e3d558bf",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of points, at which the function $f(x)= \\max\\{6x, 2+3x^{2}\\} + \\left| x-1 \\right| \\cos \\left| x^{2}-\\frac{1}{4} \\right|, x \\in (-\\pi, \\pi)$, is not differentiable, is _____ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-67016e4afff6",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=\\begin{cases} e^{x-1}, & x < 0 \\\\ x^{2}-5x+6, & x \\ge 0 \\end{cases}$ and $g(x)=f(|x|)+|f(x)|$. If the number of points where g is not continuous and is not differentiable are α and β respectively, then $\\alpha+\\beta$ is equal to _____.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-00563be8e78f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The product of all possible values of α, for which $\\lim\\limits_{x\\to 0}\\left(\\frac{1-\\cos(\\alpha x)\\cos((\\alpha+1)x)\\cos((\\alpha+2)x)}{\\sin^{2}((\\alpha+1)x)}\\right)=2$, is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "-1",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0427ab55ba18",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let f(x) and g(x) be twice differentiable functions satisfying f''(x) = g''(x) for all $x \\in R$, f'(1) = 2g'(1) = 4 and g(2) = 3f(2) = 9. Then f(25) – g(25) is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "20",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "40",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "-20",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-40",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ae8846b4d959",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=\\lim\\limits_{y \\to 0}\\;\\frac{(1-\\cos(xy))\\tan(xy)}{y^3}$. Then the number of solutions of the equation $f(x)=\\sin x$, $x \\in R$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-60f32c18440e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\lim\\limits_{x \\to 0} \\left( \\; \\frac{x^{2} \\sin^{2} x}{x^{2}-\\sin^{2} x} \\right)$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bec2268dfa10",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=\\begin{cases} x^3+8, & x<0 \\\\ x^2-4, & x\\geq 0 \\end{cases}$ and $g(x)=\\begin{cases} (x-8)^{\\frac{1}{3}}, & x<0 \\\\ (x+4)^{\\frac{1}{2}}, & x\\geq 0 \\end{cases}$ Then the number of points, where the function gof is discontinuous, is ______ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-55a44ec1ecec",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For the function $f(x) = e^{\\sin |x|} - |x| , x \\in \\mathbb{R},$ consider the following statements:\nStatement I : f is differentiable for all $x \\in R$.\nStatement II : f is increasing in $\\left(-\\pi,\\;-\\frac{\\pi}{2}\\right)$.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Both Statement I and Statement II are true",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Both Statement I and Statement II are false",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Statement I is true but Statement II is false",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Statement I is false but Statement II is true",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

@@ -1,0 +1,528 @@
+{
+  "subject": "CHEM",
+  "chapter": {
+    "name": "Electrochemistry",
+    "slug": "electrochemistry",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 19
+  },
+  "subtopics": [
+    {
+      "slug": "conductance-solutions",
+      "name": "Conductance and Kohlrausch's Law",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-CHEM-430ee7a0254d",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An electrochemical cell is constructed using half cells in the direction of spontaneous change\n$\\mathrm{Fe}(\\mathrm{OH})_2(\\mathrm{s}) + 2 e^{-} ightarrow \\mathrm{Fe}(\\mathrm{s}) + 2 \\mathrm{OH}(\\mathrm{aq}) \\; E^{0} = -0.88 \\mathrm{V}$ and $\\mathrm{AgBr}(\\mathrm{s}) + e^{-} ightarrow \\mathrm{Ag}(\\mathrm{s}) + \\mathrm{Br}^{-}(\\mathrm{aq}) \\; E^{0} = +0.07 \\mathrm{V}$\nWhich of the following option is correct?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Overall reaction $\\mathrm{Fe}(\\mathrm{s}) + 2 \\mathrm{OH}^{-1}(\\mathrm{aq}) + 2 \\mathrm{AgBr}(\\mathrm{s}) ightleftharpoons \\mathrm{Fe}(\\mathrm{OH})_2(\\mathrm{s}) + 2 \\mathrm{Ag}(\\mathrm{s}) + 2 \\mathrm{Br}^{-}(\\mathrm{aq})$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$E^{0}_{\\mathrm{cell}} = -0.95 \\mathrm{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Fe is reduced in the electrochemical cell",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$E^{0}_{\\mathrm{cell}}$ is an extensive property",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-95838575198b",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the following two half-cell reactions along with the standard reduction potential given :\n$\\mathrm{CO}_2 + 6 \\mathrm{H}^+ + 6 \\mathrm{e}^- \\rightarrow \\mathrm{CH}_3\\mathrm{OH} + \\mathrm{H}_2\\mathrm{O} \\;\\; E^{\\circ}_{\\text{red}} = 0.02 \\mathrm{V}$\n$\\;\\frac{1}{2} \\mathrm{O}_2 + 2 \\mathrm{H}^+ + 2 \\mathrm{e}^- \\rightarrow \\mathrm{H}_2\\mathrm{O} \\;\\; E^{\\circ}_{\\text{red}} = 1.23 \\mathrm{V}$\nThe fuel cell was set up using the above two reactions such that the cell operates under the standard condition of 1 bar pressure and 298 K temperature. The fuel cell works with 80\nGiven : $F = 96500 \\, \\mathrm{C} \\, \\mathrm{mol}^{-1}$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 560.0,
+        "max": 560.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-154caebac439",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The pH and conductance of a weak acid ( HX ) was found to be 5 and $4 \\times 10^{-5} \\mathrm{S}$, respectively. The conductance was measured under standard condition using a cell where the electrode plates having a surface area of $1 \\mathrm{cm}^2$ were at a distance of 15 cm apart. The value of the limiting molar conductivity is $\\_\\_\\_\\_$ $\\mathrm{Sm}^2 \\, \\mathrm{mol}^{-1}$. (nearest integer)\n(Given : degree of dissociation of the weak acid $(\\alpha) \\ll 1$ )",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 6.0,
+        "max": 6.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-93322fb3c232",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "MX is a sparingly soluble salt that follows the given solubility equilibrium at 298 K .\n$\\mathrm{MX(s)} \\rightleftharpoons \\mathrm{M}^{+}(aq) + \\mathrm{X}^{-}(aq) \\;\\; K_{sp}=10^{-10}$ If the standard reduction potential for $\\mathrm{M}^{+}(aq) + \\mathrm{e}^{-} \\longrightarrow \\mathrm{M}(s)$ is $\\left( E_{\\mathrm{M}^{+}/\\mathrm{M}}^{\\ominus} \\right) = 0.79\\,\\text{V}$, then the value of the standard reduction potential for the metal/metal insoluble salt electrode $E_{\\mathrm{X}^{-} / \\mathrm{MX}(s) / \\mathrm{M}}^{\\ominus}$ is $\\_\\_\\_\\_$ mV. (nearest integer)\n[Given: $\\;\\frac{2.303 R T}{F}=0.059\\,\\text{V}$ ]",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 200.0,
+        "max": 200.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-381144992929",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Consider the following electrochemical cell at 298 K $\\mathrm{Pt} | \\mathrm{HSnO}_2^{-}(\\mathrm{aq}) | \\mathrm{Sn}(\\mathrm{OH})_6^{2-}(\\mathrm{aq}) | \\mathrm{OH}^{-}(\\mathrm{aq}) | \\mathrm{Bi}_2\\mathrm{O}_3(\\mathrm{s}) | \\mathrm{Bi}(\\mathrm{s})$.\nIf the reaction quotient at a given time is $10^6$, then the cell EMF $(E_{\\text{cell}})$ is $\\_\\_\\_\\_$ $\\times 10^{-1}\\,\\mathrm{V}$ (Nearest integer).\nGiven the standard half-cell reduction potential as $E_{\\mathrm{Bi}_2\\mathrm{O}_3/\\mathrm{Bi},\\mathrm{OH}^{-}}^{\\circ} = -0.44\\,\\mathrm{V} \\;\\text{and}\\; E_{\\mathrm{Sn}(\\mathrm{OH})_6^{2-}/\\mathrm{HSnO}_2^{-},\\mathrm{OH}^{-}}^{\\circ} = -0.90\\,\\mathrm{V}$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2a138428cd50",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the following reduction processes :\n$\\\\; \\mathrm{Al}^{3+} + 3 e^{-} \\rightarrow \\mathrm{Al}(s), E^{0} = -1.66 \\, \\text{V}$\n$\\\\; \\mathrm{Fe}^{3+} + e^{-} \\rightarrow \\mathrm{Fe}^{2+}, E^{0} = +0.77 \\, \\text{V}$\n$\\\\; \\mathrm{Co}^{3+} + e^{-} \\rightarrow \\mathrm{Co}^{2+}, E^{0} = +1.81 \\, \\text{V}$\n$\\\\; \\mathrm{Cr}^{3+} + 3 e^{-} \\rightarrow \\mathrm{Cr}(s), E^{0} = -0.74 \\, \\text{V}$\nThe tendency to act as reducing agent decreases in the order :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{Al} > \\mathrm{Fe}^{2+} > \\mathrm{Cr} > \\mathrm{Co}^{2+}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{Al} > \\mathrm{Cr} > \\mathrm{Co}^{2+} > \\mathrm{Fe}^{2+}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{Cr} > \\mathrm{Fe}^{2+} > \\mathrm{Al} > \\mathrm{Co}^{2+}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{Al} > \\mathrm{Cr} > \\mathrm{Fe}^{2+} > \\mathrm{Co}^{2+}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7048d89bce0f",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the following electrochemical cell :\n$\\mathrm{Pt}\\vert\\mathrm{O_2}(g)(1\\;\\mathrm{bar})\\vert\\mathrm{HCl}(aq)\\parallel\\mathrm{M^{2+}}(aq,1.0\\;\\mathrm{M})\\vert\\mathrm{M}(s)$ The pH above which, oxygen gas would start to evolve at anode is $\\_\\_\\_\\_$ (nearest integer).\n$\\left[\\begin{array}{lc}\\text{Given:}&E_{M^{2+}/M}^{\\circ}=0.994\\;\\mathrm{V}\\\\&E_{O_2/H_2O}^{\\circ}=1.23\\;\\mathrm{V}\\end{array}\\right]\\;\\text{standard reduction potential}\\;\\;\\;\\;\\text{and}\\;\\;\\frac{RT}{F}(2.303)$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e56df6631d73",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the given electrochemical cell, $\\mathrm{Ag}(\\mathrm{s})|\\mathrm{AgCl}(\\mathrm{s})|\\mathrm{FeCl}_2(\\mathrm{aq}),\\mathrm{FeCl}_3(\\mathrm{aq})|\\mathrm{Pt}(\\mathrm{s})$ at 298 K , the cell potential ( $E_{\\text{cell}}$ ) will increase when :\nA. Concentration of $\\mathrm{Fe}^{2+}$ is increased.\nB. Concentration of $\\mathrm{Fe}^{3+}$ is decreased.\nC. Concentration of $\\mathrm{Fe}^{2+}$ is decreased.\nD. Concentration of $\\mathrm{Fe}^{3+}$ is increased.\nE. Concentration of $\\mathrm{Cl}^{-}$is increased.\nChoose the correct answer from the options given below :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "C, D and E Only",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "A and B Only",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "B Only",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "A and E Only",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ccd1298f2a40",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the above electrochemical cell where a metal electrode ( $M$ ) is undergoing redox reaction by forming $M ^{+} ( M ⟶ M ^{+}+ e ^{-})$. The cation $M ^{+}$is present in two different concentrations $c_1$ and $c_2$ as shown above. Which of the following statement is correct for generating a positive cell potential?",
+      "image": {
+        "url": "/question-images/pyq/chemistry/electrochemistry/PYQ-CHEM-ccd1298f2a40.png",
+        "alt": "Figure for this Electrochemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "If $c_1$ is present at anode, then $c_1 > c_2$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "If $c_1$ is present at cathode, then $c_1 > c_2$.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "If $c_1$ is present at cathode, then \\$c_1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "If $c_1$ is present at anode, then $c_1=c_2$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-015df565a085",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Electricity is passed through an acidic solution of $\\mathrm{Cu}^{2+}$ till all the $\\mathrm{Cu}^{2+}$ was exhausted, leading to the deposition of 300 mg of Cu metal. However, a current of 600 mA was continued to pass through the same solution for another 28 minutes by keeping the total volume of the solution fixed at 200 mL . The total volume of oxygen evolved at STP during the entire process is $\\_\\_\\_\\_$ mL . (Nearest integer)\n[Given:\n$\\;\\mathrm{Cu}^{2+}(aq)+2e^{-}\\longrightarrow\\mathrm{Cu}(s)\\;E_{\\mathrm{red}}^{o}=+0.34\\;\\mathrm{V}$\n$\\;\\mathrm{O}_2(g)+4\\mathrm{H}^{+}+4e^{-}\\longrightarrow2\\mathrm{H}_2\\mathrm{O}\\;E_{\\mathrm{red}}^{o}=+1.23\\;\\mathrm{V}$\nMolar mass of $\\mathrm{Cu}=63.54\\;\\mathrm{g\\,mol^{-1}}$\nMolar mass of $\\mathrm{O}_2=32\\;\\mathrm{g\\,mol^{-1}}$\nFaraday Constant $=96500\\;\\mathrm{C\\,mol^{-1}}$\nMolar volume at $\\text{STP}=22.4\\;\\mathrm{L}$ ]",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 111.0,
+        "max": 111.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b0dc2ef9f4d6",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Molar conductivity of a weak acid HQ of concentration 0.18 M was found to be $\\frac{1}{30}$ of the molar conductivity of another weak acid HZ with concentration of 0.02 M . If $\\lambda^{\\circ} Q^{-}$happened to be equal with $\\lambda^{\\circ} Z^{-}$, then the difference of the $pK_{a}$ values of the two weak acids $(pK_{a}(\\mathrm{HQ}) - pK_{a}(\\mathrm{HZ}))$ is $\\_\\_\\_\\_$ (Nearest integer).\n[Given: degree of dissociation $(\\alpha) \\ll 1$ for both weak acids, $\\lambda^{\\circ}$ : limiting molar conductivity of ions]",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-71e4c6a331f9",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Consider the following redox reaction taking place in acidic medium\n$\\mathrm{BH}_4^{-}(aq) + \\mathrm{ClO}_3^{-}(aq) \\rightarrow \\mathrm{H}_2\\mathrm{BO}_3^{-}(aq) + \\mathrm{Cl}^{-}(aq)$\nIf the Nernst equation for the above balanced reaction is\n$E_{\\text{cell}} = E_{\\text{cell}}^{\\circ} - \\frac{RT}{nF} \\ln Q,$\nthen the value of $n$ is $\\_\\_\\_\\_$ .(Nearest integer)",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 24.0,
+        "max": 24.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5997751c7ff3",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "For strong electrolyte$\\Lambda_m$increases slowly with dilution and can be represented by the equation$\\Lambda_m=\\Lambda_m^{\\circ}-A c^{1/2}$Molar conductivity values of the solutions of strong electrolyte AB at$18^{\\circ}\\mathrm{C}$are given below :\n$c [\\mathrm{mol}\\,\\mathrm{L}^{-1}]$ 0.04 0.09 0.16 0.25 $\\Lambda_m [\\mathrm{S}\\,\\mathrm{cm}^2\\,\\mathrm{mol}^{-1}]$ 96.1 95.7 95.3 94.9\nThe value of constant A based on the above data [in$\\mathrm{S}\\,\\mathrm{cm}^2\\,\\mathrm{mol}^{-1} / (\\mathrm{mol}/\\mathrm{L})^{1/2}$] unit is$\\_\\_\\_\\_$.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8660ac6e115f",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "A volume of $x\\text{ mL}$ of 5 M NaHCO 3 solution was mixed with 10 mL of $2\\text{ M }\\mathrm{H}_2\\mathrm{CO}_3$ solution to make an electrolytic buffer.\nIf the same buffer was used in the following electrochemical cell to record a cell potential of 235.3 mV , then the value of $x =$ $\\_\\_\\_\\_$ mL (nearest integer).\n$\\mathrm{Sn(s)} \\vert \\mathrm{Sn(OH)_6^{2-}(0.5\\text{ M})} \\vert \\mathrm{HSnO_2^{-}(0.05\\text{ M})} \\vert \\mathrm{OH^{-}} \\vert \\mathrm{Bi_2O_3(s)} \\vert \\mathrm{Bi(s)}$\nConsider up to one place of decimal for intermediate calculations\n$\\left[ \\begin{array}{ll} \\text{Given:} & E_{\\mathrm{Sn(OH)_6^{2-}} \\mid \\mathrm{HSnO_2^{-}}}^\\circ = -0.9\\text{ V} \\\\ & E^\\circ \\mathrm{Bi_2O_3} \\mid \\mathrm{Bi} = -0.44\\text{ V} \\\\ & pK_a(\\mathrm{H_2CO_3}) = 6.11 \\\\ & \\frac{2.303 RT}{F} = 0.059\\text{ V} \\\\ & \\text{Antilog}(1.29) = 19.5 \\end{array} \\right]$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 78.0,
+        "max": 78.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a5fb32d9cb34",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An electrochemical cell. consist of the following two redox couples,\n$\\mathrm{M}^{x+}(\\mathrm{aq}) / \\mathrm{M}(\\mathrm{s}) [E^{\\ominus}_{\\mathrm{red}} = +0.15\\,\\mathrm{V}]$ and\n$\\mathrm{Fe}^{3+}(\\mathrm{aq}) / \\mathrm{Fe}(\\mathrm{s}) [E^{\\ominus}_{\\mathrm{red}} = -0.036\\,\\mathrm{V}]$\nThe cell EMF $(E_{\\mathrm{cell}})$ is recorded to be 0.2057 V.\nIf the reaction quotient of the electrochemical reaction is found to be $10^{-2}$, then the value of x is _____ (Nearest integer)\n[Given : M is a p-block metal and $\\;\\frac{2.303 RT}{F} = 0.059\\,\\mathrm{V}]$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bacd2eb9c6dc",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "At 298 K , the molar conductivity of $x \\% (w/w)$ MX solution (aqueous) is $123.5 \\mathrm{S} \\mathrm{cm}^{2} \\mathrm{mol}^{-1}$. The conductance of same solution is $1.9 \\times 10^{-3} \\mathrm{S}$. The value of x is ____ $\\times 10^{-2}$.\n(Given : cell constant $=1.3 \\mathrm{cm}^{-1}$; molar mass of MX is $75 \\mathrm{g} \\mathrm{mol}^{-1}$, density of aqueous solution of MX at 298 K is $1.0 \\mathrm{g} \\mathrm{mL}^{-1}$)",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f38c507ef0de",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "One half cell in a voltaic cell is constructed by dipping silver rod in $\\mathrm{AgNO}_3$ solution of unknown concentration, other half cell is Zn rod dipped in 1 molar solution of $\\mathrm{ZnSO}_4$.\nA voltage of 1.60 V is measured at 298 K for this cell. What is the concentration of $\\mathrm{Ag}^{+}$ions used in terms of $\\log x ( x = [\\mathrm{Ag}^{+}] )$?\n$E^{\\Theta}_{\\mathrm{Zn}^{2+}/\\mathrm{Zn}} = -0.76\\,\\mathrm{V}, E^{\\Theta}_{\\mathrm{Ag}^{+}/\\mathrm{Ag}} = +0.80\\,\\mathrm{V},$\n$\\frac{2.303 RT}{F} = 0.059\\,\\mathrm{V}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{3.9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{5.9}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2.9}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5.9}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-acbc299178e3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Consider the following data :\nElectrolyte$\\Lambda_{m}^{o}\\ (\\mathrm{S\\,cm}^{2}\\,\\mathrm{mol}^{-1})$$\\mathrm{BaCl}_{2}$$x_{1}$$\\mathrm{H}_{2}\\mathrm{SO}_{4}$$x_{2}$HCl$x_{3}$\n$\\mathrm{BaSO}_{4}$ is sparingly soluble in water. If the conductivity of the saturated $\\mathrm{BaSO}_{4}$ solution is $x\\ \\mathrm{S}\\ \\mathrm{cm}^{-1}$ then the solubility product of $\\mathrm{BaSO}_{4}$ can be given as.\n(Here $\\Lambda_{m} = \\Lambda_{m}^{\\circ}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{10^{6}x^{2}}{\\alpha^{2}(x_{1}+x_{2}-2x_{3})^{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x^{2}}{(x_{1}+x_{2}-2x_{3})^{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\alpha^{2}(x_{1}+x_{2}-2x_{3})^{2}}{10^{6}x^{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x^{2}}{(x_{1}+x_{2}+2x_{3})^{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-567a066ed921",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Given at $298 \\text{ K}: E^{\\ominus}_{\\mathrm{Fe}^{2+}/\\mathrm{Fe}} = X$ Volt\n$E^{\\ominus}_{\\mathrm{Fe}^{3+}/\\mathrm{Fe}} = Y \\text{ Volt}$\nThe $E^{\\ominus}_{\\mathrm{Fe}^{3+}/\\mathrm{Fe}^{2+}}$ in Volt at 298 K is given by :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2 X - 3 Y$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3 Y - 2 X$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3 Y + 2 X$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$Y + X$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

@@ -1,0 +1,701 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Differential Equations",
+    "slug": "differential-equations",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 22
+  },
+  "subtopics": [
+    {
+      "slug": "linear-differential-equations",
+      "name": "Linear Differential Equations",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-159e9df717d7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let y = y(x) be the solution curve of the differential equation $(1+\\sin x) \\;\\frac{dy}{dx}+(y+1)\\cos x=0, y(0)=0$. If the curve $y=y(x)$ passes through the point $\\left(\\alpha, \\;\\frac{-1}{2}\\right)$, then a value of α is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{\\pi}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-71cbd6091896",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the curve $y=f(x)$ passes through the point ($1, e$) and satisfies the differential equation $dy = y (2 + \\log_e x) dx, x>0$, then f(e) is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{e}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e^{e^{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^{2e}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$e^{2^{e}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a612ad0db5ce",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $x=x(y)$ be the solution of the differential equation $2 y^{2} \\frac{d x}{d y} - 2 x y + x^{2} = 0, y>1, x(e)=e$. Then $x(e^{2})$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2} e^{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{3} e^{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$e^{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2 e^{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d2c28a334df0",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $y=y(x)$ be the solution curve of the differential equation $(1+x^2) dy + (y-\\tan^{-1}x) dx = 0, y(0)=1$. Then the value of $y(1)$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{4}{e^{\\pi/4}} - \\;\\frac{\\pi}{2} - 1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{2}{e^{\\pi/4}} + \\;\\frac{\\pi}{4} - 1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{4}{e^{\\pi/4}} + \\;\\frac{\\pi}{2} - 1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{2}{e^{\\pi/4}} - \\;\\frac{\\pi}{4} - 1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0f4647ba0e74",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $y=y(x)$ be the solution of the differential equation $\\sec x \\;\\frac{dy}{dx}-2y=2+3\\sin x, x\\in\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$, $y(0)=-\\frac{7}{4}$. Then $y\\left(\\frac{\\pi}{6}\\right)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{5}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-3\\sqrt{2}-7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{5}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-3\\sqrt{3}-7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-58f0ebf49bc7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the solution curve of the differential equation $x d y - y dx = \\sqrt{x^2+y^2} dx, x>0, y(1)=0$, be $y=y(x)$. Then $y(3)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-af51e0732b82",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=y(x)$ satisfies the differential equation $16(\\sqrt{x+9\\sqrt{x}})(4+\\sqrt{9+\\sqrt{x}}) \\cos y \\, dy = (1+2\\sin y) \\, dx, x>0$ and $y(256)=\\frac{\\pi}{2}, y(49)=\\alpha$, then $2\\sin \\alpha$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sqrt{2}-1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2(\\sqrt{2}-1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3(\\sqrt{2}-1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b81bac7ab233",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $y=y(x)$ be the solution of the differential equation $x^{4} d y+(4 x^{3} y+2\\sin x)dx=0, x>0, y\\left(\\frac{\\pi}{2}\\right)=0$.\nThen $\\pi^{4} y\\left(\\frac{\\pi}{3}\\right)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "92",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "72",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "64",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "81",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fb81d80074c2",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f$ be a twice differentiable non-negative function such that $(f(x))^2=25+\\int\\limits_{0}^{x} \\left( (f(t))^2 + (f'(t))^2 \\right) dt$. Then the mean of $f(\\log_e(1)), f(\\log_e(2)), \\dots, f(\\log_e(625))$ is equal to $\\_\\_\\_\\_$。",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 1565.0,
+        "max": 1565.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-70b4e71847f0",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the solution curve $y=f(x)$ of the differential equation $(x^2-4)y^{'}-2xy+2x(4-x^2)^2=0, x>2,$ passes through the point $(3,15)$, then the local maximum value of $f$ is $\\_\\_\\_\\_$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ba63818396cd",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $y=y(x)$ be the solution of the differential equation $x \\frac{dy}{dx} - \\sin 2y = x^3 (2-x^3) \\cos^2 y, x \\neq 0$.\nIf $y(2)=0$, then $\\tan(y(1))$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{7}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a3cb64c892b4",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $y=y(x)$ be the solution of the differential equation $x\\;\\frac{dy}{dx}-y=x^{2}\\cot x,\\ x\\in(0,\\pi)$. If $y\\left(\\;\\frac{\\pi}{2}\\right)=\\;\\frac{\\pi}{2}$, then $6y\\left(\\;\\frac{\\pi}{6}\\right)-8y\\left(\\;\\frac{\\pi}{4}\\right)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-3\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-78b056c7e944",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $y=y(x)$ be the solution of the differential equation $\\;\\frac{dy}{dx} = (1+x+x^{2})(1-y+y^{2}), y(0)=\\;\\frac{1}{2}$. Then $(2 y(1)-1)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3} \\tan\\left(\\;\\frac{11 \\sqrt{3}}{6}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{\\sqrt{3}}{2} \\tan\\left(\\;\\frac{11 \\sqrt{3}}{12}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3} \\tan\\left(\\;\\frac{11 \\sqrt{3}}{12}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{\\sqrt{3}}{2} \\tan\\left(\\;\\frac{11 \\sqrt{3}}{6}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-008ce1da814a",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let f be a twice differentiable function such that $f(x)=\\int\\limits_{0}^{x} \\tan(t-x) dt - \\int\\limits_{0}^{x} f(t) \\tan t dt, \\quad x \\in \\left( -\\frac{\\pi}{2}, \\frac{\\pi}{2} \\right)$ Then $f''\\;\\left( \\frac{\\pi}{6} \\right) + 12 f'\\;\\left( -\\frac{\\pi}{6} \\right) + f\\;\\left( \\frac{\\pi}{6} \\right)$ is equal to ____ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 5.0,
+        "max": 5.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2768236ed971",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $y=y(x)$ be the solution of the differential equation : $\\frac{dy}{dx}+ \\left(\\frac{6x^{2}+ (3x^{2}+2x^{3}+4)e^{-2x}}{(x^{3}+2)(2+e^{-2x})}\\right) y = 2+e^{-2x}$, $x \\in (-1,2)$ , satisfying $y(0)=\\frac{3}{2}$.\nIf $y(1)=\\alpha (2+e^{-2})$, than α is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{13}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{6}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{12}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{13}{12}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c040a14493cf",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $y=y(x)$ be the solution of the differential equation $x \\sin\\left(\\frac{y}{x}\\right) dy = \\left(y \\sin\\left(\\frac{y}{x}\\right) - x\\right) dx, y(1)=\\frac{\\pi}{2}$ and let $\\alpha = \\cos\\left(\\frac{y(e^{12})}{e^{12}}\\right)$. Then the number of integral value of p, for which the equation $x^{2}+y^{2}-2px+2py+\\alpha+2=0$ represents a circle of radius $r \\leq 6$, is _______ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 11.0,
+        "max": 11.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-457d8ca5717f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f:[1,\\infty) \\to R$ be a differentiable function defined as $f(x)=\\int\\limits_{1}^{x} f(t) dt+(1-x)(\\log_e x-1)+e$. Then the value fo $f(f(1))$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(1+e^e)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(1+e)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(1+e+e^e)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1+2e$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b9789b7ad38c",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $y = y(x)$ be the solution of the differential equation $(\\tan x)^{1/2} dy = (\\sec^3 x - (\\tan x)^{3/2} y) dx$, $0 < x < \\frac{\\pi}{2}, y\\left(\\frac{\\pi}{4}\\right) = \\frac{6\\sqrt{2}}{5}$. If $y\\left(\\frac{\\pi}{3}\\right) = \\frac{4}{5} \\alpha$, then $\\alpha^4$ equals _______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 48.0,
+        "max": 48.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3f7c3b22ac25",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let y = y(x) be the solution of the differential equation $(x^{2} - x \\sqrt{x^{2} - 1}) dy + (y(x - \\sqrt{x^{2} - 1}) - x) dx = 0$, $x \\ge 1$. If $y(1) = 1$, then the greatest integer less than $y(\\sqrt{5})$ is ______ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-131ec16c5a1e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let f: R ⟶ R be such that $f(xy)=f(x)f(y)$, for all $x, y \\in R$ and $f(0) \\neq 0. \\text{ Let } g:[1, \\infty) \\longrightarrow R$ be a differentiable function such that\n$x^2 g(x)=\\int\\limits_{1}^{x} (t^2 f(t)-t g(t)) dt$ Then $g(2)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{13}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{11}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{15}{32}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{17}{64}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4f6864a3d54c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let y = y(x) be the solution of the differential equation $x\\sqrt{1-x^2} dy + (y\\sqrt{1-x} - x \\cos^{-1} x) dx = 0,$\n$x \\in (0,1), \\lim\\limits_{x \\to 1^{-1}} y(x) = 1.$ They $y\\left(\\frac{1}{2}\\right)$ equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3 - \\frac{\\pi}{\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4 - \\sqrt{3} x$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4 - \\frac{2\\pi}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3 - \\frac{\\pi}{2\\sqrt{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Vector Algebra",
+    "slug": "vectors",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 23
+  },
+  "subtopics": [
+    {
+      "slug": "scalar-triple-product",
+      "name": "Scalar Triple Product",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-15e8a038afb4",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{a} = -\\hat{i} + 2\\hat{j} + 2\\hat{k},\\quad \\vec{b}=8\\vec{i}+7\\vec{j}-3\\vec{k}$ and $\\vec{c}$ be a vector such that $\\vec{a} \\times \\vec{c} = \\vec{b}$. If $\\vec{c} \\cdot (\\hat{i} + \\hat{j} + \\hat{k}) = 4$, then $|\\vec{a} + \\vec{c}|^2$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "30",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "33",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "27",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "35",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7f99f0ee6c4e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{c}$ and $\\vec{d}$ be vectors such that $\\left|\\vec{c}+\\vec{d}\\right|=\\sqrt{29}$ and $\\vec{c}\\times(2\\hat{i}+3\\hat{j}+4\\hat{k})=(2\\hat{i}+3\\hat{j}+4\\hat{k})\\times\\vec{d}$. If $\\lambda_1, \\lambda_2\\ (\\lambda_1>\\lambda_2)$ are the possible values of $(\\vec{c}+\\vec{d})\\cdot(-7\\hat{i}+2\\hat{j}+3\\hat{k})$, then the equation $K^2 x^2+(K^2-5K+\\lambda_1)x y+\\left(3K+\\frac{\\lambda_2}{2}\\right)y^2-8x+12y+\\lambda_2=0$ represents a circle, for K equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fef5e66dab01",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $(\\alpha, \\beta, \\gamma)$ be the co-ordinates of the foot of the perpendicular drawn from the point $(5,4,2)$ on the line $\\vec{r}=(-\\hat{i}+3\\hat{j}+\\hat{k})+\\lambda(2\\hat{i}+3\\hat{j}-\\hat{k})$.\nThen the length of the projection of the vector $\\alpha \\hat{i}+\\beta \\hat{j}+\\gamma \\hat{k}$ on the vector $6\\hat{i}+2\\hat{j}+3\\hat{k}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{18}{7}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{15}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7eefb42d1f18",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a triangle $A B C$, let $\\vec{p}=\\overrightarrow{BC}, \\vec{q}=\\overrightarrow{CA}$ and $\\vec{r}=\\overrightarrow{BA}$. If $|\\vec{p}|=2\\sqrt{3}, |\\vec{q}|=2$ and $\\cos\\theta = \\frac{1}{\\sqrt{3}}$, where $\\theta$ is the angle between $\\vec{p}$ and $\\vec{q}$, then $\\lvert \\vec{p} \\times (\\vec{q} - 3\\vec{r}) \\rvert^2 + 3\\lvert \\vec{r} \\rvert^2$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "200",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "220",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "410",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "340",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-387d732864ad",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\overrightarrow{AB}=2\\hat{i}+4\\hat{j}-5\\hat{k}$ and $\\overrightarrow{AD}=\\hat{i}+2\\hat{j}+\\lambda\\hat{k}, \\lambda \\in R$. Let the projection of the vector $\\overrightarrow{v}=\\hat{i}+\\hat{j}+\\hat{k}$ on the diagonal $\\overrightarrow{AC}$ of the parallelogram ABCD be of length one unit. If $\\alpha, \\beta$, where $\\alpha > \\beta$, be the roots of the equation $\\lambda^2 x^2-6\\lambda x+5=0$, then $2\\alpha-\\beta$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7a935216f7c4",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=2\\hat{i}-\\hat{j}+\\hat{k}$ and $\\vec{b}=\\lambda \\hat{j}+2\\hat{k}, \\lambda \\in Z$ be two vectors. Let $\\vec{c}=\\vec{a}\\times \\vec{b}$ and $\\vec{d}$ be a vector of magnitude 2 in $y z$-plane. If $|\\vec{c}|=\\sqrt{53}$, then the maximum possible value of $(\\vec{c}\\cdot \\vec{d})^2$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "52",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "26",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "104",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "208",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7e6e23c3496a",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "22 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let a vector $\\vec{a}=\\sqrt{2}\\hat{i}-\\hat{j}+\\lambda\\hat{k},\\lambda>0$, make an obtuse angle with the vector $\\vec{b}=-\\lambda^2\\hat{i}+4\\sqrt{2}\\hat{j}+4\\sqrt{2}\\hat{k}$ and an angle $\\theta,\\;\\frac{\\pi}{6} < \\theta < \\;\\frac{\\pi}{2}$, with the positive $z$-axis. If the set of all possible values of $\\lambda$ is $(\\alpha,\\beta)-\\{\\gamma\\}$, then $\\alpha+\\beta+\\gamma$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 5.0,
+        "max": 5.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-600c00a9bae2",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{a} = -\\hat{i} + \\hat{j} + 2\\hat{k}, \\vec{b} = \\hat{i} - \\hat{j} - 3\\hat{k}, \\vec{c} = \\vec{a} \\times \\vec{b}$ and $\\vec{d} = \\vec{c} \\times \\vec{a}$. Then $(\\vec{a} - \\vec{b}) \\cdot \\vec{d}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5f9e5b484126",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\overset{\\rightarrow}{a}, \\overset{\\rightarrow}{b}, \\overset{\\rightarrow}{c}$ be three vectors such that $\\overset{\\rightarrow}{a}\\times \\overset{\\rightarrow}{b}=2\\left(\\overset{\\rightarrow}{a}\\times \\overset{\\rightarrow}{c}\\right)$. If $\\left|\\overset{\\rightarrow}{a}\\right|=1,\\left|\\overset{\\rightarrow}{b}\\right|=4,\\left|\\overset{\\rightarrow}{c}\\right|=2$, and the angle between $\\overset{\\rightarrow}{b}$ and $\\overset{\\rightarrow}{c}$ is $60^{\\circ}$, then $\\left|\\overset{\\rightarrow}{a}\\cdot \\overset{\\rightarrow}{c}\\right|$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-68610c613ed7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=\\hat{i}-2\\hat{j}+3\\hat{k}, \\vec{b}=2\\hat{i}+\\hat{j}-\\hat{k}, \\vec{c}=\\lambda \\hat{i}+\\hat{j}+\\hat{k}$ and $\\vec{v}=\\vec{a}\\times \\vec{b}$. If $\\vec{v}\\cdot \\vec{c}=11$ and the length of the projection of $\\vec{b}$ on $\\vec{c}$ is $p$, then $9 p^2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "12",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-024d16008891",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the lines $L_1: \\vec{r}=\\hat{i}+2\\hat{j}+3\\hat{k}+\\lambda(2\\hat{i}+3\\hat{j}+4\\hat{k}), \\lambda \\in \\mathbb{R}$ and $L_2: \\vec{r}=(4\\hat{i}+\\hat{j})+\\mu(5\\hat{i}+2\\hat{j}+\\hat{k}), \\mu \\in \\mathbb{R}$, intersect at the point R . Let P and Q be the points lying on lines $L_1$ and $L_2$, respectively, such that $|\\overrightarrow{PR}|=\\sqrt{29}$ and $|\\overrightarrow{PQ}|=\\sqrt{\\frac{47}{3}}$. If the point P lies in the first octant, then $27(QR)^2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "360",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "348",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "320",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "340",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bb0d338bcc1a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=2\\hat{i}+\\hat{j}-2\\hat{k}, \\vec{b}=\\hat{i}+\\hat{j}$ and $\\vec{c}=\\vec{a}\\times \\vec{b}$. Let $\\vec{d}$ be a vector such that $|\\vec{d}-\\vec{a}|=\\sqrt{11},|\\vec{c}\\times \\vec{d}|=3$ and the angle between $\\vec{c}$ and $\\vec{d}$ is $\\;\\frac{\\pi}{4}$. Then $\\vec{a}\\cdot \\vec{d}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "11",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0565e146fd4a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=2\\hat{i}-5\\hat{j}+5\\hat{k}$ and $\\vec{b}=\\hat{i}-\\hat{j}+3\\hat{k}$. If $\\vec{c}$ is a vector such that $2(\\vec{a}\\times\\vec{c})+3(\\vec{b}\\times\\vec{c})=\\vec{0}$ and $(\\vec{a}-\\vec{b})\\cdot\\vec{c}=-97$, then $|\\vec{c}\\times\\hat{k}|^2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "193",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "205",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "218",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "233",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-489479c34bc6",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=2\\hat{i}-\\hat{j}-\\hat{k}, \\vec{b}=\\hat{i}+3\\hat{j}-\\hat{k}$ and $\\vec{c}=2\\hat{i}+\\hat{j}+3\\hat{k}$. Let $\\vec{v}$ be the vector in the plane of the vectors $\\vec{a}$ and $\\vec{b}$, such that the length of its projection on the vector $\\vec{c}$ is $\\;\\frac{1}{\\sqrt{14}}$. Then $|\\vec{v}|$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{\\sqrt{35}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "13",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{\\sqrt{21}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{\\sqrt{10}}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-394c8a81bb0b",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $P Q R$ be a triangle such that $\\overset{\\rightarrow}{P Q} = -2 \\hat{i} - \\hat{j} + 2 \\hat{k}$ and $\\overset{\\rightarrow}{PR} = a \\hat{i} + b \\hat{j} - 4 \\hat{k}, a, b \\in Z$. Let S be the point on QR , which is equidistant from the lines PQ and PR. If $\\left|\\overset{\\rightarrow}{PR}\\right| = 9$ and $\\overset{\\rightarrow}{PS} = \\hat{i} - 7 \\hat{j} + 2 \\hat{k}$, then the value of $3a - 4b$ is $\\_\\_\\_\\_$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 37.0,
+        "max": 37.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e51a698e0026",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "For three unit vectors $\\overset{\\rightarrow}{a}, \\overset{\\rightarrow}{b}, \\overset{\\rightarrow}{c}$ satisfying $\\left|\\overset{\\rightarrow}{a}-\\overset{\\rightarrow}{b}\\right|^2+\\left|\\overset{\\rightarrow}{b}-\\overset{\\rightarrow}{c}\\right|^2+\\left|\\overset{\\rightarrow}{c}-\\overset{\\rightarrow}{a}\\right|^2=9 \\;\\text{ and }\\;\\left|2 \\overset{\\rightarrow}{a}+k \\overset{\\rightarrow}{b}+k \\overset{\\rightarrow}{c}\\right|=3,$ the positive value of $k$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0a359dfd98f8",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the distance of the point $P(43,\\alpha,\\beta), \\beta<0$, from the line $\\vec{r}=4\\hat{i}-\\hat{k}+\\mu(2\\hat{i}+3\\hat{k}), \\mu \\in R$ along a line with direction ratios $3,-1,0$ is $13\\sqrt{10}$, then $\\alpha^2+\\beta^2$ is equal to $\\_\\_\\_\\_$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 170.0,
+        "max": 170.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ce790c37cf4c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let P be a point in the plane of the vectors $\\overrightarrow{AB}=3\\hat{i}+\\hat{j}-\\hat{k}$ and $\\overrightarrow{AC}=\\hat{i}-\\hat{j}+3\\hat{k}$ such that P is equidistant from the lines AB and AC . If $|\\overrightarrow{AP}|=\\frac{\\sqrt{5}}{2}$, then the area of the triangle ABP is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{30}}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{26}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

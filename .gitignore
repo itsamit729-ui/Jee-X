@@ -34,3 +34,7 @@ Thumbs.db
 npm-debug.log*
 
 /frontend/node_modules
+
+# Scraper page cache (large, re-downloadable)
+generated/scraped/.cache/
+generated/*/.verify-cache/

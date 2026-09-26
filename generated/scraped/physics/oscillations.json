@@ -1,0 +1,479 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Oscillations",
+    "slug": "oscillations",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 12
+  },
+  "subtopics": [
+    {
+      "slug": "simple-harmonic-motion",
+      "name": "Simple Harmonic Motion",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-9b4585afd4ce",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of motion of a particle is given by $x = a \\sin\\left(50 t + \\frac{\\pi}{3}\\right) \\text{cm}.$ The particle will come to rest at time $t_1$ and it will have zero acceleration at time $t_2$. The $t_1$ and $t_2$ respectively are_____.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\; \\frac{\\pi}{300} \\text{ s}, \\; \\frac{\\pi}{75} \\text{ s}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\; \\frac{\\pi}{75} \\text{ s}, \\; \\frac{\\pi}{300} \\text{ s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\; \\frac{\\pi}{300} \\text{ s}, \\; \\frac{\\pi}{25} \\text{ s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\; \\frac{\\pi}{50} \\text{ s}, \\; \\frac{\\pi}{100} \\text{ s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-eb861507ec8a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "21 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "The kinetic energy of a simple harmonic oscillator is oscillating with angular frequency of $176\\,\\text{rad/s}$. The frequency of this simple harmonic oscillator is $\\_\\_\\_\\_$ Hz. [ take $\\pi=\\;\\frac{22}{7}$ ]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "88",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "14",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "28",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "176",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ae030f5e61b3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "23 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "A simple pendulum of string length 30 cm performs 20 oscillations in 10 s . The length of the string required for the pendulum to perform 40 oscillations in the same time duration is $\\_\\_\\_\\_$ cm . [Assume that the mass of the pendulum remains same.]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.75",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7.5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "15",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "120",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-111c69a6c841",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "A cylindrical block of mass $M$ and area of cross section $A$ is floating in a liquid of density $\\rho$ and with its axis vertical. When depressed a little and released the block starts oscillating. The period of oscillation is $\\_\\_\\_\\_$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2 \\pi \\sqrt{\\; \\frac{\\rho A}{M g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pi \\sqrt{\\; \\frac{2 M}{\\rho A g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2 \\pi \\sqrt{\\; \\frac{M}{\\rho A g}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\pi \\sqrt{\\; \\frac{\\rho A}{M g}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c22bf2f2a84b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "24 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "A spring of force constant $15 \\mathrm{N/m}$ is cut into two pieces. If the ratio of their length is $1:3$, then the force constant of smaller piece is $\\_\\_\\_\\_$ $\\mathrm{N/m}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "20",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "45",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "60",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "15",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2d9ceabc6a18",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 1",
+      "status": "draft",
+      "stem": "The displacement of a particle, executing simple harmonic motion with time period $T$, is expressed as $x(t)=A \\sin \\omega t$, where $A$ is the amplitude. The maximum value of potential energy of this oscillator is found at $t=\\frac{T}{2\\beta}$. The value of $\\beta$ is $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0ecc7bb0f8f1",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "28 Jan 2026, Shift 2",
+      "status": "draft",
+      "stem": "As shown in the figure, a spring is kept in a stretched position with some extension by holding the masses 1 kg and 0.2 kg with a separation more than spring natural length and are released. Assuming the horizontal surface to be frictionless, the angular frequency (in SI unit) of the system is :",
+      "image": {
+        "url": "/question-images/pyq/physics/oscillations/PYQ-PHY-0ecc7bb0f8f1.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "20",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "30",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "27",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-815aebf46393",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The velocity of a particle executing simple harmonic motion along x-axis is described as $v^2 = 50 - x^2$, where x represents displacement. If the time period of motion is $\\; \\frac{x}{7}s,$ the value of x is _______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 44.0,
+        "max": 44.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-211bf088e15f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A uniform disc of radius R and mass M is free to oscillate about the axis A as shown in the figure. For small oscillations the time period is ________.\n(g is acceleration due to gravity)",
+      "image": {
+        "url": "/question-images/pyq/physics/oscillations/PYQ-PHY-211bf088e15f.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi \\sqrt{\\frac{5R}{4g}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi \\sqrt{\\frac{2R}{3g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi \\sqrt{\\frac{3R}{2g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi \\sqrt{\\frac{3R}{g}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-48c1a1fb7e3a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Match List-I with List-II.\nList-IList-IIA.$\\sin^2 \\omega t$I.Periodic with time period $T = \\;\\frac{\\pi}{\\omega}$ but not simple harmonic motion (SHM)B.$\\sin^3 (2\\omega t)$II.Periodic with time period $T = \\;\\frac{2\\pi}{\\omega}$ but not simple harmonic motion (SHM)C.$\\sin(\\omega t) + \\cos(\\pi \\omega t)$III.Periodic with time period $T = \\;\\frac{\\pi}{\\omega}$ and simple harmonic motion (SHM)D.$\\cos \\omega t + \\cos\\, 2\\omega t$IVNon-periodic\nChoose the correct answer from the options given below.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A-III, B-I, C-IV, D-II",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "A-II, B-I, C-III, D-IV",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "A-III, B-II, C-IV, D-I",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "A-II, B-I, C-IV, D-III",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-470023de8736",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A particle is executing simple harmonic motion. Its amplitude is A and time period is 5 sec. the time required by it to move from x = A to $x = \\frac{A}{\\sqrt{2}}$ is____sec.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1/4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5/4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5/8",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3/8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dfbcadecdd75",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A spring stretches by 2 mm when it is loaded with a mass of 200 g. From equilibrium position the mass is further pulled down by 2 mm and released. The frequency associated with the system and maximum energy in the spring are ______ Hz and ______ J, respectively. (Take $g = 10 \\text{ m/s}^2$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5\\sqrt{50}}{\\pi} \\text{ and } 8 \\times 10^{-3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5\\sqrt{50}}{\\pi}$ and 8",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10 \\sqrt{50} \\text{ and } 2 \\times 10^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\sqrt{50}}{\\pi} \\text{ and } 16 \\times 10^{-3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d3150dda2b57",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The frequency of oscillation of a mass m suspended by spring is $v_1$. If the length of the spring is cut to half, the same mass oscillates with frequency $v_2$. The value of $\\frac{V_2}{V_1}$ is ________.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

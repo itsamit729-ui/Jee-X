@@ -1,0 +1,337 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Vector Algebra",
+    "slug": "vector-algebra",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-f1248aea448e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\overset{\\rightarrow}{a}$ and $\\overset{\\rightarrow}{b}$ are two vectors such that $\\left|\\overset{\\rightarrow}{a}\\right| =2$ and $\\left|\\overset{\\rightarrow}{b}\\right| =3$, then the maximum value of $3 \\left|\\overset{\\rightarrow}{\\left(3 a+2 \\overset{\\rightarrow}{b}\\right)}\\right| +4 \\left|\\overset{\\rightarrow}{\\left(3 a-2 \\overset{\\rightarrow}{b}\\right)}\\right|$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "30",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "36",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "60",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "72",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f1263fd69c96",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let the vectors $\\vec{a} = -\\hat{i} + \\hat{j} + 3\\hat{k}$ and $\\vec{b} = \\hat{i} + 3\\hat{j} + \\hat{k}$. For some $\\lambda, \\mu \\in \\mathbb{R}$, let $\\vec{c} = \\lambda \\vec{a} + \\mu \\vec{b}$. If $\\vec{c} \\cdot (3\\hat{i} - 6\\hat{j} + 2\\hat{k}) = 10$ and $\\vec{c} \\cdot (\\hat{i} + \\hat{j} + \\hat{k}) = -2$, then $|\\vec{c}|^{2}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "14",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "15",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f6d7fe58b9ea",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "2 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two adjacent sides of a parallelogram PQRS are given by $\\overset{\\rightarrow}{PQ}=\\hat{j}+\\hat{k}$ and $\\overset{\\rightarrow}{PS}=\\hat{i}-\\hat{j}$. If the side PS is rotated about the point P by an acute angle α in the plane of the parallelogram so that it becomes perpendicular to the side PQ, then $\\sin^{2}\\left(\\;\\frac{5\\alpha}{2}\\right)-\\sin^{2}\\left(\\;\\frac{\\alpha}{2}\\right)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{\\sqrt{3}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{\\sqrt{3}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{2\\sqrt{3}}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-14ecee95060d",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "4 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\hat{u}$ and $\\hat{v}$ be unit vectors inclined at an acute angle such that $\\left| \\hat{u} \\times \\hat{v} \\right| = \\frac{\\sqrt{3}}{2}$. If $\\vec{A} = \\lambda \\hat{u} + \\hat{v} + (\\hat{u} \\times \\hat{v})$. Then λ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{3} (\\vec{A} \\cdot \\hat{u}) - \\frac{2}{3} (\\vec{A} \\cdot \\hat{v})$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{3} (\\vec{A} \\cdot \\hat{u}) - \\frac{1}{3} (\\vec{A} \\cdot \\hat{v})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{3} (\\vec{A} \\cdot \\hat{u}) + \\frac{2}{3} (\\vec{A} \\cdot \\hat{v})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\vec{A} \\cdot \\hat{u}) - \\frac{1}{2} (\\vec{A} \\cdot \\hat{v})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-68cc05a21162",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{a} = \\sqrt{7} \\hat{i} + \\hat{j} - \\hat{k}$ and $\\vec{b} = \\hat{j} + 2 \\hat{k}$. If $\\vec{r}$ is a vector such that $\\vec{r} \\times \\vec{a} + \\vec{a} \\times \\vec{b} = \\vec{0}$ and $\\vec{r} \\cdot \\vec{a} = 0$, then $|3 \\vec{r}|^2$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "44",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "54",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "86",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "132",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a17eb49aefe2",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "5 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let O be the origin, $\\overrightarrow{OP}=\\overrightarrow{a}$ and $\\overrightarrow{OQ}=\\overrightarrow{b}$. If R is the point on $\\overrightarrow{OP}$ such that$\\overrightarrow{OP}=5\\overrightarrow{OR}$, and M is the point such that $\\overrightarrow{OQ}=5\\overrightarrow{RM}$, then $\\overrightarrow{PM}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{1}{5}(\\overrightarrow{a}-4\\overrightarrow{b})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{1}{5}(\\overrightarrow{b}-4\\overrightarrow{a})$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{1}{5}(-\\overrightarrow{a}+4\\overrightarrow{b})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{1}{5}(-\\overrightarrow{b}+4\\overrightarrow{a})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b9a0dfc046b3",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\vec{a}=\\hat{i}+\\hat{j}+\\hat{k}, \\vec{b}=\\hat{j}-\\hat{k}$ and $\\vec{c}$ be three vectors such that $\\vec{a}\\times \\vec{c}=\\vec{b}$ and $\\vec{a}\\cdot \\vec{c}=3$, then $\\vec{c}\\cdot(\\vec{a}-2\\vec{b})$ is equal to _______ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6ea2a634b614",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "6 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=2\\hat{i}+3\\hat{j}+3\\hat{k}$ and $\\vec{b}=6\\hat{i}+3\\hat{j}+3\\hat{k}$. Then the square of the area of the triangle with adjacent sides determined by the vectors $(2\\vec{a}+3\\vec{b})$ and $(\\vec{a}-\\vec{b})$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "450",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "900",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1800",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2400",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f803b900e85a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2026,
+      "shift": "8 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=4\\hat{i}-\\hat{j}+3\\hat{k}, \\vec{b}=10\\hat{i}+2\\hat{j}-\\hat{k}$ and a vector $\\vec{c}$ be such that $2(\\vec{a}\\times \\vec{b})+3(\\vec{b}\\times \\vec{c})=\\vec{0}$. If $\\vec{a}\\cdot \\vec{c}=15$, then $\\vec{c}\\cdot(\\hat{i}+\\hat{j}-3\\hat{k})$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "-4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}
