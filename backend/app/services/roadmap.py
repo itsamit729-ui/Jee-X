@@ -10,7 +10,7 @@ from fastapi import HTTPException
 from sqlalchemy import func
 from sqlalchemy.orm import selectinload
 from app import models
-from app.services import predictor
+from app.services import predictor, admissions
 from app.services.practice import choose_questions
 
 DEFAULTS = {'goal_type': 'marks', 'weekly_hours': 5, 'target_marks': 150, 'college_choices': []}
@@ -159,23 +159,26 @@ def resolve_settings(db, user_id, stored, rows, now, validate=False):
     by_id = {p.id: p for p in programs}
     if validate and any(i not in by_id for i in ids):
         raise HTTPException(422, 'A selected college or branch is no longer available. Choose another option.')
+    admission = {**admissions.DEFAULT, **stored.get('admission', {})}
+    eligible_rows = admissions.cutoff_rows(db, admission) if ids else []
     choices = []
     for pid in ids:
         program = by_id.get(pid)
         if not program:
             continue
-        cutoff = (db.query(models.PredictorJosaaCutoff).filter(
-            models.PredictorJosaaCutoff.program_id == pid,
-            models.PredictorJosaaCutoff.exam_route == predictor.MAIN_EXAM_ROUTE,
-            models.PredictorJosaaCutoff.rank_list == 'CRL', models.PredictorJosaaCutoff.seat_type == 'OPEN',
-            models.PredictorJosaaCutoff.quota == 'AI', models.PredictorJosaaCutoff.gender_pool == 'Gender-Neutral',
-            models.PredictorJosaaCutoff.closing_is_preparatory.is_(False),
-            models.PredictorJosaaCutoff.opening_is_preparatory.is_(False),
-            models.PredictorJosaaCutoff.closing_rank.isnot(None))
-            .order_by(models.PredictorJosaaCutoff.year.desc(), models.PredictorJosaaCutoff.round.desc()).first())
+        options = [r for r in eligible_rows if r['program_id'] == pid and r['quota_resolved']]
+        # Keep each category's own rank list; select the student's category benchmark first.
+        preferred_seat = admission['category'] + (' (PwD)' if admission['pwd'] else '')
+        options.sort(key=lambda r: (r['seat_type'] != preferred_seat, r['gender_pool'] != 'Gender-Neutral', -r['closing_rank']))
+        cutoff = options[0] if options else None
         choices.append({'id': pid, 'institute': program.institute.name, 'program': program.name,
-                        'rank': cutoff.closing_rank if cutoff else None,
-                        'year': cutoff.year if cutoff else None, 'round': cutoff.round if cutoff else None})
+                        'rank': cutoff['closing_rank'] if cutoff else None,
+                        'rank_list': cutoff['rank_list'] if cutoff else None,
+                        'quota': cutoff['quota'] if cutoff else None,
+                        'seat_type': cutoff['seat_type'] if cutoff else None,
+                        'gender_pool': cutoff['gender_pool'] if cutoff else None,
+                        'year': cutoff['reference_year'] if cutoff else None,
+                        'round': cutoff['reference_round'] if cutoff else None})
     profile = db.get(models.StudentProfile, user_id)
     target_year = profile.target_year if profile else now.year + (now.month >= 6)
     # Operator-managed verified dates only. Never manufacture an official examination date.
@@ -190,8 +193,8 @@ def resolve_settings(db, user_id, stored, rows, now, validate=False):
     timed = [r for r in rows if r.answered_at >= cutoff_date and 0 < r.time_taken_sec <= 1800]
     # Practice time is only an observed lower bound, not total availability.
     hours = min(15, max(3, round(sum(r.time_taken_sec for r in timed) / 3600 / 4 * 2))) if len(timed) >= 10 else 5
-    known_ranks = [c['rank'] for c in choices if c['rank'] is not None]
-    return {'goal_type': goal_type, 'target_marks': (stored.get('target_marks') or 150) if goal_type == 'marks' else None,
+    known_ranks = [c['rank'] for c in choices if c['rank'] is not None and c['rank_list'] == 'CRL']
+    return {'admission': admission, 'goal_type': goal_type, 'target_marks': (stored.get('target_marks') or 150) if goal_type == 'marks' else None,
             'college_choices': ids, 'choices': choices, 'weekly_hours': hours,
             'pace_basis': 'Suggested from recent timed practice, including time for review.' if len(timed) >= 10 else 'A starting suggestion of five hours per week; adjusted as practice evidence grows.',
             'target_year': target_year, 'exam_date': exam_date.isoformat() if exam_date else None,
@@ -214,16 +217,26 @@ def build_view(db, user_id, record=None, now=None):
             by_subject[r.subject].setdefault(r.question_id, r.outcome)
     subjects = [{'code': code, 'answered': len(items), 'accuracy': round(100 * sum(v == 'correct' for v in items.values()) / len(items))}
                 for code, items in by_subject.items() if items]
+    current = scenario(db, standing['score'])
     target = scenario(db, settings['target_marks'], settings.get('target_crl'))
-    if settings['goal_type'] == 'colleges' and target['rank_low'] is not None:
+    admission = settings['admission']
+    cutoffs = admissions.cutoff_rows(db, admission)
+    ranks = admissions.rank_inputs(admission, current['rank_low'], current['rank_high'])
+    current['colleges'] = admissions.matches(cutoffs, ranks)
+    if admission.get('crl'):
+        current.update(rank_low=admission['crl'], rank_high=admission['crl'], basis='entered_crl')
+    current['rank_inputs'] = {key: value[0] for key, value in ranks.items()}
+    # Marks predict CRL only. Never reuse today's category rank as a future scenario.
+    target['colleges'] = admissions.matches(cutoffs, {'CRL': (target['rank_low'], target['rank_high'])} if target['rank_low'] else {})
+    if settings['goal_type'] == 'colleges':
         target['basis'] = 'college_cutoff'
         target['colleges'] = [{'institute': c['institute'], 'program': c['program'],
-            'reference_year': c['year'], 'reference_round': c['round'], 'quota': 'AI',
-            'seat_type': 'OPEN', 'gender_pool': 'Gender-Neutral', 'closing_rank': c['rank'],
-            'meets_conservative_estimate': True} for c in settings['choices'] if c['rank'] is not None]
+            'reference_year': c['year'], 'reference_round': c['round'], 'quota': c['quota'],
+            'seat_type': c['seat_type'], 'gender_pool': c['gender_pool'], 'rank_list': c['rank_list'],
+            'closing_rank': c['rank'], 'meets_conservative_estimate': True} for c in settings['choices'] if c['rank'] is not None]
     return {'saved': record is not None, 'settings': settings, 'plan': {**plan, 'tasks': tasks},
             'baseline': standing, 'subjects': subjects, 'checkpoints': record.checkpoints if record else [],
-            'current': scenario(db, standing['score']),
+            'current': current, 'states': admissions.STATES, 'cutoff_preview': admissions.preview(cutoffs, admission),
             'target': target,
-            'college_note': 'Historical JEE Main OPEN / CRL, All India, Gender-Neutral seats only. Home-state, other-state and category-specific pools are not included. Eligibility is not verified; these are comparisons, not admission offers.',
+            'college_note': 'Historical JoSAA cutoffs, not admission guarantees. OPEN uses CRL; reserved and PwD pools use their respective ranks. Marks-based estimates support CRL only. NIT quotas use your Class XII state code of eligibility, not residence. Unmapped non-NIT state quotas and other admission eligibility checks are excluded.',
             'updated_at': now.isoformat()}

@@ -255,6 +255,9 @@ class RankBand(BaseModel):
 
 
 class CollegeMatchOut(BaseModel):
+    rank_list: str = "CRL"
+    compared_rank_low: int | None = None
+    compared_rank_high: int | None = None
     institute: str
     program: str
     quota: str

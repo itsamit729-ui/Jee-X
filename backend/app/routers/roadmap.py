@@ -1,18 +1,38 @@
 from datetime import datetime, date
 from fastapi import APIRouter, Depends
 from typing import Literal
-from pydantic import BaseModel, Field, model_validator
-from sqlalchemy import or_
+from pydantic import BaseModel, Field, model_validator, field_validator
+from sqlalchemy import or_, func
 from sqlalchemy.orm import Session
 from app import models
 from app.database import get_db
 from app.deps import get_current_db_user
-from app.services import roadmap
+from app.services import roadmap, admissions
 
 router = APIRouter(prefix='/api/roadmap', tags=['roadmap'])
 
 
+class AdmissionsProfile(BaseModel):
+    model_config = {'extra': 'forbid'}
+    category: Literal['OPEN', 'EWS', 'OBC-NCL', 'SC', 'ST'] = 'OPEN'
+    state: str | None = None
+    female_pool: bool = False
+    pwd: bool = False
+    crl: int | None = Field(default=None, ge=1, le=3000000)
+    category_rank: int | None = Field(default=None, ge=1, le=3000000)
+    crl_pwd: int | None = Field(default=None, ge=1, le=3000000)
+    category_pwd_rank: int | None = Field(default=None, ge=1, le=3000000)
+
+    @field_validator('state')
+    @classmethod
+    def known_state(cls, value):
+        if value is not None and value not in admissions.STATES:
+            raise ValueError('Choose a valid state code of eligibility.')
+        return value
+
+
 class RoadmapSettings(BaseModel):
+    admission: AdmissionsProfile = Field(default_factory=AdmissionsProfile)
     model_config = {'extra': 'forbid'}
     goal_type: Literal['marks', 'colleges'] = 'marks'
     target_marks: int | None = Field(default=150, ge=1, le=300)
@@ -29,6 +49,14 @@ class RoadmapSettings(BaseModel):
             if self.target_marks is not None:
                 raise ValueError('College goals must not include a marks target.')
         return self
+
+
+@router.get('/data-status')
+def data_status(db: Session = Depends(get_db)):
+    from app.predictor_bootstrap import STATUS
+    groups = db.query(models.PredictorJosaaCutoff.year, func.count(models.PredictorJosaaCutoff.id)).group_by(models.PredictorJosaaCutoff.year).all()
+    return {'import': dict(STATUS), 'datasets': [{'year': year, 'rows': count} for year, count in groups],
+            'source': 'https://josaa.nic.in/or-cr/'}
 
 
 @router.get('/colleges')

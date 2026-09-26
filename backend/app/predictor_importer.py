@@ -67,8 +67,19 @@ def import_josaa(db: Session, path: Path) -> tuple[int, int]:
     meta = data["metadata"]
     counselling, year, round_ = meta["counselling"], meta["year"], meta["round"]
 
-    institute_cache: dict = {}
-    program_cache: dict = {}
+    # Seed dimensions in batches: avoid thousands of network round trips on deployment.
+    institute_cache = {r.name: r for r in db.query(models.PredictorInstitute).all()}
+    names = {r['institute'] for r in data['records']}
+    new_institutes = [models.PredictorInstitute(name=name) for name in names - institute_cache.keys()]
+    db.add_all(new_institutes)
+    db.flush()
+    institute_cache.update({r.name: r for r in new_institutes})
+    program_cache = {(r.institute_id, r.name): r for r in db.query(models.PredictorProgram).all()}
+    keys = {(institute_cache[r['institute']].id, r['program']) for r in data['records']}
+    new_programs = [models.PredictorProgram(institute_id=i, name=name) for i, name in keys - program_cache.keys()]
+    db.add_all(new_programs)
+    db.flush()
+    program_cache.update({(r.institute_id, r.name): r for r in new_programs})
     existing = {
         (r.year, r.counselling, r.round, r.institute_id, r.program_id, r.quota, r.seat_type, r.gender_pool): r
         for r in db.query(models.PredictorJosaaCutoff).filter(

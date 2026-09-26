@@ -130,8 +130,9 @@ export default function RankPredictor({ attemptId }) {
                     </div>
                     <div style={{ textAlign: 'right' }}>
                       <div className="row-value">{fmtRank(c.closing_rank)}</div>
+                      <small>{c.reference_year} · Round {c.reference_round} · {c.gender_pool}</small>
                       <div className="faint" style={{ fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.02em' }}>
-                        {c.quota} quota
+                        {c.quota} · {c.seat_type} · {c.rank_list}
                       </div>
                     </div>
                   </div>
@@ -148,9 +149,9 @@ export default function RankPredictor({ attemptId }) {
                 </button>
               )}
               <p className="hint" style={{ marginTop: 10 }}>
-                Historical closing rank, general category only — not an admission promise. AI (all-India) applies to
-                everyone; OS (other-state) is shown as the safe default for NITs since we don't know your home
-                state — your home state's own NIT is usually easier to get into than this via its HS quota.
+                Historical cutoffs, not admission promises. OPEN compares CRL; reserved and PwD pools compare
+                their corresponding ranks. NIT quotas use your saved Class XII state of eligibility.
+                Set category and state in your roadmap to personalise these matches.
               </p>
               <div className="faint" style={{ display: 'flex', flexWrap: 'wrap', gap: 16, marginTop: 6, fontSize: 12.5 }}>
                 <span><span className="dot" style={{ background: GOOD, marginRight: 5, verticalAlign: 'middle' }} />within conservative estimate</span>

@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session, joinedload
 from app import models, schemas
 from app.database import get_db
 from app.deps import get_current_db_user
-from app.services import predictor
+from app.services import predictor, admissions
 
 router = APIRouter(prefix="/api/test-attempts", tags=["predictions"])
 
@@ -31,7 +31,10 @@ def get_prediction(
         raise HTTPException(status_code=409, detail="This attempt hasn't been submitted yet.")
 
     prediction = predictor.predict_for_attempt(db, attempt)
-    colleges = predictor.match_colleges(db, prediction.rank_low, prediction.rank_high)
+    roadmap = db.get(models.StudentRoadmap, user.id)
+    profile = {**admissions.DEFAULT, **(roadmap.settings.get('admission', {}) if roadmap else {})}
+    colleges = admissions.matches(admissions.cutoff_rows(db, profile),
+        admissions.rank_inputs(profile, prediction.rank_low, prediction.rank_high))
 
     return schemas.PredictionOut(
         attempt_id=attempt.id,

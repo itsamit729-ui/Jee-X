@@ -66,6 +66,12 @@ app.include_router(scenarios.router)
 app.include_router(roadmap.router)
 
 
+@app.on_event('startup')
+def import_predictor_reference_data():
+    from app.predictor_bootstrap import start_reference_import
+    start_reference_import()
+
+
 @app.get("/health")
 def health():
     return {"status": "ok"}
