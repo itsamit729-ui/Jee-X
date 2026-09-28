@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowUpRight, Target, Compass, RotateCcw, Clock3 } from 'luc
 import { catalogService, subjectTestBuilderService, subjectTestGraderService } from '../lib/subjectTests.js'
 import MathText from '../components/MathText.jsx'
 import QuestionAssets from '../components/QuestionAssets.jsx'
+import GoalJourney from '../components/GoalJourney.jsx'
 import AppHeader from '../components/AppHeader.jsx'
 import Palette from '../components/Palette.jsx'
 import RankPredictor from '../components/RankPredictor.jsx'
@@ -200,6 +201,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
             {assessment && <button className="btn btn-primary" onClick={() => navigate('/roadmap')}>See my updated roadmap</button>}
           </div>
 
+          <GoalJourney afterTest attemptId={result.attempt_id}/>
           <div className="panel">
             <h2 className="panel-title">Solutions</h2>
             {result.questions.map((r, i) => (
@@ -253,6 +255,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
             {q.recommendation && <aside className="practice-why" aria-label="Why this question">
               <span className="practice-eyebrow"><Target size={14} aria-hidden="true"/> WHY THIS QUESTION</span>
               <p>{q.recommendation.reason}</p>
+              {q.recommendation.milestone_title && <p><strong>Path connection: {q.recommendation.milestone_title}</strong><br/>{q.recommendation.path_role}</p>}
               <details><summary>Your learning goal</summary><p>{q.recommendation.learning_goal}</p></details>
             </aside>}
             {q.passage && <div className="passage"><MathText text={q.passage} /></div>}
@@ -300,7 +303,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   if (assessment) return <div className="crackjee-root"><AppHeader /><main className="wrap practice-page">
     <button className="btn btn-quiet" onClick={() => navigate('/roadmap')}><ArrowLeft size={16}/> Your roadmap</button>
     <header className="practice-intro"><div><span className="practice-eyebrow">FIND YOUR STARTING POINT</span><h1>A clear baseline.<br/><em>A better next step.</em></h1><p>75 fresh questions across Physics, Chemistry and Mathematics. Give yourself three uninterrupted hours.</p></div></header>
-    <section className="practice-builder"><div className="practice-controls"><h2>One honest checkpoint</h2><p>Each subject has 20 multiple-choice and 5 numerical questions. Correct: +4 · Incorrect: −1 · Unanswered: 0.</p><p>The timer submits at three hours. Keep this page open; leaving or refreshing ends your local session.</p><p>This generated assessment measures your starting point. It is not an official or statistically calibrated JEE paper.</p></div><aside className="practice-start"><strong>180 minutes · 300 marks</strong><button className="btn btn-primary" disabled={starting} onClick={startTest}>{starting ? 'Preparing your assessment…' : 'Begin assessment'}</button><small>Your answers are scored on the server.</small></aside></section>
+    <section id="practice-builder" className="practice-builder"><div className="practice-controls"><h2>One honest checkpoint</h2><p>Each subject has 20 multiple-choice and 5 numerical questions. Correct: +4 · Incorrect: −1 · Unanswered: 0.</p><p>The timer submits at three hours. Keep this page open; leaving or refreshing ends your local session.</p><p>This generated assessment measures your starting point. It is not an official or statistically calibrated JEE paper.</p></div><aside className="practice-start"><strong>180 minutes · 300 marks</strong><button className="btn btn-primary" disabled={starting} onClick={startTest}>{starting ? 'Preparing your assessment…' : 'Begin assessment'}</button><small>Your answers are scored on the server.</small></aside></section>
     {error && <p className="alert" role="alert">{error}</p>}
   </main></div>
 
@@ -309,12 +312,13 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   // ---------------------------------------------------------------- SETUP
   return <div className="crackjee-root"><AppHeader />
     <main className="wrap practice-page">
-      <header className="practice-intro"><div><span className="practice-eyebrow">YOUR NEXT STEP</span>
-        <h1>Less guessing.<br /><em>Better practice.</em></h1>
-        <p>Pick your focus. Make time for it. Leave knowing what to work on next.</p>
+      <header className="practice-intro practice-intro-connected"><div><span className="practice-eyebrow">YOUR NEXT STEP</span>
+        <h1>Make today <em>count.</em></h1>
+        <p>Your goal sets the direction. Your results shape today’s practice.</p>
         <div className="practice-intro-tags"><span><Target size={14}/> A reason for every question</span><span><Clock3 size={14}/> Built around your time</span></div></div>
-        <div className="practice-note"><span className="practice-eyebrow">HOW IT WORKS</span><ol><li><b>01</b><span>Find your starting point<small>Your recent answers guide the choice.</small></span></li><li><b>02</b><span>Work through the why<small>See the purpose of every question.</small></span></li><li><b>03</b><span>Take the next step<small>Review, learn, and come back stronger.</small></span></li></ol></div>
+
       </header>
+      <GoalJourney/>
       <section className="practice-paths" aria-label="Practice approach">
         {[['recommended', Target, '01', 'Recommended for you', 'A session shaped by your recent answers. New here? Start by finding your strengths.'],
           ['topic', Compass, '02', 'Choose a topic', 'Have something in mind? Focus on a subject or chapter, with questions chosen for your level.'],
@@ -323,7 +327,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
             <span className="practice-path-top"><span>{number}</span><Icon size={21}/></span><h2>{title}</h2><p>{copy}</p><span className="practice-path-action">{mode === key ? 'Selected' : 'Choose this path'} <ArrowUpRight size={17}/></span>
           </button>)}
       </section>
-      <section className="practice-builder" aria-label="Set up practice">
+      <section id="practice-builder" className="practice-builder" aria-label="Set up practice">
         <div className="practice-controls"><div className="practice-step-heading"><span>01</span><div><span className="practice-eyebrow">CHOOSE YOUR FOCUS</span><h2>What are we working on?</h2></div></div>
           <div className="practice-subjects" role="group" aria-label="Subject">
             {mode !== 'topic' && <button type="button" aria-pressed={!subjectCode} onClick={() => setSubjectCode('')}>All subjects</button>}

@@ -73,7 +73,16 @@ def college_options(q: str = '', user=Depends(get_current_db_user), db: Session 
 
 @router.get('')
 def get_roadmap(user=Depends(get_current_db_user), db: Session = Depends(get_db)):
-    return roadmap.build_view(db, user.id, db.get(models.StudentRoadmap, user.id))
+    from app.services.journey import load_journey
+    context = {}
+    journey = load_journey(db, user.id, context=context)
+    return {**roadmap.build_view(db, user.id, db.get(models.StudentRoadmap, user.id), context=context), 'journey': journey}
+
+
+@router.get('/journey')
+def get_journey(user=Depends(get_current_db_user), db: Session = Depends(get_db)):
+    from app.services.journey import load_journey
+    return load_journey(db, user.id)
 
 
 @router.put('')
@@ -90,9 +99,14 @@ def save_roadmap(body: RoadmapSettings, user=Depends(get_current_db_user), db: S
         checkpoints.append({'date': now.isoformat(), 'tasks': [
             {'title': t['title'], **roadmap.task_progress(t, rows, since)} for t in record.plan['tasks']]})
     plan = roadmap.make_plan(rows, settings, now)
+    if record and record.plan.get('journey'):
+        plan['journey'] = record.plan['journey']
     if not record:
         record = models.StudentRoadmap(user_id=user.id)
         db.add(record)
     record.settings, record.plan, record.checkpoints, record.updated_at = settings, plan, checkpoints[-12:], now
     db.commit()
-    return roadmap.build_view(db, user.id, record, now)
+    from app.services.journey import load_journey
+    context = {}
+    journey = load_journey(db, user.id, now, context=context)
+    return {**roadmap.build_view(db, user.id, record, now, context=context), 'journey': journey}

@@ -174,6 +174,9 @@ class QuestionAssetOut(BaseModel):
 
 
 class RecommendationOut(BaseModel):
+    milestone_id: str | None = None
+    milestone_title: str | None = None
+    path_role: str | None = None
     reason_code: str
     reason: str
     learning_goal: str

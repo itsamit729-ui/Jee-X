@@ -70,7 +70,11 @@ def create_subject_test(body: schemas.SubjectTestCreate,
         seen = {r[0] for r in db.query(models.QuestionResponse.question_id).filter_by(user_id=user.id).distinct()}
         selection = assessment_questions(candidates, subject_ids, seen)
     else:
-        selection = choose_questions(candidates, history, count, body.mode)
+        from app.services.journey import load_journey
+        journey = load_journey(db, user.id)
+        active = next(m for m in journey['milestones'] if m['id'] == journey['active_id'])
+        focus = {s['chapter_id'] for s in journey['focus']} if body.mode == 'recommended' and not body.chapter_id else None
+        selection = choose_questions(candidates, history, count, body.mode, focus_chapters=focus, milestone=active)
     reasons = dict(selection)
     rows = (db.query(models.Question).filter(models.Question.id.in_(reasons))
             .options(selectinload(models.Question.options), selectinload(models.Question.assets),

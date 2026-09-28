@@ -4,7 +4,7 @@ from datetime import datetime
 from statistics import median
 
 
-def choose_questions(candidates, history, count, mode='recommended', now=None):
+def choose_questions(candidates, history, count, mode='recommended', now=None, focus_chapters=None, milestone=None):
     now = now or datetime.utcnow()
     recent = defaultdict(list)
     seen = set()
@@ -44,7 +44,10 @@ def choose_questions(candidates, history, count, mode='recommended', now=None):
         repeated = q.id in seen
         if repeated:
             text += ' You have seen this question before; this is a revision attempt.'
-        reason = {'reason_code': code, 'reason': text, 'learning_goal': goal, 'evidence': evidence, 'repeated': repeated}
+        reason = {'milestone_id': milestone['id'] if milestone else None,
+                  'milestone_title': milestone['title'] if milestone else None,
+                  'path_role': 'Priority chapter in your roadmap' if focus_chapters and getattr(q, 'chapter_id', None) in focus_chapters else 'Broaden your evidence and keep other concepts active',
+                  'reason_code': code, 'reason': text, 'learning_goal': goal, 'evidence': evidence, 'repeated': repeated}
         ranked.append((q, reason, abs(q.difficulty - target), repeated))
     # Aim for 60% support, 20% revision and 20% exploration, using available evidence.
     pattern = ['support', 'support', 'revision', 'support', 'explore']
@@ -54,7 +57,9 @@ def choose_questions(candidates, history, count, mode='recommended', now=None):
     while ranked and len(chosen) < count:
         desired = 'revision' if mode == 'revision' else pattern[len(chosen) % len(pattern)]
         best = min(ranked, key=lambda item: (
-            item[3], groups.get(item[1]['reason_code'], 'explore') != desired,
+            item[3],
+            bool(focus_chapters) and desired == 'support' and getattr(item[0], 'chapter_id', None) not in focus_chapters,
+            groups.get(item[1]['reason_code'], 'explore') != desired,
             used[item[0].subtopic_id], item[2], item[0].id))
         ranked.remove(best)
         q, reason, _, _ = best

@@ -199,18 +199,18 @@ def resolve_settings(db, user_id, stored, rows, now, validate=False):
             'pace_basis': 'Suggested from recent timed practice, including time for review.' if len(timed) >= 10 else 'A starting suggestion of five hours per week; adjusted as practice evidence grows.',
             'target_year': target_year, 'exam_date': exam_date.isoformat() if exam_date else None,
             'timeline_note': f'Exam date managed by JeeX for your {target_year} target year.' if exam_date else f'Official date not configured for {target_year}. We use a rolling 12-week planning horizon, not an assumed exam date.',
-            'planning_until': (min(exam_date, now.date() + timedelta(weeks=12)) if exam_date else now.date() + timedelta(weeks=12)).isoformat(),
+            'planning_until': (exam_date if exam_date else now.date() + timedelta(weeks=12)).isoformat(),
             'target_crl': min(known_ranks) if known_ranks else None}
 
 
-def build_view(db, user_id, record=None, now=None):
+def build_view(db, user_id, record=None, now=None, context=None):
     now = now or datetime.utcnow()
-    rows = evidence(db, user_id)
-    settings = resolve_settings(db, user_id, record.settings if record else DEFAULTS.copy(), rows, now)
+    rows = context['rows'] if context else evidence(db, user_id)
+    settings = context['settings'] if context else resolve_settings(db, user_id, record.settings if record else DEFAULTS.copy(), rows, now)
     plan = record.plan if record else make_plan(rows, settings, now)
     since = datetime.fromisoformat(plan['created_at'])
     tasks = [{**task, 'progress': task_progress(task, rows, since)} for task in plan['tasks']]
-    standing = baseline(db, user_id, now)
+    standing = context['standing'] if context else baseline(db, user_id, now)
     by_subject = defaultdict(dict)
     for r in rows:
         if r.outcome in ('correct', 'wrong'):
@@ -234,7 +234,7 @@ def build_view(db, user_id, record=None, now=None):
             'reference_year': c['year'], 'reference_round': c['round'], 'quota': c['quota'],
             'seat_type': c['seat_type'], 'gender_pool': c['gender_pool'], 'rank_list': c['rank_list'],
             'closing_rank': c['rank'], 'meets_conservative_estimate': True} for c in settings['choices'] if c['rank'] is not None]
-    return {'saved': record is not None, 'settings': settings, 'plan': {**plan, 'tasks': tasks},
+    return {'saved': record is not None, 'settings': settings, 'plan': {**{k: v for k, v in plan.items() if k != 'journey'}, 'tasks': tasks},
             'baseline': standing, 'subjects': subjects, 'checkpoints': record.checkpoints if record else [],
             'current': current, 'states': admissions.STATES, 'cutoff_preview': admissions.preview(cutoffs, admission),
             'target': target,
