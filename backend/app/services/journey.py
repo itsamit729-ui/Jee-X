@@ -133,6 +133,8 @@ def load_journey(db, user_id, now=None, context=None):
     if context is not None:
         context.update(rows=rows, settings=settings, standing=standing)
     result = evaluate(rows, settings, standing, now)
+    from app.services.topic_plan import build_topic_plan
+    result["topic_plan"] = build_topic_plan(db, rows, settings, standing, now)
     latest = db.query(models.TestAttempt).filter(models.TestAttempt.user_id == user_id,
               models.TestAttempt.submitted_at.isnot(None)).order_by(models.TestAttempt.submitted_at.desc(), models.TestAttempt.id.desc()).first()
     result['saved'] = record is not None

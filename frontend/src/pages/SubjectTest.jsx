@@ -113,6 +113,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
       const created = await subjectTestBuilderService.start({
         assessment,
         subjectCode: mission ? mission.subjectCode : assessment ? '' : subjectCode,
+        topicId: mission?.topicId || null,
         chapterId: mission ? mission.chapterId : chapterId ? Number(chapterId) : null,
         durationMinutes: mission ? mission.durationMinutes : durationMinutes,
         mode: mission ? mission.mode : mode,

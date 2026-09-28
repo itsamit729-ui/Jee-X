@@ -1,0 +1,15 @@
+# Topic-by-topic JEE study plan
+
+Roadmap and Recommendations now share a single plan: today's named topic, the next week's ordered topics, and an expandable sequence through the planning horizon. Each topic includes its chapter/subject, the reason for its priority, concept review/practice/error-review steps, and explicit progress checks. Buttons create practice papers scoped to that exact subtopic, with server validation of subject/chapter/topic ownership and the existing per-question recommendation explanations.
+
+The plan uses only complete published questions supported by the practice builder. Eligibility rules are shared so a catalog topic cannot be recommended from questions that the builder would reject. Unassessed topics are included; an empty practice history does not produce a made-up weakness.
+
+Priorities distinguish limited evidence, concept repair, overdue recall, slow correct solving, unfamiliar application, and maintenance. First-exposure answers within 45 days in the latest 500 response records count toward checkpoints; repeats cannot manufacture mastery. Foundation requires at least 8 fresh answers across 2 days at 70% accuracy. Retention needs 4 fresh answers at least 3 days after the earliest session at 75% accuracy. Timing requires at least 6 correct timed observations. These are transparent product heuristics, not a validated JEE learning/score model.
+
+A small explicit chapter prerequisite map is applied only when both chapter names match the actual catalog. It does not claim comprehensive prerequisite coverage. Subjects are interleaved within priority tiers. Topics without enough complete bank questions show a coverage limitation.
+
+Students may set 1–40 available hours/week; leaving it blank retains the existing suggested pace. First-pass sessions budget 30 minutes per topic and reserve at least half the week for revisits, review and checks. The expandable schedule assigns provisional week numbers and identifies work beyond the planning horizon. These are initial sessions, not estimates of time to master an entire syllabus. Full three-hour assessments replace study time. Only operator-configured exam dates are used; otherwise the existing rolling 12-week horizon remains explicit.
+
+Scores and goal gaps come from the existing server-scored balanced assessment baseline. A displayed range requires three recent assessment days. Topic completion does not add assumed marks or guarantee a college. Category/quota-aware college comparisons remain available in an expandable section, keeping the primary screen focused on study actions.
+
+No new database migration is needed. `available_hours` is stored in the existing roadmap settings JSON; the live topic plan is recomputed after submissions when the plan is read. Tests cover cold starts, time budgets, repeat exclusion, separate retention/speed signals, prerequisite ordering, exact-topic launch and settings validation. Desktop and 320/390px mobile browser checks cover the roadmap and practice launch.

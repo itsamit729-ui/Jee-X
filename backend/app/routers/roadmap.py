@@ -32,6 +32,7 @@ class AdmissionsProfile(BaseModel):
 
 
 class RoadmapSettings(BaseModel):
+    available_hours: int | None = Field(default=None, ge=1, le=40)
     admission: AdmissionsProfile = Field(default_factory=AdmissionsProfile)
     model_config = {'extra': 'forbid'}
     goal_type: Literal['marks', 'colleges'] = 'marks'

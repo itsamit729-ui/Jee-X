@@ -193,10 +193,12 @@ def resolve_settings(db, user_id, stored, rows, now, validate=False):
     timed = [r for r in rows if r.answered_at >= cutoff_date and 0 < r.time_taken_sec <= 1800]
     # Practice time is only an observed lower bound, not total availability.
     hours = min(15, max(3, round(sum(r.time_taken_sec for r in timed) / 3600 / 4 * 2))) if len(timed) >= 10 else 5
+    if stored.get('available_hours') is not None:
+        hours = max(1, min(40, int(stored['available_hours'])))
     known_ranks = [c['rank'] for c in choices if c['rank'] is not None and c['rank_list'] == 'CRL']
     return {'admission': admission, 'goal_type': goal_type, 'target_marks': (stored.get('target_marks') or 150) if goal_type == 'marks' else None,
-            'college_choices': ids, 'choices': choices, 'weekly_hours': hours,
-            'pace_basis': 'Suggested from recent timed practice, including time for review.' if len(timed) >= 10 else 'A starting suggestion of five hours per week; adjusted as practice evidence grows.',
+            'college_choices': ids, 'choices': choices, 'weekly_hours': hours, 'available_hours': stored.get('available_hours'),
+            'pace_basis': 'Based on the weekly study time you chose.' if stored.get('available_hours') is not None else 'Suggested from recent timed practice, including time for review.' if len(timed) >= 10 else 'A starting suggestion of five hours per week; adjusted as practice evidence grows.',
             'target_year': target_year, 'exam_date': exam_date.isoformat() if exam_date else None,
             'timeline_note': f'Exam date managed by JeeX for your {target_year} target year.' if exam_date else f'Official date not configured for {target_year}. We use a rolling 12-week planning horizon, not an assumed exam date.',
             'planning_until': (exam_date if exam_date else now.date() + timedelta(weeks=12)).isoformat(),

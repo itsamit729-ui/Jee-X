@@ -1,11 +1,11 @@
 """Build fixed practice sessions and persist their recommendation evidence."""
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import or_, and_, func
 from sqlalchemy.orm import Session, selectinload
 from app import models, schemas
 from app.database import get_db
 from app.deps import get_current_db_user
 from app.services.practice import choose_questions
+from app.services.question_catalog import candidate_query
 
 router = APIRouter(prefix='/api/subject-tests', tags=['subject-tests'])
 
@@ -13,7 +13,7 @@ router = APIRouter(prefix='/api/subject-tests', tags=['subject-tests'])
 @router.post('', response_model=schemas.SubjectTestOut, status_code=201)
 def create_subject_test(body: schemas.SubjectTestCreate,
                         user: models.User = Depends(get_current_db_user), db: Session = Depends(get_db)):
-    if body.assessment and (body.subject_code or body.chapter_id):
+    if body.assessment and (body.subject_code or body.chapter_id or body.topic_id):
         raise HTTPException(422, 'A baseline assessment covers all three subjects.')
     if not body.assessment and body.mode == 'topic' and not body.subject_code:
         raise HTTPException(422, 'Choose a subject for topic practice.')
@@ -24,32 +24,16 @@ def create_subject_test(body: schemas.SubjectTestCreate,
         chapter = db.get(models.Chapter, body.chapter_id)
         if not chapter or not subject or chapter.subject_id != subject.id:
             raise HTTPException(422, 'Choose a chapter belonging to this subject.')
-    # Only complete, supported question content. Do not fetch image bytes during selection.
-    valid_url = or_(models.Asset.url.like('https://%'),
-                    and_(models.Asset.url.like('/%'), ~models.Asset.url.like('//%')))
-    bad_asset = or_(models.Asset.url.is_(None), ~valid_url)
-    option_count = db.query(func.count(models.QuestionOption.id)).filter(
-        models.QuestionOption.question_id == models.Question.id).correlate(models.Question).scalar_subquery()
-    correct_count = db.query(func.count(models.QuestionOption.id)).filter(
-        models.QuestionOption.question_id == models.Question.id, models.QuestionOption.is_correct.is_(True)
-    ).correlate(models.Question).scalar_subquery()
-    query = (db.query(models.Question.id, models.Question.subtopic_id, models.Question.difficulty,
-                      models.Question.expected_time_sec, models.Subtopic.name.label('topic'),
-                      models.Question.type, models.Chapter.subject_id, models.Chapter.id.label('chapter_id'))
-             .select_from(models.Question)
-             .join(models.Subtopic, models.Subtopic.id == models.Question.subtopic_id)
-             .join(models.Chapter, models.Chapter.id == models.Subtopic.chapter_id)
-             .filter(models.Question.status == 'published', func.length(func.trim(models.Question.stem)) > 0,
-                     func.length(func.trim(models.Question.solution)) > 0,
-                     ~models.Question.assets.any(bad_asset),
-                     ~models.Question.passage.has(models.Passage.assets.any(bad_asset)),
-                     or_(and_(models.Question.type == 'single_correct', option_count >= 2, correct_count == 1),
-                         and_(models.Question.type == 'numerical', models.Question.answer_min.isnot(None),
-                              models.Question.answer_max.isnot(None)))))
+    query = candidate_query(db)
     if subject:
         query = query.filter(models.Chapter.subject_id == subject.id)
     if body.chapter_id:
         query = query.filter(models.Chapter.id == body.chapter_id)
+    if body.topic_id:
+        topic = db.get(models.Subtopic, body.topic_id)
+        if not topic or not body.chapter_id or topic.chapter_id != body.chapter_id:
+            raise HTTPException(422, 'Choose a topic belonging to the selected chapter.')
+        query = query.filter(models.Question.subtopic_id == body.topic_id)
     if body.assessment:
         query = query.filter(models.Chapter.in_main.is_(True))
     candidates = query.all()
