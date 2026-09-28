@@ -1,7 +1,7 @@
 import { safeReturnTo } from '../auth/AuthContext.jsx'
 import { request } from '../lib/api.js'
 import { useEffect, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext.jsx'
 import { api } from '../lib/api.js'
 import { readPendingFreeTest, clearPendingFreeTest } from '../lib/pendingFreeTest.js'
@@ -101,7 +101,7 @@ export default function Onboarding() {
     <div className="crackjee-root auth">
       <div className="auth-inner">
         <Logo />
-        <h1>Set up your profile</h1>
+        <h1>Set up your student profile</h1><p className="sub">Here to teach? <Link to="/teacher">Create your teacher workspace →</Link></p>
         <p className="sub">It takes a minute, and it's how we rank you against other aspirants.</p>
 
         <form onSubmit={handleSubmit}>

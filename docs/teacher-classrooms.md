@@ -1,15 +1,14 @@
 # Teacher studio and classroom tests
 
-## Give a teacher access
+## Start teaching
 
-1. The teacher signs up using the existing Jee Edge login. Email verification follows the server's existing setting.
-2. Open `/admin`, sign in with the existing admin password, and use **Teacher access**.
-3. Search the teacher's exact email (or username), choose **Grant teacher access**, and confirm the displayed account.
-4. The teacher opens `/teacher`. **Teacher studio** also appears in navigation after the next inbox refresh or tab focus.
+Anyone can choose **Teacher** during email/password or Google signup. Email verification follows the existing server setting. Teacher signup creates the minimal linked user and teacher permission automatically, with no administrator approval or student date of birth/class/exam goal required.
 
-The teacher does not need to fill in a student date of birth, class or exam goal. Approval creates a minimal linked user if needed. An existing student keeps their learning profile. An approved teacher can optionally complete a student profile at `/onboarding?student=1`. Revoke access from the same admin panel; future teacher requests immediately fail, but classes, papers and results remain.
+Existing accounts can open **Explore → Teacher studio → Start teaching**. Fresh Google accounts can also choose the teacher workspace from student onboarding. Enrollment is idempotent and retains any existing student profile. Teachers can optionally add a student profile at `/onboarding?student=1`.
 
-This uses an additive `teacher_access` table, not a new value in the existing `users.role` check constraint. The shared-password admin session is recorded in `audit_logs` using a short irreversible session fingerprint. It identifies an admin session, not a named human administrator; admin bearer tokens are never logged.
+The existing admin panel remains available for managing or restoring teacher access. An explicit revocation or account suspension cannot be reversed by self-enrollment; classes and results remain preserved. Signing up again with an existing email never changes that account's permissions.
+
+This uses the existing `teacher_access` table, not a new `users.role` value. Self-enrollment is recorded in `audit_logs` with the account owner's user ID. Shared-password admin actions retain their session fingerprint audit trail.
 
 ## Assign a test
 

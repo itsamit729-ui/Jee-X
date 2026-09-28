@@ -17,6 +17,7 @@ from app.deps import get_current_db_user
 from app.routers.admin_dashboard import _require_admin
 from app.services.authentication import throttle
 from app.services.grading import _grade_one
+from app.services.teacher_enrollment import enable_teacher
 
 router = APIRouter(prefix='/api', tags=['classrooms'])
 
@@ -40,7 +41,7 @@ def require_teacher(user: m.User = Depends(get_current_db_user), db: Session = D
     user = lock_user(db, user.id)
     access = db.get(m.TeacherAccess, user.id, populate_existing=True)
     if not access or not access.active:
-        raise HTTPException(403, 'Teacher access must be granted by your administrator.')
+        raise HTTPException(403, 'Open Teacher studio to start teaching.')
     return user
 
 
@@ -107,12 +108,19 @@ def set_teacher(account_id: str, body: AccessIn, token=Depends(_require_admin), 
     return {'active': body.active, 'user_id': user.id}
 
 
+@router.post('/teacher/enroll')
+def enroll_teacher(account: m.AuthAccount = Depends(get_auth_account), db: Session = Depends(get_db)):
+    user = enable_teacher(db, account)
+    db.commit()
+    return {'teacher': True, 'user_id': user.id}
+
+
 @router.get('/classrooms/access')
 def access_info(account: m.AuthAccount = Depends(get_auth_account), db: Session = Depends(get_db)):
     access = db.get(m.TeacherAccess, account.user_id) if account.user_id else None
     user = db.get(m.User, account.user_id) if account.user_id else None
     return {'teacher': bool(access and access.active and user and user.status == 'active'),
-        'student_profile': bool(user and user.student_profile), 'has_profile': bool(user)}
+        'restricted': bool(access and not access.active), 'student_profile': bool(user and user.student_profile), 'has_profile': bool(user)}
 
 
 class ClassIn(BaseModel):

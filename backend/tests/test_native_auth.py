@@ -29,7 +29,7 @@ def env(monkeypatch):
     monkeypatch.setenv('BREVO_API_KEY', 'test-key')
     monkeypatch.setenv('AUTH_EMAIL_FROM', 'hello@example.com')
     engine = create_engine('sqlite://', connect_args={'check_same_thread': False}, poolclass=StaticPool)
-    tables = [models.User.__table__, models.StudentProfile.__table__, models.ProfileAvatar.__table__,
+    tables = [models.TeacherAccess.__table__, models.AuditLog.__table__, models.User.__table__, models.StudentProfile.__table__, models.ProfileAvatar.__table__,
               models.AuthAccount.__table__, models.AuthSession.__table__, models.AuthEmailToken.__table__, models.AuthRateLimit.__table__, models.GoogleIdentity.__table__]
     Base.metadata.create_all(engine, tables=tables)
     sessions = sessionmaker(bind=engine)
@@ -186,7 +186,8 @@ def test_mail_failure_rolls_back_new_account(env, monkeypatch):
         assert db.query(models.AuthEmailToken).count() == 0
 
 
-def test_google_signin_uses_subject_and_does_not_take_password_account(env, monkeypatch):
+@pytest.mark.parametrize('account_type', ['student', 'teacher'])
+def test_google_signin_uses_subject_and_does_not_take_password_account(env, monkeypatch, account_type):
     client, sessions, _, _ = env
     monkeypatch.setenv('GOOGLE_CLIENT_ID', 'client-id')
     monkeypatch.setenv('GOOGLE_CLIENT_SECRET', 'secret')
@@ -199,7 +200,7 @@ def test_google_signin_uses_subject_and_does_not_take_password_account(env, monk
     monkeypatch.setattr(google_login.requests, 'get', lambda *a, **kw: Reply(identity))
 
     def start():
-        auth = client.get('/api/auth/google/start', follow_redirects=False)
+        auth = client.get(f'/api/auth/google/start?account_type={account_type}', follow_redirects=False)
         assert auth.status_code == 302
         from urllib.parse import parse_qs, urlsplit
         return parse_qs(urlsplit(auth.headers['location']).query)['state'][0]
@@ -212,6 +213,10 @@ def test_google_signin_uses_subject_and_does_not_take_password_account(env, monk
     with sessions() as db:
         account = db.query(models.AuthAccount).filter_by(email='google@example.com').one()
         assert db.query(models.GoogleIdentity).one().account_id == account.id
+        assert bool(account.user_id) == (account_type == 'teacher')
+        if account_type == 'teacher':
+            assert db.get(models.TeacherAccess, account.user_id).active
+            assert reply.headers['location'].endswith('/teacher')
     assert client.get('/api/auth/session').json()['authenticated'] is True
 
     state = start()
@@ -392,3 +397,28 @@ def test_optional_verification_password_reset_does_not_verify_account(env, monke
     with sessions() as db:
         assert db.query(models.AuthAccount).one().verified_at is None
     assert post(client, 'login', email=EMAIL, password='another long passphrase').status_code == 200
+
+
+def test_teacher_signup_is_self_service_and_preserves_email_verification(env):
+    client, sessions, sent, _ = env
+    assert post(client, 'register', email=EMAIL, password=PASSWORD, account_type='teacher').status_code == 202
+    with sessions() as db:
+        account = db.query(models.AuthAccount).one()
+        assert db.get(models.TeacherAccess, account.user_id).active
+        assert db.get(models.User, account.user_id).student_profile is None
+    assert post(client, 'login', email=EMAIL, password=PASSWORD).status_code == 403
+    assert post(client, 'verify-email', token=sent[-1][2]).status_code == 200
+    response = post(client, 'login', email=EMAIL, password=PASSWORD)
+    assert response.status_code == 200
+    assert response.json()['user']['teacher'] is True
+    assert response.json()['user']['onboarded'] is True
+
+
+def test_signup_cannot_promote_existing_account_or_select_admin(env):
+    client, sessions, _, _ = env
+    signup(env)
+    assert post(client, 'register', email=EMAIL, password=PASSWORD, account_type='teacher').status_code == 202
+    with sessions() as db:
+        assert db.query(models.TeacherAccess).count() == 0
+        assert db.query(models.AuthAccount).one().user_id is None
+    assert post(client, 'register', email='admin@example.com', password=PASSWORD, account_type='admin').status_code == 422

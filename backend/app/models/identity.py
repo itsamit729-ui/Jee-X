@@ -22,6 +22,7 @@ class User(Base):
         CheckConstraint("status IN ('active','suspended')", name="ck_users_status"),
     )
 
+    teacher_access = relationship("TeacherAccess", uselist=False)
     student_profile = relationship(
         "StudentProfile", back_populates="user", uselist=False, cascade="all, delete-orphan"
     )

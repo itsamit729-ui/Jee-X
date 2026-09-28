@@ -27,6 +27,8 @@ export default function AuthPage({ mode = 'login' }) {
   const navigate = useNavigate()
   const [params] = useSearchParams()
   const returnTo = safeReturnTo(params.get('returnTo'))
+  const [accountType, setAccountType] = useState('student')
+  const destination = account => account.teacher && returnTo === '/dashboard' ? '/teacher' : account.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`
   const [email, setEmail] = useState(user?.email || '')
   const [password, setPassword] = useState('')
   const [currentPassword, setCurrentPassword] = useState('')
@@ -48,17 +50,17 @@ export default function AuthPage({ mode = 'login' }) {
   const emailVisible = ['login', 'signup', 'forgot'].includes(mode) || (mode === 'verify' && !linkToken)
   const passwordVisible = ['login', 'signup', 'reset', 'change'].includes(mode)
 
-  if (!isLoading && isAuthenticated && ['login', 'signup'].includes(mode)) return <Navigate replace to={user.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`} />
+  if (!isLoading && isAuthenticated && ['login', 'signup'].includes(mode)) return <Navigate replace to={destination(user)} />
 
   async function submit(event) {
     event.preventDefault(); setError(''); setBusy(true)
     try {
       if (mode === 'login') {
         const account = await login(email, password)
-        navigate(account.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`, { replace: true })
+        navigate(destination(account), { replace: true })
       } else {
         const paths = { signup: 'register', forgot: 'forgot-password', reset: 'reset-password', verify: linkToken ? 'verify-email' : 'resend-verification', change: 'change-password' }
-        const body = mode === 'signup' ? { email, password } : mode === 'reset' ? { token: linkToken, password }
+        const body = mode === 'signup' ? { email, password, account_type: accountType } : mode === 'reset' ? { token: linkToken, password }
           : mode === 'verify' && linkToken ? { token: linkToken } : mode === 'change' ? { current_password: currentPassword, password } : { email }
         const result = await request(`/api/auth/${paths[mode]}`, { method: 'POST', body })
         if (mode === 'signup') setVerificationRequired(result.verification_required !== false)
@@ -79,12 +81,13 @@ export default function AuthPage({ mode = 'login' }) {
   return <div className="native-auth-page">
     <header className="native-auth-header"><Logo /><Link to="/" className="native-auth-back"><ArrowLeft size={15}/>Back to Jee Edge</Link></header>
     <main className="native-auth-main"><section className="native-auth-card" aria-labelledby="auth-heading">
-      <span className="native-auth-eyebrow">YOUR STUDY SPACE</span><h1 id="auth-heading">{title}</h1><p className="native-auth-subtitle">{subtitle}</p>
+      <span className="native-auth-eyebrow">{mode === 'signup' && accountType === 'teacher' ? 'YOUR TEACHING SPACE' : 'YOUR STUDY SPACE'}</span><h1 id="auth-heading">{title}</h1><p className="native-auth-subtitle">{subtitle}</p>
       {message ? <div className="native-auth-success" role="status"><CheckCircle2 size={25}/><p>{message}</p>
         {(mode === 'forgot' || (mode === 'signup' && verificationRequired)) && <small>Use the most recent email. Links expire after 30 minutes.</small>}
-        <Link className="btn btn-primary" to={mode === 'change' ? '/profile' : '/login'}>{mode === 'change' ? 'Back to profile' : mode === 'signup' && !verificationRequired ? 'Sign in' : 'Back to sign in'}<ArrowRight size={16}/></Link>
+        <Link className="btn btn-primary" to={mode === 'change' ? '/profile' : `/login?returnTo=${encodeURIComponent(mode === 'signup' && accountType === 'teacher' ? '/teacher' : returnTo)}`}>{mode === 'change' ? 'Back to profile' : mode === 'signup' && !verificationRequired ? 'Sign in' : 'Back to sign in'}<ArrowRight size={16}/></Link>
         {mode === 'signup' && verificationRequired && <Link to="/verify-email">Resend verification email</Link>}
       </div> : <form onSubmit={submit}>
+        {mode === 'signup' && <fieldset className="native-auth-roles"><legend>I’m here as a</legend>{[['student', 'Student', 'Practise and improve'], ['teacher', 'Teacher', 'Create classes and tests']].map(([value, title, hint]) => <label key={value} className={accountType === value ? 'selected' : ''}><input type="radio" name="account-type" value={value} checked={accountType === value} onChange={() => setAccountType(value)}/><span><strong>{title}</strong><small>{hint}</small></span></label>)}</fieldset>}
         {emailVisible && <div className="native-auth-field"><label htmlFor="auth-email">Email address</label><input id="auth-email" type="email" autoComplete="username" placeholder="you@example.com" required maxLength={254} value={email} onChange={e => setEmail(e.target.value)} /></div>}
         {mode === 'change' && <PasswordField id="current-password" label="Current password" value={currentPassword} onChange={e => setCurrentPassword(e.target.value)} />}
         {passwordVisible && <PasswordField id="auth-password" value={password} onChange={e => setPassword(e.target.value)} newPassword={mode !== 'login'} />}
@@ -95,7 +98,7 @@ export default function AuthPage({ mode = 'login' }) {
         <button className="btn btn-primary native-auth-submit" disabled={busy || (mode === 'reset' && !linkToken)}>{busy ? 'Please wait…' : mode === 'verify' && !linkToken ? 'Send verification link' : label}{!busy && <ArrowRight size={17}/>}</button>
       </form>}
       {!message && googleEnabled && ['login', 'signup'].includes(mode) && <div className="native-auth-google">
-        <span>or</span><a href="/api/auth/google/start" className="native-auth-google-button">Continue with Google</a>
+        <span>or</span><a href={`/api/auth/google/start?account_type=${mode === 'signup' ? accountType : 'student'}`} className="native-auth-google-button">Continue with Google</a>
       </div>}
       {mode === 'change' && googleEnabled && <div className="native-auth-google">
         <span>Google sign-in</span><button type="button" className="native-auth-google-button" onClick={connectGoogle}>Connect Google to this account</button>

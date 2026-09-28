@@ -62,7 +62,7 @@ def find_session(request: Request, db: Session):
     row = (db.query(AuthSession, AuthAccount, User)
            .join(AuthAccount, AuthAccount.id == AuthSession.account_id)
            .outerjoin(User, User.id == AuthAccount.user_id)
-           .options(joinedload(User.student_profile),
+           .options(joinedload(User.student_profile), joinedload(User.teacher_access),
                     joinedload(User.avatar).load_only(ProfileAvatar.user_id))
            .filter(AuthSession.token_hash == digest(raw), AuthSession.expires_at > utcnow())
            .first())

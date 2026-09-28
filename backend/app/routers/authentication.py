@@ -2,6 +2,8 @@
 import secrets
 import hmac
 import uuid
+from typing import Literal
+from app.services.teacher_enrollment import enable_teacher
 from datetime import timedelta
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from pydantic import BaseModel, ConfigDict, Field, field_validator
@@ -39,6 +41,7 @@ class LoginBody(EmailBody):
 
 
 class RegisterBody(EmailBody):
+    account_type: Literal['student', 'teacher'] = 'student'
     password: str = Field(min_length=15, max_length=128)
 
 
@@ -66,9 +69,10 @@ def limit(db, request, scope, email=None):
 
 def session_data(account, session, db):
     user = db.get(User, account.user_id) if account.user_id else None
+    access = user.teacher_access if user else None
     return {'authenticated': True, 'csrf_token': session.csrf_token,
             'user': {'id': account.id, 'email': account.email, 'name': user.name if user else '',
-                     'email_verified': bool(account.verified_at), 'onboarded': bool(account.user_id)}}
+                     'teacher': bool(access and access.active), 'email_verified': bool(account.verified_at), 'onboarded': bool(account.user_id)}}
 
 
 def new_session(db, request, response, account):
@@ -116,6 +120,8 @@ def register(body: RegisterBody, request: Request, db: Session = Depends(get_db)
     try:
         db.add(account)
         db.flush()
+        if body.account_type == 'teacher':
+            enable_teacher(db, account)
         if verification_required:
             issue_email_token(db, account, 'verify')
         db.commit()

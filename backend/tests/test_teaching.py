@@ -109,7 +109,7 @@ def test_teacher_account_can_skip_student_profile_and_complete_it_later(classroo
     active[0] = uid
     client.app.dependency_overrides[get_auth_account] = lambda: SimpleNamespace(user_id=uid, id='new-teacher')
     assert client.get('/api/teacher/classes').status_code == 200
-    assert client.get('/api/classrooms/access').json() == {'teacher': True, 'student_profile': False, 'has_profile': True}
+    assert client.get('/api/classrooms/access').json() == {'teacher': True, 'restricted': False, 'student_profile': False, 'has_profile': True}
     with factory() as db:
         account = db.get(m.AuthAccount, 'new-teacher')
         assert account.user_id == uid and db.get(m.User, uid).student_profile is None
@@ -368,3 +368,29 @@ def test_teacher_routes_use_native_session_csrf_and_live_revocation(classroom, m
     grant(client, 3, False)
     assert client.get('/api/teacher/classes').status_code == 403
     assert client.post('/api/teacher/classes', headers=headers, json={'name': 'After removal'}).status_code == 403
+
+
+def test_any_account_can_enable_teacher_mode_but_not_undo_removal(classroom):
+    client, factory, active = classroom
+    assert client.post('/api/teacher/enroll').status_code == 200
+    assert client.post('/api/teacher/enroll').status_code == 200
+    assert client.post('/api/teacher/classes', json={'name': 'Self-service class'}).status_code == 201
+    with factory() as db:
+        assert db.get(m.User, 1).role == 'student'
+        assert db.query(m.AuditLog).filter_by(action='teacher_self_enrolled', actor_id=1).count() == 1
+    grant(client, 1, False)
+    assert client.post('/api/teacher/enroll').status_code == 403
+    assert client.get('/api/classrooms/access').json()['restricted']
+    assert client.get('/api/teacher/classes').status_code == 403
+
+
+def test_unonboarded_account_can_start_teaching(classroom):
+    client, factory, active = classroom
+    client.app.dependency_overrides[get_auth_account] = lambda: SimpleNamespace(user_id=None, id='new-teacher')
+    response = client.post('/api/teacher/enroll')
+    assert response.status_code == 200, response.text
+    with factory() as db:
+        account = db.get(m.AuthAccount, 'new-teacher')
+        assert account.user_id == response.json()['user_id']
+        assert db.get(m.TeacherAccess, account.user_id).active
+        assert db.get(m.User, account.user_id).student_profile is None

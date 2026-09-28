@@ -1,3 +1,5 @@
+from typing import Literal
+from app.services.teacher_enrollment import enable_teacher
 """Google OpenID Connect for first-party browser sessions."""
 import os
 import secrets
@@ -52,9 +54,9 @@ def authorization_response(base, client_id, state):
 
 
 @router.get('/start')
-def start():
+def start(account_type: Literal['student', 'teacher'] = 'student'):
     base, client_id, _ = config()
-    state = secrets.token_urlsafe(32)
+    state = ('teacher.' if account_type == 'teacher' else '') + secrets.token_urlsafe(32)
     response = RedirectResponse(authorization_response(base, client_id, state), status_code=302)
     response.set_cookie(STATE_COOKIE, state, max_age=600, path='/api/auth/google', **{k: v for k, v in cookie_options().items() if k != 'path'})
     response.headers['Cache-Control'] = 'no-store'
@@ -139,7 +141,14 @@ def callback(request: Request, code: str = '', state: str = '', db: Session = De
     user = db.get(User, account.user_id) if account.user_id else None
     if user and user.status != 'active':
         return response
-    result = RedirectResponse(f'{base}/account/security?google_connected=1' if state.startswith('link.') else f'{base}/dashboard', status_code=303)
+    if state.startswith('teacher.'):
+        try:
+            enable_teacher(db, account)
+            db.commit()
+        except HTTPException:
+            db.rollback()  # Keep a restricted account restricted; show its studio status.
+    destination = '/teacher' if state.startswith('teacher.') else '/dashboard'
+    result = RedirectResponse(f'{base}/account/security?google_connected=1' if state.startswith('link.') else f'{base}{destination}', status_code=303)
     new_session(db, request, result, account)
     result.delete_cookie(STATE_COOKIE, path='/api/auth/google', secure=True, samesite='lax', httponly=True)
     return result
