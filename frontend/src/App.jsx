@@ -1,6 +1,10 @@
 import { lazy, Suspense } from 'react'
 import { IITianFactToast, Loader } from './components/Brand.jsx'
 import { Routes, Route, useLocation } from 'react-router-dom'
+const Teacher = lazy(() => import('./pages/Teacher.jsx'))
+const Classrooms = lazy(() => import('./pages/Classrooms.jsx'))
+const Assignment = lazy(() => import('./pages/Assignment.jsx'))
+const Notifications = lazy(() => import('./pages/Notifications.jsx'))
 const Roadmap = lazy(() => import('./pages/Roadmap.jsx'))
 const PublicProfile = lazy(() => import('./pages/PublicProfile.jsx'))
 const Syllabus = lazy(() => import('./pages/Syllabus.jsx'))
@@ -36,6 +40,10 @@ export default function App() {
       <Route path="/reset-password" element={<AuthPage key="reset" mode="reset" />} />
       <Route path="/verify-email" element={<AuthPage key="verify" mode="verify" />} />
       <Route path="/account/security" element={<ProtectedRoute><AuthPage mode="change" /></ProtectedRoute>} />
+      <Route path="/teacher" element={<ProtectedRoute><Teacher /></ProtectedRoute>} />
+      <Route path="/classes" element={<ProtectedRoute><Classrooms /></ProtectedRoute>} />
+      <Route path="/assignments/:id" element={<ProtectedRoute><Assignment /></ProtectedRoute>} />
+      <Route path="/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />
       <Route path="/admin" element={<Admin />} />
       <Route path="/u/:username" element={<PublicProfile />} />
       <Route path="/students" element={<PublicProfile />} />

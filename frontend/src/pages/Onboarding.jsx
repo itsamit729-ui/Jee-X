@@ -1,3 +1,5 @@
+import { safeReturnTo } from '../auth/AuthContext.jsx'
+import { request } from '../lib/api.js'
 import { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext.jsx'
@@ -27,7 +29,8 @@ export default function Onboarding() {
     (async () => {
       try {
         const me = await api.me()
-        if (me.onboarded) navigate('/dashboard', { replace: true })
+        if (me.onboarded) navigate(safeReturnTo(new URLSearchParams(window.location.search).get('returnTo')), { replace: true })
+        else if (!new URLSearchParams(window.location.search).has('student')) { const access = await request('/api/classrooms/access', { cache: false }); if (access.teacher) navigate('/teacher', { replace: true }) }
       } catch {
         // ignore — user can still fill the form
       }
@@ -86,7 +89,7 @@ export default function Onboarding() {
         }
       }
 
-      navigate('/dashboard', { replace: true })
+      navigate(safeReturnTo(new URLSearchParams(window.location.search).get('returnTo')), { replace: true })
     } catch (err) {
       setError(err.message)
     } finally {

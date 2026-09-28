@@ -1,3 +1,5 @@
+import { AssignedTestsPreview } from '../components/classroom/shared.jsx'
+import { request } from '../lib/api.js'
 import { ArrowUpRight, Target, Clock3, ArrowRight } from 'lucide-react'
 import RatingSummary from '../components/RatingSummary.jsx'
 import { useEffect, useMemo, useState } from 'react'
@@ -75,7 +77,7 @@ export default function Dashboard() {
         await syncPendingFreeTest()
         const desk = await api.dashboard()
         if (!active) return
-        if (!desk.onboarded) { navigate('/onboarding', { replace: true }); return }
+        if (!desk.onboarded) { const access = await request('/api/classrooms/access', { cache: false }); if (active) navigate(access.teacher ? '/teacher' : '/onboarding', { replace: true }); return }
         setProfile(desk.profile)
         setAttempts(desk.attempts)
         setRating(desk.rating)
@@ -99,6 +101,7 @@ export default function Dashboard() {
     <div className="crackjee-root dashboard-experience">
       <AppHeader />
       {error && <div className="wrap" role="alert" style={{ paddingTop: 24 }}><div className="panel"><p>{error}</p><button className="btn btn-secondary btn-sm" style={{ marginTop: 12 }} onClick={() => setLoadVersion(v => v + 1)}>Try again</button></div></div>}
+      {!error && <AssignedTestsPreview/>}
       {!error && <DashboardOverview
         featured={<div className="dashboard-feature-grid"><section className="dashboard-next"><div className="dashboard-next-copy"><span className="eyebrow"><Target size={14}/> RECOMMENDED FOR YOU</span><h2>Your next session.<br /><span>With a little direction.</span></h2><p>Spend less time choosing. Get questions matched to your recent answers, with a reason behind every one.</p><button className="btn btn-primary" onClick={() => navigate('/recommendations')}>Find my next questions <ArrowUpRight size={18}/></button><small><Clock3 size={13}/> 5, 15 or 30 minutes · You set the pace</small></div><div className="dashboard-next-steps" aria-label="Practice flow"><div><span>01</span><strong>Your answers</strong></div><ArrowRight size={18}/><div><span>02</span><strong>Your next questions</strong></div><ArrowRight size={18}/><div><span>03</span><strong>Your review</strong></div></div></section><aside className="dashboard-side"><span className="eyebrow">YOUR PROGRESS</span><RatingSummary initialRating={rating}/><div className="dashboard-side-note"><strong>Small sessions add up.</strong><p>Start with a focus, finish with a review. Your next recommendation learns from submitted answers.</p><button className="btn btn-quiet btn-sm" onClick={() => navigate('/profile')}>View your profile <ArrowUpRight size={14}/></button></div></aside></div>}
         profile={profile}

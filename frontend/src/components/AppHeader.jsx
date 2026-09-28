@@ -4,6 +4,7 @@ import { useAuth } from '../auth/AuthContext.jsx'
 import { BookOpen, ChevronDown, Coins, Flame, Library, LogOut, Menu, MessageCircle, MonitorPlay, Timer, Target, Trophy, UserRound, X } from 'lucide-react'
 import { Logo } from './Brand.jsx'
 import './app-header.css'
+import InboxBell from './classroom/InboxBell.jsx'
 
 const PRACTICE = [
   { to: '/subject-test', title: 'Topic practice', hint: 'Practise a topic or subject', Icon: BookOpen },
@@ -13,6 +14,7 @@ const PRACTICE = [
   { to: '/image-questions', title: 'Diagram practice', hint: 'Try visual questions', Icon: BookOpen },
 ]
 const EXPLORE = [
+  { to: '/classes', title: 'Your classroom', hint: 'Tests from your teacher', Icon: BookOpen },
   { to: '/syllabus', title: 'Syllabus', hint: 'Track what to study', Icon: Library },
   { to: '/buddy', title: 'Study assistant', hint: 'Work through a doubt', Icon: MessageCircle },
   { to: '/rewards', title: 'Rewards', hint: 'See your progress', Icon: Coins },
@@ -31,6 +33,7 @@ export default function AppHeader() {
   const { pathname } = useLocation()
   const { isAuthenticated, openLogin, logout } = useAuth()
   const ref = useRef(null)
+  const [teacher, setTeacher] = useState(false)
   const [open, setOpen] = useState(null)
   const close = () => setOpen(null)
   const toggle = name => setOpen(current => current === name ? null : name)
@@ -62,20 +65,22 @@ export default function AppHeader() {
 
   return <header className="jee-nav" ref={ref}>
     <div className="jee-nav__bar">
-      <Logo to={isAuthenticated ? '/dashboard' : '/'} />
+      <Logo to={isAuthenticated ? teacher ? '/teacher' : '/dashboard' : '/'} />
       {isAuthenticated && <nav className="jee-nav__desktop" aria-label="Main navigation">
-        <NavLink to="/dashboard" end onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Overview</NavLink>
+        <NavLink to={teacher ? '/teacher' : '/dashboard'} end onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>{teacher ? 'Teacher studio' : 'Overview'}</NavLink>
         <NavLink to="/recommendations" onClick={close} className={({ isActive }) => `jee-nav__top jee-nav__recommend${isActive ? ' selected' : ''}`}><Target size={15} aria-hidden="true"/>Recommendations</NavLink>
         <NavLink to="/roadmap" onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Roadmap</NavLink>
         {dropdown('practice', 'Practice', PRACTICE)}
         <NavLink to="/ranking" onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Rankings</NavLink>
         {dropdown('explore', 'Explore', EXPLORE)}
       </nav>}
+      {isAuthenticated && <InboxBell onTeacher={setTeacher}/>}
       {isAuthenticated ? <div className="jee-nav__account">
         <button type="button" className="jee-nav__account-button" data-trigger="account" aria-label="Account menu"
           aria-expanded={open === 'account'} aria-controls="jee-nav-account" onClick={() => toggle('account')}>
           <UserRound size={18} aria-hidden="true" /><ChevronDown size={14} aria-hidden="true" /></button>
         {open === 'account' && <div className="jee-nav__panel jee-nav__account-panel" id="jee-nav-account" aria-label="Account pages">
+          {teacher && <MenuLink item={{ to: '/teacher', title: 'Teacher studio', hint: 'Classes, tests and insights', Icon: BookOpen }} close={close} />}
           <MenuLink item={{ to: '/profile', title: 'Your profile', hint: 'Account and public profile', Icon: UserRound }} close={close} />
           <button type="button" className="jee-nav__item" onClick={signOut}><span className="jee-nav__item-icon"><LogOut size={18} /></span><strong>Log out</strong></button>
         </div>}
@@ -88,7 +93,7 @@ export default function AppHeader() {
       </button>}
     </div>
     {isAuthenticated && open === 'mobile' && <nav className="jee-nav__mobile" id="jee-nav-mobile" aria-label="Mobile navigation">
-      <NavLink to="/dashboard" onClick={close} className={({ isActive }) => `jee-nav__mobile-overview${isActive ? ' selected' : ''}`}>Overview</NavLink>
+      <NavLink to={teacher ? '/teacher' : '/dashboard'} onClick={close} className={({ isActive }) => `jee-nav__mobile-overview${isActive ? ' selected' : ''}`}>{teacher ? 'Teacher studio' : 'Overview'}</NavLink>
       <MenuLink item={{ to: '/recommendations', title: 'Recommended for you', hint: 'Your personal next step', Icon: Target }} close={close} />
       <MenuLink item={{ to: '/roadmap', title: 'Your roadmap', hint: 'From today to your next milestone', Icon: Target }} close={close} />
       <span className="jee-nav__heading">Practice</span>
@@ -97,7 +102,8 @@ export default function AppHeader() {
       <MenuLink item={{ to: '/ranking', title: 'Rankings', Icon: Trophy }} close={close} compact />
       {EXPLORE.map(item => <MenuLink key={item.to} item={item} close={close} compact />)}
       <span className="jee-nav__heading">Account</span>
-      <MenuLink item={{ to: '/profile', title: 'Your profile', Icon: UserRound }} close={close} compact />
+      {teacher && <MenuLink item={{ to: '/teacher', title: 'Teacher studio', hint: 'Classes, tests and insights', Icon: BookOpen }} close={close} />}
+          <MenuLink item={{ to: '/profile', title: 'Your profile', Icon: UserRound }} close={close} compact />
       <button type="button" className="jee-nav__item" onClick={signOut}><span className="jee-nav__item-icon"><LogOut size={18} aria-hidden="true" /></span><strong>Log out</strong></button>
     </nav>}
   </header>

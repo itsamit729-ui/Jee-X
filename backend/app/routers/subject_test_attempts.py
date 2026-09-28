@@ -18,20 +18,7 @@ from app.services import rewards
 router = APIRouter(prefix="/api/subject-tests", tags=["subject-tests"])
 
 
-def _grade_one(question: models.Question, answer: schemas.SubjectTestAnswerIn) -> tuple[str, set[int]]:
-    """Returns (outcome, correct_option_ids)."""
-    correct_option_ids = {o.id for o in question.options if o.is_correct}
-
-    if question.type == "numerical":
-        if answer.numeric_answer is None:
-            return "skipped", correct_option_ids
-        in_range = (question.answer_min or 0) <= answer.numeric_answer <= (question.answer_max or 0)
-        return ("correct" if in_range else "wrong"), correct_option_ids
-
-    chosen = set(answer.option_ids)
-    if not chosen:
-        return "skipped", correct_option_ids
-    return ("correct" if chosen == correct_option_ids else "wrong"), correct_option_ids
+from app.services.grading import _grade_one
 
 
 @router.post("/attempts/{attempt_id}/submit", response_model=schemas.SubjectTestResultOut)
@@ -41,6 +28,9 @@ def submit_subject_test(
     user: models.User = Depends(get_current_db_user),
     db: Session = Depends(get_db),
 ):
+    if db.query(models.TeachingAssignment.id).join(models.TestAttempt, models.TestAttempt.test_id == models.TeachingAssignment.test_id).filter(
+        models.TestAttempt.id == attempt_id, models.TestAttempt.user_id == user.id).first():
+        raise HTTPException(403, "Use the classroom assignment to submit this test.")
     rewards.lock_wallet(db, user.id)
     attempt = (
         db.query(models.TestAttempt)
@@ -50,6 +40,8 @@ def submit_subject_test(
     )
     if not attempt or attempt.user_id != user.id:
         raise HTTPException(status_code=404, detail="Attempt not found.")
+    if db.query(models.TeachingAssignment.id).filter_by(test_id=attempt.test_id).first():
+        raise HTTPException(403, "Use the classroom assignment to submit this test.")
     if attempt.submitted_at is not None:
         raise HTTPException(status_code=409, detail="This attempt was already submitted.")
 

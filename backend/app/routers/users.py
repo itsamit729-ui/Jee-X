@@ -54,13 +54,14 @@ def complete_onboarding(body: schemas.OnboardingIn, account: models.AuthAccount 
     existing = db.get(models.User, account.user_id) if account.user_id else None
     email = account.email
     sub = "local:" + account.id
-    if existing:
+    if existing and existing.student_profile:
         raise HTTPException(status_code=409, detail="Profile already exists for this account.")
-    if db.query(models.User).filter(models.User.username == body.username).first():
+    if db.query(models.User).filter(models.User.username == body.username, models.User.id != (existing.id if existing else -1)).first():
         raise HTTPException(status_code=409, detail="That username is already taken.")
 
     class_12_year, target_year = class_level_to_years(body.class_level)
-    user = models.User(auth0_sub=sub, email=email, name=body.name, username=body.username, role="student", status="active")
+    user = existing or models.User(auth0_sub=sub, email=email, name=body.name, username=body.username, role="student", status="active")
+    user.name, user.username = body.name, body.username
     db.add(user)
     db.flush()
     account.user_id = user.id

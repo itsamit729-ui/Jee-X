@@ -48,14 +48,14 @@ export default function AuthPage({ mode = 'login' }) {
   const emailVisible = ['login', 'signup', 'forgot'].includes(mode) || (mode === 'verify' && !linkToken)
   const passwordVisible = ['login', 'signup', 'reset', 'change'].includes(mode)
 
-  if (!isLoading && isAuthenticated && ['login', 'signup'].includes(mode)) return <Navigate replace to={user.onboarded ? returnTo : '/onboarding'} />
+  if (!isLoading && isAuthenticated && ['login', 'signup'].includes(mode)) return <Navigate replace to={user.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`} />
 
   async function submit(event) {
     event.preventDefault(); setError(''); setBusy(true)
     try {
       if (mode === 'login') {
         const account = await login(email, password)
-        navigate(account.onboarded ? returnTo : '/onboarding', { replace: true })
+        navigate(account.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`, { replace: true })
       } else {
         const paths = { signup: 'register', forgot: 'forgot-password', reset: 'reset-password', verify: linkToken ? 'verify-email' : 'resend-verification', change: 'change-password' }
         const body = mode === 'signup' ? { email, password } : mode === 'reset' ? { token: linkToken, password }
