@@ -27,3 +27,12 @@ Only operator-configured examination dates are shown. The full milestone sequenc
 ## UX
 
 The full roadmap prioritizes the journey and places detailed weekly schedules, score details and history in expandable sections. Recommendations show a compact goal/current-step panel and preserve the practice builder. After a test, students see evidence changes and a link to the updated roadmap. Subject filters, native accessible disclosure controls, keyboard focus styles and mobile single-column layouts use the existing charcoal/orange palette.
+
+
+## Interactive journey map and missions
+
+The primary view is now a responsive route map with seven selectable stops. Native buttons expose selection and current-step semantics; an adjacent inspector explains each stop. The map shows learning evidence rather than admission probability. Saved college destinations can be switched to inspect their own historical rank-list benchmarks without mutating the student's goal. Mobile places today's mission before the map; reduced-motion preferences disable arrival animation.
+
+A mission starts up to eight questions in a 15-minute suggested session with one click. Roadmap launches the server-backed session and transfers its response through temporary router state, which is cleared after consumption. Recommendations can start the same mission in place. Explicit subject/chapter selections take precedence over the inferred priority. Full assessments remain a separate, clearly labelled three-hour action. Launch errors stay visible and do not erase the map. The custom practice builder is expandable.
+
+The post-test update appears before the route; optional rank/college references are expandable. A saved starting snapshot records milestone count and foundation chapter IDs on first use of this view. Later views show newly evidenced foundation chapters and the current milestone count against this snapshot. Assessment comparisons show the earliest and latest available server-scored balanced checkpoints (up to six); both dates remain visible and at least two distinct days are needed. They are observed scores from potentially different-difficulty papers, not forecasts or a claim about the student's first-ever assessment. No percentage-to-admission metric is created.

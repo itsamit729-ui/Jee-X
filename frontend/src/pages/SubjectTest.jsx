@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { useNavigate, useSearchParams } from 'react-router-dom'
+import { useNavigate, useSearchParams, useLocation } from 'react-router-dom'
 import { ArrowLeft, ArrowUpRight, Target, Compass, RotateCcw, Clock3 } from 'lucide-react'
 import { catalogService, subjectTestBuilderService, subjectTestGraderService } from '../lib/subjectTests.js'
 import MathText from '../components/MathText.jsx'
@@ -19,6 +19,7 @@ const OUTCOME = { correct: 'correct', wrong: 'wrong' }
 
 export default function SubjectTest({ initialMode = 'recommended' }) {
   const navigate = useNavigate()
+  const location = useLocation()
   const [searchParams] = useSearchParams()
   const requestedSubject = searchParams.get('subject')
   const requestedChapter = searchParams.get('chapter')
@@ -40,7 +41,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   const [starting, setStarting] = useState(false)
   const [loadVersion, setLoadVersion] = useState(0)
 
-  const [test, setTest] = useState(null) // { attempt_id, questions, ... }
+  const [test, setTest] = useState(() => location.state?.missionTest || null) // { attempt_id, questions, ... }
   const [index, setIndex] = useState(0)
   const [answers, setAnswers] = useState({}) // question_id -> { option_ids, numeric_answer }
   const [submitting, setSubmitting] = useState(false)
@@ -99,17 +100,22 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
     }
   }, [remaining, assessment, test, result, submitting])
 
-  const startTest = async () => {
+  useEffect(() => {
+    if (location.state?.missionTest) navigate(location.pathname + location.search, { replace: true, state: null })
+  }, [])
+
+  const startTest = async (options) => {
+    const mission = options?.mission === true ? options : null
     requestFullscreen() // must be called synchronously from this click, before any await
     setError('')
     setStarting(true)
     try {
       const created = await subjectTestBuilderService.start({
         assessment,
-        subjectCode: assessment ? '' : subjectCode,
-        chapterId: chapterId ? Number(chapterId) : null,
-        durationMinutes,
-        mode,
+        subjectCode: mission ? mission.subjectCode : assessment ? '' : subjectCode,
+        chapterId: mission ? mission.chapterId : chapterId ? Number(chapterId) : null,
+        durationMinutes: mission ? mission.durationMinutes : durationMinutes,
+        mode: mission ? mission.mode : mode,
       })
       timeoutSubmitted.current = false
       timer.current.reset()
@@ -118,8 +124,10 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
       setIndex(0)
       setAnswers({})
       setResult(null)
+      return created
     } catch (e) {
       setError(e.message)
+      return null
     } finally {
       setStarting(false)
     }
@@ -196,12 +204,9 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
             <p className="result-line"><strong>{result.accuracy}%</strong> accuracy across {result.total_questions} questions</p>
           </div>
 
-          <div style={{ marginBottom: 20 }}>
-            {!assessment && <RankPredictor attemptId={result.attempt_id} />}
-            {assessment && <button className="btn btn-primary" onClick={() => navigate('/roadmap')}>See my updated roadmap</button>}
-          </div>
+          <GoalJourney afterTest attemptId={result.attempt_id} onStartMission={assessment ? undefined : startTest} missionBusy={starting}/>
+          {!assessment && <details className="journey-method"><summary>Explore rank and college reference data</summary><RankPredictor attemptId={result.attempt_id}/></details>}
 
-          <GoalJourney afterTest attemptId={result.attempt_id}/>
           <div className="panel">
             <h2 className="panel-title">Solutions</h2>
             {result.questions.map((r, i) => (
@@ -318,7 +323,8 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
         <div className="practice-intro-tags"><span><Target size={14}/> A reason for every question</span><span><Clock3 size={14}/> Built around your time</span></div></div>
 
       </header>
-      <GoalJourney/>
+      <GoalJourney onStartMission={startTest} missionBusy={starting} preferredSubject={requestedSubject} preferredChapter={requestedChapter}/>
+      <details className="practice-customize" open={Boolean(requestedSubject) || initialMode === 'topic'}><summary>Make room for a different focus <span>Change subject, chapter or session length</span></summary>
       <section className="practice-paths" aria-label="Practice approach">
         {[['recommended', Target, '01', 'Recommended for you', 'A session shaped by your recent answers. New here? Start by finding your strengths.'],
           ['topic', Compass, '02', 'Choose a topic', 'Have something in mind? Focus on a subject or chapter, with questions chosen for your level.'],
@@ -347,6 +353,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
           {starting && <p role="status" className="practice-preparing">Matching available questions to your recent answers…</p>}
         </aside>
       </section>
+      </details>
       {error && <div className="alert" role="alert">{error} <button type="button" className="btn btn-secondary btn-sm" onClick={() => setLoadVersion(v => v + 1)}>Retry loading</button></div>}
     </main>
   </div>

@@ -135,3 +135,25 @@ def test_three_fresh_sessions_refresh_weekly_plan(setup):
     assert any('refreshed' in s for s in value['journey']['changes'])
     assert len(value['checkpoints']) == 1
     assert value['journey']['evidence']['fresh_answers'] == 3
+
+
+def test_journey_supplies_real_destinations_and_recorded_comparisons():
+    choices = [{'id':7,'institute':'Test NIT','program':'Mechanical Engineering','rank':12000,'rank_list':'CRL','year':2025}]
+    history = [{'score':180,'date':NOW.isoformat()}, {'score':120,'date':(NOW-timedelta(days=7)).isoformat()}]
+    view = evaluate(rows(), {**SETTINGS,'choices':choices}, {'count':2,'score':150,'recent':history}, NOW)
+    assert view['destinations'] == choices
+    assert [v['score'] for v in view['assessment_history']] == [120,180]
+    assert view['standing']['range'] is None  # two scores do not establish readiness
+    assert sorted(view['foundation_chapters']) == [1,2,3]
+
+
+def test_starting_snapshot_survives_goal_updates_and_repeat_reads(setup):
+    client, factory, active = setup
+    first = client.put('/api/roadmap',json={'target_marks':180}).json()['journey']
+    assert first['starting_snapshot']['milestones_met'] == 0
+    second = client.put('/api/roadmap',json={'target_marks':200}).json()['journey']
+    assert second['starting_snapshot'] == first['starting_snapshot']
+    assert second == client.get('/api/roadmap/journey').json()
+    active[0] = 2
+    other = client.get('/api/roadmap/journey').json()
+    assert other['history'] == [] and not other['saved']

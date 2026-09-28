@@ -89,7 +89,7 @@ export default function Roadmap() {
   const days = data?.settings.exam_date ? Math.max(0, Math.ceil((new Date(`${data.settings.exam_date}T23:59:59+05:30`) - Date.now()) / 86400000)) : null
 
   return <div className="crackjee-root"><AppHeader/><main className="wrap roadmap-page">
-    <header className="roadmap-heading"><div><span className="roadmap-kicker">YOUR ROADMAP</span><h1>A little clearer.<br/><em>A step closer.</em></h1><p>Your destination, your milestones, and a next step that grows with you.</p></div>{data && <button className="btn btn-secondary" onClick={() => { setDraft(data.settings); setEditing(!editing) }} aria-expanded={editing}><SlidersHorizontal size={16}/> {editing ? 'Close goals' : 'Adjust my goals'}</button>}</header>
+    <header className="roadmap-heading"><div><span className="roadmap-kicker">YOUR ROADMAP</span><h1>Your journey</h1><p>Your destination, your milestones, and a next step that grows with you.</p></div>{data && <button className="btn btn-secondary" onClick={() => { setDraft(data.settings); setEditing(!editing) }} aria-expanded={editing}><SlidersHorizontal size={16}/> {editing ? 'Close goals' : 'Adjust my goals'}</button>}</header>
     {error && <div className="alert" role="alert">{error} <button className="btn btn-secondary btn-sm" onClick={() => setVersion(v => v + 1)}>Retry loading</button></div>}
     {notice && <p className="roadmap-notice" role="status"><Check size={16}/>{notice}</p>}
     {!data && !error && <div className="roadmap-loading" role="status"><span className="spin"/> Reading your recent practice and building your next steps…</div>}

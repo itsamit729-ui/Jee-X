@@ -101,7 +101,10 @@ def evaluate(rows, settings, standing, now):
                            'progress': progress, 'requirement': requirement, 'purpose': purpose})
     goal_label = f'{target} / 300 marks' if marks_goal else 'Your college & branch choices'
     enough = len(fresh) >= 30 and all(sum(r.subject == s for r in fresh) >= 8 for s in SUBJECTS) and len(skills) >= 6
-    return {'version': 1, 'goal_label': goal_label, 'active_id': active, 'milestones': milestones,
+    return {'version': 2, 'goal_label': goal_label, 'active_id': active, 'milestones': milestones,
+            'destinations': settings.get('choices', []),
+            'assessment_history': list(reversed(standing['recent'])),
+            'foundation_chapters': [s['chapter_id'] for s in foundations],
             'focus': skills[:3], 'evidence': {'fresh_answers': len(fresh), 'chapters': len(skills),
                 'subjects': len({r.subject for r in fresh}), 'assessments': len(recent),
                 'level': 'Broader practice evidence' if enough else 'Building your practice evidence'},
@@ -144,6 +147,12 @@ def load_journey(db, user_id, now=None, context=None):
         if m['first_met_at'] and not m['met']:
             m['status'] = 'recheck'
     result['achievements'] = achievements
+    # Compare observed snapshots, never extrapolate future scores from practice.
+    result['starting_snapshot'] = old.get('starting_snapshot') or {
+        'date': now.isoformat(), 'milestones_met': sum(m['met'] for m in result['milestones']),
+        'foundation_chapters': result['foundation_chapters']}
+    current_foundations = set(result['foundation_chapters'])
+    result['new_foundation_chapters'] = len(current_foundations - set(result['starting_snapshot']['foundation_chapters']))
     result['last_attempt_id'] = latest.id if latest else None
     new_attempt = result['last_attempt_id'] != old.get('last_attempt_id')
     messages = []
@@ -163,7 +172,7 @@ def load_journey(db, user_id, now=None, context=None):
         if newly_met:
             messages.append('New evidence requirements met: ' + ', '.join(newly_met) + '.')
     elif old.get('changes'):
-        messages = old['changes']
+        messages = list(old['changes'])
     else:
         messages = ['Your first plan will adapt as you complete fresh practice and balanced assessments.']
     if old.get('goal_label') and old['goal_label'] != result['goal_label']:
