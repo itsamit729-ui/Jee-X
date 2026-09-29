@@ -1,0 +1,80 @@
+/* Shared workspace rhythm. Brand colours remain defined in index.css. */
+:root{--r:12px;--r-lg:20px}
+body{font-size:14px}
+.crackjee-root .wrap{max-width:1160px}
+.crackjee-root .btn{border-radius:10px;gap:8px;min-height:44px;font-weight:650;box-shadow:none}
+.crackjee-root .btn svg{margin-left:0}
+.crackjee-root .btn-primary:hover:not(:disabled){transform:none;box-shadow:0 3px 10px #20212612}
+.crackjee-root .btn-secondary{background:var(--surface)}
+.crackjee-root :is(input:not([type=checkbox]):not([type=radio]),select,textarea){border-radius:10px}
+.crackjee-root :is(.panel,.stat,.practice-note,.practice-builder,.rating-summary-card){border-radius:16px;border-color:var(--line);box-shadow:0 2px 4px #20212603}
+.crackjee-root :is(.page-title,.roadmap-heading h1,.practice-intro h1){font-size:clamp(28px,3.4vw,42px);letter-spacing:-.04em;line-height:1.15}
+.crackjee-root :is(.page-sub,.roadmap-heading p,.practice-intro p){font-size:14px;line-height:1.65}
+.jee-nav .jee-nav__bar{height:72px;max-width:1200px;gap:28px}
+.jee-nav .jee-nav__top{border-radius:9px;padding:11px 14px;font-weight:550}
+.jee-nav .jee-nav__top.selected{background:var(--pen-soft);color:var(--pen);box-shadow:none}
+.jee-nav .jee-nav__panel{border-radius:15px;padding:8px;box-shadow:0 12px 32px #20212612}
+.jee-nav .jee-nav__item{border-radius:10px}
+.jee-nav .jee-nav__item-icon{border-radius:9px}
+.jee-nav .jee-nav__account{margin-left:0}
+.jee-nav .jee-nav__bell{margin-left:auto}
+.dashboard-experience .dashboard-feature-grid{grid-template-columns:minmax(0,1.8fr) minmax(250px,1fr);gap:24px}
+.dashboard-experience .dashboard-next{border-radius:20px;background:var(--surface);position:relative}
+.dashboard-experience .dashboard-next-copy{padding:32px}
+.dashboard-experience .dashboard-next h2{max-width:530px;font-size:clamp(28px,3.4vw,43px);margin:20px 0 16px}
+.dashboard-experience .dashboard-next-steps{padding:16px 32px;background:var(--pen-soft);border-top:0}
+.dashboard-experience .dashboard-side{border-radius:20px;padding:26px}
+.dashboard-experience .stats{gap:16px}
+.dashboard-experience .stat{padding:20px 22px;border-top:2px solid var(--line-strong)}
+.dashboard-experience .start-tile{border-radius:12px}
+.dashboard-experience .start-tile:hover{transform:none;background:var(--pen-soft)}
+.practice-page .practice-intro{gap:32px;margin-bottom:24px}
+.practice-page .practice-intro h1{margin:12px 0}
+.practice-page .practice-path{border-radius:14px;padding:20px;box-shadow:none}
+.practice-page .practice-path:hover{transform:none}
+.practice-page .practice-path.selected{box-shadow:inset 0 0 0 1px var(--pen)}
+.practice-page .practice-controls,.practice-page .practice-start{padding:26px}
+.roadmap-page .roadmap-heading{padding-bottom:22px;border-bottom:1px solid var(--line);margin-bottom:20px}
+.roadmap-page .roadmap-kicker{color:var(--pen)}
+.roadmap-page .college-horizon-heading{margin-top:16px}
+.roadmap-page .college-horizon-heading h2{font-size:24px}
+.roadmap-page .college-future{padding:24px;border-radius:16px}
+.roadmap-page .college-score{margin:14px 0 18px;padding-bottom:16px}
+.roadmap-page .college-score>strong{font-size:34px}
+.roadmap-page .college-future h3{font-size:20px}
+.roadmap-page .college-match-note{margin:10px 0 14px}
+.roadmap-page .college-horizon-note{max-width:90ch}
+.roadmap-page .plan-session{border-left:0;border-top:3px solid var(--pen);border-radius:16px;margin:24px 0 30px}
+.roadmap-page .plan-route-heading h2{font-size:23px}
+.roadmap-page .plan-map{background:var(--surface)}
+.roadmap-page .plan-stop{background:var(--page);margin:0 16px 16px;border-radius:12px;border:1px solid var(--line)}
+.roadmap-page .plan-college-bridge{padding-top:12px}
+.section-browser{margin:28px 0;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.section-browser-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:22px 24px 18px}
+.section-browser .section-browser-heading h2{font-size:19px;margin:0;letter-spacing:-.4px}
+.section-browser-heading>span{font-size:11px;color:var(--ink-3)}
+.section-browser-tabs{display:flex;gap:6px;padding:0 24px 16px;border-bottom:1px solid var(--line);overflow-x:auto}
+.section-browser-tabs button{border:0;border-radius:9px;background:var(--page);color:var(--ink-2);padding:10px 16px;white-space:nowrap;min-height:42px;font-size:12px;font-weight:650}
+.section-browser-tabs button[aria-selected=true]{background:var(--pen-soft);color:var(--pen)}
+.section-browser-panel{padding:22px 24px}
+.section-browser-panel[hidden]{display:none!important}
+.section-browser-panel .topic-plan-all{padding:0;border:0}
+.section-browser-panel h3{margin:0 0 12px;font-size:17px}
+.section-browser-panel p{margin:10px 0}
+.section-browser-panel .plan-topic-queue{margin:16px 0}
+.section-browser-panel .plan-topic-queue>li{padding:14px 16px;margin:8px 0;border:1px solid var(--line);border-radius:10px;background:var(--page)}
+.section-browser-panel .plan-topic-queue button{padding:0;min-height:48px}
+.section-browser-panel .plan-topic-queue strong{display:block;font-size:15px;margin:4px 0}
+.section-browser-panel .plan-week{padding:12px 14px;margin:8px 0;border:1px solid var(--line);border-radius:10px}
+.section-browser-panel .roadmap-position{margin-top:0}
+.section-browser-panel .plan-review-list>div{padding:16px 0;border-bottom:1px solid var(--line)}
+.section-browser-panel .roadmap-cutoff-explorer{margin-top:24px}
+.unified-plan .topic-plan-full{font-size:12px;margin:16px 0}
+.editorial-home .editorial-hero{padding-block:56px;gap:48px}
+.editorial-home .practice-preview{border-radius:18px}
+.editorial-home .hero-copy h1{font-size:clamp(42px,5.2vw,68px)}
+.editorial-home .preview-options button{border-radius:8px}
+@media(max-width:1080px){.jee-nav .jee-nav__bar{height:64px;gap:10px}.jee-nav .jee-nav__quick-recommend{margin-left:0}.jee-nav .jee-nav__mobile{max-height:calc(100dvh - 64px)}}
+@media(max-width:800px){.dashboard-experience .dashboard-feature-grid{grid-template-columns:1fr}.section-browser-heading{display:block}.section-browser-heading>span{display:block;margin-top:6px}.section-browser-panel{padding:18px}.section-browser-tabs{padding-inline:18px}.section-browser-heading{padding:20px 18px 16px}.editorial-home .editorial-hero{gap:30px}.roadmap-page .plan-stop{margin:0 10px 10px}}
+@media(max-width:480px){.crackjee-root .wrap{padding-left:16px;padding-right:16px}.dashboard-experience .dashboard-next-copy,.dashboard-experience .dashboard-side{padding:22px}.dashboard-experience .dashboard-next-steps{padding:16px 22px}.roadmap-page .college-future{padding:20px}.roadmap-page .roadmap-heading{align-items:flex-start}.roadmap-page .roadmap-heading>.btn{font-size:11px;padding:9px 12px}.section-browser-tabs button{padding:10px 12px}.section-browser-panel .plan-topic-queue>li{padding:12px}.jee-nav .jee-nav__bar{padding-inline:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.crackjee-root *{animation:none!important;transition:none!important}}
