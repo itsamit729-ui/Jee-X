@@ -40,17 +40,19 @@ def rank_inputs(profile, crl_low=None, crl_high=None):
     return ranks
 
 
-def cutoff_rows(db, profile):
-    year = db.query(func.max(models.PredictorJosaaCutoff.year)).filter_by(exam_route='JEE_MAIN_PAPER1').scalar()
+def cutoff_rows(db, profile, exam_route="JEE_MAIN_PAPER1"):
+    if exam_route not in ("JEE_MAIN_PAPER1", "JEE_ADVANCED"):
+        raise ValueError("Unsupported admission exam")
+    year = db.query(func.max(models.PredictorJosaaCutoff.year)).filter_by(exam_route=exam_route).scalar()
     if year is None: return []
-    round_ = db.query(func.max(models.PredictorJosaaCutoff.round)).filter_by(year=year, exam_route='JEE_MAIN_PAPER1').scalar()
+    round_ = db.query(func.max(models.PredictorJosaaCutoff.round)).filter_by(year=year, exam_route=exam_route).scalar()
     seats = ['OPEN'] + ([profile['category']] if profile['category'] != 'OPEN' else [])
     if profile.get('pwd'): seats += [s + ' (PwD)' for s in list(seats)]
     q = (db.query(models.PredictorJosaaCutoff, models.PredictorInstitute.name, models.PredictorProgram.name)
          .join(models.PredictorInstitute, models.PredictorInstitute.id == models.PredictorJosaaCutoff.institute_id)
          .join(models.PredictorProgram, models.PredictorProgram.id == models.PredictorJosaaCutoff.program_id)
          .filter(models.PredictorJosaaCutoff.year == year, models.PredictorJosaaCutoff.round == round_,
-                 models.PredictorJosaaCutoff.exam_route == 'JEE_MAIN_PAPER1',
+                 models.PredictorJosaaCutoff.exam_route == exam_route,
                  models.PredictorJosaaCutoff.seat_type.in_(seats),
                  models.PredictorJosaaCutoff.closing_rank.isnot(None),
                  models.PredictorJosaaCutoff.opening_is_preparatory.is_(False),

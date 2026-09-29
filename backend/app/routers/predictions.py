@@ -30,6 +30,9 @@ def get_prediction(
     if attempt.submitted_at is None:
         raise HTTPException(status_code=409, detail="This attempt hasn't been submitted yet.")
 
+    if attempt.test.pattern == "jee_advanced":
+        raise HTTPException(409, "Advanced papers do not use Main /300 or percentile predictions. Use the Advanced college outlook with an Advanced rank.")
+
     prediction = predictor.predict_for_attempt(db, attempt)
     roadmap = db.get(models.StudentRoadmap, user.id)
     profile = {**admissions.DEFAULT, **(roadmap.settings.get('admission', {}) if roadmap else {})}

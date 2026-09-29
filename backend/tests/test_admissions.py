@@ -93,3 +93,35 @@ def test_import_once_checks_hash_and_is_idempotent(setup, tmp_path, monkeypatch)
         import pytest
         with pytest.raises(ValueError,match='checksum'):
             bootstrap.import_missing(db,tmp_path)
+
+
+def test_advanced_route_isolated_ranks_and_official_anchors(setup):
+    client, factory, _ = setup
+    with factory() as db:
+        i = models.PredictorInstitute(name='IIT test')
+        db.add(i); db.flush()
+        p = models.PredictorProgram(institute_id=i.id, name='Engineering')
+        db.add(p); db.flush()
+        for route, year, seat, rank_list, closing in [
+            ('JEE_ADVANCED', 2025, 'OPEN', 'CRL', 5000),
+            ('JEE_ADVANCED', 2025, 'SC', 'SC', 900),
+            ('JEE_MAIN_PAPER1', 2026, 'OPEN', 'CRL', 100000)]:
+            db.add(models.PredictorJosaaCutoff(institute_id=i.id, program_id=p.id, year=year, round=6,
+                counselling='JoSAA', quota='AI', seat_type=seat, gender_pool='Gender-Neutral',
+                exam_route=route, rank_list=rank_list, opening_rank=1, closing_rank=closing,
+                opening_is_preparatory=False, closing_is_preparatory=False))
+        for rank, marks in [(1000, 200), (5000, 140)]:
+            db.add(models.PredictorAdvancedMarksRankAnchor(year=2025,rank_list='CRL',rank=rank,marks=marks,total_marks=360))
+        db.add(models.PredictorAdvancedQualifyingCutoff(year=2025,rank_list='CRL',minimum_each_subject=7,minimum_aggregate=74))
+        db.commit()
+    result = client.get('/api/roadmap/advanced?current_rank=6000&target_rank=3000').json()
+    assert result['cutoff_year'] == 2025  # newer Main rows must never select the Advanced year
+    assert not result['current']['colleges']
+    assert len(result['target']['colleges']) == 1
+    assert [a['rank'] for a in result['target']['score_references']] == [1000, 5000]
+    assert result['qualification']['minimum_each_subject'] == 7
+    category = client.get('/api/roadmap/advanced?category=SC&current_rank=500').json()
+    assert {c['rank_list'] for c in category['current']['colleges']} == {'SC'}
+    assert not category['current']['score_references']  # CRL marks anchors cannot become SC anchors
+    assert client.get('/api/roadmap/advanced?current_rank=0').status_code == 422
+    assert client.get('/api/roadmap/advanced?category=UNKNOWN').status_code == 422

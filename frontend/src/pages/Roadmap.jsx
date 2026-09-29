@@ -98,6 +98,7 @@ export default function Roadmap() {
 
   return <div className="crackjee-root"><AppHeader/><main className="wrap roadmap-page">
     <header className="roadmap-heading"><div><span className="roadmap-kicker">YOUR NEXT CHAPTER</span><h1>My JEE Plan</h1><p>Know where you stand, what could open up, and what to practise today.</p></div>{data && <button className="btn btn-secondary" onClick={() => { setDraft(data.settings); setEditing(!editing) }} aria-expanded={editing}><SlidersHorizontal size={16}/> {editing ? 'Close goals' : 'Adjust my goals'}</button>}</header>
+    <div className="roadmap-notice"><span>Planning for an IIT?</span> <Link to="/advanced">Compare JEE Advanced colleges & rank targets <ArrowRight size={15}/></Link></div>
     {error && <div className="alert" role="alert">{error} <button className="btn btn-secondary btn-sm" onClick={() => setVersion(v => v + 1)}>Retry loading</button></div>}
     {notice && <p className="roadmap-notice" role="status"><Check size={16}/>{notice}</p>}
     {!data && !error && <div className="roadmap-loading" role="status"><span className="spin"/> Reading your recent practice and building your next steps…</div>}

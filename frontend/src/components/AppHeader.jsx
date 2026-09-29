@@ -14,6 +14,7 @@ const PRACTICE = [
   { to: '/image-questions', title: 'Diagram practice', hint: 'Try visual questions', Icon: BookOpen },
 ]
 const EXPLORE = [
+  { to: '/advanced', title: 'IIT & JEE Advanced', hint: 'Advanced ranks, colleges and score references', Icon: Target },
   { to: '/teacher', title: 'Teacher studio', hint: 'Create classes and assign tests', Icon: BookOpen },
   { to: '/classes', title: 'Your classroom', hint: 'Tests from your teacher', Icon: BookOpen },
   { to: '/syllabus', title: 'Syllabus', hint: 'Track what to study', Icon: Library },
@@ -107,3 +108,4 @@ export default function AppHeader() {
     </nav>}
   </header>
 }
+

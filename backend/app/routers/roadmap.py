@@ -1,5 +1,5 @@
 from datetime import datetime, date
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 from typing import Literal
 from pydantic import BaseModel, Field, model_validator, field_validator
 from sqlalchemy import or_, func
@@ -111,3 +111,39 @@ def save_roadmap(body: RoadmapSettings, user=Depends(get_current_db_user), db: S
     context = {}
     journey = load_journey(db, user.id, now, context=context)
     return {**roadmap.build_view(db, user.id, record, now, context=context), 'journey': journey}
+
+
+@router.get('/advanced')
+def advanced_outlook(
+    category: Literal['OPEN', 'EWS', 'OBC-NCL', 'SC', 'ST'] = 'OPEN',
+    pwd: bool = False, female_pool: bool = False,
+    current_rank: int | None = Query(default=None, ge=1, le=3000000),
+    target_rank: int | None = Query(default=None, ge=1, le=3000000),
+    user=Depends(get_current_db_user), db: Session = Depends(get_db),
+):
+    """Advanced ranks only. Never infer an IIT rank from Main marks or topic accuracy."""
+    profile = {**admissions.DEFAULT, 'category': category, 'pwd': pwd, 'female_pool': female_pool}
+    rows = admissions.cutoff_rows(db, profile, exam_route='JEE_ADVANCED')
+    rank_list = ('CRL' if category == 'OPEN' else category) + ('-PwD' if pwd else '')
+    reference_list = rank_list.replace('EWS', 'GEN-EWS')
+    anchors_model = models.PredictorAdvancedMarksRankAnchor
+    year = db.query(func.max(anchors_model.year)).filter(anchors_model.rank_list == reference_list).scalar()
+    anchors = db.query(anchors_model).filter_by(year=year, rank_list=reference_list).order_by(anchors_model.rank).all() if year else []
+    def outcome(rank):
+        matches = admissions.matches(rows, {rank_list: (rank, rank)}, limit=30) if rank else []
+        below = [a for a in anchors if a.rank <= rank] if rank else []
+        above = [a for a in anchors if a.rank >= rank] if rank else []
+        # Show enclosing published anchors, not invented interpolated scores.
+        refs = list({a.rank: a for a in ([below[-1], above[0]] if below and above else [])}.values())
+        return {'rank': rank, 'colleges': matches, 'score_references': [
+            {'year': a.year, 'rank': a.rank, 'marks': a.marks, 'total_marks': a.total_marks} for a in refs]}
+    cutoff_model = models.PredictorAdvancedQualifyingCutoff
+    cutoff = db.query(cutoff_model).filter_by(rank_list=reference_list).order_by(cutoff_model.year.desc()).first()
+    return {'exam': 'JEE_ADVANCED', 'rank_list': rank_list,
+        'cutoff_year': rows[0]['reference_year'] if rows else None,
+        'cutoff_round': rows[0]['reference_round'] if rows else None,
+        'institutes': len({r['institute'] for r in rows}),
+        'current': outcome(current_rank), 'target': outcome(target_rank),
+        'qualification': {'year': cutoff.year, 'minimum_each_subject': cutoff.minimum_each_subject,
+            'minimum_aggregate': cutoff.minimum_aggregate} if cutoff else None,
+        'sources': ['https://josaa.nic.in/or-cr/'] + ([f'https://jeeadv.ac.in/reports/{year}.pdf'] if year else [])}

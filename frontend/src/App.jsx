@@ -5,6 +5,7 @@ const Teacher = lazy(() => import('./pages/Teacher.jsx'))
 const Classrooms = lazy(() => import('./pages/Classrooms.jsx'))
 const Assignment = lazy(() => import('./pages/Assignment.jsx'))
 const Notifications = lazy(() => import('./pages/Notifications.jsx'))
+const Advanced = lazy(() => import('./pages/Advanced.jsx'))
 const Roadmap = lazy(() => import('./pages/Roadmap.jsx'))
 const PublicProfile = lazy(() => import('./pages/PublicProfile.jsx'))
 const Syllabus = lazy(() => import('./pages/Syllabus.jsx'))
@@ -53,6 +54,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/free-test" element={<FreeTest />} />
       <Route path="/image-questions" element={<ImageQuestions />} />
+      <Route path="/advanced" element={<ProtectedRoute><Advanced /></ProtectedRoute>} />
       <Route path="/plan" element={<ProtectedRoute><Roadmap /></ProtectedRoute>} />
       <Route path="/roadmap" element={<ProtectedRoute><Navigate replace to={'/plan' + location.search + location.hash} /></ProtectedRoute>} />
       <Route path="/practice" element={<ProtectedRoute><SubjectTest key={`practice-${location.search}`} initialMode="recommended" /></ProtectedRoute>} />
@@ -134,3 +136,4 @@ export default function App() {
     </Routes></Suspense></>
   )
 }
+
