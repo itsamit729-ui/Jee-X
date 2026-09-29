@@ -307,7 +307,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   }
 
   if (assessment) return <div className="crackjee-root"><AppHeader /><main className="wrap practice-page">
-    <button className="btn btn-quiet" onClick={() => navigate('/roadmap')}><ArrowLeft size={16}/> Your roadmap</button>
+    <button className="btn btn-quiet" onClick={() => navigate('/plan')}><ArrowLeft size={16}/> My JEE Plan</button>
     <header className="practice-intro"><div><span className="practice-eyebrow">FIND YOUR STARTING POINT</span><h1>A clear baseline.<br/><em>A better next step.</em></h1><p>75 fresh questions across Physics, Chemistry and Mathematics. Give yourself three uninterrupted hours.</p></div></header>
     <section id="practice-builder" className="practice-builder"><div className="practice-controls"><h2>One honest checkpoint</h2><p>Each subject has 20 multiple-choice and 5 numerical questions. Correct: +4 · Incorrect: −1 · Unanswered: 0.</p><p>The timer submits at three hours. Keep this page open; leaving or refreshing ends your local session.</p><p>This generated assessment measures your starting point. It is not an official or statistically calibrated JEE paper.</p></div><aside className="practice-start"><strong>180 minutes · 300 marks</strong><button className="btn btn-primary" disabled={starting} onClick={startTest}>{starting ? 'Preparing your assessment…' : 'Begin assessment'}</button><small>Your answers are scored on the server.</small></aside></section>
     {error && <p className="alert" role="alert">{error}</p>}

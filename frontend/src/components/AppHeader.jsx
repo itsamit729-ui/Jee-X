@@ -69,8 +69,7 @@ export default function AppHeader() {
       <Logo to={isAuthenticated ? teacher ? '/teacher' : '/dashboard' : '/'} />
       {isAuthenticated && <nav className="jee-nav__desktop" aria-label="Main navigation">
         <NavLink to={teacher ? '/teacher' : '/dashboard'} end onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>{teacher ? 'Teacher studio' : 'Overview'}</NavLink>
-        <NavLink to="/recommendations" onClick={close} className={({ isActive }) => `jee-nav__top jee-nav__recommend${isActive ? ' selected' : ''}`}><Target size={15} aria-hidden="true"/>Recommendations</NavLink>
-        <NavLink to="/roadmap" onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Roadmap</NavLink>
+        <NavLink to="/plan" onClick={close} className={({ isActive }) => `jee-nav__top jee-nav__recommend${isActive ? ' selected' : ''}`}><Target size={15} aria-hidden="true"/>My JEE Plan</NavLink>
         {dropdown('practice', 'Practice', PRACTICE)}
         <NavLink to="/ranking" onClick={close} className={({ isActive }) => `jee-nav__top${isActive ? ' selected' : ''}`}>Rankings</NavLink>
         {dropdown('explore', 'Explore', EXPLORE)}
@@ -86,7 +85,7 @@ export default function AppHeader() {
           <button type="button" className="jee-nav__item" onClick={signOut}><span className="jee-nav__item-icon"><LogOut size={18} /></span><strong>Log out</strong></button>
         </div>}
       </div> : <button type="button" className="btn btn-primary btn-sm jee-nav__login" onClick={() => openLogin()}>Log in</button>}
-      {isAuthenticated && <NavLink to="/recommendations" aria-label="Recommended practice" onClick={close} className={({isActive}) => `jee-nav__quick-recommend${isActive ? ' selected' : ''}`}><Target size={16} aria-hidden="true"/>For you</NavLink>}
+      {isAuthenticated && <NavLink to="/plan" aria-label="My JEE Plan" onClick={close} className={({isActive}) => `jee-nav__quick-recommend${isActive ? ' selected' : ''}`}><Target size={16} aria-hidden="true"/>My plan</NavLink>}
       {isAuthenticated && <button type="button" className="jee-nav__mobile-button" data-trigger="mobile"
         aria-label={open === 'mobile' ? 'Close navigation' : 'Open navigation'} aria-expanded={open === 'mobile'}
         aria-controls="jee-nav-mobile" onClick={() => toggle('mobile')}>
@@ -95,8 +94,7 @@ export default function AppHeader() {
     </div>
     {isAuthenticated && open === 'mobile' && <nav className="jee-nav__mobile" id="jee-nav-mobile" aria-label="Mobile navigation">
       <NavLink to={teacher ? '/teacher' : '/dashboard'} onClick={close} className={({ isActive }) => `jee-nav__mobile-overview${isActive ? ' selected' : ''}`}>{teacher ? 'Teacher studio' : 'Overview'}</NavLink>
-      <MenuLink item={{ to: '/recommendations', title: 'Recommended for you', hint: 'Your personal next step', Icon: Target }} close={close} />
-      <MenuLink item={{ to: '/roadmap', title: 'Your roadmap', hint: 'From today to your next milestone', Icon: Target }} close={close} />
+      <MenuLink item={{ to: '/plan', title: 'My JEE Plan', hint: 'Your path, topics and next practice', Icon: Target }} close={close} />
       <span className="jee-nav__heading">Practice</span>
       {PRACTICE.map(item => <MenuLink key={item.to} item={item} close={close} compact />)}
       <span className="jee-nav__heading">Explore</span>
