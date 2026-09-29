@@ -5,7 +5,7 @@ from types import SimpleNamespace
 import pytest
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.pool import StaticPool
 from app import models
@@ -98,7 +98,16 @@ def test_balanced_assessment_server_scoring_and_baseline(setup, monkeypatch):
     active[0] = 2
     assert client.post(f"/api/subject-tests/attempts/{paper['attempt_id']}/submit", json={'answers': answers}).status_code == 404
     active[0] = 1
+    inserts = []
+    engine = factory.kw['bind']
+    def capture(conn, cursor, statement, parameters, context, executemany):
+        if statement.lstrip().upper().startswith('INSERT INTO QUESTION_RESPONSES'):
+            inserts.append(executemany)
+    event.listen(engine, 'before_cursor_execute', capture)
     response = client.post(f"/api/subject-tests/attempts/{paper['attempt_id']}/submit", json={'answers': answers})
+    event.remove(engine, 'before_cursor_execute', capture)
+    assert inserts == [True], 'A full paper should persist responses in one batch'
+
     assert response.status_code == 200, response.text
     result = response.json()
     assert result['score'] == 225  # 60*4 - 15; numeric wrong answers also lose one mark.
@@ -109,6 +118,8 @@ def test_balanced_assessment_server_scoring_and_baseline(setup, monkeypatch):
     with factory() as db:
         a = db.get(models.TestAttempt, paper['attempt_id'])
         assert _raw_score_and_max(a) == (225, 300)
+        assert len(a.responses) == 75
+        assert sum(len(r.chosen_options) for r in a.responses) == 60
         a.started_at = datetime.utcnow() - timedelta(hours=4)
         db.commit()
     assert client.get('/api/roadmap').json()['baseline']['score'] is None

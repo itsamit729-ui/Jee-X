@@ -7,7 +7,7 @@ from types import SimpleNamespace
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field, ConfigDict, field_validator
-from sqlalchemy import func, or_
+from sqlalchemy import func, or_, insert
 from sqlalchemy.orm import Session, joinedload, selectinload, defer
 
 from app import models as m, schemas
@@ -405,6 +405,7 @@ def finalize(db, a, r, attempt):
     db.query(m.StudentProfile).filter_by(user_id=r.user_id).with_for_update().populate_existing().first()
     answers = {v['question_id']: schemas.SubjectTestAnswerIn(**v) for v in r.draft}
     results, subjects = [], {}
+    response_rows = []
     correct = attempted = total_marks = total_time = 0
     stats = {s.subtopic_id: s for s in db.query(m.StudentSubtopicStats).filter(m.StudentSubtopicStats.user_id == r.user_id,
         m.StudentSubtopicStats.subtopic_id.in_({q['subtopic_id'] for q in a.questions})).with_for_update().all()}
@@ -414,7 +415,7 @@ def finalize(db, a, r, attempt):
         outcome, correct_ids = _grade_one(question, ans)
         marks = a.marks_correct if outcome == 'correct' else -a.marks_wrong if outcome == 'wrong' else 0
         time_taken = min(ans.time_taken_sec, a.duration_sec)
-        db.add(m.QuestionResponse(attempt_id=attempt.id, user_id=r.user_id, question_id=q['question_id'], question_version=q['version'],
+        response_rows.append(dict(attempt_id=attempt.id, user_id=r.user_id, question_id=q['question_id'], question_version=q['version'],
             numeric_answer=ans.numeric_answer, outcome=outcome, marks_awarded=marks, time_taken_sec=time_taken))
         # Selections live in the immutable result/draft, independent of mutable bank options.
         results.append({'question_id': q['question_id'], 'outcome': outcome, 'marks_awarded': marks,
@@ -436,6 +437,7 @@ def finalize(db, a, r, attempt):
         subject = subjects.setdefault(q['subject'], {'total': 0, 'correct': 0})
         subject['total'] += 1
         subject['correct'] += int(outcome == 'correct')
+    db.execute(insert(m.QuestionResponse.__table__), response_rows)
     attempt.submitted_at = utcnow()
     attempt.score, attempt.total_questions = total_marks, len(a.questions)
     attempt.accuracy = round(100 * correct / attempted, 2) if attempted else 0

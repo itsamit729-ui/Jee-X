@@ -7,7 +7,7 @@ bumps each answered subtopic's mastery in the learning profile."""
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import func
+from sqlalchemy import func, insert
 from sqlalchemy.orm import Session, joinedload
 
 from app import models, schemas
@@ -60,6 +60,8 @@ def submit_subject_test(
     correct_count = 0
     total_time = 0
     subtopic_touch: dict[int, bool] = {}
+    response_rows = []
+    selected_options = {}
 
     questions = {q.id: q for q in db.query(models.Question)
         .options(joinedload(models.Question.options)).filter(models.Question.id.in_(test_questions)).all()}
@@ -79,7 +81,7 @@ def submit_subject_test(
 
         question_version = revisions.get(question.id, question.version)
 
-        response = models.QuestionResponse(
+        response_rows.append(dict(
             attempt_id=attempt.id,
             user_id=user.id,
             question_id=question.id,
@@ -88,12 +90,13 @@ def submit_subject_test(
             outcome=outcome,
             marks_awarded=marks_awarded,
             time_taken_sec=answer.time_taken_sec,
-        )
-        db.add(response)
+        ))
 
         if question.type != "numerical":
-            for option_id in answer.option_ids:
-                db.add(models.ResponseOption(response=response, option_id=option_id))
+            valid_options = {o.id for o in question.options}
+            if not set(answer.option_ids) <= valid_options:
+                raise HTTPException(422, "An answer contains an option from another question.")
+            selected_options[question.id] = set(answer.option_ids)
 
         total_marks += marks_awarded
         total_time += answer.time_taken_sec
@@ -124,6 +127,17 @@ def submit_subject_test(
             )
         )
 
+    # Core executemany avoids one INSERT/lastrowid round trip per question on MySQL.
+    # Remain inside the same transaction and wallet/attempt locks as the summary.
+    db.execute(insert(models.QuestionResponse.__table__), response_rows)
+    if any(selected_options.values()):
+        response_ids = dict(db.query(models.QuestionResponse.question_id, models.QuestionResponse.id)
+                            .filter_by(attempt_id=attempt.id).all())
+        db.execute(insert(models.ResponseOption.__table__), [
+            {"response_id": response_ids[qid], "option_id": oid}
+            for qid, option_ids in selected_options.items() for oid in option_ids
+        ])
+
     total_questions = len(test_questions)
     attempted = sum(1 for r in results if r.outcome != "skipped")
     subject_breakdown = {}
@@ -153,9 +167,8 @@ def submit_subject_test(
         coins_earned += rewards.update_streak_and_award(db, user)
         current_streak = user.student_profile.current_streak
 
-    db.commit()
-
-    return schemas.SubjectTestResultOut(
+    # Build before commit expires ORM attributes; return only after durable commit.
+    result = schemas.SubjectTestResultOut(
         attempt_id=attempt.id,
         score=attempt.score,
         total_questions=attempt.total_questions,
@@ -166,3 +179,5 @@ def submit_subject_test(
         coins_earned=coins_earned,
         current_streak=current_streak,
     )
+    db.commit()
+    return result
