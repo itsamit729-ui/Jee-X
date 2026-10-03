@@ -63,7 +63,7 @@ def _award_locked(db, profile, user_id, amount, reason, reference_id=None, note=
     return txn
 
 
-def check_and_award_milestones(db: Session, user: models.User, previously_correct_count: int, newly_correct_count: int) -> int:
+def check_and_award_milestones(db: Session, user: models.User, previously_correct_count: int, newly_correct_count: int, locked_profile=None) -> int:
     """Every MILESTONE_STEP cumulative correct answers (across all server-graded attempts,
     subject tests and daily questions alike) earns MILESTONE_COINS. Called once per submission
     with the correct-answer totals from just before and just after grading it, so a submission
@@ -73,7 +73,8 @@ def check_and_award_milestones(db: Session, user: models.User, previously_correc
     if crossed <= 0:
         return 0
     coins = crossed * MILESTONE_COINS
-    award_coins(db, user, coins, reason="milestone", note=f"{crossed}x{MILESTONE_STEP}q")
+    profile = locked_profile if locked_profile is not None else lock_wallet(db, user.id)
+    _award_locked(db, profile, user.id, coins, reason="milestone", note=f"{crossed}x{MILESTONE_STEP}q")
     return coins
 
 
@@ -91,13 +92,14 @@ def _streak_bonus_already_awarded(db: Session, user_id: int, note: str) -> bool:
     )
 
 
-def update_streak_and_award(db: Session, user: models.User, activity_date: date | None = None) -> int:
+def update_streak_and_award(db: Session, user: models.User, activity_date: date | None = None, *, locked_profile=None) -> int:
     """Call once when a daily question is submitted. Idempotent against a resubmit on the same
     day (returns 0). One-time streak-length bonuses are guarded against a broken-then-rebuilt
     streak re-hitting the same threshold twice via a ledger lookup, not just an in-memory check.
     Returns the total coins awarded this call (daily coin + any streak bonus)."""
     activity_date = activity_date or today_ist()
-    profile = lock_wallet(db, user.id)
+    # Callers may reuse a wallet locked earlier in this same transaction.
+    profile = locked_profile if locked_profile is not None else lock_wallet(db, user.id)
     # Check the ledger as well as the cached streak; old/reset profile state
     # must never make an already-awarded day eligible again.
     awarded = db.query(models.EdgeCoinTransaction.id).filter(

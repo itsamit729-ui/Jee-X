@@ -204,3 +204,46 @@ def test_start_practice_does_not_rebuild_or_write_the_full_plan(setup, monkeypat
     assert response.json()['questions'][0]['recommendation']['milestone_id']
     with factory() as db:
         assert db.get(models.StudentRoadmap, 1).plan == before
+
+
+@pytest.mark.parametrize('correct', [True, False])
+def test_single_daily_submit_query_budget_and_durable_result(setup, correct):
+    from datetime import date
+    client, factory, _ = setup
+    with factory() as db:
+        db.add(models.StudentProfile(user_id=1, dob=date(2008, 1, 1),
+            class_12_year=2027, target_year=2027, target_exam='jee_main'))
+        test = models.Test(title='Daily', kind='daily', pattern='jee_main', duration_sec=120)
+        db.add(test)
+        db.flush()
+        db.add(models.TestQuestion(test_id=test.id, question_id=100, position=1,
+                                   marks_correct=4, marks_wrong=1))
+        attempt = models.TestAttempt(test_id=test.id, user_id=1)
+        db.add(attempt)
+        db.flush()
+        attempt_id = attempt.id
+        option_id = db.query(models.QuestionOption.id).filter_by(question_id=100, is_correct=correct).scalar()
+        db.commit()
+    statements = []
+    def capture(conn, cursor, statement, parameters, context, executemany):
+        if statement.lstrip().upper().startswith('SELECT'):
+            statements.append(statement)
+    engine = factory.kw['bind']
+    event.listen(engine, 'before_cursor_execute', capture)
+    try:
+        response = client.post(f'/api/subject-tests/attempts/{attempt_id}/submit', json={
+            'answers': [{'question_id': 100, 'option_ids': [option_id], 'time_taken_sec': 10}]})
+    finally:
+        event.remove(engine, 'before_cursor_execute', capture)
+    assert response.status_code == 200, response.text
+    assert len(statements) <= (8 if correct else 7), statements
+    result = response.json()
+    assert result['score'] == (4 if correct else -1)
+    assert result['questions'][0]['outcome'] == ('correct' if correct else 'wrong')
+    assert result['coins_earned'] == 1 and result['current_streak'] == 1
+    with factory() as db:
+        assert db.get(models.TestAttempt, attempt_id).submitted_at is not None
+        saved = db.query(models.QuestionResponse).filter_by(attempt_id=attempt_id).one()
+        assert saved.chosen_options[0].option_id == option_id
+        assert db.get(models.StudentProfile, 1).edge_coins == 1
+    assert client.post(f'/api/subject-tests/attempts/{attempt_id}/submit', json={'answers': []}).status_code == 409
