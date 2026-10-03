@@ -130,7 +130,7 @@ def baseline(db, user_id, now):
             'note': 'Server-scored, fresh questions; syllabus-balanced by subject, not a calibrated official paper. Assessments older than 45 days are excluded.'}
 
 
-def scenario(db, marks=None, crl=None):
+def scenario(db, marks=None, crl=None, include_colleges=True):
     result = {'marks': marks, 'rank_low': crl, 'rank_high': crl, 'percentile_low': None,
               'percentile_high': None, 'reference_year': None, 'colleges': [],
               'basis': 'entered_crl' if crl else 'insufficient_data'}
@@ -145,7 +145,7 @@ def scenario(db, marks=None, crl=None):
                 if r['basis'] == 'interpolated':
                     result.update(p, **{'rank_low': r['rank_low'], 'rank_high': r['rank_high'],
                                       'reference_year': year, 'rank_reference_year': rank_year})
-    if result['rank_low'] is not None:
+    if include_colleges and result['rank_low'] is not None:
         # Institute-state mapping and category ranks are unavailable: do not guess HS/OS eligibility.
         result['colleges'] = predictor.match_colleges(db, result['rank_low'], result['rank_high'], quotas=('AI',))[:6]
     return result
@@ -219,8 +219,8 @@ def build_view(db, user_id, record=None, now=None, context=None):
             by_subject[r.subject].setdefault(r.question_id, r.outcome)
     subjects = [{'code': code, 'answered': len(items), 'accuracy': round(100 * sum(v == 'correct' for v in items.values()) / len(items))}
                 for code, items in by_subject.items() if items]
-    current = scenario(db, standing['score'])
-    target = scenario(db, settings['target_marks'], settings.get('target_crl'))
+    current = scenario(db, standing['score'], include_colleges=False)
+    target = scenario(db, settings['target_marks'], settings.get('target_crl'), include_colleges=False)
     admission = settings['admission']
     cutoffs = admissions.cutoff_rows(db, admission)
     ranks = admissions.rank_inputs(admission, current['rank_low'], current['rank_high'])

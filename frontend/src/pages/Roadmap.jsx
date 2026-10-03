@@ -61,7 +61,7 @@ export default function Roadmap() {
   useEffect(() => {
     let active = true
     setError('')
-    request('/api/roadmap', { cache: false }).then(value => {
+    request('/api/roadmap', version ? { cache: false } : {}).then(value => {
       if (active) { setData(value); setDraft(value.settings) }
     }).catch(e => { if (active) setError(e.message) })
     return () => { active = false }

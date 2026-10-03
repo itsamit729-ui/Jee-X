@@ -1,3 +1,4 @@
+import { preloadRoute } from '../lib/preloadRoute.js'
 import { useEffect, useRef, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext.jsx'
@@ -65,7 +66,7 @@ export default function AppHeader() {
     </div>}
   </div>
 
-  return <header className="jee-nav" ref={ref}>
+  return <header className="jee-nav" ref={ref} onPointerOver={preloadRoute} onFocus={preloadRoute}>
     <div className="jee-nav__bar">
       <Logo to={isAuthenticated ? teacher ? '/teacher' : '/dashboard' : '/'} />
       {isAuthenticated && <nav className="jee-nav__desktop" aria-label="Main navigation">

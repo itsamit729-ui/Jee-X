@@ -8,9 +8,9 @@ export default function GoalJourney({ afterTest = false, attemptId, ...props }) 
   useEffect(() => {
     let active = true
     setError('');setData(null)
-    request('/api/roadmap/journey',{cache:false}).then(value => {if(active)setData(value)}).catch(e=>{if(active)setError(e.message)})
+    request('/api/roadmap/journey', afterTest || retry ? {cache:false} : {}).then(value => {if(active)setData(value)}).catch(e=>{if(active)setError(e.message)})
     return ()=>{active=false}
-  },[attemptId,retry])
+  },[attemptId,retry,afterTest])
   if(error)return <div className="journey-loading" role="alert">We couldn’t load your route. Your practice is still available below.<button className="btn btn-secondary" onClick={()=>setRetry(v=>v+1)}>Retry</button></div>
   if(!data)return <div className="journey-loading" role="status"><Compass size={20}/>Finding your next step…</div>
   return <TopicStudyPlan data={data} compact afterTest={afterTest} {...props}/>

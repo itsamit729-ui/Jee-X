@@ -118,6 +118,20 @@ def evaluate(rows, settings, standing, now):
             'updated_at': now.isoformat()}
 
 
+def practice_context(db, user_id, now=None):
+    """Read only the milestone evidence needed to select a paper.
+
+    Starting practice must not scan the entire topic catalog or reconcile/save
+    the full roadmap. The plan page handles that work when it is requested.
+    """
+    from app.services import roadmap
+    now = now or datetime.utcnow()
+    record = db.get(models.StudentRoadmap, user_id)
+    rows = roadmap.evidence(db, user_id)
+    settings = roadmap.resolve_settings(db, user_id, record.settings if record else roadmap.DEFAULTS.copy(), rows, now)
+    return evaluate(rows, settings, roadmap.baseline(db, user_id, now), now)
+
+
 def load_journey(db, user_id, now=None, context=None):
     """Reconcile on read, including results from every submission route, without
     adding work to grading. Student lock keeps simultaneous tabs idempotent.

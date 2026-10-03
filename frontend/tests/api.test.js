@@ -105,3 +105,16 @@ test('account identity changes retain public catalog but remove private memory d
   assert.equal((await request('/api/subjects')).version, 1)
   assert.equal((await request('/api/me')).version, 3)
 })
+
+test('plan revisits reuse memory but submission and account changes require fresh evidence', async () => {
+  let calls = 0
+  globalThis.fetch = async () => json({ version: ++calls })
+  assert.equal((await request('/api/roadmap/journey')).version, 1)
+  assert.equal((await request('/api/roadmap/journey')).version, 1)
+  assert.equal(stored.size, 0)
+  await request('/api/subject-tests/attempts/1/submit', {method:'POST', body:{answers:[]}})
+  assert.equal((await request('/api/roadmap/journey')).version, 3)
+  assert.equal((await request('/api/roadmap/journey', {cache:false})).version, 4)
+  setCacheIdentity('another-student')
+  assert.equal((await request('/api/roadmap/journey')).version, 5)
+})

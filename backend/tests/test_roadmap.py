@@ -187,3 +187,20 @@ def test_college_goal_choices_and_automatic_settings(setup, monkeypatch):
     monkeypatch.setenv('JEE_MAIN_EXAM_DATES', 'not json')
     assert client.get('/api/roadmap').json()['settings']['exam_date'] is None
     assert client.get('/api/roadmap').json()['settings']['college_choices'] == [1, 2, 3]
+
+
+def test_start_practice_does_not_rebuild_or_write_the_full_plan(setup, monkeypatch):
+    from app.services import topic_plan
+    client, factory, _ = setup
+    client.put('/api/roadmap', json={})
+    with factory() as db:
+        before = db.get(models.StudentRoadmap, 1).plan
+    def forbidden(*args, **kwargs):
+        raise AssertionError('Starting practice must not build a full topic plan')
+    monkeypatch.setattr(topic_plan, 'build_topic_plan', forbidden)
+    response = client.post('/api/subject-tests', json={'subject_code':'PHY','mode':'recommended','duration_minutes':5})
+    assert response.status_code == 201, response.text
+    assert len(response.json()['questions']) == 3
+    assert response.json()['questions'][0]['recommendation']['milestone_id']
+    with factory() as db:
+        assert db.get(models.StudentRoadmap, 1).plan == before
