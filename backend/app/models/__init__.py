@@ -107,3 +107,5 @@ from app.models.authentication import AuthAccount, AuthSession, AuthEmailToken, 
 
 from app.models.teaching import (TeacherAccess, Classroom, ClassroomMember, TeachingAssignment,
     AssignmentClassroom, AssignmentRecipient, ClassroomNotification)
+
+from app.models.plan_interest import PlanInterest

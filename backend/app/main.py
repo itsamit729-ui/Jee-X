@@ -29,6 +29,7 @@ from app.routers import (
     roadmap,
     college_insights,
     teaching,
+    plans,
 )
 
 load_dotenv()
@@ -68,6 +69,7 @@ app.include_router(scenarios.router)
 app.include_router(roadmap.router)
 app.include_router(college_insights.router)
 app.include_router(teaching.router)
+app.include_router(plans.router)
 
 
 @app.on_event('startup')

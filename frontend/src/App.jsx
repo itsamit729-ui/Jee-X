@@ -11,6 +11,7 @@ const PublicProfile = lazy(() => import('./pages/PublicProfile.jsx'))
 const Syllabus = lazy(() => import('./pages/Syllabus.jsx'))
 const Ranking = lazy(() => import('./pages/Ranking.jsx'))
 const RankedTest = lazy(() => import('./pages/RankedTest.jsx'))
+const Pricing = lazy(() => import('./pages/Pricing.jsx'))
 const Home = lazy(() => import('./pages/Home.jsx'))
 const MockTest = lazy(() => import('./pages/MockTest.jsx'))
 const Analysis = lazy(() => import('./pages/Analysis.jsx'))
@@ -52,6 +53,7 @@ export default function App() {
       <Route path="/ranking" element={<ProtectedRoute><Ranking /></ProtectedRoute>} />
       <Route path="/ranked-test/:id" element={<ProtectedRoute><RankedTest /></ProtectedRoute>} />
       <Route path="/" element={<Home />} />
+      <Route path="/pricing" element={<Pricing />} />
       <Route path="/free-test" element={<FreeTest />} />
       <Route path="/image-questions" element={<ImageQuestions />} />
       <Route path="/advanced" element={<ProtectedRoute><Advanced /></ProtectedRoute>} />

@@ -15,6 +15,7 @@ const PRACTICE = [
   { to: '/image-questions', title: 'Diagram practice', hint: 'Try visual questions', Icon: BookOpen },
 ]
 const EXPLORE = [
+  { to: '/pricing', title: 'Plans & pricing', hint: 'Free, Student Plus and teacher pilots', Icon: Target },
   { to: '/advanced', title: 'IIT & JEE Advanced', hint: 'Advanced ranks, colleges and score references', Icon: Target },
   { to: '/teacher', title: 'Teacher studio', hint: 'Create classes and assign tests', Icon: BookOpen },
   { to: '/classes', title: 'Your classroom', hint: 'Tests from your teacher', Icon: BookOpen },
