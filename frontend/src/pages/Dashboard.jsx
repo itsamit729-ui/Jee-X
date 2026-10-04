@@ -103,7 +103,7 @@ export default function Dashboard() {
       {error && <div className="wrap" role="alert" style={{ paddingTop: 24 }}><div className="panel"><p>{error}</p><button className="btn btn-secondary btn-sm" style={{ marginTop: 12 }} onClick={() => setLoadVersion(v => v + 1)}>Try again</button></div></div>}
       {!error && <AssignedTestsPreview/>}
       {!error && <DashboardOverview
-        featured={<div className="dashboard-feature-grid"><section className="dashboard-next"><div className="dashboard-next-copy"><span className="eyebrow"><Target size={14}/> MY JEE PLAN</span><h2>A little practice.<br /><span>A clearer path ahead.</span></h2><p>Your next topic, progress milestones and college possibilities — together in your personal study plan.</p><button className="btn btn-primary" onClick={() => navigate('/plan')}>Open my JEE plan <ArrowUpRight size={18}/></button><small><Clock3 size={13}/> Your next topic · Your milestones · Your goal</small></div><div className="dashboard-next-steps" aria-label="Practice flow"><div><span>01</span><strong>Your answers</strong></div><ArrowRight size={18}/><div><span>02</span><strong>Your next questions</strong></div><ArrowRight size={18}/><div><span>03</span><strong>Your review</strong></div></div></section><aside className="dashboard-side"><span className="eyebrow">YOUR PROGRESS</span><RatingSummary initialRating={rating}/><div className="dashboard-side-note"><strong>Small sessions add up.</strong><p>Start with a focus, finish with a review. Your next recommendation learns from submitted answers.</p><button className="btn btn-quiet btn-sm" onClick={() => navigate('/profile')}>View your profile <ArrowUpRight size={14}/></button></div></aside></div>}
+        featured={<div className="dashboard-feature-grid"><section className="dashboard-next"><div className="dashboard-next-copy"><span className="eyebrow"><Target size={14}/> MY JEE PLAN</span><h2>Your next step, ready.</h2><p>Pick up your next topic and keep your goal in view.</p><button className="btn btn-primary" onClick={() => navigate('/plan')}>Open my JEE plan <ArrowUpRight size={18}/></button><small><Clock3 size={13}/> Your next topic · Your milestones · Your goal</small></div></section><aside className="dashboard-side"><span className="eyebrow">YOUR PROGRESS</span><RatingSummary initialRating={rating}/></aside></div>}
         profile={profile}
         statCards={statCards}
         history={history}
@@ -116,10 +116,7 @@ export default function Dashboard() {
         onLogout={() => logout()}
         onHome={() => navigate('/')}
       />}
-      {!error && <div className="wrap" style={{ paddingBottom: 40 }}><div className="panel" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 18, flexWrap: 'wrap' }}>
-        <div><span className="section-label">EXAM SITUATIONS</span><h2 style={{ margin: '7px 0' }}>Practice the moment that matters.</h2><p className="muted" style={{ margin: 0 }}>A three-hour exam in view. Play only the crucial 15–45 minutes.</p></div>
-        <button type="button" className="btn btn-primary" onClick={() => navigate('/scenarios')}>Explore situations →</button>
-      </div></div>}
+      {!error && <div className="wrap compact-shortcut"><button className="text-action" onClick={() => navigate('/scenarios')}>Explore exam situations <ArrowUpRight size={16}/></button></div>}
     </div>
   )
 }

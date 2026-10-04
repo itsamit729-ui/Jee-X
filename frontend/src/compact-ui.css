@@ -1,0 +1,92 @@
+/* Keep pages focused without shrinking reading text or clipping long content. */
+.jee-nav .jee-nav__bar{height:60px}
+.crackjee-root main.wrap.page,.crackjee-root main.roadmap-page,.crackjee-root main.practice-page{padding-top:22px;padding-bottom:28px}
+.crackjee-root .page-head{margin-bottom:20px}
+.crackjee-root .page-title,.crackjee-root .roadmap-heading h1,.crackjee-root .practice-intro h1{font-size:clamp(26px,3vw,34px)}
+.crackjee-root .page-sub,.crackjee-root .dashboard-context{margin-top:5px}
+.crackjee-root .roadmap-heading{padding-bottom:14px;margin-bottom:12px}
+.crackjee-root .practice-intro{margin-bottom:16px;gap:18px}
+.crackjee-root .practice-path{padding:14px}
+.crackjee-root .practice-paths{gap:10px;margin-block:14px}
+.crackjee-root .practice-path h2{font-size:18px;margin-block:8px}
+.crackjee-root .practice-controls,.crackjee-root .practice-start{padding:18px}
+.crackjee-root .practice-session-time{margin-block:14px}
+.crackjee-root .practice-step-heading{margin-bottom:14px}
+.dashboard-experience .dashboard-feature-grid{gap:16px;grid-template-columns:minmax(0,1.8fr) minmax(230px,1fr)}
+.dashboard-experience .dashboard-next-copy{padding:22px}
+.dashboard-experience .dashboard-next h2{font-size:29px;margin:10px 0}
+.dashboard-experience .dashboard-next-copy>p{margin-block:10px;max-width:52ch}
+.dashboard-experience .dashboard-next-copy>small{margin-top:12px}
+.dashboard-experience .dashboard-side{padding:18px}
+.dashboard-experience .start{gap:12px;margin:0}
+.dashboard-experience .start-tile{padding:18px;min-height:0}
+.dashboard-experience .start-tile h2{font-size:21px;margin-block:10px}
+.dashboard-experience .start-tile p{font-size:13px;margin-block:10px}
+.dashboard-experience .stats{gap:10px}
+.dashboard-experience .stat{padding:14px}
+.compact-shortcut{padding-block:0 24px}
+.section-browser{margin:16px 0;border-radius:12px}
+.section-browser .section-browser-heading{padding:13px 18px 10px}
+.section-browser .section-browser-heading h2{font-size:16px}
+.section-browser .section-browser-tabs{padding:0 18px 10px;gap:6px;flex-wrap:wrap;overflow:visible}
+.section-browser .section-browser-tabs button{padding:10px 13px;min-height:44px}
+.section-browser .section-browser-panel{padding:16px 18px}
+.compact-disclosure{border:1px solid var(--line);border-radius:12px;background:var(--surface);margin:12px 0;padding:0 18px}
+.compact-disclosure>summary{cursor:pointer;font-size:14px;font-weight:600;min-height:48px;padding:15px 0;line-height:1.5}
+.compact-disclosure>summary:focus-visible{outline:3px solid var(--pen);outline-offset:3px}
+.compact-disclosure>.section-browser{border:0;margin-top:0}
+.roadmap-page .plan-session{margin:0;padding:18px;border-radius:10px}
+.roadmap-page .plan-session h2{font-size:27px;margin-block:8px}
+.roadmap-page .plan-route-heading{margin:0 0 14px}
+.roadmap-page .plan-route-heading h2{font-size:22px}
+.roadmap-page .plan-stop{margin:0;padding:18px}
+.roadmap-page .plan-map button{padding:12px}
+.roadmap-page .college-horizon-heading{margin-top:0}
+.roadmap-page .college-horizon-heading h2{font-size:23px}
+.roadmap-page .college-future{padding:18px}
+.roadmap-page .college-score{margin:10px 0;padding-bottom:10px}
+.roadmap-page .college-horizon-note{font-size:12px;line-height:1.6}
+.editorial-home.edge-home .editorial-hero{padding-block:30px;gap:35px}
+.editorial-home.edge-home .hero-copy h1{font-size:clamp(40px,4.5vw,60px);margin-top:16px}
+.editorial-home.edge-home .hero-copy>p{margin-top:15px;font-size:18px}
+.editorial-home.edge-home .hero-copy>.hero-detail{font-size:14px;margin-top:8px}
+.editorial-home.edge-home .hero-cta{margin-top:20px}
+.editorial-home.edge-home .hero-proof{margin-top:13px}
+.editorial-home.edge-home .taster-caption{margin-bottom:10px;font-size:15px}
+.editorial-home.edge-home .preview-body{padding:16px 20px}
+.editorial-home.edge-home .preview-body h2{min-height:0;font-size:19px;margin:14px 0 18px}
+.editorial-home.edge-home .taster-result{margin-top:13px}
+.editorial-home.edge-home .edge-principles{padding-block:14px;gap:12px}
+.editorial-home.edge-home .home-explore{scroll-margin-top:75px}
+.editorial-home.edge-home .home-explore .wrap{width:100%;max-width:none;padding-left:0;padding-right:0}
+.editorial-home.edge-home .home-explore .edge-session{padding-block:12px;gap:28px}
+.editorial-home.edge-home .home-explore .edge-journey{padding:24px;border-radius:12px}
+.editorial-home.edge-home .home-explore .edge-journey h2{font-size:30px}
+.editorial-home.edge-home .home-explore .journey-detail{min-height:0;padding:20px}
+.editorial-home.edge-home .home-explore .journey-stops button{padding:18px}
+.editorial-home.edge-home .home-explore .subject-section{padding:12px 0}
+.editorial-home.edge-home .home-explore .exam-editorial{padding-block:12px;gap:30px}
+.editorial-home.edge-home .home-explore .faq-section{padding-block:12px;gap:30px}
+.editorial-home.edge-home .home-pricing-link{padding-block:22px}
+.editorial-home.edge-home .editorial-footer{padding-block:20px}
+.pricing-page .pricing-hero{padding-block:30px 18px}
+.pricing-page .pricing-hero h1{font-size:clamp(36px,4.5vw,52px);margin:14px 0}
+.pricing-page .pricing-hero>p{font-size:15px;line-height:1.6}
+.pricing-page .pricing-audience{margin-top:18px}
+.pricing-page .pricing-period{margin-bottom:18px;gap:12px}
+.pricing-page .pricing-card{padding:24px}
+.pricing-page .pricing-card-icon{margin-bottom:14px;width:40px;height:40px}
+.pricing-page .pricing-card h2{font-size:27px}
+.pricing-page .pricing-price{font-size:40px;margin:16px 0}
+.pricing-page .pricing-card-description{min-height:0;font-size:13px}
+.pricing-page .pricing-features{gap:10px;padding-top:15px;margin:10px 0 16px}
+.pricing-page .pricing-offers{padding-bottom:20px}
+.pricing-page .pricing-compare.compact-disclosure,.pricing-page .pricing-faq.compact-disclosure{display:block;padding:0 20px;margin:12px auto}
+.pricing-page .compact-disclosure[open]{padding-bottom:20px}
+.pricing-page .pricing-faq.compact-disclosure>div{margin-top:15px}
+.pricing-page .pricing-promise{padding-block:28px}
+.pricing-page .pricing-promise h2{font-size:25px;margin:12px 0}
+.pricing-page .pricing-final{padding-block:22px}
+.pricing-page .pricing-final h2{font-size:25px}
+.pricing-page .pricing-footer{padding-block:20px}
+@media(max-width:800px){.dashboard-experience .dashboard-feature-grid{grid-template-columns:1fr}.section-browser .section-browser-tabs{gap:4px;padding-inline:12px}.section-browser .section-browser-panel{padding:14px}.dashboard-experience .dashboard-side .rating-summary-card{padding:12px}.editorial-home.edge-home .home-explore .edge-journey{padding:18px}.editorial-home.edge-home .home-explore .edge-session{gap:18px}.editorial-home.edge-home .home-explore .journey-demo{gap:14px}.editorial-home.edge-home .home-explore .journey-stops{gap:6px}.editorial-home.edge-home .home-explore .journey-stops button{padding:12px}.editorial-home.edge-home .edge-principles p{width:auto}.editorial-home.edge-home .edge-principles>span{width:100%}.pricing-page .pricing-grid{gap:14px}.crackjee-root .practice-paths{grid-template-columns:1fr}.crackjee-root .practice-path{display:grid;grid-template-columns:1fr auto;column-gap:12px}.crackjee-root .practice-path p{grid-column:1/-1}.crackjee-root .practice-path-top{grid-column:1/-1}}

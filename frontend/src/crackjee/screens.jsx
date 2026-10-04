@@ -1,3 +1,4 @@
+import SectionTabs from "../components/SectionTabs.jsx";
 import { useState, useEffect, useRef } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, LineChart, Line, CartesianGrid } from "recharts";
 import { ArrowUpRight, Clock3, BookOpen, Target, Check, X as XIcon } from "lucide-react";
@@ -711,7 +712,7 @@ export function DashboardOverview({ featured, onStart, onFreeTest, onSubjectTest
       </div>
 
       {featured}
-      <span className="section-label">OTHER WAYS TO PRACTISE</span>
+      <SectionTabs labels={["Practice options", "Results & trends"]} title="Your workspace">
       <section className="start" aria-label="Start a test">
         <div className="start-tile start-main">
           <Palette states={START_SQUARES} size="sm" decorative />
@@ -738,7 +739,7 @@ export function DashboardOverview({ featured, onStart, onFreeTest, onSubjectTest
         )}
       </section>
 
-      {hasData ? (
+      <section>{hasData ? (
         <div className="stack">
           <div className="stats">
             {statCards.map(c => (
@@ -784,7 +785,7 @@ export function DashboardOverview({ featured, onStart, onFreeTest, onSubjectTest
           <p>Take a warm-up to set your starting point. Your results and subject accuracy will have a home right here.</p>
           <button type="button" className="btn btn-primary" onClick={onFreeTest || onStart}>Take your first test</button>
         </div>
-      )}
+      )}</section></SectionTabs>
     </main>
   );
 }
