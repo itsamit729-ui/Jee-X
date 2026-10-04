@@ -25,7 +25,7 @@ function NavigationLink({ item, close }) {
 }
 export default function AppHeader() {
   const { pathname } = useLocation()
-  const { isAuthenticated, openLogin, logout, user } = useAuth()
+  const { isAuthenticated, openLogin, logout } = useAuth()
   const [open, setOpen] = useState(false)
   const [teacher, setTeacher] = useState(false)
   const ref = useRef(null), trigger = useRef(null)
@@ -39,11 +39,10 @@ export default function AppHeader() {
     return () => { document.removeEventListener('pointerdown', dismiss); document.removeEventListener('keydown', escape) }
   }, [open])
   const links = teacher ? [['/teacher', 'Teacher studio', GraduationCap], ...main.slice(1)] : main
-  const title = [...links, ...more].find(([path]) => path === pathname)?.[1] || (pathname.startsWith('/assignments/') ? 'Class assignment' : pathname === '/practice' ? 'Focused practice' : 'Your workspace')
+
   return <div ref={ref} className={`studio-navigation${isAuthenticated ? ' is-member' : ''}`} onPointerOver={preloadRoute} onFocus={preloadRoute}>
     <a className="skip-link" href="#studio-main">Skip to workspace</a>
-    {isAuthenticated && <aside className="studio-rail"><Logo to="/dashboard"/><div className="studio-rail-caption">YOUR STUDY SPACE</div><nav aria-label="Main navigation">{links.map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}</nav><div className="studio-rail-divider"/><nav aria-label="Study tools">{more.slice(0, 4).map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}</nav><details className="studio-tools"><summary>More tools</summary><nav aria-label="Additional tools">{more.slice(4, 11).map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}</nav></details><div className="studio-rail-bottom"><NavLink to="/profile" className="studio-profile"><span><UserRound size={18}/></span><div><strong>My account</strong><small>Profile & preferences</small></div><ArrowUpRight size={15}/></NavLink><button className="studio-signout" onClick={logout}><LogOut size={15}/>Sign out</button></div></aside>}
-    <header className="studio-topbar"><div className="studio-mobile-logo"><Logo to={isAuthenticated ? '/dashboard' : '/'}/></div><div className="studio-breadcrumb"><span>Workspace</span><span>/</span><strong>{title}</strong></div><div className="studio-top-actions">{isAuthenticated ? <><span className="studio-account-label">{user?.name || 'Your study space'}</span><InboxBell onTeacher={setTeacher}/><button ref={trigger} className="studio-more" onClick={() => setOpen(v => !v)} aria-label={open ? 'Close workspace menu' : 'Open workspace menu'} aria-expanded={open} aria-controls="studio-menu">{open ? <X size={20}/> : <Menu size={20}/>}</button></> : <button className="btn btn-primary btn-sm" onClick={() => openLogin()}>Log in</button>}</div></header>
+    <header className="studio-topbar"><div className="studio-mobile-logo"><Logo to={isAuthenticated ? '/dashboard' : '/'}/></div>{isAuthenticated && <nav className="studio-top-links" aria-label="Main navigation">{links.map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}</nav>}<div className="studio-top-actions">{isAuthenticated ? <><InboxBell onTeacher={setTeacher}/><button ref={trigger} className="studio-more" onClick={() => setOpen(v => !v)} aria-label={open ? 'Close workspace menu' : 'Open workspace menu'} aria-expanded={open} aria-controls="studio-menu">{open ? <X size={20}/> : <Menu size={20}/>}</button></> : <button className="btn btn-primary btn-sm" onClick={() => openLogin()}>Log in</button>}</div></header>
     {isAuthenticated && open && <nav id="studio-menu" className="studio-menu" aria-label="All workspace pages">{[...links, ...more].filter((item, index, items) => items.findIndex(other => other[0] === item[0]) === index).map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}<button className="studio-link" onClick={logout}><LogOut size={18}/>Sign out</button></nav>}
     {isAuthenticated && <nav className="studio-dock" aria-label="Quick navigation">{links.slice(0, 3).map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}<button className={`studio-link${open ? ' active' : ''}`} onClick={() => { setOpen(v => !v); trigger.current?.focus() }} aria-expanded={open} aria-controls="studio-menu"><Menu size={19}/><span>More</span></button></nav>}
     <span id="studio-main" tabIndex={-1}/>
