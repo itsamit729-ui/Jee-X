@@ -74,7 +74,13 @@ def test_submission_fenced_and_media_public(setup, monkeypatch):
         with factory() as db:
             assert db.get(SocialJob, social.today()).state == 'submitting'
             media = db.query(SocialMedia).one()
-            assert client.get('/api/social/media/' + media.id + '.png').content == b'fake-png'
+            url = '/api/social/media/' + media.id + '.png'
+            assert client.get(url).content == b'fake-png'
+            head = client.head(url)
+            assert head.status_code == 200
+            assert head.content == b''
+            assert head.headers['content-type'] == 'image/png'
+            assert head.headers['content-length'] == str(len(b'fake-png'))
         return {'createPost': {'post': {'id': 'post123', 'status': 'scheduled'}}}
     monkeypatch.setattr(social.worker, 'buffer', submit)
     client.post('/api/social/trigger', headers=AUTH)
