@@ -1,16 +1,11 @@
 name: JeeEdge Instagram
 on:
-  push:
-    branches: [main]
-    paths: ['.github/workflows/jeeedge-social.yml']
-  schedule:
-    - cron: '30 12,13,14 * * *'
   workflow_dispatch:
     inputs:
       preview_only:
         description: Generate a preview without posting
         type: boolean
-        default: false
+        default: true
 permissions:
   contents: write
 concurrency:
@@ -18,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   daily:
-    if: vars.SOCIAL_PAUSED != 'true'
+    if: inputs.preview_only == true
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
