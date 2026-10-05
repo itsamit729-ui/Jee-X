@@ -52,7 +52,11 @@ def request(url, method='GET', body=None, headers=None, missing_ok=False, binary
                 reason = ' (' + ', '.join(safe) + ')' if safe else ''
             except (ValueError, TypeError, AttributeError):
                 pass
-        raise ServiceError(f'{service} returned HTTP {error.code}{reason}; check credentials and permissions. No paid fallback.') from None
+        hint = ('check credentials and permissions' if error.code in (401, 403)
+                else 'quota reached; wait for reset' if error.code == 429
+                else 'temporary service failure; retry later' if error.code >= 500
+                else 'check request and model configuration')
+        raise ServiceError(f'{service} returned HTTP {error.code}{reason}; {hint}. No paid fallback.') from None
     except (urllib.error.URLError, TimeoutError):
         raise ServiceError('Network request failed; next scheduled run will retry safely.') from None
 
@@ -157,15 +161,18 @@ def ai_copy(content, history):
               'promise marks or guaranteed results, or add URLs. Encourage solving then swiping. '
               'Do not change or generate the problem or solution. Use recent performance where available. '
               + json.dumps({'problem': content, 'recent_performance': history}))
-    model = os.getenv('GEMINI_MODEL', 'gemini-3.8-flash')
-    if not re.fullmatch(r'gemini-[a-zA-Z0-9.\-]+', model):
-        raise ServiceError('Invalid Gemini model name.')
-    result = request(f'https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent',
-                     method='POST', headers={'x-goog-api-key': os.environ['GEMINI_API_KEY']},
-                     body={'contents': [{'parts': [{'text': prompt}]}], 'generationConfig': {
-                         'responseMimeType': 'application/json', 'maxOutputTokens': 1600}})
+    model = os.getenv('GROQ_MODEL', 'openai/gpt-oss-20b')
+    if not re.fullmatch(r'[a-zA-Z0-9./_-]+', model):
+        raise ServiceError('Invalid Groq model name.')
+    result = request('https://api.groq.com/openai/v1/chat/completions',
+                     method='POST', headers={'Authorization': f'Bearer {os.environ["GROQ_API_KEY"]}'},
+                     body={'model': model, 'messages': [{'role': 'user', 'content': prompt}],
+                           'response_format': {'type': 'json_object'},
+                           'max_completion_tokens': 2048})
     try:
-        text = ''.join(p.get('text', '') for p in result['candidates'][0]['content']['parts'])
+        if result['choices'][0].get('finish_reason') != 'stop':
+            raise ValueError()
+        text = result['choices'][0]['message']['content']
         copy = json.loads(text)
         for key, limit in [('hook', 75), ('caption', 1000)]:
             if not isinstance(copy[key], str) or not 1 <= len(copy[key]) <= limit:
@@ -255,9 +262,9 @@ def main():
     day = now.astimezone(ZoneInfo('Asia/Kolkata')).date().isoformat()
     preview = os.getenv('PREVIEW_ONLY') == 'true'
     offline = '--offline-preview' in sys.argv
-    required = [] if offline else ['BUFFER_API_KEY', 'GEMINI_API_KEY'] + ([] if preview else ['GITHUB_TOKEN'])
+    required = [] if offline else ['BUFFER_API_KEY', 'GROQ_API_KEY'] + ([] if preview else ['GITHUB_TOKEN'])
     if any(not os.getenv(key) for key in required):
-        raise ServiceError('Required repository secrets are missing.')
+        raise ServiceError('Required repository secrets are missing: ' + ', '.join(key for key in required if not os.getenv(key)))
     content = problem(day)
     ledger = {'history': []}
     state_path = 'state/ledger.json'

@@ -8,10 +8,12 @@ checks out `feature/version-1` for the worker. The application is untouched.
 
 ## Initial setup
 
-Repository Actions secrets: `BUFFER_API_KEY` (personal) and `GEMINI_API_KEY`.
-Keep the Gemini project on its free tier with billing disabled. The worker does
+Repository Actions secrets: `BUFFER_API_KEY` (personal) and `GROQ_API_KEY`.
+Create the Groq key at https://console.groq.com/keys and save it as an Actions
+repository secret. The old Gemini secret is no longer used.
+Use a Groq Free-plan account; do not upgrade to the paid Developer plan. The worker does
 not create billing accounts, upgrade tiers, or switch to paid providers.
-Default model: `gemini-3.8-flash`; override using the `GEMINI_MODEL` repository
+Default model: `openai/gpt-oss-20b`; override using the `GROQ_MODEL` repository
 variable if availability changes. Quota failures wait for the next run.
 
 Instagram professional account must be connected to Buffer as `jeeedge`.
@@ -29,7 +31,7 @@ stop posts already queued. Disable this workflow if you no longer want it.
 
 Six code-calculated original problem families rotate across Physics, Chemistry,
 and Maths with reproducible daily parameters. These are foundational warm-ups,
-not actual PYQs. Gemini writes a short hook and caption; the question, answer,
+not actual PYQs. Groq writes a short hook and caption; the question, answer,
 solution and layout stay deterministic. The worker rejects invalid copy and
 overflowing layouts. An AI caption is not a mathematical verification system.
 Visual templates use charcoal and orange, with no image-generation credits.

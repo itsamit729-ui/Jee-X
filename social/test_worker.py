@@ -32,9 +32,23 @@ class WorkerTests(unittest.TestCase):
                         self.assertEqual(image.size, (1080, 1350))
 
     def test_ai_copy_rejects_false_pyq_claim(self):
-        result = {'candidates': [{'content': {'parts': [{'text': json.dumps({
-            'hook': 'Actual PYQ', 'caption': 'Try it'})}]}}]}
-        with patch.dict(os.environ, {'GEMINI_API_KEY': 'test'}), patch.object(worker, 'request', return_value=result):
+        result = {'choices': [{'finish_reason': 'stop', 'message': {'content': json.dumps({
+            'hook': 'Actual PYQ', 'caption': 'Try it'})}}]}
+        with patch.dict(os.environ, {'GROQ_API_KEY': 'test'}), patch.object(worker, 'request', return_value=result):
+            with self.assertRaises(worker.ServiceError):
+                worker.ai_copy(worker.problem('2026-10-06'), [])
+
+    def test_groq_request_and_response(self):
+        response = {'choices': [{'finish_reason': 'stop', 'message': {'content':
+            json.dumps({'hook': 'Try this warm-up', 'caption': 'Solve and swipe.'})}}]}
+        with patch.dict(os.environ, {'GROQ_API_KEY': 'test'}), patch.object(worker, 'request', return_value=response) as request:
+            copy = worker.ai_copy(worker.problem('2026-10-06'), [])
+            self.assertEqual(copy['hook'], 'Try this warm-up')
+            args, kwargs = request.call_args
+            self.assertEqual(args[0], 'https://api.groq.com/openai/v1/chat/completions')
+            self.assertEqual(kwargs['headers']['Authorization'], 'Bearer test')
+            self.assertEqual(kwargs['body']['response_format'], {'type': 'json_object'})
+            response['choices'][0]['finish_reason'] = 'length'
             with self.assertRaises(worker.ServiceError):
                 worker.ai_copy(worker.problem('2026-10-06'), [])
 
@@ -48,7 +62,7 @@ class WorkerTests(unittest.TestCase):
             self.assertEqual(writes[-1]['history'][-1]['state'], 'submitting')
             raise worker.ServiceError('timeout')
         with tempfile.TemporaryDirectory() as directory, patch.dict(os.environ, {
-            'GITHUB_TOKEN': 'test', 'BUFFER_API_KEY': 'test', 'GEMINI_API_KEY': 'test', 'PREVIEW_ONLY': 'false'
+            'GITHUB_TOKEN': 'test', 'BUFFER_API_KEY': 'test', 'GROQ_API_KEY': 'test', 'PREVIEW_ONLY': 'false'
         }), patch.object(worker, 'OUT', Path(directory)), patch.object(worker, 'find_channel', return_value=('org', {'id': 'channel'})), patch.object(worker, 'posts', return_value=[]), patch.object(worker, 'ensure_media_branch'), patch.object(worker, 'load_file', return_value=None), patch.object(worker, 'save_file', side_effect=save), patch.object(worker, 'ai_copy', return_value={'hook': 'Try this', 'caption': 'Solve and swipe'}), patch.object(worker, 'request') as request, patch.object(worker, 'buffer', side_effect=mutation):
             import io
             raw = io.BytesIO()
@@ -62,7 +76,7 @@ class WorkerTests(unittest.TestCase):
         day = worker.datetime.now(worker.ZoneInfo('Asia/Kolkata')).date().isoformat()
         ledger = {'history': [{'day': day, 'state': 'submitting'}]}
         saved = {'content': worker.base64.b64encode(json.dumps(ledger).encode()).decode()}
-        with patch.dict(os.environ, {'GITHUB_TOKEN': 'test', 'BUFFER_API_KEY': 'test', 'GEMINI_API_KEY': 'test', 'PREVIEW_ONLY': 'false'}), patch.object(worker, 'find_channel', return_value=('org', {'id': 'channel'})), patch.object(worker, 'posts', return_value=[]), patch.object(worker, 'ensure_media_branch'), patch.object(worker, 'load_file', return_value=saved), patch.object(worker, 'buffer') as buffer:
+        with patch.dict(os.environ, {'GITHUB_TOKEN': 'test', 'BUFFER_API_KEY': 'test', 'GROQ_API_KEY': 'test', 'PREVIEW_ONLY': 'false'}), patch.object(worker, 'find_channel', return_value=('org', {'id': 'channel'})), patch.object(worker, 'posts', return_value=[]), patch.object(worker, 'ensure_media_branch'), patch.object(worker, 'load_file', return_value=saved), patch.object(worker, 'buffer') as buffer:
             with self.assertRaises(worker.ServiceError):
                 worker.main()
             buffer.assert_not_called()
