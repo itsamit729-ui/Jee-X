@@ -1,0 +1,47 @@
+name: JeeEdge Instagram
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/jeeedge-social.yml']
+  schedule:
+    - cron: '30 12,13,14 * * *'
+  workflow_dispatch:
+    inputs:
+      preview_only:
+        description: Generate a preview without posting
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: jeeedge-instagram
+  cancel-in-progress: false
+jobs:
+  daily:
+    if: vars.SOCIAL_PAUSED != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: feature/version-1
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r social/requirements.txt
+      - name: Generate and schedule carousel
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.8-flash' }}
+          PREVIEW_ONLY: ${{ inputs.preview_only && 'true' || 'false' }}
+        run: python social/worker.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jeeedge-preview-${{ github.run_id }}
+          path: social/output/
+          if-no-files-found: ignore
+          retention-days: 14
