@@ -43,7 +43,16 @@ def request(url, method='GET', body=None, headers=None, missing_ok=False, binary
             return None
         # Do not expose remote bodies, URLs, headers, tokens or prompts in logs.
         service = urlsplit(url).hostname
-        raise ServiceError(f'{service} returned HTTP {error.code}; check credentials and permissions. No paid fallback.') from None
+        reason = ''
+        if service == 'generativelanguage.googleapis.com':
+            try:
+                details = json.loads(error.read()).get('error', {}).get('details', [])
+                reasons = [d.get('reason', '') for d in details if isinstance(d, dict)]
+                safe = [r for r in reasons if re.fullmatch('[A-Z_]{1,80}', r)]
+                reason = ' (' + ', '.join(safe) + ')' if safe else ''
+            except (ValueError, TypeError, AttributeError):
+                pass
+        raise ServiceError(f'{service} returned HTTP {error.code}{reason}; check credentials and permissions. No paid fallback.') from None
     except (urllib.error.URLError, TimeoutError):
         raise ServiceError('Network request failed; next scheduled run will retry safely.') from None
 
