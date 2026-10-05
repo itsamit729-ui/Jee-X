@@ -154,34 +154,58 @@ def problem(day):
             'answer': f'{n / 2:g} mol/L', 'solution': f'Molarity = moles / solution volume in litres.\nM = {n}/2 = {n / 2:g} mol/L.\nUse the final solution volume, not solvent volume.'}
 
 
+def validate_copy(result):
+    try:
+        choice = result['choices'][0]
+        if choice.get('finish_reason') != 'stop':
+            raise ValueError('generation did not finish normally')
+        copy = json.loads(choice['message']['content'])
+    except (KeyError, IndexError, TypeError, json.JSONDecodeError):
+        raise ValueError('missing or malformed JSON response') from None
+    if not isinstance(copy, dict) or set(copy) != {'hook', 'caption'}:
+        raise ValueError('expected only hook and caption')
+    for key, limit in [('hook', 75), ('caption', 1000)]:
+        if not isinstance(copy[key], str):
+            raise ValueError(key + ' must be text')
+        copy[key] = copy[key].strip()
+        if not 1 <= len(copy[key]) <= limit:
+            raise ValueError(key + ' outside character limit')
+    if re.search(r'https?://|guarantee|\bPYQ\b|100%|AIR\s*1', copy['hook'] + ' ' + copy['caption'], re.I):
+        raise ValueError('unsupported claim or URL')
+    return copy
+
+
 def ai_copy(content, history):
     prompt = ('Write an Instagram hook and caption for JeeEdge, for JEE students. English, friendly, concise. '
-              'Return JSON with only hook (max 75 characters) and caption (max 1000 characters). '
-              'Do not give the answer in either field, claim this is a PYQ, invent facts, mention rankings, '
+              'Return JSON with only hook (target 40 characters, maximum 75) and caption '
+              '(target 150 characters, maximum 1000). '
+              'Do not give the answer, claim this is a PYQ, invent facts, mention rankings, '
               'promise marks or guaranteed results, or add URLs. Encourage solving then swiping. '
               'Do not change or generate the problem or solution. '
               + json.dumps({'problem': content}))
     model = os.getenv('GROQ_MODEL', 'openai/gpt-oss-20b')
     if not re.fullmatch(r'[a-zA-Z0-9./_-]+', model):
         raise ServiceError('Invalid Groq model name.')
-    result = request('https://api.groq.com/openai/v1/chat/completions',
-                     method='POST', headers={'Authorization': f'Bearer {os.environ["GROQ_API_KEY"]}'},
-                     body={'model': model, 'messages': [{'role': 'user', 'content': prompt}],
-                           'response_format': {'type': 'json_object'},
-                           'max_completion_tokens': 2048})
-    try:
-        if result['choices'][0].get('finish_reason') != 'stop':
-            raise ValueError()
-        text = result['choices'][0]['message']['content']
-        copy = json.loads(text)
-        for key, limit in [('hook', 75), ('caption', 1000)]:
-            if not isinstance(copy[key], str) or not 1 <= len(copy[key]) <= limit:
-                raise ValueError()
-        if re.search(r'https?://|guarantee|\bPYQ\b|100%|AIR\s*1', copy['hook'] + ' ' + copy['caption'], re.I):
-            raise ValueError()
-        return copy
-    except (KeyError, IndexError, ValueError, TypeError):
-        raise ServiceError('AI copy did not pass validation; holding publication.') from None
+    schema = {'type': 'object', 'properties': {
+        'hook': {'type': 'string', 'description': 'Short hook, 1 to 75 characters'},
+        'caption': {'type': 'string', 'description': 'Caption, 1 to 1000 characters'}},
+        'required': ['hook', 'caption'], 'additionalProperties': False}
+    for attempt in range(2):
+        result = request('https://api.groq.com/openai/v1/chat/completions',
+                         method='POST', headers={'Authorization': f'Bearer {os.environ["GROQ_API_KEY"]}'},
+                         body={'model': model, 'messages': [{'role': 'user', 'content': prompt}],
+                               'response_format': {'type': 'json_schema', 'json_schema': {
+                                   'name': 'jeeedge_caption', 'strict': True, 'schema': schema}},
+                               'reasoning_effort': 'low', 'max_completion_tokens': 2048})
+        try:
+            return validate_copy(result)
+        except ValueError as error:
+            # Log validation reasons only, never raw model output or secrets.
+            print(f'Caption attempt {attempt + 1} rejected: {error}')
+            prompt += ' Keep the hook under 50 characters and the caption under 250. Return only the requested fields.'
+    print('Using fixed practice caption after two invalid AI responses.')
+    return {'hook': 'Can you solve this before you swipe?',
+            'caption': 'A quick original practice challenge. Solve it first, then swipe for the breakdown. Save it for your next revision session.'}
 
 
 def font(size, bold=False):
