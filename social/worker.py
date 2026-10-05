@@ -12,6 +12,7 @@ import re
 import sys
 import urllib.error
 import urllib.request
+from urllib.parse import urlsplit
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -32,7 +33,7 @@ class ServiceError(RuntimeError):
 def request(url, method='GET', body=None, headers=None, missing_ok=False, binary=False):
     data = json.dumps(body).encode() if body is not None else None
     req = urllib.request.Request(url, data=data, method=method,
-                                 headers={'Content-Type': 'application/json', **(headers or {})})
+                                 headers={'Content-Type': 'application/json', 'User-Agent': 'JeeEdge-Automation/1.0', **(headers or {})})
     try:
         with urllib.request.urlopen(req, timeout=45) as response:
             raw = response.read()
@@ -41,7 +42,8 @@ def request(url, method='GET', body=None, headers=None, missing_ok=False, binary
         if missing_ok and error.code == 404:
             return None
         # Do not expose remote bodies, URLs, headers, tokens or prompts in logs.
-        raise ServiceError(f'Service returned HTTP {error.code}; no paid fallback.') from None
+        service = urlsplit(url).hostname
+        raise ServiceError(f'{service} returned HTTP {error.code}; check credentials and permissions. No paid fallback.') from None
     except (urllib.error.URLError, TimeoutError):
         raise ServiceError('Network request failed; next scheduled run will retry safely.') from None
 
