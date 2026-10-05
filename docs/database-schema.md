@@ -141,7 +141,7 @@ analytical — stats, ratings, ranks, leaderboards, regrades — is computed fro
 - **Syllabus links are always foreign keys** (`subject_id`, `chapter_id`, `subtopic_id`) — never a
   copied name like `"Physics"`.
 - **Enumerations** are lowercase strings guarded by `CHECK` constraints, with one vocabulary
-  everywhere: exams are always `'jee_main' | 'jee_advanced'`.
+  for JEE planning: target exams remain `'jee_main' | 'jee_advanced'`. Question content and test patterns also accept `'bitsat'`; see `BITSAT-PYQ.md` for the additive migration and import contract.
 - **Stable references:** questions and passages carry a human-readable `ref` (`PHY-KIN-001`) that
   survives edits and re-imports. Integer `id`s are internal and never appear in question files.
 - **Delete rules:**
@@ -236,7 +236,7 @@ erDiagram
 ```sql
 CREATE TABLE subjects (
   id    INTEGER PRIMARY KEY,
-  code  TEXT NOT NULL UNIQUE CHECK (code IN ('PHY', 'CHEM', 'MATH')),
+  code  TEXT NOT NULL UNIQUE CHECK (code IN ('PHY', 'CHEM', 'MATH', 'ENG', 'LR')),
   name  TEXT NOT NULL
 );
 
@@ -281,7 +281,7 @@ CREATE TABLE questions (
   difficulty         INTEGER NOT NULL CHECK (difficulty BETWEEN 1 AND 10),   -- 1 = very easy, 10 = very hard
   expected_time_sec  INTEGER NOT NULL,
   source_type        TEXT NOT NULL CHECK (source_type IN ('pyq', 'original', 'adapted')),
-  exam               TEXT CHECK (exam IN ('jee_main', 'jee_advanced')),
+  exam               TEXT CHECK (exam IN ('jee_main', 'jee_advanced', 'bitsat')),
   year               INTEGER,
   shift              TEXT,                       -- e.g. '27 Jan 2024, Shift 1'
   status             TEXT NOT NULL DEFAULT 'draft'
@@ -362,7 +362,7 @@ CREATE TABLE tests (
   title                  TEXT NOT NULL,
   kind                   TEXT NOT NULL
                          CHECK (kind IN ('free_diagnostic', 'mock', 'chapter', 'retest')),
-  pattern                TEXT NOT NULL CHECK (pattern IN ('jee_main', 'jee_advanced')),
+  pattern                TEXT NOT NULL CHECK (pattern IN ('jee_main', 'jee_advanced', 'bitsat')),
   duration_sec           INTEGER NOT NULL,
   ranked                 BOOLEAN NOT NULL DEFAULT FALSE,
   generated_for_user_id  INTEGER REFERENCES users (id) ON DELETE CASCADE,   -- personalised retests only

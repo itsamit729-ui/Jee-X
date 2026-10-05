@@ -29,6 +29,7 @@ export default function Sidebar() {
           <BookOpen size={17} strokeWidth={2} />
           Subject tests
         </NavLink>
+        <NavLink to="/pyq" className={linkClass}><BookOpen size={17} />Previous year questions</NavLink>
         <NavLink to="/scenarios" className={linkClass}><Timer size={17} />Exam situations</NavLink>
         <NavLink to="/ranking" className={linkClass}><Trophy size={17} />Rankings</NavLink>
         <NavLink to="/profile" className={linkClass}>

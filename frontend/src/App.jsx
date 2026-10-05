@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { IITianFactToast, Loader } from './components/Brand.jsx'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+const PYQs = lazy(() => import('./pages/PYQs.jsx'))
 const Teacher = lazy(() => import('./pages/Teacher.jsx'))
 const Classrooms = lazy(() => import('./pages/Classrooms.jsx'))
 const Assignment = lazy(() => import('./pages/Assignment.jsx'))
@@ -42,6 +43,7 @@ export default function App() {
       <Route path="/reset-password" element={<AuthPage key="reset" mode="reset" />} />
       <Route path="/verify-email" element={<AuthPage key="verify" mode="verify" />} />
       <Route path="/account/security" element={<ProtectedRoute><AuthPage mode="change" /></ProtectedRoute>} />
+      <Route path="/pyq" element={<ProtectedRoute><PYQs /></ProtectedRoute>} />
       <Route path="/teacher" element={<ProtectedRoute><Teacher /></ProtectedRoute>} />
       <Route path="/classes" element={<ProtectedRoute><Classrooms /></ProtectedRoute>} />
       <Route path="/assignments/:id" element={<ProtectedRoute><Assignment /></ProtectedRoute>} />

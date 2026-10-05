@@ -46,7 +46,8 @@ def _pick_question(db: Session, user: models.User) -> models.Question | None:
     ]
     for subtopic_id in weak_subtopic_ids:
         query = db.query(models.Question).filter(
-            models.Question.subtopic_id == subtopic_id, models.Question.status == "published"
+            models.Question.subtopic_id == subtopic_id, models.Question.status == "published",
+            (models.Question.exam.is_(None) | models.Question.exam.in_(["jee_main", "jee_advanced"]))
         )
         if seen:
             query = query.filter(models.Question.id.notin_(seen))
@@ -56,7 +57,8 @@ def _pick_question(db: Session, user: models.User) -> models.Question | None:
 
     # No stats yet, or every question in every weak subtopic has already been assigned —
     # fall back to any unseen published question.
-    fallback = db.query(models.Question).filter(models.Question.status == "published")
+    fallback = db.query(models.Question).filter(models.Question.status == "published",
+            (models.Question.exam.is_(None) | models.Question.exam.in_(["jee_main", "jee_advanced"])))
     if seen:
         fallback = fallback.filter(models.Question.id.notin_(seen))
     return fallback.first()

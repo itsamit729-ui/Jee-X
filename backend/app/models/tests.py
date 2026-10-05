@@ -38,7 +38,7 @@ class Test(Base):
         CheckConstraint(
             "kind IN ('free_diagnostic','mock','chapter','retest','daily')", name="ck_tests_kind"
         ),
-        CheckConstraint("pattern IN ('jee_main','jee_advanced')", name="ck_tests_pattern"),
+        CheckConstraint("pattern IN ('jee_main','jee_advanced','bitsat')", name="ck_tests_pattern"),
         CheckConstraint(
             "kind <> 'retest' OR (generated_for_user_id IS NOT NULL AND ranked = 0)",
             name="ck_tests_retest_rules",

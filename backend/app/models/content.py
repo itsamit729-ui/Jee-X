@@ -23,7 +23,7 @@ class Subject(Base):
     code = Column(String(10), nullable=False, unique=True)
     name = Column(String(50), nullable=False)
 
-    __table_args__ = (CheckConstraint("code IN ('PHY','CHEM','MATH')", name="ck_subjects_code"),)
+    __table_args__ = (CheckConstraint("code IN ('PHY','CHEM','MATH','ENG','LR')", name="ck_subjects_code"),)
 
     chapters = relationship("Chapter", back_populates="subject")
 
@@ -104,7 +104,7 @@ class Question(Base):
         CheckConstraint("type IN ('single_correct','multi_correct','numerical')", name="ck_questions_type"),
         CheckConstraint("difficulty BETWEEN 1 AND 10", name="ck_questions_difficulty"),
         CheckConstraint("source_type IN ('pyq','original','adapted')", name="ck_questions_source_type"),
-        CheckConstraint("exam IS NULL OR exam IN ('jee_main','jee_advanced')", name="ck_questions_exam"),
+        CheckConstraint("exam IS NULL OR exam IN ('jee_main','jee_advanced','bitsat')", name="ck_questions_exam"),
         CheckConstraint(
             "status IN ('draft','reviewed','published','retired')", name="ck_questions_status"
         ),

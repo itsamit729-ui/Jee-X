@@ -57,7 +57,8 @@ def evidence(db, user_id):
             .join(models.TestAttempt, models.TestAttempt.id == models.QuestionResponse.attempt_id)
             .join(first, first.c.question_id == models.QuestionResponse.question_id)
             .filter(models.QuestionResponse.user_id == user_id, models.TestAttempt.user_id == user_id,
-                    models.TestAttempt.submitted_at.isnot(None), models.Chapter.in_main.is_(True))
+                    models.TestAttempt.submitted_at.isnot(None), models.Chapter.in_main.is_(True),
+                    (models.Question.exam.is_(None) | models.Question.exam.in_(["jee_main", "jee_advanced"])))
             .order_by(models.QuestionResponse.answered_at.desc(), models.QuestionResponse.id.desc()).limit(500).all())
 
 

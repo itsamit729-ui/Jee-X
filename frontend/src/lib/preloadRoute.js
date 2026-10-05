@@ -1,5 +1,6 @@
 // Fetch the route code on intent, before the click. No student data is fetched.
 const routes = {
+  '/pyq': () => import('../pages/PYQs.jsx'),
   '/pricing': () => import('../pages/Pricing.jsx'),
   '/dashboard': () => import('../pages/Dashboard.jsx'),
   '/plan': () => import('../pages/Roadmap.jsx'),

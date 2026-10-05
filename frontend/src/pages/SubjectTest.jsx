@@ -23,6 +23,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   const [searchParams] = useSearchParams()
   const requestedSubject = searchParams.get('subject')
   const requestedChapter = searchParams.get('chapter')
+  const pyq = searchParams.get('pyq') === 'bitsat'
   const assessment = searchParams.get('assessment') === '1'
   const [deadline, setDeadline] = useState(null)
   const [remaining, setRemaining] = useState(10800)
@@ -151,6 +152,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
 
   const exitTest = () => {
     if (!window.confirm('Leave this test? Your answers will be lost.')) return
+    if (pyq) { navigate('/pyq'); return }
     setTest(null)
     setAnswers({})
     setIndex(0)
@@ -186,12 +188,14 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
     }
   }
 
-  const restart = () => { setTest(null); setResult(null); setAnswers({}); setIndex(0) }
+  const restart = () => { if (pyq) { navigate('/pyq'); return }; setTest(null); setResult(null); setAnswers({}); setIndex(0) }
   const isAnswered = (q) => {
     const a = answers[q.question_id]
     return Boolean(a && (a.option_ids?.length || (a.numeric_answer !== null && a.numeric_answer !== undefined)))
   }
   const answeredCount = test ? test.questions.filter(isAnswered).length : 0
+
+  useEffect(() => { if (pyq && !test) navigate('/pyq', { replace: true }) }, [pyq, test, navigate])
 
   // ---------------------------------------------------------------- RESULTS
   if (result) {
@@ -205,8 +209,8 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
             <p className="result-line"><strong>{result.accuracy}%</strong> accuracy across {result.total_questions} questions</p>
           </div>
 
-          <GoalJourney afterTest attemptId={result.attempt_id} onStartMission={assessment ? undefined : startTest} missionBusy={starting}/>
-          {!assessment && <details className="journey-method"><summary>Explore rank and college reference data</summary><RankPredictor attemptId={result.attempt_id}/></details>}
+          {!pyq && <GoalJourney afterTest attemptId={result.attempt_id} onStartMission={assessment ? undefined : startTest} missionBusy={starting}/>}
+          {!assessment && !pyq && <details className="journey-method"><summary>Explore rank and college reference data</summary><RankPredictor attemptId={result.attempt_id}/></details>}
 
           <div className="panel">
             <h2 className="panel-title">Solutions</h2>

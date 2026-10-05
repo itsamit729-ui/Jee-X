@@ -3,7 +3,7 @@ from sqlalchemy import or_, and_, func
 from app import models
 
 
-def candidate_query(db):
+def candidate_query(db, exam=None):
     # Only complete, supported question content. Do not fetch image bytes during selection.
     valid_url = or_(models.Asset.url.like('https://%'),
                     and_(models.Asset.url.like('/%'), ~models.Asset.url.like('//%')))
@@ -26,6 +26,10 @@ def candidate_query(db):
                      or_(and_(models.Question.type == 'single_correct', option_count >= 2, correct_count == 1),
                          and_(models.Question.type == 'numerical', models.Question.answer_min.isnot(None),
                               models.Question.answer_max.isnot(None)))))
+    if exam:
+        query = query.filter(models.Question.exam == exam)
+    else:
+        query = query.filter(or_(models.Question.exam.is_(None), models.Question.exam.in_(['jee_main', 'jee_advanced'])))
     return query
 
 

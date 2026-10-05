@@ -18,6 +18,7 @@ from app.routers import (
     test_attempts,
     subjects,
     subject_tests,
+    pyqs,
     subject_test_attempts,
     predictions,
     daily_question,
@@ -58,6 +59,7 @@ app.include_router(users.router)
 app.include_router(test_attempts.router)
 app.include_router(subjects.router)
 app.include_router(subject_tests.router)
+app.include_router(pyqs.router)
 app.include_router(subject_test_attempts.router)
 app.include_router(predictions.router)
 app.include_router(daily_question.router)

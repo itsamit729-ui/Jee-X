@@ -12,6 +12,7 @@ const main = [
   ['/subject-test', 'Practice', BookOpen], ['/ranking', 'Rankings', Trophy],
 ]
 const more = [
+  ['/pyq', 'Previous year questions', BookOpen],
   ['/daily', 'Daily question', CalendarCheck], ['/test', 'Full mock', Shapes],
   ['/scenarios', 'Exam situations', Shapes], ['/classes', 'My classroom', Users],
   ['/teacher', 'Teacher studio', GraduationCap], ['/advanced', 'IIT & Advanced', GraduationCap],

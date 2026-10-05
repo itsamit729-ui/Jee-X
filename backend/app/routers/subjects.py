@@ -3,7 +3,7 @@ a subject-wise test. Read-only, needs no auth (mirrors the syllabus tables
 being public per docs/database-schema.md section 2)."""
 
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import case, func
+from sqlalchemy import case, func, and_, or_
 from sqlalchemy.orm import Session
 
 from app import models, schemas
@@ -11,7 +11,7 @@ from app.database import get_db
 
 router = APIRouter(prefix="/api/subjects", tags=["subjects"])
 
-_published_count = func.count(case((models.Question.status == "published", models.Question.id)))
+_published_count = func.count(case((and_(models.Question.status == "published", or_(models.Question.exam.is_(None), models.Question.exam.in_(["jee_main", "jee_advanced"]))), models.Question.id)))
 
 
 @router.get("", response_model=list[schemas.SubjectOut])
@@ -26,6 +26,7 @@ def list_subjects(db: Session = Depends(get_db)):
         .outerjoin(models.Chapter, models.Chapter.subject_id == models.Subject.id)
         .outerjoin(models.Subtopic, models.Subtopic.chapter_id == models.Chapter.id)
         .outerjoin(models.Question, models.Question.subtopic_id == models.Subtopic.id)
+        .filter(models.Subject.code.in_(["PHY", "CHEM", "MATH"]))
         .group_by(models.Subject.id, models.Subject.code, models.Subject.name)
         .order_by(models.Subject.code)
         .all()

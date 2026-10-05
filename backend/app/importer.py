@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session
 
 from app import models
 
-SUBJECT_NAMES = {"PHY": "Physics", "CHEM": "Chemistry", "MATH": "Mathematics"}
+SUBJECT_NAMES = {"PHY": "Physics", "CHEM": "Chemistry", "MATH": "Mathematics", "ENG": "English Proficiency", "LR": "Logical Reasoning"}
 
 
 def _content_hash(question: dict) -> str:

@@ -45,7 +45,8 @@ def create_subject_test(body: schemas.SubjectTestCreate,
                .join(models.Question, models.Question.id == models.QuestionResponse.question_id)
                .join(models.TestAttempt, models.TestAttempt.id == models.QuestionResponse.attempt_id)
                .filter(models.QuestionResponse.user_id == user.id, models.TestAttempt.user_id == user.id,
-                       models.TestAttempt.submitted_at.isnot(None))
+                       models.TestAttempt.submitted_at.isnot(None),
+                       (models.Question.exam.is_(None) | models.Question.exam.in_(["jee_main", "jee_advanced"])))
                .order_by(models.QuestionResponse.answered_at.desc(), models.QuestionResponse.id.desc()).limit(500).all())
     count = {5: 3, 15: 8, 30: 16}.get(body.duration_minutes, body.count)
     if body.assessment:
