@@ -284,7 +284,7 @@ def main():
         if saved:
             ledger = json.loads(base64.b64decode(saved['content']))
         existing = next((item for item in ledger['history'] if item['day'] == day), None)
-        if existing:
+        if existing and existing.get('state') != 'rejected':
             raise ServiceError('Today has a submission record. Check Buffer before any manual retry.')
     metrics = [] if offline or preview else summarize_history(ledger['history'])
     copy = {'hook': 'Can you solve this before you swipe?',
@@ -306,18 +306,29 @@ def main():
             if image.size != (1080, 1350):
                 raise ServiceError('Public media verification failed.')
     record = {'day': day, 'topic': content['topic'], 'state': 'submitting', 'urls': urls}
+    ledger['history'] = [item for item in ledger['history'] if item['day'] != day]
     ledger['history'].append(record)
     save_file(state_path, json.dumps(ledger, indent=2).encode())
     # The ledger is committed BEFORE the non-idempotent publishing mutation.
     # On an ambiguous timeout, never submit again automatically.
     payload = {'text': caption, 'channelId': channel['id'], 'schedulingType': 'automatic',
-               'mode': 'customScheduled', 'dueAt': (now + timedelta(minutes=30)).isoformat(),
+               'mode': 'customScheduled', 'dueAt': (datetime.now(timezone.utc) + timedelta(minutes=30)).isoformat(),
+               'metadata': {'instagram': {'type': 'post', 'shouldShareToFeed': True}},
                'assets': [{'image': {'url': url}} for url in urls]}
     result = buffer('mutation($input:CreatePostInput!) { createPost(input:$input) '
-                    '{ ... on PostActionSuccess { post { id status } } '
+                    '{ __typename ... on PostActionSuccess { post { id status } } '
                     '... on MutationError { message } } }', {'input': payload})['createPost']
     if not result.get('post'):
-        raise ServiceError('Buffer rejected submission. Check the saved ledger and Buffer dashboard.')
+        message = str(result.get('message', 'Unknown response type: ' + str(result.get('__typename'))))
+        for name, secret in os.environ.items():
+            if secret and (name.endswith('_KEY') or name.endswith('_TOKEN')):
+                message = message.replace(secret, '[redacted]')
+        message = re.sub(r'https?://\\S+', '[URL]', message)
+        message = ' '.join(message.split())[:500]
+        if result.get('message'):
+            record.update({'state': 'rejected', 'error': message})
+            save_file(state_path, json.dumps(ledger, indent=2).encode())
+        raise ServiceError('Buffer rejected submission: ' + message)
     record.update({'state': 'scheduled', 'post_id': result['post']['id']})
     save_file(state_path, json.dumps(ledger, indent=2).encode())
     print('Carousel scheduled successfully for @jeeedge. See Buffer for publishing status.')
