@@ -4,12 +4,15 @@ Route: `/pyq`. Scope: the latest five completed exam years, 2022–2026.
 
 ## Content status
 
-**No BITSAT questions have been imported or represented as verified by this change.**
-The section shows actual published, complete question availability from the database.
-All five years and all five subjects appear; unavailable selections cannot start a test.
-Source material with permission to reuse it and reviewed answer keys is still required.
-Public availability of a third-party compilation does not establish reuse permission.
-Memory-based recalls must not be described as official papers or complete shift papers.
+The first internet-sourced batch contains **23 reviewed memory-based questions**:
+6 attributed to 2022 and 17 to 2023. See `generated/bitsat/README.md` for attribution,
+license, modifications, coverage and limitations. This is not a complete five-year bank.
+No 2024–2026, English or Logical Reasoning questions are included yet. The available
+licensed dataset stops at 2023; other source banks have not been cleared for bulk reuse.
+Questions and options were retained; worked solutions were independently derived.
+The original source's year attribution is retained, not verified official-paper provenance.
+The UI reads actual published database availability. Database migration/import still
+must run in the configured deployment environment.
 
 ## Existing contracts retained
 

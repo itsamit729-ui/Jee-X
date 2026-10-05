@@ -1,0 +1,77 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Straight Lines",
+    "slug": "straight-lines",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 9
+  },
+  "subtopics": [
+    {
+      "slug": "angle-between-lines",
+      "name": "Angle between two lines",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-MATH-HF1885",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "What is the angle between the two straight lines $y=(2-\\sqrt{3}) x+5$ and $y=(2+\\sqrt{3}) x-7 ?$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$60^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$45^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$30^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": "The slopes have product $(2-\\sqrt3)(2+\\sqrt3)=1$ and difference $2\\sqrt3$. Therefore $\\tan\\theta=|m_2-m_1|/|1+m_1m_2|=\\sqrt3$, giving the acute angle $60^\\circ$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=1885; BITSAT 2023 (Memory Based Paper 1)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 1885,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 1)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Centre Of Mass And Collision",
+    "slug": "centre-of-mass-and-collision",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-PHY-HF1819",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "Two bodies are having kinetic energies in the ratio $16: 9$. If they have same linear momentum, the ratio of their masses respectively is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4 : 3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 : 4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "16 : 9",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "9 : 16",
+          "is_correct": true
+        }
+      ],
+      "solution": "Using $K=p^2/(2m)$, equal momenta imply that kinetic energy is inversely proportional to mass. Thus $m_1/m_2=K_2/K_1=9/16$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=1819; BITSAT 2023 (Memory Based Paper 2)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 1819,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 2)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

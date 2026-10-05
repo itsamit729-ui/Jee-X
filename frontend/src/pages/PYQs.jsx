@@ -40,6 +40,7 @@ export default function PYQs() {
     <section className="pyq-panel" aria-labelledby="pyq-title">
       <div className="pyq-panel-heading"><h2 id="pyq-title">BITSAT</h2><span className="tag">Memory-based</span></div>
       <p className="muted">Recalled questions, reviewed before publication. These practice sets are not official papers or full exam simulations.</p>
+      <p className="muted" style={{fontSize:12}}>Initial collection: selected 2022–2023 questions, with new worked solutions. Source: <a href="https://huggingface.co/datasets/datavorous/entrance-exam-dataset" target="_blank" rel="noreferrer">datavorous and contributors</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>. Year labels follow the source; coverage is incomplete.</p>
       {error && <div role="alert" className="alert">{error} {!catalog && <button className="btn btn-secondary" onClick={() => setRetry(v => v+1)}>Retry</button>}</div>}
       {!catalog && !error && <p role="status">Loading the archive…</p>}
       {catalog && <>

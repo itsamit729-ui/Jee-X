@@ -1,0 +1,77 @@
+{
+  "subject": "CHEM",
+  "chapter": {
+    "name": "Solutions",
+    "slug": "solutions",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 18
+  },
+  "subtopics": [
+    {
+      "slug": "colligative-properties",
+      "name": "Colligative Properties and van 't Hoff Factor",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-CHEM-HF29",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "A 0.5 molal solution of ethylene glycol in water is used as coolant in a car. If the freezing point constant of water be $1.86^{\\circ} \\mathrm{C}$ per mole, the mixture shall freeze at",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.93^{\\circ} \\mathrm{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-0.93^{\\circ} \\mathrm{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.86^{\\circ} \\mathrm{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1.86^{\\circ} \\mathrm{C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": "Ethylene glycol is a nonelectrolyte, so $i=1$. The freezing-point depression is $\\Delta T_f=iK_fm=1\\times1.86\\times0.5=0.93^\\circ\\mathrm C$. Subtracting this from the freezing point of pure water gives $-0.93^\\circ\\mathrm C$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=29; BITSAT 2023 (Memory Based Paper 2)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 29,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 2)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

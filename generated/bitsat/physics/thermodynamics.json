@@ -1,0 +1,128 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Thermodynamics",
+    "slug": "thermodynamics",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 10
+  },
+  "subtopics": [
+    {
+      "slug": "thermodynamic-processes",
+      "name": "Thermodynamic processes",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-PHY-HF121",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "A flask contains hydrogen and oxygen in the ratio of $2: 1$ by mass at temperature $27^{\\circ} \\mathrm{C}$. The ratio of average kinetic energy per molecule of hydrogen and oxygen respectively is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2 : 1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1 : 1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1 : 4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4 : 1",
+          "is_correct": false
+        }
+      ],
+      "solution": "The mean translational kinetic energy per molecule of an ideal gas is $3k_BT/2$. Both gases have the same temperature, so their mean energies are equal and the ratio is $1:1$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=121; BITSAT 2023 (Memory Based Paper 2)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 121,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 2)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    },
+    {
+      "ref": "BITSAT-2022-PHY-HF307",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2022,
+      "shift": null,
+      "status": "published",
+      "stem": "A monoatomic gas of molar mass $m$ is kept in a insulated container. Container is moving with velocity $v$. If the container is suddenly stopped, then the change in the temperature of the gas is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$m v^2 / 4 R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$m v^2 / 2 R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$m v^2 / R$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$m v^2 / 3 R$",
+          "is_correct": true
+        }
+      ],
+      "solution": "For one mole, the lost bulk kinetic energy is $\\tfrac12mv^2$. In the idealized insulated rigid container it becomes internal energy, so $\\tfrac32R\\Delta T=\\tfrac12mv^2$. Hence $\\Delta T=mv^2/(3R)$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=307; BITSAT 2022",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 307,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2022",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

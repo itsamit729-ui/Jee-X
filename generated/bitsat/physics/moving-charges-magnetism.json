@@ -1,0 +1,77 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Moving Charges and Magnetism",
+    "slug": "moving-charges-magnetism",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 17
+  },
+  "subtopics": [
+    {
+      "slug": "motion-in-a-magnetic-field",
+      "name": "Motion in a magnetic field",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-PHY-HF75",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "A charge particle is moving in a uniform magnetic field $(2 \\hat{i}+3 \\hat{j}) \\mathrm{T}$. If it has an acceleration of $(\\alpha \\hat{i}-4 \\hat{j}) \\mathrm{m} / \\mathrm{s}^2$, then the value of $\\alpha$ will be :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": "Magnetic force, and hence the acceleration it produces, is perpendicular to the magnetic field. Thus $\\vec a\\cdot\\vec B=0$, giving $2\\alpha+3(-4)=0$ and $\\alpha=6$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=75; BITSAT 2023 (Memory Based Paper 1)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 75,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 1)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

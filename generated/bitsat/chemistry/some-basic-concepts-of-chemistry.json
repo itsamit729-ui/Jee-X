@@ -1,0 +1,77 @@
+{
+  "subject": "CHEM",
+  "chapter": {
+    "name": "Some Basic Concepts Of Chemistry",
+    "slug": "some-basic-concepts-of-chemistry",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2022-CHEM-HF73",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2022,
+      "shift": null,
+      "status": "published",
+      "stem": "A certain metal sulphide, $M S_2$, is used extensively as a high temperature lubricant. If $\\mathrm{MS}_2$ is $40.06 \\%$ by mass sulphur, metal $M$ has atomic mass.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$160 \\mathrm{u}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$64 \\mathrm{u}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$40 \\mathrm{u}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$96 \\mathrm{u}$",
+          "is_correct": true
+        }
+      ],
+      "solution": "Taking the atomic mass of sulphur as $32$, its mass fraction in $MS_2$ is $64/(M+64)=0.4006$. Thus $M=64/0.4006-64\\approx95.76\\,\\mathrm u$, giving the listed answer $96\\,\\mathrm u$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=73; BITSAT 2022",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 73,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2022",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Rotational Motion",
+    "slug": "rotational-motion",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 5
+  },
+  "subtopics": [
+    {
+      "slug": "moment-of-inertia",
+      "name": "Moment of inertia",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-PHY-HF1730",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "The torque of a force $5 \\hat{i}+3 \\hat{j}-7 \\hat{k}$ about the origin is $\\tau$. If the force acts on a particle whose position vector is $2 \\hat{i}+2 \\hat{j}+\\hat{k}$, then the value of $\\tau$ will be :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$11 \\hat{\\mathrm{i}}+19 \\hat{\\mathrm{j}}-4 \\hat{\\mathrm{k}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-11 \\hat{\\mathbf{i}}+9 \\hat{\\mathbf{j}}-16 \\hat{\\mathrm{k}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-17 \\hat{\\mathrm{i}}+19 \\hat{\\mathrm{j}}-4 \\hat{\\mathrm{k}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$17 \\hat{i}+9 \\hat{j}+16 \\hat{k}$",
+          "is_correct": false
+        }
+      ],
+      "solution": "Torque is $\\vec\\tau=\\vec r\\times\\vec F$. Its components are $(2(-7)-1(3),\\;1(5)-2(-7),\\;2(3)-2(5))=(-17,19,-4)$. Therefore $\\vec\\tau=-17\\hat i+19\\hat j-4\\hat k$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=1730; BITSAT 2023 (Memory Based Paper 2)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 1730,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 2)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

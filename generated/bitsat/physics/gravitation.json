@@ -1,0 +1,128 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Gravitation",
+    "slug": "gravitation",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 6
+  },
+  "subtopics": [
+    {
+      "slug": "acceleration-due-to-gravity",
+      "name": "Acceleration due to gravity",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-PHY-HF1832",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "Two identical particles each of mass ' $m$ ' go round a circle of radius $a$ under the action of their mutual gravitational attraction. The angular speed of each particle will be:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{G m}{2 a^3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{\\mathrm{Gm}}{8 \\mathrm{a}^3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{G m}{4 a^3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{G m}{a^3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": "The particles are separated by $2a$, so their mutual gravitational force is $Gm^2/(4a^2)$. Setting this equal to the centripetal force $m\\omega^2a$ gives $\\omega=\\sqrt{Gm/(4a^3)}$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=1832; BITSAT 2023 (Memory Based Paper 2)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 1832,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 2)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    },
+    {
+      "ref": "BITSAT-2023-PHY-HF1845",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "Two planets $A$ and $B$ of radii $R$ and $1.5 R$ have densities $\\rho$ and $\\rho / 2$ respectively. The ratio of acceleration due to gravity at the surface of $B$ to A is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2: 3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2: 1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3: 4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4: 3$",
+          "is_correct": false
+        }
+      ],
+      "solution": "For a spherical planet, $g=GM/R^2=(4\\pi G/3)\\rho R$. Hence $g_B/g_A=(\\rho/2)(1.5R)/(\\rho R)=3/4$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=1845; BITSAT 2023 (Memory Based Paper 1)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 1845,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 1)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

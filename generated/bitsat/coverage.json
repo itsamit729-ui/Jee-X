@@ -1,0 +1,50 @@
+{
+  "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+  "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+  "selected_years": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "source_rows_by_year": {
+    "2022": 99,
+    "2023": 198
+  },
+  "published_batch_by_year": {
+    "2023": 17,
+    "2022": 6
+  },
+  "reviewed_source_ids": [
+    29,
+    30,
+    31,
+    68,
+    73,
+    75,
+    91,
+    97,
+    117,
+    121,
+    288,
+    307,
+    321,
+    1646,
+    1707,
+    1730,
+    1762,
+    1814,
+    1819,
+    1832,
+    1845,
+    1848,
+    1885
+  ],
+  "coverage": "Partial collection, not complete papers. No licensed records found for 2024\u20132026 in this source. No English or LR records in this source.",
+  "not_exported": "All non-allowlisted rows, including duplicates and records needing diagram/answer review.",
+  "known_source_issue": {
+    "id": 2,
+    "reason": "Stem integral upper limit is pi/4; source key and solution use pi/2. Excluded rather than silently altering the question."
+  }
+}

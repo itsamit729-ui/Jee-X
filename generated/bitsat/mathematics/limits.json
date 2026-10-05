@@ -1,0 +1,77 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Limits",
+    "slug": "limits",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 12
+  },
+  "subtopics": [
+    {
+      "slug": "limits-of-algebraic-functions",
+      "name": "Algebraic Limits",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2022-MATH-HF1762",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2022,
+      "shift": null,
+      "status": "published",
+      "stem": "The value of $\\lim _{x \\rightarrow 0} \\frac{1-\\cos (1-\\cos x)}{x^4}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{12}$",
+          "is_correct": false
+        }
+      ],
+      "solution": "As $x\\to0$, $1-\\cos x\\sim x^2/2$. Writing $u=1-\\cos x$, we also have $1-\\cos u\\sim u^2/2\\sim x^4/8$. Dividing by $x^4$ gives the limit $1/8$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=1762; BITSAT 2022",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 1762,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2022",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

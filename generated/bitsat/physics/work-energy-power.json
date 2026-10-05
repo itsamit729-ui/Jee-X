@@ -1,0 +1,77 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Work, Energy and Power",
+    "slug": "work-energy-power",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 4
+  },
+  "subtopics": [
+    {
+      "slug": "potential-energy-and-conservation-of-energy",
+      "name": "Potential energy and conservation of energy",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2022-PHY-HF288",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2022,
+      "shift": null,
+      "status": "published",
+      "stem": "A machine gun fires 300 bullets per $\\mathrm{min}$ if the mass of each bullet is $10 \\mathrm{~g}$ and the velocity of the bullets is $600 \\mathrm{~ms}^{-1}$, the power (in $\\mathrm{kW}$ ) of the gun is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$43200$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$72$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7.2$",
+          "is_correct": false
+        }
+      ],
+      "solution": "The firing rate is $300/60=5$ bullets per second. Each bullet has kinetic energy $\\tfrac12(0.010)(600)^2=1800\\,\\mathrm J$. The power transferred to the bullets is $5\\times1800=9000\\,\\mathrm W=9\\,\\mathrm{kW}$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=288; BITSAT 2022",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 288,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2022",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

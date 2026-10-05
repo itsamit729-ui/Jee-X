@@ -1,0 +1,77 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Properties Of Matter",
+    "slug": "properties-of-matter",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-PHY-HF31",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "A $100 \\mathrm{~m}$ long wire having cross-sectional area $6.25 \\times 10^{-4} \\mathrm{~m}^2$ and Young's modulus is $10^{10}$ $\\mathrm{Nm}^{-2}$ is subjected to a load of $250 \\mathrm{~N}$, then the elongation in the wire will be :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6.25 \\times 10^{-3} \\mathrm{~m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4 \\times 10^{-4} \\mathrm{~m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6.25 \\times 10^{-6} \\mathrm{~m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4 \\times 10^{-3} \\mathrm{~m}$",
+          "is_correct": true
+        }
+      ],
+      "solution": "Young's modulus gives $Y=FL/(A\\Delta L)$. Therefore $\\Delta L=250\\times100/[(6.25\\times10^{-4})(10^{10})]=4\\times10^{-3}\\,\\mathrm m$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=31; BITSAT 2023 (Memory Based Paper 1)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 31,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 1)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

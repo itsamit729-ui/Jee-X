@@ -1,0 +1,77 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Capacitance",
+    "slug": "capacitance",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-PHY-HF68",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "A capacitor of capacitance $C$ is charged to a potential V. The flux of the electric field through a closed surface enclosing the positive plate of the capacitor is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{C V}{2 \\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2 \\mathrm{CV}}{\\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{CV}}{\\varepsilon_0}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Zero",
+          "is_correct": false
+        }
+      ],
+      "solution": "The positive plate carries charge $Q=CV$. By Gauss's law, the electric flux through a closed surface enclosing that plate alone is $\\Phi=Q/\\varepsilon_0=CV/\\varepsilon_0$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=68; BITSAT 2023 (Memory Based Paper 2)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 68,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 2)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

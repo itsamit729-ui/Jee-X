@@ -1,0 +1,77 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Alternating Current",
+    "slug": "alternating-current",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 20
+  },
+  "subtopics": [
+    {
+      "slug": "lcr-series-circuit",
+      "name": "LCR Series Circuit",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2022-PHY-HF117",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2022,
+      "shift": null,
+      "status": "published",
+      "stem": "A direct current of $6 \\mathrm{~A}$ is superimposed on an alternating current $I=10 \\sin \\omega t$ flowing through a wire. The effective value of the resulting current will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5 \\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5 \\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9.27$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8.37$",
+          "is_correct": false
+        }
+      ],
+      "solution": "Over a full cycle, $\\langle\\sin\\omega t\\rangle=0$ and $\\langle\\sin^2\\omega t\\rangle=1/2$. Therefore $I_{\\rm rms}=\\sqrt{\\langle(6+10\\sin\\omega t)^2\\rangle}=\\sqrt{36+50}=\\sqrt{86}\\approx9.27\\,\\mathrm A$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=117; BITSAT 2022",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 117,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2022",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

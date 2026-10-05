@@ -1,0 +1,128 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Electromagnetic Induction",
+    "slug": "electromagnetic-induction",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 19
+  },
+  "subtopics": [
+    {
+      "slug": "motional-emf",
+      "name": "Motional EMF",
+      "position": 1
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-PHY-HF30",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "A $12 \\mathrm{~V}$ battery connected to a coil of resistance $6 \\Omega$ through a switch, drives a constant current in the circuit. The switch is opened in $1 \\mathrm{~ms}$. The emf induced across the coil is $20 \\mathrm{~V}$. The inductance of the coil is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5 \\mathrm{mH}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12 \\mathrm{mH}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8 \\mathrm{mH}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10 \\mathrm{mH}$",
+          "is_correct": true
+        }
+      ],
+      "solution": "The initial steady current is $I=V/R=12/6=2\\,\\mathrm A$. Using the stated switch-off interval, $|\\mathcal E|=L\\Delta I/\\Delta t$, hence $L=20(10^{-3})/2=0.010\\,\\mathrm H=10\\,\\mathrm{mH}$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=30; BITSAT 2023 (Memory Based Paper 2)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 30,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 2)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    },
+    {
+      "ref": "BITSAT-2023-PHY-HF97",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "A conducting loop of radius $\\frac{10}{\\sqrt{\\pi}} \\mathrm{cm}$ is placed perpendicular to a uniform magnetic field of $0.5 T$. The magnetic field is decreased to zero in $0.5 s$ at a steady rate. The induced emf in the circular loop at $0.25 s$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{emf}=1 \\mathrm{mV}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{emf}=10 \\mathrm{mV}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{emf}=100 \\mathrm{mV}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{emf}=5 \\mathrm{mV}$",
+          "is_correct": false
+        }
+      ],
+      "solution": "The loop area is $\\pi(0.10/\\sqrt{\\pi})^2=0.01\\,\\mathrm{m^2}$. The magnitude of the rate of change of field is $0.5/0.5=1\\,\\mathrm{T\\,s^{-1}}$. Faraday's law gives $|\\mathcal E|=A|dB/dt|=0.01\\,\\mathrm V=10\\,\\mathrm{mV}$ throughout the steady decrease.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=97; BITSAT 2023 (Memory Based Paper 1)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 97,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 1)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}

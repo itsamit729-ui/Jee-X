@@ -1,0 +1,77 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Atoms And Nuclei",
+    "slug": "atoms-and-nuclei",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "bitsat-memory-based",
+      "name": "BITSAT memory-based practice",
+      "position": 99
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "BITSAT-2023-PHY-HF1848",
+      "subtopic": "bitsat-memory-based",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 90,
+      "source_type": "pyq",
+      "exam": "bitsat",
+      "year": 2023,
+      "shift": null,
+      "status": "published",
+      "stem": "Two radioactive elements $A$ and $B$ initially have same number of atoms. The half life of $A$ is same as the average life of $B$. If $\\lambda_A$ and $\\lambda_B$ are decay constants of $A$ and $B$ respectively, then choose the correct relation from the given options.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\lambda_A=\\lambda_B$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\lambda_A=2 \\lambda_B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\lambda_{\\mathrm{A}}=\\lambda_{\\mathrm{B}} \\ln 2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\lambda_{\\mathrm{A}} \\ln 2=\\lambda_{\\mathrm{B}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": "The half-life of A is $\\ln2/\\lambda_A$, and the mean life of B is $1/\\lambda_B$. Equating them gives $\\lambda_A=\\lambda_B\\ln2$.",
+      "provenance": {
+        "kind": "memory_based",
+        "source": "https://huggingface.co/datasets/datavorous/entrance-exam-dataset",
+        "locator": "search_BITSAT.db questions.id=1848; BITSAT 2023 (Memory Based Paper 2)",
+        "source_sha256": "63bdcea44d5cafbe36771f72e4e25a52207505a9866c5234916d5bcb951de1fe",
+        "source_row_id": 1848,
+        "reuse_basis": "Dataset publisher declares CC BY 4.0; attribution in generated/bitsat/README.md and PYQ UI.",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "answer_verified_by": "Codex: independently derived answer and checked all four options",
+        "reviewed_at": "2026-10-05",
+        "modifications": "HTML converted to text/LaTeX; option escape normalization; new independently derived solution; chapter mapping. Source year/wording retained.",
+        "source_paper_label": "BITSAT 2023 (Memory Based Paper 2)",
+        "year_verification": "Dataset attribution; not independently confirmed against an official released paper."
+      }
+    }
+  ]
+}
