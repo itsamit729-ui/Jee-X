@@ -36,9 +36,10 @@ solution and layout stay deterministic. The worker rejects invalid copy and
 overflowing layouts. An AI caption is not a mathematical verification system.
 Visual templates use charcoal and orange, with no image-generation credits.
 
-Personal-key post metrics from the most recent seven submissions are supplied to
-the caption generator when available. This is basic feedback, not a complete
-growth optimizer. This version creates carousels only; reels, automated comment
+Personal-key post metrics from the most recent seven submissions are saved in
+run artifacts when available. They are not sent to Groq. Only the original
+practice problem and public caption instructions are sent to the AI provider.
+This version does not optimize content based on private performance data. This version creates carousels only; reels, automated comment
 and DM replies, paid ads, and guaranteed follower growth are not implemented.
 
 ## Failure handling

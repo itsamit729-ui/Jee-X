@@ -159,8 +159,8 @@ def ai_copy(content, history):
               'Return JSON with only hook (max 75 characters) and caption (max 1000 characters). '
               'Do not give the answer in either field, claim this is a PYQ, invent facts, mention rankings, '
               'promise marks or guaranteed results, or add URLs. Encourage solving then swiping. '
-              'Do not change or generate the problem or solution. Use recent performance where available. '
-              + json.dumps({'problem': content, 'recent_performance': history}))
+              'Do not change or generate the problem or solution. '
+              + json.dumps({'problem': content}))
     model = os.getenv('GROQ_MODEL', 'openai/gpt-oss-20b')
     if not re.fullmatch(r'[a-zA-Z0-9./_-]+', model):
         raise ServiceError('Invalid Groq model name.')
