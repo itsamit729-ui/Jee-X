@@ -109,3 +109,5 @@ from app.models.teaching import (TeacherAccess, Classroom, ClassroomMember, Teac
     AssignmentClassroom, AssignmentRecipient, ClassroomNotification)
 
 from app.models.plan_interest import PlanInterest
+
+from app.models.social_job import SocialJob, SocialMedia

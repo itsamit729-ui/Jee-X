@@ -60,3 +60,38 @@ initial runs; occasional reconnection or maintenance may still be necessary.
 Local verification: `pip install -r social/requirements.txt` then
 `python social/worker.py --offline-preview` and
 `python -m unittest discover -s social -p 'test_*.py'`.
+
+## Render + cron-job.org (active scheduler)
+
+The existing Docker backend includes POST `/api/social/trigger` and GET
+`/api/social/status`. Both require `Authorization: Bearer <SOCIAL_TRIGGER_SECRET>`.
+Set a random secret of at least 32 characters plus GROQ_API_KEY and BUFFER_API_KEY
+on the existing Render service. SOCIAL_PAUSED=true disables triggering.
+No GitHub token is needed by Render. Only original public problem text goes to Groq.
+
+After Render deploys this commit, configure cron-job.org:
+- URL: https://jee-edge.onrender.com/api/social/trigger
+- Method: POST; empty body; header Authorization: Bearer <your secret>
+- Time zone: Asia/Kolkata; run at 18:00, 18:20 and 18:40 daily.
+- Enable failure notifications and save responses for debugging.
+- Optional daily warm-up: GET https://jee-edge.onrender.com/health at 17:55.
+
+Trigger returns 202 quickly; this acknowledges the job, not publication. Inspect
+GET /api/social/status with the same header, or the next trigger response, for
+state. `scheduled` means Buffer accepted the post (due about 5 minutes after
+submission); confirm actual Instagram delivery in Buffer. `existing` means a
+matching daily marker was already found. `failed` allows up to three total
+attempts per day. `running` can be reclaimed after 15 minutes after a restart.
+`submitting` or `needs_review` never automatically resubmits: inspect Buffer
+before manually repairing the database record. Database ownership fences stop
+expired workers from submitting. Jobs use the Asia/Kolkata calendar date.
+
+Media and job status persist in MySQL. Public media URLs contain random IDs;
+media for completed/failed jobs is retained at least 60 days. Background work
+runs in the existing Render process and can be interrupted by a deployment;
+subsequent triggers recover only work that has not reached submission. Free
+Render cold starts can exceed cron-job.org's timeout, so the spaced retries
+are intentional. GitHub Actions now supports manual previews only and has no
+schedule, preventing two independent publishers.
+
+Tests: `PYTHONPATH=backend:. python -m pytest -q backend/tests/test_social.py social/test_worker.py`

@@ -228,8 +228,9 @@ def wrapped(draw, text, face, width):
     return lines
 
 
-def render(content, copy):
-    OUT.mkdir(parents=True, exist_ok=True)
+def render(content, copy, output_dir=None):
+    output = Path(output_dir) if output_dir is not None else OUT
+    output.mkdir(parents=True, exist_ok=True)
     cards = [('30-SECOND WARM-UP', copy['hook'], 'Swipe for the question'),
              (content['topic'].upper(), content['question'], 'Solve first. Then swipe.'),
              ('THE BREAKDOWN', content['answer'] + '\n\n' + content['solution'], 'Save this for revision'),
@@ -259,7 +260,7 @@ def render(content, copy):
         draw.line((64, 1155, 1016, 1155), fill='#36383f', width=2)
         draw.text((66, 1194), footer, font=font(27), fill='#f6f3ee')
         draw.text((66, 1254), '@jeeedge  /  ORIGINAL PRACTICE', font=font(21), fill='#93969f')
-        path = OUT / f'{index + 1}.png'
+        path = output / f'{index + 1}.png'
         img.save(path)
         paths.append(path)
     return paths
