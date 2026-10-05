@@ -35,8 +35,8 @@ class WorkerTests(unittest.TestCase):
         result = {'choices': [{'finish_reason': 'stop', 'message': {'content': json.dumps({
             'hook': 'Actual PYQ', 'caption': 'Try it'})}}]}
         with patch.dict(os.environ, {'GROQ_API_KEY': 'test'}), patch.object(worker, 'request', return_value=result):
-            with self.assertRaises(worker.ServiceError):
-                worker.ai_copy(worker.problem('2026-10-06'), [])
+            with self.assertRaises(ValueError):
+                worker.validate_copy(result)
 
     def test_groq_request_and_response(self):
         response = {'choices': [{'finish_reason': 'stop', 'message': {'content':
@@ -47,10 +47,30 @@ class WorkerTests(unittest.TestCase):
             args, kwargs = request.call_args
             self.assertEqual(args[0], 'https://api.groq.com/openai/v1/chat/completions')
             self.assertEqual(kwargs['headers']['Authorization'], 'Bearer test')
-            self.assertEqual(kwargs['body']['response_format'], {'type': 'json_object'})
+            self.assertTrue(kwargs['body']['response_format']['json_schema']['strict'])
             response['choices'][0]['finish_reason'] = 'length'
+            fallback = worker.ai_copy(worker.problem('2026-10-06'), [])
+            self.assertEqual(fallback['hook'], 'Can you solve this before you swipe?')
+
+    def test_invalid_then_valid_response(self):
+        bad = {'choices': [{'finish_reason': 'stop', 'message': {'content':
+            json.dumps({'hook': 'x' * 76, 'caption': 'Try it'})}}]}
+        good = {'choices': [{'finish_reason': 'stop', 'message': {'content':
+            json.dumps({'hook': 'Quick warm-up', 'caption': 'Solve and swipe.'})}}]}
+        with patch.dict(os.environ, {'GROQ_API_KEY': 'test'}), patch.object(worker, 'request', side_effect=[bad, good]) as request:
+            self.assertEqual(worker.ai_copy(worker.problem('2026-10-06'), [])['hook'], 'Quick warm-up')
+            self.assertEqual(request.call_count, 2)
+
+    def test_quota_failure_stays_paused(self):
+        with patch.dict(os.environ, {'GROQ_API_KEY': 'test'}), patch.object(worker, 'request', side_effect=worker.ServiceError('quota')) as request:
             with self.assertRaises(worker.ServiceError):
                 worker.ai_copy(worker.problem('2026-10-06'), [])
+            self.assertEqual(request.call_count, 1)
+
+    def test_bad_json_and_wrong_fields(self):
+        for value in ['invalid', '[]', '{"hook": null, "caption":"ok"}', '{"hook":"ok"}']:
+            with self.subTest(value=value), self.assertRaises(ValueError):
+                worker.validate_copy({'choices': [{'finish_reason': 'stop', 'message': {'content': value}}]})
 
     def test_ambiguous_submission_records_before_mutation(self):
         writes = []
