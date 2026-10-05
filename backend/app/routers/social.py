@@ -7,7 +7,7 @@ from datetime import datetime, timedelta, timezone
 from tempfile import TemporaryDirectory
 from zoneinfo import ZoneInfo
 
-from fastapi import APIRouter, BackgroundTasks, Depends, Header, HTTPException
+from fastapi import APIRouter, BackgroundTasks, Depends, Header, HTTPException, Request
 from fastapi.responses import Response
 from sqlalchemy.exc import IntegrityError
 from app.database import SessionLocal
@@ -43,15 +43,17 @@ def status():
         return {'jobs': [status_data(row) for row in rows]}
 
 
-@router.get('/media/{media_id}.png')
-def media(media_id: str):
+@router.api_route('/media/{media_id}.png', methods=['GET', 'HEAD'])
+def media(media_id: str, request: Request):
     if not re.fullmatch('[0-9a-f]{32}', media_id):
         raise HTTPException(404, 'Image not found')
     with SessionLocal() as db:
         row = db.get(SocialMedia, media_id)
         if row is None:
             raise HTTPException(404, 'Image not found')
-        return Response(row.image, media_type='image/png', headers={'Cache-Control': 'public, max-age=86400'})
+        return Response(b'' if request.method == 'HEAD' else row.image, media_type='image/png',
+                        headers={'Content-Length': str(len(row.image)),
+                                 'Cache-Control': 'public, max-age=86400'})
 
 
 @router.post('/trigger', status_code=202, dependencies=[Depends(authorize)])
