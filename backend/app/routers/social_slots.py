@@ -324,11 +324,12 @@ def run_job(day, owner):
                 with Image.open(io.BytesIO(body)) as image:
                     if image.format != 'JPEG' or image.size != (1080, 1350):
                         raise worker.ServiceError('Public carousel verification failed.')
+        credit = ('\n\n' + reel.music_credit()) if video else ''
         # Durable fence MUST commit before the non-idempotent Buffer mutation.
         if not transition(day, owner, 'running', 'submitting'):
             return
         submitting = True
-        caption = copy['caption'] + '\n\nOriginal practice question. Save the rule and its conditions for revision.\n#JEE #JEEPreparation #JeeEdge\n' + marker
+        caption = copy['caption'] + credit + '\n\nOriginal practice question. Save the rule and its conditions for revision.\n#JEE #JEEPreparation #JeeEdge\n' + marker
         payload = {'text': caption, 'channelId': channel['id'], 'schedulingType': 'automatic',
                    'mode': 'customScheduled', 'dueAt': (datetime.now(timezone.utc) + timedelta(minutes=5)).isoformat(),
                    'metadata': {'instagram': {'type': 'reel' if video else 'post', 'shouldShareToFeed': True}},

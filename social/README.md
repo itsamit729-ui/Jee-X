@@ -1,5 +1,8 @@
 # JeeEdge Instagram automation
 
+The active system runs on Render; see **Adaptive free-tier capacity** below.
+The following initial setup documents the legacy GitHub worker (now preview-only).
+
 One original four-card carousel per Indian calendar day. GitHub Actions runs at
 18:00 IST, with two retry windows at 19:00 and 20:00. Successful submissions are
 not repeated. GitHub schedules can run late; publication is requested 30 minutes
@@ -140,9 +143,9 @@ by an LLM is not independent proof; authored lessons and numerical checks are
 the source of the educational content. No private student or Buffer analytics
 are included in prompts.
 
-Reels remain locally rendered 28-second 720x1280 H.264/AAC MP4s (silent audio),
-with a question, shortcut, conditions, worked example and misconception. FFmpeg
-uses one thread and a 180-second timeout. JPEG and MP4 URLs support GET/HEAD and
+Reels are locally rendered 28-second 720x1280 H.264/AAC MP4s with licensed music,
+a question, shortcut, conditions, worked example and misconception. FFmpeg uses
+one thread, with a 180-second overall render budget. JPEG and MP4 URLs support GET/HEAD and
 byte ranges; public content is checked before submission.
 
 Validation: `PYTHONPATH=backend:.:social python -m pytest -q backend/tests/test_social_slots.py backend/tests/test_social.py social/test_worker.py social/test_editorial.py`
@@ -151,3 +154,31 @@ Quota references checked 2026-10-06:
 - https://console.groq.com/docs/rate-limits
 - https://support.buffer.com/en-us/articles/troubleshooting-buffers-api-VgBuQXUCDI
 - https://render.com/docs/free
+
+## Animated concepts and automatic licensed audio
+
+New Reels include the bundled 28-second excerpt of Carefree by Kevin MacLeod
+(CC BY 4.0), mixed at reduced volume with fade-in/out. `social/audio/` contains
+the excerpt, its checksum, provenance, and license. Source and license credits
+are appended automatically to every Reel caption before the final deduplication
+marker; carousel captions are unchanged. No extra secret, paid API, runtime
+music download or manual Instagram action is required. Missing or modified
+audio fails the job before submission rather than publishing unapproved music.
+Existing queued Reels retain their original files. This embeds a soundtrack;
+it does not select an Instagram trending-audio entry.
+
+Ten authored concept diagrams: complementary projectiles, vertical throw, circular
+motion, travelling waves, kinetic-energy scaling, dilution, first-order half-life,
+odd/even integrals, and tangent slope. Illustrative examples are labeled separately
+from the generated practice question. Other topics use timed text reveals.
+Frames are generated at 12 fps and encoded at 30 fps to limit CPU/storage cost.
+Existing 8 MiB media limit and durable render/egress budgets still apply; actual
+throughput depends on Render performance. Models preserve mathematical conditions
+and are not AI-generated diagrams.
+
+Timeline: 0-6s challenge; 6-16s concept/rule; 16-24s worked answer; 24-28s trap + save/follow.
+
+Verify with:
+`PYTHONPATH=backend:.:social python -m pytest -q backend/tests/test_social_slots.py backend/tests/test_social.py social/test_worker.py social/test_editorial.py social/test_reel.py`
+The real FFmpeg test checks the encoded audio samples are non-silent.
+Deploy this commit on the existing Render service. Cron and posting targets are unchanged.

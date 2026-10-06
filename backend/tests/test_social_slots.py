@@ -74,6 +74,11 @@ def test_thirty_slots_and_retry_no_duplicates(setup):
     assert len(submitted)==30
     assert sum(p['metadata']['instagram']['type']=='reel' for p in submitted)==10
     assert sum(len(p['assets'])==6 for p in submitted)==20
+    for post in submitted:
+        is_video = post['metadata']['instagram']['type'] == 'reel'
+        assert ('Kevin MacLeod' in post['text']) == is_video
+        if is_video:
+            assert 'https://creativecommons.org/licenses/by/4.0/' in post['text']
     assert len(set(p['text'].splitlines()[-1] for p in submitted))==30
     assert all('bio' not in p['text'] for p in submitted)
     assert all(j['state']=='published' for j in client.get('/api/social/status',headers=AUTH).json()['jobs'])
