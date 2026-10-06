@@ -61,37 +61,51 @@ Local verification: `pip install -r social/requirements.txt` then
 `python social/worker.py --offline-preview` and
 `python -m unittest discover -s social -p 'test_*.py'`.
 
-## Render + cron-job.org (active scheduler)
+## Three daily slots on the existing free Render service
 
-The existing Docker backend includes POST `/api/social/trigger` and GET
-`/api/social/status`. Both require `Authorization: Bearer <SOCIAL_TRIGGER_SECRET>`.
-Set a random secret of at least 32 characters plus GROQ_API_KEY and BUFFER_API_KEY
-on the existing Render service. SOCIAL_PAUSED=true disables triggering.
-No GitHub token is needed by Render. Only original public problem text goes to Groq.
+POST `https://jee-edge.onrender.com/api/social/trigger` with
+`Authorization: Bearer <SOCIAL_TRIGGER_SECRET>`. Keep existing GROQ_API_KEY,
+BUFFER_API_KEY and SOCIAL_TRIGGER_SECRET (at least 32 characters). No new paid
+service or secret is required. Docker now includes FFmpeg.
 
-After Render deploys this commit, configure cron-job.org:
-- URL: https://jee-edge.onrender.com/api/social/trigger
-- Method: POST; empty body; header Authorization: Bearer <your secret>
-- Time zone: Asia/Kolkata; run at 18:00, 18:20 and 18:40 daily.
-- Enable failure notifications and save responses for debugging.
-- Optional daily warm-up: GET https://jee-edge.onrender.com/health at 17:55.
+Replace the old cron-job.org schedule with `0,10,20 9,14,19 * * *`, timezone
+Asia/Kolkata. The first invocation generates, later invocations reconcile Buffer
+status or retry a safe pre-submission failure. Do not create additional cron jobs
+with the old schedule. Optional warm-up GET /health at `55 8,13,18 * * *`.
 
-Trigger returns 202 quickly; this acknowledges the job, not publication. Inspect
-GET /api/social/status with the same header, or the next trigger response, for
-state. `scheduled` means Buffer accepted the post (due about 5 minutes after
-submission); confirm actual Instagram delivery in Buffer. `existing` means a
-matching daily marker was already found. `failed` allows up to three total
-attempts per day. `running` can be reclaimed after 15 minutes after a restart.
-`submitting` or `needs_review` never automatically resubmits: inspect Buffer
-before manually repairing the database record. Database ownership fences stop
-expired workers from submitting. Jobs use the Asia/Kolkata calendar date.
+| Local slot | Content | Trigger window |
+| --- | --- | --- |
+| 09:00 | Four-card JPEG carousel | 09:00–13:59 |
+| 14:00 | 28-second vertical template Reel | 14:00–18:59 |
+| 19:00 | Four-card JPEG carousel | 19:00–23:59 |
 
-Media and job status persist in MySQL. Public media URLs contain random IDs;
-media for completed/failed jobs is retained at least 60 days. Background work
-runs in the existing Render process and can be interrupted by a deployment;
-subsequent triggers recover only work that has not reached submission. Free
-Render cold starts can exceed cron-job.org's timeout, so the spaced retries
-are intentional. GitHub Actions now supports manual previews only and has no
-schedule, preventing two independent publishers.
+Before 09:00 a trigger is idle. Only the current window is eligible: missed
+windows are not batch-published. Manual test calls also use the current window.
+A successful submission is due about five minutes later. At most one submission
+per slot; max three generation attempts. Existing once-daily records consume the
+morning slot on the transition day, preserving today's prior publication fence.
+New slot/asset/dispatch tables are created by the existing startup create_all;
+no old table is altered or dropped. Old PNG media URLs remain functional.
 
-Tests: `PYTHONPATH=backend:. python -m pytest -q backend/tests/test_social.py social/test_worker.py`
+GET /api/social/status with the same header shows the latest 21 slot jobs.
+`scheduled` means Buffer accepted the post; `published` means a later status
+check observed Buffer status `sent`. `needs_review` means inspect the existing
+post in Buffer. Unknown submission responses are never automatically retried.
+Later trigger calls reconcile only; they do not republish failed remote posts.
+
+The Reel is 720×1280, 30fps H.264/AAC MP4 with a silent audio track, a countdown,
+answer reveal, explanation and CTA. No music, paid voice, or AI video provider.
+One FFmpeg thread, 180-second timeout, maximum 8 MiB output; a DB dispatch lock
+serializes rendering claims. Server hardware performance must still be measured
+on Render. Captions receive only subject/topic, not the problem or its solution;
+numeric/equation output is rejected. Reel captions use fixed non-spoiling copy.
+
+Public media supports GET/HEAD and single byte ranges for videos. JPEG/MP4 URLs
+are fetched and checked before submission. Media is stored in the existing
+MySQL database, with a 96 MiB admission budget. Confirmed-published media is
+cleaned after 14 days; unresolved media is retained for recovery. Slots are
+blocked when the budget is reached rather than buying storage. Free tier
+bandwidth, database space and account quotas still apply; no paid fallback is
+configured. Keep SOCIAL_PAUSED=true to suspend new generation/submission.
+
+Tests: `PYTHONPATH=backend:.:social python -m pytest -q backend/tests/test_social_slots.py backend/tests/test_social.py social/test_worker.py`

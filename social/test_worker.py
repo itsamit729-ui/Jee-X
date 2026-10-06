@@ -52,6 +52,17 @@ class WorkerTests(unittest.TestCase):
             fallback = worker.ai_copy(worker.problem('2026-10-06'), [])
             self.assertEqual(fallback['hook'], 'Can you solve this before you swipe?')
 
+    def test_caption_prompt_excludes_problem_and_solution(self):
+        response = {'choices': [{'finish_reason': 'stop', 'message': {'content':
+            json.dumps({'hook': 'The answer is 2', 'caption': 'Solve and swipe.'})}}]}
+        content = worker.problem('2026-10-06')
+        with patch.dict(os.environ, {'GROQ_API_KEY': 'test'}), patch.object(worker, 'request', return_value=response) as request:
+            copy = worker.ai_copy(content, [])
+            self.assertEqual(copy['hook'], 'Can you solve this before you swipe?')
+            prompt = request.call_args.kwargs['body']['messages'][0]['content']
+            self.assertNotIn(content['question'], prompt)
+            self.assertNotIn(content['solution'], prompt)
+
     def test_invalid_then_valid_response(self):
         bad = {'choices': [{'finish_reason': 'stop', 'message': {'content':
             json.dumps({'hook': 'x' * 76, 'caption': 'Try it'})}}]}

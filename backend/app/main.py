@@ -31,7 +31,7 @@ from app.routers import (
     college_insights,
     teaching,
     plans,
-    social,
+    social_slots,
 )
 
 load_dotenv()
@@ -54,7 +54,7 @@ app.add_middleware(
 
 app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
 
-app.include_router(social.router)
+app.include_router(social_slots.router)
 app.include_router(authentication.router)
 app.include_router(google_login.router)
 app.include_router(users.router)
@@ -104,7 +104,7 @@ async def response_security(request: Request, call_next):
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["Referrer-Policy"] = "no-referrer"
     response.headers["X-Frame-Options"] = "DENY"
-    if request.url.path.startswith('/api/'):
+    if request.url.path.startswith('/api/') and not (request.url.path.startswith('/api/social/assets/') and response.status_code in (200, 206)):
         response.headers["Cache-Control"] = "no-store"
     return response
 

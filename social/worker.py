@@ -123,11 +123,11 @@ def posts(org, channel, start):
     return [edge['node'] for edge in result['edges']]
 
 
-def problem(day):
+def problem(day, variant=None):
     """Original, parametrized problems; never labelled as actual exam PYQs."""
-    rng = random.Random(day)
+    rng = random.Random(day if variant is None else f'{day}:{variant}')
     n = rng.randint(2, 9)
-    kind = datetime.fromisoformat(day).toordinal() % 6
+    kind = (datetime.fromisoformat(day).toordinal() if variant is None else datetime.fromisoformat(day).toordinal() * 3 + variant) % 6
     if kind == 0:
         return {'subject': 'PHYSICS', 'topic': 'Current electricity',
                 'question': f'Two {n} ohm resistors are connected in parallel. What is the equivalent resistance?',
@@ -179,10 +179,10 @@ def ai_copy(content, history):
     prompt = ('Write an Instagram hook and caption for JeeEdge, for JEE students. English, friendly, concise. '
               'Return JSON with only hook (target 40 characters, maximum 75) and caption '
               '(target 150 characters, maximum 1000). '
-              'Do not give the answer, claim this is a PYQ, invent facts, mention rankings, '
+              'Do not include numbers, equations, answers, claim this is a PYQ, invent facts, mention rankings, '
               'promise marks or guaranteed results, or add URLs. Encourage solving then swiping. '
               'Do not change or generate the problem or solution. '
-              + json.dumps({'problem': content}))
+              + json.dumps({'subject': content['subject'], 'topic': content['topic']}))
     model = os.getenv('GROQ_MODEL', 'openai/gpt-oss-20b')
     if not re.fullmatch(r'[a-zA-Z0-9./_-]+', model):
         raise ServiceError('Invalid Groq model name.')
@@ -198,7 +198,10 @@ def ai_copy(content, history):
                                    'name': 'jeeedge_caption', 'strict': True, 'schema': schema}},
                                'reasoning_effort': 'low', 'max_completion_tokens': 2048})
         try:
-            return validate_copy(result)
+            copy = validate_copy(result)
+            if re.search(r'[0-9=]', copy['hook'] + copy['caption']):
+                raise ValueError('caption must not contain numbers or equations')
+            return copy
         except ValueError as error:
             # Log validation reasons only, never raw model output or secrets.
             print(f'Caption attempt {attempt + 1} rejected: {error}')
