@@ -32,6 +32,7 @@ from app.routers import (
     teaching,
     plans,
     social_slots,
+    social_comments,
 )
 
 load_dotenv()
@@ -55,6 +56,7 @@ app.add_middleware(
 app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
 
 app.include_router(social_slots.router)
+app.include_router(social_comments.router)
 app.include_router(authentication.router)
 app.include_router(google_login.router)
 app.include_router(users.router)

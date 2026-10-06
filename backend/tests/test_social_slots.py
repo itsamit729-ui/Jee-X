@@ -14,6 +14,8 @@ from app.database import Base
 from app.models.social_job import SocialSlot, SocialAsset, SocialDispatch, SocialJob, SocialMedia, SocialUsage, SocialQuotaLock, SocialCache
 from app.routers import social_slots as social
 
+from app.models.social_comment import SocialLesson
+
 REAL_REQUEST = social.worker.request
 
 AUTH = {'Authorization': 'Bearer ' + 'x' * 32}
@@ -22,7 +24,7 @@ AUTH = {'Authorization': 'Bearer ' + 'x' * 32}
 @pytest.fixture
 def setup(monkeypatch):
     engine = create_engine('sqlite://', connect_args={'check_same_thread':False}, poolclass=StaticPool)
-    Base.metadata.create_all(engine, tables=[m.__table__ for m in (SocialSlot, SocialAsset, SocialDispatch, SocialJob, SocialMedia, SocialUsage, SocialQuotaLock, SocialCache)])
+    Base.metadata.create_all(engine, tables=[m.__table__ for m in (SocialSlot, SocialAsset, SocialDispatch, SocialJob, SocialMedia, SocialUsage, SocialQuotaLock, SocialCache, SocialLesson)])
     factory = sessionmaker(bind=engine)
     monkeypatch.setattr(social, 'SessionLocal', factory)
     monkeypatch.setattr(social.budget, 'SessionLocal', factory)

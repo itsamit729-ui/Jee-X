@@ -182,3 +182,9 @@ Verify with:
 `PYTHONPATH=backend:.:social python -m pytest -q backend/tests/test_social_slots.py backend/tests/test_social.py social/test_worker.py social/test_editorial.py social/test_reel.py`
 The real FFmpeg test checks the encoded audio samples are non-silent.
 Deploy this commit on the existing Render service. Cron and posting targets are unchanged.
+
+## Intelligent comments
+
+See [COMMENTS.md](COMMENTS.md) for the implemented Meta webhook + Groq reply worker,
+free-tier limits, review inbox and one-time Instagram API connection. It is disabled
+until configured; Buffer publishing credentials alone do not enable comments.

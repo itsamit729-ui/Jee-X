@@ -21,6 +21,7 @@ from app.models.social_job import SocialJob as LegacyJob
 from app.routers.social import media as legacy_media
 from social import worker, reel, lessons, editorial
 from app.services import social_budget as budget
+from app.services import instagram_comments as comments
 from PIL import Image
 
 router = APIRouter(prefix='/api/social', tags=['social'])
@@ -156,6 +157,8 @@ def trigger(tasks: BackgroundTasks):
         raise HTTPException(503, 'Social automation is paused')
     if any(not os.getenv(key) for key in ('GROQ_API_KEY', 'BUFFER_API_KEY')):
         raise HTTPException(503, 'GROQ_API_KEY and BUFFER_API_KEY must be configured')
+    if comments.enabled():
+        tasks.add_task(comments.drain_safe)
     slot = current_slot()
     if slot is None:
         return {'state': 'idle', 'next_slot': '07:00 Asia/Kolkata'}
@@ -292,6 +295,7 @@ def run_job(day, owner):
                 job = db.query(SocialJob).filter_by(day=day).with_for_update().one()
                 if job.owner != owner or job.state != 'running':
                     return
+                comments.save_lesson(db, day, content)
                 db.query(SocialMedia).filter_by(day=day).delete()
                 retained = db.query(func.coalesce(func.sum(func.length(SocialMedia.image)), 0)).scalar()
                 if retained > 96 * 1024 * 1024:

@@ -113,3 +113,5 @@ from app.models.plan_interest import PlanInterest
 from app.models.social_job import SocialJob, SocialMedia, SocialSlot, SocialAsset, SocialDispatch
 
 from app.models.social_job import SocialUsage, SocialQuotaLock, SocialCache
+
+from app.models.social_comment import SocialLesson, SocialComment, SocialCommentDispatch
