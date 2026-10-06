@@ -61,51 +61,93 @@ Local verification: `pip install -r social/requirements.txt` then
 `python social/worker.py --offline-preview` and
 `python -m unittest discover -s social -p 'test_*.py'`.
 
-## Three daily slots on the existing free Render service
+## Adaptive free-tier capacity (active Render automation)
 
-POST `https://jee-edge.onrender.com/api/social/trigger` with
-`Authorization: Bearer <SOCIAL_TRIGGER_SECRET>`. Keep existing GROQ_API_KEY,
-BUFFER_API_KEY and SOCIAL_TRIGGER_SECRET (at least 32 characters). No new paid
-service or secret is required. Docker now includes FFmpeg.
+Deploy the latest feature/version-1 commit, then replace the old cron schedule:
 
-Replace the old cron-job.org schedule with `0,10,20 9,14,19 * * *`, timezone
-Asia/Kolkata. The first invocation generates, later invocations reconcile Buffer
-status or retry a safe pre-submission failure. Do not create additional cron jobs
-with the old schedule. Optional warm-up GET /health at `55 8,13,18 * * *`.
+- URL: https://jee-edge.onrender.com/api/social/trigger
+- Method: POST; existing Authorization: Bearer <SOCIAL_TRIGGER_SECRET> header
+- Cron: `*/10 7-22 * * *`; timezone Asia/Kolkata
+- Existing GROQ_API_KEY, BUFFER_API_KEY and SOCIAL_TRIGGER_SECRET remain sufficient.
+- No new service, paid fallback, voice subscription or video-generation API.
 
-| Local slot | Content | Trigger window |
-| --- | --- | --- |
-| 09:00 | Four-card JPEG carousel | 09:00–13:59 |
-| 14:00 | 28-second vertical template Reel | 14:00–18:59 |
-| 19:00 | Four-card JPEG carousel | 19:00–23:59 |
+The default target is **up to 30 items/day (20 carousels, 10 template Reels)**.
+Thirty evenly spaced windows run from 07:00 to 23:00 (32 minutes per window);
+the first cron invocation within each window creates one item. Publication is
+scheduled about five minutes later. Later invocations reconcile delivery or
+retry safe pre-submission failures. Missed windows are skipped, not backfilled.
+Existing same-day legacy submissions count against the daily target during
+migration. One rendering claim at a time, unique per-slot ownership, three
+attempts per slot, and durable pre-submit fencing remain in place.
 
-Before 09:00 a trigger is idle. Only the current window is eligible: missed
-windows are not batch-published. Manual test calls also use the current window.
-A successful submission is due about five minutes later. At most one submission
-per slot; max three generation attempts. Existing once-daily records consume the
-morning slot on the transition day, preserving today's prior publication fence.
-New slot/asset/dispatch tables are created by the existing startup create_all;
-no old table is altered or dropped. Old PNG media URLs remain functional.
+Optional lower settings: SOCIAL_DAILY_TARGET=1..30, SOCIAL_REELS_PER_DAY=0..target.
+Change these between days because slot allocation depends on them. SOCIAL_PAUSED=true
+stops new work. The system does not create comments, DMs, likes or follows.
 
-GET /api/social/status with the same header shows the latest 21 slot jobs.
-`scheduled` means Buffer accepted the post; `published` means a later status
-check observed Buffer status `sent`. `needs_review` means inspect the existing
-post in Buffer. Unknown submission responses are never automatically retried.
-Later trigger calls reconcile only; they do not republish failed remote posts.
+### Budgets, not a guarantee about account-wide allowance
 
-The Reel is 720×1280, 30fps H.264/AAC MP4 with a silent audio track, a countdown,
-answer reveal, explanation and CTA. No music, paid voice, or AI video provider.
-One FFmpeg thread, 180-second timeout, maximum 8 MiB output; a DB dispatch lock
-serializes rendering claims. Server hardware performance must still be measured
-on Render. Captions receive only subject/topic, not the problem or its solution;
-numeric/equation output is rejected. Reel captions use fixed non-spoiling copy.
+| Resource | Local rolling budget |
+| --- | --- |
+| Buffer | 95 calls/15 min; 95/24 hours; 2850/30 days |
+| Groq (all editorial requests combined) | 28 calls + 7600 tokens/min; 950 calls + 190000 tokens/day |
+| Rendering | 1800 measured seconds/day; reserve 180 seconds per job first |
+| Public social media traffic | Admit new jobs only below 64 MiB/day and 1 GiB/30 days, with an 8 MiB reserve |
+| New social asset storage | 96 MiB, independent of other website data |
 
-Public media supports GET/HEAD and single byte ranges for videos. JPEG/MP4 URLs
-are fetched and checked before submission. Media is stored in the existing
-MySQL database, with a 96 MiB admission budget. Confirmed-published media is
-cleaned after 14 days; unresolved media is retained for recovery. Slots are
-blocked when the budget is reached rather than buying storage. Free tier
-bandwidth, database space and account quotas still apply; no paid fallback is
-configured. Keep SOCIAL_PAUSED=true to suspend new generation/submission.
+Quota reservations commit BEFORE HTTP requests, including calls that later fail.
+Groq output token allowance and a conservative input-byte estimate are reserved;
+reported actual token usage then settles the reservation. Interrupted requests
+keep their reservation. Provider 429 responses establish a durable cooldown;
+no retry storm, key rotation, paid fallback or quota bypass. Tokens/calls from
+before this rollout or other apps are NOT counted locally. The provider still
+has final authority. Check provider dashboards for actual remaining capacity.
+No unused quota is deliberately burned: more AI calls do not imply better work.
 
-Tests: `PYTHONPATH=backend:.:social python -m pytest -q backend/tests/test_social_slots.py backend/tests/test_social.py social/test_worker.py`
+Channel discovery is cached for 24h (two Buffer calls on cache miss). Normally
+each item costs one history query, one submission, and one delivery read:
+30 x 3 + 2 = about 92 calls/day, or about 2760/30 days. Retries, extra accounts,
+slow publication, manual calls or queue backlog reduce achievable output. Queue
+checks stop at nine pending entries, leaving one free-plan slot as headroom.
+A history page exceeding 100 entries stops safely rather than missing duplicates.
+
+GET /api/social/status (same authorization header) reports targets, jobs and
+local usage. scheduled = accepted by Buffer; published = observed Buffer sent;
+needs_review = inspect the existing Buffer post, never blindly resubmit it.
+Old job/media tables and public PNG URLs remain intact. New social_usage,
+social_quota_lock and social_cache tables are registered through startup create_all.
+
+Confirmed-published and safe pre-submit failed assets become eligible for cleanup
+after seven days. Ambiguous submissions are retained. Existing media URLs continue
+serving even after the traffic admission threshold is reached; otherwise already
+queued posts would break. This is NOT a hard cap on Render's total billed bandwidth.
+Website traffic, old media, database allowance, other apps and provider billing
+settings must still be monitored. Runtime measurements here do not benchmark Render.
+
+### Content and Groq
+
+Thirty authored shortcut families across Physics, Chemistry and Maths include
+an applicability condition, common trap, calculated example and solution. Numeric
+variants and topic ordering change with the date. Both Reels and six-slide
+carousels use them. No copied exam papers, unsupported PYQ labels or website/bio
+invitations. Calls to action are save/follow for revision.
+
+Groq gpt-oss-120b drafts three hooks and a caption, then reviews the packaging and
+selects a hook. It cannot edit the stored mathematical rule, condition or solution.
+Typical editorial use is two calls per item, about 60/day at the maximum target;
+there is no reason to consume 950 calls merely to exhaust the free allowance.
+Invalid output, quota limits or rejected reviews use authored packaging. Review
+by an LLM is not independent proof; authored lessons and numerical checks are
+the source of the educational content. No private student or Buffer analytics
+are included in prompts.
+
+Reels remain locally rendered 28-second 720x1280 H.264/AAC MP4s (silent audio),
+with a question, shortcut, conditions, worked example and misconception. FFmpeg
+uses one thread and a 180-second timeout. JPEG and MP4 URLs support GET/HEAD and
+byte ranges; public content is checked before submission.
+
+Validation: `PYTHONPATH=backend:.:social python -m pytest -q backend/tests/test_social_slots.py backend/tests/test_social.py social/test_worker.py social/test_editorial.py`
+
+Quota references checked 2026-10-06:
+- https://console.groq.com/docs/rate-limits
+- https://support.buffer.com/en-us/articles/troubleshooting-buffers-api-VgBuQXUCDI
+- https://render.com/docs/free

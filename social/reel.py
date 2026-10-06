@@ -7,14 +7,19 @@ from social import worker
 MAX_VIDEO_BYTES = 8 * 1024 * 1024
 
 
-def render(content, directory):
+def render(content, directory, copy=None):
     directory = Path(directory)
     frames = directory / 'frames'
     frames.mkdir()
     scenes = [('QUICK JEE CHALLENGE', content['question'], 'Think it through', 10),
               ('THE ANSWER', content['answer'], 'Here is why', 4),
               ('THE BREAKDOWN', content['solution'], 'Pause to read', 10),
-              ('KEEP YOUR MOMENTUM', 'One question today.\nA stronger habit tomorrow.', 'Practice at JeeEdge — link in bio', 4)]
+              ('KEEP YOUR MOMENTUM', 'One question today.\nA stronger habit tomorrow.', 'Follow @jeeedge for JEE revision', 4)]
+    if content.get('rule'):
+        scenes = [('JEE SHORTCUT', (copy or {}).get('hook', content['topic']) + '\n\n' + content['question'], 'Pause and try it', 8),
+                  ('THE RULE + ITS LIMITS', content['rule'] + '\n\n' + content['condition'], 'Save this rule', 8),
+                  ('WORKED EXAMPLE', content['answer'] + '\n\n' + content['solution'], 'Check the reasoning', 8),
+                  ('AVOID THIS TRAP', content['trap'], 'Follow @jeeedge for JEE revision', 4)]
     index = 0
     for label, text, footer, duration in scenes:
         for second in range(duration):
@@ -34,7 +39,7 @@ def render(content, directory):
             for line_no, line in enumerate(lines):
                 draw.text((62, 340 + line_no * (size + 12)), line, font=face, fill='#f6f3ee')
             draw.text((62, 960), footer, font=worker.font(24), fill='#ff8547')
-            if label == 'QUICK JEE CHALLENGE':
+            if label in ('QUICK JEE CHALLENGE', 'JEE SHORTCUT'):
                 draw.text((62, 1020), str(duration-second) + ' seconds', font=worker.font(30, True), fill='#f6f3ee')
             draw.rectangle((62, 1100, 62 + int(580 * (index+1)/28), 1105), fill='#ff8547')
             image.save(frames / f'{index:03d}.png')

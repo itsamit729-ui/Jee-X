@@ -1,5 +1,7 @@
 """Authenticated, quick-return cron trigger; state survives Render restarts."""
 import io
+import time
+import functools
 import hashlib
 import hmac
 import os
@@ -17,7 +19,8 @@ from app.database import SessionLocal
 from app.models.social_job import SocialSlot as SocialJob, SocialAsset as SocialMedia, SocialDispatch
 from app.models.social_job import SocialJob as LegacyJob
 from app.routers.social import media as legacy_media
-from social import worker, reel
+from social import worker, reel, lessons, editorial
+from app.services import social_budget as budget
 from PIL import Image
 
 router = APIRouter(prefix='/api/social', tags=['social'])
@@ -41,17 +44,62 @@ def today():
     return local_now().date().isoformat()
 
 
+def daily_target():
+    try:
+        return max(1, min(30, int(os.getenv('SOCIAL_DAILY_TARGET', '30'))))
+    except ValueError:
+        return 30
+
+
+def reel_target():
+    try:
+        return max(0, min(daily_target(), int(os.getenv('SOCIAL_REELS_PER_DAY', '10'))))
+    except ValueError:
+        return min(10, daily_target())
+
+
 def current_slot():
-    hour = local_now().hour
-    if hour < 9:
+    now = local_now()
+    minute = now.hour * 60 + now.minute
+    if not 7*60 <= minute < 23*60:
         return None
-    return 'morning' if hour < 14 else 'reel' if hour < 19 else 'evening'
+    return f's{min(daily_target()-1, (minute-7*60)*daily_target()//960):02d}'
+
+
+def is_reel(slot):
+    index = int(slot[1:])
+    return (index+1)*reel_target()//daily_target() > index*reel_target()//daily_target()
 
 
 def slot_problem(key):
     day, slot = key.split(':')
-    offset = {'morning': 0, 'reel': 1, 'evening': 2}[slot]
-    return worker.problem(day, variant=offset)
+    return lessons.lesson(day, int(slot[1:]))
+
+
+def tracked(function):
+    @functools.wraps(function)
+    def wrapper(*args, **kwargs):
+        with budget.tracked():
+            return function(*args, **kwargs)
+    return wrapper
+
+
+def find_channel():
+    cached = budget.cached('buffer-channel')
+    if cached:
+        return cached[0], cached[1]
+    result = worker.find_channel()
+    budget.cache('buffer-channel', result, 86400)
+    return result
+
+
+def cleanup(db):
+    cutoff = (datetime.utcnow()-timedelta(days=7)).date().isoformat()
+    old = db.query(SocialJob.day).filter(SocialJob.day < cutoff, SocialJob.state.in_(['published','failed']))
+    db.query(SocialMedia).filter(SocialMedia.day.in_(old)).delete(synchronize_session=False)
+    from app.models.social_job import SocialUsage, SocialCache
+    db.query(SocialUsage).filter(SocialUsage.created_at < datetime.utcnow()-timedelta(days=31)).delete()
+    db.query(SocialCache).filter(SocialCache.expires_at < datetime.utcnow()-timedelta(days=2)).delete()
 
 
 def status_data(job):
@@ -62,8 +110,9 @@ def status_data(job):
 @router.get('/status', dependencies=[Depends(authorize)])
 def status():
     with SessionLocal() as db:
-        rows = db.query(SocialJob).order_by(SocialJob.day.desc()).limit(21).all()
-        return {'jobs': [status_data(row) for row in rows]}
+        rows = db.query(SocialJob).order_by(SocialJob.day.desc()).limit(90).all()
+        return {'daily_target': daily_target(), 'reels_target': reel_target(),
+                'jobs': [status_data(row) for row in rows], 'usage': budget.report()}
 
 
 # Preserve all existing public carousel links.
@@ -95,7 +144,9 @@ def media(media_id: str, extension: str, request: Request):
         if start >= length or start > end:
             return Response(status_code=416, headers={'Content-Range': f'bytes */{length}'})
         headers.update({'Content-Range': f'bytes {start}-{end}/{length}', 'Content-Length': str(end-start+1)})
+        budget.record_egress(end-start+1)
         return Response(data[start:end+1], status_code=206, media_type=mime, headers=headers)
+    budget.record_egress(length)
     return Response(data, media_type=mime, headers=headers)
 
 
@@ -107,7 +158,7 @@ def trigger(tasks: BackgroundTasks):
         raise HTTPException(503, 'GROQ_API_KEY and BUFFER_API_KEY must be configured')
     slot = current_slot()
     if slot is None:
-        return {'state': 'idle', 'next_slot': '09:00 Asia/Kolkata'}
+        return {'state': 'idle', 'next_slot': '07:00 Asia/Kolkata'}
     day, owner, now = today() + ':' + slot, uuid.uuid4().hex, datetime.utcnow()
     # One database mutex serializes dispatch decisions across processes.
     with SessionLocal() as db:
@@ -123,10 +174,15 @@ def trigger(tasks: BackgroundTasks):
         if active:
             return status_data(active)
         legacy = db.get(LegacyJob, today())
-        # The old once-daily carousel consumes today's morning slot.
-        if slot == 'morning' and legacy and legacy.state not in ('failed',):
-            return {'day': today(), 'slot': slot, 'state': 'legacy_record',
-                    'post_id': legacy.post_id, 'error': 'Existing daily record; check Buffer.'}
+        job = db.get(SocialJob, day)
+        if job is None:
+            # Existing same-day submissions count toward the new target during migration.
+            used = db.query(SocialJob).filter(SocialJob.day.startswith(today()+':'),
+                SocialJob.state != 'failed').count()
+            if legacy and legacy.state != 'failed':
+                used += 1
+            if used >= daily_target():
+                return {'state': 'daily_limit', 'day': today(), 'limit': daily_target()}
         job = db.get(SocialJob, day)
         if job is None:
             job = SocialJob(day=day, owner=owner, state='running', updated_at=now, attempts=1)
@@ -174,13 +230,14 @@ def safe_error(error):
     return re.sub(r'https?://\S+', '[URL]', message)[:500]
 
 
+@tracked
 def refresh_delivery(day, owner, post_id):
     """Read-only Buffer reconciliation; never creates or retries a remote post."""
     try:
         if post_id:
             post = worker.buffer('query($id:PostId!) { post(input:{id:$id}) { id status } }', {'id': post_id})['post']
         else:
-            org, channel = worker.find_channel()
+            org, channel = find_channel()
             recent = worker.posts(org, channel['id'], (datetime.now(timezone.utc)-timedelta(days=3)).isoformat())
             date, slot = day.split(':')
             marker = f'JeeEdge daily {date} / {slot}'
@@ -199,12 +256,21 @@ def refresh_delivery(day, owner, post_id):
         pass
 
 
+@tracked
 def run_job(day, owner):
     submitting = False
     try:
+        budget.admission()
         now = datetime.now(timezone.utc)
-        org, channel = worker.find_channel()
+        org, channel = find_channel()
         recent = worker.posts(org, channel['id'], (now - timedelta(days=3)).isoformat())
+        # Reconcile all recently observed delivery states without extra API calls.
+        with SessionLocal() as db:
+            for post in recent:
+                if post['status'] == 'sent':
+                    db.query(SocialJob).filter(SocialJob.post_id == post['id']).update({'state':'published'}, synchronize_session=False)
+            cleanup(db)
+            db.commit()
         calendar_day, slot = day.split(':')
         marker = f'JeeEdge daily {calendar_day} / {slot}'
         found = next((post for post in recent if marker in (post.get('text') or '')), None)
@@ -214,12 +280,13 @@ def run_job(day, owner):
         if sum(p['status'] in ('scheduled', 'sending') for p in recent) >= 9:
             raise worker.ServiceError('Buffer queue near capacity; waiting.')
         content = slot_problem(day)
-        copy = worker.ai_copy(content, []) if slot != 'reel' else None
-        if slot == 'reel':
-            copy = {'hook': 'Can you solve it before the reveal?',
-                    'caption': 'Pause, solve, then watch the explanation. Save this original practice challenge for revision.'}
+        video = is_reel(slot)
+        copy = editorial.package(content, 'reel' if video else 'carousel')
         with TemporaryDirectory(prefix='jeeedge-social-') as directory:
-            paths = [reel.render(content, directory)] if slot == 'reel' else worker.render(content, copy, directory)
+            ticket = budget.reserve('render', units=180)
+            started = time.monotonic()
+            paths = [reel.render(content, directory, copy)] if video else worker.render(content, copy, directory)
+            budget.settle(ticket, units=int(time.monotonic()-started)+1)
             with SessionLocal() as db:
                 # Lock and verify ownership before replacing this day's media.
                 job = db.query(SocialJob).filter_by(day=day).with_for_update().one()
@@ -232,7 +299,7 @@ def run_job(day, owner):
                 urls = []
                 for path in paths:
                     media_id = uuid.uuid4().hex
-                    if slot == 'reel':
+                    if video:
                         data, mime, extension = path.read_bytes(), 'video/mp4', 'mp4'
                     else:
                         stream = io.BytesIO()
@@ -250,7 +317,7 @@ def run_job(day, owner):
         # Verify public fetches before any non-idempotent submission.
         for url in urls:
             body = worker.request(url, binary=True)
-            if slot == 'reel':
+            if video:
                 if len(body) < 12 or body[4:8] != b'ftyp':
                     raise worker.ServiceError('Public Reel URL did not return an MP4.')
             else:
@@ -261,11 +328,11 @@ def run_job(day, owner):
         if not transition(day, owner, 'running', 'submitting'):
             return
         submitting = True
-        caption = copy['caption'] + '\n\nOriginal practice question. More practice via the link in our bio.\n#JEE #JEEPreparation #JeeEdge\n' + marker
+        caption = copy['caption'] + '\n\nOriginal practice question. Save the rule and its conditions for revision.\n#JEE #JEEPreparation #JeeEdge\n' + marker
         payload = {'text': caption, 'channelId': channel['id'], 'schedulingType': 'automatic',
                    'mode': 'customScheduled', 'dueAt': (datetime.now(timezone.utc) + timedelta(minutes=5)).isoformat(),
-                   'metadata': {'instagram': {'type': 'reel' if slot == 'reel' else 'post', 'shouldShareToFeed': True}},
-                   'assets': [{('video' if slot == 'reel' else 'image'): {'url': url}} for url in urls]}
+                   'metadata': {'instagram': {'type': 'reel' if video else 'post', 'shouldShareToFeed': True}},
+                   'assets': [{('video' if video else 'image'): {'url': url}} for url in urls]}
         result = worker.buffer('mutation($input:CreatePostInput!) { createPost(input:$input) '
                                '{ __typename ... on PostActionSuccess { post { id status } } '
                                '... on MutationError { message } } }', {'input': payload})['createPost']
@@ -273,9 +340,9 @@ def run_job(day, owner):
             # Even an unfamiliar rejection is held for review, never blindly retried.
             raise worker.ServiceError('Buffer did not confirm a post. Check Buffer before retrying. ' + str(result.get('message', 'Unknown response.')))
         transition(day, owner, 'submitting', 'scheduled', post_id=result['post']['id'], error=None)
-        # Retain media at least 14 days after confirmed publication; uncertain jobs are kept.
+        # Retain media at least 7 days after confirmed publication; uncertain jobs are kept.
         with SessionLocal() as db:
-            old = db.query(SocialJob.day).filter(SocialJob.day < (now - timedelta(days=14)).date().isoformat(),
+            old = db.query(SocialJob.day).filter(SocialJob.day < (now - timedelta(days=7)).date().isoformat(),
                                                  SocialJob.state.in_(['published', 'failed']))
             db.query(SocialMedia).filter(SocialMedia.day.in_(old)).delete(synchronize_session=False)
             db.commit()

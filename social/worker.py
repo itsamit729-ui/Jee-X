@@ -3,6 +3,7 @@
 Media and the durable submission ledger live on a separate public media branch.
 No comments, DMs, or artificial engagement are sent by this worker.
 """
+from contextvars import ContextVar
 import base64
 import io
 import json
@@ -19,6 +20,8 @@ from zoneinfo import ZoneInfo
 
 from PIL import Image, ImageDraw, ImageFont
 
+REQUEST_HOOKS = ContextVar('social_request_hooks', default=None)
+
 OUT = Path(__file__).parent / 'output'
 MEDIA_BRANCH = 'jeeedge-social-media'
 REPO = os.getenv('GITHUB_REPOSITORY', 'itsamit729-ui/Jee-X')
@@ -31,14 +34,22 @@ class ServiceError(RuntimeError):
 
 
 def request(url, method='GET', body=None, headers=None, missing_ok=False, binary=False):
+    hooks = REQUEST_HOOKS.get()
+    ticket = hooks[0](url, body or {}) if hooks else None
     data = json.dumps(body).encode() if body is not None else None
     req = urllib.request.Request(url, data=data, method=method,
                                  headers={'Content-Type': 'application/json', 'User-Agent': 'JeeEdge-Automation/1.0', **(headers or {})})
     try:
         with urllib.request.urlopen(req, timeout=45) as response:
             raw = response.read()
-            return raw if binary else json.loads(raw)
+            result = raw if binary else json.loads(raw)
+            if hooks:
+                hooks[1](ticket, result)
+            return result
     except urllib.error.HTTPError as error:
+        if hooks and error.code == 429 and urlsplit(url).hostname in ('api.buffer.com', 'api.groq.com'):
+            retry = error.headers.get('Retry-After', '3600')
+            hooks[2](url, int(retry) if retry.isdigit() else 3600)
         if missing_ok and error.code == 404:
             return None
         # Do not expose remote bodies, URLs, headers, tokens or prompts in logs.
@@ -237,17 +248,24 @@ def render(content, copy, output_dir=None):
     cards = [('30-SECOND WARM-UP', copy['hook'], 'Swipe for the question'),
              (content['topic'].upper(), content['question'], 'Solve first. Then swipe.'),
              ('THE BREAKDOWN', content['answer'] + '\n\n' + content['solution'], 'Save this for revision'),
-             ('YOUR NEXT STEP', 'Turn one question\ninto a practice habit.', 'Visit JeeEdge through the link in our bio')]
+             ('YOUR NEXT STEP', 'Turn one question\ninto a practice habit.', 'Follow @jeeedge for practical JEE revision')]
+    if content.get('rule'):
+        cards = [('JEE SHORTCUT / ' + content['subject'], copy['hook'], 'Swipe for the rule and its limits'),
+                 (content['topic'].upper(), content['rule'], 'Save the rule, remember the condition'),
+                 ('WHEN IT WORKS', content['condition'] + '\n\nAvoid: ' + content['trap'], 'Conditions matter'),
+                 ('TRY IT', content['question'], 'Solve before the next slide'),
+                 ('THE BREAKDOWN', content['answer'] + '\n\n' + content['solution'], 'Check every step'),
+                 ('YOUR REVISION CARD', content['rule'] + '\n\n' + content['condition'], 'Save this for your next mock')]
     paths = []
     for index, (label, body, footer) in enumerate(cards):
         img = Image.new('RGB', (1080, 1350), '#141519')
         draw = ImageDraw.Draw(img)
         draw.rounded_rectangle((64, 70, 230, 126), radius=16, fill='#ff8547')
         draw.text((82, 82), 'JeeEdge', font=font(27, True), fill='#141519')
-        draw.text((845, 88), f'0{index + 1} / 04', font=font(23), fill='#93969f')
+        draw.text((845, 88), f'{index + 1:02d} / {len(cards):02d}', font=font(23), fill='#93969f')
         draw.line((64, 190, 1016, 190), fill='#36383f', width=2)
         draw.text((66, 247), label, font=font(24, True), fill='#ff8547')
-        size = 72 if index in (0, 3) else 49
+        size = 64 if index == 0 else 49
         while size >= 28:
             face = font(size, index in (0, 3))
             lines = wrapped(draw, body, face, 930)
@@ -318,7 +336,7 @@ def main():
     copy = {'hook': 'Can you solve this before you swipe?',
             'caption': 'A quick original warm-up. Solve it first, then swipe for the breakdown.'} if offline else ai_copy(content, metrics)
     images = render(content, copy)
-    caption = copy['caption'] + '\n\nOriginal practice question. More practice via the link in our bio.\n#JEE #JEEPreparation #JeeEdge\n' + marker
+    caption = copy['caption'] + '\n\nOriginal practice question. Save this for your next revision session.\n#JEE #JEEPreparation #JeeEdge\n' + marker
     (OUT / 'preview.json').write_text(json.dumps({'problem': content, 'copy': copy, 'caption': caption,
                                                 'recent_metrics': metrics}, indent=2))
     if preview or offline:

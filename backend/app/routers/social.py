@@ -144,7 +144,7 @@ def run_job(day, owner):
         if not transition(day, owner, 'running', 'submitting'):
             return
         submitting = True
-        caption = copy['caption'] + '\n\nOriginal practice question. More practice via the link in our bio.\n#JEE #JEEPreparation #JeeEdge\n' + marker
+        caption = copy['caption'] + '\n\nOriginal practice question. Save this for your next revision session.\n#JEE #JEEPreparation #JeeEdge\n' + marker
         payload = {'text': caption, 'channelId': channel['id'], 'schedulingType': 'automatic',
                    'mode': 'customScheduled', 'dueAt': (datetime.now(timezone.utc) + timedelta(minutes=5)).isoformat(),
                    'metadata': {'instagram': {'type': 'post', 'shouldShareToFeed': True}},

@@ -45,3 +45,24 @@ class SocialAsset(Base):
 class SocialDispatch(Base):
     __tablename__ = 'social_dispatch'
     id = Column(Integer, primary_key=True)
+
+
+class SocialUsage(Base):
+    __tablename__ = 'social_usage'
+    id = Column(String(32), primary_key=True)
+    service = Column(String(24), nullable=False, index=True)
+    created_at = Column(DateTime, nullable=False, index=True)
+    units = Column(Integer, nullable=False, default=1)
+    tokens = Column(Integer, nullable=False, default=0)
+
+
+class SocialQuotaLock(Base):
+    __tablename__ = 'social_quota_lock'
+    id = Column(Integer, primary_key=True)
+
+
+class SocialCache(Base):
+    __tablename__ = 'social_cache'
+    name = Column(String(48), primary_key=True)
+    value = Column(String(4000), nullable=False)
+    expires_at = Column(DateTime, nullable=False)
