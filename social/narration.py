@@ -1,8 +1,11 @@
 """Short authored English narration. No extra LLM calls or paid-provider fallback."""
 import io
+import logging
 import wave
 from pathlib import Path
 from social import storyboard
+
+log = logging.getLogger('uvicorn.error')
 
 MODEL = 'canopylabs/orpheus-v1-english'
 VOICE = 'troy'
@@ -53,15 +56,18 @@ def prepare(content, plan, directory, fetch):
     for index, (start, window, text) in enumerate(scenes(content, plan)):
         data = fetch(text)
         if not data:
+            log.info('JeeEdge TTS scene=%d skipped: no audio available.', index)
             continue
         try:
             seconds = duration(data)
             speed = max(1.0, seconds / window)
             if speed > 1.3:  # Never cut off a sentence or rush an explanation.
+                log.warning('JeeEdge TTS scene=%d skipped: speech=%.2fs window=%.2fs required_speed=%.2f', index, seconds, window, speed)
                 continue
             path = Path(directory) / f'voice-{index}.wav'
             path.write_bytes(data)
             clips.append((path, start, speed))
-        except (ValueError, wave.Error, EOFError, OSError):
+        except (ValueError, wave.Error, EOFError, OSError) as error:
+            log.warning('JeeEdge TTS scene=%d skipped: invalid audio or file error (%s).', index, type(error).__name__)
             continue
     return clips

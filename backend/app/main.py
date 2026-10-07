@@ -37,6 +37,9 @@ from app.routers import (
 
 load_dotenv()
 
+from app.access_logging import configure as configure_access_logging
+configure_access_logging()
+
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Jee Edge API", version="0.1.0")

@@ -1,5 +1,6 @@
 """Authenticated, quick-return cron trigger; state survives Render restarts."""
 import io
+import logging
 import time
 import functools
 import hashlib
@@ -300,6 +301,7 @@ def run_job(day, owner):
         with TemporaryDirectory(prefix='jeeedge-social-') as directory:
             if video:
                 copy['voice_clips'] = narration.prepare(content, copy['storyboard'], directory, social_speech.fetch)
+                logging.getLogger('uvicorn.error').info('JeeEdge Reel slot=%s narration_clips=%d audio=%s', day, len(copy['voice_clips']), 'voice_and_music' if copy['voice_clips'] else 'music_only')
             ticket = budget.reserve('render', units=180)
             started = time.monotonic()
             paths = [reel.render(content, directory, copy)] if video else worker.render(content, copy, directory)
