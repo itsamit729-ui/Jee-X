@@ -17,35 +17,69 @@ def call(prompt, schema, max_tokens=1536):
     return json.loads(choice['message']['content'])
 
 
-def package(content, kind):
-    fallback = {'hook': 'A useful check for ' + content['topic'].lower(),
-                'caption': 'Learn the rule, check when it applies, and try the example. Save this for your next revision session.'}
+def authored(content):
+    # Useful even when Groq is unavailable; no repeated generic marketing caption.
+    explanation = content.get('why', content['rule'])
+    return {'hook': content['topic'] + '\nTest the rule, then its limits.',
+            'caption': (content['topic'] + '\n\n' + explanation + '\n\n'
+                        + content['rule'] + '\nApplies when: ' + content['condition']
+                        + '\n\nCheck your reasoning: ' + content.get('transfer_question', content['question']))}
+
+
+def normalized_caption(value):
+    value = value.split('\n\nMusic:', 1)[0]
+    value = re.sub(r'JeeEdge daily \d{4}-\d{2}-\d{2} / s\d{2}', '', value)
+    return ' '.join(re.findall(r'[a-z]+', value.lower()))
+
+
+def repeated(caption, recent):
+    from difflib import SequenceMatcher
+    candidate = normalized_caption(caption)
+    return any(SequenceMatcher(None, candidate, normalized_caption(old), autojunk=False).ratio() >= 0.82
+               for old in recent if old)
+
+
+def package(content, kind, recent=()):
+    fallback = authored(content)
     try:
-        context = {k: content[k] for k in ('subject','topic','rule','condition','trap')}
-        draft = call('Create three distinct English hooks (each <=65 characters) and one caption (<=350 characters) '
-            'for an original JEE ' + kind + '. No URLs, link-in-bio, website launch claims, PYQ claims, '
-            'score guarantees, invented statistics or example answers. Use one save or follow CTA. '
-            'Do not alter the rule or hide its conditions. Only output JSON. Lesson: ' + json.dumps(context),
+        context = {k: content[k] for k in ('subject','topic','rule','condition','trap','question','answer','solution',
+                   'why','transfer_question','transfer_answer') if k in content}
+        draft = call('Create three distinct English hooks (each <=65 characters) and one educational caption '
+            '(120 to 850 characters) for an original JEE ' + kind + '. '
+            'Write for a student learning to reason, not an advertisement. Start the caption with the exact topic name. '
+            'Explain WHY the method works and include its applicability condition. Use only the supplied facts. '
+            'You may end with the supplied reasoning question. No save/follow/comment/tag/share requests, hashtags, '
+            'URLs, website/bio promotion, invented facts, exam-year/PYQ claims, rank or score promises. '
+            'Avoid generic filler and copying earlier captions. Math and calculated examples are immutable. '
+            + json.dumps({'lesson':context,'recent_captions':[x[:300] for x in recent[:2]]}),
             {'type':'object','properties':{'hooks':{'type':'array','items':{'type':'string'}},'caption':{'type':'string'}},
-             'required':['hooks','caption'],'additionalProperties':False})
+             'required':['hooks','caption'],'additionalProperties':False}, max_tokens=1536)
         hooks, caption = draft['hooks'], draft['caption']
         if len(hooks) != 3 or any(not isinstance(h,str) or not 1 <= len(h.strip()) <= 65 for h in hooks):
             raise ValueError('Invalid hooks')
-        if not isinstance(caption,str) or not 1 <= len(caption.strip()) <= 350:
+        if not isinstance(caption,str) or not 120 <= len(caption.strip()) <= 850:
             raise ValueError('Invalid caption')
-        if re.search(r'https?://|www\.|link in|bio|website|guarantee|\bPYQ\b|100%|AIR\s*1', ' '.join(hooks)+caption, re.I):
+        if not caption.strip().lower().startswith(content['topic'].lower()):
+            raise ValueError('Caption is not topic-specific')
+        if re.search(r'https?://|www\.|link in|\bbio\b|website|guarantee|\bPYQ\b|100%|AIR\s*1|#|@|\b(save|follow|comment|tag|share|viral)\b', ' '.join(hooks)+caption, re.I):
             raise ValueError('Unsupported promotion')
-        review = call('Review this JEE packaging against the supplied authoritative rule and conditions. '
-            'Approve only if accurate, no invented claims or answers, no website/bio promotion, '
-            'and useful for revision. Select the strongest hook index (0,1,2). '
-            'Output JSON with approved boolean and chosen integer. '
+        if repeated(caption, recent):
+            raise ValueError('Repeated caption')
+        review = call('Act as a strict JEE teacher. Review the draft against the authoritative lesson. '
+            'Approve only when the caption explains the reasoning, includes the applicable conditions, '
+            'adds no unsupported facts, and makes sense without the images. Score clarity and educational '
+            'value from 1 to 5; 4 means specific, clear and useful, 5 means exceptionally concise teaching. '
+            'Reject generic filler, altered math, misleading hooks and engagement requests. '
+            'Select strongest hook index (0,1,2). '
             + json.dumps({'lesson':context,'draft':draft}),
-            {'type':'object','properties':{'approved':{'type':'boolean'},'chosen':{'type':'integer','enum':[0,1,2]}},
-             'required':['approved','chosen'],'additionalProperties':False})
-        if review['approved'] is not True or type(review['chosen']) is not int or review['chosen'] not in range(3):
+            {'type':'object','properties':{'approved':{'type':'boolean'},'chosen':{'type':'integer','enum':[0,1,2]},
+              'clarity':{'type':'integer','enum':[1,2,3,4,5]},'educational_value':{'type':'integer','enum':[1,2,3,4,5]}},
+             'required':['approved','chosen','clarity','educational_value'],'additionalProperties':False}, max_tokens=512)
+        if (review['approved'] is not True or type(review['chosen']) is not int or review['chosen'] not in range(3)
+                or type(review['clarity']) is not int or review['clarity'] < 4
+                or type(review['educational_value']) is not int or review['educational_value'] < 4):
             raise ValueError('Review rejected')
         return {'hook':hooks[review['chosen']].strip(), 'caption':caption.strip()}
     except (worker.ServiceError, ValueError, TypeError, KeyError, IndexError):
-        # Quota limits reduce AI use, not mathematical integrity; never buy a fallback.
-        print('Using authored lesson packaging; editorial unavailable or not approved.', flush=True)
+        print('Using authored teaching caption; editorial unavailable or quality gate not met.', flush=True)
         return fallback

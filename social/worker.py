@@ -258,8 +258,23 @@ def render(content, copy, output_dir=None):
                  ('TRY IT', content['question'], 'Solve before the next slide'),
                  ('THE BREAKDOWN', content['answer'] + '\n\n' + content['solution'], 'Check every step'),
                  ('YOUR REVISION CARD', content['rule'] + '\n\n' + content['condition'], 'Save this for your next mock')]
+    if content.get('why') and content.get('transfer_question'):
+        cards = [
+            ('CONCEPT LAB / ' + content['subject'], copy['hook'], 'A method, its limits, and two reasoning checks'),
+            (content['topic'].upper(), content['rule'], 'The method'),
+            ('WHY IT WORKS', content['why'], 'Understand the step you would otherwise memorise'),
+            ('CHECK THE CONDITIONS', content['condition'] + '\n\nCommon mistake: ' + content['trap'], 'A shortcut needs the right assumptions'),
+            ('WORKED EXAMPLE', content['question'] + '\n\n' + content['solution'], 'Follow the calculation'),
+            ('CHANGE THE SITUATION', content['transfer_question'], 'Pause here. Decide which condition or factor changed.'),
+            ('REASON IT THROUGH', content['transfer_answer'], 'Compare your reasoning with each step'),
+            ('TAKE THIS INTO YOUR NEXT TEST', content['rule'] + '\n\n' + content['condition'], 'Check the assumptions before applying the rule'),
+        ]
     paths = []
     for index, (label, body, footer) in enumerate(cards):
+        body = re.sub(r'\^([23])(?!\d)', lambda m: {'2':'²','3':'³'}[m[1]], body)
+        body = re.sub(r'sqrt\((\d+)\)', r'√\1', body).replace('->','→')
+        for source, target in [('theta','θ'),('alpha','α'),('beta','β'),('lambda','λ'),('N2','N₂'),('H2','H₂'),('NH3','NH₃')]:
+            body = re.sub(r'\b'+source+r'\b', target, body)
         img = Image.new('RGB', (1080, 1350), '#141519')
         draw = ImageDraw.Draw(img)
         draw.rounded_rectangle((64, 70, 230, 126), radius=16, fill='#ff8547')
@@ -267,11 +282,17 @@ def render(content, copy, output_dir=None):
         draw.text((845, 88), f'{index + 1:02d} / {len(cards):02d}', font=font(23), fill='#93969f')
         draw.line((64, 190, 1016, 190), fill='#36383f', width=2)
         draw.text((66, 247), label, font=font(24, True), fill='#ff8547')
-        size = 64 if index == 0 else 49
+        diagram = None
+        if label == 'WHY IT WORKS':
+            from social import cinema, storyboard
+            if content['topic'] in storyboard.VISUAL_TOPICS:
+                plan = storyboard.fallback(content)
+                diagram = cinema.frame(content, plan, 11).crop((56,375,658,880)).resize((660,554))
+        size = 64 if index == 0 else 42 if diagram else 49
         while size >= 28:
             face = font(size, index in (0, 3))
             lines = wrapped(draw, body, face, 930)
-            if len(lines) * (size + 18) <= 770 and all(draw.textlength(line, font=face) <= 930 for line in lines):
+            if len(lines) * (size + 18) <= (220 if diagram else 770) and all(draw.textlength(line, font=face) <= 930 for line in lines):
                 break
             size -= 2
         else:
@@ -280,6 +301,8 @@ def render(content, copy, output_dir=None):
         for line in lines:
             draw.text((66, y), line, font=face, fill='#f6f3ee')
             y += size + 18
+        if diagram:
+            img.paste(diagram, (210,590))
         draw.line((64, 1155, 1016, 1155), fill='#36383f', width=2)
         draw.text((66, 1194), footer, font=font(27), fill='#f6f3ee')
         draw.text((66, 1254), '@jeeedge  /  ORIGINAL PRACTICE', font=font(21), fill='#93969f')

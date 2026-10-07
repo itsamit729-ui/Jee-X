@@ -29,6 +29,8 @@ def setup(monkeypatch):
     monkeypatch.setattr(social, 'SessionLocal', factory)
     monkeypatch.setattr(social.social_speech, 'fetch', lambda text: None)
     monkeypatch.setattr(social.budget, 'SessionLocal', factory)
+    monkeypatch.delenv('SOCIAL_DAILY_TARGET', raising=False)
+    monkeypatch.delenv('SOCIAL_REELS_PER_DAY', raising=False)
     for key in ('SOCIAL_TRIGGER_SECRET', 'BUFFER_API_KEY', 'GROQ_API_KEY'):
         monkeypatch.setenv(key, 'x'*32)
     clock = [datetime(2026,10,6,7)]
@@ -36,10 +38,10 @@ def setup(monkeypatch):
     monkeypatch.setattr(social.worker, 'find_channel', lambda: ('org', {'id':'channel'}))
     monkeypatch.setattr(social.worker, 'posts', lambda *a: [])
     monkeypatch.setattr(social.storyboard,'plan',social.storyboard.fallback)
-    monkeypatch.setattr(social.editorial, 'package', lambda *a: {'hook':'Try this', 'caption':'Solve and swipe.'})
+    monkeypatch.setattr(social.editorial, 'package', lambda *a,**kw: social.editorial.authored(a[0]))
     def render(content, copy, directory):
         paths=[]
-        for i in range(6):
+        for i in range(8):
             p=Path(directory)/f'{i}.png'
             Image.new('RGB',(1080,1350),'orange').save(p)
             paths.append(p)
@@ -69,31 +71,31 @@ def setup(monkeypatch):
     engine.dispose()
 
 
-def test_thirty_slots_and_retry_no_duplicates(setup):
+def test_twelve_slots_and_retry_no_duplicates(setup):
     client, factory, clock, submitted=setup
-    for index in range(30):
-        clock[0]=datetime(2026,10,6,7)+timedelta(minutes=32*index)
+    for index in range(12):
+        clock[0]=datetime(2026,10,6,7)+timedelta(minutes=80*index)
         assert client.post('/api/social/trigger',headers=AUTH).status_code==202
         client.post('/api/social/trigger',headers=AUTH)
-    assert len(submitted)==30
-    assert sum(p['metadata']['instagram']['type']=='reel' for p in submitted)==10
-    assert sum(len(p['assets'])==6 for p in submitted)==20
+    assert len(submitted)==12
+    assert sum(p['metadata']['instagram']['type']=='reel' for p in submitted)==4
+    assert sum(len(p['assets'])==8 for p in submitted)==8
     for post in submitted:
         is_video = post['metadata']['instagram']['type'] == 'reel'
         assert ('Kevin MacLeod' in post['text']) == is_video
         if is_video:
             assert 'https://creativecommons.org/licenses/by/4.0/' in post['text']
-    assert len(set(p['text'].splitlines()[-1] for p in submitted))==30
+    assert len(set(p['text'].splitlines()[-1] for p in submitted))==12
     assert all('bio' not in p['text'] for p in submitted)
     assert all(j['state']=='published' for j in client.get('/api/social/status',headers=AUTH).json()['jobs'])
-    reel_topics=[social.slot_problem(f'2026-10-06:s{i:02d}')['topic'] for i in range(30) if social.is_reel(f's{i:02d}')]
-    assert len(set(reel_topics))==10
+    reel_topics=[social.slot_problem(f'2026-10-06:s{i:02d}')['topic'] for i in range(12) if social.is_reel(f's{i:02d}')]
+    assert len(set(reel_topics))==4
     assert set(reel_topics)<=set(social.storyboard.VISUAL_TOPICS)
 
 
 def test_media_head_range_and_format(setup):
     client, factory, clock, submitted=setup
-    clock[0]=clock[0].replace(hour=8,minute=10)
+    clock[0]=clock[0].replace(hour=9,minute=40)
     client.post('/api/social/trigger',headers=AUTH)
     url=submitted[0]['assets'][0]['video']['url'].replace(social.MEDIA_ORIGIN,'')
     full=client.get(url)
@@ -148,7 +150,7 @@ def test_active_job_blocks_another_slot_and_expired_owner_cannot_submit(setup,mo
     client,factory,clock,submitted=setup
     monkeypatch.setattr(social,'run_job',lambda *a:None)
     client.post('/api/social/trigger',headers=AUTH)
-    clock[0]=clock[0].replace(hour=8,minute=10)
+    clock[0]=clock[0].replace(hour=9,minute=40)
     assert client.post('/api/social/trigger',headers=AUTH).json()['slot']=='s00'
     with factory() as db:
         assert db.query(SocialSlot).count()==1
@@ -221,3 +223,48 @@ def test_real_request_hook_reserves_before_network_and_settles_usage(setup,monke
         worker.request('https://api.groq.com/openai/v1/chat/completions',method='POST',
                        body={'messages':[],'max_completion_tokens':100})
     assert social.budget.report()['services']['groq'][0]['tokens_used']==42
+
+
+def test_old_env_cannot_restore_thirty_posts(monkeypatch):
+    monkeypatch.setenv('SOCIAL_DAILY_TARGET','30')
+    monkeypatch.setenv('SOCIAL_REELS_PER_DAY','10')
+    assert social.daily_target()==12 and social.reel_target()==4
+
+
+def test_reported_delivery_error_holds_new_posts(setup,monkeypatch):
+    client,factory,clock,submitted=setup
+    monkeypatch.setattr(social.worker,'posts',lambda *a:[{'id':'failed-post','status':'error','text':'Existing post'}])
+    client.post('/api/social/trigger',headers=AUTH)
+    assert not submitted
+    assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='delivery_hold'
+    assert client.get('/api/social/status',headers=AUTH).json()['publishing_hold']['post_id']=='failed-post'
+
+
+def test_repetition_gate_holds_before_render_and_submit(setup,monkeypatch):
+    client,_,clock,submitted=setup
+    text=social.editorial.authored(social.slot_problem('2026-10-06:s00'))['caption']
+    monkeypatch.setattr(social.worker,'posts',lambda *a:[{'id':'previous','status':'sent','text':text+'\nJeeEdge daily 2026-10-05 / s01'}])
+    client.post('/api/social/trigger',headers=AUTH)
+    assert not submitted
+    assert 'repeats' in client.get('/api/social/status',headers=AUTH).json()['jobs'][0]['error']
+
+
+def test_already_submitted_twelve_prevents_extra_post_after_rollout(setup):
+    client,factory,clock,submitted=setup
+    with factory() as db:
+        for i in range(12,24):
+            db.add(SocialSlot(day=f'2026-10-06:s{i:02d}',owner='old',state='published',updated_at=datetime.utcnow(),attempts=1,post_id=str(i)))
+        db.commit()
+    assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='daily_limit'
+    assert not submitted
+
+
+def test_old_failed_slot_cannot_exceed_reduced_daily_cap(setup):
+    client,factory,_,submitted=setup
+    with factory() as db:
+        db.add(SocialSlot(day='2026-10-06:s00',owner='old',state='failed',updated_at=datetime.utcnow(),attempts=1))
+        for i in range(12,24):
+            db.add(SocialSlot(day=f'2026-10-06:s{i:02d}',owner='old',state='published',updated_at=datetime.utcnow(),attempts=1,post_id=str(i)))
+        db.commit()
+    assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='daily_limit'
+    assert not submitted

@@ -74,8 +74,8 @@ Deploy the latest feature/version-1 commit, then replace the old cron schedule:
 - Existing GROQ_API_KEY, BUFFER_API_KEY and SOCIAL_TRIGGER_SECRET remain sufficient.
 - No new service, paid fallback, voice subscription or video-generation API.
 
-The default target is **up to 30 items/day (20 carousels, 10 template Reels)**.
-Thirty evenly spaced windows run from 07:00 to 23:00 (32 minutes per window);
+The default target is **up to 12 items/day (8 carousels, 4 animated Reels)**.
+Twelve evenly spaced windows run from 07:00 to 23:00 (80 minutes per window);
 the first cron invocation within each window creates one item. Publication is
 scheduled about five minutes later. Later invocations reconcile delivery or
 retry safe pre-submission failures. Missed windows are skipped, not backfilled.
@@ -83,7 +83,8 @@ Existing same-day legacy submissions count against the daily target during
 migration. One rendering claim at a time, unique per-slot ownership, three
 attempts per slot, and durable pre-submit fencing remain in place.
 
-Optional lower settings: SOCIAL_DAILY_TARGET=1..30, SOCIAL_REELS_PER_DAY=0..target.
+Optional lower settings: SOCIAL_DAILY_TARGET=1..12, SOCIAL_REELS_PER_DAY=0..min(4,target).
+Code clamps older 30/10 environment values to 12/4.
 Change these between days because slot allocation depends on them. SOCIAL_PAUSED=true
 stops new work. The system does not create comments, DMs, likes or follows.
 
@@ -108,7 +109,7 @@ No unused quota is deliberately burned: more AI calls do not imply better work.
 
 Channel discovery is cached for 24h (two Buffer calls on cache miss). Normally
 each item costs one history query, one submission, and one delivery read:
-30 x 3 + 2 = about 92 calls/day, or about 2760/30 days. Retries, extra accounts,
+12 x 3 + 2 = about 38 calls/day, or about 1140/30 days. Retries, extra accounts,
 slow publication, manual calls or queue backlog reduce achievable output. Queue
 checks stop at nine pending entries, leaving one free-plan slot as headroom.
 A history page exceeding 100 entries stops safely rather than missing duplicates.
@@ -130,13 +131,13 @@ settings must still be monitored. Runtime measurements here do not benchmark Ren
 
 Thirty authored shortcut families across Physics, Chemistry and Maths include
 an applicability condition, common trap, calculated example and solution. Numeric
-variants and topic ordering change with the date. Both Reels and six-slide
-carousels use them. No copied exam papers, unsupported PYQ labels or website/bio
-invitations. Calls to action are save/follow for revision.
+variants and topic ordering change with the date. Both Reels and eight-slide
+carousels use them, now with authored reasoning and transfer problems. No copied exam papers, unsupported PYQ labels or website/bio
+invitations. Captions teach the topic without repeated engagement requests or hashtag blocks.
 
 Groq gpt-oss-120b drafts three hooks and a caption, then reviews the packaging and
 selects a hook. It cannot edit the stored mathematical rule, condition or solution.
-Typical editorial use is two calls per item, about 60/day at the maximum target;
+Typical editorial use is two calls per item, about 24/day at the maximum target;
 there is no reason to consume 950 calls merely to exhaust the free allowance.
 Invalid output, quota limits or rejected reviews use authored packaging. Review
 by an LLM is not independent proof; authored lessons and numerical checks are
@@ -192,7 +193,7 @@ until configured; Buffer publishing credentials alone do not enable comments.
 ## Visual-first Reel renderer (October 7 update)
 
 New Reel slots rotate through 12 dedicated animated concepts, 10 distinct topics
-per 10-Reel day. Carousels retain the broader authored lesson pool. Existing saved
+in the older 10-Reel configuration. The current daily plan selects four supported animations. Carousels retain the broader authored lesson pool. Existing saved
 lesson snapshots are reused during retries so changing the renderer never changes
 the question attached to an already generated job.
 
@@ -216,7 +217,7 @@ Licensed music remains embedded, with original synthesized transition cues added
 Automatic caption attribution is retained. No new service, API key or paid voice/
 video generation is required. FFmpeg veryfast encoding, one thread, the 180-second
 render ceiling and 8 MiB output ceiling remain enforced. CPU and data use still
-vary by concept and by Render hardware; the 30-item daily target is conditional.
+vary by concept and by Render hardware; the 12-item daily target is conditional.
 
 `social/test_storyboard.py` checks all concepts and story variants for layout,
 actual motion inside the diagram, safe AI fallback, and daily topic diversity.
@@ -248,3 +249,47 @@ for 7 days to avoid spending again. Cache storage is capped at 32 MiB. Audio is
 not exposed through public media routes. Existing account-wide consumption is
 not visible to this worker. Verify the first deployed Reel in Buffer; a local
 render test does not establish live Groq model access.
+
+
+## Quality-focused 12/day rollout
+
+The daily plan selects **4 Physics, 4 Chemistry and 4 Maths topics**, 12 distinct
+concepts, with no topic repeated on consecutive days in the new schedule. Four
+supported concepts become Reels; eight become carousels. Existing frozen lesson
+snapshots are preserved on retry, so rollout-day legacy content may differ.
+Old same-day submissions count toward the 12-item cap; the worker does not try to
+catch up or send another 12 after deployment. Existing Buffer queue entries are
+not edited, deleted or unscheduled by a deployment: inspect those separately.
+
+Eight-card carousels teach a rule, explain why, state conditions and mistakes,
+show a worked example, then ask and solve a second reasoning/boundary-case
+question. Supported concepts have a visual diagram. Reels now explain why the
+animation works during the reveal and end with conditions rather than repeated
+follow requests. Authored extension questions include changed constraints,
+limiting-reagent leftovers, tangent lines and when integral symmetry is invalid.
+These are original exercises, not claimed PYQs or a comprehensive Advanced course.
+
+Groq must produce a topic-specific teaching caption and pass a separate strict
+review (clarity and educational value >=4/5). These scores are editorial filters,
+not proof of accuracy. The fallback is a complete authored explanation, never
+generic marketing copy. No routine hashtag blocks, tag requests, follow/save
+requests, website/bio links or guaranteed-score claims are appended. Required
+music-license credits and the duplicate-detection marker remain intact.
+
+Captions too similar (>=0.82 normalized sequence similarity) to current/prior-day
+captions in returned Buffer history are held before rendering/submission; numbers,
+tracking dates and music credits are ignored in that check. It can conservatively
+skip a useful post and does not evaluate Instagram's private spam classifier.
+
+Any returned Buffer error/failed/notSent status stops new submissions for 24 hours.
+Inspect Instagram and the existing Buffer post; a stale Buffer error can also
+cause this hold. The hold is visible as `publishing_hold` on `/api/social/status`.
+If the failed entry remains after expiry, generation holds again; resolve it in
+Buffer after verifying actual Instagram publication. This never retries that post
+and does not pause entries already in Buffer. Confirmed restrictions need account
+review, not caption rotation. No workflow can guarantee spam-free publication.
+
+Default trigger windows (IST): 07:00 C, 08:20 C, 09:40 R, 11:00 C, 12:20 C,
+13:40 R, 15:00 C, 16:20 C, 17:40 R, 19:00 C, 20:20 C, 21:40 R.
+Publication is requested five minutes after generation completes; delays, holds
+and missed windows can reduce the actual count. Existing ten-minute cron remains.

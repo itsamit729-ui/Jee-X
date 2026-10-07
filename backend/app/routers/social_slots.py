@@ -20,7 +20,7 @@ from app.database import SessionLocal
 from app.models.social_job import SocialSlot as SocialJob, SocialAsset as SocialMedia, SocialDispatch
 from app.models.social_job import SocialJob as LegacyJob
 from app.routers.social import media as legacy_media
-from social import worker, reel, lessons, editorial, storyboard, narration
+from social import worker, reel, lessons, editorial, storyboard, narration, quality
 from app.services import social_budget as budget
 from app.services import instagram_comments as comments
 from app.services import social_speech
@@ -49,16 +49,16 @@ def today():
 
 def daily_target():
     try:
-        return max(1, min(30, int(os.getenv('SOCIAL_DAILY_TARGET', '30'))))
+        return max(1, min(12, int(os.getenv('SOCIAL_DAILY_TARGET', '12'))))
     except ValueError:
-        return 30
+        return 12
 
 
 def reel_target():
     try:
-        return max(0, min(daily_target(), int(os.getenv('SOCIAL_REELS_PER_DAY', '10'))))
+        return max(0, min(4, daily_target(), int(os.getenv('SOCIAL_REELS_PER_DAY', '4'))))
     except ValueError:
-        return min(10, daily_target())
+        return min(4, daily_target())
 
 
 def current_slot():
@@ -77,10 +77,7 @@ def is_reel(slot):
 def slot_problem(key):
     day, slot = key.split(':')
     index=int(slot[1:])
-    if is_reel(slot):
-        ordinal=(index+1)*reel_target()//daily_target()-1
-        return lessons.visual_lesson(day,ordinal)
-    return lessons.lesson(day,index)
+    return quality.daily_plan(day, daily_target(), reel_target())[index]
 
 
 def tracked(function):
@@ -119,7 +116,8 @@ def status():
     with SessionLocal() as db:
         rows = db.query(SocialJob).order_by(SocialJob.day.desc()).limit(90).all()
         return {'daily_target': daily_target(), 'reels_target': reel_target(),
-                'jobs': [status_data(row) for row in rows], 'usage': budget.report()}
+                'jobs': [status_data(row) for row in rows], 'usage': budget.report(),
+                'publishing_hold': budget.cached('publishing-hold')}
 
 
 # Preserve all existing public carousel links.
@@ -165,6 +163,9 @@ def trigger(tasks: BackgroundTasks):
         raise HTTPException(503, 'GROQ_API_KEY and BUFFER_API_KEY must be configured')
     if comments.enabled():
         tasks.add_task(comments.drain_safe)
+    hold = budget.cached('publishing-hold')
+    if hold:
+        return {'state': 'delivery_hold', **hold}
     slot = current_slot()
     if slot is None:
         return {'state': 'idle', 'next_slot': '07:00 Asia/Kolkata'}
@@ -184,7 +185,7 @@ def trigger(tasks: BackgroundTasks):
             return status_data(active)
         legacy = db.get(LegacyJob, today())
         job = db.get(SocialJob, day)
-        if job is None:
+        if job is None or job.state == 'failed':
             # Existing same-day submissions count toward the new target during migration.
             used = db.query(SocialJob).filter(SocialJob.day.startswith(today()+':'),
                 SocialJob.state != 'failed').count()
@@ -253,6 +254,8 @@ def refresh_delivery(day, owner, post_id):
             post = next((p for p in recent if marker in (p.get('text') or '')), None)
         if not post:
             return
+        if post['status'] in ('error', 'failed', 'notSent'):
+            hold_delivery(post)
         state = 'published' if post['status'] == 'sent' else 'needs_review' if post['status'] in ('error', 'failed', 'notSent') else 'scheduled'
         with SessionLocal() as db:
             db.query(SocialJob).filter(SocialJob.day == day, SocialJob.owner == owner,
@@ -263,6 +266,14 @@ def refresh_delivery(day, owner, post_id):
     except Exception:
         # A failed status read must never reopen a submission slot.
         pass
+
+
+def hold_delivery(post):
+    # Treat any reported delivery failure conservatively; API status alone cannot
+    # identify spam or distinguish a stale Buffer error from a live Instagram post.
+    if not budget.cached('publishing-hold'):
+        budget.cache('publishing-hold', {'reason': 'Buffer reports a delivery failure; inspect the existing post and Instagram before resuming.',
+            'post_id': post['id'], 'until': (datetime.now(timezone.utc)+timedelta(hours=24)).isoformat()}, 86400)
 
 
 @tracked
@@ -280,6 +291,10 @@ def run_job(day, owner):
                     db.query(SocialJob).filter(SocialJob.post_id == post['id']).update({'state':'published'}, synchronize_session=False)
             cleanup(db)
             db.commit()
+        failed_delivery = next((p for p in recent if p['status'] in ('error', 'failed', 'notSent')), None)
+        if failed_delivery:
+            hold_delivery(failed_delivery)
+            raise worker.ServiceError('Publishing held for 24 hours after a Buffer delivery failure; inspect the existing post. Already queued posts are not paused.')
         calendar_day, slot = day.split(':')
         marker = f'JeeEdge daily {calendar_day} / {slot}'
         found = next((post for post in recent if marker in (post.get('text') or '')), None)
@@ -295,7 +310,14 @@ def run_job(day, owner):
             saved=db.get(SocialLesson,day)
             content=json.loads(saved.content) if saved else slot_problem(day)
         video = is_reel(slot)
-        copy = editorial.package(content, 'reel' if video else 'carousel')
+        # Check current/prior-day captions; dates, numbers and music credits are
+        # stripped before comparison so a numeric variant cannot disguise a repeat.
+        yesterday = (local_now().date()-timedelta(days=1)).isoformat()
+        recent_captions = [p.get('text') or '' for p in recent
+            if any(f'JeeEdge daily {d} / ' in (p.get('text') or '') for d in (calendar_day, yesterday))]
+        copy = editorial.package(content, 'reel' if video else 'carousel', recent=recent_captions)
+        if editorial.repeated(copy['caption'], recent_captions):
+            raise worker.ServiceError('Caption repeats a recent lesson; holding this slot for content review.')
         if video:
             copy['storyboard']=storyboard.plan(content)
         with TemporaryDirectory(prefix='jeeedge-social-') as directory:
@@ -349,7 +371,7 @@ def run_job(day, owner):
         if not transition(day, owner, 'running', 'submitting'):
             return
         submitting = True
-        caption = copy['caption'] + credit + '\n\nOriginal practice question. Save the rule and its conditions for revision.\n#JEE #JEEPreparation #JeeEdge\n' + marker
+        caption = copy['caption'] + credit + '\n\n' + marker
         payload = {'text': caption, 'channelId': channel['id'], 'schedulingType': 'automatic',
                    'mode': 'customScheduled', 'dueAt': (datetime.now(timezone.utc) + timedelta(minutes=5)).isoformat(),
                    'metadata': {'instagram': {'type': 'reel' if video else 'post', 'shouldShareToFeed': True}},

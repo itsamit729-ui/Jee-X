@@ -248,7 +248,7 @@ def frame(c,plan,t):
         subtitle=c['rule']
     elif phase==2:
         title='YOUR TURN.';subtitle=c['question']
-    else:title='SAVE THE SHORTCUT.';subtitle=c['condition']
+    else:title='KEEP THE CONDITION.';subtitle=c['condition']
     starts=(0,reveal,example,recap);age=t-starts[phase]
     # A restrained slide-in at scene boundaries; diagrams keep their full scale.
     block(d,title,(54,175+int(18*(1-ease(age/.35))),570,165),54)
@@ -261,8 +261,11 @@ def frame(c,plan,t):
             d.arc((555,1050,609,1104),-90,-90+360*(1-t/reveal),fill=ORANGE,width=4)
             d.text((572,1064),str(remaining),font=font(21,True),fill=WHITE)
         else:
-            block(d,note,(54,950,570,100),29,color=ORANGE)
-            block(d,c['condition'],(54,1060,540,77),22,color=MUTED,bold=False)
+            if c.get('why') and age >= 3:
+                block(d,'WHY: '+c['why'],(54,950,570,185),28,color=WHITE,bold=False)
+            else:
+                block(d,note,(54,950,570,100),29,color=ORANGE)
+                block(d,c['condition'],(54,1060,540,77),22,color=MUTED,bold=False)
     elif phase==2:
         block(d,subtitle,(54,385,570,180),36)
         if age<2:
@@ -277,7 +280,7 @@ def frame(c,plan,t):
         tag(d,'ONLY WHEN',54,640,accent)
         block(d,subtitle,(54,700,570,160),29,bold=False)
         block(d,'Watch out: '+c['trap'],(54,895,570,110),26,color=ORANGE,bold=False)
-        block(d,'Replay and predict it.' if plan['ending']=='challenge' else 'Save for revision. Follow @jeeedge.',(54,1060,550,70),24,color=WHITE)
+        block(d,'Replay and predict it.' if plan['ending']=='challenge' else 'Explain why the method works.',(54,1060,550,70),24,color=WHITE)
     for j in range(4):
         x=54+j*146;d.rounded_rectangle((x,1160,x+134,1164),radius=2,fill='#30343e')
         a=starts[j];b=(reveal,example,recap,28)[j];f=max(0,min(1,(t-a)/(b-a)))
