@@ -47,6 +47,8 @@ def text_block(draw, text, y, height, size=34, color='#f6f3ee'):
 def frame(content, copy, seconds):
     plan=(copy or {}).get('storyboard')
     if not storyboard.validate(plan,content):plan=storyboard.fallback(content)
+    if (copy or {}).get('hook'):
+        plan={**plan, 'hook':copy['hook']}
     return cinema.frame(content,plan,seconds)
 
 

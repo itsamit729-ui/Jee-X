@@ -3,7 +3,7 @@ import io
 import logging
 import wave
 from pathlib import Path
-from social import storyboard, speech_audio
+from social import storyboard, speech_audio, hooks
 
 log = logging.getLogger('uvicorn.error')
 
@@ -30,11 +30,12 @@ RULES = {
 
 def scenes(content, plan):
     topic = content['topic']
-    if topic not in RULES:
-        return []
-    reveal = storyboard.beats(plan)[0]
-    return [(0.4, reveal - 0.8, storyboard.HOOKS[topic][plan['hook_index']]),
-            (reveal + 0.2, 16.8 - reveal, RULES[topic])]
+    opening = plan.get('hook') or hooks.opening(content)
+    rule = RULES.get(topic,content.get('why',content['rule']))
+    # Authored speech explains the worked example or a labelled mistake.
+    # The carousel also carries the more demanding transfer question.
+    example = content.get('spoken_example') or content.get('spoken_takeaway') or ('Avoid this mistake: ' + content['trap'])
+    return [(0.2, 3.6, opening), (4.2, 12.4, rule), (17.2, 10.4, example)]
 
 
 def duration(data):
@@ -43,6 +44,7 @@ def duration(data):
 
 def prepare(content, plan, directory, fetch):
     clips = []
+    plan["subtitles"] = []
     for index, (start, window, text) in enumerate(scenes(content, plan)):
         data = fetch(text)
         if not data:
@@ -58,6 +60,15 @@ def prepare(content, plan, directory, fetch):
             path = Path(directory) / f'voice-{index}.wav'
             path.write_bytes(data)
             clips.append((path, start, speed))
+            words = text.split()
+            chunks = [' '.join(words[j:j+7]) for j in range(0,len(words),7)]
+            actual = seconds / speed
+            total = sum(len(x.split()) for x in chunks)
+            offset = start
+            for chunk in chunks:
+                end = offset + actual * len(chunk.split()) / total
+                plan['subtitles'].append({'start':offset,'end':end,'text':chunk})
+                offset = end
         except (ValueError, wave.Error, EOFError, OSError) as error:
             log.warning('JeeEdge TTS scene=%d skipped: invalid audio or file error (%s).', index, type(error).__name__)
             continue

@@ -289,13 +289,13 @@ def test_manual_narrated_reel_outside_window_and_idempotency(setup,monkeypatch):
     assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='idle'
 
 
-def test_manual_requires_both_voice_clips_and_no_retry_storm(setup,monkeypatch):
+def test_manual_requires_all_voice_scenes_and_no_retry_storm(setup,monkeypatch):
     client,factory,clock,submitted=setup
     result=client.post('/api/social/test-reel',headers=AUTH)
     assert result.status_code==202 and not submitted
     with factory() as db:
         job=db.get(SocialSlot,'2026-10-06:s99')
-        assert job.state=='failed' and 'both voice clips' in job.error
+        assert job.state=='failed' and 'all narration scenes' in job.error
     retry=client.post('/api/social/test-reel',headers=AUTH).json()
     assert 'retry_after' in retry and retry['attempts']==1
     with factory() as db:

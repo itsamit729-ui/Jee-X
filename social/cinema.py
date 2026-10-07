@@ -3,7 +3,7 @@ import math
 import re
 from functools import lru_cache
 from PIL import Image, ImageDraw
-from social import worker, storyboard
+from social import worker, storyboard, hooks
 
 BG='#101115';PANEL='#191c22';WHITE='#f4f0e8';ORANGE='#ff864b';BLUE='#8ecfdf';MUTED='#999da7'
 
@@ -80,7 +80,7 @@ def experiment(d,c,t,revealed,accent,format):
             tag(d,'SAME RANGE',int(max(260,landing-150)),835)
         return 'Same speed / level ground / no air drag'
     if topic=='Vertical throw':
-        clock=p*2;y=800-340*(2*clock-clock*clock)
+        clock=1 if revealed else p*2;y=800-340*(2*clock-clock*clock)
         d.line((310,445,310,812),fill='#464953',width=2)
         for j in range(12):
             tt=max(0,clock-j*.025);yy=800-340*(2*tt-tt*tt)
@@ -212,9 +212,67 @@ def experiment(d,c,t,revealed,accent,format):
                     d.line((xx,yy,hx,hy),fill=MUTED,width=2);d.ellipse((hx-7,hy-7,hx+7,hy+7),fill=ORANGE)
             tag(d,'4 NH3',95,840);tag(d,'1 N2 left',420,540,accent)
         return 'Ratio illustration: N2 + 3H2 -> 2NH3. H2 runs out.'
-    # Old saved lessons still render with authored equation/answer reveals.
-    block(d,c['answer'] if revealed else '?',(95,475,520,190),80,color=ORANGE)
-    return c.get('rule',c['solution'])
+    if topic == 'Stopping distance':
+        for y,ratio,col in ((520,1,accent),(710,4,ORANGE)):
+            x=110+110*ratio*ease(min(t/3,1))
+            d.line((110,y+30,110+110*ratio,y+30),fill=col,width=5)
+            d.rounded_rectangle((x-22,y-12,x+22,y+14),radius=7,fill=col)
+            tag(d,('10 m/s -> 10 m' if ratio==1 else '20 m/s -> 40 m' if revealed else '20 m/s -> ?'),90,y-90,col)
+        return 'Four times the energy needs four times the stopping distance.'
+    if topic == 'Photoelectric threshold':
+        d.rectangle((465,470,490,800),fill=accent)
+        for i in range(4):
+            x=100+((t*127+i*91)%350)
+            dot(d,x,550+i*50,9,ORANGE)
+        tag(d,'2 eV / photon',85,390);tag(d,'3 eV needed',370,830,accent)
+        block(d,'NO EMISSION' if revealed else 'Double the intensity?',(90,720,345,110),34)
+        return 'More photons cannot fix insufficient energy per photon.'
+    if topic == 'Weak acid dilution':
+        for x,label,h,frac,col in ((110,'0.1 M',240,'1% ionised',ORANGE),(390,'0.001 M',24,'about 10%',accent)):
+            d.rectangle((x,490,x+110,810),outline=MUTED,width=2)
+            d.rectangle((x+3,810-h*ease(min(t/4,1)),x+107,810),fill=col)
+            tag(d,label,x-20,410,col);tag(d,frac,x-40,845,col)
+        block(d,'[H+] falls on dilution',(80,590,530,90),35)
+        return 'Bar heights: approximate hydrogen-ion concentration, not ionised fraction.'
+    if topic == 'Nernst shift':
+        d.line((105,450,105,810,610,810),fill=MUTED,width=3)
+        progress=min(t/3,1)
+        d.line((115,490,115+460*progress,490+220*progress),fill=ORANGE,width=5)
+        dot(d,115+460*progress,490+220*progress,12,accent)
+        tag(d,'E (volts)',85,390,accent);tag(d,'log10 Q',410,840)
+        block(d,'10x Q -> -0.02958 V' if revealed else 'n = 2 / 298 K',(85,700,500,100),33)
+        return 'The horizontal axis is logarithmic. One step means ten times Q.'
+    if topic == 'Telescoping sum':
+        terms=('1 - 1/2','1/2 - 1/3','1/3 - 1/4','...','1/10 - 1/11')
+        for i,line in enumerate(terms):
+            y=395+i*82
+            block(d,line,(120,y,480,72),40,color=accent if i in (0,4) else WHITE)
+            if i in (1,2) and (revealed or t>i*.8):
+                d.line((115,y+29,115+300*ease((t-i*.8)/.5),y+29),fill=ORANGE,width=4)
+        return 'The middle fractions cancel. Keep the two endpoints.'
+    if topic == 'Conditional probability':
+        for i,label in enumerate(('HH','HT','TH','TT')):
+            x=100+(i%2)*260;y=420+(i//2)*195
+            col=ORANGE if i==0 else accent
+            d.rounded_rectangle((x,y,x+210,y+150),radius=18,fill=PANEL,outline=col,width=3)
+            block(d,label,(x+45,y+40,150,75),52,color=col)
+            if i==3:
+                f=ease(t/2)
+                d.line((x+18,y+18,x+18+174*f,y+18+114*f),fill=ORANGE,width=5)
+        return 'TT is excluded. One of the three equally likely outcomes is HH.'
+    # Animated worked proof for topics without a physical simulation. Never
+    # reuse a diagram whose equations or parameters belong to a different topic.
+    d.rounded_rectangle((64,375,642,885),radius=24,fill=PANEL,outline='#39434c',width=2)
+    tag(d,'THE GIVEN',86,395,accent)
+    block(d,c['question'],(86,455,525,155),32,bold=False)
+    if revealed:
+        tag(d,'THE MOVE',86,625,ORANGE)
+        block(d,c['solution'],(86,680,525,180),30,bold=False)
+    else:
+        # An advancing underline leads the eye to the question, not a long timer.
+        d.line((86,670,86+500*ease(min(t/4,1)),670),fill=ORANGE,width=5)
+        block(d,'What would you try first?',(86,730,500,100),35,color=accent)
+    return c.get('why',c.get('rule',c['solution']))
 
 
 @lru_cache(maxsize=1)
@@ -232,22 +290,19 @@ def frame(c,plan,t):
     d.text((54,96),'JE',font=font(32,True),fill=ORANGE)
     d.text((112,105),'JEEEDGE   /   '+c['subject'],font=font(17,True),fill=MUTED)
     d.text((565,106),f'{phase+1:02d} / 04',font=font(17),fill=MUTED)
-    hooks=storyboard.HOOKS.get(c['topic'],(c['topic'],)*3)
-    title=hooks[plan['hook_index']]
+    title=plan.get('hook') or hooks.opening(c)
     if phase==0:
-        title=('SPOT THE TRAP' if plan['format']=='spot_trap' else title)
-        if plan['format']=='spot_trap':subtitle=c['trap']
-        elif plan['format']=='compare':subtitle='Compare what changes. Predict the result.'
-        else:subtitle='Make your prediction before the reveal.'
+        # Preserve the actual editorial hook for every visual format.
+        subtitle=c['question'] if c['topic'] in storyboard.DIAGRAM_TOPICS else 'Choose your method before the reveal.'
     elif phase==1:
         title={'Projectile range':'SAME RANGE.', 'Vertical throw':'v = 0.  g IS NOT.',
             'Kinetic energy scaling':'ENERGY x9.', 'Dilution':'SAME SOLUTE.',
             'First-order half-life':'HALVE WHAT REMAINS.', 'Odd-function integral':'THEY CANCEL.',
             'Even-function integral':'DOUBLE ONE HALF.', 'Difference of squares':'ONE RECTANGLE.',
-            'Limiting reagent':'H2 RUNS OUT.'}.get(c['topic'],'WATCH THE RULE.')
+            'Limiting reagent':'H2 RUNS OUT.'}.get(c['topic'],c['answer'])
         subtitle=c['rule']
     elif phase==2:
-        title='YOUR TURN.';subtitle=c['question']
+        title='PUT IT TO WORK.';subtitle=c['question']
     else:title='KEEP THE CONDITION.';subtitle=c['condition']
     starts=(0,reveal,example,recap);age=t-starts[phase]
     # A restrained slide-in at scene boundaries; diagrams keep their full scale.
@@ -256,7 +311,7 @@ def frame(c,plan,t):
         sim=t if phase==0 else (t-reveal+3)
         note=experiment(d,c,sim,phase==1,accent,plan['format'])
         if phase==0:
-            block(d,subtitle,(54,950,570,105),28,color=WHITE,bold=False)
+            block(d,subtitle,(54,940,570,180),28,color=WHITE,bold=False)
             remaining=max(1,math.ceil(reveal-t))
             d.arc((555,1050,609,1104),-90,-90+360*(1-t/reveal),fill=ORANGE,width=4)
             d.text((572,1064),str(remaining),font=font(21,True),fill=WHITE)
@@ -264,23 +319,26 @@ def frame(c,plan,t):
             if c.get('why') and age >= 3:
                 block(d,'WHY: '+c['why'],(54,950,570,185),28,color=WHITE,bold=False)
             else:
-                block(d,note,(54,950,570,100),29,color=ORANGE)
-                block(d,c['condition'],(54,1060,540,77),22,color=MUTED,bold=False)
+                block(d,note,(54,945,570,190),29,color=ORANGE)
     elif phase==2:
         block(d,subtitle,(54,385,570,180),36)
-        if age<2:
+        if age<3:
             for j in range(3):d.ellipse((288+j*44,640,306+j*44,658),fill=ORANGE if age>(j*.5) else '#363a44')
             block(d,'Pause. Try it.',(54,765,540,75),42,color=ORANGE)
         else:
-            d.rounded_rectangle((54,610,624,748),radius=22,fill=PANEL,outline=ORANGE,width=2)
-            block(d,c['answer'],(80,643,515,88),52,color=ORANGE)
-            block(d,c['solution'],(54,800,570,265),32,bold=False)
+            d.rounded_rectangle((54,610,624,1090),radius=22,fill=PANEL,outline=ORANGE,width=2)
+            block(d,c['answer']+'\n\n'+c['solution'],(80,643,515,400),32,bold=False)
     else:
         block(d,c['rule'],(54,380,570,210),39)
         tag(d,'ONLY WHEN',54,640,accent)
         block(d,subtitle,(54,700,570,160),29,bold=False)
         block(d,'Watch out: '+c['trap'],(54,895,570,110),26,color=ORANGE,bold=False)
         block(d,'Replay and predict it.' if plan['ending']=='challenge' else 'Explain why the method works.',(54,1060,550,70),24,color=WHITE)
+    for cue in plan.get('subtitles', []):
+        if cue['start'] <= t < cue['end']:
+            d.rounded_rectangle((44,1005,638,1140),radius=18,fill='#08090c',outline=accent,width=1)
+            block(d,cue['text'],(62,1023,558,108),33,bold=True)
+            break
     for j in range(4):
         x=54+j*146;d.rounded_rectangle((x,1160,x+134,1164),radius=2,fill='#30343e')
         a=starts[j];b=(reveal,example,recap,28)[j];f=max(0,min(1,(t-a)/(b-a)))

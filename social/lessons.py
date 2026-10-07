@@ -4,9 +4,16 @@ AI may package these lessons, but cannot replace their formulas or worked answer
 """
 from datetime import date
 import math
+import json
+from pathlib import Path
+
+EXTRA = json.loads(Path(__file__).with_name("knowledge.json").read_text())
+TOTAL = 30 + len(EXTRA)
 
 
 def lesson(day, index):
+    if index >= 30:
+        return dict(EXTRA[(index - 30) % len(EXTRA)])
     serial = date.fromisoformat(day).toordinal()
     k = (serial + index) % 30
     n = 2 + (serial * 7 + index) % 11
@@ -52,6 +59,6 @@ def lesson(day, index):
 def visual_lesson(day, ordinal):
     """Rotate supported visual concepts; no duplicate Reel topic within a 10-Reel day."""
     from social.storyboard import VISUAL_TOPICS
-    pool={item['topic']:item for item in (lesson(day,i) for i in range(30))}
+    pool={item['topic']:item for item in (lesson(day,i) for i in range(TOTAL))}
     topic=VISUAL_TOPICS[(date.fromisoformat(day).toordinal()*10+ordinal)%len(VISUAL_TOPICS)]
     return pool[topic]

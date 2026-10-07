@@ -16,7 +16,7 @@ def test_projectiles_share_range_but_not_flight_height():
 
 
 def test_all_lesson_layouts_and_motion():
-    for index in range(30):
+    for index in range(lessons.TOTAL):
         c=lessons.lesson('2026-10-06',index)
         for second in (0,6,10,15,18,25):
             assert reel.frame(c,{'hook':c['topic']},second).size == (720,1280)
@@ -34,7 +34,7 @@ def test_audio_tampering_holds_render(tmp_path,monkeypatch):
 
 @pytest.mark.skipif(not shutil.which('ffmpeg'),reason='FFmpeg not installed')
 def test_real_reel_has_audible_licensed_music(tmp_path):
-    content=next(lessons.lesson('2026-10-06',i) for i in range(30)
+    content=next(lessons.lesson('2026-10-06',i) for i in range(lessons.TOTAL)
                  if lessons.lesson('2026-10-06',i)['topic']=='Projectile range')
     output=reel.render(content,tmp_path)
     probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_streams','-of','json',str(output)]))

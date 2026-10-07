@@ -39,24 +39,25 @@ DEPTH = {
 
 
 def enrich(content):
+    if content.get('why'):
+        return dict(content)
     why, question, answer = DEPTH[content['topic']]
     return {**content, 'why': why, 'transfer_question': question, 'transfer_answer': answer}
 
 
 def daily_plan(day, count, reels):
-    """Rotate four topics per subject with no overlap on consecutive days.
+    """Twenty distinct topics per subject; four per day, a five-day rotation.
 
-    Visual topics are spread through each subject ring, ensuring every 12-topic
-    day offers at least four supported animations. Smaller schedules use a subset.
+    Saved job snapshots remain immutable. All topics have an authored visual
+    proof board; physical diagrams are used only for supported simulations.
     """
-    from social.storyboard import VISUAL_TOPICS
     serial = date.fromisoformat(day).toordinal()
-    rings = ((1,0,3,2,4,5,6,8,7,9), (11,10,12,15,13,14,17,18,16,19),
-             (21,20,23,25,22,26,24,29,27,28))
-    pool = {int(c['lesson_id'].split(':')[0]): c for c in (lessons.lesson(day,i) for i in range(30))}
-    groups = [[pool[ring[(serial*4+j)%10]] for j in range(4)] for ring in rings]
+    pool = {int(c['lesson_id'].split(':')[0]): c for c in (lessons.lesson(day,i) for i in range(lessons.TOTAL))}
+    rings = [tuple(x for pair in zip(range(s*10,s*10+10),range(30+s*10,40+s*10)) for x in pair) for s in range(3)]
+    groups = [[pool[ring[(serial*4+j)%20]] for j in range(4)] for ring in rings]
     candidates = [groups[s][j] for j in range(4) for s in range(3)]
-    visual = [c for c in candidates if c['topic'] in VISUAL_TOPICS]
+    from social.storyboard import DIAGRAM_TOPICS
+    visual = sorted(candidates, key=lambda c: c['topic'] not in DIAGRAM_TOPICS)
     # Interleaved subjects keep the Reel subset varied too.
     video_choices = visual[:reels]
     video_indices = [i for i in range(count) if (i+1)*reels//count > i*reels//count]

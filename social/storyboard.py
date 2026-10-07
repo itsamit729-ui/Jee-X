@@ -1,7 +1,6 @@
-"""Groq chooses a bounded visual story, never equations, geometry or executable code."""
+"""Authored visual direction; model budget belongs to the editorial quality gate."""
 import hashlib
-import json
-from social import editorial, worker
+from social import lessons, hooks
 
 VISUAL_TOPICS = ('Projectile range', 'Vertical throw', 'Uniform circular motion',
     'Wave speed', 'Kinetic energy scaling', 'Dilution', 'First-order half-life',
@@ -21,6 +20,12 @@ HOOKS = {
  'Difference of squares': ('Can you solve this by moving shapes?', 'Two squares. One rectangle.', 'Stop expanding both squares.'),
  'Limiting reagent': ('Which reactant runs out first?', 'Count reaction groups, not molecules.', 'The smaller amount can fool you.'),
 }
+DIAGRAM_TOPICS = VISUAL_TOPICS + ('Stopping distance','Photoelectric threshold','Weak acid dilution','Nernst shift','Telescoping sum','Conditional probability')
+VISUAL_TOPICS = tuple(dict.fromkeys(c['topic'] for c in (lessons.lesson('2026-10-07',i) for i in range(lessons.TOTAL))))
+for _topic in VISUAL_TOPICS:
+    if _topic not in HOOKS:
+        _c = next(c for c in (lessons.lesson('2026-10-07',i) for i in range(lessons.TOTAL)) if c['topic']==_topic)
+        HOOKS[_topic] = (hooks.opening(_c),)*3
 FORMATS=('predict','compare','spot_trap')
 
 
@@ -38,27 +43,10 @@ def validate(value,content):
 
 
 def plan(content):
-    base=fallback(content)
-    if content['topic'] not in VISUAL_TOPICS:return base
-    try:
-        value=editorial.call('Direct a 28-second visual JEE Reel. Select one format: predict '
-            '(experiment then answer), compare (side-by-side observation then answer), or spot_trap '
-            '(misconception then experiment and correction). Select the strongest authored hook index. '
-            'Brisk holds the experiment 8 seconds; steady 10. Select blue or cream secondary accent '
-            'and save or challenge ending. Never add fields, formulas or instructions. '
-            +json.dumps({k:content[k] for k in ('topic','rule','condition','trap')})
-            +' Hooks: '+json.dumps(HOOKS[content['topic']]),
-            {'type':'object','properties':{
-                'format':{'type':'string','enum':list(FORMATS)},'hook_index':{'type':'integer','enum':[0,1,2]},
-                'pace':{'type':'string','enum':['brisk','steady']},'accent':{'type':'string','enum':['blue','cream']},
-                'ending':{'type':'string','enum':['save','challenge']}},
-             'required':['format','hook_index','pace','accent','ending'],'additionalProperties':False},
-            max_tokens=512)
-        if validate(value,content):return {**value,'source':'groq'}
-    except (worker.ServiceError,ValueError,KeyError,IndexError,TypeError):pass
-    return base
+    # Spend the model budget on the hook and teacher review, not choosing
+    # cosmetic enums. Exact diagrams and scene timing are authored and tested.
+    return fallback(content)
 
 
 def beats(plan):
-    reveal=8 if plan['pace']=='brisk' else 10
-    return (reveal,17,23,28)
+    return (4,17,23,28)

@@ -343,19 +343,24 @@ def run_job(day, owner):
         recent_captions = [p.get('text') or '' for p in recent
             if any(f'JeeEdge daily {d} / ' in (p.get('text') or '') for d in (calendar_day, yesterday))]
         copy = editorial.package(content, 'reel' if video else 'carousel', recent=recent_captions)
+        logging.getLogger('uvicorn.error').info(
+            'JeeEdge content slot=%s bank=v2 topic=%s format=%s editorial=%s hook_chars=%d',
+            day, content['topic'], 'reel' if video else 'carousel',
+            copy.get('editorial_source','unknown'), len(copy['hook']))
         if editorial.repeated(copy['caption'], recent_captions):
             raise worker.ServiceError('Caption repeats a recent lesson; holding this slot for content review.')
         if video:
             copy['storyboard']=storyboard.plan(content)
+            copy['storyboard']['hook'] = copy['hook']
             if slot == MANUAL_REEL_SLOT:
-                # More time for the explanation; does not increase speech speed cap.
+                # Preserve a stable style for the manual test; voice still has a 1.3x speed cap.
                 copy['storyboard']['pace']='brisk'
         with TemporaryDirectory(prefix='jeeedge-social-') as directory:
             if video:
                 copy['voice_clips'] = narration.prepare(content, copy['storyboard'], directory, social_speech.fetch)
                 logging.getLogger('uvicorn.error').info('JeeEdge Reel slot=%s narration_clips=%d audio=%s', day, len(copy['voice_clips']), 'voice_and_music' if copy['voice_clips'] else 'music_only')
-            if slot == MANUAL_REEL_SLOT and len(copy.get('voice_clips', [])) != 2:
-                raise worker.ServiceError('Narrated test held: both voice clips must be valid and fit their scenes. Nothing sent to Buffer; inspect JeeEdge TTS logs before retrying.')
+            if slot == MANUAL_REEL_SLOT and len(copy.get('voice_clips', [])) != len(narration.scenes(content, copy['storyboard'])):
+                raise worker.ServiceError('Narrated test held: all narration scenes must be valid and fit their scenes. Nothing sent to Buffer; inspect JeeEdge TTS logs before retrying.')
             ticket = budget.reserve('render', units=180)
             started = time.monotonic()
             paths = [reel.render(content, directory, copy)] if video else worker.render(content, copy, directory)

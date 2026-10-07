@@ -20,13 +20,13 @@ def test_daily_plan_balanced_unique_and_no_next_day_repeat():
 
 
 def test_all_authored_content_and_renders(tmp_path):
-    for i in range(30):
+    for i in range(lessons.TOTAL):
         c=quality.enrich(lessons.lesson('2026-10-07',i))
         assert c['why'] and c['transfer_question'] and c['transfer_answer']
         copy=editorial.authored(c)
         assert len(copy['caption']) < 1200
         paths=worker.render(c,copy,tmp_path/str(i))
-        assert len(paths)==8
+        assert len(paths)==6
 
 
 def test_repeated_captions_ignore_tracking_numbers_and_music():
@@ -38,7 +38,7 @@ def test_repeated_captions_ignore_tracking_numbers_and_music():
 
 def test_richer_reel_reasoning_fits_every_visual_topic():
     from social import cinema
-    for i in range(30):
+    for i in range(lessons.TOTAL):
         c=quality.enrich(lessons.lesson('2026-10-07',i))
         if c['topic'] in storyboard.VISUAL_TOPICS:
             for pace in ('brisk','steady'):

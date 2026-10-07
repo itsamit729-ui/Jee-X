@@ -260,14 +260,12 @@ def render(content, copy, output_dir=None):
                  ('YOUR REVISION CARD', content['rule'] + '\n\n' + content['condition'], 'Save this for your next mock')]
     if content.get('why') and content.get('transfer_question'):
         cards = [
-            ('CONCEPT LAB / ' + content['subject'], copy['hook'], 'A method, its limits, and two reasoning checks'),
-            (content['topic'].upper(), content['rule'], 'The method'),
+            ('ONE IDEA / ' + content['subject'], copy['hook'], 'Predict. Understand. Test the exception.'),
+            ('THE SHORTEST VALID ROUTE', content['answer'] + '\n\n' + content['solution'], 'Check the reasoning, not just the final number.'),
             ('WHY IT WORKS', content['why'], 'Understand the step you would otherwise memorise'),
-            ('CHECK THE CONDITIONS', content['condition'] + '\n\nCommon mistake: ' + content['trap'], 'A shortcut needs the right assumptions'),
-            ('WORKED EXAMPLE', content['question'] + '\n\n' + content['solution'], 'Follow the calculation'),
+            ('WHERE THE SHORTCUT BREAKS', content['condition'] + '\n\nCommon mistake: ' + content['trap'], 'A shortcut needs the right assumptions'),
             ('CHANGE THE SITUATION', content['transfer_question'], 'Pause here. Decide which condition or factor changed.'),
-            ('REASON IT THROUGH', content['transfer_answer'], 'Compare your reasoning with each step'),
-            ('TAKE THIS INTO YOUR NEXT TEST', content['rule'] + '\n\n' + content['condition'], 'Check the assumptions before applying the rule'),
+            ('THE ANSWER + REUSABLE METHOD', content['transfer_answer'] + '\n\n' + content['rule'], 'Take the method and its conditions into your next test.'),
         ]
     paths = []
     for index, (label, body, footer) in enumerate(cards):
@@ -285,10 +283,10 @@ def render(content, copy, output_dir=None):
         diagram = None
         if label == 'WHY IT WORKS':
             from social import cinema, storyboard
-            if content['topic'] in storyboard.VISUAL_TOPICS:
+            if content['topic'] in storyboard.DIAGRAM_TOPICS:
                 plan = storyboard.fallback(content)
                 diagram = cinema.frame(content, plan, 11).crop((56,375,658,880)).resize((660,554))
-        size = 64 if index == 0 else 42 if diagram else 49
+        size = 64 if index == 0 else 42 if diagram else 59
         while size >= 28:
             face = font(size, index in (0, 3))
             lines = wrapped(draw, body, face, 930)
@@ -301,6 +299,13 @@ def render(content, copy, output_dir=None):
         for line in lines:
             draw.text((66, y), line, font=face, fill='#f6f3ee')
             y += size + 18
+        if index == 0 and content.get('why'):
+            panel_y = max(710, y + 35)
+            if panel_y < 865:
+                draw.rounded_rectangle((64,panel_y,1016,1120),radius=24,fill='#202a31',outline='#8ecfdf',width=2)
+                draw.text((90,panel_y+23),'THE CHALLENGE',font=font(23,True),fill='#8ecfdf')
+                from social.cinema import block
+                block(draw,content['question'],(90,panel_y+78,900,1120-panel_y-95),39,bold=False)
         if diagram:
             img.paste(diagram, (210,590))
         draw.line((64, 1155, 1016, 1155), fill='#36383f', width=2)

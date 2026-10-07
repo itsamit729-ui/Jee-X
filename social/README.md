@@ -192,19 +192,15 @@ until configured; Buffer publishing credentials alone do not enable comments.
 
 ## Visual-first Reel renderer (October 7 update)
 
-New Reel slots rotate through 12 dedicated animated concepts, 10 distinct topics
-in the older 10-Reel configuration. The current daily plan selects four supported animations. Carousels retain the broader authored lesson pool. Existing saved
-lesson snapshots are reused during retries so changing the renderer never changes
-the question attached to an already generated job.
+The current bank has 60 topics. Eighteen have dedicated diagrams; remaining
+concepts use an animated worked proof. The daily plan prefers supported diagrams
+for the four Reel positions. Frozen lesson snapshots are preserved on retries.
 
-Groq makes one additional small structured call per Reel (maximum 512 completion
-tokens) to select a supported story format, authored hook, pace, accent and ending.
-No executable code, geometry, equations or arbitrary external media come from the
-model. Selection validation and deterministic authored fallback keep generation
-working when AI output fails or quotas are exhausted. Typical full daily target
-now makes 70 editorial/storyboard calls, plus any comment calls, sharing the same
-persistent Groq budget. Samples use authored plans; no live Groq access is needed
-to preview or test the renderer.
+Groq writes and reviews the hook and caption; it does not generate geometry,
+executable code or arbitrary external media. Visual direction is deterministic.
+A full 12-item day uses at most 24 editorial calls before any retries, plus up to
+12 TTS requests when all clips are uncached. Commenting is independent. Local
+samples use authored hooks and do not establish live provider availability.
 
 Experiments start on the first frame, occupy a larger central area, and render
 at 24 fps (30 fps H.264 output). Story phases are visual prediction/comparison/trap,
@@ -230,10 +226,11 @@ Groq organization on its Free plan: application quotas cannot prevent provider
 billing if someone upgrades the account. No second key or paid-provider fallback.
 Comments are independent and their configuration is unchanged.
 
-Two short authored lines introduce and explain each visual experiment. WAV audio
+Three short narration segments open, explain and reinforce each lesson. WAV audio
 is validated, aligned to scene boundaries, and mixed over quieter licensed music.
 A sentence that cannot fit at at most 1.3x speed is omitted, never truncated.
-No extra LLM calls are used for scripts. Narration is synthetic English speech.
+The opening uses the reviewed editorial hook; explanatory speech is authored.
+No additional script-generation call is required. Narration is synthetic English speech.
 
 Separate durable `groq_tts` budgets: 8 calls/1,000 reserved tokens per minute and
 90 calls/3,200 reserved tokens per rolling 24 hours. UTF-8 input bytes plus 32
@@ -261,7 +258,7 @@ Old same-day submissions count toward the 12-item cap; the worker does not try t
 catch up or send another 12 after deployment. Existing Buffer queue entries are
 not edited, deleted or unscheduled by a deployment: inspect those separately.
 
-Eight-card carousels teach a rule, explain why, state conditions and mistakes,
+Six-card carousels teach a rule, explain why, state conditions and mistakes,
 show a worked example, then ask and solve a second reasoning/boundary-case
 question. Supported concepts have a visual diagram. Reels now explain why the
 animation works during the reveal and end with conditions rather than repeated
@@ -270,7 +267,7 @@ limiting-reagent leftovers, tangent lines and when integral symmetry is invalid.
 These are original exercises, not claimed PYQs or a comprehensive Advanced course.
 
 Groq must produce a topic-specific teaching caption and pass a separate strict
-review (clarity and educational value >=4/5). These scores are editorial filters,
+review (clarity, educational value, hook specificity and payoff >=4/5). These scores are editorial filters,
 not proof of accuracy. The fallback is a complete authored explanation, never
 generic marketing copy. No routine hashtag blocks, tag requests, follow/save
 requests, website/bio links or guaranteed-score claims are appended. Required
@@ -329,7 +326,7 @@ Earlier manual submissions count toward the day's ordinary allowance.
 
 The same locks, provider budgets, publishing hold, queue check, caption check,
 media verification and durable submission fence apply. The test chooses an
-animated topic not already saved today. Both intro and explanation voice clips
+animated topic not already saved today. All three narration scenes
 must validate and fit their scene windows; otherwise it fails BEFORE rendering
 or Buffer submission, with an error on `/api/social/status`. Failed tests back off
 for 30 minutes before a manual retry and have at most three pre-submit attempts.
@@ -340,3 +337,54 @@ URL then restore `/api/social/trigger`). Do NOT schedule `/test-reel` as recurri
 A 202 response means accepted, not published. Inspect the `s99` job in
 `GET /api/social/status` and the `JeeEdge Reel` logs. A successful test is scheduled
 in Buffer about five minutes after generation. No secrets or new services needed.
+
+### Content bank v2 (October 2026)
+
+The live slot worker uses 60 distinct authored lessons (20 per subject): the
+original 30 calculated families plus 30 in `knowledge.json`. The 12-post plan
+rotates through all 60 topics over five days without repeating one inside that
+cycle, with four posts per subject daily. The cap remains eight carousels and
+four Reels. Already saved job snapshots and submitted Buffer posts are preserved.
+
+The additional bank includes optics, magnetic work, photoelectric emission,
+capacitor energy, electrochemistry, weak-acid approximations, buffers, organic
+reaction conditions, coordination charge counting, conditional probability,
+telescoping sums, determinants, limits and integration tricks. Each contains an
+original worked example, reasoning, applicability limits and a transfer problem
+with an answer. These are authored teaching examples, not quoted PYQs. Topic
+scope was checked against NTA's published 2026 Paper 1 syllabus:
+https://jeemain.nta.nic.in/document/syllabus-2026/
+This is a bounded local knowledge bank, not automatic web ingestion or a claim
+of complete syllabus coverage. New material must receive equation and layout
+review before being admitted; the AI cannot rewrite the answer key.
+
+Visual styling is selected deterministically; the old cosmetic storyboard AI
+request is removed. Groq proposes three specific hooks and the caption. A separate teacher review
+uses medium reasoning, up to 1024 completion tokens, and gates clarity,
+educational value, hook specificity and delivered payoff at 4/5. This is an AI
+quality check, not external subject-expert certification. Quota/validation
+failures fall back to the concrete authored hook and teaching caption.
+
+The selected hook now reaches both the first frame and narration. The Reel
+reveals at 4 seconds, explains through 17 seconds, works the example through
+23 seconds, then reinforces conditions through 28 seconds. Eighteen topics have
+specific diagram animations; other topics use a labelled animated worked proof,
+never an unrelated physical simulation. The apex in the vertical-throw reveal
+is now actually at the highest point. Six-slide carousels lead with a challenge,
+then the worked answer, reason, conditions, transfer question and explained answer.
+
+Narration now has three scenes: opening, explanation and worked-example/mistake
+check. All three are required by the manual narrated test; ordinary production
+retains the existing logged music fallback on TTS failure. Successful clips
+produce short on-screen phrase captions distributed across the measured clip
+length; these are approximate phrase timings, not forced-aligned word timings.
+All existing TTS budgets, 1.3x speed cap, speech cache and free-provider limits
+remain in force. `JeeEdge content` logs report the bank, topic, format, editorial
+source and hook length so fallback usage is visible alongside TTS clip counts.
+
+A new release cannot demonstrate account growth by itself. Reach, watch time,
+saves, shares and profile-to-follow conversion must be assessed from actual
+Instagram Insights. This change does not fetch Insights or claim to optimise
+from performance data it cannot observe. Spam flags and follower gains cannot
+be guaranteed by a content generator; repetition checks and the existing
+publishing holds remain active.
