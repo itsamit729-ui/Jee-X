@@ -5,12 +5,12 @@ import re
 from social import worker
 
 
-def call(prompt, schema):
+def call(prompt, schema, max_tokens=1536):
     result = worker.request('https://api.groq.com/openai/v1/chat/completions', method='POST',
         headers={'Authorization': 'Bearer ' + os.environ['GROQ_API_KEY']},
         body={'model': 'openai/gpt-oss-120b', 'messages': [{'role':'user', 'content':prompt}],
               'response_format': {'type':'json_schema', 'json_schema':{'name':'jeeedge_editorial','strict':True,'schema':schema}},
-              'reasoning_effort':'low', 'max_completion_tokens':1536})
+              'reasoning_effort':'low', 'max_completion_tokens':max_tokens})
     choice = result['choices'][0]
     if choice.get('finish_reason') != 'stop':
         raise ValueError('Incomplete editorial response')

@@ -188,3 +188,35 @@ Deploy this commit on the existing Render service. Cron and posting targets are 
 See [COMMENTS.md](COMMENTS.md) for the implemented Meta webhook + Groq reply worker,
 free-tier limits, review inbox and one-time Instagram API connection. It is disabled
 until configured; Buffer publishing credentials alone do not enable comments.
+
+## Visual-first Reel renderer (October 7 update)
+
+New Reel slots rotate through 12 dedicated animated concepts, 10 distinct topics
+per 10-Reel day. Carousels retain the broader authored lesson pool. Existing saved
+lesson snapshots are reused during retries so changing the renderer never changes
+the question attached to an already generated job.
+
+Groq makes one additional small structured call per Reel (maximum 512 completion
+tokens) to select a supported story format, authored hook, pace, accent and ending.
+No executable code, geometry, equations or arbitrary external media come from the
+model. Selection validation and deterministic authored fallback keep generation
+working when AI output fails or quotas are exhausted. Typical full daily target
+now makes 70 editorial/storyboard calls, plus any comment calls, sharing the same
+persistent Groq budget. Samples use authored plans; no live Groq access is needed
+to preview or test the renderer.
+
+Experiments start on the first frame, occupy a larger central area, and render
+at 24 fps (30 fps H.264 output). Story phases are visual prediction/comparison/trap,
+result reveal, worked challenge, and a recap with the rule's conditions. Particle
+motion, trajectories, tangent slopes and rearranged areas are authored. The
+reaction illustration conserves atoms: 3 N2 + 6 H2 produces 4 NH3 + 1 unused N2.
+The square transformation preserves the exact (a-b)(a+b) area of the lesson.
+
+Licensed music remains embedded, with original synthesized transition cues added.
+Automatic caption attribution is retained. No new service, API key or paid voice/
+video generation is required. FFmpeg veryfast encoding, one thread, the 180-second
+render ceiling and 8 MiB output ceiling remain enforced. CPU and data use still
+vary by concept and by Render hardware; the 30-item daily target is conditional.
+
+`social/test_storyboard.py` checks all concepts and story variants for layout,
+actual motion inside the diagram, safe AI fallback, and daily topic diversity.

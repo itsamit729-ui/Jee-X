@@ -47,3 +47,11 @@ def lesson(day, index):
     return {'subject': subject, 'topic': topic, 'rule': rule, 'condition': condition,
             'trap': trap, 'question': question, 'answer': answer, 'solution': solution,
             'lesson_id': f'{k}:{n}'}
+
+
+def visual_lesson(day, ordinal):
+    """Rotate supported visual concepts; no duplicate Reel topic within a 10-Reel day."""
+    from social.storyboard import VISUAL_TOPICS
+    pool={item['topic']:item for item in (lesson(day,i) for i in range(30))}
+    topic=VISUAL_TOPICS[(date.fromisoformat(day).toordinal()*10+ordinal)%len(VISUAL_TOPICS)]
+    return pool[topic]

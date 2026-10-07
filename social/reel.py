@@ -6,9 +6,9 @@ import time
 from functools import lru_cache
 from pathlib import Path
 from PIL import Image, ImageDraw
-from social import worker, motion
+from social import worker, motion, cinema, storyboard, sound
 MAX_VIDEO_BYTES = 8 * 1024 * 1024
-FPS = 12
+FPS = 24
 DURATION = 28
 AUDIO = Path(__file__).with_name('audio') / 'carefree-28s.mp3'
 MANIFEST = AUDIO.with_name('license.json')
@@ -17,7 +17,7 @@ MANIFEST = AUDIO.with_name('license.json')
 def music_credit():
     data = json.loads(MANIFEST.read_text())
     return (f'Music: "{data["title"]}" by {data["artist"]} ({data["source"]}). '
-            f'CC BY 4.0: {data["license"]}. Excerpt; volume and fades adjusted.')
+            f'CC BY 4.0: {data["license"]}. Excerpt; volume and fades adjusted. Original synthesized cues by JeeEdge.')
 
 
 def verified_audio():
@@ -45,46 +45,19 @@ def text_block(draw, text, y, height, size=34, color='#f6f3ee'):
 
 
 def frame(content, copy, seconds):
-    image = Image.new('RGB',(720,1280),'#141519')
-    d = ImageDraw.Draw(image)
-    d.text((62,150),'JeeEdge / '+content['subject'],font=face(24,True),fill=motion.ORANGE)
-    modeled = content.get('topic') in motion.TOPICS
-    if seconds < 6:
-        label='CAN YOU SPOT THE SHORTCUT?'
-        text_block(d,copy.get('hook',content.get('topic','Quick JEE challenge')),300,160,42)
-        text_block(d,content['question'],505,340,36)
-        d.text((62,950),f'{max(1,6-int(seconds))} seconds to think',font=face(26,True),fill=motion.ORANGE)
-    elif seconds < 16:
-        label='WATCH THE CONCEPT' if modeled else 'THE RULE + ITS LIMITS'
-        if modeled:
-            motion.draw_model(image,content,seconds-6)
-            text_block(d,motion.caption(content),710,105,27,color=motion.ORANGE)
-            text_block(d,content['rule'],830,115,26)
-            text_block(d,content['condition'],960,85,21,color=motion.MUTED)
-        else:
-            text_block(d,content.get('rule',content['answer']),330,310,40)
-            # Stage the second block so viewers can follow the rule before its limits.
-            if seconds >= 9:
-                text_block(d,content.get('condition',content['solution']),700,285,32,color=motion.ORANGE)
-    elif seconds < 24:
-        label='NOW APPLY IT'
-        text_block(d,content['answer'],320,180,46,color=motion.ORANGE)
-        if seconds >= 17.5:
-            text_block(d,content['solution'],550,390,34)
-    else:
-        label='SAVE THIS FOR REVISION'
-        text_block(d,'Watch out: '+content.get('trap','Check units and signs.'),330,380,38)
-        text_block(d,'Follow @jeeedge for more JEE shortcuts',830,120,30,color=motion.ORANGE)
-    d.text((62,235),label,font=face(23,True),fill=motion.WHITE)
-    d.rounded_rectangle((62,1090,642,1096),radius=3,fill='#34383d')
-    d.rectangle((62,1090,62+int(580*seconds/DURATION),1096),fill=motion.ORANGE)
-    return image
+    plan=(copy or {}).get('storyboard')
+    if not storyboard.validate(plan,content):plan=storyboard.fallback(content)
+    return cinema.frame(content,plan,seconds)
 
 
 def render(content, directory, copy=None):
     started = time.monotonic()
     audio = verified_audio()
     directory = Path(directory)
+    plan=(copy or {}).get('storyboard')
+    if not storyboard.validate(plan,content):plan=storyboard.fallback(content)
+    copy={**(copy or {}),'storyboard':plan}
+    effects=sound.render(directory/'effects.wav',plan)
     frames = directory / 'frames'
     frames.mkdir()
     try:
@@ -97,9 +70,11 @@ def render(content, directory, copy=None):
     output = directory / 'reel.mp4'
     command = ['ffmpeg','-hide_banner','-loglevel','error','-nostdin','-y',
                '-threads','1','-framerate',str(FPS),'-i',str(frames/'%04d.jpg'),
-               '-i',str(audio),'-t',str(DURATION),'-map','0:v:0','-map','1:a:0',
-               '-af','volume=0.35,afade=t=in:d=0.7,afade=t=out:st=26:d=2',
-               '-c:v','libx264','-threads','1','-filter_threads','1','-preset','ultrafast',
+               '-i',str(audio),'-i',str(effects),'-t',str(DURATION),'-map','0:v:0','-map','[mix]',
+               '-filter_complex_threads','1','-filter_complex',
+               '[1:a]volume=0.24,afade=t=in:d=0.5,afade=t=out:st=26:d=2[m];'
+               '[m][2:a]amix=inputs=2:normalize=0,alimiter=limit=0.8[mix]',
+               '-c:v','libx264','-threads','1','-filter_threads','1','-preset','veryfast',
                '-crf','26','-pix_fmt','yuv420p','-r','30','-c:a','aac','-b:a','96k',
                '-movflags','+faststart',str(output)]
     try:

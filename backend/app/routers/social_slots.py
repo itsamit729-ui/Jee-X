@@ -19,7 +19,7 @@ from app.database import SessionLocal
 from app.models.social_job import SocialSlot as SocialJob, SocialAsset as SocialMedia, SocialDispatch
 from app.models.social_job import SocialJob as LegacyJob
 from app.routers.social import media as legacy_media
-from social import worker, reel, lessons, editorial
+from social import worker, reel, lessons, editorial, storyboard
 from app.services import social_budget as budget
 from app.services import instagram_comments as comments
 from PIL import Image
@@ -74,7 +74,11 @@ def is_reel(slot):
 
 def slot_problem(key):
     day, slot = key.split(':')
-    return lessons.lesson(day, int(slot[1:]))
+    index=int(slot[1:])
+    if is_reel(slot):
+        ordinal=(index+1)*reel_target()//daily_target()-1
+        return lessons.visual_lesson(day,ordinal)
+    return lessons.lesson(day,index)
 
 
 def tracked(function):
@@ -282,9 +286,16 @@ def run_job(day, owner):
             return
         if sum(p['status'] in ('scheduled', 'sending') for p in recent) >= 9:
             raise worker.ServiceError('Buffer queue near capacity; waiting.')
-        content = slot_problem(day)
+        # Preserve any existing generation snapshot across a renderer rollout.
+        from app.models.social_comment import SocialLesson
+        import json
+        with SessionLocal() as db:
+            saved=db.get(SocialLesson,day)
+            content=json.loads(saved.content) if saved else slot_problem(day)
         video = is_reel(slot)
         copy = editorial.package(content, 'reel' if video else 'carousel')
+        if video:
+            copy['storyboard']=storyboard.plan(content)
         with TemporaryDirectory(prefix='jeeedge-social-') as directory:
             ticket = budget.reserve('render', units=180)
             started = time.monotonic()

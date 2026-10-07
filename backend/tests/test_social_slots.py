@@ -34,6 +34,7 @@ def setup(monkeypatch):
     monkeypatch.setattr(social, 'local_now', lambda: clock[0])
     monkeypatch.setattr(social.worker, 'find_channel', lambda: ('org', {'id':'channel'}))
     monkeypatch.setattr(social.worker, 'posts', lambda *a: [])
+    monkeypatch.setattr(social.storyboard,'plan',social.storyboard.fallback)
     monkeypatch.setattr(social.editorial, 'package', lambda *a: {'hook':'Try this', 'caption':'Solve and swipe.'})
     def render(content, copy, directory):
         paths=[]
@@ -84,7 +85,9 @@ def test_thirty_slots_and_retry_no_duplicates(setup):
     assert len(set(p['text'].splitlines()[-1] for p in submitted))==30
     assert all('bio' not in p['text'] for p in submitted)
     assert all(j['state']=='published' for j in client.get('/api/social/status',headers=AUTH).json()['jobs'])
-    assert len({social.slot_problem(f'2026-10-06:s{i:02d}')['topic'] for i in range(30)})==30
+    reel_topics=[social.slot_problem(f'2026-10-06:s{i:02d}')['topic'] for i in range(30) if social.is_reel(f's{i:02d}')]
+    assert len(set(reel_topics))==10
+    assert set(reel_topics)<=set(social.storyboard.VISUAL_TOPICS)
 
 
 def test_media_head_range_and_format(setup):
