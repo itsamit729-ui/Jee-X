@@ -56,7 +56,7 @@ def setup(monkeypatch):
             return {'post':{'id':variables['id'], 'status':'sent'}}
         payload=variables['input'];submitted.append(payload)
         with factory() as db:
-            key=social.today()+':'+social.current_slot()
+            key=social.today()+':'+payload['text'].splitlines()[-1].split(' / ')[-1]
             assert db.get(SocialSlot,key).state=='submitting'
         return {'createPost':{'post':{'id':'p'+str(len(submitted)), 'status':'scheduled'}}}
     monkeypatch.setattr(social.worker, 'buffer', buffer)
@@ -268,3 +268,73 @@ def test_old_failed_slot_cannot_exceed_reduced_daily_cap(setup):
         db.commit()
     assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='daily_limit'
     assert not submitted
+
+
+
+def enable_test_voice(monkeypatch):
+    from social.test_narration import wav
+    monkeypatch.setattr(social.social_speech,'fetch',lambda text:wav())
+
+
+def test_manual_narrated_reel_outside_window_and_idempotency(setup,monkeypatch):
+    client,factory,clock,submitted=setup
+    clock[0]=clock[0].replace(hour=23,minute=10)
+    enable_test_voice(monkeypatch)
+    result=client.post('/api/social/test-reel',headers=AUTH)
+    assert result.status_code==202 and result.json()['slot']=='s99'
+    assert len(submitted)==1 and submitted[0]['metadata']['instagram']['type']=='reel'
+    for _ in range(3):
+        client.post('/api/social/test-reel',headers=AUTH)
+    assert len(submitted)==1
+    assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='idle'
+
+
+def test_manual_requires_both_voice_clips_and_no_retry_storm(setup,monkeypatch):
+    client,factory,clock,submitted=setup
+    result=client.post('/api/social/test-reel',headers=AUTH)
+    assert result.status_code==202 and not submitted
+    with factory() as db:
+        job=db.get(SocialSlot,'2026-10-06:s99')
+        assert job.state=='failed' and 'both voice clips' in job.error
+    retry=client.post('/api/social/test-reel',headers=AUTH).json()
+    assert 'retry_after' in retry and retry['attempts']==1
+    with factory() as db:
+        job=db.get(SocialSlot,'2026-10-06:s99')
+        job.updated_at=datetime.utcnow()-timedelta(minutes=31)
+        db.commit()
+    from social.test_narration import wav
+    calls=[]
+    def one_clip(text):
+        calls.append(text)
+        return wav() if len(calls)==1 else None
+    monkeypatch.setattr(social.social_speech,'fetch',one_clip)
+    client.post('/api/social/test-reel',headers=AUTH)
+    assert not submitted
+
+
+def test_manual_respects_auth_pause_and_delivery_hold(setup,monkeypatch):
+    client,_,_,submitted=setup
+    assert client.post('/api/social/test-reel').status_code==401
+    monkeypatch.setenv('SOCIAL_TTS_ENABLED','false')
+    assert client.post('/api/social/test-reel',headers=AUTH).status_code==503
+    monkeypatch.setenv('SOCIAL_TTS_ENABLED','true')
+    monkeypatch.setenv('SOCIAL_PAUSED','true')
+    assert client.post('/api/social/test-reel',headers=AUTH).status_code==503
+    monkeypatch.setenv('SOCIAL_PAUSED','false')
+    social.budget.cache('publishing-hold',{'reason':'review'},86400)
+    assert client.post('/api/social/test-reel',headers=AUTH).json()['state']=='delivery_hold'
+    assert not submitted
+
+
+def test_only_one_manual_exception_after_twelve_regular_submissions(setup,monkeypatch):
+    client,factory,clock,submitted=setup
+    enable_test_voice(monkeypatch)
+    with factory() as db:
+        for i in range(12):
+            db.add(SocialSlot(day=f'2026-10-06:s{i:02d}',owner='old',state='published',updated_at=datetime.utcnow(),attempts=1,post_id=str(i)))
+        db.commit()
+    client.post('/api/social/test-reel',headers=AUTH)
+    client.post('/api/social/test-reel',headers=AUTH)
+    assert len(submitted)==1
+    with factory() as db:
+        assert db.query(SocialSlot).count()==13

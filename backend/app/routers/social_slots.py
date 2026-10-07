@@ -29,6 +29,7 @@ from PIL import Image
 router = APIRouter(prefix='/api/social', tags=['social'])
 # This is the backend origin, not a caller-controlled Host header or frontend URL.
 MEDIA_ORIGIN = 'https://jee-edge.onrender.com'
+MANUAL_REEL_SLOT = 's99'  # Reserved; never selected by the automatic schedule.
 
 
 def authorize(authorization: str = Header(default='')):
@@ -70,6 +71,8 @@ def current_slot():
 
 
 def is_reel(slot):
+    if slot == MANUAL_REEL_SLOT:
+        return True
     index = int(slot[1:])
     return (index+1)*reel_target()//daily_target() > index*reel_target()//daily_target()
 
@@ -157,16 +160,27 @@ def media(media_id: str, extension: str, request: Request):
 
 @router.post('/trigger', status_code=202, dependencies=[Depends(authorize)])
 def trigger(tasks: BackgroundTasks):
+    return dispatch(tasks)
+
+
+@router.post('/test-reel', status_code=202, dependencies=[Depends(authorize)])
+def test_reel(tasks: BackgroundTasks):
+    return dispatch(tasks, manual_reel=True)
+
+
+def dispatch(tasks, manual_reel=False):
     if os.getenv('SOCIAL_PAUSED', '').lower() == 'true':
         raise HTTPException(503, 'Social automation is paused')
     if any(not os.getenv(key) for key in ('GROQ_API_KEY', 'BUFFER_API_KEY')):
         raise HTTPException(503, 'GROQ_API_KEY and BUFFER_API_KEY must be configured')
-    if comments.enabled():
+    if manual_reel and os.getenv('SOCIAL_TTS_ENABLED', 'true').strip().lower() != 'true':
+        raise HTTPException(503, 'Enable SOCIAL_TTS_ENABLED before requesting a narrated test Reel')
+    if not manual_reel and comments.enabled():
         tasks.add_task(comments.drain_safe)
     hold = budget.cached('publishing-hold')
     if hold:
         return {'state': 'delivery_hold', **hold}
-    slot = current_slot()
+    slot = MANUAL_REEL_SLOT if manual_reel else current_slot()
     if slot is None:
         return {'state': 'idle', 'next_slot': '07:00 Asia/Kolkata'}
     day, owner, now = today() + ':' + slot, uuid.uuid4().hex, datetime.utcnow()
@@ -185,7 +199,7 @@ def trigger(tasks: BackgroundTasks):
             return status_data(active)
         legacy = db.get(LegacyJob, today())
         job = db.get(SocialJob, day)
-        if job is None or job.state == 'failed':
+        if not manual_reel and (job is None or job.state == 'failed'):
             # Existing same-day submissions count toward the new target during migration.
             used = db.query(SocialJob).filter(SocialJob.day.startswith(today()+':'),
                 SocialJob.state != 'failed').count()
@@ -203,6 +217,8 @@ def trigger(tasks: BackgroundTasks):
                 db.rollback()
                 return status_data(db.get(SocialJob, day))
         else:
+            if manual_reel and job.state == 'failed' and job.updated_at > now-timedelta(minutes=30):
+                return {**status_data(job), 'retry_after': (job.updated_at+timedelta(minutes=30)).isoformat()+'Z'}
             # Reclaim only pre-submission failures or expired generation leases.
             eligible = job.state == 'failed' or (job.state == 'running' and job.updated_at < now - timedelta(minutes=15))
             if not eligible or job.attempts >= 3:
@@ -308,7 +324,18 @@ def run_job(day, owner):
         import json
         with SessionLocal() as db:
             saved=db.get(SocialLesson,day)
-            content=json.loads(saved.content) if saved else slot_problem(day)
+            if saved:
+                content=json.loads(saved.content)
+            elif slot == MANUAL_REEL_SLOT:
+                used_topics = {json.loads(row.content).get('topic') for row in db.query(SocialLesson).filter(
+                    SocialLesson.slot.startswith(calendar_day+':')).all()}
+                candidates = [lessons.visual_lesson(calendar_day,i) for i in range(len(storyboard.VISUAL_TOPICS))]
+                candidate = next((c for c in candidates if c['topic'] not in used_topics), None)
+                if candidate is None:
+                    raise worker.ServiceError('All visual topics already used today; hold the test to avoid a repeated lesson.')
+                content=quality.enrich(candidate)
+            else:
+                content=slot_problem(day)
         video = is_reel(slot)
         # Check current/prior-day captions; dates, numbers and music credits are
         # stripped before comparison so a numeric variant cannot disguise a repeat.
@@ -320,10 +347,15 @@ def run_job(day, owner):
             raise worker.ServiceError('Caption repeats a recent lesson; holding this slot for content review.')
         if video:
             copy['storyboard']=storyboard.plan(content)
+            if slot == MANUAL_REEL_SLOT:
+                # More time for the explanation; does not increase speech speed cap.
+                copy['storyboard']['pace']='brisk'
         with TemporaryDirectory(prefix='jeeedge-social-') as directory:
             if video:
                 copy['voice_clips'] = narration.prepare(content, copy['storyboard'], directory, social_speech.fetch)
                 logging.getLogger('uvicorn.error').info('JeeEdge Reel slot=%s narration_clips=%d audio=%s', day, len(copy['voice_clips']), 'voice_and_music' if copy['voice_clips'] else 'music_only')
+            if slot == MANUAL_REEL_SLOT and len(copy.get('voice_clips', [])) != 2:
+                raise worker.ServiceError('Narrated test held: both voice clips must be valid and fit their scenes. Nothing sent to Buffer; inspect JeeEdge TTS logs before retrying.')
             ticket = budget.reserve('render', units=180)
             started = time.monotonic()
             paths = [reel.render(content, directory, copy)] if video else worker.render(content, copy, directory)

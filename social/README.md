@@ -316,3 +316,27 @@ shows `streaming_header: True`, its measured seconds, then `TTS generated`; a Re
 shows `narration_clips` and `voice_and_music`. No raw exception text, credentials,
 provider body, or audio payload is logged. Header compatibility is regression-tested
 with streamed WAV fixtures; production access and voice quality require a live run.
+
+
+### Publish one narrated test Reel manually
+
+`POST /api/social/test-reel` with the existing `Authorization: Bearer
+<SOCIAL_TRIGGER_SECRET>` header and no request body. It works outside 07:00–23:00
+and requires TTS enabled. It reserves slot `s99`, at most one submitted manual
+Reel per IST date. Explicitly invoking this endpoint permits one extra test after
+the regular daily allowance; ordinary cron never selects s99 and keeps its 12 cap.
+Earlier manual submissions count toward the day's ordinary allowance.
+
+The same locks, provider budgets, publishing hold, queue check, caption check,
+media verification and durable submission fence apply. The test chooses an
+animated topic not already saved today. Both intro and explanation voice clips
+must validate and fit their scene windows; otherwise it fails BEFORE rendering
+or Buffer submission, with an error on `/api/social/status`. Failed tests back off
+for 30 minutes before a manual retry and have at most three pre-submit attempts.
+Repeated calls for an already submitted test return its status, never another copy.
+
+Use a separate one-off cron-job.org test (or temporarily change the existing test
+URL then restore `/api/social/trigger`). Do NOT schedule `/test-reel` as recurring.
+A 202 response means accepted, not published. Inspect the `s99` job in
+`GET /api/social/status` and the `JeeEdge Reel` logs. A successful test is scheduled
+in Buffer about five minutes after generation. No secrets or new services needed.
