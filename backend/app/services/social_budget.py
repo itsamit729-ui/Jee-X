@@ -13,6 +13,7 @@ from social import worker
 LIMITS = {
     'buffer': [(900, 95, 0), (86400, 95, 0), (30*86400, 2850, 0)],
     'groq': [(60, 28, 7600), (86400, 950, 190000)],
+    'groq_tts': [(60, 8, 1000), (86400, 90, 3200)],
     'render': [(86400, 1800, 0)],
     'egress': [(86400, 64*1024*1024, 0), (30*86400, 1024*1024*1024, 0)],
 }
@@ -82,6 +83,8 @@ def cache(name, value, seconds):
 def before(url, body):
     if url == 'https://api.buffer.com':
         return reserve('buffer')
+    if url == 'https://api.groq.com/openai/v1/audio/speech':
+        return reserve('groq_tts', tokens=len(body.get('input', '').encode('utf-8')) + 32)
     if url.startswith('https://api.groq.com/'):
         # UTF-8 bytes conservatively bound text tokenization; reserve output too.
         tokens = len(json.dumps(body, ensure_ascii=False).encode()) + int(body.get('max_completion_tokens', 0)) + 100
@@ -97,7 +100,8 @@ def after(identity, result):
 
 
 def limited(url, seconds):
-    service = 'buffer' if url == 'https://api.buffer.com' else 'groq'
+    service = ('buffer' if url == 'https://api.buffer.com' else
+               'groq_tts' if url.endswith('/audio/speech') else 'groq')
     cache('cooldown:'+service, True, max(60, min(seconds, 86400)))
 
 

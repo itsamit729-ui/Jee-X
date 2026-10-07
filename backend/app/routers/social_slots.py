@@ -19,9 +19,10 @@ from app.database import SessionLocal
 from app.models.social_job import SocialSlot as SocialJob, SocialAsset as SocialMedia, SocialDispatch
 from app.models.social_job import SocialJob as LegacyJob
 from app.routers.social import media as legacy_media
-from social import worker, reel, lessons, editorial, storyboard
+from social import worker, reel, lessons, editorial, storyboard, narration
 from app.services import social_budget as budget
 from app.services import instagram_comments as comments
+from app.services import social_speech
 from PIL import Image
 
 router = APIRouter(prefix='/api/social', tags=['social'])
@@ -297,6 +298,8 @@ def run_job(day, owner):
         if video:
             copy['storyboard']=storyboard.plan(content)
         with TemporaryDirectory(prefix='jeeedge-social-') as directory:
+            if video:
+                copy['voice_clips'] = narration.prepare(content, copy['storyboard'], directory, social_speech.fetch)
             ticket = budget.reserve('render', units=180)
             started = time.monotonic()
             paths = [reel.render(content, directory, copy)] if video else worker.render(content, copy, directory)

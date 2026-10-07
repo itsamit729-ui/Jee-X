@@ -68,14 +68,25 @@ def render(content, directory, copy=None):
     except OSError:
         raise worker.ServiceError('Animation frames could not be written.') from None
     output = directory / 'reel.mp4'
+    clips = copy.get('voice_clips', [])
+    music_volume = '0.07' if clips else '0.24'
+    filters = [f'[1:a]volume={music_volume},afade=t=in:d=0.5,afade=t=out:st=26:d=2[m]',
+               '[2:a]volume=0.4[fx]']
+    labels = '[m][fx]'
+    extra_inputs = []
+    for index, (path, start, speed) in enumerate(clips):
+        extra_inputs += ['-i', str(path)]
+        filters.append(f'[{index+3}:a]atempo={speed:.6f},aresample=24000,'
+                       f'aformat=channel_layouts=stereo,adelay={round(start*1000)}:all=1[v{index}]')
+        labels += f'[v{index}]'
+    filters.append(labels+f'amix=inputs={2+len(clips)}:normalize=0,alimiter=limit=0.8[mix]')
     command = ['ffmpeg','-hide_banner','-loglevel','error','-nostdin','-y',
                '-threads','1','-framerate',str(FPS),'-i',str(frames/'%04d.jpg'),
-               '-i',str(audio),'-i',str(effects),'-t',str(DURATION),'-map','0:v:0','-map','[mix]',
-               '-filter_complex_threads','1','-filter_complex',
-               '[1:a]volume=0.24,afade=t=in:d=0.5,afade=t=out:st=26:d=2[m];'
-               '[m][2:a]amix=inputs=2:normalize=0,alimiter=limit=0.8[mix]',
+               '-i',str(audio),'-i',str(effects),*extra_inputs,
+               '-t',str(DURATION),'-map','0:v:0','-map','[mix]',
+               '-filter_complex_threads','1','-filter_complex',';'.join(filters),
                '-c:v','libx264','-threads','1','-filter_threads','1','-preset','veryfast',
-               '-crf','26','-pix_fmt','yuv420p','-r','30','-c:a','aac','-b:a','96k',
+               '-crf','26','-pix_fmt','yuv420p','-r','30','-c:a','aac','-ac','2','-b:a','96k',
                '-movflags','+faststart',str(output)]
     try:
         subprocess.run(command, check=True, capture_output=True, timeout=max(1, 180-(time.monotonic()-started)))

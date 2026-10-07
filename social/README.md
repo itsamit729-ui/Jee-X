@@ -220,3 +220,31 @@ vary by concept and by Render hardware; the 30-item daily target is conditional.
 
 `social/test_storyboard.py` checks all concepts and story variants for layout,
 actual motion inside the diagram, safe AI fallback, and daily topic diversity.
+
+### Optional free-tier English narration
+
+Reels now use the existing `GROQ_API_KEY` for Orpheus (`canopylabs/orpheus-v1-english`,
+`troy`). Enabled by default; `SOCIAL_TTS_ENABLED=false` disables speech. Keep the
+Groq organization on its Free plan: application quotas cannot prevent provider
+billing if someone upgrades the account. No second key or paid-provider fallback.
+Comments are independent and their configuration is unchanged.
+
+Two short authored lines introduce and explain each visual experiment. WAV audio
+is validated, aligned to scene boundaries, and mixed over quieter licensed music.
+A sentence that cannot fit at at most 1.3x speed is omitted, never truncated.
+No extra LLM calls are used for scripts. Narration is synthetic English speech.
+
+Separate durable `groq_tts` budgets: 8 calls/1,000 reserved tokens per minute and
+90 calls/3,200 reserved tokens per rolling 24 hours. UTF-8 input bytes plus 32
+are conservatively reserved per request (not measured provider token usage).
+429 cooldown affects speech only. `/api/social/status` reports these counters.
+Requests have a 15-second timeout and 1 MiB response cap. Quota, access, network,
+or invalid-audio failures fall back to captions/animation/music without blocking
+publication. No guarantee of narration on every Reel or automatic quota upgrades.
+
+Private `social_speech` database cache (created at startup) reuses successful clips
+across retries/restarts for 7 days; failed/uncertain attempts are also remembered
+for 7 days to avoid spending again. Cache storage is capped at 32 MiB. Audio is
+not exposed through public media routes. Existing account-wide consumption is
+not visible to this worker. Verify the first deployed Reel in Buffer; a local
+render test does not establish live Groq model access.

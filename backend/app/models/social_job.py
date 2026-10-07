@@ -66,3 +66,11 @@ class SocialCache(Base):
     name = Column(String(48), primary_key=True)
     value = Column(String(4000), nullable=False)
     expires_at = Column(DateTime, nullable=False)
+
+
+class SocialSpeech(Base):
+    """Private, bounded narration cache; failed attempts also prevent retry storms."""
+    __tablename__ = 'social_speech'
+    id = Column(String(64), primary_key=True)
+    created_at = Column(DateTime, nullable=False, index=True)
+    audio = Column(LargeBinary().with_variant(MEDIUMBLOB(), 'mysql'))

@@ -27,6 +27,7 @@ def setup(monkeypatch):
     Base.metadata.create_all(engine, tables=[m.__table__ for m in (SocialSlot, SocialAsset, SocialDispatch, SocialJob, SocialMedia, SocialUsage, SocialQuotaLock, SocialCache, SocialLesson)])
     factory = sessionmaker(bind=engine)
     monkeypatch.setattr(social, 'SessionLocal', factory)
+    monkeypatch.setattr(social.social_speech, 'fetch', lambda text: None)
     monkeypatch.setattr(social.budget, 'SessionLocal', factory)
     for key in ('SOCIAL_TRIGGER_SECRET', 'BUFFER_API_KEY', 'GROQ_API_KEY'):
         monkeypatch.setenv(key, 'x'*32)

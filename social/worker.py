@@ -33,15 +33,17 @@ class ServiceError(RuntimeError):
     pass
 
 
-def request(url, method='GET', body=None, headers=None, missing_ok=False, binary=False):
+def request(url, method='GET', body=None, headers=None, missing_ok=False, binary=False, timeout=45, max_bytes=None):
     hooks = REQUEST_HOOKS.get()
     ticket = hooks[0](url, body or {}) if hooks else None
     data = json.dumps(body).encode() if body is not None else None
     req = urllib.request.Request(url, data=data, method=method,
                                  headers={'Content-Type': 'application/json', 'User-Agent': 'JeeEdge-Automation/1.0', **(headers or {})})
     try:
-        with urllib.request.urlopen(req, timeout=45) as response:
-            raw = response.read()
+        with urllib.request.urlopen(req, timeout=timeout) as response:
+            raw = response.read(max_bytes + 1) if max_bytes else response.read()
+            if max_bytes and len(raw) > max_bytes:
+                raise ServiceError("Provider response exceeds size limit.")
             result = raw if binary else json.loads(raw)
             if hooks:
                 hooks[1](ticket, result)
