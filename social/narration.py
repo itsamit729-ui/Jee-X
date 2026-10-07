@@ -3,14 +3,14 @@ import io
 import logging
 import wave
 from pathlib import Path
-from social import storyboard
+from social import storyboard, speech_audio
 
 log = logging.getLogger('uvicorn.error')
 
 MODEL = 'canopylabs/orpheus-v1-english'
 VOICE = 'troy'
 URL = 'https://api.groq.com/openai/v1/audio/speech'
-MAX_BYTES = 1024 * 1024
+MAX_BYTES = speech_audio.MAX_BYTES
 # Spoken forms avoid ambiguous readings of mathematical notation.
 RULES = {
     'Projectile range': 'With equal launch and landing heights and no air drag, complementary angles give equal ranges at the same speed.',
@@ -38,17 +38,7 @@ def scenes(content, plan):
 
 
 def duration(data):
-    if len(data) > MAX_BYTES:
-        raise ValueError('Speech too large')
-    with wave.open(io.BytesIO(data), 'rb') as audio:
-        if audio.getcomptype() != 'NONE' or audio.getnchannels() not in (1, 2):
-            raise ValueError('Unsupported speech WAV')
-        seconds = audio.getnframes() / audio.getframerate()
-        if not 0.1 <= seconds <= 20:
-            raise ValueError('Speech duration out of bounds')
-        if len(audio.readframes(audio.getnframes())) != audio.getnframes()*audio.getnchannels()*audio.getsampwidth():
-            raise ValueError('Truncated speech')
-        return seconds
+    return speech_audio.duration(data)
 
 
 def prepare(content, plan, directory, fetch):
@@ -59,6 +49,7 @@ def prepare(content, plan, directory, fetch):
             log.info('JeeEdge TTS scene=%d skipped: no audio available.', index)
             continue
         try:
+            data, metrics = speech_audio.normalize(data)
             seconds = duration(data)
             speed = max(1.0, seconds / window)
             if speed > 1.3:  # Never cut off a sentence or rush an explanation.

@@ -244,8 +244,8 @@ or invalid-audio failures fall back to captions/animation/music without blocking
 publication. No guarantee of narration on every Reel or automatic quota upgrades.
 
 Private `social_speech` database cache (created at startup) reuses successful clips
-across retries/restarts for 7 days; failed/uncertain attempts are also remembered
-for 7 days to avoid spending again. Cache storage is capped at 32 MiB. Audio is
+across retries/restarts for 7 days; failed/uncertain attempts back off
+for 30 minutes before a later generation may try again within the same free-tier budgets. Cache storage is capped at 32 MiB. Audio is
 not exposed through public media routes. Existing account-wide consumption is
 not visible to this worker. Verify the first deployed Reel in Buffer; a local
 render test does not establish live Groq model access.
@@ -293,3 +293,26 @@ Default trigger windows (IST): 07:00 C, 08:20 C, 09:40 R, 11:00 C, 12:20 C,
 13:40 R, 15:00 C, 16:20 C, 17:40 R, 19:00 C, 20:20 C, 21:40 R.
 Publication is requested five minutes after generation completes; delays, holds
 and missed windows can reduce the actual count. Existing ten-minute cron remains.
+
+
+### Speech WAV compatibility and retry recovery
+
+Speech validation accepts PCM WAVs with `0xffffffff` streaming length markers.
+It walks RIFF chunks (including metadata), bounds reads by actual response bytes,
+checks complete sample frames, measures real duration, and writes a canonical WAV
+with correct lengths before caching/mixing. Ordinary truncated WAVs, non-PCM data,
+partial frames, invalid rates/channels, and clips outside 0.1–20 seconds remain
+rejected. The 1 MiB request cap, 15-second request timeout, 1.3x maximum playback
+speed, separate speech quotas and music fallback remain unchanged.
+
+Successful audio stays cached for 7 days. Failed/uncertain attempts use a 30-minute
+backoff with a database-locked claim; existing empty cache rows become eligible
+without manual deletion or a schema migration. There is no same-call retry loop,
+no extra key or paid fallback. Already queued or published MP4s are not regenerated.
+
+Logs now include a stage (cache_lookup/provider_request/audio_validation/cache_write),
+a controlled reason code and numeric audio metrics. A successful streamed clip
+shows `streaming_header: True`, its measured seconds, then `TTS generated`; a Reel
+shows `narration_clips` and `voice_and_music`. No raw exception text, credentials,
+provider body, or audio payload is logged. Header compatibility is regression-tested
+with streamed WAV fixtures; production access and voice quality require a live run.
