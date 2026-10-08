@@ -247,6 +247,9 @@ def wrapped(draw, text, face, width):
 def render(content, copy, output_dir=None):
     output = Path(output_dir) if output_dir is not None else OUT
     output.mkdir(parents=True, exist_ok=True)
+    if content.get('why') and content.get('transfer_question'):
+        from social import art_direction
+        return art_direction.carousel(content, copy, output)
     cards = [('30-SECOND WARM-UP', copy['hook'], 'Swipe for the question'),
              (content['topic'].upper(), content['question'], 'Solve first. Then swipe.'),
              ('THE BREAKDOWN', content['answer'] + '\n\n' + content['solution'], 'Save this for revision'),
@@ -258,15 +261,6 @@ def render(content, copy, output_dir=None):
                  ('TRY IT', content['question'], 'Solve before the next slide'),
                  ('THE BREAKDOWN', content['answer'] + '\n\n' + content['solution'], 'Check every step'),
                  ('YOUR REVISION CARD', content['rule'] + '\n\n' + content['condition'], 'Save this for your next mock')]
-    if content.get('why') and content.get('transfer_question'):
-        cards = [
-            ('ONE IDEA / ' + content['subject'], copy['hook'], 'Predict. Understand. Test the exception.'),
-            ('THE SHORTEST VALID ROUTE', content['answer'] + '\n\n' + content['solution'], 'Check the reasoning, not just the final number.'),
-            ('WHY IT WORKS', content['why'], 'Understand the step you would otherwise memorise'),
-            ('WHERE THE SHORTCUT BREAKS', content['condition'] + '\n\nCommon mistake: ' + content['trap'], 'A shortcut needs the right assumptions'),
-            ('CHANGE THE SITUATION', content['transfer_question'], 'Pause here. Decide which condition or factor changed.'),
-            ('THE ANSWER + REUSABLE METHOD', content['transfer_answer'] + '\n\n' + content['rule'], 'Take the method and its conditions into your next test.'),
-        ]
     paths = []
     for index, (label, body, footer) in enumerate(cards):
         body = re.sub(r'\^([23])(?!\d)', lambda m: {'2':'²','3':'³'}[m[1]], body)

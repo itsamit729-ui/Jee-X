@@ -19,7 +19,7 @@ def test_all_scripts_fit_api_and_scenes():
         for pace in ('steady','brisk'):
             plan={**storyboard.fallback(c),'pace':pace}
             scenes=narration.scenes(c,plan)
-            assert len(scenes)==3
+            assert len(scenes) in (3,4)
             assert all(len(text)<=200 and window>0 for _,window,text in scenes)
             assert scenes[1][0]+scenes[1][1]<17.1
 
@@ -30,7 +30,7 @@ def test_audio_fallback_and_timing(tmp_path):
     assert narration.prepare(c,plan,tmp_path,lambda _:b'bad wav')==[]
     assert narration.prepare(c,plan,tmp_path,lambda _:wav(20))==[]
     clips=narration.prepare(c,plan,tmp_path,lambda _:wav())
-    assert len(clips)==3
+    assert len(clips)==len(narration.scenes(c,plan))
     assert all(path.exists() and speed==1 for path,_,speed in clips)
 
 
@@ -105,7 +105,7 @@ def test_real_voice_mix(tmp_path):
         f.setparams((1,2,24000,0,'NONE','not compressed'))
         f.writeframes(b''.join(struct.pack('<h',int(8000*math.sin(2*math.pi*1000*i/24000))) for i in range(24000)))
     clips=narration.prepare(content,plan,tmp_path,lambda _:streamed(out.getvalue(),metadata=True))
-    assert len(clips)==3
+    assert len(clips)==len(narration.scenes(content,plan))
     output=reel.render(content,tmp_path,{'storyboard':plan,'voice_clips':clips})
     assert output.stat().st_size>1000
     raw=subprocess.check_output(['ffmpeg','-v','error','-i',str(output),'-ss','0.6','-t','0.4',

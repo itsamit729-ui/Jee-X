@@ -65,6 +65,8 @@ def daily_plan(day, count, reels):
     counts = {s: sum(c['subject']==s for c in video.values()) for s in ('PHYSICS','CHEMISTRY','MATHS')}
     used = {c['topic'] for c in video.values()}
     result = []
+    from social import art_direction
+    ordinals = {True:0,False:0}
     for index in range(count):
         if index in video:
             choice = video[index]
@@ -73,5 +75,7 @@ def daily_plan(day, count, reels):
             choice = min(available, key=lambda c: counts[c['subject']])
             counts[choice['subject']] += 1
             used.add(choice['topic'])
-        result.append(enrich(choice))
+        kind = index in video
+        result.append(art_direction.attach(enrich(choice), serial, ordinals[kind]))
+        ordinals[kind] += 1
     return result

@@ -4,7 +4,7 @@ from social import editorial, lessons, worker
 
 
 def test_editorial_selects_reviewed_hook_without_changing_lesson():
-    content=lessons.lesson('2026-10-06',0)
+    content={**lessons.lesson('2026-10-06',0), 'art_direction':'notebook'}
     before=dict(content)
     with patch.object(editorial,'call',side_effect=[{'hooks':['Try this shortcut','A useful check','Avoid this trap'],
          'caption':editorial.authored(content)['caption']},{'approved':True,'chosen':2,'clarity':4,'educational_value':5,'hook_specificity':5,'payoff':5}]):
@@ -27,7 +27,7 @@ def test_rejected_editorial_is_not_published():
 
 
 def test_low_quality_ai_falls_back_to_specific_lesson():
-    content=lessons.lesson('2026-10-06',0)
+    content={**lessons.lesson('2026-10-06',0), 'art_direction':'notebook'}
     draft={'hooks':['Understand the rule','Check this condition','Reason through it'],'caption':editorial.authored(content)['caption']}
     with patch.object(editorial,'call',side_effect=[draft,{'approved':True,'chosen':0,'clarity':3,'educational_value':5,'hook_specificity':5,'payoff':5}]):
         assert editorial.package(content,'carousel')==editorial.authored(content)

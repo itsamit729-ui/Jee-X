@@ -388,3 +388,42 @@ Instagram Insights. This change does not fetch Insights or claim to optimise
 from performance data it cannot observe. Spam flags and follower gains cannot
 be guaranteed by a content generator; repetition checks and the existing
 publishing holds remain active.
+
+### Editorial variety and original comics (October 8)
+
+New daily lesson snapshots carry `art_direction` and `design_version: 3`.
+Each media kind rotates independently through notebook, comic (`casefile` in
+code), poster and comparison. At the 12/day setting this gives **two comic
+carousels and one comic Reel daily**, plus six other carousels and three other
+Reels. No extra publication slots are added. A comic replaces a normal item.
+The four Reel slots use all four directions; each carousel direction appears
+twice. Smaller schedules use the same bounded rotation. Frozen snapshots retain
+their metadata; older ones use a deterministic lesson-ID fallback.
+
+These are different compositions, fonts and reading sequences, not colour-only
+variants. Notebook carousels have five slides, comic and poster four, and
+comparison six. Comic covers use original drawn characters and an authored
+brain-versus-question exchange. `humor.json` covers every one of the 60 lessons.
+The apparent wrong answer is explicitly a fictional character's misconception;
+the punchline corrects it and the following cards supply the worked answer and
+conditions. No scraped image macros, celebrity footage, invented student results,
+personal anecdotes or extra media licences are involved.
+
+Captions no longer have to begin with the topic name or end in a stock question.
+Each direction has a different caption brief and length range; authored fallbacks
+follow those same distinct structures. Groq still drafts and teacher-reviews
+facts, specificity and payoff. Four recent caption excerpts provide repetition
+context. The existing publication similarity check, credits and marker remain.
+
+Comic Reels spend 0–4 seconds on the confident thought, 4–9 on the punchline,
+then show the verified diagram and working. Their four authored voice scenes
+speak those lines in order. Ordinary Reels retain three scenes. If any comic
+voice scene fails validation/timing, all comic voice is omitted: do not publish
+a spoken misconception without its spoken correction. The manual test still
+requires every requested voice scene; regular production retains music and
+complete on-screen teaching on a provider failure. No extra LLM/script calls,
+new keys, paid services, enabled comments or quota increases are needed.
+
+Published and already queued assets are not rewritten by deployment. The new
+formats apply when a fresh slot is generated. Local previews with music only
+are labelled as such and are not evidence of live TTS or Instagram delivery.

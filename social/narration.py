@@ -3,7 +3,7 @@ import io
 import logging
 import wave
 from pathlib import Path
-from social import storyboard, speech_audio, hooks
+from social import storyboard, speech_audio, hooks, art_direction
 
 log = logging.getLogger('uvicorn.error')
 
@@ -35,6 +35,9 @@ def scenes(content, plan):
     # Authored speech explains the worked example or a labelled mistake.
     # The carousel also carries the more demanding transfer question.
     example = content.get('spoken_example') or content.get('spoken_takeaway') or ('Avoid this mistake: ' + content['trap'])
+    if art_direction.style(content)=='casefile':
+        brain,reality=art_direction.joke(content)
+        return [(0.2,3.6,brain),(4.2,4.5,reality),(9.2,7.4,rule),(17.2,10.4,example)]
     return [(0.2, 3.6, opening), (4.2, 12.4, rule), (17.2, 10.4, example)]
 
 
@@ -72,4 +75,9 @@ def prepare(content, plan, directory, fetch):
         except (ValueError, wave.Error, EOFError, OSError) as error:
             log.warning('JeeEdge TTS scene=%d skipped: invalid audio or file error (%s).', index, type(error).__name__)
             continue
+    if art_direction.style(content)=='casefile' and len(clips)!=len(scenes(content,plan)):
+        # Do not leave only a spoken misconception when its correction failed.
+        log.warning('JeeEdge comic narration incomplete; using the complete visual joke with music.')
+        plan['subtitles']=[]
+        return []
     return clips

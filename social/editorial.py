@@ -2,7 +2,7 @@
 import json
 import os
 import re
-from social import worker, hooks
+from social import worker, hooks, art_direction
 
 
 def call(prompt, schema, max_tokens=1536, reasoning_effort="low"):
@@ -18,12 +18,8 @@ def call(prompt, schema, max_tokens=1536, reasoning_effort="low"):
 
 
 def authored(content):
-    # Useful even when Groq is unavailable; no repeated generic marketing caption.
-    explanation = content.get('why', content['rule'])
-    return {'hook': hooks.opening(content), 'editorial_source':'authored',
-            'caption': (content['topic'] + '\n\n' + explanation + '\n\n'
-                        + content['rule'] + '\nApplies when: ' + content['condition']
-                        + '\n\nCheck your reasoning: ' + content.get('transfer_question', content['question']))}
+    return {'hook':art_direction.joke(content)[0] if art_direction.style(content)=='casefile' else hooks.opening(content), 'editorial_source':'authored',
+            'caption':art_direction.caption(content)}
 
 
 def normalized_caption(value):
@@ -41,20 +37,27 @@ def repeated(caption, recent):
 
 def package(content, kind, recent=()):
     fallback = authored(content)
+    direction = art_direction.style(content)
+    lower, upper = art_direction.CAPTION_LIMITS[direction]
     try:
         context = {k: content[k] for k in ('subject','topic','rule','condition','trap','question','answer','solution',
                    'why','transfer_question','transfer_answer','hook','level') if k in content}
+        if direction=='casefile':
+            context['original_joke'] = dict(zip(('brain','reality'),art_direction.joke(content)))
         draft = call('Create three distinct English hooks (each <=65 characters) and one educational caption '
-            '(120 to 850 characters) for an original JEE ' + kind + '. '
+            f'({lower} to {upper} characters) for an original JEE ' + kind + '. '
+            + art_direction.BRIEFS[direction] + ' '
             'Open a concrete curiosity gap: a choice, surprising constraint, calculation or plausible wrong answer. '
             'Make the payoff specific and deliverable from this lesson. No generic learn-this or spot-the-trap hooks. '
             'For reels keep each hook to at most 10 spoken words and 65 characters. '
-            'Write for a student learning to reason, not an advertisement. Start the caption with the exact topic name. '
-            'Explain WHY the method works and include its applicability condition. Use only the supplied facts. '
-            'You may end with the supplied reasoning question. No save/follow/comment/tag/share requests, hashtags, '
+            'Write naturally and specifically. Do not begin with a chapter label or always end with a question. '
+            'Avoid stock phrases: unlock, master, ace, game-changer, did you know, test your knowledge, '
+            'check your reasoning, applies when, and here is the secret. No invented personal anecdotes. '
+            'Include the reasoning and essential condition in natural prose. Use only the supplied facts. '
+            'Use a closing question only if the assigned format benefits from one. No save/follow/comment/tag/share requests, hashtags, '
             'URLs, website/bio promotion, invented facts, exam-year/PYQ claims, rank or score promises. '
             'Avoid generic filler and copying earlier captions. Math and calculated examples are immutable. '
-            + json.dumps({'lesson':context,'recent_captions':[x[:300] for x in recent[:2]]}),
+            + json.dumps({'lesson':context,'recent_captions':[x[:180] for x in recent[:4]]}),
             {'type':'object','properties':{'hooks':{'type':'array','items':{'type':'string'}},'caption':{'type':'string'}},
              'required':['hooks','caption'],'additionalProperties':False}, max_tokens=1536)
         hooks, caption = draft['hooks'], draft['caption']
@@ -62,10 +65,10 @@ def package(content, kind, recent=()):
             raise ValueError('Invalid hooks')
         if kind == 'reel' and any(len(h.split()) > 10 for h in hooks):
             raise ValueError('Opening too long for its scene')
-        if not isinstance(caption,str) or not 120 <= len(caption.strip()) <= 850:
+        if not isinstance(caption,str) or not lower <= len(caption.strip()) <= upper:
             raise ValueError('Invalid caption')
-        if not caption.strip().lower().startswith(content['topic'].lower()):
-            raise ValueError('Caption is not topic-specific')
+        if re.search(r'\b(unlock|game.changer|ace your|did you know|test your knowledge|check your reasoning|applies when)\b',caption,re.I):
+            raise ValueError('Stock caption phrasing')
         if re.search(r'https?://|www\.|link in|\bbio\b|website|guarantee|\bPYQ\b|100%|AIR\s*1|#|@|\b(save|follow|comment|tag|share|viral)\b', ' '.join(hooks)+caption, re.I):
             raise ValueError('Unsupported promotion')
         if repeated(caption, recent):
@@ -77,6 +80,8 @@ def package(content, kind, recent=()):
             'Also score hook_specificity and payoff from 1 to 5: the chosen hook must ask a concrete '
             'topic-specific question or make a precise contrast whose answer the lesson actually delivers. '
             'Reject generic filler, altered math, misleading hooks and engagement requests. '
+            'Judge whether the caption sounds like a specific tutor note instead of a stock social template. '
+            'The assigned editorial direction is: '+art_direction.BRIEFS[direction]+' '
             'Reject hooks that could be pasted onto another topic unchanged. Select strongest hook index (0,1,2). '
             + json.dumps({'lesson':context,'draft':draft}),
             {'type':'object','properties':{'approved':{'type':'boolean'},'chosen':{'type':'integer','enum':[0,1,2]},
@@ -88,7 +93,7 @@ def package(content, kind, recent=()):
                 or type(review['educational_value']) is not int or review['educational_value'] < 4
                 or any(type(review.get(k)) is not int or review[k]<4 for k in ('hook_specificity','payoff'))):
             raise ValueError('Review rejected')
-        return {'hook':hooks[review['chosen']].strip(), 'caption':caption.strip(), 'editorial_source':'groq_reviewed'}
+        return {'hook':art_direction.joke(content)[0] if direction=='casefile' else hooks[review['chosen']].strip(), 'caption':caption.strip(), 'editorial_source':'groq_reviewed'}
     except (worker.ServiceError, ValueError, TypeError, KeyError, IndexError):
         print('Using authored teaching caption; editorial unavailable or quality gate not met.', flush=True)
         return fallback

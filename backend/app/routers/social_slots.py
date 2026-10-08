@@ -344,9 +344,9 @@ def run_job(day, owner):
             if any(f'JeeEdge daily {d} / ' in (p.get('text') or '') for d in (calendar_day, yesterday))]
         copy = editorial.package(content, 'reel' if video else 'carousel', recent=recent_captions)
         logging.getLogger('uvicorn.error').info(
-            'JeeEdge content slot=%s bank=v2 topic=%s format=%s editorial=%s hook_chars=%d',
+            'JeeEdge content slot=%s bank=v2 topic=%s format=%s editorial=%s hook_chars=%d design=%s',
             day, content['topic'], 'reel' if video else 'carousel',
-            copy.get('editorial_source','unknown'), len(copy['hook']))
+            copy.get('editorial_source','unknown'), len(copy['hook']), content.get('art_direction','legacy-derived'))
         if editorial.repeated(copy['caption'], recent_captions):
             raise worker.ServiceError('Caption repeats a recent lesson; holding this slot for content review.')
         if video:

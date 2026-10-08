@@ -49,7 +49,8 @@ def frame(content, copy, seconds):
     if not storyboard.validate(plan,content):plan=storyboard.fallback(content)
     if (copy or {}).get('hook'):
         plan={**plan, 'hook':copy['hook']}
-    return cinema.frame(content,plan,seconds)
+    from social import art_direction
+    return art_direction.reel_frame(content,plan,seconds)
 
 
 def render(content, directory, copy=None):
