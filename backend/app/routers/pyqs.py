@@ -87,12 +87,12 @@ def start_paper(body: PaperStart, exam: Literal['bitsat', 'mht_cet'],
     ids = [row.id for row in sorted(rows, key=lambda row: (order[row.code], row.ref))]
     if not ids:
         raise HTTPException(404, 'No published questions are available for this paper.')
-    title = f'{"BITSAT" if exam == "bitsat" else "MHT CET"} {body.year} · {body.shift} · Reconstructed paper'
+    title = f'{"BITSAT" if exam == "bitsat" else "MHT CET"} {body.year} · {body.shift} · Shift mock'
     # This is timed practice with available source questions, not a sectional exam simulation.
-    return create_attempt(db, user, exam, ids, title, 'PCM' if exam == 'mht_cet' else 'ALL', 10800)
+    return create_attempt(db, user, exam, ids, title, 'PCM' if exam == 'mht_cet' else 'ALL', 10800, is_mock=True)
 
 
-def create_attempt(db, user, exam, ids, title, subject_code, duration_sec):
+def create_attempt(db, user, exam, ids, title, subject_code, duration_sec, is_mock=False):
     rows = (db.query(models.Question).filter(models.Question.id.in_(ids))
             .options(selectinload(models.Question.options), selectinload(models.Question.assets),
                      selectinload(models.Question.passage).selectinload(models.Passage.assets)).all())
@@ -106,7 +106,7 @@ def create_attempt(db, user, exam, ids, title, subject_code, duration_sec):
     wrong = 1 if exam == 'bitsat' else 0
     by_id = {q.id: q for q in rows}
     questions = [by_id[qid] for qid in ids]
-    test = models.Test(title=title, kind='chapter', pattern=exam, duration_sec=duration_sec,
+    test = models.Test(title=title, kind='mock' if is_mock else 'chapter', pattern=exam, duration_sec=duration_sec,
                        ranked=False, generated_for_user_id=user.id)
     db.add(test)
     db.flush()
@@ -116,9 +116,9 @@ def create_attempt(db, user, exam, ids, title, subject_code, duration_sec):
     attempt = models.TestAttempt(user_id=user.id, test_id=test.id, attempt_number=1, counts_for_rank=False)
     db.add(attempt)
     db.flush()
-    result = schemas.SubjectTestOut(attempt_id=attempt.id, test_id=test.id, title=title,
+    result = schemas.SubjectTestOut(is_mock=is_mock, attempt_id=attempt.id, test_id=test.id, title=title,
         subject_code=subject_code, duration_sec=test.duration_sec,
-        questions=[schemas.TestQuestionOut(question_id=q.id, ref=q.ref, type=q.type, stem=q.stem,
+        questions=[schemas.TestQuestionOut(subject_code=codes[q.id], question_id=q.id, ref=q.ref, type=q.type, stem=q.stem,
             passage=q.passage.content if q.passage else None,
             assets=[schemas.QuestionAssetOut(url=a.url, alt_text=a.alt_text)
                     for a in list(q.assets)+(list(q.passage.assets) if q.passage else [])],

@@ -25,7 +25,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   const requestedChapter = searchParams.get('chapter')
   const pyq = ['bitsat', 'mht_cet'].includes(searchParams.get('pyq'))
   const assessment = searchParams.get('assessment') === '1'
-  const [deadline, setDeadline] = useState(null)
+  const [deadline, setDeadline] = useState(() => location.state?.missionTest?.is_mock ? Date.now() + location.state.missionTest.duration_sec * 1000 : null)
   const [remaining, setRemaining] = useState(10800)
   const timeoutSubmitted = useRef(false)
 
@@ -43,6 +43,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   const [loadVersion, setLoadVersion] = useState(0)
 
   const [test, setTest] = useState(() => location.state?.missionTest || null) // { attempt_id, questions, ... }
+  const timed = assessment || Boolean(test?.is_mock)
   const [index, setIndex] = useState(0)
   const [answers, setAnswers] = useState({}) // question_id -> { option_ids, numeric_answer }
   const [submitting, setSubmitting] = useState(false)
@@ -95,11 +96,11 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   }, [test, index, result, submitting])
 
   useEffect(() => {
-    if (assessment && test && !result && remaining === 0 && !submitting && !timeoutSubmitted.current) {
+    if (timed && test && !result && remaining === 0 && !submitting && !timeoutSubmitted.current) {
       timeoutSubmitted.current = true
       submitTest()
     }
-  }, [remaining, assessment, test, result, submitting])
+  }, [remaining, timed, test, result, submitting])
 
   useEffect(() => {
     if (location.state?.missionTest) navigate(location.pathname + location.search, { replace: true, state: null })
@@ -136,19 +137,19 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   }
 
   useEffect(() => {
-    if (!assessment || !test || result || !deadline) return
+    if (!timed || !test || result || !deadline) return
     const tick = () => setRemaining(Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))
     tick()
     const id = setInterval(tick, 1000)
     return () => clearInterval(id)
-  }, [assessment, test, result, deadline])
+  }, [timed, test, result, deadline])
 
   useEffect(() => {
-    if (!assessment || !test || result) return
+    if (!timed || !test || result) return
     const warn = event => { event.preventDefault(); event.returnValue = '' }
     window.addEventListener('beforeunload', warn)
     return () => window.removeEventListener('beforeunload', warn)
-  }, [assessment, test, result])
+  }, [timed, test, result])
 
   const exitTest = () => {
     if (!window.confirm('Leave this test? Your answers will be lost.')) return
@@ -159,12 +160,12 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   }
 
   const selectOption = (questionId, optionId) => {
-    if (assessment && remaining <= 0) return
+    if (timed && remaining <= 0) return
     setAnswers((a) => ({ ...a, [questionId]: { option_ids: [optionId] } }))
   }
 
   const setNumeric = (questionId, value) => {
-    if (assessment && remaining <= 0) return
+    if (timed && remaining <= 0) return
     setAnswers((a) => ({ ...a, [questionId]: { numeric_answer: value === '' ? null : Number(value) } }))
   }
 
@@ -253,7 +254,11 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
             <ArrowLeft size={16} aria-hidden="true" />Exit test
           </button>
 
-          <div className="practice-session-bar"><div><span className="practice-eyebrow">{test.title}</span><strong>Question {index + 1} <span>of {test.questions.length}</span></strong></div><span className="faint num">{assessment ? `${Math.floor(remaining / 3600)}:${String(Math.floor(remaining % 3600 / 60)).padStart(2, '0')}:${String(remaining % 60).padStart(2, '0')} remaining` : `${answeredCount} answered`}</span><progress max={test.questions.length} value={answeredCount} aria-label="Questions answered"/></div>
+          <div className="practice-session-bar"><div><span className="practice-eyebrow">{test.title}</span><strong>Question {index + 1} <span>of {test.questions.length}</span></strong></div><span className="faint num">{timed ? `${Math.floor(remaining / 3600)}:${String(Math.floor(remaining % 3600 / 60)).padStart(2, '0')}:${String(remaining % 60).padStart(2, '0')} remaining` : `${answeredCount} answered`}</span><progress max={test.questions.length} value={answeredCount} aria-label="Questions answered"/></div>
+          {test.is_mock && <div className="hero-actions" style={{ marginBottom: 14 }}>
+            {[...new Set(test.questions.map(item => item.subject_code).filter(Boolean))].map(code => <button type="button" className="btn btn-secondary btn-sm" key={code} aria-pressed={q.subject_code === code} onClick={() => setIndex(test.questions.findIndex(item => item.subject_code === code))}>{({PHY:'Physics', CHEM:'Chemistry', MATH:'Mathematics', ENG:'English', LR:'Reasoning'})[code] || code}</button>)}
+            <button type="button" className="btn btn-primary btn-sm" disabled={submitting} onClick={() => { if (window.confirm(`Submit mock? ${answeredCount} of ${test.questions.length} questions answered.`)) submitTest() }}>{submitting ? 'Submitting…' : 'Submit mock'}</button>
+          </div>}
           <nav className="practice-question-nav" aria-label="Jump to question">{test.questions.map((item,i) => <button key={item.question_id} type="button" aria-label={`Question ${i+1}${isAnswered(item) ? ', answered' : ', unanswered'}`} aria-current={index===i ? 'step' : undefined} className={isAnswered(item) ? 'answered' : ''} onClick={() => setIndex(i)}>{String(i+1).padStart(2,'0')}</button>)}</nav>
 
           {error && <p className="alert" role="alert">{error}</p>}
@@ -298,7 +303,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
 
           <div className="hero-actions" style={{ justifyContent: 'space-between', marginTop: 20 }}>
             <button type="button" className="btn btn-secondary" disabled={index === 0} onClick={() => setIndex((i) => i - 1)}>Previous</button>
-            {(isLast || (assessment && remaining === 0)) ? (
+            {(isLast || (timed && remaining === 0)) ? (
               <button type="button" className="btn btn-primary" disabled={submitting} onClick={submitTest}>
                 {submitting ? <><span className="spin" aria-hidden="true" />Submitting</> : 'Submit test'}
               </button>

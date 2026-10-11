@@ -119,6 +119,10 @@ def test_year_shift_papers_include_all_subjects_and_questions_without_leaking_ke
     response = client.post('/api/pyqs/mht_cet/papers', json={'year': 2026, 'shift': '11 Apr 2026, Shift 1'})
     assert response.status_code == 201, response.text
     paper = response.json()
+    assert paper['is_mock'] is True
+    with factory() as db:
+        assert db.get(models.Test, paper['test_id']).kind == 'mock'
+    assert {q['subject_code'] for q in paper['questions']} == {'PHY', 'CHEM', 'MATH'}
     assert len(paper['questions']) == 36  # must not truncate at the subject-practice limit
     assert paper['subject_code'] == 'PCM' and paper['duration_sec'] == 10800
     assert sum(q['marks_correct'] for q in paper['questions']) == 48

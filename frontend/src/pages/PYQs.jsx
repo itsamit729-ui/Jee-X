@@ -39,7 +39,7 @@ export default function PYQs() {
     finally { setBusy(false) }
   }
   return <div className="crackjee-root"><AppHeader/><main className="pyq-shell">
-    <header className="pyq-heading"><div><span className="pyq-eyebrow">THE QUESTION ARCHIVE</span><h1>Learn from the years before.</h1><p>Choose a year, open a shift paper, and practise the questions together.</p></div><BookOpen size={36} aria-hidden="true"/></header>
+    <header className="pyq-heading"><div><span className="pyq-eyebrow">THE QUESTION ARCHIVE</span><h1>Learn from the years before.</h1><p>Choose a year, choose a shift, and take its timed mock.</p></div><BookOpen size={36} aria-hidden="true"/></header>
     <div className="pyq-years" aria-label="Exam">{[["mht_cet", "MHT CET"], ["bitsat", "BITSAT"]].map(([code, label]) => <button key={code} disabled={busy} aria-pressed={exam === code} onClick={() => { setExam(code); setSubject("PHY"); setYear(2026) }}>{label}</button>)}</div>
     <section className="pyq-panel" aria-labelledby="pyq-title">
       <div className="pyq-panel-heading"><h2 id="pyq-title">{exam === "bitsat" ? "BITSAT" : "MHT CET"}</h2><span className="tag">Memory-based</span></div>
@@ -50,14 +50,15 @@ export default function PYQs() {
       {!catalog && !error && <p role="status">Loading the archive…</p>}
       {catalog && <>
         <div className="pyq-years" aria-label="Exam year">{catalog.years.map(item => <button type="button" key={item.year} aria-pressed={year===item.year} disabled={busy} onClick={() => setYear(item.year)}>{item.year}</button>)}</div>
-        <div className="pyq-years" aria-label="Practice format">{[['papers', 'Year-wise papers'], ['practice', 'Subject practice']].map(([code, label]) => <button key={code} disabled={busy} aria-pressed={view === code} onClick={() => setView(code)}>{label}</button>)}</div>
+        <div className="pyq-years" aria-label="Practice format">{[['papers', 'Year & shift mocks'], ['practice', 'Subject practice']].map(([code, label]) => <button key={code} disabled={busy} aria-pressed={view === code} onClick={() => setView(code)}>{label}</button>)}</div>
         {view === 'papers' ? <>
-          <p className="muted">{papers.length ? `${papers.length} dated shift papers · All available subjects · 180-minute practice timer` : 'No dated shift papers are available for this year yet. Subject practice remains available when questions have no shift metadata.'}</p>
+          <p className="muted">{papers.length ? `${papers.length} shift mocks · All available subjects · 180 minutes · Auto-submit` : 'No dated shift papers are available for this year yet. Subject practice remains available when questions have no shift metadata.'}</p>
           {papers.length > 0 && <p className="muted">Reconstructed from available questions; some papers have incomplete coverage. Original question order and sectional timing are not reproduced.</p>}
           <div className="pyq-papers">{papers.map(paper => <article className="pyq-paper" key={paper.shift}>
             <div><h3>{paper.shift}</h3><span className="tag">{paper.available} questions</span></div>
+            <p><strong>{paper.subjects.reduce((total, s) => total + s.available * (exam === 'bitsat' ? 3 : s.code === 'MATH' ? 2 : 1), 0)} marks</strong> · {exam === 'mht_cet' ? (['PHY', 'CHEM', 'MATH'].every(code => paper.subjects.find(s => s.code === code)?.available === 50) ? '150-question reconstruction' : 'Partial paper — some questions are missing') : 'Reconstructed paper'}</p>
             <p>{paper.subjects.map(s => `${s.name}: ${s.available}`).join(' · ')}</p>
-            <button className="btn btn-primary" disabled={busy} onClick={() => start(paper)}>{busy ? 'Preparing…' : 'Start paper'}<ArrowUpRight size={17}/></button>
+            <button className="btn btn-primary" disabled={busy} onClick={() => start(paper)}>{busy ? 'Preparing…' : 'Start mock'}<ArrowUpRight size={17}/></button>
           </article>)}</div>
         </> : <>
         <div className="pyq-subjects" aria-label="Subject">{subjects.map(item => <button type="button" key={item.code} aria-pressed={subject===item.code} disabled={busy} onClick={() => setSubject(item.code)}><strong>{item.name}</strong><span>{item.available ? `${item.available} questions` : 'Awaiting verified questions'}</span></button>)}</div>

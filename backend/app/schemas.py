@@ -186,6 +186,7 @@ class RecommendationOut(BaseModel):
 
 
 class TestQuestionOut(BaseModel):
+    subject_code: str | None = None
     question_id: int
     ref: str
     type: str
@@ -199,6 +200,7 @@ class TestQuestionOut(BaseModel):
 
 
 class SubjectTestOut(BaseModel):
+    is_mock: bool = False
     attempt_id: int
     test_id: int
     title: str
