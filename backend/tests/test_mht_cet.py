@@ -107,6 +107,8 @@ def test_year_shift_papers_include_all_subjects_and_questions_without_leaking_ke
             yield db
     app = FastAPI()
     app.include_router(pyq_router)
+    from app.routers.predictions import router as prediction_router
+    app.include_router(prediction_router)
     app.include_router(grader)
     app.dependency_overrides[get_db] = database
     app.dependency_overrides[get_current_db_user] = lambda: models.User(id=1)
@@ -132,4 +134,14 @@ def test_year_shift_papers_include_all_subjects_and_questions_without_leaking_ke
     result = client.post(f"/api/subject-tests/attempts/{paper['attempt_id']}/submit", json={'answers': answers})
     assert result.status_code == 200, result.text
     assert result.json()['score'] == 48
+    assert client.get(f"/api/test-attempts/{paper['attempt_id']}/prediction").status_code == 409
+    url = f"/api/pyqs/mht_cet/attempts/{paper['attempt_id']}/colleges"
+    outlook = client.get(url).json()
+    assert outlook['score'] == 48 and outlook['maximum'] == 48
+    assert outlook['mock_percentile'] is None and outlook['colleges'] == []
+    assert client.get(url + '?percentile=101').status_code == 422
+    assert client.get(url + '?percentile=98&category=OPEN&quota=S&pool=G').json()['total_matches'] > 0
+    app.dependency_overrides[get_current_db_user] = lambda: models.User(id=2)
+    assert client.get(url).status_code == 404
+    app.dependency_overrides[get_current_db_user] = lambda: models.User(id=1)
     assert client.post('/api/pyqs/mht_cet/papers', json={'year': 2024, 'shift': '11 Apr 2026, Shift 1'}).status_code == 404

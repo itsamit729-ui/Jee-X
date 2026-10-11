@@ -1,7 +1,7 @@
 """Exam-specific memory-based practice using the existing paper and grading contracts."""
 from typing import Literal
 from datetime import datetime
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field
 from sqlalchemy import func
 from sqlalchemy.orm import Session, selectinload
@@ -126,3 +126,26 @@ def create_attempt(db, user, exam, ids, title, subject_code, duration_sec, is_mo
             marks_correct=marks(q), marks_wrong=wrong) for q in questions])
     db.commit()
     return result
+
+
+@router.get('/mht_cet/attempts/{attempt_id}/colleges')
+def mht_college_outlook(attempt_id: int,
+    percentile: float | None = Query(default=None, ge=0, le=100),
+    category: Literal['OPEN', 'SC', 'ST', 'VJ', 'NT1', 'NT2', 'NT3', 'OBC', 'SEBC'] = 'OPEN',
+    quota: Literal['S', 'H', 'O'] = 'S', pool: Literal['G', 'L'] = 'G',
+    search: str = Query(default='', max_length=100),
+    offset: int = Query(default=0, ge=0, le=30000),
+    user: models.User = Depends(get_current_db_user), db: Session = Depends(get_db)):
+    from app.services.mht_colleges import lookup
+    attempt = db.query(models.TestAttempt).filter_by(id=attempt_id, user_id=user.id).first()
+    if not attempt:
+        raise HTTPException(404, 'Attempt not found.')
+    test = db.get(models.Test, attempt.test_id)
+    if test.pattern != 'mht_cet' or test.kind != 'mock':
+        raise HTTPException(422, 'This outlook is for MHT CET mocks only.')
+    if attempt.submitted_at is None:
+        raise HTTPException(409, 'Submit your mock first.')
+    maximum = db.query(func.sum(models.TestQuestion.marks_correct)).filter_by(test_id=test.id).scalar() or 0
+    return {**lookup(percentile, category, quota, pool, search, offset),
+            'attempt_id': attempt.id, 'score': attempt.score, 'maximum': maximum,
+            'question_count': attempt.total_questions, 'mock_percentile': None}

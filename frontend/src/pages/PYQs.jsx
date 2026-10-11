@@ -53,7 +53,7 @@ export default function PYQs() {
         <div className="pyq-years" aria-label="Practice format">{[['papers', 'Year & shift mocks'], ['practice', 'Subject practice']].map(([code, label]) => <button key={code} disabled={busy} aria-pressed={view === code} onClick={() => setView(code)}>{label}</button>)}</div>
         {view === 'papers' ? <>
           <p className="muted">{papers.length ? `${papers.length} shift mocks · All available subjects · 180 minutes · Auto-submit` : 'No dated shift papers are available for this year yet. Subject practice remains available when questions have no shift metadata.'}</p>
-          {papers.length > 0 && <p className="muted">Reconstructed from available questions; some papers have incomplete coverage. Original question order and sectional timing are not reproduced.</p>}
+          {papers.length > 0 && <p className="muted">Reconstructed from available questions; some papers have incomplete coverage. MHT CET mocks use 90 minutes for Physics/Chemistry, followed by 90 minutes for Mathematics. Original question order may differ.</p>}
           <div className="pyq-papers">{papers.map(paper => <article className="pyq-paper" key={paper.shift}>
             <div><h3>{paper.shift}</h3><span className="tag">{paper.available} questions</span></div>
             <p><strong>{paper.subjects.reduce((total, s) => total + s.available * (exam === 'bitsat' ? 3 : s.code === 'MATH' ? 2 : 1), 0)} marks</strong> · {exam === 'mht_cet' ? (['PHY', 'CHEM', 'MATH'].every(code => paper.subjects.find(s => s.code === code)?.available === 50) ? '150-question reconstruction' : 'Partial paper — some questions are missing') : 'Reconstructed paper'}</p>

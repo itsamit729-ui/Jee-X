@@ -8,6 +8,9 @@ import GoalJourney from '../components/GoalJourney.jsx'
 import AppHeader from '../components/AppHeader.jsx'
 import Palette from '../components/Palette.jsx'
 import RankPredictor from '../components/RankPredictor.jsx'
+import MhtExam from '../components/MhtExam.jsx'
+import MhtCollegePredictor from '../components/MhtCollegePredictor.jsx'
+import { cetCanAnswer } from '../lib/mhtExam.js'
 import FullscreenGuard from '../components/FullscreenGuard.jsx'
 import { requestFullscreen, useFullscreenLock } from '../lib/fullscreen.js'
 import { GOOD, BAD, PEN, SUBJECT_COLOR } from '../crackjee/ui.js'
@@ -43,6 +46,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   const [loadVersion, setLoadVersion] = useState(0)
 
   const [test, setTest] = useState(() => location.state?.missionTest || null) // { attempt_id, questions, ... }
+  const mhtMock = searchParams.get('pyq') === 'mht_cet' && Boolean(test?.is_mock)
   const timed = assessment || Boolean(test?.is_mock)
   const [index, setIndex] = useState(0)
   const [answers, setAnswers] = useState({}) // question_id -> { option_ids, numeric_answer }
@@ -161,11 +165,13 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
 
   const selectOption = (questionId, optionId) => {
     if (timed && remaining <= 0) return
+    if (mhtMock && !cetCanAnswer(test.questions.find(q => q.question_id === questionId)?.subject_code, Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))) return
     setAnswers((a) => ({ ...a, [questionId]: { option_ids: [optionId] } }))
   }
 
   const setNumeric = (questionId, value) => {
     if (timed && remaining <= 0) return
+    if (mhtMock && !cetCanAnswer(test.questions.find(q => q.question_id === questionId)?.subject_code, Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))) return
     setAnswers((a) => ({ ...a, [questionId]: { numeric_answer: value === '' ? null : Number(value) } }))
   }
 
@@ -211,7 +217,9 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
           </div>
 
           {!pyq && <GoalJourney afterTest attemptId={result.attempt_id} onStartMission={assessment ? undefined : startTest} missionBusy={starting}/>}
-          {!assessment && !pyq && <details className="journey-method"><summary>Explore rank and college reference data</summary><RankPredictor attemptId={result.attempt_id}/></details>}
+          {mhtMock && <MhtCollegePredictor attemptId={result.attempt_id} />}
+          {(assessment || (test?.is_mock && !pyq)) && <RankPredictor attemptId={result.attempt_id}/>}
+          {!assessment && !pyq && !test?.is_mock && <details className="journey-method"><summary>Explore rank and college reference data</summary><RankPredictor attemptId={result.attempt_id}/></details>}
 
           <div className="panel">
             <h2 className="panel-title">Solutions</h2>
@@ -240,6 +248,13 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
       </div>
     )
   }
+
+  if (mhtMock && test) return <><FullscreenGuard exited={fsExited} onResume={fsResume}/><MhtExam
+    test={test} remaining={remaining} index={index} onIndex={setIndex} answers={answers}
+    onAnswer={selectOption} onClear={questionId => {
+      if (!cetCanAnswer(test.questions.find(q => q.question_id === questionId)?.subject_code, Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))) return
+      setAnswers(a => { const next = { ...a }; delete next[questionId]; return next })
+    }} onSubmit={submitTest} onExit={exitTest} submitting={submitting} error={error}/></>
 
   // ---------------------------------------------------------------- QUESTION PHASE
   if (test) {
