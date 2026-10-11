@@ -294,7 +294,7 @@
           "is_correct": false
         }
       ],
-      "solution": ""
+      "solution": "In a series LCR circuit the power factor is $\\cos\\phi = \\dfrac{R}{Z}$, where $Z = \\sqrt{R^2 + (X_C - X_L)^2}$.\nThe net reactance is $X_C - X_L = 80.0\\,\\Omega - 20.0\\,\\Omega = 60.0\\,\\Omega$.\nThe impedance is $Z = \\sqrt{(80\\,\\Omega)^2 + (60\\,\\Omega)^2} = \\sqrt{6400 + 3600}\\,\\Omega = 100\\,\\Omega$.\nSo the power factor is $\\cos\\phi = \\dfrac{80\\,\\Omega}{100\\,\\Omega} = 0.8$.\nThe values $E_{\\text{rms}}$ and $f_d$ are not needed to find the power factor.\nAnswer: (A) 0.8"
     }
   ]
 }

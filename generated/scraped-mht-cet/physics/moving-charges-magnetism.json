@@ -1,0 +1,2887 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Moving Charges and Magnetism",
+    "slug": "moving-charges-magnetism",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 17,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "motion-in-a-magnetic-field",
+      "name": "Motion in a magnetic field",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "moving-coil-galvanometer",
+      "name": "Moving coil galvanometer",
+      "position": 2
+    },
+    {
+      "slug": "force-and-torque-on-current-carrying-conductor",
+      "name": "Force and torque on current carrying conductor",
+      "position": 3
+    },
+    {
+      "slug": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "name": "Biot savarts law and magnetic field due to current carrying wire",
+      "position": 4
+    },
+    {
+      "slug": "magnetic-moment",
+      "name": "Magnetic moment",
+      "position": 5
+    },
+    {
+      "slug": "motion-of-charged-particle-inside-magnetic-field",
+      "name": "Motion of charged particle inside magnetic field",
+      "position": 6
+    },
+    {
+      "slug": "amperes-circuital-law",
+      "name": "Amperes circuital law",
+      "position": 7
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-a13fd22344f4",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two long parallel wires carrying currents $8$A and $15$A in opposite directions are placed at a distance of $7$ cm from each other. A point P is at equidistant from both the wires such that the lines joining the point P to the wires are perpendicular to each other. The magnetic field at P is ___ $\\times 10^{-6}$ T. (Given: $\\sqrt{2}=1.4$, $\\mu_0=4\\pi\\times 10^{-7}$ SI unit)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$62$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$65$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$68$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$70$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a5524c6ee478",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A wire of length $L$ is bent in the form of a circular coil and current '$i$' is passed through it. This coil is kept in magnetic field. The torque acting on the coil will be maximum, when the number of turns is ___",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "As large as possible",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e4b27f3ea77b",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A galvanometer has a current range of $10$ mA and a voltage range of $0.75$ V. To convert this galvanometer into an ammeter of range $10$ A, what is the shunt resistance?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{100}{999}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{50}{999}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{200}{999}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{75}{999}\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7de791416301",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two parallel wires of equal lengths are separated by a distance of $3$ m from each other. The currents flowing through first and second wire is $3$ A and $4.5$ A respectively in opposite directions. The resultant magnetic field at mid point of both the wires is ($\\mu_0$=permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0}{2\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5\\mu_0}{2\\pi}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7\\mu_0}{2\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9\\mu_0}{2\\pi}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c83448f2d65f",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A wire AB is carrying steady current $I_1$ and is kept on the table. Another wire CD carrying current $I_2$ is held directly above as shown in figure. When the wire CD is left free and it remains suspended at its position, its mass per unit length is (g=acceleration due to gravity, $\\mu_0$ = permeability of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-c83448f2d65f.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0I_1I_2}{2\\pi rg}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0I_1I_2}{4\\pi rg}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0I_1I_2}{\\pi rg}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0I_1I_2}{\\pi r^2g}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e471d3de229a",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A circular coil of N turns and diameter D carries current I. It is unwound and rewound to make another coil of diameter 2D, current I remaining the same. The ratio of magnetic moments of the original coil to the new coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1:4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-215639220b4b",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A charged particle of mass $m$ and charge $q$ travels on a circular path, (of radius $5$ unit) is perpendicular to a magnetic field $B$. The time taken by a particle to complete $10$ revolutions is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10\\pi m/qB$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$20\\pi m/qB$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\pi m/qB$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5\\pi m/qB$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6a15b2091e8e",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of shunt resistance that allows $5\\,\\%$ of the main current through the galvanometer of $100\\,\\Omega$ is nearly",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\,\\Omega$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5\\,\\Omega$.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$7\\,\\Omega$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8\\,\\Omega$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8497afec7468",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two long straight parallel wires are separated by a distance of $20$ cm. Each wire carries current $5$ mA in the same direction. The magnetic field at a point P midway between them is $\\{\\mu_0=$ permeability of free space$\\}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.05\\mu_0$ Wb/m${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(0.05/8)\\mu_0$ Wb/m${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(0.05/4)\\mu_0$ Wb/m${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "zero.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e5e0074d041f",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A charge $q$ is circulating at a constant speed $v$ with a semicircular loop of radius $r$. The magnetic moment of this loop is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(qv\\pi r)/(\\pi+2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$qvr/3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(\\pi rqv)/2(\\pi+2)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$qvr$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3afc8552f09b",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "When current $I$ is passed through galvanometer coil, it is deflected through $16^{\\circ}$. But when it is shunted by a resistance of $8\\,\\Omega$, the same current produces a deflection of $4^{\\circ}$. The resistance of the galvanometer is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$48\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$16\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$24\\,\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$12\\,\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-98a8579fe6c0",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Choose the WRONG Statement from the following statements.\n(A) A toroid is a solenoid bent in the form of a closed ring.\n(B) The magnetic field lines of solenoid are straight lines parallel to the axis inside the solenoid.\n(C) The magnetic field lines of toroid are circular having common centre.\n(D) Inside a solenoid, magnetic field may be made strong by passing small current and using laminated coil of soft iron.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "D",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "B",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ed27270d6b33",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two parallel wires of equal lengths are separated by a distance of $3$ m from each other. The currents flowing through first and second wire is $3$A and $4.5$A respectively in opposite directions. The resultant magnetic field at mid point of both the wires is ($\\mu_0$ = permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5\\mu_0}{2\\pi}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\mu_0}{4\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\mu_0}{\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\mu_0}{6\\pi}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ca8a3df83207",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the number of turns in the coil of a moving coil galvanometer decreases, the resistance of the galvanometer,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "decreases",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "remains the same",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "may increase or decrease",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e8e0675bfcf8",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic flux near the axis and inside the air core solenoid of length 60 cm carrying current I is $\\frac{\\pi}{2}\\times 10^{-6}$ Wb. Its magnetic moment will be (cross-sectional area is very small as compared to length of solenoid, $\\mu_0$ = Permeability of free space = $4\\pi\\times 10^{-7}$ SI unit)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.75\\text{ Am}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.25\\text{ Am}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.50\\text{ Am}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.0\\text{ Am}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0fa7993371b5",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A charged particle $q$ is accelerated by a potential difference of $V$ enters a region of uniform magnetic field of induction $B$ at right angles to the direction of the field. The charged particle completes semi circle of the radius $r$ inside the magnetic field. The mass of the charged particle is (all quantities are in SI units)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$q^2r^2B^2/2V$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$qr^2B^2/2V$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$qBr/V$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$q^2r^2B/2V$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2a3c6546894c",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic moments associated with two closely wound circular coils a and b of radius $r$ and $2r$ respectively are equal if (where $N_a$, $I_a$ and $N_b$, $I_b$ are number of turns and current in A and B respectively)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2N_aI_a=N_bI_b$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$N_a=2N_b$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$N_aI_a=4N_bI_b$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4N_aI_a=N_bI_b$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2efe8de83967",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two long straight wires are arranged parallel to each other and are kept $20$ cm apart in vacuum. They carry currents of $2$ A and $4$ A respectively in the same direction. What will be the magnetic force on a length of $10$ cm of either wire?\n($\\mu_0=4\\pi\\times 10^{-7}$ SI units)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{-7}$ N",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\times 10^{-7}$ N",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\times 10^{-7}$ N",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8\\times 10^{-7}$ N",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4714d4ce96a0",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An arc of a circle of radius R subtends an angle $\\pi/2$ at the centre. It carries a current I. The magnetic field at the centre will be ($\\mu_0$ = permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0I}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0I}{8R}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0I}{4R}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\mu_0I}{5R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-852c0db59952",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Six very long insulated copper wires are bound together to form a cable. The currents carried by the wires are $i_1=10$A, $i_2=-13$A, $i_3=10$A, $i_4=7$A, $i_5=-12$A and $i_6=18$ A. The magnetic induction at a perpendicular distance of $10$ cm from the cable is $(\\mu_0=4\\pi\\times 10^{-7}$ SI units$)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$40$ $\\mu$T",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$375$ $\\mu$T",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$30$ $\\mu$T",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$35$ $\\mu$T",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0ff7aec0da74",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The magnitude of the magnetic field inside a long solenoid is increased by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "decreasing its radius",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreasing the current through it",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increasing its area of cross-section",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "introducing a medium of higher permeability",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e9d63915eb25",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two circular coils $A$ and $B$ are made from the same wire but the radius of coil $A$ is twice that of coil $B$. What is the ratio of potential difference applied across them, so that the magnetic field at their centres is the same?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f113a9cb55a7",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ammeter has resistance $R$ and range $I$. What resistance should be connected in parallel with it to increase its range by $nI$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{R}{\\left(n-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{R}{\\left(n+1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{R}{n}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$Rn$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0aa00bd01250",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three long straight parallel wires carrying currents are arranged as shown. The wire C carries a current $50$ A is so placed that it experiences no force. The distance of wire C from wire A in cm is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-0aa00bd01250.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$9$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4556d4d1e42f",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "When a resistance of $100\\,\\Omega$ is connected in series with galvanometer of resistance $R$, its range is $V$. To double its range, another additional resistance of $1000\\,\\Omega$ is connected in series. Find the value of $R$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$700\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$800\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$900\\,\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$100\\,\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bb7d3a47f855",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The magnitude of magnetic induction at a point on the axis at a large distance $r$ from a centre of a circular coil of $n$ turns and area $A$ carrying current $i$ is ($\\mu_0$ = permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0nA}{4\\pi ir^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\mu_0niA}{4\\pi r^3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\mu_0ni}{4\\pi Ar^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0niA}{4\\pi r^3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-245b3f0bf2f1",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A particle carrying a charge equal to $100$ times the charge of an electron is rotating one rotation per second in a circular path of radius $0.8$ m. The value of magnetic field produced at the centre will be ($\\mu_0$ = permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{-7}/\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mu_010^{-17}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mu_010^{-6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mu_010^{-7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3112708411d0",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A galvanometer of resistance $50~\\Omega$ is connected to a battery of $3$V along with a resistance of $2950~\\Omega$ in series. A full scale deflection of $30$ divisions is obtained in the galvanometer. To reduce this deflection to $20$ divisions, the resistance in series should be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5050~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5550~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6050~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4450~\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c8333d916ba5",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two parallel long wires carry currents $i_1$ and $i_2$ with $i_1>i_2$. When the currents are in the same direction, the magnetic field at a point midway between the wires is $10~\\mu$T. If the direction of $i_2$ is reversed then the field becomes $30~\\mu$T. The ratio $\\frac{i_1}{i_2}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-23ba654f2bf2",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When a resistance of $200\\,\\Omega$ is connected in series with a galvanometer of resistance G, its range is V. To triple its range, a resistance of $2000\\,\\Omega$ is connected in series. The value of G is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$400\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$500\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$700\\,\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$900\\,\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-686e34c7ffac",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a galvanometer is shunted by ${\\left(\\frac{1}{n-1}\\right)}^{th}$ of the value of its resistance, then the fraction of the total current passing through the galvanometer is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\left(n-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{n}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{n}{\\left(n-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{1-n}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7210122e23b7",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Lorentz magnetic force is acting on a particle of charge $q$ moving with velocity $\\vec{V}$ in magnetic field $\\vec{B}$. The work done by this force on the charged particle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{V}\\times\\vec{B}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{V}\\times\\vec{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$q(\\vec{V}\\times\\vec{B})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c081d6993d51",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A circular coil of 'N' turns and diameter 'd' carries current 'I'. It is unwound and rewound to make another coil of diameter '2d', current 'I' remaining the Same. The ratio of magnetic moments of the new coil to the original coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4ff29fcb946e",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A long wire is bent into a circular coil of one turn and then into a circular coil of smaller radius having n turns. If the same current is passed in both the cases, the ratio of magnetic field produced at the centre for one turn to that of n turns is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:n$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$n:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:n^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$n^2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5694bb2f1687",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A charge moves in a circular path perpendicular to a magnetic field. The time period of revolution is independent of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "mass of the particle",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "velocity of the particle",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "magnetic field",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "charge",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8ff20361d517",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A thin ring of radius 'R' metre has charge 'q' coulomb uniformly spread on it. The ring rotates about its axis with a constant frequency of 'f' revolution/s. The value of magnetic induction at the centre of the ring in $\\text{Wb/m}^2$ is\n( $\\mu_0$ = permeability of free space )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0q}{2fR}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0q}{2\\pi R}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0qf}{2R}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0q\\pi}{2fR}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-574746cc28ac",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "When an electron is kept in a strong magnetic field, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "electron moves in opposite direction of applied magnetic field.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "electron moves in the direction of applied magnetic field.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "electron moves in the direction of perpendicular direction of magnetic field.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "electron remains stationary at the same position.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b1331a5da080",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two circular coils A and B are made from same wire but the radius of coil A is twice that of coil B. If the magnetic field at their centres is same then the ratio potential difference applied across them is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4c1c224231e2",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A uniform conducting wire of length ${}'12a'$ and resistance $R$ is wound up as a current carrying coil in the shape of an equilateral triangle of side ${}'a'$ and then a square of side ${}'a'$. The ratio of magnetic dipole moments of triangular to square coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:\\sqrt{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4f3060cad8aa",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The magnitude of the magnetic field inside a long solenoid is increased by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "decreasing its radius",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreasing the current through it",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increasing the area of cross-section",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "introducing a medium of higher permeability",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-23f65cfa2a73",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A charged particle is moving in a uniform magnetic field in a circular path of radius 'R'. When the energy of the particle becomes 3 times the original, the new radius will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}R$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$R/3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a3ecc3ad2a3c",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Torque acting on a coil carrying current 'I' situated parallel to magnetic field of induction 'B' having of turns 'n' and area 'A' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{nI}(\\vec{A}\\cdot\\vec{B})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{nI}(\\vec{A}\\times\\vec{B})$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\text{IBA}/\\text{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{nBA}/\\text{I}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f4507710e619",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A wire carrying current 'I' along x axis has length 'L' and it is kept in a magnetic field $B(\\hat{i}+2\\hat{j}-2\\hat{k})$ T. The magnitude of magnetic force acting on the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{8}\\,\\text{ILB}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\,\\text{ILB}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\,\\text{ILB}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2}\\,\\text{ILB}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-13e47bc61d2e",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A circular loop of radius R is carrying current I. The ratio of magnetic field at the center of circular loop and at a distance R from the center of the loop on its axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:3\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{8}:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3\\sqrt{2}:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-63f5398aee7c",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic field intensity (H) at the centre of a long solenoid having 'n' turns per unit length and carrying a current I, when no material is kept in it is ($\\mu_0$ = permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$n/I$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$nI$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mu_0I$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mu_0/nI$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c189def5c511",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A galvanometer has resistance G and range Vg. How much resistance is required to read voltage up to V volt?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$GV_g$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$G\\left(\\frac{V-V_g}{V}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$G\\left(\\frac{V}{V_g}-1\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$G\\left(\\frac{V+V_g}{V}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c253be58a7c9",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The magnitude of magnetic induction at mid point 'O' due to current arrangement as shown in figure will be ($\\mu_0$ = permeability of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-c253be58a7c9.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0I}{2\\pi a}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0I}{4\\pi a}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0I}{\\pi a}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-29c15911c44e",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic field at perpendicular distance '$r$' from a long wire carrying current '$I$' is '$B$'. The magnetic field at perpendicular distance '$2r$' from the same wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{B}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{B}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2B$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4B$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-efa3d350a3bd",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic field at the center of circular coil carrying current '$I$' for a single turn of a given length of wire is '$B$'. The same wire is bent in a circular coil having two turns. When the same current passes through it, the value of magnetic field becomes",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4B$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{B}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{B}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-644b44f7061c",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic field at a distance 'r' from a long straight wire carrying current I is 0.4 tesla. The magnetic field at a distance 2r will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0\\cdot 1$ tesla",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0\\cdot 2$ tesla",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0\\cdot 8$ tesla",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1\\cdot 6$ tesla",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8370cc1870cc",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The current passing through the galvanometer is 4 % of the total current in the curcuit. If the resistance of the galvanometer is 'G', the shunt resistance 'S' connected across the galvanometer is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25\\,G$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$24\\,G$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{G}{24}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{G}{25}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bb9d3e8f44af",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the cyclotron, as radius of the circular path of the charged particle increases, ($\\omega$ = angular velocity, V = linear velocity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "V increases , $\\omega$ decreases.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "V increases , $\\omega$ remains constant.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "only $\\omega$ increases , V remains constant.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "both $\\omega$ and V increase.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cb7f1839cfe2",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two wires of same length are bent to form the circular loop with two turns and a square loop of one turn. Both of them carry same current. The ratio of magnetic moment of circular loop of two turns to that of square loop is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pi:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2:\\pi$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5c3c165e8bbd",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the following figure, the magnitude of the magnetic field at point 'O' will be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-5c3c165e8bbd.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{I}{r}\\left(\\frac{2}{\\pi}+2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{I}{r}\\left(\\frac{2}{\\pi}-2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{I}{r}\\left(2+\\frac{\\pi}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{I}{r}\\left(2-\\frac{\\pi}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e5a348b64c56",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The ratio of magnetic field at the centre of the current carrying circular loop and its magnetic moment is '$x$'. When both the current and radius are tripled, then the ratio will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x}{27}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3x$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5723ed38391c",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A particle of charge '$q$' and mass '$m$' moves in a circular orbit of radius '$r$' with angular speed '$\\omega$'. The ratio of the magnitude of its magnetic moment to that of its angular momentum depends upon",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "q and m",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\omega$ and m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\omega$ and q",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\omega$ , q and m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7730209c0705",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A straight long wire is carrying current I. The ratio of magnetic field due to this wire at perpendicular distance 2 cm and 5 cm respectively from the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5:2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-833e7143bf34",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two wires with current 3A and 1.5A are enclosed in a circular loop P. Third parallel wire with current 1A is situated outside the loop as shown. All the wires are perpendicular to the plane of the circular loop. The value of $\\oint\\vec{B}\\cdot\\vec{dl}$ around the loop is ($\\mu_0=$ permeability of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-833e7143bf34.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$5.5\\,\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.5\\,\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.5\\,\\mu_0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.5\\,\\mu_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-63e687bc80a3",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two thin long parallel wires, $W_1$ and $W_2$ separated by distance '$a$', carry currents $i$ and $3i$ respectively in the same direction. The magnitude of the force per unit length exerted by wire $W_1$ on wire $W_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\,i^2}{2\\pi\\,a}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\,i^2}{\\pi\\,a}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\mu_0\\,i^2}{2\\pi\\,a}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\mu_0\\,i^2}{3\\pi\\,a}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-be4c24fff632",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two circular coils X (smaller) and Y (bigger), each having a single turn, carry equal currents in the same direction and subtend the same angle at point 'O' along the axis of the coil. The distances of the centers of coil to point 'O' are $d$ and $\\left(\\frac{d}{2}\\right)$ for coil Y and X respectively. The radii of coils Y and X are $(2r)$ and $(r)$ respectively. The magnetic induction due to the bigger coil at point 'O' is $B_y$ and that due to smaller coil X at point 'O' is $B_x$. ($d\\gg r$) The relation between $B_x$ and $B_y$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$B_y=B_x$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$B_y=2B_x$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$B_x=2B_y$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$B_x=4B_y$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-68f952a43f55",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic induction produced inside an ideal solenoid, depends on which of the following quantities ?\n(a) number of turns per unit length.\n(b) radius of the wire.\n(c) current flowing throught it.\n(d) permeability of the medium.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "(a), (b) and (d)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "(a), (b) and (c)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "(b), (c) and (d)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "(a), (c) and (d)",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-92272e111995",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "When a galvanometer is shunted by a resistance 'S', its current capacity increases 'n' times. If the same galvanometer is shunted by another resistance '$S^1$', its current capacity will increase to '$n^1$'. The value of n in terms of $n^1$, S and $S^1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{n^1+S}{S^1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{S(n^1-1)-S^1}{S}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{(n^1+1)S^1}{S}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{S+S^1(n^1-1)}{S}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-97739d55509b",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A current carrying circular coil of radius 'R' produces magnetic field $B_1$ at an axial point P at a distance 'x' from its centre and $B_2$ at point Q placed at its centre respectively . If $B_2=8B_1$, the value of x is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}\\,R$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{R}{2\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2R}{\\sqrt{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6ca8d449eec2",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two particles X and Y of masses '$m_1$' and '$m_2$' respectively, having equal charges after being accelerated through the same potential difference enter a region of uniform magnetic field and describe circular paths of radii '$r_1$' and '$r_2$' respectively. The ratio of '$r_1$' and '$r_2$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{m_1}{m_2}\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{m_1}{m_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{m_1}{m_2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{m_2}{m_1}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bdefe3982778",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A rectangular coil of effective area $0.04\\text{ m}^2$ is suspended freely in a radial magnetic field of $0.02\\text{ Wb/m}^2$. The torsional constant of the suspension fibre is $5\\times 10^{-9}\\text{ Nm/degree}$. If a current of $250~\\mu\\text{A}$ is passed through it, then the angle through which it rotates is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$40^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$45^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$50^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-17a177f9eceb",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider a circular loop (radius $R$) carrying current $I$, the magnetic field produced by it at a point on the axis at a distance $z$ from the centre of the loop is $\\frac{xR^2}{(z^2+R^2)^{3/2}}$. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mu_0I$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0I}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0I}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0I}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ae5e0427a7de",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The currents through two thin long parallel wires, A and B carrying $I$ and $\\frac{I}{3}$ respectively, in the same direction. The distance between two wires is '$d$'. The magnitude of force per unit length exerted by wire A on wire B is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0I^2}{6\\pi d}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0I^2}{3\\pi d}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0I}{3\\pi d}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0I}{6\\pi d}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1550b231663d",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A square loop ABCD of side L carrying a current $I_1$ is placed at a distance $(L/3)$ from a conductor coplaner with a straight conductor XY carrying current $I_2$ as shown in figure. The net force on the loop will be ($\\mu_0$ = magnetic permeability)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-1550b231663d.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0I_1I_2}{3\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\mu_0I_1I_2}{8\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9\\mu_0I_1I_2}{8\\pi}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3\\mu_0I_1I_2}{4\\pi}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aa52b0833736",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A long solenoid carrying a current produces a magnetic field '$B$' along its axis. If the current is tripled and the number of turns per cm is halved then new value of magnetic field will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{B}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{2}B$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3B$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9510b4239613",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solenoid of 1000 turns is wound uniformly on a glass tube 4 m long and $0.3$ m in diameter. The magnetic intensity at the centre of the solenoid when a current of 4 A flows through it is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\times 10^{+3}~\\text{A/m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$16\\times 10^{+3}~\\text{A/m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\times 10^{+3}~\\text{A/m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^{+3}~\\text{A/m}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-db5bd47e57aa",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A circular arc of wire of radius of curvature $r$ subtends an angle of $\\frac{\\pi}{5}$ radian at its centre. If current $i$ is flowing in it then the magnetic induction at its centre is ($\\mu_0$ = permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0i}{4r}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0i}{8r}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0i}{16r}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0i}{20r}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ff0f65728e80",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A thin circular wire carrying current $I$ has magnetic moment $M$. The shape of the wire is changed to a square and it carries the same current. It will have magnetic moment $M_1$. The ratio $M$ to $M_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{\\pi}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4098f4e93f13",
+      "subtopic": "moving-coil-galvanometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A voltmeter with series resistance $R$ has a range $(0-V_1)$ volt. With a series resistance of $4R$, its range becomes $(0-V_2)$ volt. The relation between $V_1$ and $V_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$V_2=4V_1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$V_2<4V_1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$V_2>4V_1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$V_2=\\frac{V_1}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7668868e03ed",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A circular coil having n turns, each of radius 'r' carries a current I. The magnetic field at a distance $x=\\sqrt{8}\\,r$ from its centre along the axis of the coil is ($\\mu_0$ = permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0nI}{51r}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0nI}{52r}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0nI}{53r}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0nI}{54r}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d6d2286ed615",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A rectangular coil of $n$ turns has area $\\vec{A}$ and it is placed in uniform magnetic field $\\vec{B}$. If the current passing through the coil is 'I' then the torque acting on the coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{I}{n}(\\vec{A}\\times\\vec{B})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$nI(\\vec{A}\\cdot\\vec{B})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$nI(\\vec{A}\\times\\vec{B})$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{n}{I}(\\vec{A}\\cdot\\vec{B})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f7cee74369a0",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The relation between magnetic moment (M) of revolving electron of charge (e) and mass (m) having principle quantum number (n) is (h = Planck's constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{M}{n}=\\frac{eh}{4\\pi m}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{M}{n}=\\frac{2\\pi m}{eh}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{M}{4\\pi}=\\frac{nm}{eh}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{M}{eh}=4\\pi nm$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

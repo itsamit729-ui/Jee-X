@@ -3,7 +3,7 @@ a subject-wise test. Read-only, needs no auth (mirrors the syllabus tables
 being public per docs/database-schema.md section 2)."""
 
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy import case, func, and_, or_
+from sqlalchemy import and_, case, func, or_
 from sqlalchemy.orm import Session
 
 from app import models, schemas
@@ -11,7 +11,10 @@ from app.database import get_db
 
 router = APIRouter(prefix="/api/subjects", tags=["subjects"])
 
-_published_count = func.count(case((and_(models.Question.status == "published", or_(models.Question.exam.is_(None), models.Question.exam.in_(["jee_main", "jee_advanced"]))), models.Question.id)))
+# What a JEE student can practise: other exams' questions and chapters are not counted or listed.
+_published_count = func.count(case(
+    (and_(models.Question.status == "published", models.Question.jee_question()), models.Question.id)))
+_jee_chapter = or_(models.Chapter.in_main.is_(True), models.Chapter.in_advanced.is_(True))
 
 
 @router.get("", response_model=list[schemas.SubjectOut])
@@ -23,7 +26,7 @@ def list_subjects(db: Session = Depends(get_db)):
             func.count(func.distinct(models.Chapter.id)).label("chapter_count"),
             _published_count.label("question_count"),
         )
-        .outerjoin(models.Chapter, models.Chapter.subject_id == models.Subject.id)
+        .outerjoin(models.Chapter, and_(models.Chapter.subject_id == models.Subject.id, _jee_chapter))
         .outerjoin(models.Subtopic, models.Subtopic.chapter_id == models.Chapter.id)
         .outerjoin(models.Question, models.Question.subtopic_id == models.Subtopic.id)
         .filter(models.Subject.code.in_(["PHY", "CHEM", "MATH"]))
@@ -52,7 +55,7 @@ def list_chapters(code: str, db: Session = Depends(get_db)):
             models.Chapter.position,
             _published_count.label("question_count"),
         )
-        .filter(models.Chapter.subject_id == subject.id)
+        .filter(models.Chapter.subject_id == subject.id, _jee_chapter)
         .outerjoin(models.Subtopic, models.Subtopic.chapter_id == models.Chapter.id)
         .outerjoin(models.Question, models.Question.subtopic_id == models.Subtopic.id)
         .group_by(models.Chapter.id, models.Chapter.name, models.Chapter.slug, models.Chapter.class_level, models.Chapter.position)

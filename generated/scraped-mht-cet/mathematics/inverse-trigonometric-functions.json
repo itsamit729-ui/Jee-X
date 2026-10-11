@@ -1,0 +1,1781 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Inverse Trigonometric Functions",
+    "slug": "inverse-trigonometric-functions",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "properties-of-inverse-trigonometric-functions",
+      "name": "Properties of inverse trigonometric functions",
+      "position": 1
+    },
+    {
+      "slug": "domain-and-range-of-inverse-trigonometric-functions",
+      "name": "Domain and range of inverse trigonometric functions",
+      "position": 2
+    },
+    {
+      "slug": "sum-upto-n-terms-and-infinite-terms-of-inverse-series",
+      "name": "Sum upto n terms and infinite terms of inverse series",
+      "position": 3
+    },
+    {
+      "slug": "principal-value-of-inverse-trigonometric-functions",
+      "name": "Principal value of inverse trigonometric functions",
+      "position": 4
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-04a8f0947a2f",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The minimum value of $(\\sin^{-1}x)^2+(\\cos^{-1}x)^2$ is............",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi^2}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\pi^2}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\pi^2}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7\\pi^2}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a9dd5b1d2eae",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\tan^{-1}(1)+\\tan^{-1}(3)+\\tan^{-1}(5)+\\tan^{-1}\\left(\\frac{1}{4}\\right)=\\pi+\\tan^{-1}\\left(\\frac{\\alpha}{2}\\right)$, then the value of $\\alpha$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{46}{41}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{23}{41}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{42}{41}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{44}{41}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-67409288c959",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\cot(\\cos^{-1}x)=\\sec\\left(\\tan^{-1}\\frac{a}{\\sqrt{b^2-a^2}}\\right)$, then the value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{b}{\\sqrt{2b^2+a^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{2b^2-a^2}}{b}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{2b^2+a^2}}{b}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{b}{\\sqrt{2b^2-a^2}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9280443ef801",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\cot^{-1}2$ and $\\cot^{-1}3$ are the angles of a triangle, then the third angle is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f6e03c63a6e2",
+      "subtopic": "principal-value-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\tan^{-1}(\\sqrt{3})+\\sec^{-1}(-2)-\\sin^{-1}\\left(-\\frac{1}{2}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4bcde98cd4bd",
+      "subtopic": "principal-value-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\frac{\\tan^{-1}(1)+\\cos^{-1}\\left(\\frac{1}{2}\\right)+\\sin^{-1}\\left(\\frac{1}{2}\\right)}{\\tan^{-1}(\\sqrt{3})-\\sec^{-1}(-2)}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-9}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ba3d0dddde70",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=(\\sin^{-1}x)^2+(\\cos^{-1}x)^2$ be a real-valued function defined on its domain. Then the sum of the greatest and the least values of $f(x)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi^2}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{11\\pi^2}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\pi^2}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7\\pi^2}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-01d9a13492c8",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sin^{-1}\\left(\\frac{x}{5}\\right)+\\csc^{-1}\\left(\\frac{5}{4}\\right)=\\frac{\\pi}{2}$, then the value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-78aa973452f2",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$2\\sin^{-1}\\left(\\frac{3}{5}\\right)+\\tan^{-1}\\left(\\frac{1}{5}\\right)+\\tan^{-1}\\left(\\frac{1}{7}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan^{-1}(18)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\tan^{-1}(18)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pi+\\tan^{-1}(18)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pi-\\tan^{-1}(18)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a00a7b1535a6",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sin^{-1}(1-x)-2\\sin^{-1}x=\\frac{\\pi}{2}$, then the value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6bb90acee367",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $-1\\le x\\le-\\frac{1}{\\sqrt{2}}$ then $\\sin^{-1}(2x\\sqrt{1-x^2})=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2\\pi+2\\cos^{-1}x$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi+2\\cos^{-1}x$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-2\\pi-2\\cos^{-1}x$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi-2\\cos^{-1}x$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d3c46945dcc9",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\cot^{-1}\\left(\\frac{ab+1}{a-b}\\right)+\\tan^{-1}\\left(\\frac{b-c}{bc+1}\\right)+\\cot^{-1}\\left(\\frac{ac+1}{c-a}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$abc$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$ab+bc+ca$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1-ab-bc-ac$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-debae934574e",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sin^{-1}x+\\cos^{-1}\\left(\\frac{1}{\\sqrt{5}}\\right)=\\frac{\\pi}{4}$, then $x=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-1}{\\sqrt{10}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{10}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{\\sqrt{10}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-3}{\\sqrt{10}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bab7ef326cc4",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\tan^{-1}\\left[\\frac{\\sqrt{5-2\\sqrt{6}}}{1+\\sqrt{6}}\\right]=\\frac{\\pi}{3}-\\tan^{-1}(k)$, then $\\sec^{-1}(k)=...$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8831bc507815",
+      "subtopic": "principal-value-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\tan^{-1}\\left(\\frac{\\cos\\left(\\frac{19\\pi}{4}\\right)-1}{\\sin\\left(\\frac{\\pi}{4}\\right)}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{5\\pi}{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{3\\pi}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{4\\pi}{9}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-18320714fbb5",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\tan^{-1}\\left[\\frac{\\sqrt{5+2\\sqrt{6}}}{1-\\sqrt{6}}\\right]=a+\\tan^{-1}(\\sqrt{2})$, then $\\csc(a)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-2}{\\sqrt{3}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ac913974a849",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solutions of the equation $\\sin[2\\cos^{-1}\\{\\cot(2\\tan^{-1}x)\\}]=0$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pm 3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1\\pm\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\pm\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pm\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ee3d73281728",
+      "subtopic": "domain-and-range-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\cos^{-1}x+\\cos^{-1}y+\\cos^{-1}z=3\\pi$, then $xy+yz+zx$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6bca6ce92ed0",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x\\in[0,1)$ then the value of $\\tan\\left\\{\\frac{1}{2}\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)+\\frac{1}{2}\\cos^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)\\right\\}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\infty$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2x}{1-x^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2x}{1+x^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-18312b65ae76",
+      "subtopic": "principal-value-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\cos\\left(\\cos^{-1}\\left(-\\frac{1}{2}\\right)+\\frac{\\pi}{3}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e01fd587893a",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\sin^{-1}\\left(\\frac{12}{13}\\right)+\\cos^{-1}\\left(\\frac{4}{5}\\right)+\\tan^{-1}\\left(\\frac{63}{16}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-773059c1cdc6",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\cot^{-1}\\left[\\frac{\\sqrt{1-\\sin x}+\\sqrt{1+\\sin x}}{\\sqrt{1-\\sin x}-\\sqrt{1+\\sin x}}\\right]$, where $x\\in\\left(0,\\frac{\\pi}{2}\\right)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi-x$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi-x$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{2}-\\frac{x}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pi-\\frac{x}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f8e66d2088b7",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $(\\tan^{-1}x)^2+(\\cot^{-1}x)^2=\\frac{5\\pi^2}{8}$, then the value of $x$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ec857ec5e58c",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $3\\tan^{-1}\\left(\\frac{1}{2}\\right)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan^{-1}\\left(\\frac{5}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan^{-1}\\left(\\frac{2}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cot^{-1}\\left(\\frac{11}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\tan^{-1}\\left(\\frac{11}{2}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0e1e5c63ed2e",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sin^{-1}(x-2)+\\cos^{-1}(x)+\\tan^{-1}(x+2)+\\cot^{-1}(x+4)=\\sec^{-1}(\\sqrt{k})-\\frac{\\pi}{2}$, then $\\cos(2\\,\\text{cosec}^{-1}\\sqrt{k-1})=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{15}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{31}{32}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{63}{64}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-df636013323d",
+      "subtopic": "principal-value-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\cos^{-1}\\left(\\cos\\frac{4\\pi}{3}\\right)+\\sin^{-1}\\left(\\sin\\frac{4\\pi}{3}\\right)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{8\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fa3bead76d0f",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\sin\\left(3\\sin^{-1}\\left(\\frac{1}{5}\\right)\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{74}{125}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{71}{125}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8c73fc97f999",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\tan^{-1}\\left(\\frac{\\log\\left(\\frac{e}{x^3}\\right)}{\\log ex^3}\\right)+\\tan^{-1}\\left(\\frac{\\log(e^4x^3)}{\\log\\left(\\frac{e}{x^{12}}\\right)}\\right)$, $x\\in\\left(e^{-\\frac{1}{3}},e^{\\frac{1}{12}}\\right)$ then $\\frac{dy}{dx}$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{e}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-94213bb258ff",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $0\\le x\\le 1$ and $(\\sin^{-1}x)^3+(\\cos^{-1}x)^3=a\\pi^3$ then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a\\ge\\frac{1}{32}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$a\\ge\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a\\le\\frac{1}{32}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a\\le\\frac{1}{16}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a1cff43ef451",
+      "subtopic": "sum-upto-n-terms-and-infinite-terms-of-inverse-series",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sum_{n=1}^{2026}\\tan^{-1}\\left(\\frac{1}{n^2+n+1}\\right)=\\tan^{-1}\\left(1-\\frac{1}{x}\\right)$, where $x\\ne 0$, then $x=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2028$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2026$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1014$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1013$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-23853c8fa7c2",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\sec^2(\\tan^{-1}3)-\\tan^2(\\sec^{-1}3)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a99599ec3a6a",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\tan^{-1}ax+\\tan^{-1}3x=\\frac{\\pi}{4}$, where $3ax^2<1$, then value of $a$ for $x=\\frac{1}{6}$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c9101ebc472b",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For $x>0$, if $\\sin(\\cos^{-1}x+\\tan^{-1}x)-\\cos(\\sin^{-1}x+\\tan^{-1}x)=\\sin(\\cot^{-1}2)$ then $x=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-087948250333",
+      "subtopic": "principal-value-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sin^{-1}\\left(\\tan\\frac{\\pi}{4}\\right)-\\sin^{-1}\\left(\\sqrt{\\frac{3}{x}}\\right)=\\frac{\\pi}{6}$ then $x$ is a root of the equation",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2-x-6=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2-x-12=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x^2+x-12=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+x-6=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f44d316efa00",
+      "subtopic": "sum-upto-n-terms-and-infinite-terms-of-inverse-series",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\sum_{k=1}^{2026}\\sin^{-1}\\left(\\cos\\frac{k\\pi}{4}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-64c0fd580694",
+      "subtopic": "principal-value-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\sin^{-1}\\left(\\sin\\frac{5\\pi}{6}\\right)+\\cos^{-1}\\left(\\cos\\frac{7\\pi}{6}\\right)+\\tan^{-1}\\left(\\tan\\frac{2\\pi}{3}\\right)$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a5b1b05b9a8e",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The lengths of the shadows of a tree of height p, thrown by sun's rays at three different moments are p, 2p and 3p. The sum of the angles of elevation of the sun's rays at these three moments is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a3e0277b709e",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\alpha\\le 2\\sin^{-1}x+\\cos^{-1}x\\le\\beta$, then the values of $\\alpha$ and $\\beta$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\alpha=0,\\beta=2\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\alpha=\\pi,\\beta=2\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\alpha=0,\\beta=\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\alpha=-\\pi,\\beta=\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-11ba1a67edd8",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sin^{-1}x+\\sin^{-1}y+\\sin^{-1}z=\\pi$, then $x^4+y^4+z^4+4x^2y^2z^2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2y^2+x^2z^2+y^2z^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2(x^2y^2+x^2z^2+y^2z^2)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3(x^2y^2+x^2z^2+y^2z^2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4(x^2y^2+x^2z^2+y^2z^2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5fc719a56c12",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\sin^{-1}(\\cos(\\sin^{-1}x))+\\cos^{-1}(\\sin(\\cos^{-1}x))=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6e0827aa2ed0",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\tan^{-1}\\left(\\frac{1}{3}\\right)+\\tan^{-1}\\left(\\frac{1}{5}\\right)+\\tan^{-1}\\left(\\frac{1}{7}\\right)=\\frac{\\pi}{4}-\\tan^{-1}\\left(\\frac{1}{k}\\right)$ then the value of $k$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-731a8e091e9a",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\cot\\left(\\mathrm{cosec}^{-1}\\frac{5}{3}+\\tan^{-1}\\frac{2}{3}\\right)$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{17}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{17}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{6}{17}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{17}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f2e4c6fa74af",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $a$ and $b$ are respectively the minimum and maximum values of the expression $f(x)=(\\sin^{-1}x+2\\cos^{-1}x)$, then $a+b$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-72576b89f242",
+      "subtopic": "sum-upto-n-terms-and-infinite-terms-of-inverse-series",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $a_1,a_2,a_3,\\ldots,a_n$ are in arithmetic progression with common difference d, then $\\tan\\left[\\tan^{-1}\\left(\\frac{d}{1+a_1a_2}\\right)+\\tan^{-1}\\left(\\frac{d}{1+a_2a_3}\\right)+\\ldots+\\tan^{-1}\\left(\\frac{d}{1+a_{n-1}a_n}\\right)\\right]=$ ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{a_1-a_n}{1+a_1a_n}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{a_n-a_1}{1-a_1a_n}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{a_n-a_1}{1+a_1a_n}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{a_1+a_n}{1+a_1a_n}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c1b910a3cd52",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $2\\sin^{-1}x-3\\cos^{-1}x=4$, then $2\\sin^{-1}x+3\\cos^{-1}x=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{6\\pi-4}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{6\\pi+4}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\pi-4}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\pi+4}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-edfcab08628e",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $3\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)-4\\cos^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)+2\\tan^{-1}\\left(\\frac{2x}{1-x^2}\\right)=\\frac{\\pi}{3}$ then $x=?$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2af9d9b39bf0",
+      "subtopic": "properties-of-inverse-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sum_{x=1}^{2025}\\tan^2(\\sec^{-1}x)=\\frac{2024\\times 2025\\times k}{6}$, then $k=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2027$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2030$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4055$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4061$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

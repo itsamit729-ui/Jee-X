@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-CHEM-7276ad52c206",
+ "subject": "CHEM",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "B",
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "B",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Set up the equilibrium table for $\\mathrm{A(g)} \\rightleftharpoons \\mathrm{B(g)} + \\mathrm{C(g)}$:\nAt start: $A = a$, $B = 0$, $C = 0$\nAt equilibrium: $A = a-x$, $B = x$, $C = x$\nTotal moles at equilibrium: $n_T = (a-x) + x + x = a + x$\nUse partial pressure = mole fraction × total pressure: $p_i = \\frac{n_i}{n_T}\\,p$\n$p_A = \\frac{a-x}{a+x}\\,p$, $\\quad p_B = p_C = \\frac{x}{a+x}\\,p$\n$$K_p = \\frac{p_B\\,p_C}{p_A} = \\frac{\\left(\\frac{x}{a+x}\\right)^2 p^2}{\\frac{a-x}{a+x}\\,p} = \\frac{x^2\\,p}{(a+x)(a-x)}$$\n$K_p = \\frac{x^2}{a^2 - x^2}\\times p$\nAnswer: (B) $\\frac{x^2}{a^2-x^2}\\times p$",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 801,
+   "cache_read": 928,
+   "output": 485,
+   "thinking": 0,
+   "api_cost_usd": 0.0163016,
+   "turns": 2,
+   "seconds": 8.0,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1230,
+   "cache_read": 1541,
+   "output": 491,
+   "thinking": 44,
+   "api_cost_usd": 0.0199762,
+   "turns": 2,
+   "seconds": 7.9,
+   "error": false
+  }
+ ]
+}

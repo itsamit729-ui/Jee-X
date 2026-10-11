@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-e41a2a09f315",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "C",
+ "verdict": "verified",
+ "solution": "Key idea: A compound gives a positive iodoform test ($\\mathrm{I_2/NaOH}$, yellow $\\mathrm{CHI_3}$) if it contains $\\mathrm{CH_3CO{-}}$ (a methyl ketone or acetaldehyde), or $\\mathrm{CH_3CH(OH){-}}$ (which is oxidised to $\\mathrm{CH_3CO{-}}$). Carboxylic acids do not give the test. The test can tell two compounds apart only if exactly one of them gives it.\nA. Ethanol, $\\mathrm{CH_3CH_2OH}$, has a $\\mathrm{CH_3CH(OH){-}}$ unit, so it gives the test. Methanol, $\\mathrm{CH_3OH}$, does not. The test can differentiate this pair.\nB. Neither $\\mathrm{CH_3COOH}$ nor $\\mathrm{CH_3CH_2COOH}$ gives the test, because acids are negative. The test cannot differentiate this pair.\nC. Cyclohexene has no carbonyl group. Cyclohexanone is not a methyl ketone. Both are negative, so the test cannot differentiate this pair.\nD. Diethyl ether, $\\mathrm{C_2H_5OC_2H_5}$, is negative. Pentan-3-one, $\\mathrm{C_2H_5COC_2H_5}$, is also negative because it has no $\\mathrm{CH_3CO{-}}$ group. The test cannot differentiate this pair.\nE. Anisole, $\\mathrm{C_6H_5OCH_3}$, is negative. Acetone, $\\mathrm{CH_3COCH_3}$, is a methyl ketone and is positive. The test can differentiate this pair.\nSo only pairs A and E can be told apart by the iodoform test.\nAnswer: (C) A & E Only",
+ "final_answer": "C",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "C",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Key idea: A compound gives a positive iodoform test ($\\mathrm{I_2/NaOH}$, yellow $\\mathrm{CHI_3}$) if it contains $\\mathrm{CH_3CO{-}}$ (a methyl ketone or acetaldehyde), or $\\mathrm{CH_3CH(OH){-}}$ (which is oxidised to $\\mathrm{CH_3CO{-}}$). Carboxylic acids do not give the test. The test can tell two compounds apart only if exactly one of them gives it.\nA. Ethanol, $\\mathrm{CH_3CH_2OH}$, has a $\\mathrm{CH_3CH(OH){-}}$ unit, so it gives the test. Methanol, $\\mathrm{CH_3OH}$, does not. The test can differentiate this pair.\nB. Neither $\\mathrm{CH_3COOH}$ nor $\\mathrm{CH_3CH_2COOH}$ gives the test, because acids are negative. The test cannot differentiate this pair.\nC. Cyclohexene has no carbonyl group. Cyclohexanone is not a methyl ketone. Both are negative, so the test cannot differentiate this pair.\nD. Diethyl ether, $\\mathrm{C_2H_5OC_2H_5}$, is negative. Pentan-3-one, $\\mathrm{C_2H_5COC_2H_5}$, is also negative because it has no $\\mathrm{CH_3CO{-}}$ group. The test cannot differentiate this pair.\nE. Anisole, $\\mathrm{C_6H_5OCH_3}$, is negative. Acetone, $\\mathrm{CH_3COCH_3}$, is a methyl ketone and is positive. The test can differentiate this pair.\nSo only pairs A and E can be told apart by the iodoform test.\nAnswer: (C) A & E Only",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 650,
+   "cache_read": 1023,
+   "output": 1490,
+   "thinking": 117,
+   "api_cost_usd": 0.0352126,
+   "turns": 2,
+   "seconds": 15.1,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1328,
+   "cache_read": 1199,
+   "output": 665,
+   "thinking": 119,
+   "api_cost_usd": 0.0241718,
+   "turns": 2,
+   "seconds": 10.6,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:27:12+00:00"
+}

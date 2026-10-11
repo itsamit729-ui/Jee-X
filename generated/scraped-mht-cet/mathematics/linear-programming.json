@@ -1,0 +1,1013 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Linear Programming",
+    "slug": "linear-programming",
+    "class_level": "12",
+    "in_main": false,
+    "in_advanced": false,
+    "in_mht_cet": true,
+    "position": 12
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "linear-inequations-in-two-variables",
+      "name": "Linear inequations in two variables",
+      "position": 1
+    },
+    {
+      "slug": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "name": "Terminologies related to the solution of llp solution of llp by graphical method",
+      "position": 2
+    },
+    {
+      "slug": "special-cases-of-llp",
+      "name": "Special cases of llp",
+      "position": 3
+    },
+    {
+      "slug": "formation-of-llp",
+      "name": "Formation of llp",
+      "position": 4
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-9033aa75de95",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The point at which the maximum value of $x+y$ subject to constraints $x+2y\\le 70$ and $2x+y\\le 95,x\\ge 0,y\\ge 0$ is.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(47.5,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(0,95)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(0,35)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(40,15)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-62bdb90d6451",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The corner points of the feasible region determined by a system of linear constraints are $(0,3),(1,1)$ and $(3,0)$. If the objective function is $z=px+qy$, where $p,q>0$, then the condition on p and q such that the minimum of z occurs at both $(3,0)$ and $(1,1)$ is _____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p=3q$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3p=q$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$p=\\frac{q}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$p=2q$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c5fcdaa55587",
+      "subtopic": "formation-of-llp",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A company sells two types of notebooks, A and B. Each notebook requires two processes: printing and binding. Notebook A requires $2$ minutes for printing and $1$ minute for binding. Notebook B requires $4$ minutes for printing and $2$ minutes for binding. The company can spend $6$ hours on printing and $2$ hours on binding. If the profit made on notebooks A and B is Rs. $2$ and Rs. $5$ respectively, then the Linear Programming Problem (LPP) to maximize the total profit $z$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "maximize $z=2x+5y$ subject to $2x+y\\le 360,4x+2y\\le 120,x\\ge 0,y\\ge 0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "maximize $z=2x+5y$ subject to $2x+y\\le 120,4x+2y\\le 360,x\\ge 0,y\\ge 0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "maximize $z=2x+5y$ subject to $2x+4y\\le 360,x+2y\\le 120,x\\ge 0,y\\ge 0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "maximize $z=2x+5y$ subject to $2x+4y\\le 120,x+2y\\le 360,x\\ge 0,y\\ge 0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0e1c1d104f07",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The minimum and maximum values of the objective function $Z=3x+9y$, subject to $x+3y\\le 60,x+y\\ge 10,x\\le y,x\\ge 0,y\\ge 0$ are respectively...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$90$ and $190$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60$ and $180$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$30$ and $120$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$40$ and $220$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c9e4d96c6860",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In L.P.P., the corner points of the feasible region for the constraints $3x-y\\ge 6,x\\le 3,y\\le 2,y\\ge 0,x\\ge 0$ are .....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(3,2),(3,0),(2,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{8}{3},2\\right),(3,2),(3,0),(2,0)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(0,0),(2,0),\\left(\\frac{8}{3},2\\right),(0,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(3,2),(0,3),(0,2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6837108c5961",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The difference between the maximum value and minimum value of the objective function $z=3x+5y$ of a linear programming problem subject to constraints $5x+10y\\le 50$, $x+y\\ge 1$, $y\\le 4$ and $x\\ge 0,y\\ge 0$ is $3\\lambda$. Then the value of $\\lambda$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9$.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$27$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e237f8e25dc1",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The maximum value of $Z=7x-6y$ subject to $0\\le x\\le 5$ and $0\\le y\\le 3$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$17$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$18$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$35$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$53$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bda76a41d432",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The minimum value of $z=4x+2y$ subject to the constraints $3x+y\\ge 27,x+y\\ge 21,x+2y\\ge 30,x\\ge 0,y\\ge 0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$48$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$60$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$80$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-99cc6345ea02",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The minimum value of $z=5x+8y$ subject to the constraints $0\\le x\\le 4,~0\\le y\\le 2,~x+y\\ge 5$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$28$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$30$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$31$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$24$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-abd107df1a8a",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The point at which the maximum value of $3x+2y$ subject to the constraints $x+y\\le 2,x\\ge 0,y\\ge 0$ is obtained is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(1.5,1.5)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(2,0)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(0,2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-223c97d79353",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The minimum value of $Z=3x+y$, subject to the constraints $2x+3y\\le 6,x+y\\ge 1,x\\ge 0,y\\ge 0$ is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6ab2588fb803",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The difference between the maximum and minimum values of the objective function $Z=3x+5y$, subject to the constraints $x+3y\\le 60$, $x+y\\ge 10$, $x-y\\le 0$, $x,y\\ge 0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$50$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$70$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$80$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ab0cbe63a595",
+      "subtopic": "special-cases-of-llp",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The L.P.P. Maximize $Z=0.75x+0.5y$ subject to $3x+2y\\le 6$, $x+4y\\le 4$, $x\\ge 0$, $y\\ge 0$ has",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "unique solution",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "no solution",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "two solutions",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "infinite solutions",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-05b1a60fbffa",
+      "subtopic": "special-cases-of-llp",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The linear programming problem:\nMaximize : $Z=x+y$\nSubject to :\n$x+2y\\le 200,\\;x+y\\le 150,\\;0\\le y\\le 60,\\;x\\ge 0$ has:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "a finite number of optimal solutions",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "a unique optimal solution",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "infinite number of optimal solutions",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "no feasible solution",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e09f534357b2",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The feasible region represented by the constraints $y-2x\\le 4,x+y\\ge 5,x\\le 4,y\\ge 2,x,y\\ge 0$ is ...........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "a convex bounded region with 4 corner points",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "an unbounded region",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a convex bounded region with 5 corner points",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "no feasible region",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d283b17e30a9",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The minimum value of $z=3x+5y$, subject to constraints $x\\le 80$, $y\\ge 60$, $x+y\\le 200$ & $x,y\\ge 0$ occurs at the point...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0,200)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(60,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(0,60)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(80,60)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-885a87bcb3c7",
+      "subtopic": "special-cases-of-llp",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For the linear programming problem, $x+2y\\le 10,~3x+y\\le 12,~x,y\\ge 0$, the maximum value of $z=5x+10y$ occurs at every point on the line segment joining the points..",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0,0)$ and $(4,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(0,0)$ and $(0,5)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(4,0)$ and $\\left(\\frac{14}{5},\\frac{18}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(0,5)$ and $\\left(\\frac{14}{5},\\frac{18}{5}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fb362ad9002e",
+      "subtopic": "linear-inequations-in-two-variables",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the following figure, the shaded region represents the system of constraints:",
+      "image": {
+        "url": "/question-images/mht-cet/mathematics/linear-programming/PYQ-MATH-fb362ad9002e.png",
+        "alt": "Figure for this Linear Programming question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2x+y\\le 12,x+2y\\le 12,x+1.25y\\ge 5,x\\le 0,y\\ge 0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2x+y\\le 12,x+2y\\le 12,x+1.25y\\ge 5,x\\ge 0,y\\le 0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2x+y\\le 12,x+2y\\le 12,x+1.25y\\le 5,x\\ge 0,y\\ge 0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2x+y\\le 12,x+2y\\le 12,x+1.25y\\ge 5,x\\ge 0,y\\ge 0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5d708f2afa7a",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The maximum value of $Z=4x+5y$, subject to the constraints $3x+y\\le 15,3x+4y\\le 24,x\\ge 0,y\\ge 0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$31$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$30$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$42$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$47$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-14bb673630a1",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The maximum value of $z=4x+y$ subject to the constraints $x+y\\le 5,2x+y\\le 7,3x+2y\\le 11,x\\ge 0,y\\ge 0$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$13$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$11$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$14$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-eabc842d22ef",
+      "subtopic": "linear-inequations-in-two-variables",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The shaded region in the provided graph represents the solution set for which of the following systems of linear inequalities?",
+      "image": {
+        "url": "/question-images/mht-cet/mathematics/linear-programming/PYQ-MATH-eabc842d22ef.png",
+        "alt": "Figure for this Linear Programming question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2x+y\\ge 2,~x-y\\ge 1,~x+2y\\le 8,~x\\ge 0,~y\\ge 0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+2y\\ge 2,~x-y\\ge 1,~x+2y\\le 8,~x\\ge 0,~y\\ge 0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2x+y\\ge 2,~x-y\\le 1,~x+2y\\le 8,~x\\ge 0,~y\\ge 0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2x+y\\ge 2,~x-y\\le 1,~2x+y\\le 8,~x\\ge 0,~y\\ge 0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-514d28034e8a",
+      "subtopic": "formation-of-llp",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An airplane can carry a maximum of $250$ passengers. A profit of Rs $1500$ is made on each executive class ticket and a profit of Rs $900$ is made on each economy class ticket. The airline reserves at least $30$ seats for executive class. However at least $4$ times as many passengers prefer to travel by economy class than by executive class. Let $x_1$ be the number of passengers of executive class and $x_2$ be the number of passengers of economy class. Formulate the LPP in order to maximize the profit for the airline...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Maximize $z=1500x_1+900x_2$ subject to $x_1+x_2\\le 250$, $x_1\\le 30$, $x_2\\le 4x_1$, $x_1\\ge 0,x_2\\ge 0$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Minimize $z=150x_1+90x_2$ subject to $x_1+x_2\\le 250$, $x_1\\ge 30$, $x_2\\ge 4x_1$, $x_1\\ge 0,x_2\\ge 0$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Minimize $z=1500x_1+900x_2$ subject to $x_1+x_2\\le 250$, $x_1\\ge 30$, $x_2\\ge 4x_1$, $x_1\\ge 0,x_2\\ge 0$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Maximize $z=1500x_1+900x_2$ subject to $x_1+x_2\\le 250$, $x_1\\ge 30$, $x_2\\ge 4x_1$, $x_1\\ge 0,x_2\\ge 0$.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-118e8f40b7ba",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The minimum value of $Z=4x+6y$, subject to constraint $x+2y\\ge 80,3x+y\\ge 75,x\\ge 0,y\\ge 0$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$320$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$450$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$254$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$180$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4864b482dc08",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The difference between the maximum value and the minimum value of the objective function $z=3x+y$ subject to the constraints $2x+3y\\le 6$, $x+y\\ge 1$, $x\\ge 0$, $y\\ge 0$ is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2e9afef4a89a",
+      "subtopic": "terminologies-related-to-the-solution-of-llp-solution-of-llp-by-graphical-method",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The LPP maximize $z=2x+5y$ subject to $x+3y\\le 6$, $2x+6y\\le 18$, $x\\ge 0$, $y\\ge 0$ has",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Unique solution",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Infinite solutions",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "No solution",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Unbounded feasible region",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ec89321acaa0",
+      "subtopic": "linear-inequations-in-two-variables",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The correct constraints for the given feasible region are ...",
+      "image": {
+        "url": "/question-images/mht-cet/mathematics/linear-programming/PYQ-MATH-ec89321acaa0.png",
+        "alt": "Figure for this Linear Programming question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+2y-2\\ge 0,3x+5y-15\\ge 0,2x-3y+6\\ge 0,x\\ge 0,y\\ge 0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+2y-2\\le 0,3x+5y-15\\le 0,2x-3y+6\\le 0,x\\ge 0,y\\ge 0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x+2y-2\\le 0,3x+5y-15\\ge 0,2x-3y+6\\ge 0,x\\ge 0,y\\ge 0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x+2y-2\\ge 0,3x+5y-15\\le 0,2x-3y+6\\ge 0,x\\ge 0,y\\ge 0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

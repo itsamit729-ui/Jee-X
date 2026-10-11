@@ -1,0 +1,5 @@
+# Only needed on the machine that exports questions from / publishes solutions to the database.
+# Solving (run_batch.py, status.py, review.py) uses the Python standard library only.
+SQLAlchemy>=2.0
+PyMySQL>=1.1
+cryptography>=42

@@ -1,0 +1,1135 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Conic Sections",
+    "slug": "conic-sections",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 11,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "ellipse",
+      "name": "Properties of Ellipse",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "common-tangent",
+      "name": "Common tangent",
+      "position": 2
+    },
+    {
+      "slug": "question-based-on-basic-definition-and-parametric-representation",
+      "name": "Question based on basic definition and parametric representation",
+      "position": 3
+    },
+    {
+      "slug": "tangent-to-parabola",
+      "name": "Tangent to parabola",
+      "position": 4
+    },
+    {
+      "slug": "tangent-to-ellipse",
+      "name": "Tangent to ellipse",
+      "position": 5
+    },
+    {
+      "slug": "chord-of-contact",
+      "name": "Chord of contact",
+      "position": 6
+    },
+    {
+      "slug": "tangent-to-hyperbola",
+      "name": "Tangent to hyperbola",
+      "position": 7
+    },
+    {
+      "slug": "locus",
+      "name": "Locus",
+      "position": 8
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-450eb77c7479",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The ellipse $4x^2+9y^2=1$ intersects positive Y-axis at point A. If S and S' are its foci, then the area (in sq. units) of $\\Delta SAS'$ is _____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{5}}{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{5}}{18}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\sqrt{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-22dd8909cfc6",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the triangle formed by the vertex and the endpoints of the latus rectum of the parabola $x^2=-18y$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{81}{4}$ square units.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{81}{2}$ square units",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{81}{3}$ square units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$81$ square units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-30e923f4df93",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation $16x^2-3y^2-32x+12y-44=0$ represents a hyperbola whose...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "centre is $(-1,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "eccentricity is $\\sqrt{\\frac{19}{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "length of its transverse axis is $4\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "length of its conjugate axis is $4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5c0da3aec816",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the triangle formed by the lines joining the vertex of the parabola $x^2=48y$ to the ends of its latus rectum, is .....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$144$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$288$ sq. units",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$72$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$576$ sq. units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cff3a8162865",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The distance of the focus of the parabola $y^2=16x$ from its directrix is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3627ae53a1b0",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an ellipse with semi-minor axis OB, S and S' are its foci, $a>b$ and $\\angle SBS'$ is a right angle, then the eccentricity of the ellipse is..",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sqrt{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-56391473f7a2",
+      "subtopic": "locus",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the hyperbola formed by the locus of the point of intersection of the lines $\\sqrt{5}x-y-2\\sqrt{5}\\mu=0$, and $\\sqrt{5}\\mu x+\\mu y-2\\sqrt{5}=0$, where $\\mu$ is a variable parameter, is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x^2}{4}-\\frac{y^2}{20}=1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x^2}{16}-\\frac{y^2}{20}=1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x^2}{20}-\\frac{y^2}{4}=1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x^2}{20}-\\frac{y^2}{16}=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-28603c9de4d4",
+      "subtopic": "tangent-to-hyperbola",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the line $12x-5y+k=0$ is tangent to the hyperbola $x^2-4y^2=100$, then $k=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pm\\sqrt{551}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm 3\\sqrt{551}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pm 5\\sqrt{551}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\pm 7\\sqrt{551}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0819b46c892f",
+      "subtopic": "tangent-to-parabola",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the tangent to the curve $y^2=4x$ at $(4,4)$ touches the circle $x^2+y^2-c=0$ then the value of $5c$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$64$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$16$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fea8d0cf0c52",
+      "subtopic": "chord-of-contact",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Tangents are drawn from the point $P(3,4)$ to the ellipse $\\frac{x^2}{9}+\\frac{y^2}{4}=1$ touching the ellipse at points A and B. Then length of segment AB is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4\\sqrt{2}}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{16\\sqrt{2}}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{8\\sqrt{10}}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9\\sqrt{10}}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a22d02f33a1e",
+      "subtopic": "tangent-to-hyperbola",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the line $4x+3y=7$ touches the hyperbola $x^2-y^2=7$, then the sum of the co-ordinates of the point of contact is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-483d884b10c5",
+      "subtopic": "common-tangent",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the common tangent touching the circle $(x-3)^2+y^2=9$ and the parabola $y^2=4x$ above the X-axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}y=3x+1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}y=-(x+3)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}y=x+3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}y=-(3x+1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9d6c0e6790f0",
+      "subtopic": "tangent-to-parabola",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "One of the tangents at the end of the latus rectum of the parabola $y^2=12x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x-y+3=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2x+y=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3x+y-3=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x+3y-3=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9e546a1e0a99",
+      "subtopic": "tangent-to-parabola",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The tangent to the parabola $x^2=2y$ at point P makes an angle of $45^{\\circ}$ with the X-axis, then the coordinates of P are:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(1,\\frac{1}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(2,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-2,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(-1,\\frac{1}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7b0786fa4453",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the directrix of the parabola $x^2-4x-5y-1=0$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4x+9=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4y+9=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4y-9=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4x-9=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6535f63d1005",
+      "subtopic": "tangent-to-hyperbola",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the line $y=2x+\\lambda$ is a tangent to the hyperbola $36x^2-25y^2=3600$, then $\\lambda=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pm 36$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm 25$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pm 16$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\pm 9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-af78c7793c13",
+      "subtopic": "tangent-to-ellipse",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equations of the tangents to the ellipse $\\frac{x^2}{16}+\\frac{y^2}{9}=1$ making an inclination of $30^{\\circ}$ with the major axis are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+\\sqrt{3}\\,y\\pm\\sqrt{43}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x-\\sqrt{3}\\,y\\pm\\sqrt{43}=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}\\,x-y\\pm\\sqrt{43}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x-\\sqrt{3}\\,y\\pm\\sqrt{3}=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-599d145a153e",
+      "subtopic": "tangent-to-ellipse",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the line $3x+4y+k=0$ touches the ellipse $9x^2+16y^2=144$, then the value of k is.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pm 3\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm 4\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mp 8\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mp 12\\sqrt{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e5fe52550aac",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the eccentricity of the ellipse $\\frac{x^2}{a^2}+\\frac{y^2}{b^2}=1,(a>b)$ is $\\frac{2}{3}$ and its focal chord is $3x+2y-6=0$, then the value of $a^2+b^2$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$11$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$13$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$14$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-74f51e5ffdce",
+      "subtopic": "tangent-to-parabola",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A parabola has its focus on the positive X-axis and the Y-axis as its directrix. If $P(\\alpha,4)$ is a point on this parabola such that the tangent to the parabola at point P passes through the origin, then the distance of P from origin is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{20}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{32}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-06cd2906c559",
+      "subtopic": "tangent-to-ellipse",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A tangent having slope $-\\frac{1}{2}$ to the ellipse $3x^2+4y^2=12$ intersects the X-axis and Y-axis at the points A and B respectively. if O is the origin, then the area of $\\triangle AOB$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$ sq. units",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$8$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16$ sq. units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0869dedc1ed2",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The eccentricity of the ellipse represented by the equation $7x^2+16y^2-14x+64y-377=0$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{7}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-136a0f67f833",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area (in sq.units) of a triangle formed by joining the vertex and the endpoints of the latus rectum of the parabola $x^2=-20y$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$200$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$50$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$10$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b9120b5344b0",
+      "subtopic": "tangent-to-parabola",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the line tangent to the curve $y^2=4x$ with an inclination of $60^{\\circ}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3x-\\sqrt{3}y-1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3x-\\sqrt{3}y+1=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3x+\\sqrt{3}y+1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3x+\\sqrt{3}y-1=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-494e7a4f33f9",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The point on the ellipse $\\frac{x^2}{25}+\\frac{y^2}{9}=1$ which is equidistant from its foci can be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0,3)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(5,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(3,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(0,5)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-519f95a28915",
+      "subtopic": "common-tangent",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the common tangent to the parabolas $y^2=4x$ and $x^2=32y$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+2y=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+2y-4=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x+2y+4=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x-2y+4=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6d489cf09f1e",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\theta$ is the eccentric angle of a point on the ellipse $\\frac{x^2}{25}+\\frac{y^2}{9}=1$ such that the distance of the point from the center is $5$, then $\\theta=$.......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4a4b05abd6c8",
+      "subtopic": "question-based-on-basic-definition-and-parametric-representation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $P$ be any point on the ellipse $16x^2+25y^2=400$ with foci $S$ and $S'$ and area of $\\triangle PSS'$ is 9 square units, then the abscissa of point $P$ is...........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{7\\sqrt{5}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4\\sqrt{7}}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\sqrt{7}}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{10}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6081f2d12a01",
+      "subtopic": "tangent-to-ellipse",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the line $4x-3y+k=0$ touches the ellipse $5x^2+9y^2=45$, then the value of $k$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$21$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm 3\\sqrt{21}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\pm 3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$63$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

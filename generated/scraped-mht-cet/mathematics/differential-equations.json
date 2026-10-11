@@ -1,0 +1,3113 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Differential Equations",
+    "slug": "differential-equations",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 22,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "linear-differential-equations",
+      "name": "Linear Differential Equations",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "name": "Solution of differential equations by method of separation variables and homogeneous",
+      "position": 2
+    },
+    {
+      "slug": "formation-of-differential-equations",
+      "name": "Formation of differential equations",
+      "position": 3
+    },
+    {
+      "slug": "order-and-degree",
+      "name": "Order and degree",
+      "position": 4
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-2abed0229c33",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The particular solution of the differential equation $xdy+2ydx=0$, when $x=2$ and $y=1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\sqrt{y}=2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x\\sqrt{y}=-2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{x}y=2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x\\sqrt{y}=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3b4ff74c26ea",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The differential equation representing the family of curves $x\\sin x+y^3=4ax$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{dy}{dx}=\\frac{y^3+x^2\\cos x}{3xy^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{dy}{dx}=\\frac{y^3-x^2\\cos x}{3xy^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{dy}{dx}=\\frac{y^3-x^2\\cos x}{3xy}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{dy}{dx}=\\frac{y^3-x^2\\cos x}{3x^2y}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-482752294cc5",
+      "subtopic": "order-and-degree",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The order and degree of the differential equation $\\sqrt{2+{\\left(\\frac{d^2y}{dx^2}\\right)}^3}={\\left(\\frac{d^3y}{dx^3}\\right)}^{5/2}$ respectively are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2,3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3,5$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3,2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5,3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8d024f646250",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The solution of the differential equation $x\\frac{dy}{dx}+y=x^3y^6$, is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$y^5=\\frac{5}{2}x^{-3}+cx^5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$y^5=\\frac{5}{2}x^3+cx^5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{y^5}=\\frac{5}{2}x^{-3}+cx^5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{y^5}=\\frac{5}{2}x^3+cx^5$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-df3ba54a3f3e",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The solution of the differential equation $2x\\frac{dy}{dx}-y=3$ represents a family of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "straight lines",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "circles",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "parabola",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "ellipse",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0915c6ffd683",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The differential equation of the family of all straight lines touching the circle $x^2+y^2=1$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(x-y\\frac{dy}{dx}\\right)}^2=1+{\\left(\\frac{dy}{dx}\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${\\left(y-x\\frac{dy}{dx}\\right)}^2=1+{\\left(\\frac{dy}{dx}\\right)}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "${\\left(x+y\\frac{dy}{dx}\\right)}^2=1+{\\left(\\frac{dy}{dx}\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left(y+x\\frac{dy}{dx}\\right)}^2=1+{\\left(\\frac{dy}{dx}\\right)}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d11dd888f167",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the function $y=f(x)$ satisfies the differential equation $x\\frac{dy}{dx}=xy+y$ and $y(1)=e$, then which of the following is true?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$f(x)$ is not continuous at $x=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$f(x)$ is decreasing in $(-1,\\infty)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$f(x)$ is increasing in $(-1,\\infty)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$f(x)$ has maxima at $x=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e70d80be8be0",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $yf(x)=g(x)+c$ where $c$ is an arbitrary constant such that $\\frac{dy}{dx}+yg(x)=f(x)$ and $[f(x)]^2-[g(x)]^2=1$, then $\\int f(x)\\cdot g(x)\\,dx=$ ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$g(x)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-g(x)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$f(x)+c$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-f(x)+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-15dd6aa47052",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $g(x)$ denotes the integrating factor of the differential equation $x\\log x\\frac{dy}{dx}+y=2\\log x$ and $\\int g(x)\\,dx=h(x)[g(x)-1]+c$, then $h(x)=$.........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\log x$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1fbce54e8092",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The differential equation of the family of lines perpendicular to the line passing through the point $(3,-5)$ with inclination $\\frac{\\pi}{3}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{dy}{dx}+\\sqrt{3}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{dy}{dx}+1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$dx+\\sqrt{3}\\,dy=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{dy}{dx}=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6765663ed9e6",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\frac{dy}{dx}=y+3$, where $y+3>0$ and $y(0)=2$, then $y(\\log 2)$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ec7c390d6b2b",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A spherical balloon expands at a rate proportional to its surface area. Initially its radius is 2 cm and 5 minutes later it increases upto 7 cm, then surface area of spherical balloon after 12 minutes will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2480$ sq.cm.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2460$ sq.cm.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2464$ sq.cm.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2400$ sq.cm.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f1f484e610b7",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\frac{dy}{dx}=y+5$ and $y(0)=4$ then $y(\\log 2)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$13$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f5016b182e36",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $\\frac{dy}{dx}=\\frac{x+y}{x-y}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$c(x^2+y^2)^{\\frac{1}{2}}+e^{\\tan^{-1}\\left(\\frac{y^2}{x}\\right)}=0$, where c is an arbitrary constant",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$c(x^2+y^2)^{\\frac{1}{2}}=e^{\\tan^{-1}\\left(\\frac{y}{x}\\right)}$, where c is an arbitrary constant",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$c(x^2-y^2)=e^{\\tan^{-1}\\left(\\frac{y}{x}\\right)}$, where c is an arbitrary constant",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$c(x^2+y^2)=e^{\\tan^{-1}\\left(\\frac{y}{x}\\right)}$, where c is an arbitrary constant",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7ab3c1534583",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The differential equation of $3y=\\sqrt[x+c]{3}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{dy}{dx}=\\frac{1}{9y^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{dy}{dx}=\\frac{1}{27y^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{dy}{dx}=\\frac{1}{81y^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{dy}{dx}=\\frac{1}{36y^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a56a5a5fa3ef",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A body cools according to Newton's law of cooling from $100^{\\circ}$C to $60^{\\circ}$C in $20$ minutes. The temperature of the surroundings being $20^{\\circ}$C, then the total time required for the body to cool down to $30^{\\circ}$C is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$90$ minutes",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$ hour and $10$ minutes",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$80$ minutes",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$60$ minutes",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b46fdc3cd799",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The general solution of the differential equation $(x+y)\\frac{dy}{dx}=1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+y+1=c$, where $c$ is a constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+y+1=ce^y$, where $c$ is a constant of integration",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x+y+1=ce^{-y}$, where $c$ is a constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x+y-1=ce^{-y}$, where $c$ is a constant of integration",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2004b3bb7caf",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The rate of disintegration of a radioactive element at any time t is proportional to its mass at that time. Then the time during which the original mass of $4.5$ gm will disintegrate to a mass of $1.5$ gm. is...(where $k$ is proportionality constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{k}\\log 3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{1}{k}\\log 3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$k\\log\\left(\\frac{1}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{k}\\log\\left(\\frac{3}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-46f7caf262bb",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $y^2-x^2\\frac{dy}{dx}=xy\\frac{dy}{dx}$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{y}{x}+\\log|y|=c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{y}{x}+\\log|x|=c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{y^2}{x}+\\log|y|=c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{y}{x^2}+\\log|y|=c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-80d61adeae99",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The order of the differential equation representing the family of all parabolas having a fixed latus rectum of length $4a$ and an axis parallel to the x-axis is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9560c57b1544",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The differential equation of the equation $y=a\\cos(x+b)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{d^2y}{dx^2}+y=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{d^2y}{dx^2}-y=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{dy}{dx}+y=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{dy}{dx}-y=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ae31b97e4ae5",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the curve $y=f(x)$ passes through the point $(1,2)$ and satisfies the differential equation $xdy+(y+x^3y^2)dx=0$, then the equation of curve is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$xy=2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$y=2x$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2y=2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^3y=2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c89599211d07",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The differential equation of all parabolas which have $4a$ as latus rectum and whose axis is parallel to the X-axis is $2a\\frac{d^2y}{dx^2}+{\\left(\\frac{dy}{dx}\\right)}^k=0$, then the value of $k$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-79e89da70de6",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The differential equation of system of concentric circles with center $(1,2)$ is ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{dy}{dx}=\\frac{x-1}{x-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{dy}{dx}=\\frac{x-1}{2-x}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{dy}{dx}=\\frac{1-x}{2-y}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{dy}{dx}=\\frac{1-x}{y-2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8b90fdd17b22",
+      "subtopic": "order-and-degree",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Degree of differential equation $\\sqrt[{\\left(\\frac{dy}{dx}\\right)}^2+5]{3}=\\frac{1+{\\left(\\frac{dx}{dy}\\right)}^3}{\\sqrt{4+{\\left(\\frac{dy}{dx}\\right)}^5}}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$37$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$19$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f1acb0951ee1",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $\\frac{dy}{dx}+1=e^{x+y}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{x+y}=x+c$, where $c$ is integral constant",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(x+c)e^{x+y}-1=0$, where $c$ is integral constant",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(x+c)e^{x+y}+1=0$, where $c$ is integral constant",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$e^{x+y}=x+y+c$, where $c$ is integral constant",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0f04cd958695",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A person's assets start reducing in such a way that the rate of reduction of assets is proportional to the square root of the assets existing at that moment. If the assets at the beginning are $\\text{₹}40$ lakhs and they dwindle down to $\\text{₹}40000$ after $2$ years. Then the person will be bankrupt in k years from the start. Then $k=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\frac{2}{9}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\frac{2}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\frac{2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\frac{2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3b070cbd80b6",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The differential equation of the equation $x^2+(y-b)^2=1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2\\left[{\\left(\\frac{dy}{dx}\\right)}^2+1\\right]={\\left(\\frac{dy}{dx}\\right)}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x^2\\left[{\\left(\\frac{dy}{dx}\\right)}^2+1\\right]=-{\\left(\\frac{dy}{dx}\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2\\left[{\\left(\\frac{dy}{dx}\\right)}^2-1\\right]=-{\\left(\\frac{dy}{dx}\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2\\left[{\\left(\\frac{dy}{dx}\\right)}^2-1\\right]={\\left(\\frac{dy}{dx}\\right)}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9c24e8b5b300",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the function $f(x)$ satisfying the equation $[f'(x)]^2+4f(x)f'(x)+f^2(x)=0$, then $f(x)=$\n(where $c$ is constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$c\\cdot e^{(2\\pm\\sqrt{3})x}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$c\\cdot e^{(-3\\pm\\sqrt{2})x}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$c\\cdot e^{(-2\\pm\\sqrt{3})x}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$c\\cdot e^{(3\\pm\\sqrt{2})x}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-52cac5135268",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $x^2\\frac{dy}{dx}-xy=1$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2xy-2cx^2-1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2xy+2cx^2+1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2xy-2cx^2+1=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2x^2y-2cx+1=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-63fc7fca7107",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the differential equation $\\left|\\begin{matrix} f(x) & f'(x) \\\\ f'(x) & f''(x) \\end{matrix}\\right|=0$ for all $x$ and $f(0)=1,f'(0)=2$, then...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$f'(x)=-f(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$f'(x)=f(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$f'(x)=2f(x)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$f'(x)=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-71afb9504678",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $\\frac{dy}{dx}=e^{x-y}+x^2e^{-y}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$y=e^x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e^y=e^x+x^3+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^y=e^x+\\frac{x^3}{3}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$e^y=e^x+2x+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4512a589e3ed",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A spherical mothball has initial radius 3 cm. Due to evaporation, the radius of the ball reduces to 1 cm in 4 months. In how many months would the mothball evaporate completely if the volume is lost at a rate proportional to the surface area ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$ months",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$8$ months",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10$ months",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12$ months",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-695e7b07680a",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The solution of $\\frac{\\text{d}y}{\\text{d}x}=\\sin(x+y)+\\cos(x+y)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log\\left[1+\\tan\\left(\\frac{x+y}{2}\\right)\\right]=y+c$, where c is the constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log\\left[1-\\tan\\left(\\frac{x+y}{2}\\right)\\right]=y+c$, where c is the constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log\\left[1+\\tan\\left(\\frac{x+y}{2}\\right)\\right]=x+c$, where c is the constant of integration",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\log\\left[1-\\tan\\left(\\frac{x+y}{2}\\right)\\right]=x+c$, where c is the constant of integration",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9e682ee51712",
+      "subtopic": "order-and-degree",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The order and degree of the differential equation $3-{\\left(\\frac{\\text{d}^3y}{\\text{d}x^3}\\right)}^{\\frac{7}{3}}={\\left(\\frac{\\text{d}y}{\\text{d}x}\\right)}^5$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3,7$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$7,3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5,7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3,5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ff8c47d4e96b",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The solution of the differential equation $e^{-x}(y+1)\\text{d}y+(\\cos^2x-\\sin 2x)y\\,\\text{d}x=0$, given that $y=1$ when $x=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log y+\\frac{1}{y}+e^x\\cos^2x=1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log y+y+e^x\\cos^2x=2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(y+1)+e^x\\cos^2x=2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log\\left(y+\\frac{1}{y}\\right)+e^x\\cos^2x=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-152f739ebbc3",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An ice ball melts. The rate at which it melts is proportional to the amount of the ice at that time. If half quantity of ice melts in $20$ minutes, then the time when $(1/8)^{th}$ part of original amount of the ice is left is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$60~\\text{minutes}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$30~\\text{minutes}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$20~\\text{minutes}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$40~\\text{minutes}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-167d21e90562",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $\\frac{dy}{dx}+1=e^{x+y}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(x+y+C)e^{x+y}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(x+C)e^{x+y}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(x-C)e^{x+y}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(x+C)e^{x+y}+1=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b2d26c10bdfb",
+      "subtopic": "order-and-degree",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The order and degree of the differential equation $e^{\\frac{dy}{dx}}+\\frac{dy}{dx}=x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "order = 1 and degree = 1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "order = 1 and degree = 2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "order = 1 and degree = not defined",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "order = not defined and degree = 1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3336fb5d7873",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a certain substance, the rate of change of vapor pressure $P$ with respect to temperature $T$ is directly proportional to the vapor pressure $P$, and inversely proportional to the square of the temperature $T$. The representation of this statement in the form of a differential equation is:\n(where $k$ is a constant of proportionality)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{dP}{dT}=\\frac{kP}{T^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{dP}{dT}=\\frac{P}{T^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{dP}{dT}=\\frac{kT}{P^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{dP}{dT}=\\frac{T^2}{P}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-674094424a75",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the general solution of the differential equation $y\\sec^2\\left(\\frac{x}{y}\\right)dx-\\left(x\\sec^2\\left(\\frac{x}{y}\\right)-y\\right)dy=0$ is $\\tan\\left(\\frac{x}{y}\\right)+g(y)=c$, then $g(y)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log|y|$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\tan\\sqrt{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos 2y$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3y^2+1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7ff1c2ac5418",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The general solution of the differential equation $(x+1)\\frac{dy}{dx}-y=e^x(x+1)^2$ is given by:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$y=(x+1)(e^x+c)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$y=(x+1)(e^{-x}+c)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$y=\\frac{e^x+c}{x+1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$y=e^x+c(x+1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-018fa8b0a3bd",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The integrating factor of the differential equation $(1+t^2)+\\left(x-e^{\\tan^{-1}t}\\right)\\frac{dt}{dx}=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{\\tan^{-1}t}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-e^{\\tan^{-1}t}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^{-\\tan^{-1}t}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-e^{-\\tan^{-1}t}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3f7b0f989a97",
+      "subtopic": "order-and-degree",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The degree of the differential equation obtained from the equation $(y-a)^2=4(x-b)$ [where $a$ and b are arbitrary constants] is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "not defined",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-da133fa58963",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $\\left(x+2y^3\\right)\\frac{dy}{dx}-y=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=(c+y^2)y$, where c is the constant of integration",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$y=(c+y^2)x$, where c is the constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=(c+y)y$, where c is the constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$y=(c+x^2)$, where c is the constant of integration",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ec8f55a416fa",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The rate of reduction is proportional to the square root of a persons existing assets at that moment. If his assets at the beginning are 10000 and they dwindle down to 5625 in 2 years, then the person will be bankrupt in",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4 years",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6 years",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8 years",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "10 years",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-83feee12b3c0",
+      "subtopic": "order-and-degree",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For the differential equation $\\frac{d^3y}{dx^3}+\\cos\\left(\\frac{d^2y}{dx^2}\\right)=0$, which of the following is true ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Order = 3, degree = 1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Order = 3, degree = 2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Order = 3, degree is not defined",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Order = 2, degree is not defined",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-94b1e3efdc52",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)$ is a polynomial such that $f(x)=[f'(x)]^2$ and $f(2)=0$, then $f(-2)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c14520d7d92c",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the curve passing through the point (0, 1) and having a slope of the tangent at point $P(x,y)$ is equal to $\\frac{y}{x+y}$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=e^{-\\frac{y}{x}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$y=e^{-\\frac{y}{x}}+1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=e^{\\frac{x}{y}}-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$y=e^{\\frac{x}{y}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dc37b9053e4f",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If water at $100^{\\circ}\\text{C}$ cools in 10 minutes to $80^{\\circ}\\text{C}$ and to $65^{\\circ}\\text{C}$ in the next 10 minutes, then the room temperature will be ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$15^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20^{\\circ}\\text{C}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-177a6bd1c9a5",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=e^{-mx}$ is a solution of the differential equation $\\frac{d^2y}{dx^2}+4\\frac{dy}{dx}+3y=0$, then the values of $m$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1,3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1,3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1,-3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1,-3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-744d0c8eede9",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The tangent to the curve intersects the Y-axis at point P. A line drawn through point P is perpendicular to this tangent and passes through another point $(1,0)$. The differential equation of the curve is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$y\\frac{dy}{dx}-x{\\left(\\frac{dy}{dx}\\right)}^2=1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x\\frac{dy}{dx}-y{\\left(\\frac{dy}{dx}\\right)}^2=1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$y\\frac{dy}{dx}+x=1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x\\frac{dy}{dx}+y=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f2c9b8a7c75f",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For the differential equation $(x^2+y^2)\\,dy=xy\\,dx$, it is given that $y(1)=1$ and $y(x_0)=e$, then the value of $x_0$ is _____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm\\sqrt{3}\\,e$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3e^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$e^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4933d7616fdc",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The general solution of the differential equation $\\sec y+(x-e^{\\sin y})\\frac{dy}{dx}=0$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{\\sin y}=x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$xe^{\\sin y}=\\frac{e^{2\\sin y}}{2}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2x\\cos y=e^x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sin y-e^{\\sin y}=c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5c60e91491cc",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The general solution of the differential equations $\\frac{dy}{dx}=(9x+y+5)^2$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan^{-1}\\left(\\frac{9x+y+5}{2}\\right)=-2x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan^{-1}\\left(\\frac{9x+y+5}{2}\\right)=2x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\tan^{-1}\\left(\\frac{9x+y+5}{3}\\right)=-3x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\tan^{-1}\\left(\\frac{9x+y+5}{3}\\right)=3x+c$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-09d23d895814",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The general solution of the differential equation $x\\sin x\\frac{dy}{dx}+(x\\cos x+\\sin x)y=\\sin x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\sin x+y\\cos x=c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$y\\sin x+x\\cos x=c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$xy\\sin x-\\cos x=c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$xy\\sin x+\\cos x=c$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0e574e45e832",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A body cools from $100^{\\circ}\\text{C}$ to $60^{\\circ}\\text{C}$ in 20 minutes, the temperature of the surroundings being $20^{\\circ}\\text{C}$. The total time taken (in minutes) for the body to cool down to $40^{\\circ}\\text{C}$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$60$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$40$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$50$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-67c589438fa6",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the curve whose slope is $\\frac{y-1}{x^2+x}$ and which passes through the point $(1,0)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$xy-x-y-1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(y-1)(x+1)=2x$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$xy+x+y-1=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$y(x+1)-x+1=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5e7db32d60e8",
+      "subtopic": "order-and-degree",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The order and degree of the differential equation $\\sqrt{1+\\frac{1}{{\\left(\\frac{dy}{dx}\\right)}^2}}={\\left(\\frac{d^2y}{dx^2}\\right)}^{\\frac{3}{2}}$ are $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Order 2, Degree 3",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Order 2, Degree 2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Order 3, Degree 3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Order 3, Degree 2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b3c7606df3ad",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The differential equation of the family of all parabolas whose axis is the $y$-axis is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{d^2y}{dx^2}+x\\frac{dy}{dx}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x\\frac{d^2y}{dx^2}-\\frac{dy}{dx}=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{d^2y}{dx^2}-x\\frac{dy}{dx}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x\\frac{d^2y}{dx^2}+\\frac{dy}{dx}=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-be432259a70f",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The rate of disintegration of a radioactive element at any time is proportional to its mass at that time, where $k$ $(k>0)$ is the constant of proportionality. The time during which an original mass of 1.5 gm will disintegrate to a mass of 0.5 gm is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$k\\log 3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{k}\\log 3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$k\\log 5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{k}\\log 5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e87f8555e82c",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The integrating factor of the differential equation $x\\frac{dy}{dx}+2y=x^2\\log x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\log 2x$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log x^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ef419b3f1c28",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A spherical raindrop evaporates at a rate proportional to its surface area. The differential equation involving the rate of change of its radius $r$ with time '$t$' is $\\ldots$ (where $k$ is a positive constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{dr}{dt}+k=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{dr}{dt}-k=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{dr}{dt}+kr=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{dr}{dt}-kr=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6cc64b39ed42",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $\\frac{dy}{dx}=\\frac{x-y}{x+y}$, when $x=0$ and $y=0$ represents ....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Circle",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Ellipse",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Hyperbola",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Pair of straight Lines",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a5549d80293d",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $\\frac{dy}{dx}=\\frac{a+bx}{c+dy}$ represents a family of circles centered at the origin if...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a=c=0,~b+d=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$a=c=0,~b=d$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$b=d=0,~a+c=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$b=d=0,~a=c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-36715ad1d3ad",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The solution of the differential equation $\\frac{dy}{dx}=\\cos(x+y)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cot\\left(\\frac{x+y}{2}\\right)=x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan\\left(\\frac{x+y}{2}\\right)=x+c$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\sin(x+y)=x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sec(x-y)+x=c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4c92b9a5a1a5",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The differential equation of all lines where the length of the normal from the origin is p and the inclination of the normal is $\\alpha$ is... (where p and $\\alpha$ are arbitrary constants)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{d^2y}{dx^2}=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{dy}{dx}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{dy}{dx}=-\\cot\\alpha$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{d^2y}{dx^2}=\\csc^2\\alpha$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-65340bebe9e0",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the solution of the differential equation $(1+x^3)\\frac{dy}{dx}+6x^2y=1+x^2$ is $y=\\frac{1}{(1+x^3)^s}\\left[x+\\frac{x^p}{p}+\\frac{x^q}{q}+\\frac{x^r}{r}+c\\right]$, then the LCM of $p,q,r$ and $s$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-76d39e788470",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $\\frac{dy}{dx}=\\frac{xy+y}{xy+x}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$y-x=\\log\\left(\\frac{x}{y}\\right)+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x-y=\\log\\left(\\frac{x}{y}\\right)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$y+x=\\log\\left(\\frac{x}{y}\\right)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$y+x=\\log\\left(\\frac{y}{x}\\right)+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-79e33f83508e",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A body cools from $100^{\\circ}$C to $80^{\\circ}$C in 5 minutes in air at $20^{\\circ}$C. The time taken to cool from $80^{\\circ}$C to $60^{\\circ}$C will be:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Less than 5 minutes",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Equal to 5 minutes",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Greater than 5 minutes",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Cannot be determined",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-862ab4370ee2",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the general solution of the differential equation $\\frac{dy}{dx}=\\cos(2x-3y)-\\cos(2x+3y)$ is $\\cos 2x=g(y)+c$, then $g(y)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cos 2x+\\cos 2y$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sec y+\\tan y$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{1}{3}\\log\\left|\\tan\\left(\\frac{3y}{2}\\right)\\right|$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\log|\\text{cosec}3y-\\cot 3y|$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0226e34b7d05",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=c_1\\sin^2x+c_2$, then its differential equation is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{d^2y}{dx^2}+2\\cot 2x\\frac{dy}{dx}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{d^2y}{dx^2}-\\cot 2x\\frac{dy}{dx}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{d^2y}{dx^2}-2\\cot x\\frac{dy}{dx}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{d^2y}{dx^2}-2\\cot 2x\\frac{dy}{dx}=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-27784cf97291",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following is not a correct pair of a linear differential equation and its integrating factor?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Linear differential equation $\\frac{dy}{dx}-y=2x$, Integrating factor $=e^{-x}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Linear differential equation $\\frac{dy}{dx}+y=e^x$, Integrating factor $=e^x$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Linear differential equation $\\frac{dy}{dx}=x+xy$, Integrating factor $=e^{\\frac{x^2}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Linear differential equation $x\\frac{dy}{dx}+2y=x^2\\log x$, Integrating factor $=x^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-50d1f5cd66ea",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The differential equation $\\frac{dy}{dx}=\\frac{\\sqrt{1-y^2}}{y}$ determines a family of circles with",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "variable radii and fixed center at $(0,1)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "fixed radius of $1$ and variable centers on X-axis",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "variable radii and fixed center at $(0,-1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "fixed radius of $1$ and variable centers on Y-axis",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bd7cadb5cfcf",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The general solution of $e^{\\frac{dy}{dx}}=x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$y=x\\log x-x+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$y=x\\log x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$y=1/x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$y=x.\\log x+x+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-362b74ca8b29",
+      "subtopic": "order-and-degree",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The order and degree of the differential equation ${\\left(\\frac{d^3y}{dx^3}\\right)}^{\\frac{2}{3}}-3\\frac{d^2y}{dx^2}+5\\frac{dy}{dx}+4=0$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2,3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3,2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3$, not defined",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "not defined, $3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b490f788ba4a",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=f(x)$ is a monotonically increasing function such that ${\\left(\\frac{dy}{dx}\\right)}^2=6-\\frac{dy}{dx}$ and $y(0)=5$, then $y(3)=\\cdots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$23$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$14$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$13$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$11$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e9485e1326f8",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\tan x$ is an integrating factor of the differential equation $\\frac{dy}{dx}+Py=Q$, then $P$ can be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sec 2x$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan 2x$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sin 2x$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\csc 2x$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1a5f0e068e38",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The general solution of the differential equation $\\frac{dy}{dx}+\\frac{y}{x}=x^2+5$ is ....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x^4}{4}+\\frac{5x^2}{2}-xy=c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x^4}{4}-\\frac{5x^2}{2}-xy=c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x^4}{4}-\\frac{5x^2}{2}+xy=c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x^4}{4}+\\frac{5x^2}{2}+xy=c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-98ce4ebb1037",
+      "subtopic": "order-and-degree",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The order and degree of the differential equation $\\sqrt{1+\\frac{1}{{\\left(\\frac{dy}{dx}\\right)}^2}}={\\left(\\frac{d^2y}{dx^2}\\right)}^{\\frac{3}{2}}$, respectively are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2,1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2,3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1,2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3,2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-08fd1692d0d0",
+      "subtopic": "solution-of-differential-equations-by-method-of-separation-variables-and-homogeneous",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $x\\frac{dy}{dx}=y(\\log y-\\log x+1)$ and its solution is $y=[h(x)]e^{cx}$, then $h(x)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2x$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\log x$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{x}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-619013f1e39e",
+      "subtopic": "linear-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The solution of the differential equation $x^2y\\,dx-(x^3+y^3)\\,dy=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log|y|-\\frac{x^3}{2y^3}=c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log|y|+\\frac{x^3}{2y^3}=c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log|y|-\\frac{x^3}{4y^3}=c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log|y|-\\frac{x^3}{3y^3}=c$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-af94b2a3cbe0",
+      "subtopic": "formation-of-differential-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The differential equation which represents the family of curves $(a+bx)e^{y/x}=x$, (where $a$ and $b$ are arbitrary constants); is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\frac{d^2y}{dx^2}=x\\frac{dy}{dx}-y$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^3\\frac{d^2y}{dx^2}={\\left(x\\frac{dy}{dx}-y\\right)}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x^2\\frac{d^2y}{dx^2}=x\\frac{dy}{dx}-y$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^3\\frac{d^2y}{dx^2}={\\left(x\\frac{dy}{dx}-y\\right)}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

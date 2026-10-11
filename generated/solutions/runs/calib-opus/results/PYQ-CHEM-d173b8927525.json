@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-CHEM-d173b8927525",
+ "subject": "CHEM",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "D",
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Relative lowering of vapour pressure for an electrolyte: $\\frac{p^\\circ-p_s}{p^\\circ}=i\\,x_2$\n$\\frac{640-600}{640}=\\frac{1}{16}$, so $i\\,x_2=\\frac{1}{16}$ ...(1)\nBoiling-point elevation: $\\Delta T_b=i\\,K_b\\,m$, where $\\Delta T_b=375-373=2\\ \\text{K}$\nMass of water $=100\\ \\text{g}=0.1\\ \\text{kg}$, so $m=\\frac{W/M}{0.1}=\\frac{10W}{M}\\ \\text{mol kg}^{-1}$\n$2=i\\times0.52\\times\\frac{10W}{M}$, which gives $i=\\frac{2M}{5.2W}=\\frac{M}{2.6W}$\nFrom (1): $x_2=\\frac{1}{16i}=\\frac{2.6}{16}\\times\\frac{W}{M}=\\frac{1.3}{8}\\times\\frac{W}{M}$\nAnswer: (D) $\\frac{1.3}{8}\\times\\frac{W}{M}$",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 849,
+   "cache_read": 928,
+   "output": 1364,
+   "thinking": 218,
+   "api_cost_usd": 0.0342656,
+   "turns": 2,
+   "seconds": 14.6,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1276,
+   "cache_read": 1541,
+   "output": 661,
+   "thinking": 144,
+   "api_cost_usd": 0.0237442,
+   "turns": 2,
+   "seconds": 8.6,
+   "error": false
+  }
+ ]
+}

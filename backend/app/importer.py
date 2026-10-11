@@ -41,6 +41,8 @@ def _upsert_chapter(db: Session, subject: models.Subject, chapter_data: dict) ->
     chapter.class_level = chapter_data["class_level"]
     chapter.in_main = chapter_data.get("in_main", True)
     chapter.in_advanced = chapter_data.get("in_advanced", True)
+    if "in_mht_cet" in chapter_data:
+        chapter.in_mht_cet = chapter_data["in_mht_cet"]
     chapter.position = chapter_data.get("position", 0)
     db.flush()
     return chapter

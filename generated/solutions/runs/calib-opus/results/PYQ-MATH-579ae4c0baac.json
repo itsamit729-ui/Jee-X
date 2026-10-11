@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-MATH-579ae4c0baac",
+ "subject": "MATH",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 2.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "2",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Take the sum as $\\sum_{i=1}^{\\infty} f(i)$.\nFor any real $t$: $t-1<[t]\\le t$, so $\\frac{k^2}{3^x}-1<\\left[\\frac{k^2}{3^x}\\right]\\le\\frac{k^2}{3^x}$.\nAdd over $k=1$ to $n$ and divide by $n^3$: $\\frac{1}{3^x}\\cdot\\frac{\\sum k^2}{n^3}-\\frac{1}{n^2}<\\frac{1}{n^3}\\sum_{k=1}^{n}\\left[\\frac{k^2}{3^x}\\right]\\le\\frac{1}{3^x}\\cdot\\frac{\\sum k^2}{n^3}$.\nSince $\\sum_{k=1}^{n} k^2=\\frac{n(n+1)(2n+1)}{6}$, we get $\\frac{\\sum k^2}{n^3}\\to\\frac13$; also $\\frac{1}{n^2}\\to 0$.\nBy the squeeze theorem, $f(x)=\\frac{1}{3}\\cdot\\frac{1}{3^x}=\\frac{1}{3^{x+1}}$.\nThen $\\sum_{i=1}^{\\infty} f(i)=\\sum_{i=1}^{\\infty}\\frac{1}{3^{i+1}}=\\frac{1/9}{1-1/3}=\\frac{1}{6}$.\nSo $12\\sum_{i=1}^{\\infty} f(i)=12\\cdot\\frac16=2$.\nAnswer: 2",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 613,
+   "cache_read": 928,
+   "output": 1450,
+   "thinking": 69,
+   "api_cost_usd": 0.0340976,
+   "turns": 2,
+   "seconds": 14.1,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1184,
+   "cache_read": 1541,
+   "output": 727,
+   "thinking": 148,
+   "api_cost_usd": 0.0243282,
+   "turns": 2,
+   "seconds": 9.8,
+   "error": false
+  }
+ ]
+}

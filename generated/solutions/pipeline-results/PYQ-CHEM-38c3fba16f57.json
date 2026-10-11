@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-38c3fba16f57",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "B",
+ "verdict": "verified",
+ "solution": "A: $\\mathrm{NH_2{-}NH_2}$ first forms a hydrazone with the $\\mathrm{C{=}O}$ group. Heating with $\\mathrm{KOH}$ then gives $\\mathrm{>CH_2}$ and releases $\\mathrm{N_2}$. This is the Wolff–Kishner reduction, so A → III.\nB: $\\mathrm{[Ag(NH_3)_2]OH}$ is Tollens' reagent. It oxidises aldehydes, and a silver mirror forms. This is Tollens' test, so B → I.\nC: Aqueous $\\mathrm{CuSO_4}$ is Fehling's solution A. Sodium potassium tartrate with $\\mathrm{KOH}$ is Fehling's solution B. With aliphatic aldehydes they give a red precipitate of $\\mathrm{Cu_2O}$. This is Fehling's test, so C → IV.\nD: $\\mathrm{Zn{-}Hg}$ with concentrated $\\mathrm{HCl}$ reduces $\\mathrm{>C{=}O}$ to $\\mathrm{>CH_2}$. This is the Clemmensen reduction, so D → II.\nSo the matching is A-III, B-I, C-IV, D-II.\nAnswer: (B)",
+ "final_answer": "B",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "B",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "A: $\\mathrm{NH_2{-}NH_2}$ first forms a hydrazone with the $\\mathrm{C{=}O}$ group. Heating with $\\mathrm{KOH}$ then gives $\\mathrm{>CH_2}$ and releases $\\mathrm{N_2}$. This is the Wolff–Kishner reduction, so A → III.\nB: $\\mathrm{[Ag(NH_3)_2]OH}$ is Tollens' reagent. It oxidises aldehydes, and a silver mirror forms. This is Tollens' test, so B → I.\nC: Aqueous $\\mathrm{CuSO_4}$ is Fehling's solution A. Sodium potassium tartrate with $\\mathrm{KOH}$ is Fehling's solution B. With aliphatic aldehydes they give a red precipitate of $\\mathrm{Cu_2O}$. This is Fehling's test, so C → IV.\nD: $\\mathrm{Zn{-}Hg}$ with concentrated $\\mathrm{HCl}$ reduces $\\mathrm{>C{=}O}$ to $\\mathrm{>CH_2}$. This is the Clemmensen reduction, so D → II.\nSo the matching is A-III, B-I, C-IV, D-II.\nAnswer: (B)",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 767,
+   "cache_read": 1023,
+   "output": 538,
+   "thinking": 0,
+   "api_cost_usd": 0.017108599999999998,
+   "turns": 2,
+   "seconds": 8.4,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1249,
+   "cache_read": 1199,
+   "output": 167,
+   "thinking": 65,
+   "api_cost_usd": 0.0135798,
+   "turns": 2,
+   "seconds": 6.6,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:26:22+00:00"
+}

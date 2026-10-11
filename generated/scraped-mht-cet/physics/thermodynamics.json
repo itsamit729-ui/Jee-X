@@ -1,0 +1,6020 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Thermodynamics",
+    "slug": "thermodynamics",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 10,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "thermodynamic-processes",
+      "name": "Thermodynamic processes",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "heat-transfer",
+      "name": "Heat transfer",
+      "position": 2
+    },
+    {
+      "slug": "specific-heat-capacity-calorimetry-and-change-of-state",
+      "name": "Specific heat capacity calorimetry and change of state",
+      "position": 3
+    },
+    {
+      "slug": "thermodynamics-process",
+      "name": "Thermodynamics process",
+      "position": 4
+    },
+    {
+      "slug": "zeroth-and-first-law-of-thermodynamics",
+      "name": "Zeroth and first law of thermodynamics",
+      "position": 5
+    },
+    {
+      "slug": "heat-engine-second-law-of-thermodynamics-and-carnot-engine",
+      "name": "Heat engine second law of thermodynamics and carnot engine",
+      "position": 6
+    },
+    {
+      "slug": "kinetic-theory-of-gases-and-gas-laws",
+      "name": "Kinetic theory of gases and gas laws",
+      "position": 7
+    },
+    {
+      "slug": "thermometry-and-thermal-expansion",
+      "name": "Thermometry and thermal expansion",
+      "position": 8
+    },
+    {
+      "slug": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "name": "Degree of freedom and law of equipartition of energy",
+      "position": 9
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-1ed00bf31ebb",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A vessel has $6$ gram of hydrogen at pressure $P$ and temperature $500$ K. A small hole is made in it so that hydrogen leaks out. How much hydrogen leaks out if the final pressure is $\\frac{P}{2}$ and the temperature falls to $300$ K?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$ gram",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$ gram",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$ gram",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$ gram",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4a7c2fe7af0a",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An ideal gas undergoes cyclic process ABCDA as shown in given p-V diagram. What is the magnitude of amount of work done by the gas?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-4a7c2fe7af0a.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$6P_0V_0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4P_0V_0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2P_0V_0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$P_0V_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-58fe2a41a3f5",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three identical heat conducting rods are connected in series as shown in the figure. The rods on the side have thermal conductivity $2K$ while that in the middle has thermal conductivity $K$. The left end of the combination is maintained at temperature $3T$ and the right end at $T$. The rods are thermally insulated from outside. In steady state, temperature at the left junction is $T_1$ and that at the right junctions is $T_2$. The ratio $T_1/T_2$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-58fe2a41a3f5.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a5a6f86e8b26",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A wire of length $L$ and diameter $d$ is used in a bulb. The temperature of wire is $T$ and power radiated by the wire is $P$. Its emissivity is ($\\sigma$ = Stefan's constant) (Assume that emissivity of wire material is same at all wavelength)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{P}{\\sigma T^4\\pi dL}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{P}{\\sigma T^2\\pi dL}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{P}{\\sigma T^2\\pi d^2L^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{P^2}{\\sigma T^4\\pi dL}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a8aa852074e4",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The energy spectrum of a black body exhibits a maximum of wavelength $\\lambda_0$. The temperature of the black body is now changed such that the energy is maximum at wavelength $\\frac{3\\lambda_0}{2}$. The ratio of power radiated by the black body will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{16}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{16}{81}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{64}{27}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-daedeb5aefff",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two samples A and B of gas initially at the same pressure and temperature. They are compressed from volume $V$ to $\\frac{V}{2}$ (A isothermally and B adiabatically). The relation between pressure of the gas A ($P_A$) and pressure of gas B ($P_B$) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$P_A<P_B$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$P_A>P_B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$P_A=P_B$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$P_A=2P_B$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0c9cd4b77208",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a gas, $\\frac{R}{C_v}=0.4$ where R is the universal gas constant and $C_v$ is the molar specific heat at constant volume. The gas is made up of molecules which are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "monoatomic",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "polyatomic",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "non rigid diatomic",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "rigid diatomic",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-15081b80175a",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An insulated container contains a monoatomic gas of molar mass 'm'. The container is moving with velocity 'V'. If it is stopped suddenly, the change in temperature of the gas is (R-gas constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{mv^2}{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{mv^2}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{mv^2}{3R}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{mv^2}{5R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-661381fe8217",
+      "subtopic": "heat-engine-second-law-of-thermodynamics-and-carnot-engine",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Carnot engine operating between temperatures $T_1$ and $T_2$ has efficiency $0.2$. When $T_2$ is lowered by $45$ K, its efficiency becomes $0.5$. Temperatures $T_1$ and $T_2$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$150$ K, $120$ K",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$120$ K, $150$ K",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$60$ K, $80$ K",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$80$ K, $60$ K",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-be7960f15cd3",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A rigid diatomic gas undergoes adiabatic change. Its pressure P and temperature T are related as $P\\propto T^x$ where x is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3.5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4.5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c5de894265bc",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A body cools in $7$ minutes from $60^{\\circ}$C to $40^{\\circ}$C. What time (in minutes) does it take to cool from $40^{\\circ}$C to $28^{\\circ}$C, if its surrounding temperature is $10^{\\circ}$C ? (Newton's law of cooling holds good)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$11$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f962a284321b",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\Delta Q$ is the amount of heat supplied to 'n' moles of a rigid diatomic gas at constant pressure, $\\Delta U$ is the change in internal energy and $\\Delta W$ is the work done then $\\Delta W:\\Delta U:\\Delta Q$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:5:7$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1:4:7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2:3:4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:5:9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-261c55a1bff6",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The pressure of a given mass of a gas is decreased by $20\\,\\%$ at constant temperature, then its volume will",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "decrease by $20\\,\\%$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "increase by $20\\,\\%$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decrease by $25\\,\\%$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "increase by $25\\,\\%$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-75623d702835",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three spheres, P, Q and R, having radii $4$ m, $5$ m and $6$ m respectively, are coated with lamp black on their outer surfaces. The wavelengths corresponding to maximum intensity (radiated) are $400$ nm, $500$ nm and $600$ nm respectively. If the powers radiated by them are $P_P$, $P_Q$ and $P_R$ respectively, then $P_P:P_Q:P_R$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}:\\frac{1}{5}:\\frac{1}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{16}:\\frac{1}{25}:\\frac{1}{36}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{64}:\\frac{1}{125}:\\frac{1}{216}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{256}:\\frac{1}{625}:\\frac{1}{1296}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-83df44bc8bf8",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "One mole of a mono-atomic ideal gas is taken through a cycle ABCDA as shown in the P-V diagram, then",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-83df44bc8bf8.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "for process A to B, heat is lost and internal energy increases.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "for process B to C, heat is lost and internal energy increases.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "for process C to D, heat is gained and internal energy increases.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "for process D to A, heat is gained and internal energy increases.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d44961c87c41",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three rods made of the same material and the same cross-sectional areas have been joined as shown in the figure. Each rod is of the same length. The temperature of the junction is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-d44961c87c41.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$60^{\\circ}\\text{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$45^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$30^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20^{\\circ}\\text{C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e658750a4d1f",
+      "subtopic": "specific-heat-capacity-calorimetry-and-change-of-state",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The difference between two molar specific heats of a gas is $7000$ J-kg${}^{-1}$-K${}^{-1}$. If the ratio of two specific heats of gas is $7/5$, the molar specific heat of the gas at constant pressure in J-kg${}^{-1}$-K${}^{-1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$17500$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$18500$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$24500$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$25500$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f190316eb620",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "For any thermodynamic process, the work done by the system depends",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "only on intial state of the system.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "both on initial and final state of the system.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "on the initial state and final state and on the path along which the change takes place.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "only on intermediate state.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5bd593f2ac2c",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A rectangular black body of temperature $27^{\\circ}C$ has surface area $6$ cm $\\times 3$ cm and rate of radiation $E$. If its temperature is increased by $300^{\\circ}C$ and its linear dimensions are reduced to ${\\left(\\frac{1}{3}\\right)}^{rd}$ of their initial value then the rate of radiation is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{9}E$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{16}{9}E$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{9}E$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{32}{9}E$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5cf9516db50e",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A monoatomic gas undergoes adiabatic change. Its pressure $P$ and temperature $T$ are related as $P\\propto T^x$ where $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.5$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4.5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6180a831929f",
+      "subtopic": "heat-engine-second-law-of-thermodynamics-and-carnot-engine",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ideal gas heat engine operate in Carnot cycle between $327^{\\circ}C$ and $227^{\\circ}C$. It absorbs $6\\times 10^4$ cal of heat at higher temperature. How much is the amount of heat converted in to work?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\times 10^4\\,cal$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1\\times 10^4\\,cal$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4\\times 10^4\\,cal$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\times 10^4\\,cal$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8d168f807dd8",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The ratio of $C_p$ to $C_v$ for a non-rigid diatomic gas is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9}{7}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cd2c8f9351b7",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "At $27^{\\circ}C$ temperature, the mean kinetic energy of the atoms of an ideal gas is $E_1$. If the temperature is increased by $300^{\\circ}C$ then the mean kinetic energy of the atoms will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{E_1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}E_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2E_1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{E_1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d2c5ffb1d447",
+      "subtopic": "thermometry-and-thermal-expansion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the change in volume of an iron sphere of volume $400$ cm${}^3$, when it is heated from $0^{\\circ}C$ to $50^{\\circ}C$ ? ($\\alpha_{iron}=12\\times 10^{-6}/{}^{\\circ}C$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.36\\,cm^3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.18\\,cm^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.72\\,cm^3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.54\\,cm^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-21bd2f8603aa",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A black rectangular surface of area A emits energy E per unit time at $27^{\\circ}$ C. If length and breadth is reduced to ${\\left(\\frac{1}{4}\\right)}^{th}$ of initial value and temperature is raised to $327^{\\circ}$ C, then energy emitted per unit time becomes",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$E$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2E$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{E}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{E}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2d05d6f2e50a",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An ideal gas expands adiabatically ($\\gamma=1.5$). To reduce the r.m.s. velocity of the molecules 3 times the gas has to be expanded",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "9 times",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "81 times",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3 times",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "27 times",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c16a607163e8",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Rate of radiation by a black body is 'R' at temperature 'T'. Another body has same area but emissivity is 0.2 and temperature 3T. Its rate of radiation is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$16.2R$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.2R$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ef91ae0b3e83",
+      "subtopic": "thermometry-and-thermal-expansion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A celsius and a Fahrenheit thermometer are dipped in boiling water. The temperature of water is lowered until the Farenheit thermometer shows $140^{\\circ}$. What is the fall in temperature on the Celsius thermometer?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$60^{\\circ}$ C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$40^{\\circ}$ C",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$50^{\\circ}$ C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$80^{\\circ}$ C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f3d41909ef14",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The change in internal energy of the mass of gas, when the volume changes from V to 2V at constant pressure P is ($\\gamma$ is the ratio of specific heat at constant pressure to that of volume) ($\\gamma=\\frac{C_p}{C_v}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{PV}{\\gamma-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{PV}{\\gamma+1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\left(\\gamma-1\\right)}{PV}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\left(\\gamma+1\\right)}{PV}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-241a0b09061e",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Energy of a gas/litre is $600$ joule, then what will be its pressure?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\times 10^5$ N/m${}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$10^5$ N/m${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6\\times 10^5$ N/m${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\times 10^5$ N/m${}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-642a5a09ac63",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\gamma_1$ be the ratio of molar specific heat at constant pressure and molar specific heat at constant volume of a mono-atomic gas and $\\gamma_2$ be the similar ratio of diatomic gas. Considering the diatomic gas molecule as a rigid rotator, the ratio, $\\gamma_1/\\gamma_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$27/35$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$35/27$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25/21$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$21/25$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-816494a9d0d8",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A sample of gas at temperature $T$ is adiabatically expanded to double its volume. The work done by the gas in the process is (given, $\\gamma=\\frac{3}{2}$):",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$W=TR[\\sqrt{2}-2]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$W=\\frac{T}{R}[\\sqrt{2}-2]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$W=\\frac{R}{T}[2-\\sqrt{2}]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$W=RT[2-\\sqrt{2}]$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c4def87399fd",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "According to law of equipartition of energy the molar specific heat of a non rigid diatomic gas at constant volume is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(9/2)R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(5/2)R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(3/2)R$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(7/2)R$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cfc9c70b22be",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "What will be the ratio of rate of radiation of metal sphere at two different temperatures $T_1=527^{\\circ}$C and $T_2=127^{\\circ}$C",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$16:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$64:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e9c68bd8d251",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The coefficient of thermal conductivity of a metal rod depends on its",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "area of cross section",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "mass",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "material of the rod",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "length used",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0ced3c06ebfa",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two rods A and B are of equal lengths. Their ends are kept between the same temperatures and their area cross-sections are $A_1$ and $A_2$, thermal conductivities are $K_1$ and $K_2$. The rate of heat transmission in the two rods will be equal if",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$K_1A_2=K_2A_1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$K_1A_1=K_2A_2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$K_1A_1^2=K_2A_2^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$K_1=K_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-66962bd84e8c",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Out of the following relations which one is true in the case of an adiabatic process, where $\\gamma=C_p/C_v$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$P^{(1-\\gamma)}T^{\\gamma}=$ constant",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$P^{\\gamma}T^{(1-\\gamma)}=$ constant",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$PT^{\\gamma}=$ constant",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$P^{\\gamma}T=$ constant",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7170c509685b",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The total radiant energy per unit area normal to the direction of incidence, received at a distance R from the centre of a star of radius r, whose outer surface radiates as a black body at a temperature 'T' K is ($\\sigma$ = Stefan's constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sigma r^2T^4}{R^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sigma r^2T^4}{4\\pi R^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sigma r^4T^4}{R^4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4\\pi\\sigma r^2T^4}{R^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9d5fd6c5e942",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Heat energy is incident on the surface at the rate of $1000$ J/min. If coefficient of absorption is $0.8$ and coefficient of reflection is $0.1$ then heat energy transmitted by the surface in 5 minute is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$500$ J",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$700$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$900$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d2e44bc9a01b",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "At what temperature, the kinetic energy of a gas molecule is half of the value at $27^{\\circ}$C ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$13.5^{\\circ}$C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-123^{\\circ}$C",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$75$K",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$13.5$K",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e5b02b6ae64e",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Six moles of oxygen gas is heated from $20^{\\circ}$C to $35^{\\circ}$C at constant volume. If specific heat capacity at constant pressure is $8\\text{ cal mol}^{-1}\\text{k}^{-1}$ and gas constant is $2\\text{ cal mol}^{-1}\\text{k}^{-1}$. The change in internal energy of the gas is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$180$ cal",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$300$ cal",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$360$ cal",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$540$ cal",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0b761aa193c6",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two hot bodies $B_1$ and $B_2$ have temperature $100^{\\circ}\\text{C}$ and $80^{\\circ}\\text{C}$ respectively at $t=0$. The temperature of the surroundings is $40^{\\circ}\\text{C}$. The ratio of the respective rates of cooling $R_1$ and $R_2$ of these two bodies at $t=0$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$R_1:R_2=3:2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$R_1:R_2=5:4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$R_1:R_2=2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$R_1:R_2=4:5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-505d29353b1b",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $150$ J of energy is incident on area $2\\text{m}^2$ and amount of heat reflected is $15$ J, coefficient of absorption is $0.6$ the amount of energy transmitted is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$50$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$45$ J",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$40$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-594011e66a22",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A balloon contains $500$ $\\text{m}^3$ of $\\text{He}$ at $27^{\\circ}\\text{C}$ and $1$ atmospheric pressure. Then, volume of $\\text{He}$ at $-3^{\\circ}\\text{C}$ and $0.5$ atmospheric pressure will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$700$ $\\text{m}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$900$ $\\text{m}^3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1000$ $\\text{m}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$500$ $\\text{m}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-60947d2f6968",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "During an adiabatic process, the pressure of a gas is found to be proportional to the cube of its temperature. The ratio $C_p/C_v$ for the gas is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-648f0eb310f2",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A monoatomic ideal gas, initially at temperature $T_1$ is enclosed in a cylinder fitted with a frictionless piston. The gas is allowed to expand adiabatically to a temperature $T_2$ by releasing the piston suddenly. If $L_1$ and $L_2$ be the lengths of the gas column before and after expansion respectively, then $\\frac{T_1}{T_2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{L_1}{L_2}\\right)}^{\\frac{2}{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{L_1}{L_2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{L_2}{L_1}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\frac{L_2}{L_1}\\right)}^{\\frac{2}{3}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ddcdf88323ea",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The radiation emitted by a star A is $10000$ times that of the sun. If surface temperature of sun and star A are $6000$ K and $2000$ K respectively, the ratio of radii of star A and sun is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1200:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$900:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$600:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$300:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6126b5c5cc80",
+      "subtopic": "thermometry-and-thermal-expansion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The coefficient of volume expansion of mercury is $18\\times 10^{-5}/^{\\circ}\\text{C}$. A thermometer bulb has volume $10^{-6}\\,\\text{m}^3$ and cross-section of stem is $0.004\\,\\text{cm}^2$. Assuming bulb is filled with mercury at $0^{\\circ}\\text{C}$ then the mercury column at $100^{\\circ}\\text{C}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$18.8$ mm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9.2$ mm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7.4$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4.5$ cm",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-776ad314e074",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$1$ g of water of volume $1\\,\\text{cm}^3$ at $100^{\\circ}\\text{C}$ is converted into steam of same temperature under normal atmospheric pressure ($10^5$ Pa). The volume of steam formed equals $1671\\,\\text{cm}^3$. If the latent heat of vaporisation of water is $2256$ J/g, the change in internal energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2423$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2089$ J",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$167$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2256$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-85309341b5d0",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "At $273^{\\circ}\\text{C}$, the emissive power of a perfectly black body is $R$. The value at $0^{\\circ}\\text{C}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{R}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{R}{16}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{R}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{R}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b6a748a19e32",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "At $10^{\\circ}\\text{C}$, the value of density of a fixed mass of a gas (ideal) divided by its pressure is $x$. At $110^{\\circ}\\text{C}$ this ratio is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{10x}{283}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$283\\,x$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{283x}{383}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ce9c8a444645",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The wavelength of maximum intensity of radiation emitted by a star is $289.8$ nm. The radiation intensity of the star is (Stefan's constant = $5.67\\times 10^{-8}$ SI unit, Wein's constant $2898\\,\\mu\\text{mk}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5.67\\times 10^8\\,W/m^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$5.67\\times 10^{-12}\\,W/m^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10.67\\times 10^7\\,W/m^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10.67\\times 10^{11}\\,W/m^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cfe36f920255",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The temperature of an ideal gas increases $2$ times when compressed adiabatically to half the volume. Its equation of state is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$PV^{3/2}=\\text{constant}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$PV^{4/3}=\\text{constant}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$PV^{1/2}=\\text{constant}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$PV^2=\\text{constant}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-085f0e3fd98d",
+      "subtopic": "specific-heat-capacity-calorimetry-and-change-of-state",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Heat required to raise the temperature of 2 mol of an ideal gas at constant pressure from $25^{\\circ}$C to $35^{\\circ}$C is 310 J. The amount of heat required to raise the temperature of the gas through the same range at constant volume is\n($R=8.3$ J/mol K)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$384$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$144$ J",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$276$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$452$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-16bc17cef0cf",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "At constant temperature, the volume of a gas is to be decreased by 4%. The pressure must be increased by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4.16\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3.86\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-31477ac24964",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The power radiated by a black body is P and it radiates maximum energy at wavelength $\\lambda_0$. If the temperature of the black body is now changed so that it radiates maximum energy at wavelength $\\frac{3\\lambda_0}{4}$, the power radiated by it becomes nP. The value of n is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{256}{81}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{81}{256}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cdfbeb260b44",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Arrange the correct order of P-V diagrams in thermodynamics for an isothermal process, isobaric process, isochoric process and adiabatic process",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-cdfbeb260b44.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "a,b,c,d",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "a,c,b,d",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "d,c,b,a",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "d,b,c,a",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-edc79d233cf8",
+      "subtopic": "thermometry-and-thermal-expansion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A metal rod (A) of length $20$ cm expands by $0.075$ cm when its temperature changes from $0^{\\circ}$C to $100^{\\circ}$C. Another metal rod (B) of different metal of same length expands by $0.045$ cm for same temperature change. A third rod of same length is composed of 2 parts, one of metal A and another of metal B. For same temperature change, this rod expands by $0.060$ cm. The portion made of metal A has the length",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$15$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$18$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f12d9d71b77e",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the ratio of molar heat capacities $\\frac{C_p}{C_v}=\\gamma$ then the ratio of $\\frac{\\Delta Q}{\\Delta U}$ and $\\frac{\\Delta Q}{\\Delta W}$ in an isobaric process is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\gamma,\\frac{\\gamma}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\gamma,\\frac{\\gamma}{\\left(\\gamma-1\\right)}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\gamma}{\\left(\\gamma-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\gamma},(\\gamma-1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-18c4d1b589f8",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The average force applied on the walls of a closed container depends on temperature (T) as (T is the temperature of an ideal gas)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$T^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$T^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$T^1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$T^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-312e5d346b6c",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An ordinary body cools from $4\\theta$ to $3\\theta$ in 't' minutes. The temperature of the body after next 't' minutes is (Assume Newton's law of cooling and room temperature as $\\theta$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\theta}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7\\theta}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\theta}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{8\\theta}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-69548f07b06b",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In thermodynamic isobaric process",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "change in internal energy is zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "work done is zero",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "change in internal energy is not zero",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "heat supplied is zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-746c334bbb47",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A monoatomic gas is stored in a thermally insulated container and the gas is suddenly compressed to ${\\left(\\frac{1}{8}\\right)}^{th}$ of its initial volume. The ratio of final pressure to initial pressure is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$16:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$40:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$32:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$28:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8e9307a98fda",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "About black body radiation, which one of the following is a WRONG statement?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "For all wavelengths, power radiated is same",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "For shorter wavelengths, radiated power is more",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "for longer wavelengths, radiated power is less",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "All wavelengths are emitted by the black body",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aeefdefdeaf5",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A black disc has a radius 'R' and wavelength corresponding to the maximum intensity is '$\\lambda$'. The emissive power (E) for the different radii and maximum wavelengths is directly proportional to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$R,\\lambda$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$R^2,\\lambda^{-4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$R^2,\\lambda^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$R^2,\\lambda$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7c9e3bab82ca",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A black rectangular surface of area A emits energy E per second at $127^{\\circ}$C. If length and breadth is reduced to half of initial value and temperature is raised to $527^{\\circ}$C then energy emitted becomes",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$E$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2E$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4E$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8E$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-82e26c240eb9",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a cyclic process, work done by the system is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "equal to the heat given to system.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "more than the heat given to system.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "independent of heat given to system.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-83a6c4919f11",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The average translational kinetic energy of a molecule in a gas is $E_1$. The kinetic energy of the electron (e) accelerated from rest through potential difference 'V' volt is $E_2$. The temperature at which $E_1=E_2$ possible is (N = number of molecules, R = gas constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{eVN}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2eVN}{3R}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{eVN}{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3eVN}{4R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-94da582e7874",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ideal gas is expanded adiabatically. How many times has the gas to be expanded to reduce the r.m.s. speed of molecules 3 times ? ($\\gamma=1.5$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$32$ times",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$16$ times",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8$ times",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$81$ times",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e9e3eee43ebe",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The ratio of the thermal conductivity of two rods of different materials is 6:5. The two rods of same area of cross section and same thermal resistance will have the length in the ratio",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5:6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6:5$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f079a0f39d39",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The energy spectrum of a black body exhibits a maximum around a wavelength $\\lambda$. The temperature of a black body is now changed such that the energy is maximum at wavelength $2\\lambda/3$. The power radiated by the black body will now increase by a factor of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{256}{81}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{81}{16}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{162}{41}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{16}{81}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0bf0814ca6e6",
+      "subtopic": "thermometry-and-thermal-expansion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An iron tyre is to be fitted on to a wooden wheel $1.0$ m in diameter. The diameter of the tyre is $6$ mm smaller than that of the wheel. The tyre should be heated so that its temperature increases by a minimum of\n(coefficient of volume expansion of iron = $3.6\\times 10^{-5}/^{\\circ}$C)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$167^{\\circ}$C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$334^{\\circ}$C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$500^{\\circ}$C",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1000^{\\circ}$C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1993fd946e3e",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "We consider a thermodynamic system. If $\\Delta U$ is the increase in internal energy and $W$ is the work done by the system, which one of the following statement is true?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Delta U=-W$ in an adiabatic process",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\Delta U=W$ in an isothermal process",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\Delta U=-W$ in an isothermal process",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Delta U=W$ in an adiabatic process",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-415bfa9bb647",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The temperature of a black body is increased by $50\\%$ then the percentage increase of radiation is nearly",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$25\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$400\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$500\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-87fe8f2b3580",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "One mole of an ideal diatomic gas undergoes a transition from A to B along a path AB as shown. The change in internal energy of the gas during the transition is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-87fe8f2b3580.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$20~\\text{kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-20~\\text{kJ}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$20~\\text{J}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-12~\\text{kJ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-94a5054c302e",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The gas in a vessel is subjected to a pressure of $20$ atm. at $27^{\\circ}$C. Now half of the gas is released from the vessel and the temperature is raised by $50^{\\circ}$C. The pressure of a gas in a vessel is nearly",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8$ atm.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$11$ atm.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12$ atm.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$17$ atm.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b88bd0f2c4d2",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "How much heat energy in joule must be supplied to $14$ g of nitrogen at room temperature to raise its temperature by $40^{\\circ}$C at constant pressure?\n(molecular wt. of nitrogen = $28$ g, $R$ = gas constant) (gas is diatomic)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$50R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$70R$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$80R$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-183d38322747",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two moles of a rigid diatomic gas does a work $\\frac{Q}{4}$ when the amount of heat supplied is $Q$. In this process the total heat capacity of the gas is ($R$ = gas constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{12R}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{10R}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{15R}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{20R}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8e761920e372",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider $p$-$V$ diagram for an ideal gas as shown. Out of the following diagrams which represents the $T$-$p$ diagram?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-8e761920e372.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "d",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "c",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "b",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "a",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ae7afaacd6e3",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The internal energy of a diatomic molecule (air) in $4m\\times 4m\\times 3m$ sized room at $10^5$ $\\text{N/m}^2$ atmospheric pressure will be $x\\times 10^6$ J. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b22ce1ef5f4e",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a gas, if the ratio of specific heats at constant pressure and volume is $\\gamma$ then the value of degree of freedom is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\left(3\\gamma-1\\right)}{\\left(2\\gamma-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{\\gamma-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9(\\gamma-1)}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{25(\\gamma-1)}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bcc535df0f92",
+      "subtopic": "thermometry-and-thermal-expansion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A sheet of solid material having area $A$ and coefficient of linear expansion $\\alpha$. The mass of sheet is $m$ and specific heat capacity is $s$. If $dQ$ is the amount of heat given to the sheet then change in its area is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{A(2\\alpha)ms}{\\Delta Q}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{A(2\\alpha)\\Delta Q}{ms}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{A\\alpha\\Delta Q}{ms}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{A\\alpha ms}{\\Delta Q}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dbb51a9bd3b4",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an adiabatic process, which one of the following statement is true ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "The molar heat capacity is infinite",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Work done by the gas equals the increase in internal energy",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The molar heat capacity is zero",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "The internal energy of the gas decreases as the temperature increases",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-35aaffc9fd3f",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The energy spectrum of a black body exhibits a maximum around a wavelength '$\\lambda$'. The temperature of the black body is now changed such that the energy is maximum around a wavelength $2\\lambda/3$. The power radiated by the black body will now increase by a factor",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{9}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{81}{16}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{27}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-51ede674e719",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An ideal gas at $27^{\\circ}$C is compressed adiabatically to $\\left(\\frac{8}{27}\\right)$ of its original volume. If $\\gamma=5/3$, then the rise in temperature of a gas is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$300$ K",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$675$ K",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$375$ K",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$27$ K",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-79b21443d731",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The translational kinetic energy of the molecules of a gas at absolute temperature (T) can be doubled by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increasing T to 4 T",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "increasing T to $\\sqrt{2}$ T",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decreasing T to T/2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "increasing T to 2T",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8aa4e5442d05",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A black rectangular surface of area 'A' emits energy 'E' per second at $27^{\\circ}$C. If length and breadth is reduced to half of its initial value and temperature is raised to $327^{\\circ}$C then energy emitted per second becomes",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2E$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4E$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8E$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16E$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b30c552786ea",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Rate of flow of heat through a cylindrical rod is '$H_1$'. The temperature at the ends of the rod are $T_1$ and $T_2$. If all the dimensions of the rod become double and the temperature difference remains the same and if the rate of flow of heat becomes '$H_2$' then $H_2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\text{H}_1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\text{H}_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\text{H}_1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\text{H}_1}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f3647d0506c4",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A monoatomic gas at pressure P having volume V expands isothermally to a volume 3V and then adiabatically to a volume 81 V. The final pressure of the gas is ($\\gamma=5/3$).",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\text{P}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\text{P}}{(3)^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\text{P}}{(3)^4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\text{P}}{(3)^6}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2cab7b924744",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A rigid diatomic gas having molar mass m is contained in an insulated container. The container is moving with velocity V. If it is stopped suddenly, the change in temperature is (R - gas constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{mV^2}{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{mV^2}{3R}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{mV^2}{5R}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{mV^2}{7R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a1dae09f5d73",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A bowl filled with very hot water cools from $98^{\\circ}\\text{C}$ to $86^{\\circ}\\text{C}$ in 2 minutes when the room temperature is $22^{\\circ}\\text{C}$. How long it will take to cool from $75^{\\circ}\\text{C}$ to $69^{\\circ}\\text{C}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5$ minute",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.4$ minute",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1$ minute",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$ minute",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bc5ac34dda0a",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The average transnational kinetic energy of a molecule in a gas is $E_1$. The kinetic energy of the electron (e) accelerated from rest through potential difference 'V' volt is $E_2$. The temperature at which $E_1=E_2$ possible is (mass of molecule and electron is same) (N = number of molecules, V = Velocity, R = gas constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2VNe}{3R}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{VNe}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3NeV}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5NeV}{3R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d303a9763cef",
+      "subtopic": "heat-engine-second-law-of-thermodynamics-and-carnot-engine",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A Carnot engine with efficiency 50% takes heat from a source at 600 K. To increase the efficiency by 20%, keeping temperature of the sink same, the new temperature of the source will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$300~\\text{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$900~\\text{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1000~\\text{K}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$360~\\text{K}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ee487131dc86",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If a gas is compressed isothermally then the r.m.s. velocity of the molecules",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "remains the same",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "decreases",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "first increases and then decreases",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fb33ead1f01f",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "One gram of a liquid is converted to vapour at $3\\times 10^5$ Pa pressure. If 10% of the heat supplied is used for increasing the volume by $1600~\\text{cm}^3$ during this phase change, then the increase in internal energy in the process will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4.32\\times 10^8~\\text{J}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4800~\\text{J}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4320~\\text{J}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4.32\\times 10^5~\\text{J}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-00e202334fda",
+      "subtopic": "heat-engine-second-law-of-thermodynamics-and-carnot-engine",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A Carnot engine, whose efficiency is 40% takes heat from a source maintained at temperature 600K. To have an efficiency 60%, the intake temperature for the same exhaust temperature should be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1800$ K",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$900$ K",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$720$ K",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$360$ K",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-66482e21047a",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Consider two rods 1 and 2 of same length. They have different specific heats $(C_1,C_2)$, thermal conductivities $(K_1,K_2)$ and area of cross-section $(A_1,A_2)$ respectively. Both the rods have temperatures $(T_1,T_2)$ at their ends. If their rate of loss of heat due to conduction is equal, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$A_1K_2=A_2K_1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$A_1K_1=A_2K_2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{A_1K_1}{C_1}=\\frac{A_2K_2}{C_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{A_1K_2}{C_1}=\\frac{A_2K_1}{C_2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8772bcf38f2c",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an external environment of temperature ($T$) kelvin, a sphere at temperature ($3T$) kelvin has cooling rate $R_1$. When the temperature of that sphere falls to ($2T$) kelvin, the cooling rate $R_2$ of the sphere will become",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{15}{16}R_1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{11}{16}R_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7}{16}R_1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{16}R_1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8bc8802f67c5",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The speeds of the seven molecules are 1, 3, 5, 7, 2, 4 and 6 km/s respectively. The ratio of their r.m.s. velocity and average velocity will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sqrt{5}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{5}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:2\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{5}:2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c40bef846b78",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The heat energy that must be supplied to 14 g of nitrogen at room temperature to raise its temperature by $48~^{\\circ}\\text{C}$ at constant pressure is ($R$ = gas constant, Molecular weight of nitrogen $(\\text{N}_2)$ = 28)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$72~R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$84~R$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$96~R$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$108~R$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d21273915c56",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "'$x$' joule of heat is incident on a body. Out of it, the total heat reflected and transmitted by it is '$y$' joule. The absorption coefficient of the body is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x}{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-y}{x}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{y}{x-y}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x}{y-x}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-157c9e0aa279",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A black body emits radiation of maximum intensity of wavelength '$\\lambda$' at temperature 'T' K. Its corresponding wavelength at temperature $(2.5T)$ K will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\lambda}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\lambda}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4\\lambda}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{16\\lambda}{81}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-237a1bab5dfc",
+      "subtopic": "heat-engine-second-law-of-thermodynamics-and-carnot-engine",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A carnot engine having efficiency $\\frac{1}{6}$, operates between the source temperature $T_H$ and the sink temperature $T_C$. Its efficiency increases to $\\frac{1}{3}$, when $T_C$ is decreased by 64 K. The temperatures $T_H$ and $T_C$ are repectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$374$ K , $310$ K",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$384$ K , $320$ K",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$384$ K , $340$ K",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$320$ K , $256$ K",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-26409cfcb792",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two cylinders A and B fitted with pistons contain equal amount of an ideal diatomic gas at 303 K. The piston of cylinder A is free to move and that of cylinder B is held fixed. The same amount of heat is given to the gas in each cylinder. If the rise in temperature of the gas in cylinder B is 63 K then the rise in temperature of the gas in A is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$35$ K",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$40$ K",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$45$ K",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$50$ K",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-572d1f17fd01",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a composite slab there are two materials having coefficients of thermal conductivity K and 2K, thickness x and 4x repectively. The temperature of the two outer surfaces of a composite slab are $T_2$ and $T_1$ $(T_2>T_1)$. $T_2$ is on side K and $T_1$ is on side 2K. The rate of heat transfer through the slab in a steady state is $\\left[\\frac{A(T_2-T_1)K}{x}\\right]\\cdot f$, where f is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7270368fc862",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A thermodynamic system is compressed adiabatically, then its temperature",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "becomes zero.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "remains constant.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increases.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "decreases.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d647160a2105",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The temperature at which r.m.s. velocity of hydrogen molecules is 4.5 times that of an oxygen molecule at $47^{\\circ}$ C is (molecular weight of hydrogen and oxygen are 2 and 32 respectively)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$47^{\\circ}$ C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$132^{\\circ}$ C",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$320^{\\circ}$ C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$405^{\\circ}$ C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-79b83fec7b6b",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An ideal gas is heated from $27^{\\circ}\\text{C}$ to $627^{\\circ}\\text{C}$ at constant pressure. If initial volume of gas is $4~\\text{m}^3$, then the new volume of the gas will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12~\\text{m}^3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$6~\\text{m}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3~\\text{m}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2~\\text{m}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8da85033f7e3",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two spherical black bodies of radii $R_1$ and $R_2$ having surface temperature $T_1$ and $T_2$ respectively, radiate the same power. The ratio of $R_1$ to $R_2$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{T_1}{T_2}\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${\\left(\\frac{T_1}{T_2}\\right)}^4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${\\left(\\frac{T_2}{T_1}\\right)}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\frac{T_2}{T_1}\\right)}^4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9a1e3d934941",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The r.m.s. speed of hydrogen at S.T.P. is '$u$' $\\text{m/s}$. If the gas is heated at constant pressure till its volume becomes three times, the final temperature of the gas and the r.m.s. speed are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1092~\\text{K}$ , $3u~\\text{m/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1092~\\text{K}$ , $\\frac{u}{3}~\\text{m/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$819~\\text{K}$ , $\\sqrt{3}\\,u~\\text{m/s}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$819~\\text{K}$ , $\\frac{u}{\\sqrt{3}}~\\text{m/s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9e6842cd84db",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In thermodynamic process for free expansion, select the 'WRONG' statement out of the following options.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Free expansions are adiabatic expansions and there is no exchange of heat between system and environment.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "A free expansion can be plotted on a p-V diagram.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "There is no work done on the system or by the system.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "It is an instantaneous change and the system is not in thermodynamic equilibrium.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c0ada5b032f7",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following graphs between pressure and volume of a gas correctly shows isochoric process in thermodynamics?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-c0ada5b032f7.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "(D)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "(A)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "(C)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "(B)",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fb9ba213f54c",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The ratio of thermal conductivity of two rods of different materials is $4:3$. The two rods have same area of cross-section and same thermal resistance. The lengths of rods are in the ratio",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1:5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2a35706c8337",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A body cools from a temperature $3\\theta$ to $2\\theta$ in 10 minute. The room temperature is $\\theta$. The temperature of the body at the end of the next 10 minute is '$x$'. Assuming that Newton's law of cooling is applicable, the value of '$x$' will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{9}{5}\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7}{4}\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{2}\\theta$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{3}\\theta$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4d4416cd229d",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ideal gas with pressure P, volume V and temperature T is expanded isothermally to volume 2V and a final pressure $P_i$. The same gas is expanded adiabatically to a volume 2V then the final pressure is $P_a$. In terms of $\\gamma$, the ratio of the two specific heats for the gas, the ratio $P_i/P_a$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2^{\\gamma}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2^{1-\\gamma}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2^{\\gamma-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\gamma$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-702ec20dc853",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "When the r.m.s. velocity of a gas is denoted by '$v$' at temperature '$T$'. Out of the following relations, the true one is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$v\\cdot T^2=\\text{constant}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{v}{T^2}=\\text{constant}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$v^2T=\\text{constant}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{v^2}{T}=\\text{constant}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-76ee03aad977",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "At a pressure P and temperature T, 7 gram of oxygen occupies a volume V. The equation of state will be (Molecular weight of Oxygen $=32$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$PV=\\left(\\frac{2}{7}\\right)RT$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$PV=\\left(\\frac{7}{2}\\right)RT$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$PV=\\left(\\frac{7}{16}\\right)RT$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$PV=\\left(\\frac{7}{32}\\right)RT$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-83f4162f1545",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ideal monoatomic gas is taken around the cycle ABCDA as shown in the P.V diagram. The work done during the cycle is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-83f4162f1545.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$-P_0V_0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2P_0V_0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-2P_0V_0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$6P_0V_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c3f58073f39f",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A black body radiates maximum energy at wavelength '$\\lambda$' at temperature $T_1$ and its emissive power is E. When the temperature of the body is changed to $T_2$, it radiates maximum energy at wavelength $\\frac{2\\lambda}{3}$, then the emissive power will become",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{99}{16}\\,E$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{81}{16}\\,E$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{63}{16}\\,E$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{45}{16}\\,E$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-20b7ae30a6da",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The thermodynamic process in which no work is done by the gas or on the gas is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "isothermal process",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "adiabatic process",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "isobaric process",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "isochoric process",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-273a1dd21871",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The kinetic energy of an ideal gas is $E_0$ at $27^{\\circ}\\text{C}$. When the temperature is increased to $177^{\\circ}\\text{C}$, then kinetic energy will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$E_0/2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2E_0/3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3E_0/2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2E_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5857697d6b59",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When $170$ J of energy is incident on a surface of a body, $17$ J of energy is reflected by it. If the coefficient of absorption is $0.7$, then the amount of energy transmitted will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.4$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$11.9$ J",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$34.0$ J",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$119.0$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-85d38cff61c6",
+      "subtopic": "thermometry-and-thermal-expansion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the two temperatures on Fahrenheit scale differ by $54^{\\circ}\\text{F}$, then the difference in temperature on the Celsius scale is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30^{\\circ}\\text{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$35^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$40^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$45^{\\circ}\\text{C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b8ddd3ceb70a",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A black body is at temperature $827^{\\circ}\\text{C}$. The rate at which it emits energy is proportional to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(827)^4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(827)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(1100)^4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(1100)^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-effa149694e1",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A gas at normal temperature is suddenly compressed to one-fourth of its original volume. If $\\gamma=1.5$, then the increase in the temperature of the gas in Kelvin is ($\\gamma$ is the ratio of specific heats)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$273$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$373$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$473$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$573$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3826b3ade1aa",
+      "subtopic": "specific-heat-capacity-calorimetry-and-change-of-state",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$15$ g of ice at $0^{\\circ}\\text{C}$ is added to a vessel containing water at $40^{\\circ}\\text{C}$. The mass of water and water equivalent of the vessel is $60$ g. Assuming that negligible heat is taken from the surroundings, the final temperature of the mixture will be\n[ $L_{\\text{ice}}=80\\,\\text{cal/g}$ , $S_{\\text{water}}=1\\,\\text{cal/g}$ ]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$22^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$16^{\\circ}\\text{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$10^{\\circ}\\text{C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-41088b42c3a6",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Assuming the expression for the pressure exerted by the gas, it can be shown that pressure is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{2}{3}\\right)}^{rd}$ of kinetic energy per unit volume of a gas.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "${\\left(\\frac{3}{4}\\right)}^{th}$ of kinetic energy per unit volume of a gas.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${\\left(\\frac{1}{3}\\right)}^{rd}$ of kinetic energy per unit volume of a gas.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\frac{3}{2}\\right)}^{nd}$ times kinetic energy per unit volume of a gas.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-692f41f8d8fb",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ideal gas having pressure P, volume V and temperature T undergoes a thermodynamic process in which $dW=0$ and $dQ<0$. Then, for the gas",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "T will increase.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "V will increase.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "T will decrease.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "P may increase or decrease.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ddae95c6286e",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ideal gas ($\\gamma=1.5$) is expanded adiabatically. To reduce the root mean square velocity of molecules two times, the gas should be expanded",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$20$ times",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$16$ times",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$12$ times",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$ times",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e410f884d238",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ideal gas at pressure 'P' and temperature 'T' is enclosed in a vessel of volume 'V'. Some gas leaks through a hole from the vessel and the pressure of the enclosed gas falls to $P^1$. Assuming that the temperature of the gas remains constant during the leakage, the number of moles of the gas that have leaked is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{P^1V}{RT}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{V}{RT}(P-P^1)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2V}{RT}(P+P^1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{V}{RT}(P+P^1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ea6be9119fd7",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Out of the following, which statement is NOT true about black body radiation ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Intensity is more for shorter wavelengths ($\\lambda$).",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Intensity is same for all wavelengths ($\\lambda$).",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Intensity is less for longer wavelengths ($\\lambda$).",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "A black body emits all wavelengths ($\\lambda$).",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4e5bea957469",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If '$m$' represents the mass of each molecule of a gas and '$T$' its absolute temperature respectively, then the root mean square velocity of the gaseous molecule is proportional to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$m^{-1/2}T^{-1/2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$m^{-1/2}T^{1/2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$m^{1/2}T^{-1/2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$m^1T^1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-94d9e3f82521",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A perfectly black body radiates power at temperature $T_1$K. If it is to radiate 16 times this power, its temperature should be increased by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(16T_1)K$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(4T_1)K$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(2T_1)K$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(T_1)K$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bc5cf5733b97",
+      "subtopic": "thermometry-and-thermal-expansion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The length of mercury column in a mercury-in-glass thermometer is $H_1$ mm at the ice point and $H_2$ mm at the steam point. When the length is $H$ mm, the temperature $T$ is given in ${}^{\\circ}$C by ($H_1<H_2$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{100(H-H_1)}{\\left(H_2-H_1\\right)}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{100(H_2-H)}{\\left(H_2-H_1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{100(H_2-H_1)}{\\left(H-H_1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{100(H_2-H)}{\\left(H-H_1\\right)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c10152de0d2b",
+      "subtopic": "degree-of-freedom-and-law-of-equipartition-of-energy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The molar specific heat at constant pressure of an ideal gas is $\\frac{7}{2}R$. The gas is made up of molecules which are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "polyatomic",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "non-rigid diatomic",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "rigid diamotic",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "monoatomic",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d2d0cbb0c47d",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "When the temperature of 4 moles of a gas was increased from $70^{\\circ}$C to $90^{\\circ}$C, at constant volume, the change in internal energy was $60\\text{ J}$. The total heat capacity of the gas at constant volume is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5\\text{ J/K}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\text{ J/K}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\text{ J/K}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4\\text{ J/K}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-de949f66bcd6",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "There is an expansion of a gas in a thermodynamic system. But this change cannot be plotted on a P-V diagram. Then it is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "an isothermal expansion.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "a free expansion",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "an adiabatic expansion",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "an isobaric expansion",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-21271bbdb27d",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "One mole of diatomic ideal gas undergoes a cyclic process ABC as shown in the figure. The process BC is adiabatic. The temperatures at A, B and C are $400$ K, $800$ K and $600$ K, respectively. The correct statement is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-21271bbdb27d.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "The change in internal energy in whole cyclic process is $250R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "The change in internal energy in the process CA is $700R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The change in internal energy in the process AB is $-350R$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "The change in internal energy in the process BC is $-500R$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4d83101ae104",
+      "subtopic": "heat-engine-second-law-of-thermodynamics-and-carnot-engine",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A Carnot engine has an efficiency of $30\\%$. The energy is supplied to the engine at the rate of $3$ kW. The output power of the engine is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100$ W",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$300$ W",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$900$ W",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1200$ W",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-713a9ed8dbdb",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two identical containers A and B with friction-less pistons contain the same ideal gas at the same temperature and the same volume, $V$. The mass of gas in A is $m_A$ and that in B is $m_B$. The gas in each cylinder is now allowed to expand isothermally to the same final volume $2V$. The changes in pressure in A and B are found to be $\\Delta p$ and $3\\Delta p$ respectively. Then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$m_A=m_B$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3m_A=2m_B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3m_A=m_B$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3m_A=4m_B$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8b8402ea25cc",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The power radiated by a black body is $P$ and it radiates maximum energy at wavelength $\\lambda_o$. If the temperature of the black body is now changed so that it radiates maximum energy at wavelength $0.75\\lambda_o$, the power radiated by it becomes $nP$. The value $n$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4/3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$256/81$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$81/256$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3/4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cdab2e80997a",
+      "subtopic": "specific-heat-capacity-calorimetry-and-change-of-state",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A lead bullet moving with velocity '$v$' strikes a wall and stops. $75\\%$ of its energy is converted into heat. If the increase in the temperature is $\\frac{v^2}{nJs}$, then the value of $n$ is $\\{s=\\text{specific heat of lead},J=\\text{mechanical equivalent of heat}\\}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d304e517e7e9",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Heat is supplied to a rigid diatomic gas at constant pressure. The ratio of $\\Delta Q:\\Delta U:\\Delta W$ is $\\{\\Delta Q=\\text{heat supplied},\\Delta U=\\text{change in internal energy},\\Delta W=\\text{work done during expansion}\\}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5:3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:3:5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7:5:2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2:5:7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1f124098d639",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two rods of same length, radius and material transfer a given amount of heat in 't' second when they are joined as shown in fig (1). But when they are joined as shown in fig (2) then they will transfer same heat in same condition in time",
+      "image": {
+        "url": "/question-images/mht-cet/physics/thermodynamics/PYQ-PHY-1f124098d639.png",
+        "alt": "Figure for this Thermodynamics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2t$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3t$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4t$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$6t$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4f2cf654a5c7",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A sphere is at temperature $600$ K. In an external environment of $200$ K, its cooling rate is R. When the temperature of the sphere falls to $400$ K then cooling rate R' will become",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{16}{3}R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{16}{9}R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9}{16}R$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{16}R$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6a8ea36e68b2",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An ideal rigid diatomic gas $\\left(\\gamma=\\frac{7}{5}\\right)$ undergoes an adiabatic change . If the relation between temperature and volume is $TV^x=$ constant then the value of x is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.25$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.30$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.40$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.60$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-79d5006f1f91",
+      "subtopic": "kinetic-theory-of-gases-and-gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Gas at pressure P, temperature T, and volume V is filled in jar A. Another jar B is filled with gas having parameters $2P$, $\\frac{V}{4}$, $2T$. The ratio of number of molecules of jar B to those of jar A is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:4$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ffe9ccd2367b",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A rigid diatomic gas $\\left(\\gamma=\\frac{7}{5}\\right)$ is compressed adiabatically to volume $\\left(\\frac{V_i}{32}\\right)$, where $V_i$ is the initial volume. The initial temperature of the gas is '$T_i$' K and the final temperature is '$x\\,T_i$' K. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2b3e45adaddb",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A sphere having temperature 600 K is losing heat due to radiation. At this temperature its rate of cooling is $R$. The rate of cooling of this sphere at 400 K is $\\frac{x}{243}$. The value of $x$ is (Temperature of surrounding is 300 K)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$50R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$45R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$40R$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$35R$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-30bc5f585962",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two stars A and B radiate maximum energy at wavelength $3.9\\times 10^{-7}$ m and $5.2\\times 10^{-7}$ m respectively. The ratio of the temperature of star A to that of star B will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4:3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-519799967892",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ideal gas having pressure $P$, volume $V$ and temperature $T$ is expanded isothermally, to a volume $3V$ and final pressure $P_I$. The same gas is expanded adiabatically to a volume $3V$, the final pressure being $P_A$. The ratio $\\frac{P_A}{P_I}$ is $\\left(\\frac{C_P}{C_V}=\\gamma\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\gamma$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3^{\\gamma}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3^{(1-\\gamma)}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3^{(\\gamma-1)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8ca659aaa53f",
+      "subtopic": "specific-heat-capacity-calorimetry-and-change-of-state",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A piece of metal of 850 K is dropped into 1 kg of water at 300 K. If equilibrium temperature of water is 350 K then the heat capacity of the metal expressed in $\\frac{J}{K}$ is $\\left(\\text{Sp. heat of water}=1~\\frac{\\text{cal}}{\\text{g}^{\\circ}\\text{C}}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$420$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$240$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$100$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$24$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-937ce3a971e1",
+      "subtopic": "heat-engine-second-law-of-thermodynamics-and-carnot-engine",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The efficiency of Carnot engine which operates between the two temperatures $T_1=500$ K and $T_2=300$ K is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$75~\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$50~\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25~\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$40~\\%$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c20c355eb648",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A black body is at temperature of 5780 K. The energy of radiation emitted by the body at wavelength 300 nm is $U_1$, at wavelength 500 nm is $U_2$ and that at 900 nm is $U_3$ respectively. Wien's constant $b=2.89\\times 10^6~\\text{nmK}$. This shows that",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$U_1<U_2<U_3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$U_1>U_2>U_3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$U_1<U_2>U_3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$U_1>U_2<U_3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7d86d0effffa",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify the INCORRECT statement about the black body radiation",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Intensity is same for all wavelengths.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Intensity is maximum for a particular wavelength.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Intensity is less for longer wavelengths.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "A black body emits all wavelengths.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-80220fc85057",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two bodies 'X' and 'Y' at temperatures $T_1$ K and $T_2$ K respectively have the same dimensions. Their emissivities $e_1$ and $e_2$ are in the ratio of $1:6$. If their emissive powers are same, the relation between their temperatures is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$T_1:T_2=4^{1/4}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$T_1:T_2=5^{1/4}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$T_1:T_2=6^{1/4}:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$T_1:T_2=7^{1/4}:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a28e91594042",
+      "subtopic": "specific-heat-capacity-calorimetry-and-change-of-state",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$540$ gram of ice at $0^{\\circ}$C is mixed with $540$ gram of water at $90^{\\circ}$C. The final temperature of the mixture will be [Latent heat of fusion of water = 80 cal/g]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{\\circ}$C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$15^{\\circ}$C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5^{\\circ}$C",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$30^{\\circ}$C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b68267bc4c6b",
+      "subtopic": "heat-transfer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Temperature of two stars are in the ratio $3:2$. If wavelength of maximum intensity of first star is $4200\\,\\text{Å}$, the corresponding wavelength for second star is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2100\\,\\text{Å}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3000\\,\\text{Å}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6300\\,\\text{Å}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7000\\,\\text{Å}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c32efda3095d",
+      "subtopic": "zeroth-and-first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An ideal gas having pressure P, volume V and temperature T undergoes a thermodynamic process in which $dW=0$ and $dQ<0$. Then, for the gas",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "V will increase",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "T will increase",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "P first decreases and then increases",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "T will decrease",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e139ca6626de",
+      "subtopic": "thermodynamics-process",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In case of 'free expansion', which one of the following statements is 'WRONG'?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It is an instantaneous change.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "The system is not in thermodynamic equilibrium.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Free expansion can be plotted in a p-v diagram.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "It is an uncontrolled change.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

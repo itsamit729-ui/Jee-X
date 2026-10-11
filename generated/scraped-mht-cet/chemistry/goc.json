@@ -1,0 +1,1629 @@
+{
+  "subject": "CHEM",
+  "chapter": {
+    "name": "Some Basic Principles of Organic Chemistry",
+    "slug": "goc",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 13,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "acidic-basic-strength",
+      "name": "Acidic and Basic Strength of Organic Compounds",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "functional-group-nomenclature",
+      "name": "Functional group nomenclature",
+      "position": 2
+    },
+    {
+      "slug": "common-vs-systematic-names",
+      "name": "Common vs systematic names",
+      "position": 3
+    },
+    {
+      "slug": "basics-of-nomenclature",
+      "name": "Basics of nomenclature",
+      "position": 4
+    },
+    {
+      "slug": "polyfunctional-complex-molecules",
+      "name": "Polyfunctional complex molecules",
+      "position": 5
+    },
+    {
+      "slug": "aromatic-nomenclature",
+      "name": "Aromatic nomenclature",
+      "position": 6
+    },
+    {
+      "slug": "stability-of-intermediate",
+      "name": "Stability of intermediate",
+      "position": 7
+    },
+    {
+      "slug": "electron-displacement-effect",
+      "name": "Electron displacement effect",
+      "position": 8
+    },
+    {
+      "slug": "acid-and-base-strength",
+      "name": "Acid and base strength",
+      "position": 9
+    },
+    {
+      "slug": "aromaticity",
+      "name": "Aromaticity",
+      "position": 10
+    },
+    {
+      "slug": "purification-of-organic-compounds",
+      "name": "Purification of organic compounds",
+      "position": 11
+    },
+    {
+      "slug": "optical-isomerism",
+      "name": "Optical isomerism",
+      "position": 12
+    },
+    {
+      "slug": "metamerism",
+      "name": "Metamerism",
+      "position": 13
+    },
+    {
+      "slug": "functional-group-isomerism",
+      "name": "Functional group isomerism",
+      "position": 14
+    },
+    {
+      "slug": "chain-isomerism",
+      "name": "Chain isomerism",
+      "position": 15
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-CHEM-3ae759f238d5",
+      "subtopic": "chain-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What type of isomerism is exhibited by neopentane?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "position",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "chain",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "geometrical",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "tautomerism",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f1d750dfc274",
+      "subtopic": "purification-of-organic-compounds",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the difference in terms of molar masses of second and fourth members of homologous series?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$24$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$28$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$36$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-45acd939dc8e",
+      "subtopic": "common-vs-systematic-names",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify IUPAC name for aniline.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Phenyl amine",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Amino benzene",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Benzyl amine",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Benzenamine",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ca26b9e1a6ec",
+      "subtopic": "metamerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "What type of isomerism is exhibited by compounds $\\text{CH}_3\\text{-CH}_2\\text{-O-CH}_2\\text{-CH}_3$ and $\\text{CH}_3\\text{-CH}_2\\text{-CH}_2\\text{-O-CH}_3$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Metamerism",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Tautomerism",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Chain isomerism",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Position isomerism",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7b8f757feed8",
+      "subtopic": "electron-displacement-effect",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following statements regarding different electronic effects in organic reactions is TRUE ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Hyperconjugation is a temporary electronic effect.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-CN group show positive resonance effect.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The effect of hyperconjugation is usually stronger than the inductive effect.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "The resonance hybrid is less stable than any of the resonance structures.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e25ddab355b4",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following compounds does NOT have a stereocenter?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Propan-2-ol",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Butan-2-ol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2-Bromo-1-chlorobutane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2-Bromopentane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e3e53978279d",
+      "subtopic": "aromaticity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The cyclic $\\pi$-molecular orbital formed by overlap of p-orbitals must contain,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(4n+2)$ p electrons.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(2n+2)$ p electrons.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(4n-2)$ p electrons.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(2n-2)$ p electrons.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-fa10319715ee",
+      "subtopic": "electron-displacement-effect",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following statements are TRUE?\n(I) Inductive effect operates through the sigma bond\n(II) Resonance effect operates through the pi bond\n(III) Inductive effects operate through the pi bond\n(IV) Resonance effect operates through the sigma bond",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "(I) and (II)",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "(II) and (III)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "(III) and (IV)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "(I) and (IV)",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d5bf580763ee",
+      "subtopic": "stability-of-intermediate",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Among the following, the most stable carbocation is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{CH}_3^{+}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\text{CH}_3)_2\\text{CH}^{+}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{CH}_3\\text{-CH}_2^{+}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\text{CH}_3)_3\\text{C}^{+}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f5c537c7648b",
+      "subtopic": "electron-displacement-effect",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the compound ${}^1\\text{CH}_2={}^2\\text{CH}-{}^3\\text{CH}_2-{}^4\\text{CH}_2-{}^5\\text{C}\\equiv{}^6\\text{CH}$, The $C_2-C_3$ bond is of type",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$sp-sp^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$sp^3-sp^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$sp-sp^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$sp^2-sp^3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-97b73dbaf340",
+      "subtopic": "electron-displacement-effect",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following effects involves the delocalization of pi electrons in a molecule?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Inductive effect",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Resonance effect",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Electromeric effect",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Hyperconjugation",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4e3078764b1c",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following compounds is optically active?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{C}_2\\text{H}_5\\text{-OH}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\text{CH}_3)_2\\text{CH-CH}_2\\text{-Cl}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{CH}_3\\text{-CH}(\\text{Cl})\\text{C}_2\\text{H}_5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\text{CCl}_2\\text{F}_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-756eef779e73",
+      "subtopic": "functional-group-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Identify the correct pair of functional isomers.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Ethyl alcohol and propanone",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Ethene and propyne",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "n-Butane and isobutane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Ethyl alcohol and dimethyl ether",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-aba84ee1ba7a",
+      "subtopic": "basics-of-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following statements is correct regarding homologous series?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It has same functional group and the successive members differ by $-\\text{CH}_2-$group.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "It possesses the same physical properties.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "It has compounds with the same number of carbon atoms.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "It has members of various functional groups.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5686a808cfc3",
+      "subtopic": "electron-displacement-effect",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following species exhibits $+I$ effect?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\text{COOR}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\text{CN}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\text{Cl}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\text{CH}_3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-dc40745b4136",
+      "subtopic": "common-vs-systematic-names",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the IUPAC name of o-tolualdehyde?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2-methyl benzaldehyde",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "2-hydroxy benzaldehyde",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2-methyle propanol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "benzene carbaldehyde",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c11628a44df1",
+      "subtopic": "aromatic-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the correct IUPAC name for a molecule that has two amino groups in opposing (para) locations around a benzene ring?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Benzenediamine",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Benzene-1,4-diamine",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "p-Aminoaniline",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4-Aminobenzenamine",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5ba02581e6dc",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of $\\text{CH}_3\\text{CHO}$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Acetaldehyde",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Methylaldehyde",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Ethanol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Ethanal",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b3d7023f3ecb",
+      "subtopic": "common-vs-systematic-names",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is IUPAC name of allylbromide ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$-Bromopropene",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$-Bromopropene",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$-Bromopropene",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1$-Bromoprop-$2$-ene",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f7093c377ae2",
+      "subtopic": "functional-group-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following functional groups is functional isomer of Ethers?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Aldehydes",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Carboxylic acids",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Alcohols",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Ketones",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b29a0b6662e3",
+      "subtopic": "electron-displacement-effect",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Find the number of hyperconjugation structures in the isopropyl carbocation.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b86414a602de",
+      "subtopic": "acid-and-base-strength",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of following has the highest nucleophilicity ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{F}^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{OH}^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{CH}_3^{-}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\text{NH}_2^{-}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4888d55430f0",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-4888d55430f0.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3 - Methyl - 6 - ethyl cycloheptanol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 - Ethylcyclooctanol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3 - Ethyl - 6 - methylcycloheptanol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1 - Ethyl - 5 - methylcycloheptan - 3 - ol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9875b09f6a6a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which from following statements is NOT true about homologous series?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Each member of a series has same functional group.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Each member has same type of carbon skeleton.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Each member differs by ethylene group from next member.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "All members of series possess similar chemical properties.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-04df0b01d704",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "How many chiral carbon atoms are present in 2-Iodo-3, 4, 5-trimethylhexane ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-fc40fc9f59ea",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the of number of chiral carbon atoms present in 2-Bromo-3,4,5-trimethylhexane ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-797ab5cd6c8c",
+      "subtopic": "electron-displacement-effect",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the number of $sp^3$ hybrid carbon atoms in $\\text{HO}(\\text{CH}_2)_2\\text{CH}(\\text{CH}_3)_2$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7bc92de1a439",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the number of chiral carbon atoms in 2-chlorobutane?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7e5ec56d198c",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is IUPAC name of the following compound ?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-7e5ec56d198c.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "2,6-diethylhept-4-en-3-ol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2-ethyl-6-methyloct-3-en-5-ol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3,7-Dimethylnon-5-en-4-ol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "7-ethyl-3-methyl-oct-5-en-4-ol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-edcfef73a1fa",
+      "subtopic": "chain-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Find the number of structural isomers possible for hexane ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Two",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Four",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Three",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Five",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-587ee328d374",
+      "subtopic": "functional-group-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify the name of the isomerism in rapid equilibrium with each other in the following reaction.",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-587ee328d374.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Geometrical isomerism",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Metamerism",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Tautomerism",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Functional isomerism",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1d31cbc616a1",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the IUPAC name of $\\text{CH}_3\\text{-O-CH}_2\\text{-CH}_2\\text{-CH}_3$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1-Methoxy propane",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "3-Propoxy methane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2-Propoxy methane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3-Methoxy propane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b1b06cd61fae",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Identify the property of a racemic mixture by the following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Optically active.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Optically inactive.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Dextrorotatory",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Laevorotatory",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f5dd239017fe",
+      "subtopic": "stability-of-intermediate",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following is the most stable cation?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{CH}_3^{+}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{CF}_3^{+}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(\\text{CH}_3)_2\\text{CH}^{+}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\text{CF}_3\\text{-CH}_2^{+}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0518c363c6c5",
+      "subtopic": "polyfunctional-complex-molecules",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which from following is a correct priority order for selection of principal functional group for nomenclature of polyfunctional compound according to IUPAC system ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\text{CHO}>-\\text{CONH}_2>-\\text{OH}>-\\text{C}\\equiv\\text{C}-$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\text{CONH}_2>-\\text{CHO}>-\\text{OH}>-\\text{C}\\equiv\\text{C}-$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\text{C}\\equiv\\text{C}->-\\text{OH}>-\\text{CONH}_2>-\\text{CHO}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\text{C}\\equiv\\text{C}->-\\text{CHO}>-\\text{CONH}_2>-\\text{OH}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ac918123d4f7",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of the following compound ?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-ac918123d4f7.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Pent-2-en-4-amine",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Pent-3-en-2-amine",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1-Methylbut-2-en-1-amine",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4-Methylbut-2-en-4-amine",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2fd540219a99",
+      "subtopic": "basics-of-nomenclature",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The IUPAC name of the following compound is,",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-2fd540219a99.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1, 1 - diethyl - 4 - methoxycyclohexane",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "1, 1 - dimethyl - 4 - methoxycyclohexane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4, 4 - dimethyl - 1 - methoxycyclohexane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4, 4 - Diethyl - 1 - methoxycyclohexane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-cec00a6adebe",
+      "subtopic": "acid-and-base-strength",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which one of the following series contains only electrophiles?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{R-OH},\\text{Cl}^{+},\\text{NH}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{H}_2\\text{O},\\text{R}_2\\text{N}^{-},\\text{H}_3\\text{O}^{+}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{BF}_3,\\text{SO}_3,\\text{NO}^{+}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\text{AlCl}_3,\\text{R-NH}_2,\\text{PCl}_3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5ecef0fd7bc7",
+      "subtopic": "metamerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "What type of isomerism is shown by the following pair of compounds?\n$\\text{CH}_3-\\text{CH}_2-\\text{NH}-\\text{CH}_2-\\text{CH}_3$ and $\\text{CH}_3-\\text{NH}-\\text{CH}_2-\\text{CH}_2-\\text{CH}_3$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Chain isomerism",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Position isomerism",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Functional isomerism",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Metamerism",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-88b5c25e5578",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify optically inactive compound from the following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Lactic acid",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Glucose",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Isopropyl alcohol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2-chlorobutane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-adafbc510c8e",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Number of optically active stereoisomer are possible for butane-2,3-diol",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

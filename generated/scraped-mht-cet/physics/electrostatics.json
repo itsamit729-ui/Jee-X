@@ -1,0 +1,2484 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Electric Charges, Fields and Potential",
+    "slug": "electrostatics",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 14,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "electric-field-intensity",
+      "name": "Electric field intensity",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "electric-field-and-electric-field-intensity",
+      "name": "Electric field and electric field intensity",
+      "position": 2
+    },
+    {
+      "slug": "electric-dipole",
+      "name": "Electric dipole",
+      "position": 3
+    },
+    {
+      "slug": "electric-potential-energy-and-electric-potential",
+      "name": "Electric potential energy and electric potential",
+      "position": 4
+    },
+    {
+      "slug": "electric-charges-and-coulombs-law",
+      "name": "Electric charges and coulombs law",
+      "position": 5
+    },
+    {
+      "slug": "electric-flux-and-gauss-law",
+      "name": "Electric flux and gauss law",
+      "position": 6
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-4f1e6270cb27",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two metal sphere of radius $R$ and $3R$ have same surface charge density $\\sigma$. If they are brought in contact and then separated, the surface charge density on smaller and bigger sphere becomes $\\sigma_1$ and $\\sigma_2$, respectively. The ratio $\\frac{\\sigma_1}{\\sigma_2}$ is.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7236caa5ec5e",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three charges $q$, $Q$ and $+4q$ are placed in a straight line of length $d$ at points at distance $0$, $\\frac{d}{3}$, $\\frac{2d}{3}$ respectively. In order to make the net force on $q$ be zero, the value of $Q$ should be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-q}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-3q}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-4q}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-4q}{9}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-93879d43a542",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Following figure indicates the electric potential V as a function through 4 regions on x-axis. Which of the following is correct for the electric field E in these regions?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electrostatics/PYQ-PHY-93879d43a542.png",
+        "alt": "Figure for this Electric Charges, Fields and Potential question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$E_1<E_2<E_3<E_4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$E_2=E_4$ and $E_1<E_2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$E_1=E_3$ and $E_2<E_4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$E_1>E_2>E_3>E_4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ca057b8f9cf3",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following statements is NOT TRUE?\na. Work done to move a charge on an equipotential surface is not zero.\nb. Equipotential surfaces are the surfaces where the potential is constant.\nc. Equipotential surfaces for a uniform electric field are parallel and equidistant from each other.\nd. Electric field is always perpendicular to an equipotential surface.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "c",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "a",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "d",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "b",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0784c232f4b9",
+      "subtopic": "electric-flux-and-gauss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the radius of the spherical Gaussian surface is increased then the electric flux due to a point charge enclosed by the surface",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "remains unchanged",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "is zero",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "decreases",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2c9601f46e24",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "When the dielectric is placed in an external electric field, the electric field inside the dielectric is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "larger than the external electric field.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "less than the external electric field.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "equal to the external electric field.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "equal to or greater than external electric field.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-59a5f979aa0d",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equal charges (say 'q') are placed at a distance of $4r$ and a third charge $(-2q)$ is placed at a mid-point. The potential energy of the system is ($\\varepsilon_0=$ permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-9q^2}{8\\pi\\varepsilon_0r}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{9q^2}{8\\pi\\varepsilon_0r}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-7q^2}{16\\pi\\varepsilon_0r}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7q^2}{16\\pi\\varepsilon_0r}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d697b29c9c4f",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A charge $q$ is placed at the centre of the line joining two equal charges $Q$. The system of the three charges will be in equilibrium if $q$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-Q}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-Q}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{Q}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{Q}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2a3a1a58b12a",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A spherical conductor of diameter $3$ mm is kept in a uniform electric field of intensity $4\\times 10^7$ N/C. The maximum charge on the conductor is $\\left(\\frac{1}{4\\pi\\varepsilon_0}=9\\times 10^9\\,SI\\,units\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\times 10^{-8}\\,C$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{-8}\\,C$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4\\times 10^{-8}\\,C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\times 10^{-8}\\,C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-378c252568f3",
+      "subtopic": "electric-flux-and-gauss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A charge 'Q' C is placed at the centre of a cube. The electric flux through two opposite faces of the cube is\n($\\varepsilon_0$ = permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{Q}{6\\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{Q}{3\\varepsilon_0}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{Q}{\\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{Q}{2\\varepsilon_0}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2b26ca170254",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If two charges $q_1$ and $q_2$ are separated with distance 'd' and placed in a medium of dielectric constant $K$. What will be the equivalent distance between charges in air for the same electrostatic force?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$d[k]^{1/2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$k[d]^{1/2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.5d[k]^{1/2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2d[k]^{1/2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-37cf7eaca890",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two isolated metallic spheres of radii $R$ and $2R$ are charged such that both have the same charge density $\\sigma$. The spheres are then connected by a thin conducting wire. If the new charge density of the larger sphere is $\\sigma_1$. The ratio $\\sigma_1$ to $\\sigma$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5:6$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-645f546a7572",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The electric potential at the center of two concentric half rings of radii $R_1$ and $R_2$, having same linear charge density $\\lambda$ is ($\\varepsilon_0$ = permittivity of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electrostatics/PYQ-PHY-645f546a7572.png",
+        "alt": "Figure for this Electric Charges, Fields and Potential question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\lambda/\\varepsilon_0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\lambda/2\\varepsilon_0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\lambda/4\\varepsilon_0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\lambda/\\varepsilon_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9963c04108bf",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $100$ J of work has to be done in moving an electric charge of $4$ C from a place, where potential is $-10$ V to another place where potential is V volt. The value of V is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15$ V",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d202c8f75bd1",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two point charges, $+2C$ and $+6C$ repel each other with a force of $12$N. If a charge of $(-4C)$ is given to each of these charges, the force now is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$N, repulsive",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$N, attractive",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$12$N, attractive",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$N, repulsive",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ef9fe01f9ccb",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three point charges $+q,-2q$ and $-2q$ are placed at the vertices of an equilateral triangle of side a. The work done by some external force to increase their separation to '$2a$' will be $\\left(K=\\frac{1}{4\\pi\\varepsilon_0}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2q^2K}{a}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{q^2K}{2a}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{qK}{a^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-12cfe50870cf",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Three charges $2q$, $-q$ and $-q$ are located at the vertices of an equilateral triangle. At the centre of the triangle",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the field is zero but potential is not zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the field is not zero but potential is zero",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "both field and potential are zero",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "both field and potential are not zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-40c6d9fbce25",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Charge $q_2$ of mass '$m$' revolves around a stationary charge $q_1$ in a circular orbit of radius '$r$'. The orbital periodic time of $q_2$ would be $\\left(k=\\frac{1}{4\\pi\\varepsilon_0}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left[\\frac{4\\pi^2mr^3}{kq_1q_2}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "${\\left[\\frac{kq_1q_2}{4\\pi^2mr^3}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${\\left[\\frac{4\\pi^2mr^4}{kq_1q_2}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left[\\frac{4\\pi^2mr^2}{kq_1q_2}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d9084a4eddf0",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two charges of equal magnitude '$q$' are placed in air at a distance '$2a$' apart and third charge $-2q$ is placed at mid-point. The potential energy of the system is ($\\varepsilon_0$ = permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{q^2}{8\\pi\\varepsilon_0a}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{3q^2}{8\\pi\\varepsilon_0a}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{5q^2}{8\\pi\\varepsilon_0a}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{7q^2}{8\\pi\\varepsilon_0a}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-72e3988f962f",
+      "subtopic": "electric-flux-and-gauss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The electric flux entering and leaving an enclosed surface are $\\Phi_1$ and $\\Phi_2$ respectively. The electric charge inside the surface will be ($\\varepsilon_0$ = permittivity of vacuum)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\varphi_2-\\varphi_1}{\\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\varphi_1+\\varphi_2}{\\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\varepsilon_0(\\varphi_1-\\varphi_2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\varepsilon_0(\\varphi_2-\\varphi_1)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-85ce21b252d3",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "When a dielectric is placed in an electric field, the electric field inside the dielectric",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreases",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "is constant",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "is zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-14c20716a041",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two particles of charges $q_1=8q$ and $q_2=-2q$ are placed as shown in figure. At what point away from $q_2$ on x-axis can a proton be placed placed so that it is in equilibrium?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electrostatics/PYQ-PHY-14c20716a041.png",
+        "alt": "Figure for this Electric Charges, Fields and Potential question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=2L$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x=2.5L$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=3L$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x=L$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6c722dcf482d",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An infinite line charge produces a field of $9\\times 10^8$ N/C at a distance of $2$ cm. The linear charge density is\n$\\left(\\frac{1}{4\\pi\\varepsilon_0}=9\\times 10^9\\text{ SI unit}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{-3}$ C/m",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\times 10^{-3}$ C/m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\times 10^{-3}$ C/m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^{-2}$ C/m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-840db44b6503",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In air, a charged soap bubble of radius R breaks in to 27 small soap bubbles of equal radii r. Then the ratio of mechanical force acting per unit area of big soap bubble to that of a small soap bubble is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{81}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9}{1}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e759bb6cf1b4",
+      "subtopic": "electric-flux-and-gauss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The electric field intensity at a point near and outside the surface of a charged conductor of any shape is $E_1$. The electric field intensity due to a uniformly charged infinite thin plane sheet having the same surface charge density is $E_2$. The relation between $E_1$ and $E_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2E_1=E_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$E_1=E_2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$E_1=2E_2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$E_1=4E_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bbb271f6623b",
+      "subtopic": "electric-flux-and-gauss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of lines of force originating from a point charge of $2\\times 8.85\\times 10^{-9}$ C in a medium of dielectric constant $10$ is ($\\varepsilon_0=8.85\\times 10^{-12}$ SI unit)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$200$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$400$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2000$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4bf0558fb045",
+      "subtopic": "electric-flux-and-gauss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a uniformly charged plane sheet, the variation of electric field (E) with distance (d) is correctly shown graphically in graph",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electrostatics/PYQ-PHY-4bf0558fb045.png",
+        "alt": "Figure for this Electric Charges, Fields and Potential question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "B",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "C",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "D",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b0ecd4345a57",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A point charge 'Q' is placed at the centre of the line joining two equal charges '+q' and '+q'. The value of 'Q' when the system is in equilibrium is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{+q}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{+q}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-q}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-q}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1b4c84df05ce",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two charged identical metal spheres A and B repel each other with a force $3\\times 10^{-5}$ N. Another identical uncharged sphere C is touched with A and then placed at the mid-point between A and B. Net force on C is $x\\times 10^{-5}$ N. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7b2888169c04",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A charge $10~\\mu C$ exists at the centre of a square. The work done in moving a $2~\\mu C$ point charge from corner A to corner B of a square ABCD is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electrostatics/PYQ-PHY-7b2888169c04.png",
+        "alt": "Figure for this Electric Charges, Fields and Potential question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$5~\\text{J}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2~\\text{J}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20~\\text{J}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f5f014e67f14",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A large insulated sphere of radius $r$, charged with $Q$ C is placed in contact with a small insulated uncharged sphere of radius $r_1$ and is then separated. The charge on the smaller sphere will now be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$Q(r+r_1)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$Q(r-r_1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{Q}{\\left(r+r_1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{Qr_1}{\\left(r+r_1\\right)}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0d84c83defb5",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two point charges placed at a certain distance $r$ in air exert force $F$ on each other. Then the distance $r_1$ at which these charges will exert the same force in a medium of dielectric constant $K$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$r$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{r}{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{r}{\\sqrt{K}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$r\\sqrt{K}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ff60998e9e94",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two concentric spheres kept in air have radii $R$ and $r$. They have similar charge and equal surface charge density $\\sigma$. The electric potential at their common centre is ($\\varepsilon_0$ = permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sigma(R+r)}{\\varepsilon_0}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sigma(R-r)}{\\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sigma(R+r)}{2\\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sigma(R+r)}{4\\varepsilon_0}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3963be215429",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two point charges $q_1=6~\\mu\\text{C}$ and $q_2=4~\\mu\\text{C}$ are kept at points A and B in air where distance $AB=10$ cm. What is the increase in potential energy of the system when $q_2$ is moved towards $q_1$, by 2 cm ? $\\left(\\frac{1}{4\\pi\\varepsilon_0}=9\\times 10^9~\\text{SI units}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$21.6$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$216$ J",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.54$ J",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$54$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3e41c18c32cd",
+      "subtopic": "electric-flux-and-gauss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The electric field in the region is $\\vec{E}=a\\hat{i}+b\\hat{j}$ where 'a' and 'b' are constants. The net electric flux passing through a square area of side 'l' parallel to Y-Z plane is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$al$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$al^4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$al^6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$al^2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-140082c2d18b",
+      "subtopic": "electric-dipole",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An electric dipole of length $0.5~\\mu\\text{m}$ is placed with its axis making an angle of $30^{\\circ}$ with uniform electric field $10^4~\\text{V/m}$. If it experiences a torque of $5\\times 10^{-9}~\\text{Nm}$, the magnitude of the charge on the dipole is ($\\sin 30^{\\circ}=0.5$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1~\\mu\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.5~\\mu\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2~\\mu\\text{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2.5~\\mu\\text{C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5740334e9b8b",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two spherical hollow spheres of radii '$R_1$' and '$R_2$' are charged with same charge. Let '$\\sigma_1$' and '$\\sigma_2$' are their respective charge densities, then the ratio $\\sigma_1$ to $\\sigma_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$R_1:R_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$R_2:R_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$R_2^2:R_1^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$R_1^2:R_2^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-942d95c0ffd2",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two charges $q_1$ and $q_2$ are separated by a distance of 30cm. A third charge $q_3$ initially at point C is shown in figure, is moved along the circular path of radius 40 cm from C to D. If the difference in potential energy due to movement of $q_3$ from C to D is $q_3k/4\\pi\\varepsilon_0$, the value of K is ($\\varepsilon_0$ = permittivity of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electrostatics/PYQ-PHY-942d95c0ffd2.png",
+        "alt": "Figure for this Electric Charges, Fields and Potential question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$8q_2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$8q_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6q_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6q_1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bcc26c7587d2",
+      "subtopic": "electric-dipole",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Select the WRONG statement about polar molecules.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Polar molecules have permanent dipole moment.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "A molecule in which centre of mass of positive charges does not coincide with the centre of mass of negative charges is a polar molecule.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Polar molecules have symmetrical shape.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Polar molecules act as tiny electric dipoles.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d66880a89f5f",
+      "subtopic": "electric-dipole",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An electric dipole of length $3\\text{cm}$ is placed with its axis making an angle of $60^{\\circ}$ with a uniform electric field of $5\\times 10^4$ N/C. It experiences a torque of $9\\sqrt{3}$ Nm. The magnitude of charge on the dipole is $(\\sin 60^{\\circ}=\\frac{\\sqrt{3}}{2})$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.6\\times 10^{-2}$ C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.2\\times 10^{-2}$ C",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.8\\times 10^{-2}$ C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2.4\\times 10^{-2}$ C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-112e70f0a171",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Three point charges +q, +2q and +Q are placed at the vertices of an equilateral triangle. If the potential energy of the system of three charges is zero, the value of Q in terms of q is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{q}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-2q}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{q}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3q}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bd406b59efbe",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two point charges +e and +4e are kept at a distance 'd' units apart. Third point charge +q is placed between the two charges at a distance 'x' units from charge +e so as to be in equilibrium. The value of 'x' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{d}{3}$ units",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{d}{2}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2d}{5}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3d}{4}$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-01080c60d7d7",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The point charges $+q$, $-q$, $-q$, $+q$, $+Q$ and $-q$ are placed at the vertices of a regular hexagon ABCDEF as shown in the figure.\nThe electric field at the centre of the hexagon 'O' due to the five charges at A, B, C, D and F is thrice the electric field at centre 'O' due to charge $+Q$ at E alone. The value of Q is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electrostatics/PYQ-PHY-01080c60d7d7.png",
+        "alt": "Figure for this Electric Charges, Fields and Potential question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{q}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{q}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3q$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4q$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b5facbc459c8",
+      "subtopic": "electric-dipole",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When a dipole placed parallel to electric field is rotating through $\\pi^c$, the work done is W. The work done in rotating the dipole through ${\\left(\\frac{\\pi}{3}\\right)}^c$ is\n($\\cos 0^{\\circ}=1$, $\\cos 60^{\\circ}=\\frac{1}{2}$, $\\cos 180^{\\circ}=-1$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{W}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{W}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$W$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2W$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-29403d019401",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two equal point charges exert a force F on each other when they are placed distance 'd' apart in air. When they are placed distance 'D' apart in a medium of dielectric constant K, they exert the same force. The distance D is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{d}{\\sqrt{K}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$d\\sqrt{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$d^2K$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{K}{d^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4eb071ffc0de",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Three point charges Q, $+2q$ and $+q$ are placed at the vertices of a right-angled isosceles triangle of length $\\sqrt{2}a$ as shown in figure. The net electrostatic potential energy of the configuration is zero, if Q is equal to",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electrostatics/PYQ-PHY-4eb071ffc0de.png",
+        "alt": "Figure for this Electric Charges, Fields and Potential question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{1}{2\\sqrt{3}}q$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{\\sqrt{2}}{3}q$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{\\sqrt{3}}{2}q$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\sqrt{\\frac{2}{3}}\\,q$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4b1e1d96e514",
+      "subtopic": "electric-dipole",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two electric dipoles of moment $P$ and $8P$ are placed in opposite directions on a line at a distance of $24$ cm. The electric field will be zero at the point between the dipoles whose distance from the dipole of moment $P$ will be $x_1$. When $8P$ is replaced by $27P$ keeping all other quantities the same, the distance $x_1$ now becomes $x_2$. The difference $|x_2-x_1|$ is ( All the distances are measured from the centers of the dipole.)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-83ea5b59d15e",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "'$n$' small spherical drops of the same size which are charged to 'V' volt each coalesce to form a single big drop. The potential of a big drop is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$nV$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{V}{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(n^{\\frac{1}{3}}\\right)V$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(n^{\\frac{2}{3}}\\right)V$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9fd909cfa59d",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two equal positive charges each of value 'q' are placed at points A and B, where $AB=3x$. A third charge $-3q$ is placed at point C at a distance $x$ from A on AB. The potential energy of the system is nearly ($\\varepsilon_0$ = permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{q^2}{4\\pi\\varepsilon_0x}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-2q^2}{4\\pi\\varepsilon_0x}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3q^2}{4\\pi\\varepsilon_0x}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-4q^2}{4\\pi\\varepsilon_0x}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-abb1827b2c4a",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A particle of mass 'm' and charge 'q', initially at rest, is accelerated by a uniform electric field 'E' through a distance 'D' and is then allowed to approach a fixed static charge 'Q' of the same sign. The distance of the closest approach of the charge q is\n[ $\\varepsilon_0$ = permittivity of free space ]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$Q/4\\pi\\varepsilon_0D$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$Q/4\\pi\\varepsilon_0ED$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$Q/2\\pi\\varepsilon_0D^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$Q/4\\pi\\varepsilon_0E$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c5ff64bf943d",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An uniformly charged thin spherical shell of radius 'R' has uniform surface charge density '$\\sigma$'. It is made of two hemispherical identical shells held together by pressing them with force 'F' as shown. F is proportional to\n[$\\varepsilon_0$ = permittivity of free space]",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electrostatics/PYQ-PHY-c5ff64bf943d.png",
+        "alt": "Figure for this Electric Charges, Fields and Potential question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\varepsilon_0}\\,\\frac{\\sigma^2}{R^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\varepsilon_0}\\,\\frac{\\sigma^2}{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\varepsilon_0}\\,\\sigma^2R^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\varepsilon_0}\\,\\sigma^2R$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3a4e47d40848",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A semicircular arc of radius '$R$' is charged uniformly and has charge per unit length as $\\lambda$. The electric potential $V$ at the centre of curvature is [$\\varepsilon_0$ = permittivity of vacuum]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\lambda}{4\\varepsilon_0}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\lambda}{2\\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\lambda}{8\\varepsilon_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\lambda}{\\varepsilon_0}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-62617d81aa47",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two charged particles each having a charge '$+q$' and mass 'm' are kept at a distance 'd'. If they are in equilibrium under the gravitational force and the electric force between them, then the ratio $\\frac{q}{m}$ (specific charge) of each particle is ($G$- Universal gravitation constant, $\\varepsilon_0$ = permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$G/4\\pi\\varepsilon_0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\pi\\varepsilon_0G$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{4\\pi\\varepsilon_0G}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{4\\pi\\varepsilon_0}{G}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1942ec266cb5",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two spheres A and B of radius $a$ and $b$ respectively are at the same electric potential. The ratio of the surface charge densities of A to that of B is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{a^2}{b^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{b^2}{a^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{b}{a}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{a}{b}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-42033bf96f7b",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Three concentric metallic spherical shells of radii $R$, $3R$ and $9R$ are given charges $Q_1$, $Q_2$ and $Q_3$, respectively. It is found that surface charge densities on the outer surfaces of the shells are equal. Then the ratio of charges given to shells $Q_1:Q_2:Q_3$, is (Neglect the induction effects)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:4:16$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:3:9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}:3:27$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1:\\frac{1}{3}:9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c982fa9d9c07",
+      "subtopic": "electric-dipole",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A dipole of electric dipole moment $\\vec{P}$ is placed in an electric field of strength $\\vec{E}$. The angle between $\\vec{P}$ and $\\vec{E}$ for which the potential energy of the electric dipole is maximum, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cos^{-1}(1)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos^{-1}(-1)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sin^{-1}(1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sin^{-1}(-1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-04801fd47b03",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two point charges $q_1$ and $q_2$ are '$l$' distance apart. If one of the charges is doubled and the distance between them is halved. The magnitude of the force becomes 'n' times, where 'n' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$16$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7babc378af83",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Four electric charges $+q$ , $+q$ , $-q$ , and $-q$ are placed in order at the corners of a square of side '$2r$'. The electric potential at a point midway between the two negative charges is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4\\pi\\varepsilon_0}\\,\\frac{2q}{r}\\left[\\frac{1}{\\sqrt{5}}-1\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4\\pi\\varepsilon_0}\\,\\frac{q}{r}\\left[\\frac{1}{\\sqrt{5}}+1\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4\\pi\\varepsilon_0}\\,\\frac{2q}{r}\\left[1-\\sqrt{5}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4\\pi\\varepsilon_0}\\,\\frac{q}{r}\\left[1+\\sqrt{5}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1a5628d8fc50",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A charge $Q$ is placed at each corner of a cube of side $r$. The potential at the centre of the cube is ($\\varepsilon_0$ = permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4Q}{\\pi\\varepsilon_0r\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{8Q}{\\pi\\varepsilon_0r\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{16Q}{3\\pi\\varepsilon_0r}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{32Q}{\\pi\\varepsilon_0r\\sqrt{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4ae6577e8623",
+      "subtopic": "electric-charges-and-coulombs-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two point charges placed in air separated by distance $R$ exert a force $F$ on each other. Now the space between those charges is filled with dielectric constant $K$. At distance $R_1$ between the charges, the same force is exerted as $F$. Then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$R_1=\\sqrt{K}R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$R_1=R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$R_1=\\frac{R}{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$R_1=\\frac{R}{\\sqrt{K}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7b6fabc339f6",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If charge $+q$ is taken from one point to another over an equipotential surface, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "work done on the charge continuously increases.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "work is done by the charge.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "work done on the charge is constant.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "no work is done.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-feedc5265e90",
+      "subtopic": "electric-dipole",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Select the 'WRONG' statement about polar molecules.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A molecule in which centre of mass of positive charges does not coincide with the centre of mass of negative charges is a polar molecule.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "They have permanent dipole moment.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "They act as tiny electric dipoles.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "They have symmetrical shape.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2a38099e8dd7",
+      "subtopic": "electric-potential-energy-and-electric-potential",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three equal $(+q)$ charges are placed in air at the vertices of equilateral triangle. If the side of equilateral triangle is $l$, the net potential energy of the system is $\\left[K=\\frac{1}{4\\pi\\varepsilon_0}\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{kq^2}{l}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2kq^2}{l}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3kq^2}{l}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4kq^2}{l}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-98ae7743d0f3",
+      "subtopic": "electric-field-and-electric-field-intensity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An electric charge of magnitude '$2e$' and mass '$2m$' is moving in an electric field 'E'. The acceleration imparted to the charge is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2eE}{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{eE}{m}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{eE}{2m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{me}{2E}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d67de7de14e7",
+      "subtopic": "electric-dipole",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Polar molecules are those in which",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "they have symmetric shape.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "centre of mass of positive charges does not coincide with centre of mass of negative charges.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "they have no permanent dipole moments.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "centre of mass of positive charges coincide with centre of mass of negative charges.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

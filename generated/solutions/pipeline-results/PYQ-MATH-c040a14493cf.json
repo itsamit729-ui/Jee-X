@@ -1,0 +1,58 @@
+{
+ "ref": "PYQ-MATH-c040a14493cf",
+ "subject": "Mathematics",
+ "chapter": "Differential Equations",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": "11.0",
+ "verdict": "key_mismatch",
+ "solution": null,
+ "final_answer": null,
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "6",
+   "matches_key": false,
+   "confidence": "high",
+   "solution": "Substitute $y=vx$, so $dy = v\\,dx + x\\,dv$:\n$x\\sin v\\,(v\\,dx + x\\,dv) = (vx\\sin v - x)\\,dx$, which gives $x^2\\sin v\\,dv = -x\\,dx$\n$\\sin v\\,dv = -\\dfrac{dx}{x}$, so $-\\cos v = -\\ln x + C$\nAt $x=1$, $v=\\pi/2$: $\\cos(\\pi/2)=0=\\ln 1 + C'$, so $C'=0$. Hence $\\cos\\left(\\dfrac{y}{x}\\right) = \\ln x$\n$\\alpha = \\cos\\left(\\dfrac{y(e^{12})}{e^{12}}\\right) = \\ln e^{12} = 12$\nCircle: $x^2+y^2-2px+2py+14=0$ has centre $(p,-p)$ and $r^2 = 2p^2 - 14$\nFor a real circle, $r^2>0$, so $p^2>7$. For $r\\le 6$, $2p^2-14\\le 36$, so $p^2\\le 25$\nThe integers with $7<p^2\\le 25$ are $p=\\pm3,\\pm4,\\pm5$, which is 6 values\nAnswer: 6"
+  },
+  {
+   "attempt": 2,
+   "final_answer": "6",
+   "matches_key": false,
+   "confidence": "high",
+   "solution": "Substitute $y=vx$, so $dy=v\\,dx+x\\,dv$:\n$x\\sin v\\,(v\\,dx+x\\,dv)=(vx\\sin v-x)\\,dx$\nCancelling the $vx\\sin v\\,dx$ terms: $x^2\\sin v\\,dv=-x\\,dx \\Rightarrow \\sin v\\,dv=-\\dfrac{dx}{x}$\nIntegrate: $-\\cos v=-\\ln x+C \\Rightarrow \\cos\\left(\\dfrac{y}{x}\\right)=\\ln x+C_1$\nAt $x=1$, $y=\\frac{\\pi}{2}$: $\\cos\\frac{\\pi}{2}=0=\\ln 1+C_1$, so $C_1=0$ and $\\cos\\left(\\dfrac{y}{x}\\right)=\\ln x$\n$\\alpha=\\cos\\left(\\dfrac{y(e^{12})}{e^{12}}\\right)=\\ln e^{12}=12$\nThe circle is $x^2+y^2-2px+2py+14=0$ with centre $(p,-p)$, so $r^2=p^2+p^2-14=2p^2-14$\nFor a real circle: $2p^2-14>0 \\Rightarrow p^2>7$. The case $r=0$ needs $p^2=7$, which has no integer solution.\nFor $r\\le 6$: $2p^2-14\\le 36 \\Rightarrow p^2\\le 25$\nSo $7<p^2\\le 25$, giving $p\\in\\{\\pm3,\\pm4,\\pm5\\}$: 6 values.\nAnswer: 6"
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1072,
+   "cache_read": 555,
+   "output": 1651,
+   "thinking": 434,
+   "api_cost_usd": 0.041715,
+   "turns": 2,
+   "seconds": 17.2,
+   "error": null
+  },
+  {
+   "stage": "solve2",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 731,
+   "cache_read": 940,
+   "output": 1969,
+   "thinking": 582,
+   "api_cost_usd": 0.045424,
+   "turns": 2,
+   "seconds": 19.3,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T20:49:20+00:00"
+}

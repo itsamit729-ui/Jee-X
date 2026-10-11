@@ -1,0 +1,1024 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Complex Numbers",
+    "slug": "complex-numbers",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 3,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "geometry-of-complex-numbers",
+      "name": "Geometry and loci of complex numbers",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "cube-roots-of-unity",
+      "name": "Cube roots of unity",
+      "position": 2
+    },
+    {
+      "slug": "applications-of-complex-numbers-in-coordinate-geometry",
+      "name": "Applications of complex numbers in coordinate geometry",
+      "position": 3
+    },
+    {
+      "slug": "de-moivres-theorem",
+      "name": "De moivres theorem",
+      "position": 4
+    },
+    {
+      "slug": "algebra-of-complex-numbers",
+      "name": "Algebra of complex numbers",
+      "position": 5
+    },
+    {
+      "slug": "square-root-of-a-complex-number",
+      "name": "Square root of a complex number",
+      "position": 6
+    },
+    {
+      "slug": "modulus-of-complex-numbers",
+      "name": "Modulus of complex numbers",
+      "position": 7
+    },
+    {
+      "slug": "argument-of-complex-numbers",
+      "name": "Argument of complex numbers",
+      "position": 8
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-9b792077c6f1",
+      "subtopic": "argument-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $-1+\\sqrt{-3}=re^{i\\theta}$, then the value of $\\theta$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{2\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\pi}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9b428cfa64e8",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\alpha$ and $\\beta$ are the roots of the equation $x^2+x+1=0$ then $\\alpha^{2026}+\\beta^{2026}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0a9bbfcebf8b",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $n\\in Z$, then the expression $\\frac{2^n}{(1-i)^{2n}}+\\frac{(1+i)^{2n}}{2^n}$ is equal to ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$[1+(-1)^n]i^n$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2i^n$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3c36af789dae",
+      "subtopic": "de-moivres-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The modulus and argument of $(1+i\\sqrt{3})^8$ are respectively...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$ and $2\\pi/3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$256$ and $7\\pi/3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$256$ and $2\\pi/3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$64$ and $4\\pi/3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3cc605f79c7e",
+      "subtopic": "argument-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The polar form of the complex number $z=\\frac{1}{1+i}$, (where $i=\\sqrt{-1}$) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{2}}\\left(\\cos\\frac{7\\pi}{4}+i\\sin\\frac{7\\pi}{4}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{2}}\\left(\\cos\\frac{\\pi}{4}+i\\sin\\frac{\\pi}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\left(\\cos\\frac{\\pi}{4}+i\\sin\\frac{\\pi}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}\\left(\\cos\\frac{7\\pi}{4}+i\\sin\\frac{7\\pi}{4}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e49bd66d8eaa",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x=\\sqrt{-1-\\sqrt{-1-\\sqrt{-1-\\ldots\\infty}}}$, where $\\omega$ is a non-real complex cube root of unity, then the value of $x$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\omega^2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0a1b60a0b86b",
+      "subtopic": "de-moivres-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $z=\\frac{\\sqrt{3}+i}{2}$, then the value of $z^{69}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-i$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$i$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ff9385c5c88b",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $z_1=3\\cdot e^{\\frac{5\\pi}{12}i}$ and $z_2=4\\cdot e^{\\frac{\\pi}{12}i}$ then $z_1\\cdot z_2=\\cdots\\cdots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12i$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$e^{\\frac{\\pi}{2}i}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$e^{\\frac{\\pi}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2987b9137958",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $x=\\frac{25}{3-4i}$ then $2x^3-11x^2+44x+27=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c08d2eba2eb6",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\sum_{n=1}^4(i^n+i^{n+1})$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$i$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-i$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8c2e24f818c1",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\omega$ is a complex cube root of unity, then the value of the expression $2\\left(1+\\frac{1}{\\omega}\\right)\\left(1+\\frac{1}{\\omega^2}\\right)+3\\left(2+\\frac{1}{\\omega}\\right)\\left(2+\\frac{1}{\\omega^2}\\right)+\\ldots+(n+1)\\left(n+\\frac{1}{\\omega}\\right)\\left(n+\\frac{1}{\\omega^2}\\right)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left[\\frac{n(n+1)}{2}\\right]}^2+n$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "${\\left[\\frac{n(n+1)}{2}\\right]}^2-n$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${\\left[\\frac{n(n+1)}{2}\\right]}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left[\\frac{n(n-1)}{2}\\right]}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b52b4511114d",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\omega$ is a complex cube root of unity, then the value of $\\sin\\left[\\pi(\\omega^{10}+\\omega^{23})-\\frac{\\pi}{4}\\right]=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c4927b558398",
+      "subtopic": "de-moivres-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $n\\in Z$, then the value of $\\frac{2^n}{(1+i)^{2n}}+\\frac{2^n}{(1-i)^{2n}}+\\frac{(1+i)^{2n}+(1-i)^{2n}}{2^n}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\cos\\left(\\frac{n\\pi}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2(n+1)\\cos\\left(\\frac{n\\pi}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2[1+(-1)^n]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2(n+2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-053bcd41c0a3",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\omega$ is a complex cube root of unity, then the value of the expression $(1-\\omega+\\omega^2)^7+(1+\\omega-\\omega^2)^7$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$128$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-128$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$128\\omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-be697523cb0c",
+      "subtopic": "modulus-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $(1+i)\\cdot(1+2i)\\ldots\\ldots\\ldots(1+ni)=x+iy$ (Where $i=\\sqrt{-1}$ ), then the value of $(2)\\cdot(5)\\cdot(10)\\ldots\\ldots\\ldots(1+n^2)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{x}+\\sqrt{y}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{x}+\\sqrt{y}}{\\sqrt{x}-\\sqrt{y}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2-y^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b94fbcfc9e42",
+      "subtopic": "de-moivres-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $n$ is a positive integer, then $(1+i\\sqrt{3})^{2n}+(1-i\\sqrt{3})^{2n}$ is equal to .........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2^{2n+1}\\cos\\left(\\frac{2n\\pi}{3}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2^{2n}\\cos\\left(\\frac{n\\pi}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2^{2n+1}\\cos\\left(\\frac{n\\pi}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2^n\\cos\\left(\\frac{2n\\pi}{3}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6c5f08eb2c51",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\alpha$ and $\\beta$ are the distinct roots of the equation $x^2-x+1=0$, then the value of $\\alpha^{200}+\\beta^{206}+2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-74371bf8dcfa",
+      "subtopic": "de-moivres-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\frac{(\\cos 2\\theta+i\\sin 2\\theta)^7}{(\\cos 4\\theta+i\\sin 4\\theta)^3}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cos 2\\theta+i\\sin 2\\theta$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(\\cos 2\\theta+i\\sin 2\\theta)^4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos 4\\theta+i\\sin 4\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\cos 4\\theta+i\\sin 4\\theta)^{-2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5c2950f3207b",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of ${\\left(\\frac{-1+i\\sqrt{3}}{2}\\right)}^{18}+{\\left(\\frac{-1-i\\sqrt{3}}{2}\\right)}^{18}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$35$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0de91ea0917f",
+      "subtopic": "de-moivres-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The smallest positive integer $n$ for which $\\frac{(1+i)^n}{(1-i)^{n-2}}$ is a real number, is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-38a06f726bb5",
+      "subtopic": "square-root-of-a-complex-number",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $z=\\sum_{n=0}^{2026}i^n$, where $i=\\sqrt{-1}$, then one of the values of $\\sqrt{z}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{i\\frac{\\pi}{4}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{2}}e^{i\\frac{\\pi}{4}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^{i\\frac{\\pi}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sqrt{2}}e^{i\\frac{\\pi}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4630fb51966c",
+      "subtopic": "applications-of-complex-numbers-in-coordinate-geometry",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Point A$(5,12)$ rotated about the origin O in the XY-plane through an angle of $30^{\\circ}$ in the anticlockwise direction to a new position B. The ordinate of point B is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6\\sqrt{3}+\\frac{5}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5\\sqrt{3}}{2}-6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\sqrt{3}}{2}+6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6\\sqrt{3}-\\frac{5}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-59cc8ce29bef",
+      "subtopic": "applications-of-complex-numbers-in-coordinate-geometry",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $|z-5i|=|z+3|$, where $z$ is a complex number, then the equation of the locus of $z$ in Cartesian coordinates is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3x+5y-8=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3x-5y-8=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-3x+5y-8=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3x+5y+8=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-923e9f8836bd",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $w$ is a complex cube root of unity , then the value of $w^{10}-w^7+w^5-w^2+1$ is.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$w$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7c23e29e0ba2",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $i=\\sqrt{-1}$ then ${\\left[i^{18}+{\\left(\\frac{1}{i}\\right)}^{25}\\right]}^3=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4+4i$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2+2i$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4-4i$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2-2i$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8bdb4814fccd",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\alpha$ and $\\beta$ are complex cube roots of unity, then the difference between the values of $\\alpha^2+\\beta^2+\\alpha\\beta$ and $\\alpha^4+\\beta^4+\\alpha^{-1}\\beta^{-1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

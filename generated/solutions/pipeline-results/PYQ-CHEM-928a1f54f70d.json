@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-928a1f54f70d",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "Phenol with $CHCl_3$ / aq. KOH is the Reimer–Tiemann reaction.\nThe base generates dichlorocarbene: $CHCl_3 + OH^- \\rightarrow :CCl_2 + Cl^- + H_2O$.\nThe phenoxide ion attacks $:CCl_2$ mainly at the ortho position; the $K^+$ ion coordinates both the phenoxide oxygen and the carbene, which directs it to the ortho carbon.\nHydrolysis of the $-CHCl_2$ group and acidification gives $o$-hydroxybenzaldehyde (salicylaldehyde) as the major product and $p$-hydroxybenzaldehyde as the minor product.\nStatement I reverses the major and minor products, so it is false.\nIn $o$-hydroxybenzaldehyde, $-OH$ and $-CHO$ form an intramolecular H-bond (chelate ring), which makes the ortho isomer steam volatile.\nIn $p$-hydroxybenzaldehyde, molecules form intermolecular H-bonds and associate strongly, so the para isomer is not steam volatile.\nSteam distillation therefore separates the two isomers easily, so Statement II is true.\nAnswer: (D) Statement I is false but Statement II is true",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Phenol with $CHCl_3$ / aq. KOH is the Reimer–Tiemann reaction.\nThe base generates dichlorocarbene: $CHCl_3 + OH^- \\rightarrow :CCl_2 + Cl^- + H_2O$.\nThe phenoxide ion attacks $:CCl_2$ mainly at the ortho position; the $K^+$ ion coordinates both the phenoxide oxygen and the carbene, which directs it to the ortho carbon.\nHydrolysis of the $-CHCl_2$ group and acidification gives $o$-hydroxybenzaldehyde (salicylaldehyde) as the major product and $p$-hydroxybenzaldehyde as the minor product.\nStatement I reverses the major and minor products, so it is false.\nIn $o$-hydroxybenzaldehyde, $-OH$ and $-CHO$ form an intramolecular H-bond (chelate ring), which makes the ortho isomer steam volatile.\nIn $p$-hydroxybenzaldehyde, molecules form intermolecular H-bonds and associate strongly, so the para isomer is not steam volatile.\nSteam distillation therefore separates the two isomers easily, so Statement II is true.\nAnswer: (D) Statement I is false but Statement II is true",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 737,
+   "cache_read": 940,
+   "output": 1115,
+   "thinking": 59,
+   "api_cost_usd": 0.028392,
+   "turns": 2,
+   "seconds": 12.9,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1213,
+   "cache_read": 1199,
+   "output": 751,
+   "thinking": 224,
+   "api_cost_usd": 0.024971800000000002,
+   "turns": 2,
+   "seconds": 11.9,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:08:53+00:00"
+}

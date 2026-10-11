@@ -1,0 +1,2794 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Wave Optics",
+    "slug": "wave-optics",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 23,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "youngs-double-slit-experiment",
+      "name": "Young's Double Slit Experiment",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "huygens-principle-and-interference-of-light",
+      "name": "Huygens principle and interference of light",
+      "position": 2
+    },
+    {
+      "slug": "diffraction-and-doppler-effect-of-light",
+      "name": "Diffraction and doppler effect of light",
+      "position": 3
+    },
+    {
+      "slug": "polarisation",
+      "name": "Polarisation",
+      "position": 4
+    },
+    {
+      "slug": "optical-instruments",
+      "name": "Optical instruments",
+      "position": 5
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-0608400cbf7d",
+      "subtopic": "polarisation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two polaroid A and B placed in such a way that the pass-axis of polaroid are perpendicular to each other. Now, another polaroid C is placed between A and B bisecting angle between them. If intensity of unpolarised light is $I_0$ then intensity of transmitted light after passing through polaroid B will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{I_0}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{I_0}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{I_0}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-37c4d74bd4e5",
+      "subtopic": "polarisation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A ray of light is incident of the surface of a glass plate at an angle of incidence equal to Brewster's angle $\\Phi$. If $\\mu$ denotes the refractive index of glass w.r.t. air, then what will be the angle between reflected and refracted rays?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$90^{\\circ}-\\sin^{-1}(\\sin\\Phi/\\mu)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$90^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sin^{-1}(\\mu\\cos\\Phi)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$90^{\\circ}+\\Phi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-57623f2c173e",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a Young's double slit experiment, the intensities at two points, for the path difference $\\frac{\\lambda}{4}$ and $\\frac{\\lambda}{3}$ ($\\lambda$ being the wavelength of light used) are $I_1$ and $I_2$ respectively. If $I_0$ denotes the intensity produced by each one of the individual slits, then $\\frac{I_1+I_2}{I_0}=$\n$\\left(\\cos 45^{\\circ}=\\frac{1}{\\sqrt{2}},\\cos 60=\\frac{1}{2}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b62f5f00c1aa",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two light waves amplitudes in the ratio $3:1$ produce interference. The ratio of the maximum to minimum intensity is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$16:9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-36d511822c6e",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Converging lens of telescope $5$ cm in diameter has focal length $25$ cm. In the focal plane of the lens the distance between the centres of the Fraunhofer diffraction pattern is (wavelength of light used = $5000$ Å, Rayleigh's criterion is satisfied)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25000$ Å",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$28000$ Å",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$30500$ Å",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$32000$ Å",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3dff669f1883",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, in an interference pattern, a minimum is observed exactly in front of one slit. The distance between the two coherent sources is 'd' and 'D' is the distance between source and screen. The possible wavelengths used are inversely proportional to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$D,2D,3D,\\ldots$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$D,3D,5D,\\ldots$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{D},\\frac{2}{D},\\frac{3}{D},\\ldots$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{D^2},\\frac{2}{D^2},\\frac{3}{D^2},\\ldots$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5c5160739499",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In biprism experiment, the $4^{th}$ dark band is formed opposite to one of the slits. The wavelength of light used is (D=distance between source and screen, d= the distance between the slits)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{d^2}{9D}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{d^2}{11D}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{d^2}{14D}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{d^2}{7D}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-390b33adbbfb",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Resolving power of a telescope can be increased by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increasing the diameter of objective.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "decreasing the diameter of the objective",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increasing the distance between the objects which have to be seen through the telescope.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "decreasing the the distance between the objects which have to be seen through the telescope.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4c2bd4e8617d",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, the fringe width is $2.4$ mm with light of wavelength $9000$ A.U. If the light of wavelength $5400$ A.U. is used, with no other change in the experimental set up. The change in fringe width is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.86$ mm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.96$ mm",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.86$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.96$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a42b9c8a9455",
+      "subtopic": "polarisation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Unpolarized light with intensity $I_0$ passes through three polaroids such that the transmission axis of the last polaroid is crossed with the first. If the intensity of emerging light is $I_1\\left(I_1=\\frac{3}{32}I_0\\right)$. The angle between the first two polaroids and the angle for which the transmitted intensity is maximum are respectively $\\{$given, $\\cos(90)=0\\}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\sin^{-1}\\frac{\\sqrt{3}}{2}$ and $45^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sin^{-1}\\frac{\\sqrt{3}}{2}$ and $90^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\cos^{-1}\\frac{\\sqrt{3}}{2}$ and $45^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\cos^{-1}\\frac{\\sqrt{3}}{2}$ and $90^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-30b35d852ba3",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two plane polarised light waves combine at a certain point whose electric field components are $E_1=E_0\\sin\\omega t$ and $E_2=E_0\\sin(\\omega t+\\pi/3)$. The amplitude of the resultant wave is ($\\cos 60^{\\circ}=0.5$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3E_0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}E_0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$E_0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$E_0/\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9a996c24dec7",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A Parallel beam of monochromatic light is incident on a plane reflecting surface. If width of the plane incident and reflected plane wavefront is represented by $AB$ and $CD$ respectively then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$AB>CD$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$AB<CD$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$AB=CD$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$ABCD$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b069253b8a3a",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A double slit experiment is immersed in water of refractive index $1.33$. The slit separation is $1$ mm, distance between slit and screen is $1.33$ m. The slits are illuminated by a light of wavelength $6300\\,\\text{Å}$. The fringewidth is $x\\times 10^{-4}\\,m$. The value of ${}'x'$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5.8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8.6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4.9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6.3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-722ef0ca036c",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "According to corpuscular theory of light, Which is NOT the property of light?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "The velocity of light does not change after reflection",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Light travels in a straight line",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The velocity of light in air is greater than in glass",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "The velocity of light changes after refraction",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-771440f40487",
+      "subtopic": "polarisation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Choose the correct statement from the following.\nBrewster's angle for a transparent medium is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "different for light of different colours",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "same for lights of different colours",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "independent of refractive index of the medium",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "different for lights of same colour",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7d74185a8dce",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, the angular width of a fringe is found to be $0.2^{\\circ}$ on a screen placed 1m away. The wavelength of light used in 600 nm. If the entire apparatus is immersed in water of refractive index 4/3. the angular width of the fringe will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.10^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.15^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.20^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.25^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0144d3522539",
+      "subtopic": "polarisation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "'n' polarizing sheets are arranged such that each makes an angle $45^{\\circ}$ with the preceding sheet. An unpolarized light of intensity $I$ is incident into this arrangement. The output intensity is found to be $I/64$. The value of $n$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5496cf810f48",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, following figure shows that $Q$ is the position of second bright fringe on the right side of point $O$. $P$ is the eleventh bright fringe on the other side measured from point $Q$. If the wavelength of light used is $6000$ Å, then what will be the value of $S_1B$?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/wave-optics/PYQ-PHY-5496cf810f48.png",
+        "alt": "Figure for this Wave Optics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.142\\times 10^{-7}$ m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.138\\times 10^{-7}$ m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6.6\\times 10^{-6}$ m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5.4\\times 10^{-6}$ m",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a41981673c3c",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, two slits $S_1$ and $S_2$ are 'd' distance apart and the separation from slits to screen is $D$. Now if two transparent slabs of equal thickness $0.1$ mm but refractive index $1.51$ and $1.55$ are introduced in the path of beam ($\\lambda=4000$ Å) from $S_1$ and $S_2$ respectively. The central bright fringe spot will shift by ___ number of fringes.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$15$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9252cf67a9ad",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The ratio of intensity at the centre of a bright fringe to the intensity at a point distant ${\\left(\\frac{1}{4}\\right)}^{th}$ of the distance between two successive bright fringes will be $(\\cos 0^{\\circ}=1,\\cos 90^{\\circ}=0)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d628dc8b47dd",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The wavelength of light used in Young's double slit experiment, is $\\lambda$. The intensity at a point on the screen is I, where the path difference is $\\frac{\\lambda}{6}$. If $I_0$ is the maximum intensity then the ratio I to $I_0$ is $\\left(\\cos 30^{\\circ}=\\frac{\\sqrt{3}}{2}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.866$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.707$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.75$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f3e5594b75b2",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, the slit width is $1$ mm and screen is at a distance $2$ m from slits. Light of $600$ nm is used. If a thin glass plate of refractive index $1.5$ of thickness $0.06$ mm is placed over one of the slits then there will be a lateral displacement of the fringes by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$10$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-16e4d1c5231f",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In double slit experiment, the two slits are $1$ mm apart and the screen is placed $1$ m away. A monochromatic light of wavelength $500$ nm is used. What will be the width of each slit for obtaining ten maxima of double slit within the central maxima of single slit pattern?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.2$ mm",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.1$ mm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.5$ mm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.02$ mm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-852d9b96809f",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A double slit experiment is performed with light of wavelength $500$ nm. A thin film of thickness $2$ $\\mu$m and refractive index $1.5$ is introduced in the path of the upper beam. The location of the central maximum",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "remain unshifted",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "shift downward by nearly two fringes",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "shift upward by nearly two fringes",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "shift downward by 10 fringes",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9a2746628dd2",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two coherent sources $P$ and $Q$ produce interference at a point $A$ on the screen where there is a dark band which is formed between $4^{\\text{th}}$ bright band and $5^{\\text{th}}$ bright band. Wavelength of light used is $6000$ Å. The path difference between $PA$ and $QA$ is $x\\times 10^{-4}$ cm. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.7$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4.5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6.2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-183b0d084c0c",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The thickness of a plate (refractive index $\\mu$) which will produce a change in optical path equal to half the wavelength $\\lambda$ of the light passing through it normally, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\lambda}{4(\\mu-1)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\lambda}{4(\\mu-1)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\lambda}{\\left(\\mu-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\lambda}{2(\\mu-1)}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3d99dff31d03",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If fringe width is $0.4$ mm, the distance between fifth bright and third dark band on the same side in interference pattern of Young's double slit experiment is (in mm)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7d1b9328d3f3",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A parallel beam of light of intensity $I_0$ is incident on a glass plate, $25\\%$ of light is reflected by upper surface ($I_1$) and $50\\%$ of light is reflected from lower surface ($I_2$). The ratio $I_2$ to $I_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-74d22e989753",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Interference fringes are produced on a screen by using two light sources of intensities I and 9I. The phase difference between the beams is $\\frac{\\pi}{2}$, at point P and $\\pi$ at point Q on the screen. The difference between the resultant intensities at points P and Q is $\\left(\\cos\\frac{\\pi}{2}=0,\\cos\\pi=-1\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2I$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4I$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6I$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8I$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b78b7c95c5a4",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The distance of a point on the screen from two slits in biprism experiment is $1.8\\times 10^{-5}$ m and $1.23\\times 10^{-5}$ m. If wavelength of light used is $6000$ Å the fringe number formed at that point is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{\\text{th}}$ bright",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{\\text{th}}$ dark",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$9^{\\text{th}}$ bright",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9^{\\text{th}}$ dark",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ce66fd65c6f7",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If Young's double slit experiment is performed in water",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the fringe width will decrease",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "the fringe width will increase",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the fringe width will remain unchanged",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "the fringe width first decreases and then increases",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4c04db7e5f1c",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Light of wavelength $\\lambda$ is incident on a single slit of width 'a' and the distance between slit and screen is D. In diffraction pattern, if slit width is equal to the width of the central maximum then D is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{a^2}{2\\lambda}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{a}{2\\lambda}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{a^2}{\\lambda}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{a}{\\lambda}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e5d4579f1efe",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When the distance of separation between the slit and screen is doubled, the angular separation between fringes in single slit diffraction pattern experiment",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "remains same",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "first increases and then decreases",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-19d43b8a7dec",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A double slit experiment is immersed in water of refractive index $1.33$. The slit separation is 1 mm, distance between slit and screen is $1.33$ m. The slits are illuminated by light of wavelength 6300 $\\text{Å}$. The fringe width is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4.9\\times 10^{-4}$ m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6.3\\times 10^{-4}$ m",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8.6\\times 10^{-4}$ m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5.8\\times 10^{-4}$ m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-926226ac94be",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Light of wavelength $\\lambda$ is incident on a single slit of width 'a' and the distance between slit and screen is 'D'. In diffraction pattern, if slit width is equal to the width of the central maximum then 'D' is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{a}{\\lambda}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{a^2}{\\lambda}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{a}{2\\lambda}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{a^2}{2\\lambda}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2389e61ac7bb",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In Young's experiment, one of the slit is covered with a transparent sheet of thickness $3.6\\times 10^{-3}$ cm due to which position of central image shifts to a position originally occupied by $30^{th}$ bright fringe. The refractive index of the sheet is ($\\lambda=6000~\\text{Å}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.5$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1.2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-719399496c39",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In double slit experiment, the angular width of the fringes is $0.20^{\\circ}$ for sodium light ($\\lambda=5890~\\text{Å}$). To increase the angular width of the fringes by $10\\%$, the necessary change in wavelength is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "increase by $6479~\\text{Å}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decrease by $589~\\text{Å}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "increase by $589~\\text{Å}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e511de773a4d",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "According to Huygens principle, a wave front propagates through a medium by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "pushing particles of the medium",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "propagating through medium with speed of light",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "carrying particles of same phase along with it",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "creating secondary wavelets which forms a new wave front",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8a5b6db367de",
+      "subtopic": "polarisation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Three polaroid sheets are co-axially placed such that pass axis of polaroids $2$ and $3$ make $30^{\\circ}$ and $90^{\\circ}$ with pass axis of sheet. If $I_0$ is the intensity of unpolarised light entering first sheet, the intensity of the emergent light through $3^{rd}$ sheet is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3I_0}{32}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3I_0}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3I_0}{16}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9dc37a209a6b",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "At two points $P$ and $Q$ on the screen in Young's double slit experiment, waves from slits $S_1$ and $S_2$ have a path difference of zero and $\\frac{\\lambda}{4}$ respectively. The ratio of intensities at $P$ and $Q$ will be $\\left(\\cos 0^{\\circ}=1,\\;\\cos 45^{\\circ}=\\frac{1}{\\sqrt{2}}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-23f9c96023e6",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The ratio of intensities at two points on the screen in Young's double slit experiment when waves from the two slits have a path difference of zero and $\\lambda/4$ is ($\\lambda$ is the wavelength of light used) ($\\cos 0^{\\circ}=1$, $\\cos\\pi/2=0$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-540270ef1b07",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, the distance between the slits is 3 mm and the slits are 2m away from the screen. Two interference patterns can be obtained on the screen due to light of wavelength 480 nm and 600 nm respectively. The separation on the screen between the $5^{\\text{th}}$ order bright fringes on two interference patterns is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\times 10^{-4}\\,\\text{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1\\times 10^{-4}\\,\\text{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8\\times 10^{-4}\\,\\text{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4\\times 10^{-4}\\,\\text{m}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-af10a877733e",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, the fringe width is 0.4 mm. What is the distance between $4^{\\text{th}}$ dark band and $6^{\\text{th}}$ bright band on the same side of the interference pattern?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5$ mm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.75$ mm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.0$ mm",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1.5$ mm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b9e896886c3b",
+      "subtopic": "polarisation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Three identical polaroids $P_1$, $P_2$ and $P_3$ are placed one after another. The pass axis of $P_2$ and $P_3$ are inclined at angle of $60^{\\circ}$ and $90^{\\circ}$ with respect to axis of $P_1$. The source has an intensity $I_0$. The intensity of light finally coming out is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{I_0}{2}\\cos^230^{\\circ}\\cos^290^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{I_0}{2}\\cos^260^{\\circ}\\cos^230^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$I_0\\cos^260^{\\circ}\\cos^230^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ce6ded181b3e",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, two slits are illuminated with a light of wavelength $\\lambda$. The line joining $A_1P$ is perpendicular to $A_1A_2$ as shown in figure. If the first minimum is detected at P, the value of slits separation 'a' will be\n(D = distance between source and screen)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/wave-optics/PYQ-PHY-ce6ded181b3e.png",
+        "alt": "Figure for this Wave Optics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\lambda\\text{D}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\lambda\\text{D}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{\\lambda}{\\text{D}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{\\text{D}}{\\lambda}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-13944c5addcd",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a single slit diffraction experiment, for wavelength '$\\lambda$', half angular width of the principal maxima is '$\\theta$'. Also for wavelength of light '$p\\lambda$', the half angular width of the principal maxima is '$q\\theta$'. The ratio of the half angular widths of the first secondary maxima in the first case to second case will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:q$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$p:q$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$q:p$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e12bc5f685c6",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, width of the second slit is double the width of first slit, consequently the amplitude of the light from two slits. '$I_m$' is the maximum intensity. The resultant intensity '$I$' when they interfere with the phase difference of $\\varphi$ is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{I_m}{9}\\left(1+8\\cos^2\\frac{\\varphi}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{I_m}{7}\\left(3+5\\cos^2\\frac{\\varphi}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{I_m}{5}\\left(1+2\\cos^2\\frac{\\varphi}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{I_m}{3}\\left(1+6\\cos^2\\frac{\\varphi}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f66d05866d95",
+      "subtopic": "optical-instruments",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In telescopes for a given wavelength, the objectives with large aperture are used for",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "greater resolution.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "reducing lens aberration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "greater magnification.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "ease of manufacture.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0364b5fd4979",
+      "subtopic": "polarisation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An unpolarised light of intensity $64\\text{ Wm}^{-2}$ passes through three polarizers successively such that the transmission axis of last polarizer is crossed with the first. The intensity of the emerging light is $6\\text{ Wm}^{-2}$. The angle between the transmission axis of the first two polarizers is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\sin^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\cos^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\sin^{-1}\\left(\\frac{1}{\\sqrt{3}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}\\cos^{-1}\\left(\\frac{1}{\\sqrt{3}}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-58c75e5f8729",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In Young's experiment, the intensity ratio of the maxima and minima in an interference pattern produced by two coherent sources is $36:1$. The ratio of the amplitudes of the two individual sources will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:7$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5:7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7:5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7:4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a9f83a80a65c",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For obtaining maximum contrast between the bright and dark fringes in an interference pattern, the intensities of the two light coherent sources should be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "large",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "small",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "equal",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "in the ratio $2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0b5eda7138cd",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a certain region of the screen, number of fringes formed is observed to be 8 in Young's double slit experiment when light of wavelength $6600~\\text{Å}$ is used. If the light of wavelength $4400~\\text{Å}$ is used, the number of fringes observed in the same region of the screen will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$16$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$18$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-32dc7b5b3c19",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a Fraunhofer diffraction of a single slit, when a slit is illuminated by a light of wavelength $6480~\\text{Å}$, angular width of central maximum is measured. When the slit is illuminated by light of another wavelength '$\\lambda$' the angular width decreases by $25\\%$. The value of $\\lambda$ in $\\text{Å}$ units is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4220$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4530$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4860$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5230$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b083a8f87791",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When a glass plate of refractive index $1.44$ is introduced in the path of one of the interfering beams, the fringes are displaced by a distance '$y$'. If this plate is replaced by another plate of same thickness but of refractive index $1.66$, the fringes will be displaced by a distance",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2y}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4y}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5y}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3y}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1e405f822fe9",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a biprism experiment, fifth dark fringe is obtained at a point. A thin transparent film of refractive index '$\\mu$' is placed in one of the interfering paths. Now $7^{th}$ bright fringe is obtained at the same point. If '$\\lambda$' is the wavelength of light used, the thickness of film is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.5(\\mu-1)\\lambda$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1.5\\,\\lambda}{\\left(\\mu-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.5(\\mu-1)\\lambda$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2.5\\,\\lambda}{\\left(\\mu-1\\right)}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-84584c6ccd33",
+      "subtopic": "optical-instruments",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an optical instrument- microscope, the wavelength of light used are $\\lambda_1=6800$ Å and $\\lambda_2=5100$ Å. The ratio of the resolving power of microscope corresponding to '$\\lambda_1$' to that for '$\\lambda_2$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9:16$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5:4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:4$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fa2d60f024f6",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A plane wavefront of width $x$, is incident on an air-water interface and the corresponding refracted wavefront has a width y as shown in figure. The refreactive index of air with respect to water in terms of distances w and z is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/wave-optics/PYQ-PHY-fa2d60f024f6.png",
+        "alt": "Figure for this Wave Optics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{w}{z}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{z}{w}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{w}{z}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{z}{w}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6872db3e0170",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a single slit diffraction pattern, the distance between the plane of the slit and the screen is $1.4$ m. The width of the slit is $0.66$ mm. The second maximum is formed at the distance of $2.8$ mm from the center of the screen. The wavelength of light used is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6500~\\text{Å}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5600~\\text{Å}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5280~\\text{Å}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4600~\\text{Å}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a4d1cb10f006",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, for the $n^{\\text{th}}$ dark fringe ($n=1,2,3,\\ldots$) the phase difference of the interfering waves in radian will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$n\\cdot\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(2n+1)\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(2n-1)\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(2n-1)\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b4bbd26d1b64",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, the wavelength of light used is $\\lambda$. The intensity on the screen at a point for path difference '$\\lambda$' is 'X'. The intensity at the point for path difference $\\left(\\frac{\\lambda}{6}\\right)$ is ($\\cos 180^{\\circ}=-1$, $\\cos 30^{\\circ}=\\frac{\\sqrt{3}}{2}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{X}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{X}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3X}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4X}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5f9d30262380",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In biprism experiment, the maximum intensity is $I_0$. If the path difference between the two interfering waves is $\\frac{\\lambda}{3}$, then intensity at the point on the screen is\n[$\\sin 30^{\\circ}=\\cos 60^{\\circ}=0.5$, $\\sin 60^{\\circ}=\\cos 30^{\\circ}=\\sqrt{3}/2$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{I_0}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{I_0}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{I_0}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$I_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d3f2ae3a99bb",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a biprism experiment, a steady interference pattern is observed on the screen kept at a distance of 100 cm using a light of wavelength $5000$ Å. Without changing the distance between the virtual images of the slit, the source of light is replaced by a source of wavelength $6400$ Å. Now, to reduce the fringe width by $20\\%$ of its initial value, the screen should be moved",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "towards the source by $37.5$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "towards the source by $62.5$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "away from the source by $62.5$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "away from the source by $37.5$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fe120608ada1",
+      "subtopic": "polarisation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A ray of light is incident at polarising angle $\\theta$ on air-glass interface. If $\\lambda_a$ and $\\lambda_g$ are the wavelengths of light in air and glass respectively then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\lambda_a=\\lambda_g\\cot\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\lambda_g=\\lambda_a\\cot\\theta$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\lambda_a=\\lambda_g\\tan^2\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\lambda_g=\\lambda_a\\tan^2\\theta$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-282162baad72",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the diffraction pattern due to a single slit of width '$a$' with incident light of wavelength '$\\lambda$', at an angle of diffraction '$\\theta$', the condition for the second maximum is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a\\sin\\theta=2\\lambda$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\lambda\\sin\\theta=3a$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\lambda\\sin\\theta=3a$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2a\\sin\\theta=5\\lambda$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9594f4557071",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a biprism experiment, using a light of wavelength $4800\\text{ Å}$, a steady interference pattern was obtained on a screen $1\\text{ m}$ away from the source. Now the source is replaced by another of wavelength $6400\\text{ Å}$ and the screen is moved away from it by $20\\text{ cm}$. The fringewidth will",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "decrease by 40%.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decrease by 60%.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increase by 60%.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "increase by 40%.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3af385442bdb",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In Young's double slit experiment, the separation between the slits is decreased to ${\\left(\\frac{1}{3}\\right)}^{th}$ of its original distance and the distance between the slits and the screen is doubled. The fringe width",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "remains unchanged.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "becomes $2$ times the original.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "becomes $3$ times the original.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "becomes $6$ times the original.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-197c15e0485d",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Light of wavelength $580$ nm is incident normally on a slit of width '$a$'. The distance between slit and screen is $2.5$ m and the distance of the second order maximum from the centre of the screen is $14.5$ mm in a diffraction pattern. The value of '$a$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.12\\times 10^{-3}\\,\\text{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.25\\times 10^{-3}\\,\\text{m}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.36\\times 10^{-3}\\,\\text{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.50\\times 10^{-3}\\,\\text{m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-55b8c575d80e",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an interference experiment, the $m^{th}$ bright fringe for light of wavelength $\\lambda_1$ coincides with the $n^{th}$ dark fringe for light of wavelength $\\lambda_2$ . The ratio $\\frac{\\lambda_2}{\\lambda_1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{m}{n-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{m}{\\left(2n-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2m}{\\left(2n-1\\right)}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2m}{\\left(2n+1\\right)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a8e62b818c8e",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a biprism experiment, the distance between $4^{th}$ and $13^{th}$ bright band on the same side is '$y$' when light of wavelength $6000$ Å is used. For a light of wavelength '$\\lambda$' the distance between $6^{th}$ and $16^{th}$ bright band on the same side is again '$y$'. The value of '$\\lambda$' in Å units is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6500$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6300$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5400$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4800$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8c5d2d730c20",
+      "subtopic": "optical-instruments",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "To improve the resolving power of a compound microscope we should",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "decrease the diameter of the objective lens.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decrease the focal length of the eye-piece.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increase the refractive index of the medium between the object and objective lens.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "increase the wavelength of light.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aeda1d3b2e97",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In diffraction experiment from single slit, the angular width of the central maxima does NOT depend upon",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "width of the slit",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "wavelength of light used.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "ratio of wavelength and slit width.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "distance of the slit from the screen.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f73c87785d4b",
+      "subtopic": "diffraction-and-doppler-effect-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the diffraction pattern, the first maximum is at $30^{\\circ}$, when a monochromatic light of wavelength $\\lambda$ is incident on a slit of width $a$. For the same wavelength, if the slit width is changed, so that first maximum is at $45^{\\circ}$. The slit width is changed by $\\left(\\sin 30^{\\circ}=\\frac{1}{2},\\sin 45^{\\circ}=\\frac{1}{\\sqrt{2}}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\left(\\frac{\\sqrt{2}-1}{\\sqrt{2}}\\right)\\lambda$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{\\sqrt{2}}\\lambda$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\sqrt{2}\\lambda$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\left(\\frac{\\sqrt{2}+1}{\\sqrt{2}}\\right)\\lambda$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0ea21af701a2",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The interference pattern is obtained with two coherent light sources of intensity ($I_1$ and $I_2$) ratio '$\\beta$'. In the interference pattern, the ratio $\\left(\\frac{I_{max}+I_{min}}{I_{max}-I_{min}}\\right)$ will be $\\left(\\beta=\\frac{I_2}{I_1}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{\\beta}}{\\beta+1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{\\beta}}{(\\beta+1)^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\beta+1}{2\\sqrt{\\beta}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{(\\beta+1)^2}{2(\\sqrt{\\beta})}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6dfb128f1cc6",
+      "subtopic": "huygens-principle-and-interference-of-light",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the Young's double slit experiment, when a glass plate of thickness 't' is introduced in the path of one of the slits, the intensity at the position where the central maximum occurred previously remains unchanged. The minimum thickness of glass plate is [refractive index of glass plate = 1.5, wavelength of light in vacuum is $\\lambda$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\lambda$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\lambda}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\lambda}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\lambda$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

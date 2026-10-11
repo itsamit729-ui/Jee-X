@@ -1452,7 +1452,7 @@
           "is_correct": false
         }
       ],
-      "solution": ""
+      "solution": "For an ellipse $\\frac{x^2}{A}+\\frac{y^2}{B}=1$ with $A,B>0$, the major axis is along the y-axis when $B>A$.\nBoth denominators are positive because $f$ is positive, so the curve is always an ellipse.\nThe condition is therefore $f(3a+15) > f(a^2+7a+3)$.\n$f$ is strictly decreasing, so $f(u)>f(v) \\iff u<v$. This gives $3a+15 < a^2+7a+3$.\nRearrange: $a^2+4a-12>0$.\nFactorise: $(a+6)(a-2)>0$.\nSo $a<-6$ or $a>2$, which means $a\\in\\mathbb{R}-[-6,2]$.\nHence $\\alpha=-6$ and $\\beta=2$.\nThen $\\alpha^2+\\beta^2=36+4=40$.\nAnswer: (B) 40"
     },
     {
       "ref": "PYQ-MATH-c0e18f5b2217",

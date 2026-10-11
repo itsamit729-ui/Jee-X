@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-dcc00faf4fcc",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "B",
+ "verdict": "verified",
+ "solution": "The $-\\mathrm{COOH}$ in $Y$ is on the former terminal $\\mathrm{CH_3}$ carbon, so the functional group must move from the benzylic carbon to the terminal carbon.\n(i) NaOEt (strong base) causes E2 elimination: $\\mathrm{C_6H_5CH(Br)CH_3 \\rightarrow C_6H_5CH{=}CH_2}$ (styrene).\n(ii) $\\mathrm{B_2H_6}$ then $\\mathrm{H_2O_2/OH^-}$ gives anti-Markovnikov hydration: $\\mathrm{C_6H_5CH{=}CH_2 \\rightarrow C_6H_5CH_2CH_2OH}$.\n(iii) Jones reagent oxidises the primary alcohol to the acid: $\\mathrm{C_6H_5CH_2CH_2OH \\rightarrow C_6H_5CH_2COOH}$ ($Y$).\n(A) fails: aqueous NaOH gives a secondary alcohol, which Jones oxidises to acetophenone.\n(C) fails: Jones reagent does not act on $X$, and hot $\\mathrm{KMnO_4}$ gives benzoic acid.\n(D) fails: $\\mathrm{B_2H_6}$ cannot act on $X$ because it has no C=C bond.\nAnswer: B",
+ "final_answer": "B",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "B",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "The $-\\mathrm{COOH}$ in $Y$ is on the former terminal $\\mathrm{CH_3}$ carbon, so the functional group must move from the benzylic carbon to the terminal carbon.\n(i) NaOEt (strong base) causes E2 elimination: $\\mathrm{C_6H_5CH(Br)CH_3 \\rightarrow C_6H_5CH{=}CH_2}$ (styrene).\n(ii) $\\mathrm{B_2H_6}$ then $\\mathrm{H_2O_2/OH^-}$ gives anti-Markovnikov hydration: $\\mathrm{C_6H_5CH{=}CH_2 \\rightarrow C_6H_5CH_2CH_2OH}$.\n(iii) Jones reagent oxidises the primary alcohol to the acid: $\\mathrm{C_6H_5CH_2CH_2OH \\rightarrow C_6H_5CH_2COOH}$ ($Y$).\n(A) fails: aqueous NaOH gives a secondary alcohol, which Jones oxidises to acetophenone.\n(C) fails: Jones reagent does not act on $X$, and hot $\\mathrm{KMnO_4}$ gives benzoic acid.\n(D) fails: $\\mathrm{B_2H_6}$ cannot act on $X$ because it has no C=C bond.\nAnswer: B",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 858,
+   "cache_read": 1023,
+   "output": 1445,
+   "thinking": 92,
+   "api_cost_usd": 0.035976600000000004,
+   "turns": 2,
+   "seconds": 15.4,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1369,
+   "cache_read": 1199,
+   "output": 884,
+   "thinking": 326,
+   "api_cost_usd": 0.0288798,
+   "turns": 2,
+   "seconds": 11.6,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:27:07+00:00"
+}

@@ -1,0 +1,5943 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Continuity and Differentiability",
+    "slug": "continuity-differentiability",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 17,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "differentiability",
+      "name": "Differentiability and its applications",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "differentiation-of-composite-function",
+      "name": "Differentiation of composite function",
+      "position": 2
+    },
+    {
+      "slug": "successive-differentiation",
+      "name": "Successive differentiation",
+      "position": 3
+    },
+    {
+      "slug": "differentiation-of-implicit-function",
+      "name": "Differentiation of implicit function",
+      "position": 4
+    },
+    {
+      "slug": "methods-of-differentiation",
+      "name": "Methods of differentiation",
+      "position": 5
+    },
+    {
+      "slug": "differentiation-of-inverse-trigonometric-function",
+      "name": "Differentiation of inverse trigonometric function",
+      "position": 6
+    },
+    {
+      "slug": "differentiation-of-a-function-with-respect-to-another-function",
+      "name": "Differentiation of a function with respect to another function",
+      "position": 7
+    },
+    {
+      "slug": "differentiation-of-logarithmic-function",
+      "name": "Differentiation of logarithmic function",
+      "position": 8
+    },
+    {
+      "slug": "differentiation-of-parametric-function",
+      "name": "Differentiation of parametric function",
+      "position": 9
+    },
+    {
+      "slug": "limits-of-exponential-functions",
+      "name": "Limits of exponential functions",
+      "position": 10
+    },
+    {
+      "slug": "limits-of-algebric-function",
+      "name": "Limits of algebric function",
+      "position": 11
+    },
+    {
+      "slug": "limits-of-trigonometric-functions",
+      "name": "Limits of trigonometric functions",
+      "position": 12
+    },
+    {
+      "slug": "continuity",
+      "name": "Continuity",
+      "position": 13
+    },
+    {
+      "slug": "limits-of-logarithmic-functions",
+      "name": "Limits of logarithmic functions",
+      "position": 14
+    },
+    {
+      "slug": "existance-of-limits",
+      "name": "Existance of limits",
+      "position": 15
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-249110618715",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\sqrt{x^2+8x+3}$, then the value of $\\frac{d^2y}{dx^2}$ at $x=3$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-13}{216}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{13}{216}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{15}{216}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-15}{216}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3be0de9c5ef2",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\sqrt{x+\\sqrt{x^2+1}}$, then the value of $\\frac{dy}{dx}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{x^2+1}+x}{2y\\sqrt{x^2+1}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{x^2+1}+x}{y\\sqrt{x^2+1}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{x^2+1}-x}{2y\\sqrt{x^2+1}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{x^2+1}+x}{2y\\sqrt{x^2-1}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-48ea40c97c95",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\sqrt{\\tan x+\\sqrt{\\tan x+\\sqrt{\\tan x+\\cdots\\cdots\\cdots\\infty}}}$, then ${\\left(\\frac{dy}{dx}\\right)}^2$ at $x=\\frac{\\pi}{4}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-5}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-4}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9d365e720173",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=f\\left(\\frac{3+2x}{3-2x}\\right)$, where $f(x)=\\tan(\\log x)$ and $\\frac{dy}{dx}=\\left(\\frac{A}{B+Cx^2}\\right)\\cdot\\sec^2\\left(\\log\\left(\\frac{3+2x}{3-2x}\\right)\\right)$, then the respective values of A, B and C are ......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3,2,-4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12,-9,4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6,6,-2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12,9,-4$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aab4beacbf8b",
+      "subtopic": "existance-of-limits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\lim_{x\\rightarrow 3}\\frac{[x]-3}{x-3}$, where $[\\cdot]$ denotes the greatest integer function, is.....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\infty$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "does not exist",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f774891069e0",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\sin(e^{\\log 2x})$, then the value of $\\frac{dy}{dx}$ at $x=\\frac{\\pi}{2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ff1a31677dd9",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the function $f(x)$ be defined as:\n$f(x)=\\begin{cases} {\\left[\\tan\\left(\\frac{\\pi}{4}+x\\right)\\right]}^{\\frac{1}{x}}, & x\\ne 0 \\\\ k, & x=0 \\end{cases}$\nIf $f(x)$ is continuous at $x=0$, then the value of $k$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{e^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{e}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-06e3b08a41be",
+      "subtopic": "differentiation-of-parametric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x=\\sin(t),y=\\cos(pt)$, then $(1-x^2)\\frac{d^2y}{dx^2}-x\\frac{dy}{dx}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-p^2y$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$p^2y$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-08e86ffe4dd5",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The derivative of $\\tan^{-1}\\left(\\frac{\\sqrt{1+x^2}-1}{x}\\right)$ with respect to $\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3b7d57b0fd77",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\lim_{x\\rightarrow 1}\\left[\\frac{x-2}{x^2-x}-\\frac{1}{x^3-3x^2+2x}\\right]=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-73e67c72c6d7",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let the function f be defined by $f(x)=\\frac{x-|x|}{x}$, for $x\\ne 0$ and $f(0)=2$ then f is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "continuous nowhere",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "continuous for all $x$ except at $x=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "continuous everywhere",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "continuous for all $x$ except at $x=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aea9b3197ef5",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x^3+y^3=6$ and $\\frac{d^2y}{dx^2}\\cdot\\frac{d^2x}{dy^2}=\\frac{m}{(xy)^n}$, where $m,n\\in R$ then $\\frac{m}{n}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$36$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c7ea5057d6a7",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the derivative of $\\tan^{-1}(a+bx)$ with respect to x at $x=0$ is $1$, then $a^6-b^3=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3a^2b-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-3ab^2+1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1-3a^2b$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1+3ab^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-028345335b90",
+      "subtopic": "differentiation-of-parametric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $x=a\\sin t-b\\cos t,y=a\\cos t+b\\sin t$ and it is given that $\\frac{d^2y}{dx^2}=0$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2=a$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2=b$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2=1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-38453d20cd5b",
+      "subtopic": "limits-of-exponential-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\lim_{x\\rightarrow 1}\\left[\\frac{2^{2x-2}-2^x+1}{\\sin^2(x-1)}\\right]=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\log 2)^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\log 2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\log 2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-45970909568c",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the function defined by\n$f(x)=\\begin{cases} ax^2+bx+1, & |2x-3|\\ge 2 \\\\ 3x+2, & \\frac{1}{2}<x<\\frac{5}{2} \\end{cases}$\nis continuous in its domain, then the values of $a$ and $b$ respectively are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-4}{5},\\frac{27}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{4},-\\frac{27}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1,\\frac{27}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3,11$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-55b125b3ee88",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=(x-1)(x-2)(x-3)\\cdots(x-100)$ and the value of $\\frac{dy}{dx}$ at $x=5$ is equal to $\\lambda\\left(\\frac{100!}{{}^{100}C_5}\\right)$, then $\\lambda=$ ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{1}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-850eaac28a5b",
+      "subtopic": "differentiability",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)$ be a function defined by $f(x)=\\begin{cases} \\int_0^x(|t-2|+3)\\,dt, & x>4 \\\\ 2x+8, & x\\le 4 \\end{cases}$ then $f(x)$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "continuous and differentiable everywhere",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "neither continuous nor differentiable at $x=4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "continuous everywhere, but not differentiable at $x=4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Differentiable at $x=4$, but not continuous.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8b1c71a2a3e9",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $x=at^2$ and $y=2at,t\\ne 0$ then ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\frac{d^2x}{dy^2}+a=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2a\\frac{d^2x}{dy^2}-1=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{d^2x}{dy^2}-2a=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{d^2x}{dy^2}-1=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0be26f2072d5",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y={\\left(\\sqrt{x}+\\frac{1}{\\sqrt{x}}\\right)}^2$ and $\\frac{dy}{dx}=\\frac{3}{4}$, then the value of $x$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-75410644f231",
+      "subtopic": "existance-of-limits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Consider the function: $f(x)=\\begin{cases} x^2+1 & \\text{if }x<2 \\\\ 5 & \\text{if }x=2 \\\\ 3x-1 & \\text{if }x>2 \\end{cases}$\nWhich of the following statements is correct ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\lim_{x\\rightarrow 2}f(x)$ exists and is equal to $5$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\lim_{x\\rightarrow 2}f(x)$ exists but is not equal to $5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\lim_{x\\rightarrow 2}f(x)$ does not exist because $f(2)$ is defined",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\lim_{x\\rightarrow 2}f(x)$ does not exist because left-hand and right-hand limits are not equal",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7bfbc9e019b6",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\begin{cases} \\frac{\\tan x-\\cot x}{x-\\frac{\\pi}{4}}, & x\\ne\\frac{\\pi}{4} \\\\ a, & x=\\frac{\\pi}{4} \\end{cases}$, then the value of ${}'a'$ so that $f(x)$ is continuous at $x=\\pi/4$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-839d9d401375",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\left|\\begin{matrix} x^2 & \\sin x & e^x \\\\ 2 & 1 & -1 \\\\ p & p^2 & 1 \\end{matrix}\\right|$ then $f''(0)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2p^2-p+1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4p^2-p+1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4p^2-p+2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2p^2-p+2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a375a8f3e7df",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\frac{d}{dx}\\left(\\frac{1+x^4+x^8}{1+x^2+x^4}\\right)=ax^3+bx$, then the values of $a$ and $b$ are respectively...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a=4,b=2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$a=4,b=-2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$a=-2,b=4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a=-4,b=2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-acdb332baaa1",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The second derivative of $a\\sin^3t$ with respect to $a\\cos^3t$ at $t=\\frac{\\pi}{4}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4\\sqrt{2}}{3a}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3a}{4\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4a}{3\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3\\sqrt{2}}{4a}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3fb3c0b5ad72",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=x+e^x$, then $\\frac{d^2x}{dy^2}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{e^x}{(1+e^x)^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-e^x}{(1+e^x)^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{e^x}{(1+e^x)^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-e^x}{(1+e^x)^3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-645e2fa482e3",
+      "subtopic": "limits-of-logarithmic-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\lim_{x\\rightarrow 0}\\left[\\frac{\\log|2+x|-\\log|2-x|}{\\tan x}\\right]=$ .......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-81d2bf6e507a",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\begin{cases} \\frac{(8-2x)^{\\frac{1}{3}}-2}{3-(243+5x)^{\\frac{1}{5}}}, & \\text{if }x\\ne 0 \\\\ k, & \\text{if }x=0 \\end{cases}$ is continuous at $x=0$, then $k=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{27}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-27}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8850f811d170",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\tan^{-1}\\left\\{\\frac{\\sqrt{1+x^2}-\\sqrt{1-x^2}}{\\sqrt{1+x^2}+\\sqrt{1-x^2}}\\right\\}$, where $|x|<1$, then $\\frac{dy}{dx}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-x}{\\sqrt{1-x^4}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x}{\\sqrt{1-x^4}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-2x}{\\sqrt{1-x^4}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2x}{\\sqrt{1-x^4}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c9b2899868ba",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=x-5$.\nIf $g(x)=[f(4h(x)+3)]^2$ and $h(1)=4,h'(1)=-2$, then $g'(1)=$ .....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-242$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-224$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-112$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-640$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-01226f62bf61",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\sqrt{x^2+1},g(x)=\\frac{x+1}{x^2+1},h(x)=2x-3$, then $f'\\left(h'(g'(x))\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{x^2+1}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{\\sqrt{5}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x}{\\sqrt{x^2+1}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1d9f94878778",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The quadratic polynomial $p(x)$ has roots $1$ and $\\alpha$, while quadratic polynomial $q(x)$ has roots $1$ and $\\beta$. Let $\\alpha$ and $\\beta$ be the roots of $r(x)=p(x)+q(x)$. Then $\\lim_{x\\rightarrow\\infty}\\left[\\sqrt{p(x)}-\\sqrt{q(x)}\\right]=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3d7d55ec16f3",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sqrt{y+x}+\\sqrt{y-x}=c$ such that $\\frac{dy}{dx}=f(x)-\\sqrt{[f(x)]^2-1}$, then $f(x)=$ ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{y}{x}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{x}{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{y}{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x}{y}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-779108a23573",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=\\tan^{-1}\\left(\\frac{1}{x^2+x+1}\\right)+\\tan^{-1}\\left(\\frac{1}{x^2+3x+3}\\right)+\\tan^{-1}\\left(\\frac{1}{x^2+5x+7}\\right)+\\ldots$ upto $n$ terms, then $y'(0)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{n^2}{n^2+1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{n^2}{n^2+1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{n^2+1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-81cd8f90c42b",
+      "subtopic": "limits-of-exponential-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)$ is continuous at $x=0$, where $f(x)=\\frac{8^x-2^x}{k^x-1}$, for $x\\ne 0$ and $f(0)=2$, then the value of $k$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b56fe6163ed8",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\frac{d}{dx}\\left[\\sin^2\\left\\{\\cot^{-1}\\sqrt{\\frac{1-x}{1+x}}\\right\\}\\right]=$ ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fedfbfc9d431",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\lim_{n\\rightarrow\\infty}\\frac{(n+2)!+(n+1)!}{(n+2)!-(n+1)!}$ is ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-006e9aa0046d",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sqrt{1-x^6}+\\sqrt{1-y^6}=a^3(x^3-y^3)$, then $\\frac{dy}{dx}=$ ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{x^2}{y^2}\\sqrt{\\frac{1-y^6}{1-x^6}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{y^2}{x^2}\\sqrt{\\frac{1-y^6}{1-x^6}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x^2}{y^2}\\sqrt{\\frac{1-y^6}{1-x^6}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{y^2}{x^2}\\sqrt{\\frac{1-y^6}{1-x^6}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0ff9912038a2",
+      "subtopic": "differentiation-of-parametric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $x=\\sqrt{2^{\\tan^{-1}t}}$ and $y=\\sqrt[2^{\\cot^{-1}t}]{3}$, then $\\frac{dy}{dx}=$ ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2x^2}{3y^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-2x}{3y}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-2y}{3x}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2y}{3x}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5a683ec0f9a5",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\lim_{x\\rightarrow\\infty}\\left(\\sqrt[x^3+6x^2+1]{3}-x\\right)$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\infty$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5a7b92ec86f9",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=x-e^x$, then $\\frac{d^2x}{dy^2}=$ ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{e^x}{(1-e^x)^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{e^x}{(e^x-1)^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{(1-e^x)^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{e^x}{(1-e^x)^3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-745008ea5dc5",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of points of discontinuity of the function $f(x)=\\frac{1}{\\log|x^2-1|}$ (where $|\\cdot|$ denotes the modulus function) is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8622684f2383",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=2^{2x-1}$ and $\\varphi(x)=-2^x+x\\log 4$, such that $f'(x)>\\varphi'(x)$, then the set of all possible values of $x$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-\\infty,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(0,\\infty)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$[0,\\infty)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(0,1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6bd3b7e559d8",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=\\sin(2\\sin^{-1}x)$, then $\\frac{dy}{dx}=$ ______",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2-4x^2}{\\sqrt{1-x^2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2+4x^2}{\\sqrt{1-x^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4x^2-1}{2\\sqrt{1-x^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1-2x^2}{\\sqrt{1-x^2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7d06fbeb2f4d",
+      "subtopic": "differentiation-of-logarithmic-function",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=2^x+(\\sin x)^x$, then $\\frac{dy}{dx}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2^x\\log 2+(\\sin x)^x[x\\cot x+\\log(\\sin x)]$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2^x\\log 2+(\\sin x)^x[x\\cot x-\\log(\\sin x)]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2^x\\log 2+(\\sin x)^x[-x\\cot x-\\log(\\sin x)]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2^x\\log 2+(\\sin x)^x[-x\\cot x+\\log(\\sin x)]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7fb687153cca",
+      "subtopic": "limits-of-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\lim_{x\\rightarrow 0}\\frac{1-\\cos(1-\\cos x)}{x^4}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-81282c174382",
+      "subtopic": "differentiation-of-logarithmic-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x^y\\cdot y^x=1$ then the value of $\\frac{dy}{dx}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{\\left(y+x\\log y\\right)}{\\left(x+y\\log x\\right)}\\cdot\\frac{y}{x}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\left(y+x\\log y\\right)}{\\left(x+y\\log x\\right)}\\cdot\\frac{y}{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{\\left(x+y\\log y\\right)}{\\left(y+x\\log x\\right)}\\cdot\\frac{y}{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{y}{x}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a276092bd72d",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)$ is a differentiable function of $x$, then $\\lim_{h\\rightarrow 0}\\frac{[f(x+h)]^2-[f(x)]^2}{2h}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$[f(x)]^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$f(x)\\cdot f'(x)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$f(x)+f'(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$[f(x)\\cdot f'(x)]^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e2505bf43caf",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $y=\\frac{1}{3x-5}$ and if $\\frac{d^4y}{dx^4}=1944$, then the value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1206ebc3be9b",
+      "subtopic": "differentiation-of-logarithmic-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=x^{\\sqrt{x}}$, then $\\frac{dy}{dx}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{y}{2\\sqrt{x}}(2+\\log x)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{y}{\\sqrt{x}}(2+\\log x)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{y}{2\\sqrt{x}}(2-\\log x)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{y}{\\sqrt{x}}(2-\\log x)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-172b53a1d278",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\frac{ax-3}{5x+7}$ and $\\lim_{x\\rightarrow 0}f(x)\\cdot\\lim_{x\\rightarrow\\infty}f(x)=3$ then $a=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$35$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-35$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$15$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{21}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4ef8a29c9d4e",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the function $f(x)$ is defined as below\n$f(x)=\\begin{cases} \\frac{\\left(3^x+3^{-x}-2)\\log(1+4x\\right)}{\\left(1-\\cos 4x)\\tan(2x\\right)}, & x\\ne 0 \\\\ \\frac{(\\log p)^r}{q}, & x=0 \\end{cases}$\nis continuous at $x=0$ then $p+q-r=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5fce0d893d68",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\cos^{-1}x$, then $\\frac{d^2y}{dx^2}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sec^2y\\cdot\\tan y$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\sec^2y\\cdot\\tan y$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\csc^2y\\cdot\\cot y$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\csc^2y\\cdot\\cot y$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-859738b7f308",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=4^{\\log_4(x+2)-\\log_4(x-2)}$, then $\\frac{dy}{dx}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{4}{(x-2)^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{(x-2)^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{4}{(x+2)^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{(x+2)^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b77ff1a8a5bd",
+      "subtopic": "differentiation-of-parametric-function",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $x=\\frac{e^m+e^{-m}}{2}$ and $y=\\frac{e^m-e^{-m}}{2}$ then $\\frac{dy}{dx}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{y}{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x}{y}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-x}{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-y}{x}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-26c41df43097",
+      "subtopic": "differentiation-of-parametric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x=\\frac{1+\\log t}{t^2}$ and $y=\\frac{3+2\\log t}{t}$, then the value of $\\frac{dy}{dx}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$t$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{y}{x}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-795388d92bf3",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\frac{1-\\cos\\left(\\frac{p\\pi x}{2}\\right)}{x^2}$ is continuous at $x=0$ and $f(0)=\\frac{9\\pi^2}{32}$, then the value of $p$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p=\\pm\\frac{3}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$p=\\pm\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$p=\\pm\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p=\\pm\\frac{4}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8dba3933631a",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $3x^2+4xy+5y^2=0$, then $\\frac{dy}{dx}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x}{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{y}{x}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2x}{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x}{2y}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9919f717522d",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\lim_{x\\rightarrow\\infty}\\left[\\frac{x^3+1}{x^2+1}-(ax+b)\\right]=2$ then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a=1,~b=1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$a=1,~b=-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a=1,~b=-2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$a=1,~b=2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a9d344693984",
+      "subtopic": "differentiation-of-logarithmic-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x^yy^x=1$, then $\\frac{dy}{dx}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{y^2(1+\\log y)}{x^2(1-\\log x)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{y^2(1+\\log x)}{x^2(1-\\log y)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-y^2(1-\\log x)}{x^2(1-\\log y)}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-x^2(1-\\log x)}{y^2(1-\\log y)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dee02b237dbb",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $u=\\tan^{-1}\\left(\\frac{\\sqrt{1+x^2}-1}{x}\\right)$ and $v=\\tan^{-1}\\left(\\frac{2x\\sqrt{1-x^2}}{1-2x^2}\\right)$ then $\\frac{du}{dv}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{1+x^2}}{4(1-x^2)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{1-x^2}}{4(1+x^2)}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{1-x^2}}{2(1+x^2)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\sqrt{1+x^2}}{\\left(1-x^2\\right)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-16b0750d1144",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=3x^3+4e^{\\frac{x}{2}}$ and $g(x)=f^{-1}(x)$. Then the value of $g'(4)$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-19ebf6274bd2",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the function f is continuous at $x=1$, where $f(x)=\\frac{1+\\cos(\\pi x)}{\\pi(1-x)^2}$, for $x\\ne 1$, then the value of $f(1)$ is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{9}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-897b219b4a09",
+      "subtopic": "differentiation-of-logarithmic-function",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\log x^x$, then the value of ${\\left(\\frac{dy}{dx}\\right)}^2$ at $x=e^2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-93a013553c67",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\cos^{-1}(\\sin x)$, where $\\frac{\\pi}{2}<x<\\pi$, then $\\frac{dy}{dx}=...$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b92ea6e1f81a",
+      "subtopic": "limits-of-exponential-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\lim_{x\\rightarrow 0}\\frac{(4^x-1)^3}{\\tan\\left(\\frac{x}{4}\\right)\\log\\left(1+\\frac{x^2}{3}\\right)}=96(\\log a)^b$, then $(a+b)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f2a44a955ffc",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\left(\\frac{ax+b}{cx+d}\\right)$, then $2\\frac{dy}{dx}\\cdot\\frac{d^3y}{dx^3}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{d^2y}{dx^2}\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\frac{d^2y}{dx^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3{\\left(\\frac{d^2y}{dx^2}\\right)}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3\\frac{d^2x}{dy^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3564a4c874af",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\lim_{x\\rightarrow\\infty}\\frac{(2x-1)^{19}\\cdot(3x+2)^{11}}{(6x-5)^{30}}=2^a\\cdot 3^b$, then $a+b=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-30$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-11$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-19$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4c9b3984a5a5",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=\\tan^{-1}\\sqrt{\\frac{1+\\sin 2x}{1-\\sin 2x}}$, then $\\frac{\\text{d}y}{\\text{d}x}$ at $x=\\frac{\\pi}{6}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6f7845387adf",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The derivative of $\\sin\\left(\\log\\left(\\frac{x+3}{x}\\right)\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{x+3}\\cos\\left(\\log\\left(\\frac{x+3}{x}\\right)\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{x(x+3)}\\cos\\left(\\log\\left(\\frac{x+3}{x}\\right)\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-3}{x(x+3)}\\cos\\left(\\log\\left(\\frac{x+3}{x}\\right)\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{x(x+3)}\\cos\\left(\\log\\left(\\frac{x+3}{x}\\right)\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8017c5e4bfa4",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $e^y+xy=e$, then the ordered pair $\\left(\\frac{\\text{d}y}{\\text{d}x},\\frac{\\text{d}^2y}{\\text{d}x^2}\\right)$ at $x=0$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{1}{e},\\frac{-1}{e^2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{-1}{e},\\frac{1}{e^2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{1}{e},\\frac{1}{e^2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{-1}{e},\\frac{-1}{e^2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ac2f9dda4524",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of f(0) so that the function $f(x)=\\frac{(256-8x)^{\\frac{1}{4}}-4}{16-4(64+3x)^{\\frac{1}{3}}}$, $x\\ne 0$ is continuous at $x=0$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{64}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0b743458098d",
+      "subtopic": "differentiation-of-logarithmic-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=(\\log x)^{\\log x}$ and $\\frac{dy}{dx}=\\frac{y}{x}\\times f(x)$ then $f(x)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(\\log x)^x$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log(\\log x)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^{\\log x}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log(\\log x^e)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-202c10fd0cbe",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=\\frac{12^x-4^x-3^x+1}{1-\\cos 2x}$, for $x\\ne 0$. If $f(x)$ is continuous at $x=0$ and $f(0)=\\frac{\\left(\\log a)\\cdot(\\log 3\\right)}{4k}$, then the value of $a$ in terms of $k$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a=2^{4k}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$a=2^{3k}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a=3^{4k}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a=4^{4k}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4b1ee70ce331",
+      "subtopic": "limits-of-logarithmic-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\lim_{h\\rightarrow 0}\\frac{\\log_e(1+2h)-2\\log_e(1+h)}{h^2}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\infty$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9ebf9b20104c",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sin^{-1}\\left(\\frac{y}{2}\\right)=\\tan^{-1}\\left(\\frac{x}{2}\\right),~|y|<2$, such that $\\frac{dx}{dy}=k(4+x^2)$, then $k=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x}{2y}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x}{4y}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x}{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{y}{x}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b1d36a7adbb0",
+      "subtopic": "differentiation-of-logarithmic-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=x^{x^{x^{\\cdot^{\\cdot^{\\cdot^{\\infty}}}}}}$, then $\\frac{dy}{dx}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$yx^{y-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{y^2}{x(1-y\\log x)}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{y}{x(1+y\\log x)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$yx^{y+1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f9280763a4e9",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The derivative of $f(\\cos x)$ with respect to $g(\\tan x)$ at $x=\\frac{\\pi}{6}$, given that $f'\\left(\\frac{\\sqrt{3}}{2}\\right)=4$ and $g'\\left(\\frac{1}{\\sqrt{3}}\\right)=2$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{3}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-25465cb6c40d",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\frac{x-1}{4}+\\frac{(x-1)^3}{12}+\\frac{(x-1)^5}{20}+\\frac{(x-1)^7}{28}+\\ldots$ where $0<x<2$, then $f'(x)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2x(2+x)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4x(2+x)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4x(2-x)}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2x(2-x)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-467032e50873",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=\\tan^{-1}\\left(\\frac{2x^{5/2}}{1-x^5}\\right)$, then $\\frac{dy}{dx}$ is equal to ....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5x^{3/2}}{1-x^5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2x^{3/2}}{1+x^5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5x^{3/2}}{1+x^5}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5x^{2/3}}{1+x^5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-91a619df529d",
+      "subtopic": "limits-of-exponential-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\lim_{x\\rightarrow 0}\\left(\\frac{f(x)}{x^2}\\right)$ exists finitely and $\\lim_{x\\rightarrow 0}{\\left(1+x+\\frac{f(x)}{x}\\right)}^{1/x}=e^3$, then $\\int f(x)\\cdot\\log x\\,dx$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{9}x^3(3\\log x-1)+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{9}x^3(3\\log x-1)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{9}x^3(3\\log x+1)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{9}x^3(3\\log x-1/3)+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aca147820278",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f'\\left(\\frac{1}{2}\\right)=\\sqrt{3}$ and $g'\\left(\\frac{\\sqrt{3}}{2}\\right)=-2$, then the derivative of $f(\\sin x)$ with respect to $g(\\cos x)$ at $x=\\frac{\\pi}{6}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c2310916214d",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the derivative of $\\tan^{-1}(a+bx)$ at $x=0$ is $1$, then $1-b^3+a^6$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3b^2a$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-6a^2b$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-3b^2a$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-3a^2b$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f973241f2aba",
+      "subtopic": "limits-of-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)$ be a function continuous at $x=0$, defined for $x\\ne 0$ as $f(x)=\\frac{1-\\cos(1-\\cos(6x))}{x^2\\sin^2(3x)}$. Then the value of $f(0)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$18$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$36$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$162$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fba0014e6e60",
+      "subtopic": "limits-of-exponential-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $k>5$ and $\\lim_{x\\rightarrow 0}\\frac{k^{2x}+25^x-2\\cdot(5k)^x}{\\tan 3x\\cdot\\ln(1+3x)}=\\lim_{n\\rightarrow\\infty}\\frac{(n+1)!+n!}{(n+1)!-n!}$, then value of $k$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5e$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3e^{9/2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5e^3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-05b2e64a58e7",
+      "subtopic": "limits-of-exponential-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\lim_{x\\rightarrow 0}\\frac{\\left(5^x-1)^4\\,\\text{cosec}\\,(x\\log 5\\right)}{\\tan(x\\log 5)\\cdot\\log(1+x^2\\log 25)}=\\ldots\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\log 5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log\\sqrt{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(\\log 5)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}\\log 5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8ba02f998f69",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The derivative of $\\log_8(\\log_5x)$ w. r. t. $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\log_58\\log x}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{x\\log 5\\log x}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{x\\log x\\log 8\\log 5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{x\\log 8\\log x}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c36b376a0763",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\tan^{-1}\\left[\\frac{x-\\sqrt{1-x^2}}{x+\\sqrt{1-x^2}}\\right]$ , then $\\frac{dy}{dx}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-1}{\\sqrt{1-x^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{1-x^2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dcda0e0cc7b1",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y^{\\frac{1}{m}}+y^{\\frac{-1}{m}}=2x$ , then $(x^2-1)y_1^{~2}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$my^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$m^2y^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$m^2y$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$my$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f86555d6866f",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the derivative of the function $f(x)=\\begin{cases} ax^2+b & \\text{if }x<-1 \\\\ bx^2+ax+4 & \\text{if }x\\ge-1 \\end{cases}$ is continuous everywhere then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a=2,b=3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$a=3,b=2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a=-2,b=3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a=-3,b=-2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6ac224c24d7f",
+      "subtopic": "limits-of-exponential-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\lim_{x\\rightarrow 0}\\frac{45^x-9^x-5^x+1}{\\left(k^x-1)(3^x-1\\right)}=2$, then the value of $k$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$45$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-888a80b14640",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=\\cos^{-1}\\left(\\frac{1-4^x}{1+4^x}\\right)$, then $\\frac{dy}{dx}$ at $x=1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4\\log 2}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\log 2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\log 8}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\log 8}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-97e593cfaf47",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\cot[f(x)]=\\frac{3x-x^3}{1-3x^2}$ and $\\sin[g(x)]=\\frac{1-x^2}{1+x^2}$, then $\\lim_{x\\rightarrow t}\\frac{f(x)-f(t)}{g(x)-g(t)}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2(1+t^2)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{5}{2(1+t^2)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c8ed2883efc4",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let f(x) be a twice differentiable function such that $f''(x)=-f(x)$, $f'(x)=g(x)$ and $h(x)=\\{f(x){\\}}^2+\\{g(x){\\}}^2$. If $h(5)=11$, then $h(10)$ is equal to ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$11$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$22$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Not defined",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ce22f5ac3239",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the function f is continuous at $x=\\pi$, where $f(x)=\\frac{1-\\cos[7(x-\\pi)]}{5(x-\\pi)^2}$, for $x\\ne\\pi$, then $f(\\pi)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{49}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{49}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{49}{10}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{10}{49}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0e31f11e9a2c",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=x\\cdot 7^x$, then the value of $\\frac{dx}{dy}$ when $x=1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7(\\log 7+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log 7+1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{7(\\log 7+1)}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\log 7+1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7fff9b082e3d",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following function is discontinuous at $x=0$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$f(x)=(1+x)^{\\frac{2}{x}},$ for $x\\ne 0$\n$=e^2,$ for $x=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$f(x)=\\sin x-\\cos x,$ for $x\\ne 0$\n$=-1,$ for $x=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$f(x)=\\frac{e^{\\frac{1}{x}}-1}{e^{\\frac{1}{x}}+1},$ for $x\\ne 0$\n$=-1,$ for $x=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$f(x)=\\frac{e^{5x}-e^{2x}}{\\sin 3x},$ for $x\\ne 0$\n$=1,$ for $x=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9ae3fb529b94",
+      "subtopic": "limits-of-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\lim_{x\\rightarrow 1}\\frac{\\sin(3x^2-4x+1)-x^2+1}{2x^3-7x^2+ax+b}=-2$, then the quadratic equation having roots $a$ and $b$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+5x-24=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2-5x+24=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2-5x-24=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x^2+5x+24=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f334b62b40b7",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=[(x+1)(2x+1)(3x+1)\\ldots\\ldots(nx+1)]^4$, where $n\\in N$ and $\\frac{dy}{dx}$ at $x=0$ is $2k$, then the value of $k$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{n(n+1)}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$n(n+1)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2n(n+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4n(n+1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ffbec61902b9",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\cos x\\cos 2x\\cos 4x\\cos 8x\\cos 16x$, then $f'\\left(\\frac{\\pi}{4}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4c9648e869ee",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the function $f(x)=\\frac{4\\sqrt{2}(\\sin 3x+\\sin x)}{2\\sin 2x\\sin\\frac{3x}{2}+\\cos\\frac{5x}{2}-\\cos\\frac{3x}{2}}$ for $x\\ne\\frac{\\pi}{2}$ is continuous at $x=\\frac{\\pi}{2}$, then the value of $f\\left(\\frac{\\pi}{2}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(2)^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(3)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-53b694cd7c44",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The derivative of $\\tan^{-1}\\left(\\frac{\\sqrt{1+x^2}-1}{x}\\right)$ with respect to $\\tan^{-1}\\left(\\frac{x}{\\sqrt{1-x^2}}\\right)$ at $x=\\frac{1}{2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{3}}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5c291cc2163b",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\cot^{-1}\\left(\\frac{3x-x^3}{1-3x^2}\\right)$ and $g(x)=\\cos^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)$, then $\\lim_{x\\rightarrow a}\\frac{f(x)-f(a)}{g(x)-g(a)}$, $\\left(0<a<\\frac{1}{2}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{3}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-656b50d4efd6",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=\\frac{1}{3x+5}$, then the value of $\\frac{d^9y}{dx^9}$ is..",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{9!\\times 3^9}{(3x+5)^9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{(-1)^8\\times 9!\\times 3^9}{(3x+5)^9}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{(-1)^9\\times 9!\\times 3^9}{(3x+5)^{10}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{(-1)^8\\times 8!\\times 3^9}{(3x+5)^{10}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-763f3b1c2261",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=\\sqrt{\\cos x^2+\\sqrt{\\cos x^2+\\sqrt{\\cos x^2+\\ldots\\infty}}}$ and $\\frac{dy}{dx}=\\frac{f(x)}{2y-1}$ then, $\\int f(x)\\,dx=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin x^2+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\sin x^2+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos x^2+c$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\cos x^2+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-77f03e2b5dbe",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\cos x\\;\\cos 2x\\;\\cos 4x\\;\\cos 8x\\;\\cos 16x$, then $f'\\left(\\frac{\\pi}{4}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{cosec}\\left(\\frac{\\pi}{4}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\cos\\left(\\frac{\\pi}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\tan\\left(\\frac{\\pi}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-014cb9ae6ca5",
+      "subtopic": "differentiation-of-parametric-function",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $t\\in(0,1)$ and $\\alpha\\in\\left(0,\\frac{\\pi}{4}\\right)$. If $x=\\text{cosec}^{-1}\\left(\\frac{1+t^2}{2t}\\right)$, $y=\\cot^{-1}\\left(\\frac{\\sqrt{1-t^2}}{t}\\right)$ and $\\frac{dy}{dx}=f(t)$, then the value of $f(\\tan\\alpha)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sec\\alpha}{\\sqrt{\\cos 2\\alpha}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sec\\alpha}{2\\sqrt{\\cos 2\\alpha}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\cos\\alpha}{2\\sqrt{\\cos 2\\alpha}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\cos\\alpha}{\\sqrt{\\cos 2\\alpha}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-68f9755c918f",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\lim_{x\\rightarrow\\infty}\\left[\\frac{x^2+x+1}{x+1}-ax-b\\right]=3$, then $a-b=$...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-818f87dcf8a4",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $x\\,e^{xy}=y+\\sin^2x$, then the value of $\\frac{dy}{dx}$ at $x=0$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ada66c562bfe",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of point / points where the function $f(x)=\\frac{1}{x^2-5|x|+6}$ is discontinuous is......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ccbbf5a0f2db",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $g(x)=(x^2+2x+1)\\cdot f(x)$ such that $f(0)=5$ and $\\lim_{x\\rightarrow 0}\\frac{f(x)-5}{x}=4$ then $g'(0)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$20$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$18$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$14$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2eedfcb75362",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f:R\\rightarrow R$ is an even function then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$f'(0)=1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$f'(x)$ is an even function",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$f(0)=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$f'(x)$ is an odd function",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5138b71c3977",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For $x>0$ and $(x\\log x)<1$, if $y=\\cot^{-1}\\left(\\frac{x-\\log x^{x^2}}{\\log e^{x^2}+\\log x^x}\\right)$, then $\\frac{dy}{dx}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{1+x^2}+\\frac{2}{x[1+(\\log x)^2]}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{1+x^2}+\\frac{1}{x[1+(\\log x)^2]}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-1}{1+x^2}+\\frac{1}{x[1+(\\log x)^2]}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{1+x^2}+\\frac{1}{\\left[1+(\\log x)^2\\right]}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5ecabb2680e0",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\frac{3^x+3^{-x}-2}{\\tan x\\cdot\\log(1+x)}$ for $x\\ne 0$, is continuous at $x=0$, then the value of $f(0)$ is equal to $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\log 3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\log 3)^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\log 3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8a6faf187346",
+      "subtopic": "limits-of-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\lim_{x\\rightarrow k}\\frac{x^3-k^3}{x^2-k^2}=\\lim_{x\\rightarrow 0}\\frac{1-\\cos(2x)}{x\\sin x}$, then the value of $k$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{8}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-91070a9da13b",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $y=\\sqrt[x^3y]{p}$. If $\\frac{dy}{dx}=\\frac{3}{2}$ when $y=1$, then the value of $p$ is equal to $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dab61140a4b9",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f'(x)=\\sin^2x$ and $y=f\\left(\\frac{2x-1}{x^2+1}\\right)$, then $\\frac{dy}{dx}$ at $x=1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}\\sin\\left(\\frac{1}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4}\\sin^2\\left(\\frac{1}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sin^2\\left(\\frac{1}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}\\sin^2\\left(\\frac{1}{2}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3f3d34ada34e",
+      "subtopic": "limits-of-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\lim_{x\\rightarrow 0}\\left(\\frac{8}{x^8}\\right)\\left[1-\\cos\\frac{x^2}{2}-\\cos\\frac{x^2}{4}+\\cos\\frac{x^2}{2}\\cdot\\cos\\frac{x^2}{4}\\right]$ is equal to ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{32}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-578776146546",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the function $f(x)=\\frac{2\\sqrt{2}-(\\cos x+\\sin x)^3}{1-\\sin 2x}$ is continuous at $x=\\frac{\\pi}{4}$, then the value of $f\\left(\\frac{\\pi}{4}\\right)$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3\\sqrt{2}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5\\sqrt{2}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6dc0ec2693fb",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\sin(2\\sin^{-1}x)$ then $\\frac{dy}{dx}=$..",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2-4x^2}{\\sqrt{1-x^2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2+4x^2}{\\sqrt{1-x^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2-4x^2}{\\sqrt{1+x^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2+4x^2}{\\sqrt{1+x^2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-872cfc5c1055",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\cot^{-1}\\left(\\frac{1+\\sin 5x}{\\cos 5x}\\right)$, then the value of $\\frac{dy}{dx}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{5}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9796d6df3eca",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The derivative of $\\log_{10}x$ with respect to $\\log_x10$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\log_{10}x^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-(\\log_{10}x)^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(\\log_x10)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x^2}{100}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-da699c4622b3",
+      "subtopic": "differentiation-of-parametric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $x=at^2-1$, where $a>0$ and $y=t^3+1$. If at $t=1$, $\\frac{d^2y}{dx^2}=\\frac{3}{16}$, then the value of $a$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9227017587bc",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x^m+y^m=k,(m\\ne 1)$ and $y''=\\frac{ax^b}{y^c}$ such that $a+b+c=0$, then the value of k is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$m$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-99453f47957d",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\lim_{x\\rightarrow 1}\\frac{x^3+ax^2+bx+c}{x^2-2x+1}=2026$ then the value of $a-c$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d0d1680bbbf3",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $3y^2-2xy-x=0$, then the value of $\\frac{dy}{dx}$ at $y=2$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{36}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{35}{36}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{25}{36}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{36}{25}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e67876b87de9",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)$ and $g(x)$ are inverse functions of each other and $f(x)=x+e^x$, then $g'(x)=$...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{1+e^{g(x)}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{e^{g(x)}}{1+e^{g(x)}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{1+g(x)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$e^{g(x)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-eb77e11e3ec2",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=\\sin^{-1}\\left(\\frac{25-x^2}{25+x^2}\\right)$, then $y'(1)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{5}{13}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{13}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f06953770316",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the function $f(x)={\\left(\\frac{5x-8}{8-3x}\\right)}^{\\frac{3}{2x-4}}$, for $x\\ne 2$ is continuous at $x=2$, then the value of $f(2)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e^6$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$e^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$e^{\\frac{3}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-31dd01d0c060",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\sin^{-1}(y\\cdot\\cos 2x)$ such that $\\frac{dy}{dx}=\\frac{2y\\cdot f(x)}{g(x)-\\cos y}$ then $\\{f(x){\\}}^2-\\{g(x){\\}}^2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\cos 4x$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sin 4x$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\cos 4x$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-371c7fa72099",
+      "subtopic": "limits-of-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\begin{cases} \\frac{1-\\sin^5x}{5\\cos^2x} & ,x<\\frac{\\pi}{2} \\\\ a & ,\\text{at }x=\\frac{\\pi}{2} \\\\ \\frac{b(1-\\sin x)}{8(\\pi-2x)^2} & ,x>\\frac{\\pi}{2} \\end{cases}$ is continuous at $x=\\frac{\\pi}{2}$, then ${\\left(\\frac{b}{a}\\right)}^{\\frac{5}{3}}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(4)^4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(64)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(32)^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(16)^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-40edc240f14a",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $g$ is a differentiable function of $x$ such that $g(x^5)=3x^7$, for $x\\ne 0$, $x\\in\\mathbb{R}$ then $g'(3125)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$125$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$210$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$105$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$441$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ac89474a4746",
+      "subtopic": "limits-of-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\lim_{x\\rightarrow\\frac{\\pi}{2}}\\frac{\\left[1-\\tan(\\frac{x}{2})](1-\\sin x\\right)}{[1+\\tan(\\frac{x}{2})](\\pi-2x)^3}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{32}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b381bac4a380",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $3f(x)-2f\\left(\\frac{1}{x}\\right)=x$ for $x\\ne 0$. Then the value of $f'(2)$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0be8be8297cb",
+      "subtopic": "limits-of-trigonometric-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\lim_{x\\rightarrow\\frac{\\pi}{4}}\\left[\\frac{4-(\\cos x+\\sin x)^4}{1-\\sin 2x}\\right]$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-18eca43813f5",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\sqrt{1+\\cos^2(x^2)}$, then $f'\\left(\\frac{\\sqrt{\\pi}}{2}\\right)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{\\pi}{6}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{\\pi}{4}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\sqrt{\\frac{\\pi}{6}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\sqrt{\\frac{\\pi}{4}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-36e2a45b69f4",
+      "subtopic": "methods-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x=\\frac{1-\\sqrt{y}}{1+\\sqrt{y}}$, then $\\frac{dy}{dx}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4(x-1)}{(x+1)^3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4(x+1)}{(x-1)^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\left(x-1\\right)}{(x+1)^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4(1-x)}{(x+1)^3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3c853912c182",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\log\\left(\\frac{1+x}{1-x}\\right)$ and $g(x)=\\left(\\frac{3x+x^3}{1+3x^2}\\right)$, then $\\frac{d}{dx}(f(g(x)))=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$f'(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$g'(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3g'(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3f'(x)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b4be48dfcfc3",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sqrt{1-x^6}+\\sqrt{1-y^6}=a^3(x^3-y^3)$, then $\\frac{dy}{dx}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x^2}{y^2}\\sqrt{\\frac{1-x^6}{1-y^6}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{y^2}{x^2}\\sqrt{\\frac{1-y^6}{1-x^6}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x^2}{y^2}\\sqrt{\\frac{1-y^6}{1-x^6}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b5ff159c7592",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\begin{cases} \\frac{x-e^x+\\cos 2x}{x^2}, & \\text{if }x\\ne 0 \\\\ k, & \\text{if }x=0 \\end{cases}$ is continuous at $x=0$, then the value of $k$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-5}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2453fa72fd76",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sqrt{y+x}+\\sqrt{y-x}=c$ and $\\frac{dy}{dx}=K-\\sqrt{\\frac{y^2}{x^2}-1}$ , then the value of $K$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-x}{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-y}{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x}{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{y}{x}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4867b2742dc4",
+      "subtopic": "differentiation-of-a-function-with-respect-to-another-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The derivative of $f(\\sin x)$ with respect to $g(\\sec x)$ at $x=\\frac{\\pi}{4}$, given that $f'\\left(\\frac{1}{\\sqrt{2}}\\right)=3$ and $g'(\\sqrt{2})=1$ is.....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5ff7b9d764ed",
+      "subtopic": "differentiation-of-logarithmic-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=(x^2+1)^{\\sin x}$ for $x>0$ such that $\\frac{dy}{dx}=y\\left[\\frac{2x\\sin x}{g(x)}+\\cos x\\cdot\\log[g(x)]\\right]$, then the function $\\frac{1}{g(x)}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increasing",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "strictly increasing.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decreasing",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "strictly decreasing",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e6cb4dc76984",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sec^{-1}\\left(\\frac{x^2+y^2}{x^2-y^2}\\right)=2a$ such that $y\\frac{dy}{dx}=x\\cdot f(a)$ then the value of $f\\left(\\frac{2\\pi}{3}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e7f67e85cb4a",
+      "subtopic": "limits-of-logarithmic-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\lim_{x\\rightarrow 0}\\left[\\frac{x\\cdot\\log(1+4x)}{{\\left(e^{4x}-1\\right)}^2}\\right]=\\cdots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{9}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-efed34e9de1c",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $[x]$ denotes the greatest integer less than or equal to x and $f(x)=[\\tan^2x]$, then which of the following is true ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\lim_{x\\rightarrow 0}f(x)$ does not exist",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$f(x)$ is continuous at $x=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$f(x)$ is not differentiable at $x=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$f'(0)=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-00e59269c598",
+      "subtopic": "differentiation-of-implicit-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sqrt{\\frac{x}{y}}+\\sqrt{\\frac{y}{x}}=6$, then $\\frac{dy}{dx}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x+17y}{17x-y}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-17y}{17x-y}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x-17y}{17x+y}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x+17y}{17x+y}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1345101d79d0",
+      "subtopic": "continuity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the function $f(x)$ defined by $f(x)=\\begin{cases} ax+1 & \\text{if }x\\le 3 \\\\ bx+3 & \\text{if }x>3 \\end{cases}$ is continuous at $x=3$, then $(a-b)=$ ..........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-26e1655ca8a7",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\lim_{n\\rightarrow\\infty}{\\left[\\frac{1}{1-n^2}+\\frac{2}{1-n^2}+\\ldots+\\frac{n}{1-n^2}\\right]}^3$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-8$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{8}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-36f682737b8f",
+      "subtopic": "differentiation-of-parametric-function",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x=4t^3+3,y=3t^4+4$ and $\\frac{\\frac{d^2x}{dy^2}}{{\\left(\\frac{dx}{dy}\\right)}^n}$ is constant then the value of $n$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-394e865fcde2",
+      "subtopic": "differentiation-of-parametric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $x=a\\sin^3t$ and $y=a\\cos^3t$, then the value of $\\frac{d^2y}{dx^2}$ at $t=\\frac{\\pi}{3}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-32}{27a}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-32}{3\\sqrt{3}a}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{32}{27a}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-32}{9a}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6056ffbf598a",
+      "subtopic": "differentiation-of-inverse-trigonometric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $y=\\cos^2\\left[\\cot^{-1}\\left(\\sqrt{\\frac{1-x}{1+x}}\\right)\\right]$ then $\\frac{dy}{dx}=$ ........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0211c91c93ac",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y^{1/n}+y^{-1/n}=2x$, then $(x^2-1)\\frac{d^2y}{dx^2}+x\\frac{dy}{dx}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$n^2y$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-n^2y$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$y$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-657d612158b8",
+      "subtopic": "successive-differentiation",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $y^2=a\\cos^2x+b\\sin^2x$ be such that $a+b=2024$ and $a>0,b>0$ follows $y^4+y^3y''=k$. If $\\lambda$ is the maximum possible value of $k$, then $\\lambda=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(506)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$506$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(1012)^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1012$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-70c134fbd996",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $y=f\\left(\\frac{2x-1}{x^2+1}\\right)$ and $f'(x)=\\sin x^2$, then $\\frac{dy}{dx}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin{\\left(\\frac{2x-1}{x^2+1}\\right)}^2\\left[\\frac{2+2x+x^2}{(x^2+1)^2}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sin{\\left(\\frac{2x-1}{x^2+1}\\right)}^2\\left[\\frac{2+2x-2x^2}{(x^2+1)^2}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sin{\\left(\\frac{2x-1}{x^2+1}\\right)}^2\\left[\\frac{2+2x-x^2}{(x^2+1)^2}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sin{\\left(\\frac{2x-1}{x^2+1}\\right)}^2\\left[\\frac{2+2x+2x^2}{(x^2+1)^2}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8a6ae5356416",
+      "subtopic": "limits-of-exponential-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\frac{10^x+7^x-14^x-5^x}{1-\\cos x}$, for $x\\ne 0$ and $f(0)=k$ is continuous at $x=0$, then the value of $k$ is _____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log 4\\;\\log\\frac{7}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log 4\\;\\log\\frac{5}{7}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\log\\frac{5}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log 2\\;\\log\\frac{5}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d404e5636251",
+      "subtopic": "differentiation-of-composite-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $h(x)=2g\\{3g[4g(5g(x))]\\}$ such that $g(0)=0$ and $g'(0)=2$ then $h'(0)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1920$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$120$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1900$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d9ff32af4f23",
+      "subtopic": "limits-of-algebric-function",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(9)=36$, $u(9)=9$, $f'(9)=12$, $u'(9)=4$, then $\\lim_{x\\rightarrow 9}\\frac{\\sqrt{f(x)}-2\\sqrt{u(x)}}{\\sqrt{x}-3}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Does not exist",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

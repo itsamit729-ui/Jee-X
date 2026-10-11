@@ -1,0 +1,56 @@
+{
+ "ref": "PYQ-PHY-6bf222f1f867",
+ "subject": "Physics",
+ "chapter": "Capacitance",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": "4.0",
+ "verdict": "verified",
+ "solution": "Concept: after connection, charge redistributes until both capacitors have the same potential; total charge is conserved.\nInitial charge on $P$: $Q_0 = C_P V_0 = (10\\times10^{-6}\\ \\mathrm{F})(6.0\\ \\mathrm{V}) = 60\\times10^{-6}\\ \\mathrm{C}$\nCommon potential: $V = \\dfrac{Q_0}{C_P + C_Q} = \\dfrac{60\\times10^{-6}\\ \\mathrm{C}}{30\\times10^{-6}\\ \\mathrm{F}} = 2.0\\ \\mathrm{V}$\nCharge on $Q$: $q_Q = C_Q V = (20\\times10^{-6}\\ \\mathrm{F})(2.0\\ \\mathrm{V}) = 40\\times10^{-6}\\ \\mathrm{C} = 4\\times10^{-5}\\ \\mathrm{C}$\nCheck: charge left on $P$ is $20\\ \\mu\\mathrm{C}$, and $20+40=60\\ \\mu\\mathrm{C}$ ✓\nSo $\\alpha = 4$\nAnswer: 4",
+ "final_answer": "4",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "4",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Concept: after connection, charge redistributes until both capacitors have the same potential; total charge is conserved.\nInitial charge on $P$: $Q_0 = C_P V_0 = (10\\times10^{-6}\\ \\mathrm{F})(6.0\\ \\mathrm{V}) = 60\\times10^{-6}\\ \\mathrm{C}$\nCommon potential: $V = \\dfrac{Q_0}{C_P + C_Q} = \\dfrac{60\\times10^{-6}\\ \\mathrm{C}}{30\\times10^{-6}\\ \\mathrm{F}} = 2.0\\ \\mathrm{V}$\nCharge on $Q$: $q_Q = C_Q V = (20\\times10^{-6}\\ \\mathrm{F})(2.0\\ \\mathrm{V}) = 40\\times10^{-6}\\ \\mathrm{C} = 4\\times10^{-5}\\ \\mathrm{C}$\nCheck: charge left on $P$ is $20\\ \\mu\\mathrm{C}$, and $20+40=60\\ \\mu\\mathrm{C}$ ✓\nSo $\\alpha = 4$\nAnswer: 4",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1077,
+   "cache_read": 555,
+   "output": 1090,
+   "thinking": 52,
+   "api_cost_usd": 0.030535,
+   "turns": 2,
+   "seconds": 12.9,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1122,
+   "cache_read": 942,
+   "output": 606,
+   "thinking": 78,
+   "api_cost_usd": 0.021292399999999996,
+   "turns": 2,
+   "seconds": 8.3,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T20:49:05+00:00"
+}

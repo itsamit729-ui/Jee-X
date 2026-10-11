@@ -1,0 +1,2557 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Electromagnetic Induction",
+    "slug": "electromagnetic-induction",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 19,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "motional-emf",
+      "name": "Motional EMF",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "magnetic-flux-faradays-and-lenzs-laws",
+      "name": "Magnetic flux faradays and lenzs laws",
+      "position": 2
+    },
+    {
+      "slug": "inductance-self-and-mutual",
+      "name": "Inductance self and mutual",
+      "position": 3
+    },
+    {
+      "slug": "motional-emf-and-eddy-current",
+      "name": "Motional emf and eddy current",
+      "position": 4
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-40a287ad9f0f",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The following figure represents two bulbs $B_1$ and $B_2$, resistor R and an inductor L. When the switch S is turned off, which of the following statement is true?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-40a287ad9f0f.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$B_1$ becomes off promptly but $B_2$ with some delay",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$B_2$ becomes off promptly but $B_1$ with some delay",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Both $B_1$ and $B_2$ becomes off with same delay",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Both $B_1$ and $B_2$ becomes off promptly",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-64d6a0fada4b",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A long rectangular conducting loop of width '$l$' mass '$m$' and resistance '$R$' is placed partly in a perpendicular magnetic field '$B$'. With what velocity should it be pushed downwards so that it may continue to fall without any acceleration? ($g$ = acceleration due to gravity)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-64d6a0fada4b.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{B^2l^2R^2}{mg}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{mgR}{B^2l^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{mgl}{B^2R^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{mgR^2}{Bl}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a629d57b96d5",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A square loop of area $25\\text{ cm}^2$ has a resistance of $10$ $\\Omega$. The loop is placed in uniform magnetic field of magnitude $40$ T. The plane of the loop is perpendicular to the magnetic field. The work done in pulling the loop out of the magnetic field slowly and uniformly in one second will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.5\\times 10^{-3}$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.0\\times 10^{-3}$ J",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.0\\times 10^{-4}$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5\\times 10^{-3}$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a34b4d102599",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A coil having 'n' turns and resistance 'R' is connected with a galvanometer of resistance '2R'. This combination is moved in time 't' from flux $\\varphi_1$ to $\\varphi_2$ Wb. The induced current in the circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{n(\\varphi_1-\\varphi_2)}{Rt}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{n(\\varphi_2-\\varphi_1)}{Rt}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{n(\\varphi_2-\\varphi_1)}{3Rt}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{n(\\varphi_2-\\varphi_1)}{2Rt}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ab5bd93331ff",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Alternating current of peak value $\\left(\\frac{2}{\\pi}\\right)$ A flows through the primary coil of a transformer. The coefficient of mutual inductance between primary and secondary coils is $1$ H. The peak em.f. induced in secondary coil is (Frequency of a. c. is $50$ Hz)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$50$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$100$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$200$ V",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-11f1a9b09d1a",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A conducting rod AB of length $l$ is rotated about point O which lies between point A and B in a uniform magnetic field $\\vec{B}$ directed into the paper. If length $AO=\\frac{l}{3}$, then $(V_A-V_B)$ is $\\{\\omega=$ angular velocity$\\}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5Bl^2\\omega}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{6Bl^2\\omega}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{Bl^2\\omega}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{Bl^2\\omega}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3e3f9eea4bdd",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two inductors, $L_1$ and $L_2$, are connected in parallel and time-varying current flows the combination. If $I_1$ and $I_2$ are the currents passing through the inductor $L_1$ and $L_2$ respectively, the ratio $\\frac{I_2}{I_1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{L_2}{L_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{L_1}{L_2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{L_1}{L_2^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{L_2}{L_1^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-450a14c48a22",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "By combining three inductances, $2$ H, $4$ H and $6$ H, the minimum value of effective inductance that can be obtained is (in H)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12/11$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$11/12$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5/12$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12/5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b2d586b6a663",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two conducting circular loops of radii $r$ and $2r$ are placed in the same plane with their centres coinciding. The mutual inductance $M$ between them is {same current is passing through both the coils} ($\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi\\mu_0r$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\pi r}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\pi r}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\pi r}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4bdd96fb7787",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A closed coil consists of $500$ turns on a rectangular frame of area $4.0$ cm${}^2$ and has a resistance of $50\\,\\Omega$. The coil is kept with its plane perpendicular to a uniform magnetic field of $0.2$ T. The amount of charge flowing through the coil if it is turned through $180^{\\circ}$ will be $1.6\\times 10^{-x}$ C. The Value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$19$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d1c423355dd8",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The coil of area $0.1$ m${}^2$ has $1000$ turns. It is placed in a magnetic field of strength $5\\times 10^{-4}$ T. The average e.m.f. induced in the coil, if rotated through $180^0$ in $0.1$ s is ($\\cos 0^{\\circ}=1,\\cos 180^{\\circ}=-1$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.5$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$ V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d2f9475a9592",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An induced current of $2$A flows through a coil. The resistance of the coil is $10\\,\\Omega$. What is the change in magnetic flux associated with a coil in $1$ ms ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\times 10^{-3}\\,wb$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\times 10^{-2}\\,wb$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$22\\times 10^{-2}\\,wb$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$22\\times 10^{-4}\\,wb$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4de0d1f75f69",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The current flowing through the inductor of self inductance 'L' is continuously increasing at constant rate. The variation of induced e.m.f. (e) versus $\\frac{dI}{dt}$ is shown graphically by figure",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-4de0d1f75f69.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "B",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "C",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "D",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a3a76354ee7e",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two coils P and Q have mutual inductance 'M' H. If the current in the coil P is $I=I_0\\sin\\omega t$, then the maximum value of e.m.f. induced in coil Q is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\omega}{MI_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{M\\omega}{I_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$M\\omega I_0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{MI_0}{\\omega}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-152b728e1820",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Spherical insulating ball and a spherical metallic ball of same size and mass are dropped from the same height. Choose the correct statement out of the following {Assume negligible air friction}",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Time taken by them to reach the earth's surface will be independent of the properties of their materials.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Insulating ball will reach the earth's surface earlier than the metal ball.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Both will reach the earth's surface simultaneously.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Metal ball will reach the earth's surface earlier than the insulating ball.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bddeb81631b2",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A conducting loop of radius $10/[\\pi]^{1/2}$ cm is placed perpendicular to a uniform magnetic field $0.5$ T. The magnetic field is decreased to zero in $0.5$ s at a steady rate. The induced emf in the circular loop at $0.25$ s is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1\\text{ mV}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10\\text{ mV}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$100\\text{ mV}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5\\text{ mV}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-36a3f36fef0e",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An air cored coil has a self inductance of $0.1$ H. A soft iron core of relative permeability $1000$ is introduced inside cored coil and number of turns reduced to ${\\left(\\frac{1}{10}\\right)}^{th}$. The value of self inductance now becomes",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$ H",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$10$ H",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-68c480a9232c",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A circular ring of diameter $20$ cm has a resistance of $0.01$ $\\Omega$. The charge that will flow through the ring, if it is turned from a position perpendicular to a uniform magnetic field of $2$T to a position parallel to the field is (in coulomb) ($\\because\\cos 0^{\\circ}=1$, $\\cos 90^{\\circ}=0$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\pi/2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-87e2c415590d",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A varying magnetic flux linking a coil is $\\Phi=xt^2$. If at time $t=3$ s, the e.m.f. induced is $9$V then the magnitude of $x$ is (in $\\text{Wb}/\\text{s}^2$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.5$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.66$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.33$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.75$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-929b8af4ffc1",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A coil of wire of radius $r$ has $600$ turns and a self-inductance of $108$ mH. The self inductance of a coil with same radius and $500$ turns is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$80$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$75$ mH",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$108$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$90$ mH",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4b44b9a94797",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the self inductance of a solenoid of length $10\\pi$ cm, area of cross-section $10^{-3}\\,\\text{m}^2$ and total number of turns $10^3$? ($\\mu_0=4\\pi\\times 10^{-7}$ SI unit)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$ mH",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4$ H",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$40$ H",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.4$ H",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-68fe4d903fb8",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A current $i=10\\sin(100\\pi t)$ A is passed in first coil, which induces a maximum e.m.f. $5\\pi$ V in second coil. The mutual inductance between the coils is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$15$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$ mH",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e7348058f52d",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A conductor of length $1$ m rotates vertically about one of its ends at angular velocity $5$ rad/s. If the horizontal component of earth's magnetic field is $0.2\\times 10^{-4}$ T, then the e.m.f. developed between the ends of the conductor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\,\\mu V$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$ mV",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$50\\,\\mu V$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$50$ mV",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bd1999646533",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The self induced e.m.f. of a coil is $25$ V. When the current in it is changed at uniform rate from $10$ A to $25$ A in $1$ s, the change in the energy of the inductance is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$437.5$ J",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$740$ J",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6375$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$540$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ff17ea1fa1de",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A square of side L metre lies in the XY plane in a region, where the magnetic field is $\\vec{B}=B_0\\,(2\\hat{i}+3\\hat{j}+4\\hat{k})$, where $B_0$ constant. The magnitude of flux passing through the square is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2B_0L^2$ Wb",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3B_0L^2$ Wb",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4B_0L^2$ Wb",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{29}\\,B_0L^2$ Wb",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a198ebbcbea5",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A bar magnet falls from a height 'h' through a metal pipe, its acceleration after coming out of pipe is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "less than $9.8\\text{ m/s}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "greater than $9.8\\text{ m/s}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "equal to $9.8\\text{ m/s}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "equal to 'h' $\\text{m/s}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a2111cdad81e",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A coil of 'n' turns and resistance $R\\,\\Omega$ is connected in series with a resistance $R/4$. The combination is moved for time 't' second through flux $\\Phi_1$ to $\\Phi_2$. The induced current in the circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4n(\\Phi_1-\\Phi_2)}{5RT}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5n^2(\\Phi_1-\\Phi_2)}{4RT}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2n(\\Phi_1-\\Phi_2)}{3RT}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3n(\\Phi_1-\\Phi_2)}{4RT}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d75b0dfab92e",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The coefficient of mutual induction is $3$H and induced e.m.f. across secondary is $4$ kV. Current in primary is reduced from $7$A to $2$A. The time required for the change of current is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.75\\times 10^{-3}$ s",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2.5\\times 10^{-3}$ s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4.5\\times 10^{-3}$ s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3.5\\times 10^{-3}$ s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-03df16338d33",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two solenoids A and B of equal number of turns have their lengths and radii in the same ratio $1:3$. The ratio of the self-inductance of solenoid A to that of B will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1:9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4725ccfbe30a",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two concentric circular coils having radii $r_1$ and $r_2$ ($r_2r_1$) are placed co-axially with centres coinciding. The mutual inductance of the arrangement is (Both coils have single turn, $\\mu_0$ = permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\pi r_2}{2r_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\pi r_1^2}{2r_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\pi r_1}{2r_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0r_2^2\\pi}{2r_1}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-165478537fa6",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two similar circular loops carry equal currents in the same direction. On moving coils further apart, the electric current will",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increase in both",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "decrease in both",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "remain unchanged",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "increase in one coil and decrease in second coil",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-85f8dc22d590",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A conducting rod AC of length $4L$ is rotated counter-clockwise about a point O in a uniform magnetic field $B$ directed into the paper. If $AO=L$ and $OC=3L$ then ($\\omega$ = angular speed)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-85f8dc22d590.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$V_A-V_O=\\frac{B\\omega L^2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$V_O-V_C=\\frac{7B\\omega L^2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$V_A-V_C=4B\\omega L^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$V_C-V_O=\\frac{7B\\omega L^2}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-24ca0833c3e9",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A rectangular wire loop of resistance $1.5\\,\\Omega$ placed in a region of uniform magnetic field of magnitude $0.3$ T directed normal to the loop. If the area of the loop decreases at a rate of $0.05$ $\\text{m}^2/s$ in this magnetic field, the heat produced in it is $x\\times 10^{-6}$ W. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$15$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$150$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-92a6d95b7277",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two coils $P$ and $Q$ are separated by some distance. When a current of $3A$ flows through coil $P$, a magnetic flux of $10^{-3}$ Wb passes through $Q$. No current is passed through $Q$. When no current passes through $P$ and a current of $2A$ passes through $Q$, the flux through $P$ is $x\\times 10^{-3}$ Wb. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6.67$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.667$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3.67$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.367$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-eab208eab5b9",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The inductance of a coil is proportional to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "its length",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the number of turns",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the resistance of coil",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "the square of the number of turns",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b4500bce0d11",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A metal rod of length 'L' completes the circuit as shown. The area of the circuit is perpendicular to magnetic field 'B'. Total resistance of the circuit is 'R'. The force needed to move the rod in the direction as shown with constant speed 'V' is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-b4500bce0d11.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\text{BVL}}{\\text{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\text{B}^2\\text{L}^2\\text{V}}{\\text{R}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\text{B}^2\\text{L}^2\\text{V}^2}{\\text{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\text{BLV}^2}{\\text{R}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-73eeb4888f85",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A graph of magnetic flux ($\\Phi$) versus current (I) is shown for four inductors A, B, C, D. The smallest value of self inductance is for inductor.",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-73eeb4888f85.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "B",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "D",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7ba8ed4b0b87",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A circular coil of radius 'r' is placed on another circular coil whose radius is 'R' and the current flowing through it is changing and their centers coincide. ($R\\gg r$). If both the coils are coplanar, then the mutual inductance between them is proportional to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{r}{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{R}{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{R^2}{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{r^2}{R}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e3c306ed5088",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the given circuit, if $dI/dt=-1~\\text{A/s}$ then the value of $V_{AB}$ at this instant will be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-e3c306ed5088.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$30\\text{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$20\\text{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10\\text{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15\\text{V}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-583415e316c2",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three coils of inductance, $L_1$ = 2 H, $L_2$ = 3 H and $L_3$ = 6 H are connected so that they are separated from each other. To obtain the effective inductance of $\\frac{18}{11}$ H between points A and B, out of the following figures, the correct one is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-583415e316c2.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$P$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$S$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$Q$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$R$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a6b650a50c4d",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two coils have self inductance $L_1$ and $L_2$. The current through them is increasing at constant rate. If the power dissipated in both the coils is same, then the ratio of energy stored in the coil having inductance $L_1$ to that in $L_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{L_1^2}{L_2^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{L_2^2}{L_1^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{L_1}{L_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{L_2}{L_1}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-111b01fe9878",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A straight line conductor of length 0.4 m is moved with a speed of $7.0\\text{ ms}^{-1}$ perpendicular to magnetic field of intensity $0.8\\text{ Wb m}^{-2}$. The induced e.m.f. across the conductor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\cdot 24$ V",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\cdot 80$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\cdot 20$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5\\cdot 60$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-29d20514ce65",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two planar concentric rings of metal wire having radii '$r_1$' and '$r_2$' (with $r_1>r_2$) are placed in air. The current 'I' is flowing through the coil of larger radius. The mutual inductance between the coils is given by ( $\\mu_0$ = permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\pi\\,r_1^2}{2\\,r_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\pi\\,r_2^2}{2\\,r_1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\pi\\,(r_1+r_2)^2}{2\\,r_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\pi\\,(r_1-r_2)^2}{2\\,r_2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f9be5c9e4ea3",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two coils having self-inductance $L_1=75$ mH and $L_2=48$ mH are coupled with each other. If the mutual inductance of the coils is 37.2 mH, then coefficient of coupling will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.58$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.60$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.62$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.64$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-30a3fb56f725",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the circuit shown, when the current '$i$' is $3\\text{A}$ and increasing at the rate of $1\\text{A/s}$ the measurement of the potential difference between A and B is $12~\\text{V}$. But when the same current $3\\text{A}$ is decreasing at the rate of $1\\text{A/s}$, the measured potential difference $V_{AB}$ between A and B is $6\\text{V}$. The value of 'R' in the circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-30a3fb56f725.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$3~\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8~\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9139c33c3c66",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two coils have a mutual inductance of $0.005~\\text{H}$. The current changes in the first coil according to equation $I=I_0\\sin\\omega t$, where $I_0=10~\\text{A}$ and $\\omega=60\\pi~\\text{rad s}^{-1}$. The maximum values of e.m.f. in the second coil in volt will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aa32675cf6dc",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic potential energy stored in a certain inductor is $49~\\text{mJ}$ when the current in the inductor is $70~\\text{mA}$. The inductance of the inductor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.20~\\text{H}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.0~\\text{H}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$20~\\text{H}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$200~\\text{H}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1a0f4ca3d967",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If current of 4 A produces magnetic flux of $3\\times 10^{-3}$ Wb through a coil of 400 turns, the energy stored in the coil will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.2$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.4$ J",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$24$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$240$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-89aa9e229841",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equivalent inductance between A and B is equal to",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-89aa9e229841.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$ H",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$ H",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{12}{25}$ H",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{5}$ H",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f624886f190b",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two coils A and B have 180 and 360 turns respectively. The current of 1A flows through both the coils. Due to current of 1A in coil A, flux per turn of $0.8\\times 10^{-3}$ Wb is linked with coil A. Due to current of 1A in coil B, flux per turn of $1\\times 10^{-3}$ Wb is linked with coil B. The self inductance of coil A is $L_A$ and the self inductance of coil B is $L_B$. The ratio $L_A$ to $L_B$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-774080714e36",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two different coils have self-inductance $3L$ and $L$. The current in both the coils is increased at the same constant rate. At certain instant of time, the power given to the two coils is same. At that time there was current and voltage induced in the two coils. At the same instant, the ratio of energy stored in the first coil to that in the second coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:9$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8cd5809fa6db",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Consider two coils in which a current in one coil carrying $6$ A causes the change in the flux in the second coil $12\\times 10^{-4}$ weber/turn. The second coil has $2000$ turns. The mutual inductance between the coils is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.2$ H",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.3$ H",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.4$ H",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2.4$ H",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fdfc92fa90dc",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Magnetic flux linked with the coil in weber is given by the equation $\\Phi=5t^2+6t+11$. The e.m.f. induced in the coil in the $5^{\\text{th}}$ second will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$51$ V",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$102$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$166$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3e789e9b4e61",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solenoid is connected to a battery so that a steady current flows through it. If an iron core is inserted into the solenoid, then the current in the coil",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "will not change",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "will increase",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "will decrease",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "may increase or decrease depending upon the direction of the current",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-868917f6af9f",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic energy stored in an inductor of inductance $4\\,\\text{H}$ carrying a current of $1.5$ A is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4.5$ mJ",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\,\\mu\\text{J}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$45\\,\\mu\\text{J}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4500$ mJ",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1356864cb591",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Whenever a magnet is moved either towards or away from a conducting coil, magnetic flux linked with the coil changes. This change is dependent on\n(a) the strength of the magnetic field.\n(b) the area of cross-section of the coil.\n(c) the resistance of the coil.\n(d) the number of turns in the coil.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "(a), (b), (c)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "(a), (c), (d)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "(a), (b), (d)",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "(b), (c), (d)",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6c919c79d4ea",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic flux through a coil of resistance '$R$' changes by an amount $\\Delta\\varphi$ in the time $\\Delta t$. The total quantity of induced current and charge is respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\Delta\\varphi}{\\Delta t}$ and $\\frac{\\Delta\\varphi}{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\Delta\\varphi}{\\Delta t}\\times R$ and $\\frac{\\Delta\\varphi}{\\Delta t}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\Delta\\varphi}{R\\Delta t}$ and $\\frac{\\Delta\\varphi}{R}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{R\\Delta t}{\\Delta\\varphi}$ and $R\\Delta\\varphi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-329bb75d9407",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two conducting circular loops of radii $r_1$ and $r_2$ are placed in the same plane with their centres coinciding. If $r_1r_2$, then the mutual inductance $M$ between them is proportional to [$I_1=$ current flowing through coil 1 and $I_2=$ current flowing through coil 2]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{r_1}{r_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{r_1^2}{r_2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{r_2^2}{r_1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{r_2}{r_1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9086a1f7d4a0",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two coils of self inductance, $2$ mH and $8$ mH are placed so closed together that the effective flux in one coil is completely linked with the other. The mutual inductance between these coils is,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$16$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$ mH",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e6b17fa0158d",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two inductors, $L_1$ and $L_2$ are connected in parallel and a time varying current flows as shown in the figure. The ratio of currents $\\frac{I_2}{I_1}$ at any time, it is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-e6b17fa0158d.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{L_2}{L_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{L_1}{L_2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{L_1}{(L_1+L_2)^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{L_2}{(L_1+L_2)^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-85936893a1d0",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A coil of effective area $3$ m${}^2$ is placed at right angles to a magnetic field of induction $0.05$ Wb/m${}^2$. If the field is decreased to $20\\%$ of its original value in $10$ second, the e.m.f. induced in the coil will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$15$ mV",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12$ mV",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$10$ mV",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$ mV",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dd7f43d04f1e",
+      "subtopic": "inductance-self-and-mutual",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The self inductance of an air-core inductor (solenoid) is $0.03$ mH. By introducing an iron core into inductor the self-inductance increases to $30$ mH. The relative permeability of the core used is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-359cc1b2179b",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An aeroplane having a wing span of 30 m flies due north with the speed of 170 m/s. Magnetic field $B=3.6\\times 10^{-5}$ T. The potential difference between the tips of the wings will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$136.4$ mV",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$183.6$ mV",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$272.8$ mV",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$367.2$ mV",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d04c7a223dc1",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A circular disc of radius 20 cm is placed in uniform magnetic field of induction $\\frac{7}{22}~\\text{Wb/m}^2$ in such a way that its axis makes an angle of $60^{\\circ}$ with $\\vec{B}$. The magnetic flux linked with the disc is $(\\cos 60^{\\circ}=0.5)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.01$ Wb",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.02$ Wb",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.06$ Wb",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.08$ Wb",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-16bfa41f37f3",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A bar magnet falls from a height through a metal pipe. Its acceleration will be ($g$ = acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "less than $g$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "greater than $g$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "equal to $g$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-68ca33b9764b",
+      "subtopic": "magnetic-flux-faradays-and-lenzs-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A coil having effective area 'A' is held with its plane normal to a magnetic field of induction 'B'. The magnetic induction is quickly reduced to $25\\%$ of its initial value in $2$ second. Then e.m.f. induced across the coil will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{AB}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{AB}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3AB}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3AB}{8}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d4bc46508975",
+      "subtopic": "motional-emf-and-eddy-current",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A long metal rod of length 'L' completes the circuit. The area of the coil is perpendicular to magnetic field 'B'. Total resistance of the circuit is 'R'. The force needed to move the rod in the direction as shown with constant speed 'V' is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/electromagnetic-induction/PYQ-PHY-d4bc46508975.png",
+        "alt": "Figure for this Electromagnetic Induction question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{BL^2V^2}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{BL^2V}{4R}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{B^2VL^2}{R}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{BLV}{R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

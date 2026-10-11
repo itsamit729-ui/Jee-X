@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-fb6b969c0bdd",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "The ether is benzyl phenyl ether, $\\mathrm{C_6H_5{-}O{-}CH_2{-}C_6H_5}$.\nStep 1: HI protonates the ether oxygen to give $\\mathrm{C_6H_5{-}\\overset{+}{O}H{-}CH_2C_6H_5}$.\nStep 2: The $\\mathrm{C_6H_5{-}O}$ bond has partial double-bond character because the O lone pair is in resonance with the ring, and the carbon is $sp^2$. So $\\mathrm{I^-}$ cannot attack the aryl carbon, and this bond is not cleaved.\nStep 3: The $\\mathrm{O{-}CH_2}$ bond breaks instead. Losing phenol leaves a resonance-stabilised benzyl carbocation (the reaction may also go by $S_N2$ at the $\\mathrm{CH_2}$ carbon).\nStep 4: $\\mathrm{I^-}$ attacks the benzylic carbon:\n$$\\mathrm{C_6H_5OCH_2C_6H_5 + HI \\longrightarrow C_6H_5OH + C_6H_5CH_2I}$$\nStep 5: The products are phenol and benzyl iodide, not benzyl alcohol and iodobenzene. So Statement I is false.\nStep 6: The bond that breaks is the $\\mathrm{{-}O{-}CH_2{-}}$ bond. So Statement II is true.\nAnswer: (D)",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "The ether is benzyl phenyl ether, $\\mathrm{C_6H_5{-}O{-}CH_2{-}C_6H_5}$.\nStep 1: HI protonates the ether oxygen to give $\\mathrm{C_6H_5{-}\\overset{+}{O}H{-}CH_2C_6H_5}$.\nStep 2: The $\\mathrm{C_6H_5{-}O}$ bond has partial double-bond character because the O lone pair is in resonance with the ring, and the carbon is $sp^2$. So $\\mathrm{I^-}$ cannot attack the aryl carbon, and this bond is not cleaved.\nStep 3: The $\\mathrm{O{-}CH_2}$ bond breaks instead. Losing phenol leaves a resonance-stabilised benzyl carbocation (the reaction may also go by $S_N2$ at the $\\mathrm{CH_2}$ carbon).\nStep 4: $\\mathrm{I^-}$ attacks the benzylic carbon:\n$$\\mathrm{C_6H_5OCH_2C_6H_5 + HI \\longrightarrow C_6H_5OH + C_6H_5CH_2I}$$\nStep 5: The products are phenol and benzyl iodide, not benzyl alcohol and iodobenzene. So Statement I is false.\nStep 6: The bond that breaks is the $\\mathrm{{-}O{-}CH_2{-}}$ bond. So Statement II is true.\nAnswer: (D)",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1209,
+   "cache_read": 555,
+   "output": 660,
+   "thinking": 53,
+   "api_cost_usd": 0.022990999999999998,
+   "turns": 2,
+   "seconds": 10.5,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1291,
+   "cache_read": 1199,
+   "output": 500,
+   "thinking": 72,
+   "api_cost_usd": 0.020575799999999998,
+   "turns": 2,
+   "seconds": 10.1,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:25:49+00:00"
+}

@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-PHY-0ecc7bb0f8f1",
+ "subject": "PHY",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "C",
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "C",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Two masses joined by a spring on a smooth surface oscillate at an angular frequency set by the spring constant and the reduced mass.\nFrom the figure: $k = 150\\ \\text{N/m}$, $m_1 = 1\\ \\text{kg}$ and $m_2 = 200\\ \\text{g} = 0.2\\ \\text{kg}$.\nKey concept: there is no external horizontal force, so the centre of mass stays at rest. The system behaves like a single body of reduced mass $\\mu$ on the spring, with $\\omega = \\sqrt{k/\\mu}$.\nReduced mass: $\\mu = \\dfrac{m_1 m_2}{m_1+m_2} = \\dfrac{(1\\ \\text{kg})(0.2\\ \\text{kg})}{1.2\\ \\text{kg}} = \\dfrac{1}{6}\\ \\text{kg}$\nSubstitute: $\\omega = \\sqrt{\\dfrac{150\\ \\text{N/m}}{1/6\\ \\text{kg}}} = \\sqrt{900}\\ \\text{s}^{-1}$\nSo $\\omega = 30\\ \\text{rad/s}$.\nAnswer: (C) 30",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 4,
+   "cache_create": 792,
+   "cache_read": 3686,
+   "output": 1042,
+   "thinking": 472,
+   "api_cost_usd": 0.027929199999999998,
+   "turns": 3,
+   "seconds": 12.0,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 4,
+   "cache_create": 1224,
+   "cache_read": 4128,
+   "output": 603,
+   "thinking": 416,
+   "api_cost_usd": 0.0226936,
+   "turns": 3,
+   "seconds": 10.1,
+   "error": false
+  }
+ ]
+}

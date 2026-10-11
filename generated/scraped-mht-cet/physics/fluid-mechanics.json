@@ -1,0 +1,3029 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Mechanical Properties of Fluids",
+    "slug": "fluid-mechanics",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 8,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "viscosity-and-terminal-velocity",
+      "name": "Viscosity and Terminal Velocity",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "surface-tension",
+      "name": "Surface tension",
+      "position": 2
+    },
+    {
+      "slug": "capillary-rise",
+      "name": "Capillary rise",
+      "position": 3
+    },
+    {
+      "slug": "terminal-velocity",
+      "name": "Terminal velocity",
+      "position": 4
+    },
+    {
+      "slug": "hydraulic-lift-and-pascal-law",
+      "name": "Hydraulic lift and pascal law",
+      "position": 5
+    },
+    {
+      "slug": "density-and-relative-density-or-specific-gravity",
+      "name": "Density and relative density or specific gravity",
+      "position": 6
+    },
+    {
+      "slug": "excess-pressure",
+      "name": "Excess pressure",
+      "position": 7
+    },
+    {
+      "slug": "variation-of-pressure-with-height",
+      "name": "Variation of pressure with height",
+      "position": 8
+    },
+    {
+      "slug": "speed-of-efflux",
+      "name": "Speed of efflux",
+      "position": 9
+    },
+    {
+      "slug": "archimedes-principle-and-buoyant-force",
+      "name": "Archimedes principle and buoyant force",
+      "position": 10
+    },
+    {
+      "slug": "reynolds-number",
+      "name": "Reynolds number",
+      "position": 11
+    },
+    {
+      "slug": "equation-of-continuity",
+      "name": "Equation of continuity",
+      "position": 12
+    },
+    {
+      "slug": "energy-of-liquid-element",
+      "name": "Energy of liquid element",
+      "position": 13
+    },
+    {
+      "slug": "bernoullis-equation",
+      "name": "Bernoullis equation",
+      "position": 14
+    },
+    {
+      "slug": "force-of-cohesion-and-force-of-adhesion",
+      "name": "Force of cohesion and force of adhesion",
+      "position": 15
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-737d7a05d55f",
+      "subtopic": "archimedes-principle-and-buoyant-force",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A vessel contains oil (density $=0.8\\text{ gm}/\\text{cm}^3$) over mercury (density $=13.6\\text{ gm}/\\text{cm}^3$). A homogeneous sphere floats with half of its volume immersed in mercury and the other half in oil. The density of the material of the sphere in $\\text{gm}/\\text{cm}^3$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/fluid-mechanics/PYQ-PHY-737d7a05d55f.png",
+        "alt": "Figure for this Mechanical Properties of Fluids question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$12.8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7.2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6.4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3.3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8c93ae71468f",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A spherical ball of radius $1$ mm and density $10.5$ g/cc is dropped in glycerine of coefficient of viscosity $9.8$ poise and density $1.5$ g/cc. Viscous force on the ball when it attains constant velocity is $3696\\times 10^{-x}$ N. The value of $x$ is\n(Given, $g=9.8\\text{ m}/\\text{s}^2$ and $\\pi=\\frac{22}{7}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d531421759f7",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two rain drops of same radius '$r$' falling with same terminal velocity '$V$' merge and form bigger drop of radius '$R$'. The terminal velocity of big drop is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{VR^2}{r^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2VR}{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{VR}{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$Vr^2/R^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5b646d4ab297",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A liquid drop having surface energy E is sprayed into $512$ droplets of the same size. Then the final surface energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4E$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8E$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2E$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$E$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a54f494844c9",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Due to surface tension, the excess pressure inside a smaller drop is $9$ units. If $27$ smaller drops combine then excess pressure inside the bigger drop is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$ units",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$9$ units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$18$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b3f9de1fdc76",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a capillary tube of radius 'R', a straight thin metal wire of radius 'r' is inserted symmetrically and one end of the combination is dipped vertically in water such that lower end of the capillary and thin wire are at same level. If 'T' is the surface tension of water and '$\\rho$' is the density of water then the rise of water in the capillary is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{T}{(R-r)\\rho g}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2T}{(R-r)\\rho g}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4T}{(R+r)\\rho g}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{T}{(R+r)\\rho g}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-05e082983a1c",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A rectangular film of liquid is expanded from ($6$ cm $\\times 5$ cm) to ($8$ cm $\\times 9$ cm). If the work done is $4\\times 10^{-4}$ J, the surface tension of the liquid is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.04\\,\\frac{N}{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.05\\,\\frac{N}{m}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.06\\,\\frac{N}{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.07\\,\\frac{N}{m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5c79491cd590",
+      "subtopic": "hydraulic-lift-and-pascal-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a hydraulic press, the small cylinder has a diameter of $d_1$ cm, while the large cylinder has a diameter of $d_2$ cm. If a force $F_1$ is applied to a piston of small cylinder, then the force on the piston of large cylinder $F_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{d_1^2}{d_2^2}\\frac{1}{F_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{d_1^2}{d_2^2}F_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{d_2^2}{d_1^2}\\frac{1}{F_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{d_2^2}{d_1^2}F_1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e4240c2ea3cd",
+      "subtopic": "archimedes-principle-and-buoyant-force",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A vessel contains oil (density$=0.6$ g/cm${}^3$) over mercury (density$=13.6$ g/cm${}^3$). A homogeneous sphere floats with half its volume immersed in mercury and the remaining half in oil. The density of the material of the sphere in g/cm${}^3$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6.8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6.3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7.1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7.2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-35fd1eada08a",
+      "subtopic": "speed-of-efflux",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A water tank of height ${}'h'$ has a hole at the bottom. It is completely filled with water. The total pressure at the bottom is $4H$ and atmospheric pressure is $H$. The velocity of water flowing out of the hole is ($\\rho$ = density of water)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{6H}{\\rho}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "${\\left(\\frac{H}{\\rho}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${\\left(\\frac{3H}{\\rho}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\frac{5H}{\\rho}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-413380a8c921",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The height of the liquid column raised in a capillary tube of certain radius when dipped in liquid $A$ vertically is $5$ cm. If the same tube is dipped in similar way in another liquid $B$ of surface tension and density double the values of liquid $A$, the height of liquid column raised in liquid $B$ is (Assume that angle of contact for both the liquids is almost same)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.20$ m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.10$ m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.05$ m",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.50$ m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-824eafb81bbb",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "${}'n'$ small drops of water having same size fall through air with constant velocity $4$ cm/s. They coalesce to form a big drop. The terminal velocity of the big drop is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2n^{2/3}\\,cm/s$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12n^{2/3}\\,cm/s$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4n^{2/3}\\,cm/s$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8n^{2/3}\\,cm/s$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0481a31219b1",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The work done in splitting a water drop of radius 'R' into 64 droplets is (T is the surface tension of water)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8\\pi R^2T$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12\\pi R^2T$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4\\pi R^2T$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16\\pi R^2T$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-72b8f337ddb8",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two small drops of liquid of same radius coalesce to form a big drop. The ratio of the total surface energies after and before the change is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2^{-1/3}:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-945278c21aff",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three liquids have same surface tension and have densities $\\rho_1,\\rho_2$ and $\\rho_3$ $(\\rho_1>\\rho_2>\\rho_3)$. In three identical capillaries rise of liquid is same. The corresponding angles of contact $\\theta_1,\\theta_2$ and $\\theta_3$ are related as",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\theta_1>\\theta_2>\\theta_3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\theta_1<\\theta_2<\\theta_3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\theta_1=\\theta_2=\\theta_3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\theta_1>\\theta_2<\\theta_3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2022d552fd11",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Determine the ratio of surface energy of $1$ large drop to $1$ small drop, if $1000$ small drops combined to form $1$ large drop.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100:1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$10:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1000:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4875b1215406",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A spherical drop of liquid splits into $1000$ identical spherical drops. If $u_i$ is the surface energy of the original drop and $u_f$ is the total surface energy of the resulting drops, the (ignoring evaporation). $u_f/u_i=(10/x)$. Then value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d5a9ebac28a3",
+      "subtopic": "equation-of-continuity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The surface of water in a water tank of cross-section area $750$ cm${}^2$ on the top of a house is $h$ m above the tap level. The speed of water coming out through the tap of cross-section area $500$ mm${}^2$ is $30$ cm/s. At that instant, $dh/dt$ is $y\\times 10^{-3}$ m/s. The value of $y$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7bc570b2d19c",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "When one end of a capillary tube is dipped in water, water rises to a height h. The upward force of $105$ dyne due to surface tension is balanced by the force due to weight of water column. The inner circumference of the capillary is (surface tension of water = $7\\times 10^{-2}$ N/m)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.5$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.5$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8ed52398627c",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two solid spheres of same material but of mass M and 8M fall simultaneously on a viscous liquid and their terminal velocities are V and nV, then the value of n is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$16$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-95f8f22c4051",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "When a big drop of water is formed from n small drops of water, the energy loss is 3E, where E is the energy of the big drop. If R is the radius of big drop and r is the radius of the smaller drop then number of smaller drops n is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4R}{r^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4R}{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2R^2}{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4R^2}{r^2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3509c35c9d88",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the radius of the biggest aluminium coin of thickness $t$ and density $\\rho$, which will be able to float on the water surface of surface tension $T$? ($g$ = acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4T}{3\\rho gt}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4T}{\\rho gt}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2T}{\\rho gt}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{T}{\\rho gt}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5708f950d17b",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The excess pressure inside a spherical drop of water is four times that of another drop. Their respective mass ratio is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:16$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:64$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b3926279d776",
+      "subtopic": "variation-of-pressure-with-height",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "When a large bubble rises from bottom of a water lake to its surface, then its radius doubles. If the atmospheric pressure is equal to the pressure of height $H$ of a certain water column then the depth of lake will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2H$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$H$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7H$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4H$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9a8594dc9e84",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two spherical rain drops reach the surface of the earth with terminal velocities having ratio $16:9$. The ratio of their surface area is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$64:27$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$16:9$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$9:16$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a4c50982c026",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Water rises up to a height $h$ in a capillary tube on the surface of the earth. The value of $h$ will increase, if the experimental set up is kept in ($g$ = acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "a lift going upward with a certain acceleration",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "accelerating train",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a satellite rotating close to earth",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "a lift going down with acceleration less than '$g$'",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d56c4bde8411",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A drop of some liquid of volume $0.04\\,\\text{cm}^3$ is placed on the surface of the glass plate. Then another glass plate is placed on it such that the liquid forms a thin layer of area $20\\,\\text{cm}^2$ between the surfaces. To separate the plates a force of $16\\times 10^5$ dyne has to be applied normal to the surfaces.\nThe surface tension of the liquid in dyne/cm is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$60$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$70$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$80$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$90$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-66a443bb0bcf",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A frame made up of metallic wire enclosing a surface area A is covered with a soap film. If the area of the frame of metallic wire is reduced by 25% the energy of the soap film will be changed by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$75\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$50\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$25\\%$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9fef4a95914e",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The excess pressure inside a spherical drop of water is four times that of another drop. Then, their respective mass ratio is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:16$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:64$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3e7ed46ec74f",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The excess pressure inside the first soap bubble of radius $R_1$ is three times that inside the second soap bubble of radius $R_2$. The ratio of volumes of the first bubble to second bubble is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:27$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1:9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-449999edc458",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Water rises to a height $3$ cm in a capillary tube. If cross-sectional area of capillary tube is reduced to $1/3^{rd}$ of its initial area then water will rise to a height of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\sqrt{3}$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-89a0fd519e55",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A soap bubble of radius R is blown. After heating the solution, a second bubble of radius 2R is blown. The work required to blow the second bubble in comparison to that required for the first bubble is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "slightly less than $4$ times",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "exactly double",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "slightly less than double",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "slightly more than $4$ times",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-08610f4e90c3",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Three liquids have same surface tension and densities $\\rho_1$, $\\rho_2$ and $\\rho_3$ ($\\rho_1<\\rho_2<\\rho_3$). In three identical capillaries rise of liquid is same. The corresponding angle of contact $\\theta_1$, $\\theta_2$ and $\\theta_3$ are related as",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\theta_1<\\theta_2<\\theta_3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\theta_1>\\theta_2>\\theta_3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\theta_1=\\theta_2=\\theta_3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\theta_1>\\theta_2<\\theta_3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-544ca50baf86",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A square frame of each side L is dipped in a soap solution and taken out, the force acting on the film formed is ( T = surface tension of soap solution)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\,TL$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8\\,TL$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$12\\,TL$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16\\,TL$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b2aede898a4d",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The excess pressure inside the first soap bubble of radius $R_1$ is three times that inside the second soap bubble of radius $R_2$. The ratio of volumes of the first to second bubble is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:27$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1:18$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-464f6ff3d858",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A $20$ cm long capillary is dipped vertically in water. Water rises to $8$ cm. If the arrangement is put in a freely falling elevator, the length of water column in capillary tube will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8~\\text{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10~\\text{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4~\\text{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20~\\text{cm}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ec9d8ddcf186",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If terminal speed of a sphere of gold (density = $19.5~\\text{kg/m}^3$) is $0.2$ m/s in viscous liquid (density = $1.5~\\text{kg/m}^3$), find the terminal speed of a sphere of silver (density = $10.5~\\text{kg/m}^3$) of the same size in the same liquid.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.4~\\text{m/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.133~\\text{m/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.1~\\text{m/s}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.2~\\text{m/s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f050e1b10038",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A water drop is divided into 8 equal droplets. The pressure difference between the inner and outer side of the big drop will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "same as for smaller droplet",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "half of that for smaller droplet",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "${\\left(\\frac{1}{4}\\right)}^{th}$ of that for smaller droplet",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "twice that for smaller droplet",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0dd26cfa1154",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A capillary tube is taken from the earth to the surface of the moon. The rise of the liquid column on the moon (acceleration due to gravity on earth is $6$ times that of the moon) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$ times that of earth's surface",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{6}$ that on the earth's surface",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "equal to that on the earth's surface",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-219bcae2c80f",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two water drops each of radius $r$ coalesce to form a big drop. If $T$ is the surface tension, the surface energy released in this process is $4\\pi r^2Tx$. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(2-2^{2/3}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\left(2-2^{1/3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(1+\\sqrt{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\sqrt{2}-1\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2348dc24740f",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The velocity of a small ball of mass $M$ and density $d$ when dropped in a container filled with glycerine becomes constant after some time. If density of glycerine is $\\frac{d}{2}$ then the viscous force acting on the ball will be ($g$=acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$Mg$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3Mg}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2Mg$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{Mg}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2aca936095cf",
+      "subtopic": "bernoullis-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A closed pipe containing liquid showed a pressure $P_1$ by gauge. When the valve was opened, pressure was reduced to $P_2$. The speed of water flowing out of the pipe is ($\\rho$=density of water)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left[\\frac{\\left(P_1-P_2\\right)}{\\rho}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${\\left[\\frac{2(P_1-P_2)}{\\rho}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "${\\left[\\frac{\\left(P_2-P_1\\right)}{\\rho}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left[\\frac{2(P_2-P_1)}{\\rho}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2ddd58f22975",
+      "subtopic": "force-of-cohesion-and-force-of-adhesion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A liquid is at rest in a container. In a sphere of influence, the liquid molecule at its centre is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "attracted by other molecules in the sphere of influence.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "attracted by other molecules outside sphere of influence.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "repelled by other molecules outside the sphere of influence.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "repelled by other molecules in the sphere of influence.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-96324b889a3d",
+      "subtopic": "equation-of-continuity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Water flows through a horizontal pipe at a speed 'V'. Internal diameter of the pipe is 'd'. If the water is emerging at a speed '$V_1$' then the diameter of the nozzle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{d}\\sqrt{\\frac{\\text{V}}{\\text{V}_1}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\text{d}\\sqrt{\\frac{\\text{V}_1}{\\text{V}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\text{dV}}{\\text{V}_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\text{dV}_1}{\\text{V}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5991046b8c04",
+      "subtopic": "bernoullis-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A horizontal pipe carries water in a streamline flow. At point along the pipe, where the cross-sectional area is $A_1$, the velocity of water is $V_1$ and the pressure is $P_1$. What is the pressure of water at another point where the cross-sectional area is $A_2$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$P_1-\\frac{\\rho V_2^2}{2A_1^2}(A_2^2-A_1^2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$P_1+\\frac{\\rho V_1^2}{2A_2^2}(A_2^2-A_1^2)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$P_1\\rho V_1^2(A_1^2-A_2^2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$P/\\rho V_1^2A_2^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6ea11afbe686",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Under isothermal condition, two soap bubbles of radii $r_1$ and $r_2$ combine to form a single soap bubble of radius R. The surface tension of the soap solution is (P = outside pressure)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{P(R^3-r_1^3-r_2^3)}{4(r_1^2+r_2^2-R^2)}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{P(R^3+r_1^3+r_2^3)}{2(r_1^2-r_2^2+R^2)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{P(r_1^3-r_2^3-R^3)}{\\left(R^2+r^2+r^2\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{P(R^3-r_1^3+r_2^3)}{2(r_1^2+r_2^2-R^2)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7dc03b64232a",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "One thousand small water drops of equal radii combine to form a big drop. The ratio of final surface energy to the total initial surface energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:10$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1:100$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:1000$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-14c126c7acd3",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The excess pressure inside a spherical water drop A is four times that of another water drop B. Then, the ratio of the mass of water drop A to that of drop B is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:16$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:32$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:64$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b36f7ec7e604",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a capillary tube of area of cross-section '$a$' water rises to height '$h$'. To what height will water rise in a capillary tube of area of cross-section $4a$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{h}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{h}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2h$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4h$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b5f0b9e3942b",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A soap bubble of radius $\\frac{1}{\\sqrt{\\pi}}$ cm is expanded to radius $\\frac{3}{\\sqrt{\\pi}}$ cm. Surface tension of soap solution is 25 dyne/cm. The work done during expansion in erg is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$800$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1200$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1600$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2400$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4783f5ce710e",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "When a capillary tube of radius 'r' is immersed in water, rise of water is upto height 'h'. The mass of water in capillary tube is 'm'. When another capillary tube of radius 'xr' is immersed in water, the mass of water that will rise in this tube is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\cdot m$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{m}{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2m$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(x+1)m$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-70634fee37b6",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two soap bubbles, A and B, have radii in the ratio $3:2$. The excess pressure inside the bubble A to that of B is in the ratio",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4:9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b2f5192edf40",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The excess pressure inside the first soap bubble is three times that inside the second soap bubble. The ratio of the volume of the first soap bubble to the volume of the second soap bubble is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:27$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-969933448166",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A spherical object is falling under gravity through a viscous fluid. The sphere attains the terminal velocity when",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "viscous force is zero.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "buoyant force is equal to force due to gravity",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "viscous force plus force of gravity becomes equal to buoyant force.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "buoyant force plus viscous force becomes equal to force due to gravity.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bb8bfb6bd42a",
+      "subtopic": "hydraulic-lift-and-pascal-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A piston of cross-sectional area $2.5\\times 10^{-2}~\\text{m}^2$ is used in a hydraulic lift to exert a force of $250~\\text{N}$ on water. The cross-sectional area of the other piston which supports a car of mass $3000~\\text{kg}$ is ($g=9.8~\\text{m/s}^2$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.96~\\text{m}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.94~\\text{m}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3.92~\\text{m}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5.88~\\text{m}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bc12f9c7b96f",
+      "subtopic": "variation-of-pressure-with-height",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The pressure at half the depth of a lake is equal to two-third pressure at the bottom of the lake. So the depth 'h' of the lake is ($\\rho$ = density of water in the lake, $g$ = acceleration due to gravity, $P_0$ = atmospheric pressure).",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2P_0}{\\rho g}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{P_0}{\\rho g}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2P_0}{3\\rho g}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{P_0}{2\\rho g}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-68041bd8ad9e",
+      "subtopic": "energy-of-liquid-element",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An incompressible fluid (ideal fluid) is flowing through non uniform cross-sectional tube PQ as shown in the figure from end P to end Q. If $K_P$ and $K_Q$ are the kinetic energy per unit volume of the fluid at end P and end Q respectively, then",
+      "image": {
+        "url": "/question-images/mht-cet/physics/fluid-mechanics/PYQ-PHY-68041bd8ad9e.png",
+        "alt": "Figure for this Mechanical Properties of Fluids question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$K_P=\\frac{1}{2}K_Q$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$K_P=K_Q$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$K_P<K_Q$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$K_P>K_Q$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-84c294bf88bd",
+      "subtopic": "reynolds-number",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In case of fluid flowing on horizontal surface the flow of fluid becomes unsteady when Reynolds number (Rn) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "less than 499",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "between 500 - 999",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "between 1000 - 1999",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "greater than 2000",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b71c6b748800",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the shape of the liquid surface is curved, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the pressure on convex side is equal to atmosphereic pressure.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the pressure on the convex side is equal to pressure on concave side.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the pressure on the concave side is greater than that on the convex side.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "the pressure on the concave side is lesser than that on the convex side.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-15aa8424be43",
+      "subtopic": "equation-of-continuity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An in-compressible fluid flows steadily through a horizontal cylindrical pipe. The pipe has radius '$3R$' at point A and '$1.5R$' at point B, further along the flow direction at the same level. If the velocity at point A is '$v$', then that at point B is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$v$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2v$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3v$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4v$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2d1ee35636ba",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The pressures inside two soap bubbles A and B are $1.02$ atmosphere and $1.04$ atmosphere respectively. The ratio of volume of bubble A to that of bubble B is (outside pressure $=1$ atmosphere)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f489868e62d6",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "One large soap bubble of diameter 'D' breaks into $64$ bubbles having surface tension 'T'. The change in surface energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi TD^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\pi TD^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6\\pi TD^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8\\pi TD^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3da5c2454491",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In most liquids, with rise in temperature surface tension of liquid",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "decreases",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "remains unchanged",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "first decreases and then increases",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a515bb620e30",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A metal wire of length 'L' and density 'd' floats horizontally on the free surface of water. The maximum radius of the wire does not sink in water is\n[ $T$ = surface tension of water , $g$ = gravitational acceleration]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{2dg}{\\pi T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{2T}{\\pi dg}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{\\pi dg}{2T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{T}{\\pi dg}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cc35339d9883",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The energy needed for breaking a liquid drop of radius 'R' into 'n' droplets each of radius 'r' is\n[ $T$ = surface tension of the liquid]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\pi TR^2\\left[\\frac{R}{r}-1\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4\\pi TR\\left[\\frac{R}{r}-1\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\pi T\\left[\\frac{R^2}{r^2}-1\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4\\pi T\\left[1+\\frac{R^3}{r}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0a9263f712ed",
+      "subtopic": "density-and-relative-density-or-specific-gravity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Under isothermal conditions, a single drop of radius $R$ is formed from two mercury drops of radii $R_1$ and $R_2$. After combination, the relation between $R$, $R_1$ and $R_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$R=\\frac{R_1+R_2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$R^3=R_1^3+R_2^3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$R^2=R_1^2+R_2^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$R=R_1+R_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3363bd9e2048",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A metal wire of length '$L$' and density '$d$' rests horizontally on the free surface of water. The maximum radius of the wire so that the wire does not sink in water is\n[$T$ = surface tension of water, $g$ = gravitational acceleration]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{2dg}{\\pi T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{2T}{\\pi dg}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{\\pi dg}{2T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{T}{\\pi dg}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f6189f6e21d4",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "'$n$' identical small drops of water are falling down vertically through a medium each with a terminal velocity '$v$'. If they combine to form a single drop, then its terminal velocity is $xv$. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$n^{1/3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$n^{2/3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$n^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$n^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-10bd17fe2dc6",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A tiny water droplet falls through the air at a uniform terminal speed of $1$ cm/s. If $27$ such identical droplets coalesce to form a single larger drop, what will be the new terminal velocity of the resulting drop, assuming the air remains the same?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$ cm/s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$27$ cm/s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$81$ cm/s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9$ cm/s",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8d80c353d3db",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following is NOT TRUE?\na. When soluble substance is dissolved in water, the surface tension of water increases.\nb. When sparingly soluble substance is mixed with water, surface tension of water increases.\nc. When insoluble impurity is added into the water, surface tension of water decreases.\nd. In case of molten copper or molten cadmium, the surface tension increases with increase in its temperature.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "b",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "c",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "d",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fccd0fa506fd",
+      "subtopic": "hydraulic-lift-and-pascal-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a hydraulic press, the piston in the small cylinder has a diameter of $d_1$ cm, while the larger piston has a diameter of $d_2$ cm. If a force $F_1$ is applied to the small piston, then the force $F_2$ on the large piston is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$F_2=\\frac{d_2^2}{d_1^2}F_1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$F_2=\\frac{d_1^2}{d_2^2}F_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$F_2=\\frac{d_2^2}{d_1^2}\\frac{1}{F_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$F_2=\\frac{d_1^2}{d_2^2}\\frac{1}{F_1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-191ee7e90223",
+      "subtopic": "reynolds-number",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In case of liquid, if Reynold's number '$R_n$' is $1450$, then the flow of liquid will",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "be streamline.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "be turbulent.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "change from streamline to turbulent flow.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "be sometimes turbulent and sometimes streamline.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-390ec468bfe4",
+      "subtopic": "excess-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The excess pressure inside a soap bubble of radius $2.5$ cm is $48$ dyne/cm${}^2$. The surface tension of soap solution in dyne /cm is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$30$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$35$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$40$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-65ffccd924f2",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $450$ erg of work is done in blowing a soap bubble of radius '$r$', the additional work required to be done to blow it to a radius equal to $3r$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2400$ erg",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3000$ erg",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3600$ erg",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4000$ erg",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8d96ef8492a9",
+      "subtopic": "speed-of-efflux",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "On opposite sides of a wide vertical vessel filled with water (density $\\rho$), two identical holes are drilled, each having cross-section area $A$. The height difference between holes is $x$. The resultant force of reaction of water flowing out of vessel is ($g$ = acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\rho Agx$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\rho Agx$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3\\rho Agx$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4\\rho Agx$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ccbc6f9df034",
+      "subtopic": "terminal-velocity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A small metal sphere is falling through a viscous liquid. The variation of velocity ($V$) with time ($t$) is shown correctly in graph",
+      "image": {
+        "url": "/question-images/mht-cet/physics/fluid-mechanics/PYQ-PHY-ccbc6f9df034.png",
+        "alt": "Figure for this Mechanical Properties of Fluids question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "b",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "a",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "d",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "c",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dd90887251db",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If we dip capillary tubes of different radii $r_n$ in water and the water rises to different heights $h_n$ in them, then ($n=1,2,3$ .........)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{h_n}{r_n^2}=\\text{constant}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{h_n}{r_n}=\\text{constant}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$h_nr_n^2=\\text{constant}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$h_nr_n=\\text{constant}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1495cd9394a6",
+      "subtopic": "capillary-rise",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Water rises to a height of $2.2$ cm in glass capillary tube. The height to which water will rise in another capillary having one-fourth area of cross-section as that of the first is.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4.2$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4.4$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3.4$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5.2$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8ed386692c6f",
+      "subtopic": "surface-tension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$729$ water droplets of equal radii combine to form a big drop. The ratio of final surface energy to the total initial surface energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$729:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:81$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:9$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

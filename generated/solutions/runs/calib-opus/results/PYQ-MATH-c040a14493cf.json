@@ -1,0 +1,52 @@
+{
+ "ref": "PYQ-MATH-c040a14493cf",
+ "subject": "MATH",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 11.0,
+ "verdict": "key_mismatch",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "6",
+   "matches_key": false,
+   "confidence": "high",
+   "solution": "The equation is homogeneous. Put $y=vx$, so $dy=v\\,dx+x\\,dv$.\n$x\\sin v\\,(v\\,dx+x\\,dv)=(vx\\sin v-x)\\,dx \\Rightarrow x^2\\sin v\\,dv=-x\\,dx$\nSeparate the variables: $\\sin v\\,dv=-\\dfrac{dx}{x}$\nIntegrate: $-\\cos v=-\\ln x+C \\Rightarrow \\cos v=\\ln x+C_1$\nApply $y(1)=\\dfrac{\\pi}{2}$, i.e. $v=\\dfrac{\\pi}{2}$ at $x=1$: $0=0+C_1$, so $C_1=0$ and $\\cos\\left(\\dfrac{y}{x}\\right)=\\ln x$\nSo $\\alpha=\\cos\\left(\\dfrac{y(e^{12})}{e^{12}}\\right)=\\ln e^{12}=12$\nThe circle is $x^2+y^2-2px+2py+14=0$, with centre $(p,-p)$ and $r^2=2p^2-14$\nConditions: $r^2>0 \\Rightarrow p^2>7$ and $r\\le 6 \\Rightarrow 2p^2-14\\le 36 \\Rightarrow p^2\\le 25$\nInteger solutions: $p=\\pm3,\\pm4,\\pm5$, which is 6 values\nAnswer: 6"
+  },
+  {
+   "attempt": 2,
+   "final_answer": "6",
+   "matches_key": false,
+   "confidence": "medium",
+   "solution": "Rewrite: $\\dfrac{dy}{dx}=\\dfrac{y}{x}-\\dfrac{1}{\\sin(y/x)}$ (homogeneous); put $y=vx$, $\\dfrac{dy}{dx}=v+x\\dfrac{dv}{dx}$.\n$v+x\\dfrac{dv}{dx}=v-\\dfrac{1}{\\sin v}\\Rightarrow \\sin v\\,dv=-\\dfrac{dx}{x}$.\nIntegrate: $-\\cos v=-\\ln x+C\\Rightarrow \\cos\\left(\\dfrac{y}{x}\\right)=\\ln x-C$.\nAt $x=1$, $v=\\dfrac{\\pi}{2}$: $0=0-C\\Rightarrow C=0$, so $\\cos\\left(\\dfrac{y}{x}\\right)=\\ln x$.\n$\\alpha=\\cos\\left(\\dfrac{y(e^{12})}{e^{12}}\\right)=\\ln e^{12}=12$ (formal value; a cosine cannot really be 12, but the question intends this).\nCircle: $x^2+y^2-2px+2py+14=0$, centre $(p,-p)$, $r^2=2p^2-14$.\nReal circle: $2p^2-14>0\\Rightarrow p^2>7$; $r\\le 6$: $2p^2-14\\le 36\\Rightarrow p^2\\le 25$.\n$7<p^2\\le 25\\Rightarrow p=\\pm3,\\pm4,\\pm5$; a point circle would need $p^2=7$, which has no integer solution.\nAnswer: 6"
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 684,
+   "cache_read": 928,
+   "output": 1476,
+   "thinking": 249,
+   "api_cost_usd": 0.035185600000000004,
+   "turns": 2,
+   "seconds": 14.2,
+   "error": false
+  },
+  {
+   "stage": "solve2",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 728,
+   "cache_read": 928,
+   "output": 2480,
+   "thinking": 919,
+   "api_cost_usd": 0.0556176,
+   "turns": 2,
+   "seconds": 24.9,
+   "error": false
+  }
+ ]
+}

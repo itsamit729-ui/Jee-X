@@ -1,0 +1,3123 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Applications of Derivatives",
+    "slug": "application-of-derivatives",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 18,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "tangents-and-normals",
+      "name": "Tangents and Normals",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "monotonicity",
+      "name": "Monotonicity",
+      "position": 2
+    },
+    {
+      "slug": "maxima-and-minima",
+      "name": "Maxima and minima",
+      "position": 3
+    },
+    {
+      "slug": "tangent-and-normal",
+      "name": "Tangent and normal",
+      "position": 4
+    },
+    {
+      "slug": "mean-value-theorem",
+      "name": "Mean value theorem",
+      "position": 5
+    },
+    {
+      "slug": "rate-of-change-of-quantity",
+      "name": "Rate of change of quantity",
+      "position": 6
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-26630ff9ff7d",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the tangent to the curve $y=3x^3-3x^2+x$ at $x=1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4x-y+3=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4x+y-3=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4x-y-3=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4x+y+3=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-47f38951280d",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A wire of length $64$ m is to be bent to form a rectangle such that its area is maximum, then its area is.....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$156$ sq.m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$324$ sq.m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$256$ sq.m",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$320$ sq.m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4af336e33e28",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The approximate value of $\\sqrt[63]{3}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.9791$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3.8791$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3.9581$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4.0205$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-862754ca5bec",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The difference between the local extreme values of the function $f(x)=2x^3-15x^2+36x+40$ is ......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6456c2eb28ce",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The tangent to the curve $y^2-xy+9=0$ is vertical when",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$y=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$y=\\pm\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$y=\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$y=\\pm 3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bc6ccefd2b24",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the function $f(x)=ax^3+bx^2+11x-6$, defined on $[1,3]$, satisfies all the conditions of Rolle's theorem for $c=2+\\frac{1}{\\sqrt{3}}$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a=-1,b=\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$a=1,b=-6$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$a=-1,b=6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a=-2,b=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e6ed8924a661",
+      "subtopic": "monotonicity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $k$ such that the function $f(x)=\\sin x-\\cos x-kx+b$ is strictly decreasing for all real $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$k<1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$k>1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$k<\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$k>\\sqrt{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2c0f7074e08b",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The sum of abscissa of the points on the curve $y=x^3-3x^2+x-2$ at which the tangent is parallel to the line $y=x$ is ___",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3003294eb634",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "For which of the following functions is Rolle's theorem not applicable?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$f(x)=\\log(x^2+2)-\\log 3,on\\,[-1,1]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$f(x)=3+(x-1)^{2/3},on\\,[0,3]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$f(x)=e^{1-x^2},on\\,[-1,1]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$f(x)=\\sqrt{4-x^2},on\\,[-2,2]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e9c1b76b5fb1",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A man of height $2$ meters walks at a uniform speed of $6$ km/hr away from a lamp post of height $6$ meters, then the rate at which the length of the shadow is increasing is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7$ km/hr",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$ km/hr",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$ km/hr",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$23$ km/hr",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-31f5e95adf54",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If Rolle's theorem holds for the function $f(x)=x^3+px^2+qx+5,x\\in[1,3]$ with $c=2+\\frac{1}{\\sqrt{3}}$, then the values of $p$ and $q$ are respectively...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6,-11$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6,11$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-6,11$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-6,-11$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-55f81734be48",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A tangent is drawn from the origin $(0,0)$ to the curve $y=\\sin x$. If $(x,y)$ is the point of contact and $x\\ne 0$, then which of the following relations is true?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{y^2}-\\frac{1}{x^2}=1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{y^2}+\\frac{1}{x^2}=1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{x^2}-\\frac{1}{y^2}=1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{x^2}+\\frac{1}{y^2}=-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-82f36aaee527",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The sum of the abscissae of the points on the curve $y=x^3-6x^2+x+3$ whose normal is parallel to the line $x+y=1975$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-22$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-56f844dcd0fd",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the normal to the curve $xy+7=0$ is $Ax+By+C=0$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$A>0,B>0$ or $A<0,B<0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$A>0,B<0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$A<0,B>0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$C=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b23dcccbbe84",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a spherical balloon has a variable diameter $3x+\\frac{9}{2}$ units, then the rate of change of its volume with respect to $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{27\\pi}{4}(2x+3)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\pi}{3}(2x+3)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{27\\pi}{8}(2x+3)^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{27\\pi}{2}(2x+3)^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ccce760dd03b",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A point on the parabola $y^2=\\frac{36}{5}x$ at which the ordinate increases at thrice the rate of the abscissa is .....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{6}{5},\\frac{1}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{1}{5},\\frac{6}{5}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(5,6)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{3}{5},\\frac{9}{5}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e7660315ab22",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A wire 40 metre in length is to be cut into two pieces. One piece is formed into a square and the other piece into a circle. The lengths of the two pieces so that the combined area of the square and the circle is minimum, are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{160}{\\pi+4},\\frac{40\\pi}{\\pi+4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi+4}{160},\\frac{40\\pi}{\\pi+4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{160}{\\pi+4},\\frac{\\pi+4}{40\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30,10$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-54e0dbe05e25",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)$ be the differentiable function for all $x$ such that $f'(x)\\le 5$ and $f(1)=4$. The maximum value of $f(5)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$16$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$20$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$24$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$25$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6fd9e200c181",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the tangent to the curve $2y^3=x^3+ax^2$ at the point $(a,a)$ cuts off intercepts $\\alpha$ and $\\beta$ on the coordinate axes such that $\\alpha^2+\\beta^2=61$, then the value of $a$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pm 61$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm 36$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pm 30$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\pm 25$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c5beffd56301",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If Rolle's theorem is applicable for the function $f(x)=\\log\\left(\\frac{x^2+a}{x}\\right)$ on $[3,4]$ with $c\\in(3,4)$ such that $f'(c)=0$, then the value of $f''(c)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{48}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{36}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{24}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{12}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-57bfdb211395",
+      "subtopic": "monotonicity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)$ be the cubic polynomial having one of its roots as $x=-1$. If $f(0)=4,f'(0)=0,f''(1)=0$, then...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$f(x)$ is increasing in $(-\\infty,0)\\cup(2,\\infty)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$f(x)$ is decreasing in $(-\\infty,0)\\cup(2,\\infty)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$f(x)$ is increasing in $(0,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$f(x)$ is decreasing in $(2,\\infty)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9564eed0eeef",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The radius of a spherical soap bubble is increasing at a constant rate of $0.5$ cm/sec. At the instant when the radius is $5$ cm, the rate at which its volume is increasing is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25\\pi$ cm${}^3$/sec",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$50\\pi$ cm${}^3$/sec",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$100\\pi$ cm${}^3$/sec",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10\\pi$ cm${}^3$/sec",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f17bce3231ef",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The minimum value of $e^{2x}+e^{-2x}$ is .......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0e5ee5312095",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A water tank in the house of an inverted cone is being emptied at the rate of $2$ cubic feet per second. The height of the cone is $8$ feet and the radius is $4$ feet, then the rate of change of the water level when the depth is $6$ feet.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{9\\pi}ft/sec$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{9\\pi}ft/sec$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{8}{9\\pi}ft/sec$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{10}{9\\pi}ft/sec$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-11c1dce50e2c",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The radius of a spherical balloon increases at the rate of $4$ cm/sec. The rate at which its surface area increases, when the radius is $5$ metres is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$160\\pi$ $\\text{cm}^2/\\text{sec}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1600\\pi$ $\\text{cm}^2/\\text{sec}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$16000\\pi$ $\\text{cm}^2/\\text{sec}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$16000$ $\\text{cm}^2/\\text{sec}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-50aabef4dbfc",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The approximate value of $\\sin^{-1}(0.51)$ is .......\n[Given $\\pi=3.1416$, $\\frac{2}{\\sqrt{3}}=1.1547$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.535247$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.535547$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.535347$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.535147$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a381d5a3a2cd",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the Lagrange's Mean Value Theorem, $f(b)-f(a)=(b-a)f'(c);~(a<c<b)$. If $a=2,b=4$ and $f(x)=\\sqrt{x^2-4}$, then the value of $c$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{6}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c3c4d1387cb9",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The point on the curve $y=3x^2-9x+8$ where the tangent is parallel to x-axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{1}{2},\\frac{3}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{3}{2},\\frac{5}{4}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{2}{3},\\frac{1}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{1}{4},\\frac{2}{5}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-eb0cbca579a7",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $c$ for which the function $f(x)=\\log\\left(\\frac{x^2+6}{5x}\\right)$ satisfies Rolle's theorem in the interval $[2,3]$ is ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{6}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-496ee9eba846",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If Rolle's theorem holds for the function $f(x)=x^2-px+10$, $x\\in[0,4]$ with $c=2$, then $p=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7182c6ca9f5e",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A rectangular sheet of paper has its area $32$ meters${}^2$. The margins at the top and bottom are $50$ cm each and at the sides $25$ cm each. If the area of the printed space is maximum, then the dimensions of the paper are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$16$ meters and $2$ meters",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$30$ meters and $2$ meters",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8$ meters and $4$ meters",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$25$ meters and $7$ meters",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a9dbca3eb1f7",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A stone is dropped into a quiet lake and waves move in circles at the speed of $7$ cm s${}^{-1}$. At the instant when the radius of circular wave is $5$ cm, the enclosed area is increasing at the rate -------- cm${}^2$ s${}^{-1}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$50\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$70\\pi$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6fbb814f4c75",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the function $f(x)=ax^3-bx^2-8x-4$ satisfies Roll's theorem in $[1,3]$, if $f'(2)=0$ then $a-b$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9b0573b2fa69",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The co-ordinates of the point on the curve $y=x\\log x$ at which the normal is parallel to the line $2x-2y=3$ are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(e,e)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(e^2,2e^2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(e^{-2},-2e^{-2})$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-176a7829d351",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The surface area of a spherical ball is increasing at the rate of $4\\pi~\\text{cm}^2$/second. The rate at which the radius is increasing when the surface area is $16\\pi~\\text{cm}^2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5$ cm/second",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.25$ cm/second",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.125$ cm/second",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$ cm/second",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3b4b373abe24",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The approximate value of $(0.007)^{\\frac{1}{3}}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{21}{120}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{23}{120}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{29}{120}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{31}{120}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bba65d4d46a8",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The maximum value of ${\\left(\\frac{1}{x}\\right)}^x$, $x>0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^e$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e^{-e}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^{1/e}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\frac{1}{e}\\right)}^{1/e}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c100231884a7",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The point on the curve $9y^2=x^3$ where the normal to the curve makes equal intercepts with the co-ordinate axes is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(-4,\\frac{8}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(4,\\frac{8}{3}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(-4,\\frac{-8}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(-4,\\frac{3}{8}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-44d5adc58bc2",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A man of height $1.2$ m is moving away from the lamp post at the rate $0.6$ m/sec. If the height of the lamp post is $4.8$ m, then the rate at which the shadow of the man is lengthening is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.02~\\text{m/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.8~\\text{m/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.2~\\text{m/s}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2.0~\\text{m/s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8749039879dc",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The approximate surface area of a sphere of radius $2.01$ cm is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$16.16\\pi~\\text{cm}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$16.15\\pi~\\text{cm}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$16.14\\pi~\\text{cm}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16.17\\pi~\\text{cm}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-65364864c3cb",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A right circular cone is melting such that its volume is decreasing at the rate of $12\\pi$ $\\text{cm}^3/\\text{sec}$. The radius of the base is always equal to half of its height. Then the rate of change of the radius when the radius is $2$ cm is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "radius is increasing at the rate of $1$ cm/sec",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "radius is decreasing at the rate of $1$ cm/sec",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "radius is increasing at the rate of $1.5$ cm/sec",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "radius is decreasing at the rate of $1.5$ cm/sec",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-abcd4247aad4",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The coordinates of the point on the curve $y=\\sin\\left(\\frac{\\pi x}{2}\\right)$ at which the normal is parallel to the Y- axis are:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(1,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(1,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(1,1)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(2,0)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-01586f0b9ddb",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A ball is thrown in the air. Its height at any time $t$ is given by $h=3+14t-5t^2$, then the maximum height it can reach",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12.9$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12.8$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$12.7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12.6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a037fb754056",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The minimum value of $\\frac{\\log x}{x}$ in the interval $(2,\\infty)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{e}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Does not exist",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dd7c672b7dde",
+      "subtopic": "monotonicity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The function $f(x)=\\tan^{-1}(\\sin x+\\cos x)$ is an increasing function in the interval.....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(0,\\frac{\\pi}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{-\\pi}{2},\\frac{\\pi}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{\\pi}{4},\\frac{\\pi}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{-\\pi}{2},\\frac{\\pi}{4}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1f6cc56b956f",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of tangent to the curves $x=1-3t^2$ and $y=t-3t^3$ at the point $(-2,2)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4x+3y+2=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4x-3y+2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3x+4y+2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3x-4y+2=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-660bf2d6f4a4",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A cylindrical tank without a top lid is being manufactured to hold a fixed volume of $125\\pi$ cubic cm. The minimum surface area required to construct this tank is ............square cm",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$75\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$50\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$125\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-69caa05c3bde",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A spherical snow ball is melting so that its volume is decreasing at the rate of 8 c.c./sec then the rate of change of radius when the radius is 2 cm, is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "The radius is increasing at the rate of $\\frac{1}{2\\pi}~\\text{cm/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "The radius is decreasing at the rate of $\\frac{1}{2\\pi}~\\text{cm/s}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "The radius is increasing at the rate of $\\frac{1}{\\pi}~\\text{cm/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "The radius is decreasing at the rate of $\\frac{1}{\\pi}~\\text{cm/s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2ca6076e3ec0",
+      "subtopic": "monotonicity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The function $f(x)=\\int\\frac{x+3}{x^2-9x+20}\\,dx$, then $f(x)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases on R",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreases on R - (4, 5)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decreases on $(-\\infty,-3]\\cup(4,5)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "increases on $(-3,\\infty)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-582db92289ff",
+      "subtopic": "monotonicity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\log(1+x)-\\frac{x}{1+x}$, then the values of $x$ for which $f(x)$ is monotonically increasing and monotonically decreasing are respectively.....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-\\infty,0),(0,\\infty)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(0,\\infty),(-\\infty,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-1,0),(0,\\infty)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(0,\\infty),(-1,0)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-767243634e94",
+      "subtopic": "monotonicity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The derivative of the function $f(x)=\\cos^4x+\\sin^4x,~0\\le x\\le 2\\pi$ is positive for",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0<x<\\frac{\\pi}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{4}<x<\\frac{\\pi}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{2}<x<\\frac{5\\pi}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\pi}{8}<x<\\frac{3\\pi}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ea641bf5119e",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number 28 is divided into two positive parts such that the sum of the cube of one part and the square of the other part is minimum, then the absolute difference between the two parts is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$24$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-60d021090338",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the line $y=4x-5$ is tangent to the curve $y^2=ax^3+b$ at the point $(2,3)$, then the value of $7a-2b$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$14$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$28$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b3dcd31016d8",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the tangent to the curve $y=\\sqrt{9-3x^2}$ at the point where the ordinate and abscissa equal is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x-3y+3=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3x-y-3=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x+3y-6=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3x+y-6=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-df2465fafd83",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The coordinates of the points on the curve $4y=x^2$ that are nearest to the point $(0,5)$ are ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-2\\sqrt{3},3)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(2\\sqrt{3},-3)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(3,2\\sqrt{3})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(2\\sqrt{3},2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-09bbbc338ad5",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the side of an equilateral triangle increases at the rate of $\\sqrt{3}~\\text{cm/sec}$, then the rate of change of increase of its area when the side is $12~\\text{cm}$ is ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$18~\\text{cm}^2/\\text{sec}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$10~\\text{cm}^2/\\text{sec}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12~\\text{cm}^2/\\text{sec}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\sqrt{3}~\\text{cm}^2/\\text{sec}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-478ffe1d36a5",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the tangent to the curve $xy+ax+by=0$ at $(1,1)$ makes an angle of $\\tan^{-1}2$ with positive direction of the $x$-axis, then the value of $\\frac{ab}{a+b}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-554036df8980",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the line $x+By+C=0$ is the normal to the curve given by $x=a\\sin^3t$, $y=b\\cos^3t$, (where $a,b\\ne 0$) at a point $t=\\frac{\\pi}{2}$, then $B-C=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2a$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-a$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2acb1684a733",
+      "subtopic": "monotonicity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $g(x)=f(x)+f(1-x)$ and $f''(x)<0,0\\le x\\le 1$, then $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$g(x)$ increases on $\\left[\\frac{1}{2},1\\right]$ and $g(x)$ decreases on $\\left[0,\\frac{1}{2}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$g(x)$ decreases on $[0,1]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$g(x)$ increases on $[0,1]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$g(x)$ decreases on $\\left[\\frac{1}{2},1\\right]$ and $g(x)$ increases on $\\left[0,\\frac{1}{2}\\right]$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8e853bbbf823",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If a particle moves such that the displacement (s) is proportional to the square of the velocity (v), then its acceleration (a) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "proportional to $s^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "proportional to $1/s$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "proportional to $1/s^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "a constant",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e146c3f3ae2c",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the function $f(x)=ax^2+bx+\\sin x$ satisfies all the conditions of Rolle's theorem on $[0,\\pi]$ and the slope of the tangent to the curve $y=f(x)$ at $x=\\frac{\\pi}{4}$ is zero, then $a-b=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{2}(1-\\pi)}{\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{2}(2+\\pi)}{\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{2}(\\pi-1)}{\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{2}(\\pi+1)}{\\pi}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-354591425687",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A particle is fired straight up from the ground. Its height in feet after $t$ second is given by $s(t)=128t-16t^2$. The velocity of the particle when it hits the ground is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-128$ ft/sec",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$128$ ft/sec",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$ ft/sec",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$256$ ft/sec",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-64b01349ed59",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $x$ so that the volume of the parallelopiped formed by the vectors $\\hat{i}+x\\hat{j}+\\hat{k}$, $\\hat{j}+x\\hat{k}$ and $x\\hat{i}+\\hat{k}$ is minimum, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-742ca59dcef7",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $c$ satisfied by the Rolle's theorem for the function $f(x)=x^2(1-x)^2$, $x\\in[0,1]$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c82163ec9a94",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A tank with a rectangular base and rectangular sides, open at the top is made. Depth of the tank is $4$ m and its volume is $36$ cubic meters. For making a tank cost of base material used is Rs. $100$ per sq. meter and that of sides is Rs. $50$ per sq. meter. Then minimum cost of tank is ..............",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Rs. $1100$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Rs. $2200$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Rs. $3300$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Rs. $4400$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-06c73430a0b5",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Rolle's theorem holds for monic quadratic polynomial $f(x)$ on the interval $[\\alpha,\\alpha+3]$ where $f(\\alpha)=0$. Similarly, $g(x)=f(x)+2$ also follows Rolle's theorem in the interval $[\\beta,3]$ where $g(3)=0$, such that the value of $c$ is the same for both $f(x)$ and $g(x)$. Then the value of $(f\\circ g)(\\alpha)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-08c1695eb9c2",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let PA and PB be the tangent segments drawn from point P$(6,8)$ to the circle with the centre at origin O. The radius of circle for which the area of quadrilateral PAOB is maximum, is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7c22bf036ffd",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the rate of increase of surface area of a spherical balloon is $5\\,\\text{cm}^2/\\text{sec}$ and rate of increase of volume of a spherical balloon is $10\\,\\text{cm}^3/\\text{sec}$, then the radius of the balloon at that time is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$ cm",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7b00fa22571d",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The tangent to the curve $y=e^{2x}$ is drawn at the point $P(0,1)$. If this tangent intersects the $x$-axis at point $A$ and the $y$-axis at point $B$, then the area of $\\triangle OAB$ (where $O$ is the origin) in square units is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-81cc47ff5b68",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A student learned 100 Math formulae for an examination. The number of formulae the student can remember in '$t$' days after learning is given by $f(t)=100(1-0.1t)^2$. Then, the magnitude of the rate at which the student forgets the formula 3 days after learning is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-14$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$16$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$14$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$10$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a805e4391673",
+      "subtopic": "monotonicity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)$ be a twice differentiable function such that $f''(x)=-f(x)$, and $f'(x)=g(x)$.\nLet $h(x)=\\{f(x){\\}}^2+\\{g(x){\\}}^2$. If $h(2)=7$, then $h(8)$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$14$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "not defined",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-444eb0f003ff",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The maximum volume (in cubic units) of a right circular cylinder for which the sum of the square of its height and the square of its radius of base $48$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$48\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$64\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$128\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$16\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4ded6a13101f",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)$ satisfy the condition of Rolle's Theorm in $[1,2]$ and $f(x)$ is continuous in $[1,2]$ then $\\int_1^2f'(x)\\,dx$ is equal to _____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b1ee26f4c4b8",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the slope of the tangent to the curve $2y^2=ax^2+b$ at $(1,-1)$ is $-1$, then ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a=2$ and $b=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$a=2$ and $b=1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a=0$ and $b=1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a=1$ and $b=2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-25cfd2201cad",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A spherical iron ball $10$ cm in radius is coated with a layer of ice of uniform thickness that melts at a rate of $50~\\text{cm}^3/\\text{min}$. When the thickness of ice is $5$ cm, the rate at which the thickness of ice decreases is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{18\\pi}~\\text{cm}/\\text{min}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{36\\pi}~\\text{cm}/\\text{min}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{6\\pi}~\\text{cm}/\\text{min}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{54\\pi}~\\text{cm}/\\text{min}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a8586736a25a",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the line $ax+by+5=0$ is a normal to the curve $xy=1$ then .....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a>0,b<0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$a<0,b<0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a>0,b=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a>0,b>0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cbb5a0550e66",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "On the interval $[0,1]$, the function $f(x)=x^{25}(1-x)^{75}$ attains its maximum value at the point $x=$....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1d3628e9b64b",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The line $x+y=0$ touches the curve $y^2=ax^3+b$ at $(1,-1)$ then values of $a$ and $b$ respectively are ...........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2},\\frac{2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3},\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3},\\frac{1}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{5},\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c2788dad19be",
+      "subtopic": "rate-of-change-of-quantity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An aeroplane at an altitude of 1 km is flying horizontally at 600 km / hr, passes directly over an observer. Then the rate at which it is approaching the observer when it is 1250 meters away from him is........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$360~km/hr$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$430~km/hr$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$600~km/hr$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$250~km/hr$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c949f79caca9",
+      "subtopic": "mean-value-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The function $f(x)=x(x+3)e^{-\\left(\\frac{1}{2}\\right)x}$ satisfies all the conditions of Rolle's theorem in $[-3,0]$, then $c=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8e144f6080f5",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the curve $y=e^{2x}+x^2$ cuts the Y-axis at the point P. If the tangent and normal to the curve at point P intersect the X-axis at points R and Q respectively, the area of triangle PQR is.....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ac2e7b9e28bb",
+      "subtopic": "monotonicity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=(a+2)x^3-3ax^2+9ax-5$. If $f(x)$ is strictly decreasing for all $x\\in R$, then the interval in which $a$ lies is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-\\infty,-3)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(-\\infty,-2)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(0,\\infty)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(-\\infty,-5)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cbeba4ee7cf3",
+      "subtopic": "maxima-and-minima",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=5x^3+2x^2-3x+1$ has a local maxima and a local minima at $x=\\sin\\theta,\\pi<\\theta<\\frac{3\\pi}{2}$ and $x=\\cos\\varphi,\\frac{3\\pi}{2}<\\varphi<2\\pi$ respectively, then $(\\tan\\theta)(\\tan\\varphi)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-3\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\sqrt{2}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-3\\sqrt{2}}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

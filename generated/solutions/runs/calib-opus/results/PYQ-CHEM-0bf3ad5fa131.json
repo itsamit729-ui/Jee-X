@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-CHEM-0bf3ad5fa131",
+ "subject": "CHEM",
+ "type": "numerical",
+ "has_figure": false,
+ "answer_key": 16.0,
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "16",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Concepts: Gattermann–Koch reaction, Friedel–Crafts acylation, Claisen–Schmidt (crossed aldol) condensation.\nStep 1 (x, Gattermann–Koch): $\\mathrm{C_6H_6 + CO + HCl \\xrightarrow{AlCl_3/CuCl} C_6H_5CHO}$, so x = benzaldehyde.\nStep 2 (y, Friedel–Crafts acylation): $\\mathrm{C_6H_6 + CH_3COCl \\xrightarrow{AlCl_3} C_6H_5COCH_3}$, so y = acetophenone.\nStep 3 (z, Claisen–Schmidt): benzaldehyde has no α‑H. The acetophenone enolate attacks the C=O of benzaldehyde, and heating removes water.\n$$\\mathrm{C_6H_5CHO + CH_3COC_6H_5 \\xrightarrow{OH^-,\\ \\Delta} C_6H_5CH{=}CH{-}CO{-}C_6H_5 + H_2O}$$\nz = benzylideneacetophenone (chalcone).\nStep 4 (π bonds in z): two benzene rings give $2\\times3 = 6$, C=C gives 1 and C=O gives 1, for a total of 8 π bonds.\nStep 5 (π electrons): $8 \\times 2 = 16$.\nAnswer: 16",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 656,
+   "cache_read": 928,
+   "output": 1318,
+   "thinking": 113,
+   "api_cost_usd": 0.0318016,
+   "turns": 2,
+   "seconds": 13.9,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1185,
+   "cache_read": 1541,
+   "output": 651,
+   "thinking": 108,
+   "api_cost_usd": 0.022816200000000002,
+   "turns": 2,
+   "seconds": 10.1,
+   "error": false
+  }
+ ]
+}

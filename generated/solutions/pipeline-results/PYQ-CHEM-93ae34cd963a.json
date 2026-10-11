@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-93ae34cd963a",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "Key idea: controlled oxidation of alkanes (NCERT) gives different products depending on the reagent and conditions.\nA: $\\mathrm{CH_4 + O_2 \\xrightarrow{Mo_2O_3,\\Delta} HCHO + H_2O}$ gives an aldehyde, not an alcohol.\nB: $\\mathrm{2CH_3CH_3 + 3O_2 \\xrightarrow{(CH_3COO)_2Mn,\\Delta} 2CH_3COOH + 2H_2O}$ gives a carboxylic acid.\nC: $\\mathrm{(CH_3)_3CH \\xrightarrow{KMnO_4} (CH_3)_3COH}$ oxidises the tertiary C–H bond, giving 2-methylpropan-2-ol, an alcohol.\nD: $\\mathrm{2CH_4 + O_2 \\xrightarrow{Cu,\\,523\\,K,\\,100\\,atm} 2CH_3OH}$ gives methanol, an alcohol.\nE: $\\mathrm{CH_3CH{=}CHCH_3 \\xrightarrow{KMnO_4/H^+} 2CH_3COOH}$ cleaves the double bond, giving an acid.\nSo the alcohol-forming reactions are C and D only.\nAnswer: (D) C and D Only",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Key idea: controlled oxidation of alkanes (NCERT) gives different products depending on the reagent and conditions.\nA: $\\mathrm{CH_4 + O_2 \\xrightarrow{Mo_2O_3,\\Delta} HCHO + H_2O}$ gives an aldehyde, not an alcohol.\nB: $\\mathrm{2CH_3CH_3 + 3O_2 \\xrightarrow{(CH_3COO)_2Mn,\\Delta} 2CH_3COOH + 2H_2O}$ gives a carboxylic acid.\nC: $\\mathrm{(CH_3)_3CH \\xrightarrow{KMnO_4} (CH_3)_3COH}$ oxidises the tertiary C–H bond, giving 2-methylpropan-2-ol, an alcohol.\nD: $\\mathrm{2CH_4 + O_2 \\xrightarrow{Cu,\\,523\\,K,\\,100\\,atm} 2CH_3OH}$ gives methanol, an alcohol.\nE: $\\mathrm{CH_3CH{=}CHCH_3 \\xrightarrow{KMnO_4/H^+} 2CH_3COOH}$ cleaves the double bond, giving an acid.\nSo the alcohol-forming reactions are C and D only.\nAnswer: (D) C and D Only",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 912,
+   "cache_read": 940,
+   "output": 1319,
+   "thinking": 136,
+   "api_cost_usd": 0.033872,
+   "turns": 2,
+   "seconds": 14.2,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1407,
+   "cache_read": 1199,
+   "output": 541,
+   "thinking": 30,
+   "api_cost_usd": 0.022323799999999998,
+   "turns": 2,
+   "seconds": 8.4,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:09:25+00:00"
+}

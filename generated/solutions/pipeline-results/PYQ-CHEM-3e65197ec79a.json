@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-3e65197ec79a",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "Tollens' reagent $\\mathrm{[Ag(NH_3)_2]^+}$ oxidises aldehydes. So the compound must have a free $\\mathrm{-CHO}$ group, or be able to form one in solution.\nCompound A (2-methoxytetrahydrofuran) is a cyclic acetal. Acetals do not open in the basic Tollens' medium, so A gives no free aldehyde and the test is negative.\nCompounds B and D are an ordinary cyclic ether and a secondary alcohol. Neither has an aldehyde group, so both give a negative test.\nCompound C (2-hydroxytetrahydrofuran) has $\\mathrm{-OH}$ and ring $\\mathrm{-O-}$ on the same carbon, so it is a cyclic hemiacetal.\nIn solution, a hemiacetal is in equilibrium with its open-chain form:\n$$\\text{2-hydroxytetrahydrofuran} \\rightleftharpoons \\mathrm{HO{-}CH_2CH_2CH_2{-}CHO}\\ (\\text{4-hydroxybutanal})$$\nThe free $\\mathrm{-CHO}$ is oxidised to $\\mathrm{-COO^-}$, and $\\mathrm{Ag^+}$ is reduced to $\\mathrm{Ag}$, which forms a silver mirror. So C gives a positive Tollens' test.\nCompound C is option (D).\nAnswer: D",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Tollens' reagent $\\mathrm{[Ag(NH_3)_2]^+}$ oxidises aldehydes. So the compound must have a free $\\mathrm{-CHO}$ group, or be able to form one in solution.\nCompound A (2-methoxytetrahydrofuran) is a cyclic acetal. Acetals do not open in the basic Tollens' medium, so A gives no free aldehyde and the test is negative.\nCompounds B and D are an ordinary cyclic ether and a secondary alcohol. Neither has an aldehyde group, so both give a negative test.\nCompound C (2-hydroxytetrahydrofuran) has $\\mathrm{-OH}$ and ring $\\mathrm{-O-}$ on the same carbon, so it is a cyclic hemiacetal.\nIn solution, a hemiacetal is in equilibrium with its open-chain form:\n$$\\text{2-hydroxytetrahydrofuran} \\rightleftharpoons \\mathrm{HO{-}CH_2CH_2CH_2{-}CHO}\\ (\\text{4-hydroxybutanal})$$\nThe free $\\mathrm{-CHO}$ is oxidised to $\\mathrm{-COO^-}$, and $\\mathrm{Ag^+}$ is reduced to $\\mathrm{Ag}$, which forms a silver mirror. So C gives a positive Tollens' test.\nCompound C is option (D).\nAnswer: D",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 645,
+   "cache_read": 1023,
+   "output": 664,
+   "thinking": 77,
+   "api_cost_usd": 0.0186526,
+   "turns": 2,
+   "seconds": 9.8,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1175,
+   "cache_read": 1199,
+   "output": 546,
+   "thinking": 111,
+   "api_cost_usd": 0.0205678,
+   "turns": 2,
+   "seconds": 9.4,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:27:30+00:00"
+}

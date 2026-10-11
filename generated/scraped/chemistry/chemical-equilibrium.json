@@ -305,7 +305,7 @@
           "is_correct": false
         }
       ],
-      "solution": ""
+      "solution": "Set up the equilibrium amounts: $\\mathrm{A}: a-x$, $\\mathrm{B}: x$, $\\mathrm{C}: x$.\nThe total moles at equilibrium are $n_{total} = (a-x)+x+x = a+x$.\nPartial pressure = mole fraction $\\times$ total pressure $p$:\n$p_A = \\frac{a-x}{a+x}p$, $\\quad p_B = p_C = \\frac{x}{a+x}p$\nWrite the equilibrium constant: $K_p = \\frac{p_B\\,p_C}{p_A}$\nSubstitute: $$K_p = \\frac{\\left(\\frac{x}{a+x}\\right)^2 p^2}{\\frac{a-x}{a+x}\\,p} = \\frac{x^2\\,p}{(a+x)(a-x)}$$\nSimplify: $K_p = \\frac{x^2}{a^2-x^2}\\times p$\nAnswer: (B) $\\frac{x^{2}}{a^{2}-x^{2}} \\times p$"
     },
     {
       "ref": "PYQ-CHEM-6857289023a1",

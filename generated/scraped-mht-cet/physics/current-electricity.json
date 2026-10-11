@@ -1,0 +1,1814 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Current Electricity",
+    "slug": "current-electricity",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 16,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "combination-of-resistors",
+      "name": "Combination of resistors",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "meter-bridge",
+      "name": "Meter bridge",
+      "position": 2
+    },
+    {
+      "slug": "resistance-and-resistivity",
+      "name": "Resistance and resistivity",
+      "position": 3
+    },
+    {
+      "slug": "potentiometer",
+      "name": "Potentiometer",
+      "position": 4
+    },
+    {
+      "slug": "combination-of-resistances",
+      "name": "Combination of resistances",
+      "position": 5
+    },
+    {
+      "slug": "electric-cell-or-battery",
+      "name": "Electric cell or battery",
+      "position": 6
+    },
+    {
+      "slug": "kirchhoffs-circuit-laws",
+      "name": "Kirchhoffs circuit laws",
+      "position": 7
+    },
+    {
+      "slug": "galvanometer-voltmeter-and-ammeter",
+      "name": "Galvanometer voltmeter and ammeter",
+      "position": 8
+    },
+    {
+      "slug": "wheatstone-bridge",
+      "name": "Wheatstone bridge",
+      "position": 9
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-7e044de1e281",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a metre bridge experiment the balance point is obtained if the gaps are closed by $2$ $\\Omega$ and $3\\Omega$. A shunt of $X$ $\\Omega$ is added to $3$ $\\Omega$ resistor to shift the balancing point by $22.5$ cm. The value of $X$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6408550bd4a0",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the following network, the current flowing through $15~\\Omega$ resistance is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-6408550bd4a0.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.1$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.9$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.2$ A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1.5$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d31b20b7f46d",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In potentiometer experiment, null point is obtained at a particular point for a cell on potentiometer wire 'x' cm long. If length of potentiometer wire is increased by few cm without changing the cell, the balancing length will (Driving source is not changed)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "decrease",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "increase",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "not change",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "become zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2f1ef1909b22",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two cells of e.m.f.s approximately $5$ V and $10$ V are to be compared using a potentiometer (sum and difference method) of length $400$ cm, then,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "first portion of $110$ cm of wire should have a potential difference of $10$ V.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "a battery that runs the potentiometer should have a voltage of $5$ V.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a battery that runs the potentiometer should have a voltage of more than $15$ V.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "a battery that runs the potentiometer should have a voltage of $10$ V.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-72b52ad19044",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "To determine the internal resistance of a cell by using a potentiometer, the null point is obtained at $1$m when cell is shunted by $3\\,\\Omega$ resistance and at $1.5$m length when cell is shunted by $6\\,\\Omega$ resistance. The internal resistance of the cell is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6\\,\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8\\,\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-415ec8bb67c9",
+      "subtopic": "resistance-and-resistivity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following graph represents the temperature (T) dependence of resistivity ($\\rho$) of a semiconductor?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-415ec8bb67c9.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "B",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "D",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7450b84423b7",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A potentiometer wire is 4 m long and potential difference of 3V is maintained between the ends. The e.m.f. of the cell which balances against a length of 100 cm of the poteniometer wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.25$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.50$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.75$ V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1.0$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fdaaea8c72e5",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two wires A and B of equal lengths are connected in left and right gap respectively of a metre bridge, null point is obtained at 40 cm from left end. Diameters of the wires A and B are in the ratio 3:1 respectively, the ratio of specific resistance of A to that of B is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$12:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2999a0c5b4f4",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an experiment to find emf of a cell using potentiometer, the length of null point for a cell of emf $1.5$ V is found to be $60$ cm. If this cell is replaced by another cell of emf $E$, the length of null point increases by $40$ cm. The value of $E$ is $x/10$ V.\nThe value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$20$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$25$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$28$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a236c70a32b8",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Resistances are joint as shown in the figure. In the balanced condition, the current $I$ drawn from the battery is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-a236c70a32b8.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.1$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.15$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.2$ A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.25$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-03880f04c0dc",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The resistances in two arms of the metre bridge are $5\\Omega$ and $R$ $\\Omega$ respectively, null point is obtained at length $l_1$. When the resistance R is shunted with an equal resistance, the new balance point is at $1.6l_1$. The resistance R is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$ $\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$15$ $\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$20$ $\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$25$ $\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7c4ae0fc4e97",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a potentiometer, the null point is obtained on $7^{th}$ wire. What should we do to change the null point on $9^{th}$ wire by keeping all other quantities same ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Decrease resistance in series with battery",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Increase resistance in main Circuit",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Decrease resistance in main circuit",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Increase applied e.m.f.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d37ba9744238",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A current of $0.01$ A passes through the potentiometer wire of resistivity $10^6$ $\\Omega$ cm and area of cross-section $10^{-2}$ $\\text{cm}^2$. The potential gradient is (in V/m)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^9$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{11}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10^{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^8$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fe9fb65ba604",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A potentiometer wire has length $L$. For a given cell of e.m.f. $E$, the balancing length is $\\frac{L}{3}$ from the positive end of the wire. If the length of potentiometer wire is increased by $50\\%$ then for the same cell the balance point is obtained at length (from positive end)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{L}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{L}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{L}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{L}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-31d865cd8b15",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In balanced meter bridge, the resistance of bridge wire is $0.1~\\Omega/$cm. Unknown resistance $X$ is connected in the left gap and $6~\\Omega$ in right gap. Null point divides the wire in the ratio $2:3$. The current drawn from the battery of $5$V having negligible resistance is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$ A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1.6$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-24ce7d3a1c57",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A potentiometer wire is 4m long and potential difference of 2V is maintained between the ends. The e.m.f. of the cell which balances against a length of 80 cm of the potentiometer wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.25$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.30$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.40$ V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.80$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9209f2659f4a",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In metre bridge experiment, the resistance in the left gap is 15 $\\Omega$ and in the right gap is 45 $\\Omega$. The bridge is balanced. The distance of the null point from the centre of the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$80$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$40$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$25$ cm",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7c3f08be0b8d",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Potentiometer wire of length $1$m is connected in series with $490~\\Omega$ resistance and $2$ V battery. If $0.2$ mV/cm is the potential gradient then the resistance of the potentiometer wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4.9~\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$7.9~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5.9~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6.9~\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8da529e3f61b",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "With resistance $x$ in the left gap and resistance $9~\\Omega$ in right gap of a meter bridge, the balance point is obtained at $40$ cm from left end. In what way and to which resistance $3~\\Omega$ resistance be connected to obtain the balance point at $50$ cm from the left end?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "In series with $9~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Parallel to $x~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "In series with $x~\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Parallel to $9~\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-af0bdd1785e9",
+      "subtopic": "combination-of-resistances",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A resistor of $6~\\Omega$ with a tolerance of $10\\%$ and another of $4~\\Omega$ with a tolerance of $10\\%$ are connected in series. The tolerance of combination is about",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$12\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1e25b084cb47",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two wires $A$ and $B$ of equal lengths are connected in left and right gap of a metre bridge, null point is obtained at $40$ cm from left end. Diameters of the wires $A$ and $B$ are in the ratio $3:1$. The ratio of specific resistance of $A$ to that of $B$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-68544ad2882b",
+      "subtopic": "electric-cell-or-battery",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an electric circuit shown, each cell has e.m.f. $2V$ and internal resistance $1\\,\\Omega$. The external resistance is $2\\,\\Omega$. The value of current (in A) is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-68544ad2882b.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.25$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-190771d7e655",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A metre bridge experiment, the resistance in the left gap is $20~\\Omega$ and in the right gap is $60~\\Omega$. The bridge is balanced. The distance of the null point from the centre of the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$50$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$75$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$40$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1fea0712c3c8",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A potentiometer wire is 4m long and potential difference of 3V is maintained between the ends. The e.m.f. of the cell which balances against a length of 100 cm of the potentiometer wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.75$ V",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.5$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.25$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.5$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-60b4a44e51b0",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the potential difference between points B and D is zero in the given circuit, the value of x is $\\frac{1}{n}~\\Omega$. The value n is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-60b4a44e51b0.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3c96093d61ac",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the following figure, the current I is equal to",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-3c96093d61ac.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.9$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.9$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6.2$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7.5$ A",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5036e987c787",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "With a resistance '$X$' connected in series with a galvanometer of resistance $100~\\Omega$, it acts as a voltmeter of range 0 - 15 V. To double the range, a resistance of $1500~\\Omega$ is to be connected in series with '$X$'. The value of '$X$' in $\\Omega$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1000$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1200$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1400$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1600$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c01bb3a1626e",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A current of 9A enters point P of an equilateral triangle PQR having three wires of $3\\Omega$ each and leaves by point R. The currents $I_1$ and $I_2$ are respectively",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-c01bb3a1626e.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2A,7A$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3A,6A$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5A,4A$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6A,3A$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8f2347acb621",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "By connecting a resistance of $980~\\Omega$ in series with a galvanometer, it is converted into a voltmeter of a certain range. When the resistance of $470~\\Omega$ is connected in series, the range is halved. The resistance of the galvanometer is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$40~\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$50~\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$60~\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cfb437ff9b41",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A potentiometer wire of length $4~\\text{m}$ and resistance $5~\\Omega$ is connected in series with a resistance of $992~\\Omega$ and a cell of e.m.f. $4~\\text{V}$ with internal resistance $3~\\Omega$. The length of $0.75~\\text{m}$ on potentiometer wire balances the e.m.f. of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.50~\\text{mV}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3~\\text{mV}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3.75~\\text{mV}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4~\\text{mV}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0b82296b5841",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "When cell of E.M.F. '$E_1$' is connected to potentiometer wire the balancing length is '$l_1$'. Another cell of E.M.F. '$E_2$' ($E_1>E_2$) is connected along with $E_1$ so as two cells oppose each other, the balancing length is '$l_2$'. The ratio $E_1:E_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(l_1):(l_1+l_2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(l_1):(l_1-l_2)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(l_1+l_2):(l_1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(l_1+l_2):(l_1-l_2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5f905bfbdce7",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the following network,\n$I_1=-0.4\\,\\text{A}$ , $I_4=1\\,\\text{A}$ , $I_5=0.4\\,\\text{A}$\nThe values of $I_2$, $I_3$ and $I_6$ are respectively",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-5f905bfbdce7.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.4\\,\\text{A}$ , $0.4\\,\\text{A}$ , $-0.6\\,\\text{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.4\\,\\text{A}$ , $-0.6\\,\\text{A}$ , $1.4\\,\\text{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.4\\,\\text{A}$ , $-0.6\\,\\text{A}$ , $0.4\\,\\text{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-0.6\\,\\text{A}$ , $1.4\\,\\text{A}$ , $0.4\\,\\text{A}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-346fe80e7792",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a meter bridge experiment, the balance point is obtained at length '$l_1$' cm from left hand when resistances in the left gap and right gap are $15~\\Omega$ and $R~\\Omega$ respectively. When the resistance $R$ is shunted with equal resistance the new balance point is at $(1.6\\,l_1)$. The resistance $R$ in ohm is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$30$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$45$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$60$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-37133f372b69",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a potentiometer circuit when two cells of e.m.f. $1.5$ volt and $1.2$ volt are connected to assist each other, balancing length is $270$ cm. What will be the balancing length in cm when these two cells are connected in opposition?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$90$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$81$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$60$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f067163d1b5a",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The resistances in the two gaps of a balanced meter bridge are 'X' $\\Omega$ and '3X' $\\Omega$ respectively. If the resistances are interchanged the balance point shifts by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$33.3$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$50$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$75$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-54ce365d39f2",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The potential gradient along the length of 1 metre wire of uniform cross section is $6\\text{ V/m}$. Let '$B$' and '$C$' be the two points at $40\\text{ cm}$ and $60\\text{ cm}$ marks respectively from one end. The potential difference between points B and C is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.2\\text{ V}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2.4\\text{ V}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3.5\\text{ V}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6.0\\text{ V}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-baa4b0e075af",
+      "subtopic": "combination-of-resistances",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the following circuit, the current in the $4\\Omega$ resistance is $1.2\\text{ A}$. The total current ($I$) flowing in the circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-baa4b0e075af.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.6\\text{ A}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.4\\text{ A}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.8\\text{ A}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3.2\\text{ A}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-10f4d5a22f51",
+      "subtopic": "combination-of-resistances",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the circuit shown in the figure, the current through",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-10f4d5a22f51.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "the $3\\Omega$ resistance is $0.50$ A.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the $3\\Omega$ resistance is $0.25$ A.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the $4\\Omega$ resistance is $0.50$ A.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "the $4\\Omega$ resistance is $0.25$ A.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-199810fd6d03",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a potentiometer circuit when two cells of emf $1.6$ V and $1.3$ V are connected to assist each other, the balancing length is $290$ cm. What will be the balancing length in cm when these two cells are connected in opposition?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$70$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$80$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$65$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0127576e508e",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In meter bridge experiment, two resistances X and Y in the two gaps give a null point dividing the wire in the ratio $2:3$. When each resistance is increased by $30\\,\\Omega$, the null point divides the wire in the ratio $5:6$. The resistance X and Y are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$20\\,\\Omega$ , $30\\,\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$22\\,\\Omega$ , $33\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$32\\,\\Omega$ , $48\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$40\\,\\Omega$ , $60\\,\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a2a2c1ce1531",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the circuit shown charge q varies with time t as $q=t^2-5$, where q is in coulomb and t is in second. At time $t=3$ second, voltage $V_{AB}$ in volt will be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-a2a2c1ce1531.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$14$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$18$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e4be5bb7c266",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two cells of e.m.f. $E_1$ and $E_2$ ($E_1>E_2$) are connected as shown in figure.\nWhen a potentiometer is connected between points A and B the balancing length of potentiometer wire is $412$ cm. When same potentiometer wire is connected between points A and C the balancing length is $103$ cm. The ratio $E_1:E_2$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-e4be5bb7c266.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$6:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4:3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3:4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5211f2f9cd22",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The currents in different parts of the electric circuit are shown in following figure. The value of current $i$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-5211f2f9cd22.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.7$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.4$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.1$ A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2.8$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7c1df5208232",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Figure shows a potentiometer wire AB having resistance of $5~\\Omega$ and length 10 m. An e.m.f. is $0.4$ V of battery, the balancing length AP is (internal resistance is negligible)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-7c1df5208232.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$8$ m",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$10$ m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6$ m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$ m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1094a7e20acb",
+      "subtopic": "resistance-and-resistivity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In case of thermistor, which one of the following statements is 'WRONG'?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Resistance of NTC thermistor decreases with increase in its temperature.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Resistance of PTC thermistor decreases with increase in its temperature.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "NTC thermistors are commonly used as temperature sensors.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "PTC thermistors are generally used as resettable fuses.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8e50feb7581a",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A balanced meter bridge is shown in the circuit diagram. The meter bridge wire has resistance $2\\,\\frac{\\Omega}{cm}$. The current drawn from the battery is (Internal resistance of the battery is negligible)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-8e50feb7581a.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.6$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.8$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.95$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.05$ A",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

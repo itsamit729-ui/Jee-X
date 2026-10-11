@@ -23,7 +23,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   const [searchParams] = useSearchParams()
   const requestedSubject = searchParams.get('subject')
   const requestedChapter = searchParams.get('chapter')
-  const pyq = searchParams.get('pyq') === 'bitsat'
+  const pyq = ['bitsat', 'mht_cet'].includes(searchParams.get('pyq'))
   const assessment = searchParams.get('assessment') === '1'
   const [deadline, setDeadline] = useState(null)
   const [remaining, setRemaining] = useState(10800)
@@ -225,7 +225,8 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
                   </span>
                 </div>
                 {test.questions.find(q => q.question_id === r.question_id)?.recommendation && <p className="muted" style={{fontSize:13}}>{test.questions.find(q => q.question_id === r.question_id).recommendation.reason}</p>}
-                <p><MathText text={r.solution} /></p>
+                <p>Correct answer: {test.questions.find(q => q.question_id === r.question_id)?.options.filter(o => r.correct_option_ids.includes(o.id)).map(o => o.label).join(', ') || 'See solution'}</p>
+                <p><MathText text={r.solution || 'Worked solution is not available yet.'} /></p>
               </div>
             ))}
           </div>

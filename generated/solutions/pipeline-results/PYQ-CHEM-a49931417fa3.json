@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-a49931417fa3",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "A (pentan-1-ol, $\\mathrm{CH_3CH_2CH_2CH_2CH_2OH}$) → B (pent-1-ene, $\\mathrm{CH_2{=}CHCH_2CH_2CH_3}$) is a loss of water: dehydration.\nAlcohols are dehydrated by heating with a protic acid: conc. $\\mathrm{H_2SO_4}$ (about $443\\ \\mathrm{K}$) or 85% $\\mathrm{H_3PO_4}$. The $\\mathrm{-OH}$ is protonated, water leaves and a β-H is removed to form $\\mathrm{C{=}C}$.\nPCC is an oxidising agent: it would give pentanal, not an alkene. So options B and C are ruled out.\nC is butane-1,3-diol, $\\mathrm{HO{-}CH_2CH_2CH(OH)CH_3}$. With excess acid, both $\\mathrm{-OH}$ groups are removed by dehydration.\nC-1 $\\mathrm{-OH}$ is lost with H from C-2; C-3 $\\mathrm{-OH}$ is lost with H from C-4.\n$$\\mathrm{HO{-}CH_2CH_2CH(OH)CH_3 \\xrightarrow{\\text{excess conc. } H_2SO_4,\\ \\Delta} CH_2{=}CH{-}CH{=}CH_2 + 2H_2O}$$\nSo E is buta-1,3-diene.\nOption D is the only one giving the correct reagent (conc. $\\mathrm{H_2SO_4}$ or $\\mathrm{H_3PO_4}$). Its printed product appears garbled; the correct product is buta-1,3-diene.\nAnswer: (D) — D = conc. $\\mathrm{H_2SO_4}$ or $\\mathrm{H_3PO_4}$; E = $\\mathrm{CH_2{=}CH{-}CH{=}CH_2}$",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "medium",
+   "solution": "A (pentan-1-ol, $\\mathrm{CH_3CH_2CH_2CH_2CH_2OH}$) → B (pent-1-ene, $\\mathrm{CH_2{=}CHCH_2CH_2CH_3}$) is a loss of water: dehydration.\nAlcohols are dehydrated by heating with a protic acid: conc. $\\mathrm{H_2SO_4}$ (about $443\\ \\mathrm{K}$) or 85% $\\mathrm{H_3PO_4}$. The $\\mathrm{-OH}$ is protonated, water leaves and a β-H is removed to form $\\mathrm{C{=}C}$.\nPCC is an oxidising agent: it would give pentanal, not an alkene. So options B and C are ruled out.\nC is butane-1,3-diol, $\\mathrm{HO{-}CH_2CH_2CH(OH)CH_3}$. With excess acid, both $\\mathrm{-OH}$ groups are removed by dehydration.\nC-1 $\\mathrm{-OH}$ is lost with H from C-2; C-3 $\\mathrm{-OH}$ is lost with H from C-4.\n$$\\mathrm{HO{-}CH_2CH_2CH(OH)CH_3 \\xrightarrow{\\text{excess conc. } H_2SO_4,\\ \\Delta} CH_2{=}CH{-}CH{=}CH_2 + 2H_2O}$$\nSo E is buta-1,3-diene.\nOption D is the only one giving the correct reagent (conc. $\\mathrm{H_2SO_4}$ or $\\mathrm{H_3PO_4}$). Its printed product appears garbled; the correct product is buta-1,3-diene.\nAnswer: (D) — D = conc. $\\mathrm{H_2SO_4}$ or $\\mathrm{H_3PO_4}$; E = $\\mathrm{CH_2{=}CH{-}CH{=}CH_2}$",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1563,
+   "cache_read": 555,
+   "output": 2116,
+   "thinking": 360,
+   "api_cost_usd": 0.054943,
+   "turns": 2,
+   "seconds": 22.4,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1804,
+   "cache_read": 1199,
+   "output": 1149,
+   "thinking": 622,
+   "api_cost_usd": 0.0376598,
+   "turns": 2,
+   "seconds": 16.0,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:26:07+00:00"
+}

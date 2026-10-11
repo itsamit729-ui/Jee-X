@@ -1,0 +1,113 @@
+{
+ "ref": "PYQ-CHEM-7b66d617cf2b",
+ "subject": "Chemistry",
+ "chapter": "Alcohols Phenols and Ethers",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "B",
+ "verdict": "verified",
+ "solution": "Concept: acetylation turns each $-OH$ into $-OCOCH_3$. In effect, the H of each OH is replaced by an acetyl group, $CH_3CO$.\nMass gained per $-OH$ group: $M(CH_3CO) - M(H) = 43 - 1 = 42\\ g\\ mol^{-1}$\nTotal mass gained: $290 - 122 = 168\\ g\\ mol^{-1}$\nNumber of $-OH$ groups: $n = \\dfrac{168}{42} = 4$\nCheck: a tetrol with $M = 122$ fits erythritol, $C_4H_{10}O_4$ ($4\\times12 + 10 + 64 = 122$). Its tetraacetate has $M = 122 + 4\\times42 = 290$, which matches.\nAnswer: (B) 4",
+ "final_answer": "B",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "B",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Concept: acetylation turns each $-OH$ into $-OCOCH_3$. In effect, the H of each OH is replaced by an acetyl group, $CH_3CO$.\nMass gained per $-OH$ group: $M(CH_3CO) - M(H) = 43 - 1 = 42\\ g\\ mol^{-1}$\nTotal mass gained: $290 - 122 = 168\\ g\\ mol^{-1}$\nNumber of $-OH$ groups: $n = \\dfrac{168}{42} = 4$\nCheck: a tetrol with $M = 122$ fits erythritol, $C_4H_{10}O_4$ ($4\\times12 + 10 + 64 = 122$). Its tetraacetate has $M = 122 + 4\\times42 = 290$, which matches.\nAnswer: (B) 4",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": [
+     {
+      "expression": "43 - 1",
+      "claimed": "42"
+     },
+     {
+      "expression": "290 - 122",
+      "claimed": "168"
+     },
+     {
+      "expression": "168/42",
+      "claimed": "4"
+     },
+     {
+      "expression": "4*12 + 10 + 64",
+      "claimed": "122"
+     },
+     {
+      "expression": "122 + 4*42",
+      "claimed": "290"
+     }
+    ]
+   },
+   "calc_check": [
+    {
+     "expression": "43 - 1",
+     "claimed": "42",
+     "value": 42.0,
+     "status": "ok"
+    },
+    {
+     "expression": "290 - 122",
+     "claimed": "168",
+     "value": 168.0,
+     "status": "ok"
+    },
+    {
+     "expression": "168/42",
+     "claimed": "4",
+     "value": 4.0,
+     "status": "ok"
+    },
+    {
+     "expression": "4*12 + 10 + 64",
+     "claimed": "122",
+     "value": 122.0,
+     "status": "ok"
+    },
+    {
+     "expression": "122 + 4*42",
+     "claimed": "290",
+     "value": 290.0,
+     "status": "ok"
+    }
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 642,
+   "cache_read": 940,
+   "output": 430,
+   "thinking": 0,
+   "api_cost_usd": 0.013932,
+   "turns": 2,
+   "seconds": 8.9,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 2158,
+   "cache_read": 0,
+   "output": 583,
+   "thinking": 105,
+   "api_cost_usd": 0.028932,
+   "turns": 2,
+   "seconds": 9.7,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:08:47+00:00"
+}

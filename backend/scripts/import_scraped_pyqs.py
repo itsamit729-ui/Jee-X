@@ -29,6 +29,7 @@ import argparse
 import copy
 import hashlib
 import json
+import os
 import re
 import sys
 import tempfile
@@ -50,9 +51,9 @@ from app.importer import (  # noqa: E402
 
 CONNECTION_RETRIES = 3
 
-REPO = Path(__file__).resolve().parent.parent.parent
+REPO = Path(os.environ.get("QUESTION_REPO_ROOT", Path(__file__).resolve().parent.parent.parent))
 DEFAULT_ROOT = REPO / "generated" / "scraped"
-PUBLIC = REPO / "frontend" / "public"
+PUBLIC = Path(os.environ.get("QUESTION_PUBLIC_ROOT", REPO / "frontend" / "public"))
 STATUSES = ("draft", "reviewed", "published")
 REQUIRED_TABLES = ("subjects", "chapters", "subtopics", "questions", "question_options", "assets",
                    "question_subtopics", "question_revisions", "import_runs")
@@ -120,6 +121,7 @@ def plan(db, files, status):
             existing_chapters.append(f"{code}/{slug}")
             data["chapter"] = {"name": chapter.name, "slug": slug, "class_level": chapter.class_level,
                                "in_main": chapter.in_main, "in_advanced": chapter.in_advanced,
+                               "in_mht_cet": chapter.in_mht_cet or data["chapter"].get("in_mht_cet", False),
                                "position": chapter.position}
             db_subtopics = {s.slug: s for s in chapter.subtopics}
             data["subtopics"] = [

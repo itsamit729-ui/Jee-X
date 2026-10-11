@@ -8,6 +8,7 @@ import './pyqs.css'
 
 export default function PYQs() {
   const navigate = useNavigate()
+  const [exam, setExam] = useState('mht_cet')
   const [catalog, setCatalog] = useState(null)
   const [year, setYear] = useState(2026)
   const [subject, setSubject] = useState('PHY')
@@ -18,35 +19,37 @@ export default function PYQs() {
   useEffect(() => {
     let active = true
     setError(''); setCatalog(null)
-    request('/api/pyqs/bitsat').then(data => { if (active) setCatalog(data) })
+    request(`/api/pyqs/${exam}`).then(data => { if (active) setCatalog(data) })
       .catch(e => { if (active) setError(e.message) })
     return () => { active = false }
-  }, [retry])
+  }, [retry, exam])
   const subjects = catalog?.years.find(item => item.year === year)?.subjects || []
   const selected = subjects.find(item => item.code === subject)
   async function start() {
     requestFullscreen()
     setBusy(true); setError('')
     try {
-      const test = await request('/api/pyqs/bitsat/practice', {
+      const test = await request(`/api/pyqs/${exam}/practice`, {
         method: 'POST', body: { year, subject_code: subject, count },
       })
-      navigate('/subject-test?pyq=bitsat', { state: { missionTest: test } })
+      navigate(`/subject-test?pyq=${exam}`, { state: { missionTest: test } })
     } catch (e) { setError(e.message) }
     finally { setBusy(false) }
   }
   return <div className="crackjee-root"><AppHeader/><main className="pyq-shell">
     <header className="pyq-heading"><div><span className="pyq-eyebrow">THE QUESTION ARCHIVE</span><h1>Learn from the years before.</h1><p>Pick a year. Choose your subject. Work through one focused set.</p></div><BookOpen size={36} aria-hidden="true"/></header>
+    <div className="pyq-years" aria-label="Exam">{[["mht_cet", "MHT CET"], ["bitsat", "BITSAT"]].map(([code, label]) => <button key={code} disabled={busy} aria-pressed={exam === code} onClick={() => { setExam(code); setSubject("PHY"); setYear(2026) }}>{label}</button>)}</div>
     <section className="pyq-panel" aria-labelledby="pyq-title">
-      <div className="pyq-panel-heading"><h2 id="pyq-title">BITSAT</h2><span className="tag">Memory-based</span></div>
-      <p className="muted">Recalled questions, reviewed before publication. These practice sets are not official papers or full exam simulations.</p>
-      <p className="muted" style={{fontSize:12}}>Initial collection: selected 2022–2023 questions, with new worked solutions. Source: <a href="https://huggingface.co/datasets/datavorous/entrance-exam-dataset" target="_blank" rel="noreferrer">datavorous and contributors</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>. Year labels follow the source; coverage is incomplete.</p>
+      <div className="pyq-panel-heading"><h2 id="pyq-title">{exam === "bitsat" ? "BITSAT" : "MHT CET"}</h2><span className="tag">Memory-based</span></div>
+      {exam === "bitsat" && <><p className="muted">Recalled questions, reviewed before publication. These practice sets are not official papers or full exam simulations.</p>
+      <p className="muted" style={{fontSize:12}}>Initial collection: selected 2022–2023 questions, with new worked solutions. Source: <a href="https://huggingface.co/datasets/datavorous/entrance-exam-dataset" target="_blank" rel="noreferrer">datavorous and contributors</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>. Year labels follow the source; coverage is incomplete.</p></>}
+      {exam === "mht_cet" && <p className="muted">Chapter-wise questions reconstructed by ExamSIDE, with source answer keys. These are not official papers. Worked solutions are being added; some questions currently show only the answer key.</p>}
       {error && <div role="alert" className="alert">{error} {!catalog && <button className="btn btn-secondary" onClick={() => setRetry(v => v+1)}>Retry</button>}</div>}
       {!catalog && !error && <p role="status">Loading the archive…</p>}
       {catalog && <>
         <div className="pyq-years" aria-label="Exam year">{catalog.years.map(item => <button type="button" key={item.year} aria-pressed={year===item.year} disabled={busy} onClick={() => setYear(item.year)}>{item.year}</button>)}</div>
-        <div className="pyq-subjects" aria-label="Subject">{subjects.map(item => <button type="button" key={item.code} aria-pressed={subject===item.code} disabled={busy} onClick={() => setSubject(item.code)}><strong>{item.name}</strong><span>{item.available ? 'Ready to practise' : 'Awaiting verified questions'}</span></button>)}</div>
-        <div className="pyq-start"><label>Set length<select className="input" value={count} disabled={busy} onChange={e => setCount(Number(e.target.value))}>{[5,10,20,30].map(n => <option key={n} value={n}>{n} questions</option>)}</select></label><div><strong>+3 correct · −1 incorrect · 0 skipped</strong><p>{selected?.available ? `${Math.min(count, selected.available)} questions in this set. Solutions appear after submission.` : 'This selection is not published yet. It will open when verified questions are imported.'}</p></div><button className="btn btn-primary" disabled={busy || !selected?.available} onClick={start}>{busy ? 'Preparing…' : 'Start practice'}<ArrowUpRight size={17}/></button></div>
+        <div className="pyq-subjects" aria-label="Subject">{subjects.map(item => <button type="button" key={item.code} aria-pressed={subject===item.code} disabled={busy} onClick={() => setSubject(item.code)}><strong>{item.name}</strong><span>{item.available ? `${item.available} questions` : 'Awaiting verified questions'}</span></button>)}</div>
+        <div className="pyq-start"><label>Set length<select className="input" value={count} disabled={busy} onChange={e => setCount(Number(e.target.value))}>{[5,10,20,30].map(n => <option key={n} value={n}>{n} questions</option>)}</select></label><div><strong>{exam === "bitsat" ? "+3 correct · −1 incorrect · 0 skipped" : `+${subject === "MATH" ? 2 : 1} correct · No negative marking`}</strong><p>{selected?.available ? `${Math.min(count, selected.available)} questions in this set. Answers and available solutions appear after submission.` : 'This selection is not published yet. It will open when verified questions are imported.'}</p></div><button className="btn btn-primary" disabled={busy || !selected?.available} onClick={start}>{busy ? 'Preparing…' : 'Start practice'}<ArrowUpRight size={17}/></button></div>
       </>}
     </section>
   </main></div>

@@ -1,0 +1,992 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Permutations and Combinations",
+    "slug": "permutations-combinations",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 6,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "permutations-and-combinations",
+      "name": "Permutations and Combinations",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "factorial",
+      "name": "Factorial",
+      "position": 2
+    },
+    {
+      "slug": "application-of-permutations-and-combination-in-geometry",
+      "name": "Application of permutations and combination in geometry",
+      "position": 3
+    },
+    {
+      "slug": "number-of-combinations",
+      "name": "Number of combinations",
+      "position": 4
+    },
+    {
+      "slug": "number-of-permutations",
+      "name": "Number of permutations",
+      "position": 5
+    },
+    {
+      "slug": "conditional-permutations",
+      "name": "Conditional permutations",
+      "position": 6
+    },
+    {
+      "slug": "conditional-combinations",
+      "name": "Conditional combinations",
+      "position": 7
+    },
+    {
+      "slug": "divisibility-of-numbers",
+      "name": "Divisibility of numbers",
+      "position": 8
+    },
+    {
+      "slug": "circular-permutations",
+      "name": "Circular permutations",
+      "position": 9
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-ca3304326e57",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "There are $5$ boys and $3$ girls seated in a row for a photograph. The number of ways in which a photograph can be taken if the girls occupy only odd places is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5040$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2880$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$720$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$40320$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3f1579d303aa",
+      "subtopic": "circular-permutations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The number of ways that 8 beads of different colours can be strung to form a necklace is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5040$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2520$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2840$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5080$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-93cc05d2cac2",
+      "subtopic": "factorial",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\frac{(n+3)!}{(n^2-4)(n+1)!}=\\frac{11}{6}$, for $n\\in N,n\\ne 2$, then the value of $3n-20$ is equal to ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-90682aa28146",
+      "subtopic": "divisibility-of-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "How many different five digit numbers which are divisible by $4$ can be formed using the digits in the number $22457$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$60$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$54$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$18$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2fd14489eb2b",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of cubic equations that can be formed with the coefficients 0, 3, 2, 4, 5, 6 when repetition of coefficients is allowed, is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$720$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1296$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$864$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1080$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-44350948a183",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A teacher has 2 different books on English, 3 different books on physics, and 4 different books on mathematics. These books are to be placed on the shelf so that all books of the same subjects are together. The number of different ways this can be done is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1278$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1728$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1872$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1782$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-535c65fa3eef",
+      "subtopic": "number-of-combinations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The sum of the greatest values of ${}^{15}C_r$ and ${}^{12}C_r$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6718$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5353$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5511$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7359$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1bc3d272239f",
+      "subtopic": "application-of-permutations-and-combination-in-geometry",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a polygon, the number of diagonals is $54$. Then the number of sides of the polygon is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$11$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$13$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1fa7926b33b0",
+      "subtopic": "conditional-combinations",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A man has seven relatives, 4 of them are ladies and 3 gentlemen, his wife also has 7 relatives out of which 3 are ladies and 4 gentlemen. The number of ways in which they can invite a dinner party of 3 ladies and 3 gentlemen, so that there are 3 of the man's relatives and 3 of the wife's relatives, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$144$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$485$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$336$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$535$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-338a7d853709",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of five-digit numbers formed using the digits $2,3,5,7,9$ without repetition and which are greater than $24000$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$120$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$117$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$114$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$96$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1a3e29834f23",
+      "subtopic": "conditional-combinations",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A bag contains 23 balls, of which 7 are identical. The number of ways of selecting 12 balls from the bag is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${}^{18}C_6+{}^{18}C_8$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "${}^{18}C_7+{}^{19}C_8$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${}^{16}C_8+{}^{18}C_{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${}^{16}C_8+{}^{18}C_9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-067e7b561445",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "How many numbers (without repetition) between $400$ and $1000$ can be made with the digits $2,3,4,5,6,$ and $0$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$120$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$720$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$60$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$24$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-273a2d75c61c",
+      "subtopic": "number-of-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If all permutations of the letters of the word THREE are arranged as in dictionary, then $47^{th}$ word is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$RTEHE$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$RTHEE$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$TEEHR$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$TEERH$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a2e3b9afb07a",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of arrangements of the numbers strictly between 10 and 1000 formed with the digits 0, 1, 2, 3, 4, 5, 6 without repetition is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$180$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$215$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$216$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$222$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6f47a44405f7",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The number of 4-letter words formed from the English alphabet such that there are exactly 2 vowels and 2 consonants and no vowel is repeated, but consonants may be repeated is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${}^4C_2\\times{}^5C_2\\times(21)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${}^4C_2\\times{}^5C_2\\times{}^{21}C_2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${}^4C_2\\times{}^5P_2\\times{}^{21}P_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${}^4C_2\\times{}^5P_2\\times(21)^2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-323c0cb2fcf0",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of arrangements of the letters in the word SOLAPUR, so that consonants and vowels are placed alternately is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$129$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$144$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$121$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-128260ddb41b",
+      "subtopic": "number-of-permutations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a test, there are 5 questions of the 'true or false' type. No student has got all the answers correct and the sequence of answers for every student is unique. The maximum number of students who could have appeared for the test is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$31$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$15$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$89$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-56280afcb5bd",
+      "subtopic": "circular-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "11 players of the Indian cricket team are sitting at a circular table. The number of ways they can sit so that two players, the wicket keeper and the captain never sit together is ___",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10!$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\times 9!$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8\\times 9!$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$9\\times 9!$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7d37c974747c",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a test, there are 7 questions of the type 'True or False'. No student got all the answers correct. If the sequence of answers for every student is unique, then the maximum number of students who appeared for the test is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$128$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$126$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$127$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$125$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c1011b9b1315",
+      "subtopic": "circular-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Four men and three women are to be arranged at a round table. The number of arrangements in which no two women are together is ....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7!$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3!\\times 4!$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3!\\times 3!$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6!$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9bbb73d8b2c8",
+      "subtopic": "number-of-combinations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If ${}^nC_4,{}^nC_5$ and ${}^nC_6$ are in arithmetic progression (A.P.), then the value of n is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$ or $11$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7$ or $14$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8$ or $15$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$ or $13$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6426e90bb89e",
+      "subtopic": "number-of-combinations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Everyone in the room handshakes with everyone else. If the total number of handshakes is 66, then the number of persons in the room is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$11$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5dbb4dec871a",
+      "subtopic": "application-of-permutations-and-combination-in-geometry",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The maximum number of points of intersection between $4$ circles and $4$ straight lines is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$66$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$50$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$32$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$18$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0fe87713135d",
+      "subtopic": "number-of-permutations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The number of permutations of the letters of the word INSTITUTION are .......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6652800$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$221760$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1108800$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$554400$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5ce32acd6aa0",
+      "subtopic": "factorial",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The digit present at the unit place of the sum $(1!+2!+3!+4!+\\ldots+2026!)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

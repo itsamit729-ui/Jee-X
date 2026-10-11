@@ -1,0 +1,4561 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Three Dimensional Geometry",
+    "slug": "three-d-geometry",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 24,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "angle-between-planes",
+      "name": "Angle between Planes",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "lines-in-space",
+      "name": "Lines in space",
+      "position": 2
+    },
+    {
+      "slug": "lines-and-plane",
+      "name": "Lines and plane",
+      "position": 3
+    },
+    {
+      "slug": "direction-cosines-and-direction-ratios-of-a-line",
+      "name": "Direction cosines and direction ratios of a line",
+      "position": 4
+    },
+    {
+      "slug": "plane-in-space",
+      "name": "Plane in space",
+      "position": 5
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-5a72863252f4",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the points $(1,1,\\mu)$ and $(-3,0,1)$ are equidistant from the plane $\\vec{r}\\cdot(3\\hat{i}+4\\hat{j}-12\\hat{k})+13=0$, then the value of $\\mu$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1,\\frac{-7}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1,\\frac{7}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-1,\\frac{7}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1,\\frac{3}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-947a3fde819f",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the lines $\\frac{x-1}{2}=\\frac{y+1}{3}=\\frac{z-1}{4}$ and $\\frac{x-2}{1}=\\frac{y+m}{2}=\\frac{z-2}{1}$ intersect each other, then the value of $m$ is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-db04efc15ecf",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A plane meets the coordinate axes at points A, B and C, such that the centroid of a triangle ABC is $\\left(2,-\\frac{2}{3},\\frac{1}{2}\\right)$. The perpendicular distance from the origin to this plane is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{6}{\\sqrt{26}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{\\sqrt{26}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{\\sqrt{26}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{\\sqrt{26}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f16962d88acf",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the lines $L_1:\\frac{x-1}{-3}=\\frac{y-2}{2k}=\\frac{z-3}{2},L_2:\\frac{x-1}{3k}=\\frac{y-5}{1}=\\frac{z-6}{-5}$ are perpendicular to each other, then the equation of a plane containing the line $L_1$ and parallel to the line $L_2$ for the value of $k$ that satisfies this condition is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$31x+21y+46z-211=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$602x-1155y-747z+3949=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$43x+105y-154z+209=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2x-3y+5z-11=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-041666754f2a",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the centroid of a tetrahedron $OABC$ is $(1,2,-1)$, where O is the origin, $A(a,2,3),B(1,b,2),C(2,1,c)$ are the other vertices, then the distance of the point $P(a,b,c)$ from the origin is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$42$ units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{107}$ units",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$25$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-191c1702d119",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The vector equation of the plane passing through the point $A(-2,7,5)$ and parallel to the vectors $4\\hat{i}-\\hat{j}+3\\hat{k}$ and $\\hat{i}+\\hat{j}+\\hat{k}$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}\\cdot(-2\\hat{i}+7\\hat{j}+5\\hat{k})=26$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}\\cdot(4\\hat{i}-\\hat{j}+3\\hat{k})=27$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}\\cdot(4\\hat{i}-\\hat{j}+5\\hat{k})=26$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}\\cdot(-4\\hat{i}-\\hat{j}+5\\hat{k})=26$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-51d851f12e93",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the lines $\\frac{x-1}{2}=\\frac{y+1}{3}=\\frac{z-1}{4}$ and $\\frac{x-3}{1}=\\frac{y-c}{2}=\\frac{z}{1}$ intersect, then the radius of circle $x^2+y^2-4x+10y+c=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{9}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{9}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7}{\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b97b629d33b0",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The point of intersection of the two lines $\\frac{x-3}{3}=\\frac{y-3}{-1},z-1=0$ and $\\frac{x-6}{2}=\\frac{z-1}{3},y-2=0$ is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0,0,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(1,2,6)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(3,-1,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(6,2,1)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8db734ac35f4",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the lines $\\bar{r}=(\\hat{i}-\\hat{j}+2\\hat{k})+\\lambda(\\hat{i}+2\\hat{k})$ and $\\frac{x-p}{2}=y+2=z+1$ intersect, then the value of $p$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8f55c98909de",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The ratio in which the plane $\\bar{r}\\cdot(\\hat{i}-2\\hat{j}+3\\hat{k})=17$ divides the line segment joining the points $(-1,4,7)$ and $(3,-5,8)$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:8$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:4$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a18e6f52df12",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A line passing through $A(1,3,2)$ and parallel to the line $\\frac{x-2}{1}=\\frac{y-4}{2}=\\frac{z-6}{1}$ intersects the plane $x-y+3z-6=0$ at point B. Another line through B and perpendicular to the plane $x-y+3z-6=0$ intersects the plane $2x-y+z+4=0$ at the point C. Then the equation of median of $\\Delta ABC$ through the vertex A is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x-1}{5}=\\frac{y-3}{1}=\\frac{z-2}{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-1}{1}=\\frac{y-3}{5}=\\frac{z-2}{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x-1}{2}=\\frac{y-3}{3}=\\frac{z-2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x-1}{3}=\\frac{y-3}{-5}=\\frac{z-2}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-146c7391ec60",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The vector equation of the line passing through the point $(1,2,-4)$ and perpendicular to the two the lines $\\frac{x-8}{3}=\\frac{y+19}{-16}=\\frac{z-10}{7}$ and $\\frac{x-5}{3}=\\frac{y-33}{8}=\\frac{5-z}{5}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}=\\hat{i}+2\\hat{j}-4\\hat{k}+\\lambda(5\\hat{i}+4\\hat{j}+7\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}=\\hat{i}+2\\hat{j}-4\\hat{k}+\\lambda(2\\hat{i}+3\\hat{j}+6\\hat{k})$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}=\\hat{i}+2\\hat{j}-4\\hat{k}+\\lambda(3\\hat{i}+7\\hat{j}+13\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}=\\hat{i}+2\\hat{j}-4\\hat{k}+\\lambda(4\\hat{i}+10\\hat{j}+9\\hat{k})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-261c3f4cb308",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The volume of the tetrahedron formed by the plane $6x+4y-5z-60=0$ and the coordinate planes is ........... cubic units",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$300$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$30$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$360$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$400$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-814d7243c5d3",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the line $\\frac{x-2}{3}=\\frac{y-1}{5}=\\frac{z+2}{2}$ lies in the plane $x+3y-pz+q=0$, then the value of $p-q=$.........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$22$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$32$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-981e05f316a4",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The length of the perpendicular from the point $(3,2,1)$ to the line $\\frac{x-7}{-2}=\\frac{y-7}{2}=\\frac{z-6}{3}$ is $k$ units. then the value of $k$....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-125175a641bb",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The plane $\\frac{x}{2}+\\frac{y}{3}+\\frac{z}{4}=1$ cuts the co-ordinate axes at the points A, B, C respectively. Then the area of triangle ABC is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{61}$ sq. units",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{61}}{2}$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{61}}{4}$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{71}}{2}$ sq. units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-138ee922d414",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The co-ordinates of the foot of the perpendicular from the origin to the plane $2x-3y-6z=49$ are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(2,-3,-6)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{2}{7},\\frac{-3}{7},\\frac{-6}{7}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-2,3,6)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{-2}{7},\\frac{3}{7},\\frac{6}{7}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-24bf65932bd3",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The point having position vector $4\\hat{i}-11\\hat{j}+2\\hat{k}$ lies on the line",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}=(6\\hat{i}-4\\hat{j}+5\\hat{k})+\\lambda(\\hat{i}+7\\hat{j}+3\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}=(6\\hat{i}-4\\hat{j}+5\\hat{k})+\\lambda(2\\hat{i}+\\hat{j}+3\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}=(6\\hat{i}-4\\hat{j}+5\\hat{k})+\\lambda(2\\hat{i}+3\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}=(6\\hat{i}-4\\hat{j}+5\\hat{k})+\\lambda(2\\hat{i}+7\\hat{j}+3\\hat{k})$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8f3e947568e0",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let a plane P pass through the point $(3,7,-7)$ and contain the line $\\frac{x-2}{-3}=\\frac{y-3}{2}=\\frac{z+2}{1}$. If the distance of the plane P from the origin is d, then $d^2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f4546ecaa1a7",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The shortest distance between the lines, where the first line passes through $(0,0,0)$ and $(2,0,3)$ and the second line passes through $(2,5,0)$ and $(0,4,0)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{24}{7}$ units",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{9}{7}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{7}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{36}{7}$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-16e3857b3ecc",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If a line makes angles $\\alpha,\\beta,\\gamma$ with the coordinate axes, then the sum of values of $\\sin^2\\alpha+\\sin^2\\beta+\\sin^2\\gamma$ and $\\cos 2\\alpha+\\cos 2\\beta+\\cos 2\\gamma$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8d527d24c24c",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The vector equation of the plane which is at a distance of $5$ units from the origin and normal to the vector $2\\hat{i}+\\hat{j}-2\\hat{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{r}\\cdot(2\\hat{i}+\\hat{j}-2\\hat{k})=12$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{r}\\cdot(2\\hat{i}+\\hat{j}-2\\hat{k})=15$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{r}\\cdot(2\\hat{i}+\\hat{j}-2\\hat{k})=9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{r}\\cdot(2\\hat{i}+\\hat{j}-2\\hat{k})=18$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-94e9876cc327",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the plane passing through the intersection of planes $2x-y+z=3$, $4x-3y+5z=-9$ and parallel to the line $\\frac{x+1}{2}=\\frac{y+3}{4}=\\frac{z-3}{5}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$11x-3y-2z-54=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$11x+3y-2z-54=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$11x-3y+2z-54=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$11x-3y-2z+54=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f07ff5426103",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of a line passing through a point $(4,-2,3)$ and perpendicular to the XZ-plane is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}=(4\\hat{i}-2\\hat{j}+3\\hat{k})+\\lambda(\\hat{i}+\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}=(4\\hat{i}-2\\hat{j}+3\\hat{k})+\\lambda(\\hat{i})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}=(4\\hat{i}-2\\hat{j}+3\\hat{k})+\\lambda(\\hat{j})$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}=(4\\hat{i}-2\\hat{j}+3\\hat{k})+\\lambda(\\hat{i}-\\hat{k})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-592524ccde34",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the plane passing through the point $(0,4,3)$ and containing the line $\\frac{x-1}{1}=\\frac{y-3}{3}=\\frac{z-2}{2}$ is $ax+by+cz+d=0$, $(a\\ge 0)$. The value of $(a+b+c+d)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9592a380978c",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let the line $\\frac{x-2}{3}=\\frac{y-1}{-5}=\\frac{z+2}{2}$ lie in the plane $x+3y-\\alpha z+\\beta=0$. Then $(\\alpha,\\beta)$ equals",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(5,-15)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(-5,5)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(6,-17)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(-6,7)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b62e46656748",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $A$ be the point on line $x-1=y-2=z-1$ and $B$ be the foot of perpendicular drawn from $A$ on a plane $2x-y+z=8$ and $AB=4$. If $C$ is the point of intersection of the line and the plane, then the square of the distance between $B$ and $C$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$20$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$32$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$48$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$56$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c2ef2ceec0af",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The ratio and the coordinates of the point where the segment joining $(3,5,6)$ and $(4,6,-3)$ is divided by the YZ-plane are respectively:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:3$ internally, $(0,2,33)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:4$ internally, $(0,2,33)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:4$ externally, $(0,2,33)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4:3$ externally, $(2,0,33)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d8eca394b42c",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The plane passing through the point $(5,1,2)$ and perpendicular to the line $2x-4=y-4=z-5$ will meet the line at the point",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(3,2,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(3,2,1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(2,3,1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(1,2,3)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ef18ba0414b5",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A line makes the same angle $\\alpha$ with each of the $X$ and $Z$ axes. If the angle $\\beta$ which it makes with the $Y$-axis is such that $\\sin^2\\beta=2\\sin^2\\alpha$, then the value of $\\cos^2\\alpha$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-46dc248c18e4",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The vector equation of the plane determined by the lines $x=y,z=0$ and $x+y=0,z=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{r}\\cdot(\\hat{i}+\\hat{j})=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{r}\\cdot(\\hat{i}-\\hat{j})=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{r}\\cdot(2\\hat{i})=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{r}\\cdot\\hat{k}=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-562453302562",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The cartesian equation of the line passing through the point $\\hat{i}+2\\hat{j}+3\\hat{k}$ and perpendicular to the vectors $\\hat{i}+\\hat{j}+\\hat{k}$ and $2\\hat{i}-\\hat{j}+\\hat{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x+1}{2}=y+2=\\frac{z+3}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-1}{2}=y-2=\\frac{z-3}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x-1}{2}=y-2=\\frac{z-3}{-3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x+1}{2}=y+2=\\frac{z+3}{-3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8a6af980a43d",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the point $Q(\\alpha,\\beta,\\gamma)$ is the mirror image of $P(10,15,20)$ in the plane $\\vec{r}=\\hat{k}+\\lambda(-\\hat{i}+\\hat{j})+\\mu(-\\hat{i}+\\hat{k})$, $\\lambda,\\mu\\in\\mathbb{R}$ then the value of $3(\\alpha+\\beta+\\gamma)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-45$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-120$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-105$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-129$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b2d5357124bf",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $M$ is the foot of the perpendicular drawn from $A(4,3,2)$ on the line joining the points $B(2,4,1)$ and $C(4,5,3)$, the co-ordinates of $M$ are _____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{41}{9},\\frac{28}{9},\\frac{19}{9}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{28}{9},\\frac{41}{9},\\frac{19}{9}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{9}{28},\\frac{9}{41},\\frac{9}{19}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{19}{9},\\frac{41}{9},\\frac{28}{9}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b98e48377437",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $a$ and $b$ be the distances from the point $(2,3,4)$ to the XY plane and Y-Axis respectively. Then $a^2+b^2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$29$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$22$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$36$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1a84db949c2d",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The distance of the point $2\\hat{i}+\\hat{j}-\\hat{k}$ from the plane $\\bar{r}\\cdot(\\hat{i}-2\\hat{j}+4\\hat{k})=9$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$13$ units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{13}{\\sqrt{21}}$ units",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{15}{\\sqrt{21}}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{13}{21}$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-447beb6ce6c0",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $L$ be a line $\\frac{x-1}{1}=\\frac{y+2}{3}=\\frac{z-7}{-1}$ and $P$ be a plane passing through the midpoint of the segment joining $M(-4,2,1)$ and $N(2,-4,3)$ and perpendicular to segment MN. If the line $L$ intersects the plane $P$ at point $S(\\alpha,\\beta,\\gamma)$, then $\\alpha+\\beta+\\gamma=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-51d8560df274",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The acute angle between the line $\\bar{r}=2\\hat{i}+2\\hat{j}+\\hat{k}+\\lambda(2\\hat{i}-3\\hat{j}+2\\hat{k})$ and the plane $\\bar{r}\\cdot(3\\hat{i}-2\\hat{j}+5\\hat{k})=4$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin^{-1}\\frac{22}{\\sqrt{466}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos^{-1}\\frac{22}{\\sqrt{646}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\tan^{-1}\\frac{22}{9\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sin^{-1}\\frac{22}{\\sqrt{664}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b6c425290fad",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the angle $\\theta$ between the line $\\frac{x+1}{1}=\\frac{y-1}{2}=\\frac{z-2}{2}$ and the plane $2x-y+\\sqrt{k}\\,z+4=0$ is such that $\\cos\\theta=\\frac{\\sqrt{8}}{3}$. Then $k=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-434848c93785",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the line passing through the point of intersection of the lines $\\frac{x-3}{1}=\\frac{y-5}{2}=\\frac{z-1}{-1}$ & $\\frac{x-4}{2}=\\frac{y-2}{-1}=\\frac{z-4}{2}$ and in the direction of $\\hat{i}-2\\hat{j}+\\hat{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}=(2\\hat{i}+3\\hat{j}-2\\hat{k})+\\lambda(\\hat{i}-2\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}=(2\\hat{i}-3\\hat{j}+2\\hat{k})+\\lambda(\\hat{i}-2\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}=(2\\hat{i}-3\\hat{j}-2\\hat{k})+\\lambda(\\hat{i}-2\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}=(2\\hat{i}+3\\hat{j}+2\\hat{k})+\\lambda(\\hat{i}-2\\hat{j}+\\hat{k})$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8c96d2c80bd0",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The Cartesian equation of the line passing through $A(3,2,1)$ and $B(1,3,1)$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x-3}{2}=\\frac{y-2}{-1},~z=1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-3}{2}=\\frac{y-2}{-1},~z=-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x-3}{2}=\\frac{y-2}{1},~z=-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x-3}{2}=\\frac{y-2}{1},~z=-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9af0ef64721e",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The distance of the point $(4,5,3)$ from the plane $x+y+z=2$ measured parallel to the line $x=y=2z$ is ..... units",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d9d41905c79a",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In $\\triangle ABC$, mid-points of the sides AB, BC and CA are respectively $(l,0,0),(0,m,0)$ and $(0,0,n)$. Then $\\frac{(AB)^2+(BC)^2+(CA)^2}{l^2+m^2+n^2}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$16$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e1cdc7be9fb9",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\theta$ is the angle between the line $\\bar{r}=(\\hat{i}+\\hat{j}-\\hat{k})+\\lambda(\\hat{i}-\\hat{j}+\\hat{k})$ and the plane $\\bar{r}\\cdot(\\hat{i}-2\\hat{j}+3\\hat{k})=5$ then the value of $\\cos^2\\theta$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{6}{21}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{36}{42}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{8}{21}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{21}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e3036817692d",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the points $A(1,p,1),B(2,5,-1),C(q,11,r)$ are collinear. If the line passing through these points is perpendicular to the vector $4\\hat{i}-2\\hat{j}+\\hat{k}$, then the value of $p+q+r$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-18080d2f89e9",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For the line $\\frac{x+1}{1}=\\frac{y-2}{2}=\\frac{z+3}{3}$, identify the incorrect statement among the following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It can be represented by equation $\\frac{x+2}{1}=\\frac{y}{2}=\\frac{z+6}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "It lies in the plane $x-2y+z+8=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "It is perpendicular to the plane $x-2y+z=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "It passes through point $(0,4,0)$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2abe068c779b",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the plane containing the lines $\\frac{x-1}{2}=\\frac{y+1}{\\lambda}=\\frac{z}{2}$ and $\\frac{x+1}{5}=\\frac{y+1}{2}=\\frac{z}{\\lambda}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\pm y+1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$y\\pm z+1=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x\\pm z+1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$y\\pm z-1=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-45bdcf54b3c9",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The direction cosines of a line which is perpendicular to the lines $\\frac{x-7}{2}=\\frac{y+17}{-3}=\\frac{z-6}{1}$ and $\\frac{x+5}{1}=\\frac{y+3}{2}=\\frac{z-6}{-2}$ are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pm 4}{3\\sqrt{10}},\\frac{\\mp 5}{3\\sqrt{10}},\\frac{\\pm 7}{3\\sqrt{10}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pm 4}{3\\sqrt{10}},\\frac{\\pm 5}{3\\sqrt{10}},\\frac{\\mp 7}{3\\sqrt{10}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mp 4}{3\\sqrt{10}},\\frac{\\pm 5}{3\\sqrt{10}},\\frac{\\pm 7}{3\\sqrt{10}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pm 4}{3\\sqrt{10}},\\frac{\\pm 5}{3\\sqrt{10}},\\frac{\\pm 7}{3\\sqrt{10}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4c9452547fd5",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the lines $\\frac{x-5}{5m+2}=\\frac{2-y}{5}=\\frac{1-z}{-1}$ and $x=\\frac{2y+1}{4m}=\\frac{1-z}{-3}$ are perpendicular to each other, then the value of m is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-07d6a8a47b19",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the lines $x=-1+s$, $y=3-\\lambda s$, $z=1+\\lambda s$ and $x=\\frac{t}{2}$, $y=1+t$, $z=2-t$ with parameters s and t, are coplanar, then $\\lambda=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2f3b8f85e130",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the lines $\\vec{r}=(\\hat{i}+m\\hat{j}+3\\hat{k})+\\lambda(2\\hat{i}+3\\hat{j}+4\\hat{k})$ and $\\vec{r}=(4\\hat{i}+\\hat{j})+\\mu(5\\hat{i}+m\\hat{j}+\\hat{k})$ intersect each other, then m =",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9a5b87eefe5a",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the plane passing through the point $(1,2,1)$ and perpendicular to the planes $x+2y+2z-7=0$ and $3x+3y+2z-5=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2x+y-2z-2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2x-4y+3z+3=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2x+4y-5z-5=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x+4y-6z-3=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-abbbb7782d9c",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The distance of the point $(1,0,-3)$ from the plane $x-y-z=9$ measured parallel to the line $\\frac{x-2}{2}=\\frac{y+2}{3}=\\frac{z-6}{-6}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$ units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7$ units",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d8d1c9a49bef",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The co-ordinates of the point where the line joining the points $(3,5,-7)$ and $(-2,1,8)$ is intersected by the YOZ plane are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(0,\\frac{-13}{5},\\frac{2}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(0,\\frac{13}{5},\\frac{2}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(0,\\frac{13}{5},2\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left(0,\\frac{-13}{5},-2\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-343b84245daa",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The Incenter of the triangle whose vertices are $A(0,3,0)$, $B(0,0,4)$, and $C(0,3,4)$ is;",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\hat{i}+3\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\hat{i}-3\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\hat{j}-3\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\hat{j}+3\\hat{k}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3c5674d1c48c",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the angle between the line $x=\\frac{y-5}{2}=\\frac{z+8}{k}$ and the plane $2x-3y+3z=9$ is $\\cos^{-1}\\left(\\sqrt{\\frac{13}{22}}\\right)$, then $k=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{24}{29}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{24}{29}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{29}{24}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{29}{24}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-64a245987c3d",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Consider the lines\n$L_1:\\frac{x}{2}=\\frac{y}{2}=-z,$\n$L_2:\\frac{x-1}{1}=\\frac{y-1}{2}=\\frac{z-3}{2}.$\nThe unit vector perpendicular to both $L_1$ and $L_2$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-6\\hat{i}-5\\hat{j}+2\\hat{k}}{\\sqrt{65}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{6\\hat{i}-5\\hat{j}+2\\hat{k}}{\\sqrt{65}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{6\\hat{i}+5\\hat{j}+2\\hat{k}}{\\sqrt{65}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{6\\hat{i}-5\\hat{j}-2\\hat{k}}{\\sqrt{65}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a11098a16bf9",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the lines $\\frac{1-x}{3}=\\frac{3y-1}{2\\lambda+1}=4-z$ and $\\frac{x+2}{2\\mu}=\\frac{1-2y}{6}=\\frac{5-z}{7}$ are perpendicular, then $3\\mu+\\lambda=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-eac46c70b1dc",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The coordinates of the foot of the perpendicular drawn from the point $P(-1,3,2)$ to the line formed by the intersection of the planes $x+y+z=1$ and $2x-y+z=2$ are:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(0,-\\frac{1}{2},\\frac{3}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(1,0,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(-\\frac{1}{2},0,\\frac{3}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(0,\\frac{1}{2},-\\frac{3}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-240c80edc5d3",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the plane containing the line $\\bar{r}=(2\\hat{i}-\\hat{k})+\\lambda(\\hat{i}+\\hat{j}+2\\hat{k})$ and perpendicular to the plane $\\bar{r}\\cdot(3\\hat{i}-\\hat{j}+\\hat{k})=20$ is……",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}\\cdot(3\\hat{i}+5\\hat{j}-4\\hat{k})=10$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}\\cdot(3\\hat{i}+5\\hat{j}-4\\hat{k})=6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}\\cdot(3\\hat{i}-5\\hat{j}-4\\hat{k})=6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}\\cdot(3\\hat{i}-5\\hat{j}-4\\hat{k})=10$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7eede965a5e9",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the direction cosines of the line $\\frac{2x+5}{3}=\\frac{2-3z}{-1};\\;3y=-2$ are $\\frac{9}{\\sqrt{85}},\\;m,\\;\\frac{2}{\\sqrt{85}}$ then the value of $m$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{9}{\\sqrt{85}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-2}{\\sqrt{85}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bfa2aefc181d",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the planes $ax=y+z$, $by=z+x$, $cz=x+y$ pass through a common line, then the value of $(a+b+c-abc)=\\cdots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c7db1a3fe8d9",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the line $\\frac{x+4}{a}=\\frac{y-2}{b}=\\frac{z+1}{c}$ passes through the point $(-3,1,-2)$ and its direction is chosen such that it makes an acute angle $\\gamma$ with the positive direction of Z- axis, then value of $\\cos\\gamma$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{9}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-265c4f40da11",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the product of the distances of the point (1, 2, 3) from the origin and the plane $2x-3y+z+k=0$ is 7, then the value of k is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3ef8ea279775",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The vector equation of the line whose cartesian equations are $x=2,2y-3z+7=0$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{r}=(2\\hat{i}+2\\hat{j}-3\\hat{k})+\\lambda(2\\hat{j}-3\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{r}=(2\\hat{i}+2\\hat{j}-3\\hat{k})+\\lambda(2\\hat{i}-3\\hat{j})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{r}=\\left(2\\hat{i}+\\frac{7}{3}\\hat{k}\\right)+\\lambda(3\\hat{j}+2\\hat{k})$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{r}=\\left(-2\\hat{i}+\\frac{7}{3}\\hat{k}\\right)+\\lambda(3\\hat{j}+2\\hat{k})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-de1c950e8294",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The lines $\\frac{x-1}{-1}=\\frac{y+2}{1}=\\frac{z-3}{-2}$ and $\\frac{x-1}{1}=\\frac{y+2}{1}=\\frac{z+1}{-2}$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "intersecting but not perpendicular",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "parallel",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "perpendicular",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "skew lines",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ea89acf2a831",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The direction ratios of the normal to the plane passing through (1, 0, 0), (0, 1, 0) which makes an angle of measure $45^{\\circ}$ with the plane $2x+3y=7$ are....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{6},~1,~1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1,~1,~\\sqrt{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{13},~\\sqrt{13},~\\sqrt{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{13},~\\sqrt{13},~2\\sqrt{6}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ef49a637ef81",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The lines $\\frac{x-2}{1}=\\frac{y-3}{1}=\\frac{z-4}{-k}$ and $\\frac{x-1}{k}=\\frac{y-4}{2}=\\frac{z-5}{1}$ are coplanar if",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$k=0,-3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$k=-1,3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$k=1,2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$k=2,4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0dc7898920d4",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the lines $2x=ky=-z$ and $6x=-y=-4z$ are perpendicular to each other then the value of $k$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$16$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-48911e7d4d7d",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The vector equation of plane in parametric form, passing through the points (-1, 2, 0), (2, 2, -1) and parallel to the line $\\frac{x-1}{1}=\\frac{2y+1}{2}=\\frac{z+1}{-1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}=(-\\hat{i}+2\\hat{j})+\\lambda(3\\hat{i}-\\hat{k})+\\mu(\\hat{i}+\\hat{j}-\\hat{k})$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}=(-\\hat{i}+2\\hat{j})+\\lambda(3\\hat{i}-\\hat{k})+\\mu(\\hat{i}+2\\hat{j}-\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}=(\\hat{i}-2\\hat{j})+\\lambda(3\\hat{i}+\\hat{k})+\\mu(\\hat{i}+\\hat{j}-\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}=(-\\hat{i}+2\\hat{j})+\\lambda(3\\hat{i}-\\hat{k})+\\mu(\\hat{i}-\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-855db0629c9c",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $d$ is the distance of point (2, 5, 10) from the plane containing the lines $\\bar{r}=(4\\hat{j}-\\hat{k})+\\lambda(\\hat{i}+2\\hat{j}-2\\hat{k})$ and $\\bar{r}=(2\\hat{i}+\\hat{j})+\\mu(\\hat{i}+2\\hat{j}-2\\hat{k})$, then $d^2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$145$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$13$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$90$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$79$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a3d8134a3af8",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of a line in cartesian form passing through (0, 0, 0) and (4, 3, c) and parallel to $\\vec{a}\\times\\vec{b}$ where $\\vec{a}=2\\hat{i}+\\hat{j}+2\\hat{k}$, $\\vec{b}=3\\hat{i}-4\\hat{j}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x-4}{8}=\\frac{y-3}{6}=\\frac{z+\\frac{11}{2}}{11}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-4}{8}=\\frac{y+3}{6}=\\frac{z+\\frac{11}{2}}{-11}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x-4}{8}=\\frac{y-3}{6}=\\frac{z+\\frac{11}{2}}{-11}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x+4}{8}=\\frac{y-3}{6}=\\frac{z+\\frac{11}{2}}{-11}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f993b4c3115f",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The values of p and q so that the line joining the points (7, p, 2) and (q, -2, 5) may be parallel to the line joining the points (2, -3, 5) and (-6, -15, 11) are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p=4,~q=-3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$p=4,~q=3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$p=-4,~q=3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p=-4,~q=-3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-081fb0fc7a8b",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If for some $m\\in\\mathbb{R}$ the lines $L_1:\\frac{x+1}{m}=\\frac{y-m}{-1}=\\frac{z-1}{1}$ and $L_2:\\frac{x+2}{-4}=\\frac{y+1}{9}=\\frac{z+1}{1}$ are coplanar, then line $L_1$ passes through the point",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-7,2,-5)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(7,-2,5)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(7,2,5)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(7,-2,-5)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2f3596d5cdad",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the lines $\\vec{r}=\\hat{i}+\\hat{j}-\\hat{k}+\\lambda(q\\hat{i}-2\\hat{j}+\\hat{k})$ and $\\vec{r}=p\\hat{i}-3\\hat{j}+2\\hat{k}+\\mu(\\hat{i}-2\\hat{j}+2\\hat{k})$ intersect each other and $q\\hat{i}-2\\hat{j}+\\hat{k}$ is collinear to $4\\hat{i}-4\\hat{j}+2\\hat{k}$, then the values of $p$ and $q$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p=4,~q=3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$p=2,~q=3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$p=4,~q=2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$p=4,~q=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-607d3654e629",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\theta$ is the angle between the lines $\\frac{x-1}{2}=\\frac{2y+3}{4};~z=-2$ and $x=1;~\\frac{y-1}{2}=\\frac{z+1}{2}$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\theta=\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\theta=\\frac{\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\theta=\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\theta=\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e01971269cdf",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The angle between a diagonal and one of its edges of a cube is ...................",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos^{-1}\\left(\\frac{1}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos^{-1}\\left(\\frac{1}{2\\sqrt{2}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\tan^{-1}\\left(\\sqrt{2}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-43248540c8e2",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The angle between the line $x-1=2-y=\\frac{2z-6}{4}$ and the plane $\\vec{r}\\cdot(2\\hat{i}+\\hat{j}+\\hat{k})=10$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{12}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-76bcae68b6ec",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the distance of point $B(2,1,-3)$ from the line passing through the point $A(4,-2,2)$, and parallel to the vector $\\vec{c}=-4\\hat{i}-6\\hat{j}-2\\hat{k}$ is $x$, then $x^4+x^2+541=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2026$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2025$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2024$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2023$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7aac09198204",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the perpendicular line from the point $(2,-3,1)$ to the line $\\frac{x+1}{2}=\\frac{y-3}{3}=\\frac{z+2}{-1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x-2}{24}=\\frac{y+3}{13}=\\frac{z-1}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-2}{24}=\\frac{y-3}{-13}=\\frac{z-1}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x+2}{-24}=\\frac{y+3}{13}=\\frac{z+1}{-9}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x-2}{-24}=\\frac{y+3}{13}=\\frac{z-1}{-9}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c0d6b5512f1a",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The sum of the coordinates of one of the points on the line $\\frac{x-2}{1}=\\frac{y+3}{-2}=\\frac{z+5}{2}$ which is at a distance of 3 units from the point $(2,-3,-5)$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-7$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$11$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-11$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c0f0cbe45c92",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If A and B are the feet of the perpendiculars drawn from $(1,2,3)$ to planes $YZ$ and $ZX$, then the equation of the plane passing through the points A, B and the origin is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6x+3y+2z=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6x-3y-2z=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6x+3y-2z=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3x+6y+2z=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0dec52053d18",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The line $\\mathcal{l}$ passes through the point $(2,1,1)$ and is parallel to the plane $x+y+2z=18$. If line $\\mathcal{l}$ intersects the line $\\frac{x+2}{3}=\\frac{y+1}{-1}=\\frac{z-2}{1}$, then equation of the line $\\mathcal{l}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x-2}{3}=\\frac{y-1}{1}=\\frac{z-1}{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-3}{1}=\\frac{y-2}{3}=\\frac{z-2}{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x-2}{3}=\\frac{y-1}{-1}=\\frac{z-1}{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x-3}{1}=\\frac{y-4}{3}=\\frac{z+1}{-2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-73068953bf4d",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the plane $\\bar{r}=(\\lambda+\\mu)\\hat{i}+(2+\\mu)\\hat{j}+(3\\lambda+2\\mu)\\hat{k}$, where $\\lambda$ and $\\mu$ are parameters, intersects coordinate axes at points $(a,0,0)$, $(0,b,0)$ and $(0,0,c)$ then $a+b+c=$...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{7}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{8}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{10}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7aa477b3274d",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The coordinates of the point of intersection of the lines $\\frac{x-3}{1}=\\frac{y-5}{2}=\\frac{z-1}{-1}$ and $\\frac{x-4}{2}=\\frac{y-2}{-1}=\\frac{z-4}{2}$ are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(2,3,2)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(-2,3,-2)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-2,-3,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(2,3,-2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-eb88cab99ab9",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The acute angle $\\theta$ between the $xy$-plane and the plane passing through the point $(1,2,4)$ and parallel to the vectors with direction ratios $3,2,-1$ and $1,-2,-2$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cos^{-1}\\left(\\frac{8}{5\\sqrt{5}}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\cos^{-1}\\left(\\frac{5}{8\\sqrt{5}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sin^{-1}\\left(\\frac{8}{5\\sqrt{5}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f9bd4da52187",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the plane $2x+3y+z=6$ cuts coordinate axes at A, B and C, then the volume of tetrahedron OABC (where O is the origin) is ......cubic units.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$36$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$180$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-32e8277c9a38",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The acute angle between the lines $2x=3y=-z$ and $6x=-y=-4z$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-376e4b13da04",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the equation of a plane passing through $A(1,p,2)$, $B(3,2,4)$ and parallel to the z axis, is $3x-2y-q=0$, then $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p=-1,~q=5$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$p=1,~q=-5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$p=-2,~q=-5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p=2,~q=-5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6845df5b5bec",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the plane passing through the points having position vectors $(\\bar{a}+\\bar{b}),(\\bar{b}+\\bar{c})$ and $(\\bar{a}+\\bar{c})$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}\\cdot(\\bar{a}\\times\\bar{b}+\\bar{b}\\times\\bar{c}+\\bar{c}\\times\\bar{a})=[\\bar{a}~\\bar{b}~\\bar{c}]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}\\cdot(\\bar{a}\\times\\bar{b}+\\bar{b}\\times\\bar{c}+\\bar{c}\\times\\bar{a})=2[\\bar{a}~\\bar{b}~\\bar{c}]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}\\cdot(\\bar{a}\\times\\bar{b}+\\bar{b}\\times\\bar{c}+\\bar{a}\\times\\bar{c})=[\\bar{a}~\\bar{b}~\\bar{c}]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}\\cdot(\\bar{a}\\times\\bar{b}+\\bar{b}\\times\\bar{c}+\\bar{a}\\times\\bar{c})=2[\\bar{a}~\\bar{b}~\\bar{c}]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-69dad9235bc3",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The angle between the line $\\bar{r}=(\\hat{i}+2\\hat{j}+\\hat{k})+\\lambda(\\hat{i}+\\hat{j}+\\hat{k})$ and the plane $\\bar{r}\\cdot(2\\hat{i}-\\hat{j}+\\hat{k})=8$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\theta=\\sin^{-1}\\left(\\frac{\\sqrt{2}}{3}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\theta=\\cos^{-1}\\left(\\frac{\\sqrt{2}}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\theta=\\cos^{-1}\\left(\\frac{2}{\\sqrt{3}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\theta=\\sin^{-1}\\left(\\frac{3}{\\sqrt{2}}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-48597f2b1977",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The plane $\\frac{x}{2}+\\frac{y}{3}+\\frac{z}{4}=1$ cuts the axes at the points A, B, C then the area of triangle ABC is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{29}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{41}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{61}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{51}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4c1fd90a72c8",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "From a point P $(a,b,c)$, perpendiculars PA and PB are drawn to XY plane and ZX plane respectively. If O is the origin, then the equation of plane OAB is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x}{a}-\\frac{y}{b}-\\frac{z}{c}=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x}{a}-\\frac{y}{b}+\\frac{z}{c}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x}{a}+\\frac{y}{b}-\\frac{z}{c}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x}{a}+\\frac{y}{b}+\\frac{z}{c}=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-79d671ecb5f5",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The symmetric form of the equation of the line $x=ay+b$, $z=cy+d$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x-a}{b}=y=\\frac{z-c}{d}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x-b}{a}=\\frac{y-d}{c}=z$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=\\frac{y-a}{b}=\\frac{z-c}{d}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x-b}{a}=y=\\frac{z-d}{c}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-caae8bc16949",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $p$ is the shortest distance between the lines $\\frac{x+1}{7}=\\frac{y+1}{-6}=z+1$ and $\\vec{r}=(3\\hat{i}+5\\hat{j}+7\\hat{k})+\\mu(\\hat{i}-2\\hat{j}+\\hat{k})$ then $[p]$ is... ,(where $[\\,.\\,]$ denotes the greatest integer function.)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$20$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3a7b3ec11b34",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A line passing through the points $(1,-1,2)$ and $(2,0,1)$ meets the XY plane and the YZ plane at points A and B respectively. The distance AB is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\sqrt{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8593349d5a72",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\alpha,\\beta,\\gamma$ are the direction angles of the line $x=4z+3$ and $y=2-3z$, then the value of $\\cos\\alpha+\\cos\\beta+\\cos\\gamma$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{\\sqrt{26}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{6}{\\sqrt{26}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{\\sqrt{26}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{\\sqrt{26}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-87ba37a0bfbc",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The perpendicular distance from the origin to the plane containing the points $(1,-2,1),(2,-1,-3)$ and $(0,1,5)$ is...(in units)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{17}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{\\sqrt{26}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{\\sqrt{17}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{\\sqrt{26}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bb69ea4acec8",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{r}\\cdot(3\\hat{i}-2\\hat{j}+7\\hat{k})=32$ is the equation of a plane and the line having direction ratios $(5,b,3)$ is parallel to the plane, then the value of b is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$b=13$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$b=15$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$b=16$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$b=18$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d2b21b9ce561",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The shortest distance between the lines $\\vec{r}=(4\\hat{i}-\\hat{j})+\\lambda(\\hat{i}+2\\hat{j}-3\\hat{k})$ and $\\vec{r}=(\\hat{i}-\\hat{j}+2\\hat{k})+\\mu(\\hat{i}+4\\hat{j}-5\\hat{k})$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1ae864590c31",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the plane containing the line $\\frac{x+1}{4}=\\frac{y-2}{-1}=\\frac{z+5}{3}$ and parallel to the vector $\\hat{i}+\\hat{j}-\\hat{k}$ is $ax+by+cz=9$. Then, the value of $a+b-c$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$14$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-10$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-14$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-37e624873850",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The angle between the line $\\frac{x+1}{1}=\\frac{y-2}{2}=\\frac{z-3}{3}$ and the plane $3x+4y+z+5=0$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin^{-1}\\left(\\frac{\\sqrt{7}}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sin^{-1}\\left(\\frac{\\sqrt{14}}{\\sqrt{26}}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sin^{-1}\\left(\\frac{\\sqrt{21}}{14}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sin^{-1}\\left(\\frac{\\sqrt{28}}{21}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-50b066760177",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The position vector of a point $P$, such that $OP$ inclined to the X axis at $45^{\\circ}$ and to the Y axis at $60^{\\circ}$ and $|OP|=12$ units is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{r}=6\\sqrt{2}\\hat{i}-6\\hat{j}+6\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{r}=6\\sqrt{2}\\hat{i}\\pm 6\\hat{j}\\pm 6\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{r}=6\\sqrt{2}\\hat{i}+6\\hat{j}\\pm 6\\hat{k}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{r}=6\\sqrt{2}\\hat{i}-6\\hat{j}-6\\hat{k}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-51d643f848a6",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The distance of the point $(1,1,1)$ from the line passing through the point $(2,3,4)$ whose direction ratios are $2,-3,6$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{290}}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{390}}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{490}}{7}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{590}}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-92343bc7ba9d",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the plane that perpendicularly bisects the line segment joining the points $A(2,-1,3)$ and $B(3,1,0)$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+2y-3z+2=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x+2y-3z-2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x-3z+2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x+2y-3z=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-03a36a0647b9",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the lines $\\frac{x-1}{1}=\\frac{y-1}{2}=\\frac{z-1}{3}$ and $\\frac{x-3}{1}=\\frac{y-k}{2}=\\frac{z-5}{1}$ are intersect at the point $P$, then the distance (in units) of the point $P$ from the origin $O(0,0,0)$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{14}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{21}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{26}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{29}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-497f501e75c2",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The foot of the perpendicular from the origin to the plane is $N=(4,5,a),a>0$ and $l(ON)=7$, then vector equation of the plane is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{r}\\cdot(4\\hat{i}+5\\hat{j}-2\\sqrt{2}\\hat{k})=49$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{r}\\cdot(4\\hat{i}+5\\hat{j}+2\\sqrt{2}\\hat{k})=49$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{r}\\cdot(4\\hat{i}-5\\hat{j}+2\\sqrt{2}\\hat{k})=49$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{r}\\cdot(4\\hat{i}+5\\hat{j}+2\\sqrt{2}\\hat{k})=40$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d91aa25eac75",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The planes $5x-2y+3z=9$ and $15x-6y+9z=-5$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Perpendicular",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Intersect each other",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Parallel",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Pass through $(2,2,1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f849f9d78542",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of a plane passing through the intersection of two planes $\\vec{r}\\cdot(\\hat{i}-2\\hat{j}+3\\hat{k})=4$ and $\\vec{r}\\cdot(2\\hat{i}+\\hat{j}-3\\hat{k})=7$ and parallel to Y-axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{r}\\cdot(2\\hat{i}-2\\hat{k})=11$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{r}\\cdot(\\hat{i}+\\hat{j}-2\\hat{k})=3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{r}\\cdot(5\\hat{i}-3\\hat{k})=18$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{r}\\cdot(4\\hat{i}-3\\hat{k})=28$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-049550527df0",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If M denotes the midpoint of the line joining A$(4,5,-10)$ and B$(-1,2,1)$, then the equation of the plane through M and perpendicular to AB is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}\\cdot\\left(-5\\hat{i}-3\\hat{j}+11\\hat{k}\\right)+\\frac{135}{2}=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}\\cdot\\left(\\frac{3}{2}\\hat{i}+\\frac{7}{2}\\hat{j}-\\frac{9}{2}\\hat{k}\\right)+\\frac{135}{2}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}\\cdot\\left(4\\hat{i}+5\\hat{j}-10\\hat{k}\\right)+4=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}\\cdot\\left(-\\hat{i}+2\\hat{j}+\\hat{k}\\right)+4=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-49d7f606de42",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The shortest distance between the lines $\\frac{x-3}{3}=\\frac{y-8}{-1}=\\frac{z-3}{1}$ and $\\frac{x+3}{-3}=\\frac{y+7}{2}=\\frac{z-6}{4}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\sqrt{30}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\sqrt{30}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{30}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{30}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5303297324e6",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The acute angle between the line $\\vec{r}=(\\hat{i}+2\\hat{j}+\\hat{k})+\\lambda(\\hat{i}+\\hat{j}+\\hat{k})$ and the plane $\\vec{r}\\cdot(2\\hat{i}+p\\hat{j}+\\hat{k})=8$ is $\\sin^{-1}\\left(\\frac{\\sqrt{2}}{3}\\right)$, then the value of $p$ are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p=1$ or $p=17$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$p=-1$ or $p=-17$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$p=6$ or $p=3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p=-6$ or $p=-3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7d16d079538a",
+      "subtopic": "plane-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A plane meets the co-ordinate axes in A, B, C such that the centroid of the triangle ABC is the point $(1,r,r^2)$, then the equation of the plane is,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+ry+r^2z=3r^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$r^2x+ry+z=3r^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x+ry+r^2z=3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$r^2x+ry+z=3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-27475364d515",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The Cartesian equations of the line passing through $A(0,1,1)$ and parallel to the X-axis are ....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$y=1,z=1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x+y+z=2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$y=z$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-54834159136d",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the perpendicular distance of the plane passing through the point $Q(1,0,-1)$ and containing the line $\\vec{r}=(\\hat{i}-3\\hat{j}+\\hat{k})+\\lambda(2\\hat{i}-2\\hat{j}+\\hat{k})$ from origin is $\\frac{p}{\\sqrt{53}}$ then $p=$ ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d7656c47286b",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Lines $\\vec{r}=\\vec{a}+\\lambda\\vec{b}$ and $\\vec{r}=\\vec{b}+\\mu\\vec{a}$ intersect at point $(2,4,-4)$. If $|\\vec{a}-\\vec{b}|=4$, then $\\vec{a}\\cdot\\vec{b}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-10$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ff00cca4ee26",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the line joining points $(2,1,4)$ and $(a-1,4,-1)$ is parallel to the line joining points $(0,2,b-1)$ and $(5,3,-2)$ then the values of $b$ and $a$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$18,\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2},18$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3},18$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{2}{3},18$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5b4337123690",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The coordinates of the foot of the perpendicular and the length of perpendicular drawn from $(0,2,3)$ to the line $\\frac{x+3}{5}=\\frac{y-1}{2}=\\frac{z+4}{3}$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(2,3,-1),\\sqrt{31}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(2,3,1),\\sqrt{21}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(2,3,-1),\\sqrt{21}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(2,3,1),\\sqrt{31}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5badbf6ec9a6",
+      "subtopic": "lines-in-space",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\vec{r}=4\\hat{i}+2\\hat{j}+7\\hat{k}+\\lambda(3\\hat{i}-5\\hat{k})$ is the vector equation of the line passing through $(7,2,2)$, where $\\lambda$ is parameter, then the value of $\\lambda$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c9d509b68b29",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The position vector of the point at which the line joining the points $\\hat{i}+2\\hat{j}-\\hat{k}$ and $3\\hat{i}+4\\hat{j}-2\\hat{k}$ cuts the plane $\\vec{r}\\cdot(\\hat{j}-\\hat{k})=-1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{5}{3}\\hat{i}-\\frac{2}{3}\\hat{j}+\\frac{1}{3}\\hat{k}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{5}{3}\\hat{i}-\\frac{2}{3}\\hat{j}-\\frac{1}{3}\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{3}\\hat{i}-\\frac{2}{3}\\hat{j}+\\frac{1}{3}\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{3}\\hat{i}-\\frac{2}{3}\\hat{j}-\\frac{1}{3}\\hat{k}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f6f25ad05602",
+      "subtopic": "direction-cosines-and-direction-ratios-of-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The direction cosines $l,m,n$ of the two lines are connected by the relations $l+m+n=0$ and $lm=0$, then the angle between the lines is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$45^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$60^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$90^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fdbcf91d01cf",
+      "subtopic": "lines-and-plane",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the line $\\frac{x-2}{3}=\\frac{y-1}{-5}=\\frac{z+2}{2}$ lies in the plane $x+3y+\\alpha z+\\beta=0$, then $(\\alpha,\\beta)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(6,7)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(-6,7)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(6,-7)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(-6,-7)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

@@ -450,7 +450,7 @@
           "is_correct": false
         }
       ],
-      "solution": ""
+      "solution": "The sequence is geometric with first term $729 = 3^6$ and ratio $r = 3^{-2}$, so $a_k = 3^{8-2k}$.\n$P_n = 3^{\\sum_{k=1}^{n}(8-2k)} = 3^{8n-n(n+1)} = 3^{7n-n^2}$\n$(P_n)^{1/n} = 3^{7-n}$\n$\\sum_{n=1}^{40} 3^{7-n} = 3^6+3^5+\\dots+3^{-33}$, which is a geometric progression with ratio $\\frac13$ and 40 terms.\nSum $= \\dfrac{3^6(1-3^{-40})}{1-\\frac13} = \\dfrac{3^7(1-3^{-40})}{2}$\n$2\\sum_{n=1}^{40} (P_n)^{1/n} = 3^7 - 3^{-33} = \\dfrac{3^{40}-1}{3^{33}}$\nComparing with $\\dfrac{3^\\alpha-1}{3^\\beta}$ gives $\\alpha = 40$ and $\\beta = 33$, with $\\gcd(40,33) = 1$.\n$\\alpha+\\beta = 73$\nAnswer: (A) 73"
     },
     {
       "ref": "PYQ-MATH-9a5d33374e8c",

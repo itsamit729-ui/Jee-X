@@ -1,0 +1,1108 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Circles",
+    "slug": "circles",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 10,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "tangents-and-normals",
+      "name": "Tangents and Normals to a Circle",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "tangent-and-normal",
+      "name": "Tangent and normal",
+      "position": 2
+    },
+    {
+      "slug": "director-circle",
+      "name": "Director circle",
+      "position": 3
+    },
+    {
+      "slug": "position-of-a-point-with-respect-to-circle",
+      "name": "Position of a point with respect to circle",
+      "position": 4
+    },
+    {
+      "slug": "pair-of-tangents",
+      "name": "Pair of tangents",
+      "position": 5
+    },
+    {
+      "slug": "basic-theorems-of-a-circle",
+      "name": "Basic theorems of a circle",
+      "position": 6
+    },
+    {
+      "slug": "parametric-form-of-a-circle",
+      "name": "Parametric form of a circle",
+      "position": 7
+    },
+    {
+      "slug": "number-of-common-tangents-and-position-of-two-circle",
+      "name": "Number of common tangents and position of two circle",
+      "position": 8
+    },
+    {
+      "slug": "intercepts-of-a-circle",
+      "name": "Intercepts of a circle",
+      "position": 9
+    },
+    {
+      "slug": "family-of-circle",
+      "name": "Family of circle",
+      "position": 10
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-b33e015c66f9",
+      "subtopic": "family-of-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of a circle which passes through the points $(2,3)$ and $(4,5)$ and whose center lies on the straight line $y-4x+3=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-4x-10y+25=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-4x-10y-25=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2-4x+10y-25=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2+4x-10y+25=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d55d0669476f",
+      "subtopic": "family-of-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the equation $3x^2+(3-p)xy+qy^2-2px=8pq$ represents a circle, then the area (in sq. units) of this circle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$81\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-52b67b42ac11",
+      "subtopic": "parametric-form-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The standard parametric equations of the circle $x^2+y^2-4x-6y-12=0$ are ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=2+5\\cos\\theta,y=3+5\\sin\\theta$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x=-2+5\\cos\\theta,y=-3+5\\sin\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=2+12\\cos\\theta,y=3+12\\sin\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x=3+5\\cos\\theta,y=2+5\\sin\\theta$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-56b3f515ae0b",
+      "subtopic": "position-of-a-point-with-respect-to-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The length of the tangent segment drawn from point $P$ to the circle, $x^2+y^2-2x-2y-2=0$ is $4\\sqrt{2}$ units. If $\\lambda_{max}$ and $\\lambda_{min}$ are the maximum and minimum distances of point $P$ from the circle, then $\\lambda_{max}+\\lambda_{min}$ is equal to....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$16$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-908f43531791",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a circle with center $(-1,1)$ touches the line $x+2y+4=0$, then the co-ordinates of the point of contact are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-2,-1)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(8,-2)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(2,-3)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(4,-4)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-11da76b8e795",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the circle concentric with circle $x^2+y^2-6x+7=0$ and which touches the line $x+y+3=0$ is ....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-6x+9=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-6x-9=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2-6x+3=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2-6x-3=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b9ea487fe4cf",
+      "subtopic": "parametric-form-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The Cartesian coordinates of a point P with parameter $\\theta=\\frac{5\\pi}{6}$ on the circle $x^2+y^2-2x+4y+1=0$ are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(1,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(0,-2+\\sqrt{3})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-1,-2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(-\\sqrt{3}+1,-1)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f3db9028f495",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of a circle passing through the foci of the ellipse $\\frac{x^2}{25}+\\frac{y^2}{16}=1$ and having a center at $(0,-4)$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-8y-9=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2+8y-9=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2+8y-41=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2-8y-41=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-55a1ea76e9f9",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the tangent to the circle $x^2+y^2=5$ at point $(1,-2)$ also touches the circle $x^2+y^2-8x+6y+k=0$, then $\\frac{k}{5}=\\cdots\\cdots\\cdots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$20$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{19}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4fd83cbf7251",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of a circle with origin as centre and passing through the vertices of an equilateral triangle whose median is of length $3a$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2=9a^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2=16a^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2=4a^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2=a^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-752df0c8e6be",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The centre and radius of the circle $(a+1)x^2+3y^2-6x+9y+a+4=0$ are respectively ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(-1,\\frac{3}{2}\\right),\\frac{\\sqrt{5}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(-1,-\\frac{3}{2}\\right),\\frac{\\sqrt{5}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(1,-\\frac{3}{2}\\right),\\frac{\\sqrt{5}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left(1,\\frac{3}{2}\\right),\\frac{\\sqrt{5}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ecafd4522f26",
+      "subtopic": "pair-of-tangents",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The angle between the tangents drawn from the origin to the circle $(x-7)^2+(y+1)^2=25$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$45^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$90^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$60^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-144caa65fe07",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of a circle whose center is at $(3,-4)$ and the line $12x-5y-17=0$ cuts the circle at $A$ and $B$, where $l(AB)=6$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-6x+8y+7=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-6x+8y-7=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2+6x+8y+7=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2-6x-8y-7=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4730ee3965ae",
+      "subtopic": "pair-of-tangents",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The angle between the tangents drawn from the point $(1,1)$ to the circle $2x^2+2y^2-8x+4y+5=0$ is …………",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ae1263a20c92",
+      "subtopic": "position-of-a-point-with-respect-to-circle",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The coordinates of the point on the curve $x^2+y^2=8$ which are nearest to the point $(2,0)$ are:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(2,\\;2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\sqrt{2},\\;\\sqrt{6})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(2\\sqrt{2},\\;0)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(\\sqrt{6},\\;\\sqrt{2})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fbeded261739",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equations of the tangent to the curve $x^2+y^2=10$, where the tangent is parallel to the line $2x+y-1=0$, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2x+y=\\pm\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2x+y=\\pm 5\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2x+y=\\pm 2\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2x+y=\\pm 3\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-84b1f37b2967",
+      "subtopic": "intercepts-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Line $l:x+y=4$ intersects the circle $x^2+y^2-2x-2y=2$ at points $A$ and $B$. If C is the center of the circle, then the area of $\\triangle ABC$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ac569da25a04",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a circle passes through the points $(2,3)$ and $(4,5)$ and its center lies on the straight line $y-4x+3=0$, then its equation is......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-4x-10y+25=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-4x-10y-25=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2-4x+10y-25=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2+25=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-93926764e02a",
+      "subtopic": "number-of-common-tangents-and-position-of-two-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the circles $x^2+y^2=16$ and $x^2+y^2+2ax+4y+4=0$ touch each other internally then $a=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{56}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-23a7014be217",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The tangent to the circle $x^2+y^2=10$ at the point $(3,1)$ touches the circle $x^2+y^2-2\\sqrt{10}\\,x-20y+k=0$, then the value of $k$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-109$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$109$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-101$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$101$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e330ef1bd247",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the region (in sq. unit) bounded by x-axis, the tangent and normal to the circle $x^2+y^2=4$, drawn at a point $(1,\\sqrt{3})$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-98cf3220a2a4",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The number of circles passing through the origin and touching the lines $x+y=1$ and $x-y=1$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-29475ddaf785",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A line making equal intercepts on coordinate axes and is tangent to the circle $x^2+y^2=4$. The length of each intercept made by line on the coordinate axes is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-47fd8ffe6a54",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A circle passes through the point $(0,1)$ and touches the parabola $y=x^2$ at the point $(1,1)$. The centre of the circle is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(-\\frac{1}{2},-\\frac{5}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{1}{2},-\\frac{5}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{1}{2},\\frac{5}{4}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left(-\\frac{1}{2},\\frac{5}{4}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-02f67cf78e67",
+      "subtopic": "director-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the director circle of the circle $x^2+y^2+3x-8y-3=0$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4x^2+4y^2+12x-32y-12=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4x^2+4y^2+12x-32y-97=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2+12x-32y-\\frac{97}{4}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2+3x-8y-12=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9712ec498c24",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the circle which passes through the points $(2,3)$ and $(4,5)$ and whose centre lies on a straight line $4x-y-3=0$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(x-1)^2+(y-6)^2=10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(x-3)^2+(y-4)^2=2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+(y-7)^2=20$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(x-2)^2+(y-5)^2=4$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d3c40868c3fa",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of a circle whose center lies on $x+2y=0$ and touching the lines $3x-4y+8=0$ and $3x-4y-28=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(x-2)^2+(y+1)^2=324$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(x-2)^2+(y-1)^2=324$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5(x-2)^2+5(y+1)^2=324$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$25(x-2)^2+25(y+1)^2=324$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-863f6676b67a",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the length of the tangent segment from the point $(8,-3)$ to the circle $x^2+y^2-2x+ky-23=0$ is $\\sqrt{10}$, then the value of $k$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$24$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$34$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

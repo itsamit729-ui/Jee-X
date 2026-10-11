@@ -1,0 +1,4487 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Vector Algebra",
+    "slug": "vectors",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 23,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "scalar-triple-product",
+      "name": "Scalar Triple Product",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "name": "Scalar or dot product of two vectors and its applications",
+      "position": 2
+    },
+    {
+      "slug": "algebra-and-modulus-of-vectors",
+      "name": "Algebra and modulus of vectors",
+      "position": 3
+    },
+    {
+      "slug": "scalar-and-vector-triple-product",
+      "name": "Scalar and vector triple product",
+      "position": 4
+    },
+    {
+      "slug": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "name": "Vector or cross product of two vectors and its applications",
+      "position": 5
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-4161920ccf7c",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If D and E are the midpoints of the sides BA and BC of triangle ABC, then $\\overline{AE}+\\overline{DC}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\overline{AC}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}\\overline{BC}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{2}\\overline{AC}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}\\overline{AC}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4e46d212051e",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $7\\hat{j}+10\\hat{k},-\\hat{i}+6\\hat{j}+6\\hat{k}$ and $-4\\hat{i}+9\\hat{j}+6\\hat{k}$ are the position vectors of the vertices A, B and C repectively of $\\triangle ABC$. Then the position vector of the point where the bisector of the angle A meets side BC is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(2+3\\sqrt{2})\\hat{i}+(3+3\\sqrt{3})\\hat{j}+6\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(2-3\\sqrt{2})\\hat{i}+(3+3\\sqrt{2})\\hat{j}+6\\hat{k}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(2-3\\sqrt{2})\\hat{i}+(3-3\\sqrt{2})\\hat{j}+6\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(2-3\\sqrt{2})\\hat{i}+(3+3\\sqrt{2})\\hat{j}-6\\hat{k}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a652817d7717",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $a,b,c$ are distinct non-negative numbers and the vectors $a\\hat{i}+a\\hat{j}+c\\hat{k},\\hat{i}+\\hat{k},c\\hat{i}+c\\hat{j}+b\\hat{k}$ lie in the same plane, then the value of $c$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "The arithmetic mean of $a$ and $b$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "The geometric mean of $a$ and $b$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "The harmonic mean of $a$ and $b$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b26ad669dc12",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The vector $\\bar{a}+3\\bar{b}$ is perpendicular to $7\\bar{a}-5\\bar{b}$ and the vector $\\bar{a}-4\\bar{b}$ is perpendicular to $7\\bar{a}-2\\bar{b}$. Then the angle between $\\bar{a}$ and $\\bar{b}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b980e001bb93",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $A(2,3,0)$, $B(0,3,2)$ and $C(4,0,3)$ be vertices of a triangle, then the area of the triangle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{171}}{2}\\text{ sq. units}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{172}}{2}\\text{ sq. units}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{173}}{2}\\text{ sq. units}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{174}}{2}\\text{ sq. units}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-87b241df2324",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $|\\bar{a}|=4,|\\bar{b}|=3$ and $\\bar{a}\\cdot\\bar{b}=8$ then $[\\bar{a}~~\\bar{a}+\\bar{b}~~\\bar{a}\\times\\bar{b}]=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$96$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$80$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$64$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$120$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bda2fd97a684",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $x_0$ be the point of local maxima of $f(x)=\\bar{a}\\cdot(\\bar{b}\\times\\bar{c})$ where $\\bar{a}=x\\hat{i}-2\\hat{j}+3\\hat{k},\\bar{b}=-2\\hat{i}+x\\hat{j}-\\hat{k}$ and $\\bar{c}=7\\hat{i}-2\\hat{j}+x\\hat{k}$ then the value of $\\bar{a}\\cdot\\bar{c}$ at $x=x_0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$26$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-15$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-26$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cf9ac88a58e6",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The parallelopiped is determined by vectors $\\bar{a}=-2\\hat{i}+5\\hat{j}+3\\hat{k}$, $\\bar{b}=\\hat{i}+3\\hat{j}-2\\hat{k}$, $\\bar{c}=-3\\hat{i}+\\hat{j}+4\\hat{k}$. The altitude of parallelopiped on the parallelogram base determined by vectors $\\bar{b}$ and $\\bar{c}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\sqrt{3}}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ebf9de24a39d",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\bar{a},\\bar{b},\\bar{c}$ be the unit vectors such that $\\bar{a}$ is perpendicular to $\\bar{b}$ and the angle between $\\bar{b}$ and $\\bar{c}$ is $120^{\\circ}$. If $\\bar{a}+\\bar{c}$ is perpendicular to $\\bar{b}+\\bar{c}$ then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(\\bar{a}+\\bar{c})\\cdot(\\bar{b}-\\bar{c})=1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\bar{a}-\\bar{c})\\cdot(\\bar{b}-\\bar{c})=-2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(\\bar{a}-\\bar{c})\\cdot(\\bar{b}+\\bar{c})=1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\bar{a}-\\bar{c})\\cdot(\\bar{b}-\\bar{c})=2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fe2c4614d513",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a}=\\hat{i}+\\hat{j}+\\hat{k},\\bar{b}=\\hat{i}-\\hat{j}+2\\hat{k}$ and $\\bar{c}=x\\hat{i}+(x-2)\\hat{j}-\\hat{k}$ are three vectors in which $\\bar{c}$ lies in the plane of $\\bar{a}$ and $\\bar{b}$, then $x=\\cdots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1cfd8e7865dc",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "For any vector, $\\bar{a}$ if $\\hat{i}\\times(\\bar{a}\\times\\hat{i})+\\hat{j}\\times(\\bar{a}\\times\\hat{j})+\\hat{k}\\times(\\bar{a}\\times\\hat{k})=m\\bar{a}$, then the value of $m$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-754a9dfb9939",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{a}=\\hat{i}+\\hat{j}+\\hat{k}$ and $\\bar{b}=\\hat{i}-\\hat{j}+2\\hat{k}$. If a vector $\\bar{c}$ is coplanar with $\\bar{a}$ and $\\bar{b}$ such that $\\bar{c}\\cdot\\bar{a}=1$ and $\\bar{c}$ is perpendicular to $\\bar{b}$, then $\\bar{c}$ is equal to ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}(2\\hat{i}+\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{5}(2\\hat{i}-\\hat{j}+4\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{7}(2\\hat{i}+4\\hat{j}+\\hat{k})$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{7}(2\\hat{i}-4\\hat{j}-\\hat{k})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-81ee7af37ddd",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\bar{a},\\bar{b}$ and $\\bar{c}$ are three non-coplanar vectors and $\\lambda$ is a real number such that $[\\lambda(\\bar{a}+\\bar{b})\\;\\;\\lambda^2\\bar{b}\\;\\;\\lambda\\bar{c}]=[\\bar{a}\\;\\;\\bar{b}+\\bar{c}\\;\\;\\bar{b}]$, then there is (are) ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "exactly three values of $\\lambda$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "exactly two values of $\\lambda$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "exactly one value of $\\lambda$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "no value of $\\lambda$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-823db3b92bf6",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{a}=\\lambda\\hat{i}+4\\hat{j}$ and $\\bar{b}=\\hat{i}+\\lambda\\hat{j}$ where $\\lambda\\in Z$ such that $|\\bar{a}|<6$. The number of possible values of $\\lambda$ for which $\\bar{a}$ and $\\bar{b}$ are non-collinear is ___",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ab6b94cb4f67",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $O$ be the origin in 3D space. If the vertices $A(2,p,-3),B(q,-2,5)$, and $C(-5,1,r)$ of a triangle satisfy the vector relation $\\overline{PA}+\\overline{PB}+\\overline{PC}=3\\overline{PO}$ for any point $P$ in space, then the values of $(p,q,r)$ respectively are ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(1,3,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(1,3,-2)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(1,2,3)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(1,-2,3)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f78066cfe01b",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $4\\hat{i}+7\\hat{j}+8\\hat{k},2\\hat{i}+3\\hat{j}+4\\hat{k}$ and $2\\hat{i}+5\\hat{j}+7\\hat{k}$ are the position vectors of the vertices A, B and C respectively of the triangle ABC, then the largest angle of the triangle is (are) ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "C",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "A and C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "B and C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-25eabc8d667d",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the sum of two unit vectors is a unit vector, then the magnitude of their difference is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-76f698524a58",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\vec{a},\\vec{b},\\vec{c}$ are three vectors such that $\\vec{a}\\cdot(\\vec{b}+\\vec{c})+\\vec{b}\\cdot(\\vec{c}+\\vec{a})+\\vec{c}\\cdot(\\vec{a}+\\vec{b})=0$ and $|\\vec{a}|=8,|\\vec{b}|=1,|\\vec{c}|=4$, then $|\\vec{a}+\\vec{b}+\\vec{c}|=...$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$13$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$18$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-92171f7209eb",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a},\\bar{b}$ are unit vectors and $\\bar{a}\\cdot\\bar{b}=0$, then $(\\bar{a}-2\\bar{b})\\cdot\\{(2\\bar{a}+\\bar{b})\\times(\\bar{a}\\times\\bar{b})\\}=...$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d1d1814638cb",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The ratio in which the point $\\hat{i}+2\\hat{j}+3\\hat{k}$ divides the line segment joining $-2\\hat{i}+3\\hat{j}+5\\hat{k}$ and $7\\hat{i}-\\hat{k}$ is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e4cb5958820f",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $|\\vec{u}|=5,|\\vec{v}|=13,|\\vec{u}\\times\\vec{v}|=25$, then $\\vec{u}\\cdot\\vec{v}=...$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$15$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm\\frac{5}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pm 60$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\pm 65$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2e16d03361bc",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The volume of a tetrahedron with vertices $5\\hat{i}-\\hat{j}+\\hat{k},7\\hat{i}-4\\hat{j}+p\\hat{k},\\hat{i}-6\\hat{j}+10\\hat{k}$ and $-\\hat{i}-3\\hat{j}+7\\hat{k}$ is 11 cubic units, then one of the values of p is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5e7f44aa521c",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{a},\\bar{b},\\bar{c}$ be three vectors having magnitudes 1, 1 and 2 respectively. If $\\bar{a}\\times(\\bar{a}\\times\\bar{c})+\\bar{b}=\\bar{0}$, then the acute angle between $\\bar{a}$ and $\\bar{c}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a3eb29dc369e",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A vector $\\bar{r}$ of magnitude $3\\sqrt{2}$ units which makes angles of $\\frac{\\pi}{4}$ and $\\frac{\\pi}{2}$ respectively with Y and Z axes is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\bar{r}=\\pm 3\\hat{i}+3\\hat{j}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\bar{r}=\\hat{i}+\\hat{j}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\bar{r}=\\pm 2\\hat{i}+3\\hat{j}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\bar{r}=\\pm 5\\hat{i}+\\hat{j}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b90b2e2d7f87",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{a},\\bar{b},\\bar{c}$ be unit vectors such that $\\bar{a}$ is perpendicular to the plane of $\\bar{b}$ and $\\bar{c}$. If the angle between $\\bar{b}$ and $\\bar{c}$ is $\\frac{\\pi}{3}$, then $|\\bar{a}+\\bar{b}+\\bar{c}|=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-db1485de5cc2",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a parallelogram is constructed on the vectors $\\bar{a}=3\\bar{p}-\\bar{q},\\bar{b}=\\bar{p}+3\\bar{q}$ and $|\\bar{p}|=3,|\\bar{q}|=2$ and angle between $\\bar{p}$ and $\\bar{q}$ is $\\frac{\\pi}{3}$, then the ratio of the lengths of adjacent sides $\\bar{a}$ and $\\bar{b}$ of the parallelogram is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{57}:\\sqrt{54}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{67}:\\sqrt{63}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{63}:\\sqrt{47}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{57}:\\sqrt{52}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0031ac3283a8",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a}=\\hat{i}+\\hat{j}+\\hat{k},\\bar{b}=\\hat{i},\\bar{c}=c_1\\hat{i}+c_2\\hat{j}+c_3\\hat{k}$ with $c_1=1$, $c_2=2$, then value of $c_3$ such that $\\bar{a},\\bar{b},\\bar{c}$ are coplanar is ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-11eae57dd88f",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a}$ and $\\bar{b}$ have the same magnitude and angle between them is $60^{\\circ}$ and their scalar product is $\\frac{1}{2}$, then $|\\bar{a}|$ is ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a6d93e46880b",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a},\\bar{b},\\bar{c}$ are three non zero and non-coplanar vectors such that $\\bar{a}\\times(\\bar{b}\\times\\bar{c})=\\frac{\\bar{b}}{2}$, then the angle between $\\bar{a}$ and $\\bar{b}$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ae502268918c",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a},\\bar{b}$ and $\\bar{c}$ are non-coplanar unit vectors such that the angle between any two of them is $60^{\\circ}$, and the vector $\\bar{d}=x\\bar{a}+y\\bar{b}+z\\bar{c}$ is perpendicular to both $\\bar{a}$ and $\\bar{b}$, then the value of $\\frac{\\left(x+y\\right)}{z}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{2}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d42d92aebbf0",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a}=\\hat{i}+\\hat{j}$ and $\\bar{b}=\\hat{i}-\\hat{k}$, then the point of intersection of the lines $\\bar{r}\\times\\bar{a}=\\bar{b}\\times\\bar{a}$ and $\\bar{r}\\times\\bar{b}=\\bar{a}\\times\\bar{b}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(2,1,-1)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(2,-1,1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(0,1,1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(0,-1,1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5d4bd363cbaa",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The sum of the lengths of the projections of $2\\hat{i}+3\\hat{j}+4\\hat{k}$ on the coordinate axes is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$18$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{29}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a94533448df8",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{u}$ and $\\vec{v}$ be unit vectors such that the angle between them is $\\theta=\\frac{\\pi}{6}$. If the adjacent sides of a parallelogram are represented by the vectors $\\vec{a}=2\\vec{u}+3\\vec{v}$ and $\\vec{b}=\\vec{u}-\\vec{v}$, then the area of the parallelogram is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$16\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c4c774d9229a",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the volume of a tetrahedron with coterminous edges $\\vec{a},\\vec{b}$ and $\\vec{c}$, (where $\\vec{a}$ is a unit vector) is $13$ cubic units and the angle between $\\vec{a}$ and $\\vec{b}\\times\\vec{c}$ is $\\frac{\\pi}{3}$, then $|\\vec{b}\\times\\vec{c}|$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$156$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$78$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$39$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5ac93094afcf",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\vec{a},\\vec{b},\\vec{c}$ represent three concurrent edges of a rectangular parallelopiped whose lengths are $5,2$ and $3$ units respectively, then $(\\vec{a}+\\vec{b}+\\vec{c})\\cdot(\\vec{a}\\times\\vec{b}+\\vec{b}\\times\\vec{c}+\\vec{c}\\times\\vec{a})=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$90$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$60$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a1ff605bc5a8",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $|\\vec{a}+\\vec{b}|=|\\vec{a}-\\vec{b}|$ then the angle between $\\vec{a}$ and $\\vec{b}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$45^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$90^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$180^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e806c77f1537",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the vector $\\vec{a}=x\\hat{i}-\\hat{j}+\\hat{k}$ and $\\vec{b}=\\hat{i}+y\\hat{j}+z\\hat{k}$ are collinear, then a possible unit vector parallel to the vector $\\hat{i}+y\\hat{j}+z\\hat{k}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{3}}(\\hat{i}-\\hat{j}+\\hat{k})$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{3}}(\\hat{i}+\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{3}}(\\hat{i}-\\hat{j}-\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sqrt{3}}(-\\hat{i}-\\hat{j}-\\hat{k})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0d8f0f061d8d",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the vectors $\\bar{a}=2\\bar{i}+\\bar{j}+3\\bar{k}$ and $\\bar{b}=p\\bar{i}+2\\bar{j}+2\\bar{k}$ are perpendicular to each other, then ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p=-4$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$p=4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$p=2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p=-2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-28ffa99714fb",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{a}$ and $\\vec{b}$ be two unit vectors such that their sum is also a unit vector. If $\\vec{u}=\\vec{a}+2\\vec{b}$ and $\\vec{v}=2\\vec{a}+\\vec{b}$, then the angle between $\\vec{u}$ and $\\vec{v}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4d921184d4bc",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "For two non-zero, non-collinear, non-orthogonal vectors $\\vec{a}$ and $\\vec{b}$ where $\\theta$ is angle between them, then $\\frac{(\\vec{a}\\cdot\\vec{b})^2+|\\vec{a}\\times\\vec{b}|^2}{(\\vec{a}\\cdot\\vec{b})^2-|\\vec{a}\\times\\vec{b}|^2}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan\\left(\\frac{\\pi}{4}+\\theta\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan\\left(\\frac{\\pi}{4}-\\theta\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sec 2\\theta$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\csc 2\\theta$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7de6512741f4",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\bar{a}=4\\hat{i}-10\\hat{j}+(1-p)\\hat{k}$ and $\\bar{b}=12\\hat{i}+(q-10)\\hat{j}+3\\hat{k}$ satisfy $\\bar{a}\\times\\bar{b}=\\bar{0}$, then the values of $p$ and $q$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9,7$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0,-20$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1,-30$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10,5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d6e5915f42bd",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\bar{a},\\bar{b},\\bar{c}$ are vectors such that $[\\bar{a}~\\bar{b}~\\bar{c}]=3$, then $[\\bar{a}\\times\\bar{b}~~\\bar{b}\\times\\bar{c}~~\\bar{c}\\times\\bar{a}]=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5468bf4132d1",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{p},\\bar{q},\\bar{r}$ are unit vectors such that $\\bar{p}\\times(\\bar{q}\\times\\bar{r})=\\frac{1}{7}\\bar{q}$, then the angle between $\\bar{p}$ and $\\bar{r}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cos^{-1}(7)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sin^{-1}\\left(\\frac{4\\sqrt{3}}{7}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\tan^{-1}\\left(\\frac{1}{7}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9d4e93c1ba2c",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the volume of tetrahedron with its coterminous edges $\\bar{a},\\bar{b},\\bar{c}$ is $6$ cu. units then the volume of a tetrahedron with coterminous edges $(\\bar{a}\\times\\bar{b}),(\\bar{b}\\times\\bar{c}),(\\bar{c}\\times\\bar{a})$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$ cu. units.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$36$ cu. units.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$216$ cu. units.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$648$ cu. units.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1b43242365d2",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $(\\bar{p}\\wedge\\bar{q})$ denote the angle between $\\bar{p}$ and $\\bar{q}$. If $\\bar{a}+\\bar{b}+\\bar{c}=\\bar{0},|\\bar{a}|=7,|\\bar{b}|=5$ and $|\\bar{c}|=3$ then (take $\\pi=\\frac{22}{7}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin(\\bar{b}\\wedge\\bar{c})=\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos(\\bar{a}\\wedge\\bar{c})=-\\frac{\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\cos(\\bar{b}\\wedge\\bar{c})=-\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sin(\\bar{a}\\wedge\\bar{c})=\\frac{\\pi}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-801c73239be3",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a unit vector makes angles $\\frac{\\pi}{4}$ with $\\hat{i}$, $\\frac{\\pi}{3}$ with $\\hat{j}$ and $\\theta\\in(0,\\pi)$ with $\\hat{k}$, then a value of $\\theta$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{3},\\frac{2\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6},\\frac{5\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4},\\frac{5\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\pi}{12},\\frac{7\\pi}{12}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c9befa78913c",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The vector $\\bar{r}$ whose magnitude is $3\\sqrt{2}$ units and which makes angles of $\\frac{\\pi}{4}$ and $\\frac{\\pi}{2}$ with the positive y- and z-axes respectively is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\hat{i}\\pm 3\\hat{j}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\hat{i}\\pm\\hat{j}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\hat{i}\\pm\\hat{j}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pm 3\\hat{i}+3\\hat{j}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d372ba327190",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\bar{a}$ and $\\bar{b}$ are unit vectors and $\\theta$ ($0<\\theta<\\pi$) is the angle between them, then the value of $\\frac{\\left|\\bar{a}+\\bar{b}\\right|}{\\left|\\bar{a}-\\bar{b}\\right|}$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan\\frac{\\theta}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sin\\frac{\\theta}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos\\frac{\\theta}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\cot\\frac{\\theta}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d822b459efd3",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If ABCDEF is a regular hexagon and $\\overline{AB}+\\overline{AC}+\\overline{AD}+\\overline{AE}+\\overline{AF}=p\\overline{AD}=q\\overline{AO}$, where O is the center of the hexagon, then the values of $p$ and $q$ respectively are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2,3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4,6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3,6$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3,5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0f8d6d3333e2",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A unit vector coplanar with $\\hat{i}+\\hat{j}+2\\hat{k}$ and $\\hat{i}+2\\hat{j}+\\hat{k}$ and perpendicular to $\\hat{i}+\\hat{j}+\\hat{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pm\\frac{1}{\\sqrt{3}}(\\hat{i}+\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm\\frac{1}{\\sqrt{3}}(\\hat{i}-\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pm\\frac{1}{\\sqrt{2}}(\\hat{j}-\\hat{k})$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\pm\\frac{1}{\\sqrt{2}}(\\hat{j}+\\hat{k})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7257a86e1b90",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let ABCD be a quadrilateral with $\\overline{AB}=\\vec{a}$, $\\overline{AD}=\\vec{b}$ and $\\overline{AC}=3\\vec{a}+2\\vec{b}$. If its area is $\\alpha$ times the area of the parallelogram with AB, AD as adjacent sides, then the value of $\\alpha$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7e5688cf5c8b",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\vec{a}+\\vec{b}+\\vec{c}=\\vec{0}$, $|\\vec{a}|=|\\vec{b}|=|\\vec{c}|=3$ and $\\theta$ is the angle between $\\vec{b}$ and $\\vec{c}$ then $\\tan^2\\theta+\\cot^2\\theta=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{8}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{10}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-850eca14f379",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The altitude of the parallelopiped, whose coterminous edges are the vectors $\\vec{a}=\\hat{i}+\\hat{j}+\\hat{k}$, $\\vec{b}=2\\hat{i}+4\\hat{j}-\\hat{k}$, $\\vec{c}=\\hat{i}+\\hat{j}+3\\hat{k}$, where $\\vec{a}$, $\\vec{b}$ are the sides of the base of parallelopiped, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\sqrt{2}}{\\sqrt{19}}$ units",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{2}}{\\sqrt{19}}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{19}}{\\sqrt{2}}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{19}}{2\\sqrt{2}}$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ba7430590ba7",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=\\hat{i}+2\\hat{j}-2\\hat{k}$ and $\\vec{b}=\\hat{i}-\\hat{j}+\\hat{k}$. If $\\vec{c}$ is a vector such that $\\vec{a}\\cdot\\vec{c}=|\\vec{c}|$, $|\\vec{c}-\\vec{a}|=2\\sqrt{2}$ and the angle between $\\vec{a}\\times\\vec{b}$ and $\\vec{c}$ is $60^{\\circ}$, then $|(\\vec{a}\\times\\vec{b})\\times\\vec{c}|$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{3}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\sqrt{\\frac{3}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2f38c3662090",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the scalar products of a vector $\\bar{a}=x\\hat{i}+y\\hat{j}+z\\hat{k}$ with $2\\hat{i}+\\hat{j}+\\hat{k},~\\hat{i}-\\hat{j}+\\hat{k},~\\hat{i}+2\\hat{j}+3\\hat{k}$ are $5,3,$ and $5$ respectively, then $x+y+z=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4131fd203c87",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{a}=2\\hat{i}+\\hat{k},~\\bar{b}=\\hat{i}+\\hat{j}+\\hat{k},$ and $\\bar{c}=4\\hat{i}-3\\hat{j}+7\\hat{k}$. If $\\bar{r}$ is a vector such that $\\bar{r}\\times\\bar{b}=\\bar{c}\\times\\bar{b}$ and $\\bar{r}\\cdot\\bar{a}=0$, then the value of the scalar product $\\bar{r}\\cdot\\hat{i}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6e7b1a32dbdf",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\bar{a}=\\hat{i}+2\\hat{j}+2\\hat{k}$, $\\bar{b}=2\\hat{i}-2\\hat{j}+\\hat{k}$ and $\\bar{c}$ is a vector projection of $\\bar{a}$ on the line of $\\bar{b}$, then the value of $[2\\bar{a}~3\\bar{b}~\\sqrt{3}\\bar{c}]$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9d38ccf917ae",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $|\\bar{a}|=24$, $|\\bar{b}|=7$, $\\bar{a}\\cdot\\bar{b}=0$, $\\bar{a}+\\bar{b}+\\bar{c}=\\bar{0}$, then $|\\bar{c}|=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$31$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$17$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$40$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$25$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-488cc4c990b1",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A unit vector $\\bar{u}$ makes an angle of $45^{\\circ}$ with the X- axis. If $\\bar{u}+\\hat{j}+\\hat{k}$ is also a unit vector, then the sum of the projections of $\\bar{u}$ on the coordinate axes is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}+1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{2}}-1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sqrt{2}}+1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-86dabc85ee8a",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The position vectors of vertices $A$, $B$ and $C$ of triangle $ABC$ are $\\hat{i}-\\hat{j}-3\\hat{k}$, $2\\hat{i}+\\hat{j}-2\\hat{k}$, and $-5\\hat{i}+2\\hat{j}-6\\hat{k}$ respectively. The length of the bisector $AD$ of angle $BAC$, where $D$ is on the line segment $BC$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$15/2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$11/2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1/4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}\\sqrt{10}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-92b184ee4b09",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $l,m,n$ are direction cosines of a vector $\\bar{r}$ such that $l+m+n=1$ and $l^2+m^2+n^2=1$, then:\n(where $l,\\;m,\\;n\\ge 0$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the vector lies along one of the coordinate axes.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "the vector $\\bar{r}$ is equally inclined to the three coordinate axes.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The vector $\\bar{r}$ is perpendicular to the vector $\\hat{i}+\\hat{j}+\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "The vector $\\bar{r}$ makes an angle of $\\frac{\\pi}{3}$ with each of the coordinate axes.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-99312d4d93d3",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\bar{a}=2\\hat{i}-\\hat{j}+\\hat{k}$ and $\\bar{b}=\\hat{i}+2\\hat{j}-2\\hat{k}$. If a third vector $\\bar{c}=x\\hat{i}+y\\hat{j}+z\\hat{k}$ is coplanar with $\\bar{a}$ and $\\bar{b}$, is perpendicular to $\\bar{a}$, and satisfies $|\\bar{c}|=\\sqrt{45}$, then the sum of all possible values of $y$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c02706e4f28d",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a}=2\\hat{i}-\\hat{j}+\\hat{k}$, $\\bar{b}=\\hat{i}+3\\hat{j}-\\hat{k}$, $\\bar{c}=-2\\hat{i}+\\hat{j}-3\\hat{k}$ and $\\bar{d}=3\\hat{i}+2\\hat{j}+5\\hat{k}$, then the value of $x^2+z^2-y$ is $\\cdots$, where $\\bar{d}=x\\bar{a}+y\\bar{b}+z\\bar{c}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{35}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{17}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{33}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{15}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7c82d192cb5e",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The acute angle between the vector $2\\hat{i}+\\hat{j}-3\\hat{k}$ and the plane containing the vectors $2\\hat{i}+3\\hat{j}-\\hat{k}$ and $\\hat{i}-\\hat{j}+2\\hat{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin^{-1}\\left(\\frac{4}{\\sqrt{42}}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\cos^{-1}\\left(\\frac{4}{\\sqrt{42}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sin^{-1}\\left(\\frac{3}{\\sqrt{42}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\cos^{-1}\\left(\\frac{3}{\\sqrt{42}}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-99752ddbb487",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a vector $3\\hat{i}+4\\hat{j}-5\\hat{k}$ is rotated through a certain angle about the origin in the anti-clockwise direction, then the components of the new vector are $a+1,-3,5$ . The possible values of $a$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5 or 3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5 or -3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4 or -2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-5 or 3",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b9fbc8495f7b",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let A, B, C, D be the points in the plane with position vectors $-2\\hat{i}-\\hat{j}$, $4\\hat{i}$, $3\\hat{i}+3\\hat{j}$ and $-3\\hat{i}+2\\hat{j}$ respectively, then $\\square$ABCD is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "a parallelogram which is neither a rhombus nor a reactangle",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "a square",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a rectangle but not a square",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "a rhombus but not a square",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d674180b4293",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{a}=\\hat{i}+\\hat{j}$, $\\bar{c}=\\hat{i}-\\hat{j}$ and a vector $\\bar{b}$ be such that $\\bar{a}\\times\\bar{b}=\\bar{c}$ and $\\bar{a}\\cdot\\bar{b}=3$ then $|\\bar{b}|=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{11}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{11}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{11}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{11}{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-faa74f872c33",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A parallelogram is constructed on $5\\bar{a}+2\\bar{b}$ and $\\bar{a}-3\\bar{b}$ as its adjacent sides, with $|\\bar{a}|=2\\sqrt{2},|\\bar{b}|=3$ . The angle between $\\bar{a}$ and $\\bar{b}$ is $\\frac{\\pi}{4}$ . Then the length of the diagonals of the parallelogram are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$15,\\sqrt{593}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$15,~593$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$225,~593$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20,~593$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0b2688a600b0",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\bar{a},\\bar{b}$ and $\\bar{c}$ be three coplanar unit vectors. A unit vector $\\bar{d}$ is perpendicular to them. If $(\\bar{a}\\times\\bar{b})\\times(\\bar{c}\\times\\bar{d})=\\frac{3}{26}\\hat{i}-\\frac{2}{13}\\hat{j}+\\frac{6}{13}\\hat{k}$ and the angle between $\\bar{a}$ and $\\bar{b}$ is $30^{\\circ}$, then $\\bar{c}$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{13}\\hat{i}-\\frac{4}{13}\\hat{j}+\\frac{12}{13}\\hat{k}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{13}\\hat{i}-\\frac{2}{13}\\hat{j}+\\frac{6}{13}\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{26}\\hat{i}-\\frac{4}{13}\\hat{j}+\\frac{12}{13}\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{26}\\hat{i}-\\frac{3}{26}\\hat{j}+\\frac{5}{26}\\hat{k}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-64485779ad05",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The volume of a parallelopiped with coterminous edges $\\bar{a},\\bar{b},\\bar{c}$ is 3 cubic units. The volume (in cubic units) of a tetrahedron with coterminous edges $(\\bar{a}\\times\\bar{b}),(\\bar{a}\\times 2\\bar{c}),(\\bar{b}\\times 2\\bar{c})$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$12$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$24$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$36$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8235f0bf4bc2",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a}=2\\hat{i}+\\hat{j}-\\hat{k}$, $\\bar{b}=\\hat{i}+3\\hat{k}$ and $\\bar{c}$ is a unit vector, then the maximum value of the scalar triple product $[\\bar{a}~\\bar{b}~\\bar{c}]$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{10}+\\sqrt{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{59}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8af629a6f98e",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a}=4\\hat{i}+\\hat{j}+\\hat{k}$, $\\bar{b}=2\\hat{i}+\\hat{j}+2\\hat{k}$ and $\\bar{c}=3\\hat{i}+4\\hat{j}+5\\hat{k}$, then $(\\bar{a}+\\bar{b})\\cdot(\\bar{b}+\\bar{c})=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$21$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$61$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$10$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-35cfdb0e16f2",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{a}=(a_1\\hat{i}+a_2\\hat{j}+a_3\\hat{k}),~\\bar{b}=(b_1\\hat{i}+b_2\\hat{j}+b_3\\hat{k}),~\\bar{c}=(c_1\\hat{i}+c_2\\hat{j}+c_3\\hat{k})$ be three non-zero vectors such that $\\bar{a}$ is a unit vector perpendicular to both $\\bar{b}$ and $\\bar{c}$. If the angle between $\\bar{b}$ and $\\bar{c}$ is $\\frac{\\pi}{3}$ then ${\\left|\\begin{matrix} a_1 & a_2 & a_3 \\\\ b_1 & b_2 & b_3 \\\\ c_1 & c_2 & c_3 \\end{matrix}\\right|}^2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{4}|\\bar{b}|^2|\\bar{c}|^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}|\\bar{b}|^2|\\bar{c}|^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-731f155a0223",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=2\\hat{i}-3\\hat{j}+\\hat{k},~\\vec{b}=3\\hat{i}+2\\hat{j}+2\\hat{k},~\\vec{c}=4\\hat{i}-3\\hat{j}+\\hat{k}$, then the vectors $\\vec{a},~\\vec{b},~\\vec{c}$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Linearly dependent",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Orthogonal",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Linearly independent",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Coplanar",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c980029a75c3",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In $\\triangle OAB$, $O(0,0,0),~A(6,2,-3)$ and $B(4,0,3)$ are the vertices. Let $\\vec{a}$ and $\\vec{b}$ be position vectors of points $A$ and $B$ respectively and $OM$ is the projection of $\\vec{a}$ on $\\vec{b}$ then $l(AM)$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{10}~units$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\sqrt{10}~units$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$10~units$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$40~units$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f46b7f12226a",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two adjacent sides of a parallelogram ABCD are given by $\\overline{AB}=2\\hat{i}+10\\hat{j}+11\\hat{k}$ and $\\overline{AD}=-\\hat{i}+2\\hat{j}+2\\hat{k}$. The side AD is rotated by an acute angle $\\alpha$ in the plane of the parallelogram so that AD becomes AD'. If AD' makes a right angle with the side AB, then the cosine of the angle $\\alpha$ is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{17}}{9}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4\\sqrt{5}}{9}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5acd2616514b",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}$ and $\\vec{b}$ be linearly independent vectors such that\n$|\\vec{a}|=\\sqrt{3},|\\vec{b}|=3$ and $|\\vec{a}-\\vec{b}|=4$.\nIf $\\vec{a}\\times(2\\hat{i}+2\\hat{j}-\\hat{k})=(2\\hat{i}+2\\hat{j}-\\hat{k})\\times\\vec{b}$ and $|(\\vec{a}+\\vec{b})\\cdot(3\\hat{i}+4\\hat{j}+2\\hat{k})|=\\sqrt{\\lambda}$, then $\\lambda=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$32$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$64$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$256$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$128$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-89ce016c117f",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $b$ such that the scalar product of the vector $\\hat{i}+\\hat{j}+\\hat{k}$ with the unit vector parallel to the sum of the vectors $2\\hat{i}+4\\hat{j}-5\\hat{k}$ and $b\\hat{i}+2\\hat{j}+3\\hat{k}$ is one, is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8f47a35b4d07",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=\\lambda\\hat{i}+\\hat{j}+\\hat{k},\\vec{b}=2\\hat{i}+4\\hat{j}+4\\hat{k},\\vec{c}=\\hat{i}+\\mu\\hat{j}+\\hat{k}$\nIf $\\vec{a}$ is parallel to $\\vec{b}$ and $\\vec{b}$ is perpendicular to $\\vec{c}$ then $\\lambda-\\mu=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-eef53551437a",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $|\\vec{a}\\cdot\\vec{b}|=|\\vec{a}\\times\\vec{b}|$, $\\vec{a}\\cdot\\vec{b}<0$ and $\\theta$ is the angle between $\\vec{a}$ and $\\vec{b}$, then the value of $\\sin\\theta+\\tan\\theta$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{2}-2}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{2}+2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1+\\sqrt{2}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2-\\sqrt{2}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3b070b7e3e90",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\bar{a}=\\hat{i}-\\hat{k}$, $\\bar{b}=x\\hat{i}+\\hat{j}+(1-x)\\hat{k}$ and $\\bar{c}=y\\hat{i}+x\\hat{j}+(1+x-y)\\hat{k}$ then $[\\bar{a}~\\bar{b}~\\bar{c}]$ depends on",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "only x",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "neither x nor y",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "either x or y",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "only y",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b3e5e056774a",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A vector which is orthogonal to the vector $\\bar{a}=\\hat{i}+2\\hat{j}+3\\hat{k}$ and coplanar with the vectors $\\bar{b}=3\\hat{i}+2\\hat{j}$ and $\\bar{c}=2\\hat{i}+\\hat{j}+3\\hat{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25\\hat{i}+19\\hat{j}-21\\hat{k}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-25\\hat{i}+19\\hat{j}-21\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-25\\hat{i}+19\\hat{j}+21\\hat{k}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$25\\hat{i}+19\\hat{j}+21\\hat{k}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bbf01e933177",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{a},\\bar{b},\\bar{c}$ be three vectors of equal magnitude such that the angle between $\\bar{a}$ and $\\bar{b}$ is $\\alpha$, $\\bar{b}$ and $\\bar{c}$ is $\\beta$, $\\bar{c}$ and $\\bar{a}$ is $\\gamma$.\nThen the minimum value of $\\cos\\alpha+\\cos\\beta+\\cos\\gamma$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{3}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c2119f25e23f",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{u},\\bar{v},\\bar{w}$ be three vectors such that $|\\bar{u}|=1,|\\bar{v}|=2,|\\bar{w}|=3$. If the projection of $\\bar{v}$ along $\\bar{u}$ is equal to the projection of $\\bar{w}$ along $\\bar{u}$ and $\\bar{v},\\bar{w}$ are perpendicular to each other, then $|\\bar{u}-\\bar{v}+\\bar{w}|=$...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{14}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-189ed496a9ee",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a}\\cdot\\bar{b}=\\beta$ and $\\bar{a}\\times\\bar{b}=\\bar{c}$ then $\\bar{a}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\bar{b}\\times\\bar{c}-\\beta\\bar{b}}{|\\bar{b}|^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\bar{b}\\times\\bar{c}-\\beta\\bar{c}}{|\\bar{b}|^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\bar{b}\\times\\bar{c}+\\beta\\bar{b}}{|\\bar{b}|^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\bar{b}\\times\\bar{c}+\\beta\\bar{c}}{|\\bar{b}|^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-482802f49e22",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $|\\bar{a}|=|\\bar{b}|=1,|\\bar{c}|=2$ and $\\bar{a}\\times(\\bar{a}\\times\\bar{c})+\\bar{b}=\\bar{0}$, then the acute angle between $\\bar{a}$ and $\\bar{c}$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6ad29879aff3",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\theta\\in\\left(0,\\frac{\\pi}{2}\\right)$ for which vectors $\\bar{a}=(\\sin\\theta)\\hat{i}+(\\cos\\theta)\\hat{j}$ and $\\bar{b}=\\hat{i}-\\sqrt{3}\\hat{j}+2\\hat{k}$ are perpendicular is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\theta=\\frac{\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\theta=\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\theta=\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\theta=\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-782e0c4bb4c6",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the volume of the tetrahedron whose coterminous edges are given by the vectors $\\bar{a}=-2\\hat{i}+3\\hat{j}-3\\hat{k}$, $\\bar{b}=4\\hat{i}+5\\hat{j}+(\\lambda-10)\\hat{k}$, $\\bar{c}=6\\hat{i}+2\\hat{j}-3\\hat{k}$ is 11 cubic units, then the sum of the possible values of $\\lambda$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-df82c62ea72d",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $|\\bar{a}\\cdot\\bar{b}|^2+|\\bar{a}\\times\\bar{b}|\\cdot|\\bar{a}\\times\\bar{b}|$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-a^2b^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$a^2b^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$a^2b^2\\cos\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a^2b^2\\sin\\theta$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0456db33b870",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The sum of all real values of $\\lambda$ for which the vectors $\\vec{a}=\\lambda\\hat{i}+\\hat{j}+\\hat{k}$, $\\vec{b}=\\hat{i}+\\lambda\\hat{j}+2\\hat{k}$, $\\vec{c}=2\\hat{i}+3\\hat{j}+\\lambda\\hat{k}$ are coplanar is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "cant determine",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-18b2693fbc41",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $ABC$ is a right-angled triangle in which $BC$ is the longest side and the position vector of $B$ and $C$ are respectively $3\\hat{i}-2\\hat{j}+\\hat{k}$ and $5\\hat{i}+\\hat{j}-3\\hat{k}$, then the value of $\\overline{AB}\\cdot\\overline{AC}+\\overline{BA}\\cdot\\overline{BC}+\\overline{CA}\\cdot\\overline{CB}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$27$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$29$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$31$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-807dd873c80f",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $|\\vec{a}|=3$, $|\\vec{b}|=4$, $|\\vec{c}|=5$ such that each vector is perpendicular to the sum of the other two, then $|\\vec{a}+\\vec{b}+\\vec{c}|$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8d516dfe92ac",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $A(\\vec{a})$, $B(\\vec{b})$ and $C(\\vec{c})$ are vertices of $\\triangle ABC$. Point D divides segment BC internally in the ratio $2:1$. Point E divides segment AD internally in the ratio $1:2$, then the position vector of E is ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3\\vec{a}+4\\vec{b}+2\\vec{c}}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{6\\vec{a}+2\\vec{b}+\\vec{c}}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\vec{a}+2\\vec{b}+4\\vec{c}}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{6\\vec{a}+\\vec{b}+2\\vec{c}}{9}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1b2b4c492e88",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two adjacent sides of a parallelogram ABCD are given by $\\overline{AB}=2\\hat{i}+10\\hat{j}+11\\hat{k}$ and $\\overline{AD}=-\\hat{i}+2\\hat{j}+2\\hat{k}$. The side $AD$ is rotated by an acute angle $\\alpha$ in the plane of the parallelogram so that $AD$ becomes $AD'$. If $AD'$ makes a right angle with the side $AB$, then the cosine of the angle $\\alpha$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{17}}{9}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4\\sqrt{5}}{9}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-61e0c5fb4c07",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The maximum volume of a parallelopiped (in cubic units) with vectors $(2a\\hat{i}+\\hat{k}),(a\\hat{j}-a\\hat{k})$, and $(3\\hat{i}+a\\hat{j})$, where $a\\in[0,1]$, as its coterminous edges is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aae763746b01",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let O$(0,0)$, A$(-1,2)$ and B$(1,3)$ be the vertices of $\\triangle$OAB. The bisector of angle O intersects side AB at point D. The value of $\\vec{OD}\\cdot\\vec{AB}$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-5(\\sqrt{2}+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5(1-\\sqrt{2})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5(\\sqrt{2}+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5(\\sqrt{2}-1)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ab6230743d97",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\vec{a},\\vec{b},\\vec{c}$ are three vectors such that $\\vec{a}\\perp(\\vec{b}+\\vec{c}),\\vec{b}\\perp(\\vec{c}+\\vec{a}),$ and $\\vec{c}\\perp(\\vec{a}+\\vec{b})$ and $|\\vec{a}|=1,|\\vec{b}|=2,|\\vec{c}|=3$, then $|\\vec{a}+\\vec{b}+\\vec{c}|$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$14$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{14}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2d929fc8b949",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$A(1,2)$, $B(1,0)$ and $C(0,2)$ are vertices of $\\Delta ABC$. The position vector of the point in which the bisector of angle $A$ cuts $BC$ is .....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}\\hat{i}+\\frac{4}{3}\\hat{j}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{3}\\hat{i}+\\frac{4}{3}\\hat{j}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}\\hat{i}+\\frac{2}{3}\\hat{j}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{3}\\hat{i}+\\frac{5}{3}\\hat{j}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3570153dc6e8",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the vector $\\bar{r}$ is perpendicular to $\\hat{i}-\\hat{k}$ and $\\bar{r}\\times(\\hat{i}+x\\hat{j}-\\hat{k})=\\hat{i}+2\\hat{j}+3\\hat{k}$, then the value of $\\bar{r}\\cdot(\\hat{i}+x\\hat{j}-\\hat{k})=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-473dbb03597a",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The scalar triple product of the vectors $[2\\bar{a}+3\\bar{b}~~3\\bar{b}+\\bar{c}~~\\bar{c}+2\\bar{a}]$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6[\\bar{a}~~\\bar{b}~~\\bar{c}]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12[\\bar{a}~~\\bar{b}~~\\bar{c}]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5[\\bar{a}~~\\bar{b}~~\\bar{c}]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$24[\\bar{a}~~\\bar{b}~~\\bar{c}]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6650d043d28e",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $P$ and $P'$ denote respectively the circumcenter and the orthocenter of $\\triangle ABC$, then $\\overline{PA}+\\overline{PB}+\\overline{PC}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\overline{PP'}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\overline{P'P}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\overline{P'P}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\overline{PP'}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1a81cdff3f4d",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $8\\vec{AB}-3\\vec{AC}-5\\vec{AD}=\\vec{0}$, then the point $C$ divides $BD$ in the ratio ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8:5$ internally",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:4$ externally",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4:3$ internally",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5:8$ externally",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-27eb02869425",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A parallelopiped is determined by vectors $\\vec{a}=\\hat{i}+2\\hat{k},\\vec{b}=\\hat{i}+\\hat{j}-\\hat{k}$ and $\\vec{c}=2\\hat{i}+2\\hat{j}+3\\hat{k}$. The length (in units) of its altitude drawn to the base determined by vectors $\\vec{b}$ and $\\vec{c}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-74d5d2c650a0",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If three coterminous edges of a parallelopiped are represented by $\\vec{a}-\\vec{b},\\vec{b}-\\vec{c}$ and $\\vec{c}-\\vec{a}$ then its volume is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$[\\vec{a}~\\vec{b}~\\vec{c}]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$[\\vec{a}~\\vec{b}~\\vec{c}]^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2[\\vec{a}~\\vec{b}~\\vec{c}]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7c2805809f62",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\vec{a}=\\hat{i}+2\\hat{j}+3\\hat{k},\\vec{b}=3\\hat{i}+4\\hat{j}+4\\hat{k},\\vec{c}=3\\hat{i}+2\\hat{j}+3\\hat{k}$ are the position vectors of the vertices $A$, $B$ and $C$ respectively of $\\triangle ABC$ and the bisector of $\\angle A$ meets side $BC$ at $D$ where $B-D-C$, then $|\\vec{AD}|$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\sqrt{30}}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{13}}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f868557be3d8",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle PQR, L and M are the points on QR and PR respectively such that $QL=2LR$ and $PM=3MR$. Let S be the point of intersection of PL and QM; then S divides segment QM internally in the ratio ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12:5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8:3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16:9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0f77cb477531",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\bar{a}=\\hat{i}+\\hat{j}+\\hat{k}$, $\\bar{b}=\\hat{i}-3\\hat{j}+2\\hat{k}$ and $\\bar{c}=3\\hat{i}-2\\hat{k}$. If a vector $\\bar{p}$ satisfies the conditions $\\bar{p}\\cdot\\bar{c}=0$ and $\\bar{p}\\times\\bar{a}=\\bar{b}\\times\\bar{a}$, then the value of $|\\bar{p}|=$...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{14}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{17}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{19}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-115725b26c9b",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\bar{a}$, $\\bar{b}$ and $\\bar{c}$ are three vectors such that $|\\bar{a}+\\bar{b}+\\bar{c}|=1$, $\\bar{c}=\\lambda(\\bar{a}\\times\\bar{b})$ and $|\\bar{a}|=\\frac{1}{\\sqrt{3}}$, $|\\bar{b}|=\\frac{1}{\\sqrt{2}}$, $|\\bar{c}|=\\frac{1}{\\sqrt{6}}$, then the angle between $\\bar{a}$ and $\\bar{b}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi^c}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi^c}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi^c}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi^c}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1fc62921306e",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\overline{OD}=\\hat{i}+2\\hat{j}+6\\hat{k}$, $\\overline{CB}=-3\\hat{i}-2\\hat{k}$ be the diagonals of the parallelogram OBDC and $\\overline{OA}=\\hat{i}+2\\hat{j}+3\\hat{k}$ be another vector. Then the volume of a parallelopiped determined by vectors $\\overline{OA}$, $\\overline{OB}$, and $\\overline{OC}$ (in cubic units), is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$12$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-29a4917ea43e",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\bar{a}$ and $\\bar{b}$ are unit vectors perpendicular to each other, then $\\left[\\bar{a}+(\\bar{a}\\times\\bar{b})\\quad\\bar{b}+(\\bar{a}\\times\\bar{b})\\quad(\\bar{a}\\times\\bar{b})\\right]=\\cdots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c016c5f71b5c",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The volume of the tetrahedron whose vertices are A$(-1,2,3)$, B$(3,-2,1)$, C$(p,1,3)$, D$(-1,-2,4)$ is $\\frac{16}{3}$ cubic units then the value of p is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-10}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-12aada485849",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Given the following expressions\nA) $(\\vec{a}\\times\\vec{b})\\cdot\\vec{c}$\nB) $\\vec{a}\\times(\\vec{b}\\cdot\\vec{c})$\nC) $\\vec{a}\\cdot(\\vec{b}\\cdot\\vec{c})$\nD) $|\\vec{a}|(\\vec{b}\\cdot\\vec{c})$\nE) $(\\vec{a}\\cdot\\vec{b})\\times(\\vec{b}\\cdot\\vec{c})$\nThen which of the following is not correct",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "B and E are meaningful",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "A and D are meaningful",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "B, C and E are meaningless",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "A is meaningful but B is meaningless",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1b4e9849d0b4",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\vec{a},\\vec{b},\\vec{c}$ are three non-coplanar vectors and $\\vec{p},\\vec{q},\\vec{r}$ are defined as $\\vec{p}=\\frac{\\vec{b}\\times\\vec{c}}{\\left[\\vec{a}~\\vec{b}~\\vec{c}\\right]},\\vec{q}=\\frac{\\vec{c}\\times\\vec{a}}{\\left[\\vec{a}~\\vec{b}~\\vec{c}\\right]},\\vec{r}=\\frac{\\vec{a}\\times\\vec{b}}{\\left[\\vec{a}~\\vec{b}~\\vec{c}\\right]}$, then $[(\\vec{a}+\\vec{b})\\cdot\\vec{p}+(\\vec{b}+\\vec{c})\\cdot\\vec{q}+(\\vec{c}+\\vec{a})\\cdot\\vec{r}]$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2abdd5d6d9ef",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\vec{u}=\\hat{i}+2\\hat{j}-2\\hat{k},\\vec{v}=2\\hat{i}+\\hat{k}$ and $\\vec{w}$ is unit vector then the maximum value of scalar triple product $[\\vec{u}~\\vec{v}~\\vec{w}]$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-3\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\sqrt{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{54}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2ee54c90ecea",
+      "subtopic": "vector-or-cross-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{a}=2\\hat{i}+\\hat{k},\\vec{b}=\\hat{i}+\\hat{j}+\\hat{k}$, and $\\vec{c}=4\\hat{i}-3\\hat{j}+7\\hat{k}$. If $\\vec{r}$ is a vector such that $\\vec{r}\\times\\vec{b}=\\vec{c}\\times\\vec{b}$ and $\\vec{r}\\cdot\\vec{a}=0$, Then $\\vec{r}\\cdot\\vec{c}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-14$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$34$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dc071e30aad1",
+      "subtopic": "scalar-and-vector-triple-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The volume of the parallelopiped whose coterminous edges are $2\\hat{i}+\\hat{j}-\\hat{k},3\\hat{i}-\\hat{j}-\\hat{k},\\hat{j}+3\\hat{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$16$ cu. units",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$6$ cu. units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$ cu. units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12$ cu. units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0c514ca5a0ff",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a parallelogram is constructed on vectors $\\vec{a}=3\\vec{p}-\\vec{q}$, $\\vec{b}=\\vec{p}+3\\vec{q}$ and $|\\vec{p}|=|\\vec{q}|=2$ and the angle between $\\vec{p}$ and $\\vec{q}$ is $\\frac{\\pi}{3}$, then $|\\vec{a}|:|\\vec{b}|=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{5}:\\sqrt{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{7}:\\sqrt{13}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{13}:\\sqrt{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{13}:\\sqrt{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-10657df5e641",
+      "subtopic": "scalar-or-dot-product-of-two-vectors-and-its-applications",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\vec{a},\\vec{b},\\vec{c}$ are unit vectors satisfying $\\vec{a}-(\\sqrt{3})\\vec{b}+\\vec{c}=\\vec{0}$, then the angle between $\\vec{a}$ and $\\vec{c}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-22039f0a9d7a",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $8\\overline{AB}-3\\overline{AC}-5\\overline{AD}=\\bar{O}$, then the ratio in which the point $B$ divides segment $CD$ is ....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8:5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5:3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3:4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e5a0468f3095",
+      "subtopic": "algebra-and-modulus-of-vectors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In $\\triangle ABC$, $P$ is a point on side $BC$ such that $BP:PC=4:1$ and $Q$ is a point on the segment $AP$ such that $AQ:QP=3:2$. If $\\vec{BQ}$ is expressed as $\\vec{BQ}=x\\vec{BA}+y\\vec{BC}$, then the value of $x+y$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{22}{25}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{17}{25}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

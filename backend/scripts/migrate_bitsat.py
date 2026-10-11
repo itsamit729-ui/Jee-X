@@ -11,8 +11,8 @@ from app.database import engine
 
 CHANGES = (
     ('subjects', 'ck_subjects_code', "code IN ('PHY','CHEM','MATH','ENG','LR')", 'ENG'),
-    ('questions', 'ck_questions_exam', "exam IS NULL OR exam IN ('jee_main','jee_advanced','bitsat')", 'bitsat'),
-    ('tests', 'ck_tests_pattern', "pattern IN ('jee_main','jee_advanced','bitsat')", 'bitsat'),
+    ('questions', 'ck_questions_exam', "exam IS NULL OR exam IN ('jee_main','jee_advanced','bitsat','mht_cet')", 'bitsat'),
+    ('tests', 'ck_tests_pattern', "pattern IN ('jee_main','jee_advanced','bitsat','mht_cet')", 'bitsat'),
 )
 
 def main():

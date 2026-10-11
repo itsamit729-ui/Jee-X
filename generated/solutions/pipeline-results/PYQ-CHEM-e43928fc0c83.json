@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-e43928fc0c83",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "A: $\\mathrm{H_2,\\ Pd{-}BaSO_4}$ partially reduces an acid chloride to an aldehyde: $\\mathrm{RCOCl + H_2 \\xrightarrow{Pd-BaSO_4} RCHO + HCl}$. This is the Rosenmund reduction, so A → II.\nB: $\\mathrm{SnCl_2,\\ HCl}$ reduces a nitrile to an imine, and hydrolysis of the imine gives an aldehyde: $\\mathrm{RCN \\to RCH{=}NH \\xrightarrow{H_3O^+} RCHO}$. This is the Stephen reaction, so B → IV.\nC: Chromyl chloride, $\\mathrm{CrO_2Cl_2}$ in $\\mathrm{CS_2}$, oxidises toluene to a chromium complex, and hydrolysis of the complex gives benzaldehyde. This is the Etard reaction, so C → I.\nD: $\\mathrm{CO,\\ HCl}$ with anhydrous $\\mathrm{AlCl_3}$ (or CuCl) converts benzene into benzaldehyde. This is the Gattermann–Koch reaction, so D → III.\nSo the matching is A-II, B-IV, C-I, D-III.\nAnswer: (D)",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "A: $\\mathrm{H_2,\\ Pd{-}BaSO_4}$ partially reduces an acid chloride to an aldehyde: $\\mathrm{RCOCl + H_2 \\xrightarrow{Pd-BaSO_4} RCHO + HCl}$. This is the Rosenmund reduction, so A → II.\nB: $\\mathrm{SnCl_2,\\ HCl}$ reduces a nitrile to an imine, and hydrolysis of the imine gives an aldehyde: $\\mathrm{RCN \\to RCH{=}NH \\xrightarrow{H_3O^+} RCHO}$. This is the Stephen reaction, so B → IV.\nC: Chromyl chloride, $\\mathrm{CrO_2Cl_2}$ in $\\mathrm{CS_2}$, oxidises toluene to a chromium complex, and hydrolysis of the complex gives benzaldehyde. This is the Etard reaction, so C → I.\nD: $\\mathrm{CO,\\ HCl}$ with anhydrous $\\mathrm{AlCl_3}$ (or CuCl) converts benzene into benzaldehyde. This is the Gattermann–Koch reaction, so D → III.\nSo the matching is A-II, B-IV, C-I, D-III.\nAnswer: (D)",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 761,
+   "cache_read": 1023,
+   "output": 543,
+   "thinking": 0,
+   "api_cost_usd": 0.017160599999999998,
+   "turns": 2,
+   "seconds": 8.8,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1248,
+   "cache_read": 1199,
+   "output": 128,
+   "thinking": 0,
+   "api_cost_usd": 0.012791799999999999,
+   "turns": 2,
+   "seconds": 6.5,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:26:18+00:00"
+}

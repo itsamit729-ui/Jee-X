@@ -1,0 +1,73 @@
+{
+ "ref": "PYQ-CHEM-1e9c25b28f9b",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "X is $\\mathrm{CH_3{-}CH{=}CH{-}O{-}C(CH_3){=}CH_2}$. Both groups on the oxygen are vinyl groups, so X is an enol ether on each side.\nIn mild acid, the $\\mathrm{C{=}C}$ next to the oxygen is protonated, water adds and the C–O bond breaks. Each vinyl group comes off as an enol, which tautomerises to its carbonyl form.\nThe propenyl side gives $\\mathrm{CH_3CH{=}CH{-}OH \\rightarrow CH_3CH_2CHO}$, which is propanal (Y).\nThe isopropenyl side gives $\\mathrm{CH_2{=}C(OH)CH_3 \\rightarrow CH_3COCH_3}$, which is propanone (Z).\n(A) Both products are $\\mathrm{C_3H_6O}$ with $M = 58\\ \\mathrm{g\\,mol^{-1}}$. True.\n(B) Neither compound is acidic enough to release $\\mathrm{CO_2}$ with $\\mathrm{NaHCO_3}$, so this reagent cannot distinguish them. False.\n(C) The aldehyde is less hindered and more electrophilic, so it adds HCN faster than the ketone. The rates are not the same. False.\n(D) Both undergo addition followed by elimination with 2,4-DNP, each forming an orange 2,4-dinitrophenylhydrazone. True.\nAnswer: (D) A and D only",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "X is $\\mathrm{CH_3{-}CH{=}CH{-}O{-}C(CH_3){=}CH_2}$. Both groups on the oxygen are vinyl groups, so X is an enol ether on each side.\nIn mild acid, the $\\mathrm{C{=}C}$ next to the oxygen is protonated, water adds and the C–O bond breaks. Each vinyl group comes off as an enol, which tautomerises to its carbonyl form.\nThe propenyl side gives $\\mathrm{CH_3CH{=}CH{-}OH \\rightarrow CH_3CH_2CHO}$, which is propanal (Y).\nThe isopropenyl side gives $\\mathrm{CH_2{=}C(OH)CH_3 \\rightarrow CH_3COCH_3}$, which is propanone (Z).\n(A) Both products are $\\mathrm{C_3H_6O}$ with $M = 58\\ \\mathrm{g\\,mol^{-1}}$. True.\n(B) Neither compound is acidic enough to release $\\mathrm{CO_2}$ with $\\mathrm{NaHCO_3}$, so this reagent cannot distinguish them. False.\n(C) The aldehyde is less hindered and more electrophilic, so it adds HCN faster than the ketone. The rates are not the same. False.\n(D) Both undergo addition followed by elimination with 2,4-DNP, each forming an orange 2,4-dinitrophenylhydrazone. True.\nAnswer: (D) A and D only",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": [
+     {
+      "expression": "3*12 + 6*1 + 16",
+      "claimed": "58"
+     }
+    ]
+   },
+   "calc_check": [
+    {
+     "expression": "3*12 + 6*1 + 16",
+     "claimed": "58",
+     "value": 58.0,
+     "status": "ok"
+    }
+   ]
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1230,
+   "cache_read": 555,
+   "output": 1368,
+   "thinking": 124,
+   "api_cost_usd": 0.037319000000000005,
+   "turns": 2,
+   "seconds": 15.7,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1314,
+   "cache_read": 1199,
+   "output": 1256,
+   "thinking": 622,
+   "api_cost_usd": 0.0358798,
+   "turns": 2,
+   "seconds": 18.4,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:26:03+00:00"
+}

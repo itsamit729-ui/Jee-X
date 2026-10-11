@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-PHY-af280bfbebd2",
+ "subject": "PHY",
+ "type": "single_correct",
+ "has_figure": false,
+ "answer_key": "C",
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "C",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "The work needed to bring a charge $q$ from infinity to a point is $W = qV$, where $V$ is the potential at that point.\nThe third corner is at a distance $r = 3\\ \\text{cm} = 0.03\\ \\text{m}$ from each of the two charges.\nThe potential at the third corner is $V = \\frac{1}{4\\pi\\varepsilon_0}\\frac{(q_1+q_2)}{r} = \\frac{9\\times10^9 \\times (1+2)\\times10^{-9}}{0.03}\\ \\text{V}$.\nThis gives $V = \\frac{27}{0.03}\\ \\text{V} = 900\\ \\text{V}$.\nSo $W = qV = (3\\times10^{-9}\\ \\text{C})(900\\ \\text{V}) = 2.7\\times10^{-6}\\ \\text{J} = 2.7\\ \\mu\\text{J}$.\nAnswer: (C) 2.7",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 686,
+   "cache_read": 928,
+   "output": 487,
+   "thinking": 88,
+   "api_cost_usd": 0.015421599999999999,
+   "turns": 2,
+   "seconds": 8.2,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1028,
+   "cache_read": 1541,
+   "output": 560,
+   "thinking": 87,
+   "api_cost_usd": 0.0197402,
+   "turns": 2,
+   "seconds": 7.6,
+   "error": false
+  }
+ ]
+}

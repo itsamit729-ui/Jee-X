@@ -10,6 +10,7 @@ from sqlalchemy import (
     Text,
     UniqueConstraint,
     func,
+    or_,
 )
 from sqlalchemy.orm import relationship
 
@@ -38,6 +39,7 @@ class Chapter(Base):
     class_level = Column(String(2), nullable=False)
     in_main = Column(Boolean, nullable=False, server_default="1")
     in_advanced = Column(Boolean, nullable=False, server_default="1")
+    in_mht_cet = Column(Boolean, nullable=False, server_default="0")
     position = Column(Integer, nullable=False, server_default="0")
 
     __table_args__ = (
@@ -75,6 +77,12 @@ class Passage(Base):
     assets = relationship("Asset", back_populates="passage", cascade="all, delete-orphan")
 
 
+# Exams a question can come from. Students prepare for the JEE ones (student_profiles.target_exam);
+# questions of the other exams are stored but stay out of the JEE question pools (see jee_question).
+JEE_EXAMS = ("jee_main", "jee_advanced")
+QUESTION_EXAMS = JEE_EXAMS + ("bitsat", "mht_cet")
+
+
 class Question(Base):
     __tablename__ = "questions"
 
@@ -104,7 +112,7 @@ class Question(Base):
         CheckConstraint("type IN ('single_correct','multi_correct','numerical')", name="ck_questions_type"),
         CheckConstraint("difficulty BETWEEN 1 AND 10", name="ck_questions_difficulty"),
         CheckConstraint("source_type IN ('pyq','original','adapted')", name="ck_questions_source_type"),
-        CheckConstraint("exam IS NULL OR exam IN ('jee_main','jee_advanced','bitsat')", name="ck_questions_exam"),
+        CheckConstraint("exam IS NULL OR exam IN ('jee_main','jee_advanced','bitsat','mht_cet')", name="ck_questions_exam"),
         CheckConstraint(
             "status IN ('draft','reviewed','published','retired')", name="ck_questions_status"
         ),
@@ -121,6 +129,11 @@ class Question(Base):
             name="ck_questions_pyq_exam_year",
         ),
     )
+
+    @classmethod
+    def jee_question(cls):
+        """Filter: a JEE previous-year question or one of ours (no exam), not another exam's question."""
+        return or_(cls.exam.is_(None), cls.exam.in_(JEE_EXAMS))
 
     subtopic = relationship("Subtopic", back_populates="questions")
     passage = relationship("Passage", back_populates="questions")

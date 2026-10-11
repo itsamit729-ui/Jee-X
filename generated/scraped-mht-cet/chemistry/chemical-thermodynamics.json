@@ -1,0 +1,2928 @@
+{
+  "subject": "CHEM",
+  "chapter": {
+    "name": "Chemical Thermodynamics",
+    "slug": "chemical-thermodynamics",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "entropy-free-energy-change-and-spontaneity",
+      "name": "Entropy free energy change and spontaneity",
+      "position": 1
+    },
+    {
+      "slug": "reactions-related-to-enthalpies-and-hesss-law",
+      "name": "Reactions related to enthalpies and hesss law",
+      "position": 2
+    },
+    {
+      "slug": "fundamentals-of-thermodynamics",
+      "name": "Fundamentals of thermodynamics",
+      "position": 3
+    },
+    {
+      "slug": "first-law-of-thermodynamics",
+      "name": "First law of thermodynamics",
+      "position": 4
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-CHEM-48e329c574cd",
+      "subtopic": "fundamentals-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following processes exhibits, $\\Delta U=0$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Adiabatic process",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Isothermal process",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Isobaric process",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Isochoric process",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ae181c4e4e25",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the enthalpy change for the following reaction, using given bond energy (kJ/mol)\n(C-H = $414$, H-O = $463$, H-Cl = $431$, C-Cl = $326$ and C-O = $335$)\n$\\text{CH}_3\\text{OH}_{(g)}+\\text{HCl}_{(g)}\\rightarrow\\text{CH}_3\\text{Cl}_{(g)}+\\text{H}_2\\text{O}_{(g)}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-23\\text{ kJmol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-42\\text{ kJmol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-59\\text{ kJmol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-51\\text{ kJmol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d8a83ef17072",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the work done when $1$ mole of an ideal gas is expanded reversibly and isothermally from initial pressure $10$ bar to final pressure $1$ bar at constant temperature $300$ K. [$R=8.314\\text{ J K}^{-1}\\text{ mol}^{-1}$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-5.744$ kJ",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-5.123$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-6.514$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-4.981$ kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bd84a6fd1f36",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equilibrium constant for a reaction is $100$. What will be the value of standard Gibbs energy change at $298$ K ? ($R=8.314$ J $\\text{K}^{-1}\\text{mol}^{-1}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-11.411$ KJ/mol",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-5.744$ KJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-570.584$ KJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-57.058$ KJ/mol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f35ef50044c9",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$200$ mL of ethylene gas and $150$ mL of HCl gas were allowed to react at $1$ bar. Pressure to form gaseous ethyl chloride. What is the work done during the reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$15$ J",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$30$ J",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$150$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$300$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-facf707ba96a",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The bond dissociation enthalpy of $\\text{H}_2$, $\\text{Cl}_2$ and HCl are $434$, $242$ and $431$ kJ $\\text{mol}^{-1}$ respectively. Calculate the enthalpy of formation of HCl.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-93$ kJ $\\text{mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$245$ kJ $\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$93$ kJ $\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-245$ kJ $\\text{mol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6b31bc40a11f",
+      "subtopic": "fundamentals-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following enthalpy change is negative?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Enthalpy of fusion",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Enthalpy of condensation",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Enthaly of vaporization",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Enthalpy of sublimation",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-70b3cc465f70",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "For a certain reaction, change in enthalpy is $-225$ kJ and entropy change $=-150$ JK${}^{-1}$. Find the temperature so that $\\Delta G$ is zero.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$350$ K",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1500$ K",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$105$ K",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1800$ K",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-81e109d99c71",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate $\\Delta_fH$ for $\\text{C}(s)+2\\text{H}_2(g)\\rightarrow\\text{CH}_4(g)$\ni. $\\text{C}(s)+\\text{O}_2(g)\\rightarrow\\text{CO}_2(g);\\Delta H_1=-393.5$ kJ/mol\nii. $\\text{H}_2(g)+1/2\\,\\text{O}_2(g)\\rightarrow\\text{H}_2\\text{O}(l);\\Delta H_2=-285.8$ kJ/mol\niii. $\\text{CH}_4(g)+2\\text{O}_2(g)\\rightarrow\\text{CO}_2(g)+2\\text{H}_2\\text{O}(l);\\Delta H_3=-890.3$ kJ/mol",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1855.4$ kJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-211$ kJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-74.8$ kJ/mol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1068.4$ kJ/mol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4da99470a5c7",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the work done, when three moles of an ideal gas expand isothermally from $16\\,dm^3$ to $20\\,dm^3$, at a constant external pressure of $1.5$ bar.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$600$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-600$ J",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-400$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$400$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5bdc5d90a16e",
+      "subtopic": "fundamentals-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following statements is NOT true regarding the isothermal process?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Heat is either added or removed from the system.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "The temperature of the system remains constant.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The internal energy of the system remains constant.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "No heat enters or leaves the system.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c55d382bcf01",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For a certain reaction $\\Delta H=-50$ kJ and $\\Delta S=-100$ J/K find the temperature so that the reaction is spontaneous.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$650$ K",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$600$ K",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$550$ K",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$450$ K",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ff24f6a136b9",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the enthalpy change of the reaction,\n$\\text{H}_2\\text{(g)}+\\text{Cl}_2\\text{(g)}\\rightarrow 2\\text{HCl(g)}$\nif bond energies (kJ mol${}^{-1}$):\nH–H = 436, Cl–Cl = 242, H–Cl = 431",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-184$ kJ/mol",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-246$ kJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-242$ kJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-431$ kJ/mol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-aba4bde70b68",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The enthalpy of combustion of cyclohexane, cyclohexene and $\\text{H}_2$ are respectively $-3920,-3800$ and $-241$ KJ mol${}^{-1}$. The enthalpy of hydrogenation of cyclohexene is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-121$ KJ mol${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$+121$ KJ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-242$ KJ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$+242$ KJ mol${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e6009a643791",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A gas expands from a volume of $1$ dm${}^3$ to $1.25$ dm${}^3$ under a pressure of $1$ bar. Find the change in internal energy if $150$ J of heat is supplied to the system.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$125$ J",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$175$ J",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-125$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-175$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-fa29833926bb",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In which of the following processes the internal energy of system remain constant?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Isobaric Process",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Isochoric Process",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Isothermal Process",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Adiabatic Process",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-79852a971c42",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$1$ mole of an ideal gas expands isothermally and reversibly from an initial volume of $10$ L to a final volume of $20$ L at $300$K. Calculate the work done in expanding the gas. ( R = $8.314$ J K${}^{-1}$ mol${}^{-1}$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-750$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1500$ J",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1729$ J",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-3456$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8137b1013213",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the change in internal energy of the system if $40$ kJ of work is done by the system, and it absorbs $20$ kJ of heat",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-20$ kJ",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$20$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-60$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$40$ kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b64c7687535d",
+      "subtopic": "fundamentals-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following is an extensive property?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Melting point",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Density",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Mass",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Viscosity",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-24ec7d8d57e8",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following statements regarding entropy is correct?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It decreases in spontaneous process.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Change in entropy of sublimation is negative.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "It measures randomness.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "It is path dependent.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d980cb9aacd1",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the enthalpy of vaporization of methanol, if $17.64$ kJ heat is required for vaporization of $16$ g of it?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$17.64$ kJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$35.28$ kJ/mol",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$52.92$ kJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$70.56$ kJ/mol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-dec82dea511f",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $X$ moles of $\\text{O}_2$ gas expand isothermally and reversibly from volume $2$ $\\text{dm}^3$ to volume $20$ $\\text{dm}^3$ at $300$ K, the work obtained is $-17.232$ kJ. Calculate the value of $X$.\n[$R=8.314$ $\\text{J K}^{-1}\\text{mol}^{-1}$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-748adc834de2",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the free energy change for a certain reaction at $300$ K if $\\Delta H$ is $60$ kJ and $\\Delta S$ is $-120\\,\\text{JK}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$24.0$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-35.5$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$96.0$ kJ",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-57.5$ kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bd3cb4a261dd",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a particular reaction, $4$ kJ of heat is released by the system and $8$ kJ of work is done on the system. Determine the value of $\\Delta U$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$+2$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$+4$ kJ",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-4$ kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5e7226b757a5",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the heat of formation of $\\text{SO}_2$ from the following data,\ni) $\\text{S}+3/2\\,\\text{O}_2(g)\\rightarrow\\text{SO}_3(g)$, $\\Delta H=-5Y$ kJ\nii) $\\text{SO}_2+1/2\\,\\text{O}_2(g)\\rightarrow\\text{SO}_3(g)$, $\\Delta H=-3Y$ kJ",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2Y$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8Y$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-8Y$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2Y$ kJ",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a2929a952d3b",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the constant external pressure required to compress $4$ moles of an ideal gas, from volume $30$ dm${}^3$ to $20$ dm${}^3$ when the work obtained is $4053$ J.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$ atm.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4.5$ atm.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5$ atm.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3.5$ atm.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a94b3cfc2329",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\text{CH}_{4(g)}\\rightarrow\\text{C}_{(g)}+4\\text{H}_{(g)}$, $\\Delta H=1660$ kJ/mol.\nWhat type of enthalpy does the reaction represent?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Enthalpy of decomposition",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Enthalpy of atomization",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Enthalpy of ionization",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Enthalpy of vaporization",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7c3543707c4a",
+      "subtopic": "fundamentals-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following properties of a system depends upon the amount of matter and path?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Heat",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Free energy",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Enthalpy",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Entropy",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-97347114e43c",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following processes has $\\Delta S$ negative?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Dissolving Sugar in Water",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Adsorption of a Gas on a Solid Surface",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\text{NH}_3(g)\\rightarrow\\text{N}_2(g)+3\\text{H}_2(g)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Sublimation of Dry Ice",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e90c6fa9d4f0",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\text{C}_2\\text{H}_5\\text{OH}(l)+3\\text{O}_2(g)\\rightarrow 2\\text{CO}_2(g)+3\\text{H}_2\\text{O}(l)$\nThe value of enthalpy change ($\\Delta H$) for above reaction at $27{\\,}^{\\circ}\\text{C}$ is $-1366.5$ kJ $\\text{mol}^{-1}$. Then value of internal energy change for the same reaction at this temperature will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1369.0$ kJ $\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1364.0$ kJ $\\text{mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-1371.5$ kJ $\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1361.5$ kJ $\\text{mol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-01c16282fa97",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a certain reaction, $\\Delta H^0$ is $-345$ kJ and $\\Delta S^0$ is $-123~\\text{JK}^{-1}$. At what temperature the change over from spontaneous to nonspontaneous will occur?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1052$ K",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1956$ K",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2568$ K",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2805$ K",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-59ec5ca2d5bb",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a reaction to be spontaneous at all temperatures, the values of enthalpy change and entropy change should be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Delta H>0$ and $\\Delta S>0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\Delta H<0$ and $\\Delta S>0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\Delta H<0$ and $\\Delta S<0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Delta H>0$ and $\\Delta S<0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f2001543824e",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Find $\\Delta n$ when 1 mol of each $\\text{NH}_{3(g)}$ and $\\text{HCl}_{(g)}$, reacts to form solid $\\text{NH}_4\\text{Cl}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-04f273c5b1a3",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following processes uses the total heat absorbed by system to perform work on the surrounding?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Adiabatic",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Isothermal",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Isochoric",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Isobaric",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-08ea4efcfad2",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the work done in the following reaction\n$\\text{NH}_4\\text{NO}_{3(s)}\\rightarrow\\text{N}_2\\text{O}_{(g)}+2\\text{H}_2\\text{O}_{(g)}$ at $300$ K.\n[$R=8.314~\\text{J K}^{-1}~\\text{mol}^{-1}$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-7.483~\\text{kJ mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-3.741~\\text{kJ mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-11.224~\\text{kJ mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-14.966~\\text{kJ mol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f520be4324b2",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "For the following reaction,\n$\\text{C}(s)+2\\text{H}_2(g)\\rightarrow\\text{CH}_4(g);~\\Delta_rH^0=-75~\\text{kJ}$.\nCalculate $\\Delta G^0$ if $\\Delta S^0$ is $185~\\text{JK}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-130.13~\\text{kJ}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$130.13~\\text{kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$19.87~\\text{kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-19.87~\\text{kJ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-005975e8b31d",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a process, $\\Delta U=0$ and $q\\ne 0$. Then the process must involve",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "No work is done during the process.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Heat is transferred, but no mechanical work occurs.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Work done by or on a system exactly equal in magnitude and opposite in sign to a heat transfer.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "There is a change in internal energy of the system throughout the process.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-49264eb6dd1f",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the work done when $2$ moles of an ideal gas expand isothermaly and reversibly from $10$ $\\text{dm}^3$ to $20$ $\\text{dm}^3$ at $300$ K\n$(R=8.314\\,\\text{JK}^{-1}\\text{mol}^{-1})$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-3458\\,J$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1729\\,J$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-864.5\\,J$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2593\\,J$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9bdeea3ca6e2",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the standard enthalpy of combustion of $\\text{C}_2\\text{H}_2(g)$,\n$\\text{C}_2\\text{H}_2(g)+5/2\\,\\text{O}_2(g)\\rightarrow 2\\text{CO}_2(g)+\\text{H}_2\\text{O}(l)$\n$[\\Delta_fH^0(\\text{CO}_2)=-390$ kJ $\\text{mol}^{-1}$, $\\Delta_fH^0(\\text{H}_2\\text{O})=-285$ kJ $\\text{mol}^{-1}$ and $\\Delta_fH^0(\\text{C}_2\\text{H}_2)=225$ kJ $\\text{mol}^{-1}]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Delta_cH^0\\,(\\text{C}_2\\text{H}_2)=-1290$ kJ $\\text{mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\Delta_cH^0(\\text{C}_2\\text{H}_2)=-645$ kJ $\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\Delta_cH^0(\\text{C}_2\\text{H}_2)=-1935$ kJ $\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Delta_cH^0(\\text{C}_2\\text{H}_2)=-2580$ kJ $\\text{mol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-66e850df490f",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a particular reaction, 4 kJ heat is released by the system and 12 kJ work done on the system. Calculate the $\\Delta H$ and $\\Delta U$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Delta H=4$ kJ and $\\Delta U=16$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\Delta H=-4$ kJ and $\\Delta U=8$ kJ",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\Delta H=-4$ kJ and $\\Delta U=-16$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Delta H=4$ kJ and $\\Delta U=-16$ kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-992e7dbafcf9",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the change in entropy of surrounding for the reaction,\n$\\text{H}_{2(g)}+1/2~\\text{O}_{2(g)}\\rightarrow\\text{H}_2\\text{O}_{(l)}$\nat 298 K if standard enthalpy of formation of water is $-286$ kJ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$959.7~\\text{JK}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$801.5~\\text{JK}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$850.7~\\text{JK}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$980.0~\\text{JK}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a5f1454e0177",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following relations is correct for a reaction $\\text{S}_{(s)}+\\text{O}_{2(g)}\\rightarrow\\text{SO}_{2(g)}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Delta H>\\Delta U$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\Delta H<\\Delta U$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\Delta H=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Delta H=\\Delta U$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-506380ce5fb0",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The heat of combustion of carbon to $\\text{CO}_2$ is $-393.5~\\text{kJ/mol}$. The heat released upon formation of 35.2 g of $\\text{CO}_2$ from carbon and oxygen gas is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$+315~\\text{kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-315~\\text{kJ}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-3.15~\\text{kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-630~\\text{kJ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-803467fb01d3",
+      "subtopic": "fundamentals-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Identify the process that proceeds with no heat exchange between system and surrounding.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Isothermal",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Isobaric",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Isochoric",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Adiabatic",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-cf5ad7bb66d4",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the enthalpy change when 6 g. $\\text{CO(g)}$ reacts with sufficient $\\text{NO}_2\\text{(g)}$ according to the following reaction\n$4\\,\\text{CO(g)}+2\\,\\text{NO}_2\\text{(g)}\\rightarrow 4\\,\\text{CO}_2\\text{(g)}+2\\text{N}_2\\text{(g)}\\,;~\\Delta_rH^0=-1200~\\text{kJ}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-16.08~\\text{kJ}$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-32.15~\\text{kJ}$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-64.29~\\text{kJ}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-128.58~\\text{kJ}$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0f4785baf346",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A system is provided 50 J of heat and work done on the system is 10 J. What is change in internal energy ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$40$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60$ J",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$30$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$50$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-51bce24c826f",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following equations is used to obtain enthalpy change of a reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Delta H=\\sum\\Delta H_P-\\sum\\Delta H_R$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\Delta H=\\sum\\Delta H_R-\\sum\\Delta H_P$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\Delta H=\\sum\\Delta H_P+\\sum\\Delta H_R$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Delta H=\\frac{\\sum\\Delta H_P}{\\sum\\Delta H_R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-aecb1f009f38",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "At $25~^{\\circ}\\text{C}$ standard enthalpy of combustion of $\\text{H}_2$, Cyclohexene and cyclohexane are -241, -3800 and -3920 kJ $\\text{mol}^{-1}$ respectively. What is the heat of hydrogenation of cyclohexene?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-121$ kJ",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-242$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$121$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$363$ kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-3f06262ac37f",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the quantity of heat released from system when 2 moles of and ideal gas compressed isothermally from volume $25\\text{ dm}^3$ to $10\\text{ dm}^3$ at constant external pressure 4 bar.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\cdot 5\\text{ kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5\\cdot 0\\text{ kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6\\cdot 5\\text{ kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6\\cdot 0\\text{ kJ}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-87ab23ff2009",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following processes is an endothermic ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "The aqueous NaOH and HCl solutions mixed together.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Formation of ammonia by Haber process.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Ice melts at room temperature.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "The freezing of liquid water.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d88a9657fcde",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the standard enthalpy of combustion of carbon monoxide if\n$\\Delta_fH^{\\circ}(\\text{CO})=-110\\text{ kJ mol}^{-1}$\n$\\Delta_fH^{\\circ}(\\text{CO}_2)=-393\\text{ kJ mol}^{-1}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-503\\text{ kJ mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-110\\text{ kJ mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-283\\text{ kJ mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-383\\text{ kJ mol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-05bbee4fa7bc",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate $\\Delta\\text{H}$ for the following reaction at $300~\\text{K}$\n$2\\text{C}_{(s)}+3\\text{H}_{2(g)}\\longrightarrow\\text{C}_2\\text{H}_{6(g)}$ if $\\Delta\\text{U}$ for the reaction is $-80~\\text{kJ}$ ($\\text{R}=8.314~\\text{JK}^{-1}\\text{mol}^{-1}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-85.00~\\text{kJ}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-43.00~\\text{kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-128.00~\\text{kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-170.00~\\text{kJ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6778279f2965",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which from following is correct expression of first law of thermodynamics for isothermal process?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{W}=-\\text{Q}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\Delta\\text{U}=-\\text{W}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\Delta\\text{U}=\\text{Q}_{\\text{v}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{Q}_{\\text{p}}=\\Delta\\text{U}+\\text{P}_{\\text{ext}}\\Delta\\text{V}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a4ca20771189",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For a certain reaction, $\\Delta\\text{H}^{\\circ}=40~\\text{kJ}$ and $\\Delta\\text{S}^{\\circ}=80~\\text{JK}^{-1}$. Find the temperature so that $\\Delta\\text{G}^{\\circ}=0$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$500~\\text{K}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$400~\\text{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$300~\\text{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$600~\\text{K}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2c5c30357b34",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "1 mole of an ideal gas is compressed isothermally and reversibly from initial pressure $x$ kPa to final pressure $2x$ kPa at 300 K. Find the work done $(R=8.314~\\text{J K}^{-1}\\text{mol}^{-1})$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1432$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1865$ J",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1296$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1729$ J",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bdb233bf0b5a",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the standard enthalpy change for the following reaction,\n$2\\text{C}_2\\text{H}_6\\text{(g)}+7\\text{O}_2\\text{(g)}\\longrightarrow 4\\text{CO}_2\\text{(g)}+6\\text{H}_2\\text{O}\\text{(l)}$\nGiven, $\\Delta_fH^{\\circ}(\\text{C}_2\\text{H}_6)=-85~\\text{kJ mol}^{-1}$\n$\\Delta_fH^{\\circ}(\\text{CO}_2)=-390~\\text{kJ mol}^{-1}$\n$\\Delta_fH^{\\circ}(\\text{H}_2\\text{O})=-285~\\text{kJ mol}^{-1}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2900~\\text{kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-3100~\\text{kJ}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-3000~\\text{kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-3200~\\text{kJ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e726b5ab83c3",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following is the correct expression of the first law of thermodynamics for adiabatic processes ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$W=-Q$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\Delta U=-W$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\Delta U=QV$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Delta U=Q_P-P_{\\text{ext}}\\,\\Delta V$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-17dc0cc28315",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An ideal gas expands from initial volume $5~\\text{dm}^3$ to $15~\\text{dm}^3$ against a constant external pressure of $2$ atm. What is the work done by the gas ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1202.6$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2026.4$ J",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-1101.32$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1013.2$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-cf0d40715aef",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A gas absorbs $120$ J of heat and expands by $300\\times 10^{-6}~\\text{m}^3$ against a constant external pressure of $2\\times 10^5~\\text{Nm}^{-2}$. What will be the change in internal energy of the system ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$180$ J",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$240$ J",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$120$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$60$ J",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f73181ee5551",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify from following, the relation between standard free energy change in a reaction and equilibrium constant $K_c$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\triangle G^{\\circ}=RT\\ln K_c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\triangle G^{\\circ}=\\frac{RT}{\\ln K_c}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\triangle G^{\\circ}=\\frac{\\ln K_c}{RT}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\triangle G^{\\circ}=RT\\ln K_c$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-46dd1d5b0d5e",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate standard Gibbs energy for any gaseous reaction if values of $K_p$ and $R$ respectively are $3.5\\times 10^{17}$ ; $8.314\\,\\text{JK}^{-1}\\text{mol}^{-1}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-100.1\\,\\text{kJ mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-79.5\\,\\text{kJ mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-71.4\\,\\text{kJ mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-89.5\\,\\text{kJ mol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a922d54da6fb",
+      "subtopic": "fundamentals-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which from following is NOT a state function ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Volume",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Pressure",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Work",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Temperature",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c00f50efe9e0",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the work done for the following reaction at $27{\\,}^{\\circ}\\text{C}$\n$\\text{C}_2\\text{H}_{4(g)}+\\text{H}_{2(g)}\\longrightarrow\\text{C}_2\\text{H}_{6(g)}$ ($R=8.314\\,\\text{JK}^{-1}\\text{mol}^{-1}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2494.2$ J",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$124.71$ J",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3741.3$ J",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$187.07$ J",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-27dc7e4a240b",
+      "subtopic": "fundamentals-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following is NOT the state function?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Gibbs energy",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Temperature",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Heat",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Heat transfer at constant volume ($Q_v$)",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5aff5f4ba53d",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "2 moles of an ideal gas expand isothermally and reversibly from $10\\text{ L}$ to $50\\text{ L}$ at $298\\text{ K}$. Calculate the work done during this expansion. ($R=8.314\\text{ JK}^{-1}\\text{ mol}^{-1}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-79.756\\text{ J}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-7.9756\\text{ J}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-7975\\text{ kJ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-7.975\\text{ kJ}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bc99e4d9ce5b",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A gas expands by $2500\\text{ cm}^3$ against constant external pressure $1.5\\text{ atm}$ at constant temperature of $300\\text{ K}$. Calculate the work of expansion in kJ.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-0.380$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-0.350$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-0.42$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-0.45$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0aa6c6e59918",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Evaluate the standard enthalpy of formation of $\\text{C}_2\\text{H}_4$ in kJ/mol from the following data,\n$\\text{C}_2\\text{H}_{4(g)}+3\\text{O}_{2(g)}\\rightarrow 2\\text{CO}_{2(g)}+2\\text{H}_2\\text{O}_{(l)}$ $\\Delta_rH^0=-1411$ kJ/mol\n$\\Delta_fH^0(\\text{CO}_2)=-393$ kJ/mol\n$\\Delta_fH^0(\\text{H}_2\\text{O})=-285$ kJ/mol",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1195$ kJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1195$ kJ/mol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$55$ kJ/mol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-52$ kJ/mol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1921cb0e46d2",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Find the value of $\\Delta_{(sub)}H$ for water if, enthalpy of fusion of water is $6.0$ kJ mol${}^{-1}$ and enthalpy of vapourisation is $45.0$ kJ mol${}^{-1}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-51.0$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-41.0$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$41.0$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$51.0$ kJ",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7a466cc71731",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calulate $\\Delta S_{(total)}$ for following reaction.\n$\\text{CH}_3\\text{OH}_{(l)}+3/2\\text{O}_{2(g)}\\rightarrow\\text{CO}_{2(g)}+2\\text{H}_2\\text{O}_{(l)}$, $\\Delta H=-726$ kJ mol${}^{-1}$, $\\Delta S_{(system)}=42$ JK${}^{-1}$\n(both at $298$ K)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.478$ kJ K${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-2.378$ kJ K${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$39.58$ kJ K${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$44.42$ kJ K${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0539659d1fc3",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate $\\triangle G^{\\circ}$ for reaction,\n$\\text{CH}_{4(g)}+\\text{H}_{2(g)}\\rightarrow\\text{C}_2\\text{H}_{6(g)}$ ($K_p=2\\times 10^{17}$, $R=8.314~\\text{JK}^{-1}\\text{mol}^{-1}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-64.695$ kJ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-98.716$ kJ mol${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-44.08$ kJ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-58.78$ kJ mol${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-86ddd16a12cc",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $2$ mole of an ideal gas expand isothermally and reversibly at $27^{\\circ}$C from 1 $\\text{dm}^3$ to $1~\\text{m}^3$ calculate work done? $[R=8.314~\\text{J K}^{-1}\\text{mol}^{-1}]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-49.95$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-99.90$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-34.46$ kJ",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-68.92$ kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e4b1abd5e835",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify the law for the statement \"Overall the enthalpy change for a reaction is equal to sum of enthalpy changes of individual steps in the reaction\"",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "First law of thermodynamics",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Hess's law",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Avogadro's law",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Second law of thermodynamics",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-17ec0c86fed7",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following processes exhibits the decrease in internal energy of a system?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Isothermal expansion of an ideal gas.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Isothrmal compression of an ideal gas.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Adiabatic expansion of an ideal gas.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Adiabatic compression of an ideal gas",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e6d2a3d15573",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The enthalpy of combustion of C, $\\text{H}_2$, and $\\text{CH}_4$ are $-390$, $-285$ and $-890$ kJ/mol. Find the enthalpy of formation of methane.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-70$ kJ",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-111$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-170$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-85$ kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e9749b0686d3",
+      "subtopic": "first-law-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the change in internal energy if an ideal gas expands from $0.5~\\text{dm}^3$ to $3.5~\\text{dm}^3$ at constant pressure 2 bar by absorbing 1800 J heat energy.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1200$ J.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1200$ J.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2400$ J.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2400$ J.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-3befecd4ea3e",
+      "subtopic": "fundamentals-of-thermodynamics",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following statements is correct about temperature and internal energy ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Both are extensive properties of the system.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Both are the intensive properties of the system.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Intensive and extensive properties of the system respectively.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Extensive and intensive properties of the system respectively.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e77482e0be52",
+      "subtopic": "reactions-related-to-enthalpies-and-hesss-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the amount of heat evolved when $33$ g. $\\text{CO}_2(g)$ formed if the reaction is\n$\\text{CH}_2\\text{O}(g)+\\text{O}_2(g)\\rightarrow\\text{CO}_2(g)+\\text{H}_2\\text{O}(g);~\\Delta H=-527$ kJ",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$527$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$395.3$ kJ",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$263.5$ kJ",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$131.8$ kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ef170b057105",
+      "subtopic": "entropy-free-energy-change-and-spontaneity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Find the entropy change of the surrounding if the standard enthalpy of formation of a substance is $-447$ kJ mol${}^{-1}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1500$ J K${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1500$ J K${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1000$ J K${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1000$ J K${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

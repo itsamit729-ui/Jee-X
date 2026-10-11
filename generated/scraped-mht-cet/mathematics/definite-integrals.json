@@ -1,0 +1,2521 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Definite Integrals",
+    "slug": "definite-integrals",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 20,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "properties-of-definite-integrals",
+      "name": "Properties of Definite Integrals",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "properties-of-definite-integration",
+      "name": "Properties of definite integration",
+      "position": 2
+    },
+    {
+      "slug": "newton-lebnitz-rule-of-differentiation",
+      "name": "Newton lebnitz rule of differentiation",
+      "position": 3
+    },
+    {
+      "slug": "definite-integral-as-a-limit-of-sum",
+      "name": "Definite integral as a limit of sum",
+      "position": 4
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-d1e35b487e3a",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int_1^a(2x+1)dx=5$, then the sum of the values of $a$ is..",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e935a5016420",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $[\\cdot]$ denotes the greatest integer function, then $\\int_1^4x[x]dx$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$34$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-17$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-34$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$17$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1c9e3fd8c75a",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_2^e\\left[\\frac{1}{\\log x}-\\frac{1}{(\\log x)^2}\\right]dx=a+\\frac{b}{\\log 2}$, then values of $a$ and $b$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a=e,b=2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$a=-e,b=2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a=e,b=-2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$a=-e,b=-2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-63bda9e82e16",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_0^k\\frac{1}{1+4^x}dx=\\log_2\\left(\\frac{4}{3}\\right)$, then $k=$ _____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-028a4bcbaff6",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $n$ is an odd natural number and $I_n=\\int_0^1e^x(x-1)^n\\,dx$, then the value of $I_n+nI_{n-1}$ is equal to ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e14e1910d8b6",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\int_0^4\\sqrt{\\frac{4-x}{4+x}}\\,dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi-4$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi+4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi-2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi+2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-01caf6f4ef71",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of the integral $\\int_8^{15}\\frac{dx}{(x-3)\\sqrt{x+1}}$ is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\log\\frac{5}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3}\\log\\frac{5}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\log\\frac{3}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{5}\\log\\frac{3}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1fadb809b2c9",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of the integral $\\int_{-1}^1\\frac{1}{\\left(1+e^x)(1+x^2\\right)}dx$ is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6bcbc494ca90",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\begin{cases} \\frac{\\left[x]\\cdot|x\\right|}{x}, & x\\ne 0 \\\\ 0, & x=0 \\end{cases}$, where $[x]$ and $|x|$ denote the greatest integer function and the modulus function respectively, then $\\int_{-2}^1f(x)\\,dx=...$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1c32d320f356",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of the integral $\\int_{-\\sqrt{3}}^{\\sqrt{3}}\\frac{\\left(2x^9+3x^8-5x^7+9x^6+4x^3-x+3\\right)}{x^2+3}\\,dx$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{162}{7}+\\sqrt{3}\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{162\\sqrt{3}}{7}+\\sqrt{3}\\frac{\\pi}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{162\\sqrt{3}}{7}+\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{162\\sqrt{3}}{7}-\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1e1866c4a94d",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int_0^a\\frac{dx}{1+4x^2}=\\frac{\\pi}{8}$, then $a=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-531c56245a0c",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_0^a(x^2-4x+1)dx=6$, then the real value of $a$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5a55f6b9f9f0",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_{\\pi/6}^{\\pi/3}\\frac{1}{1+\\sin x+\\cos x}dx=\\log 2$, then the value of $\\int_{\\pi/6}^{\\pi/3}\\frac{\\cos x}{1+\\sin x+\\cos x}dx=$ ............",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{12}-\\frac{1}{2}\\log 2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{12}-\\frac{1}{3}\\log 2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{6}-\\frac{1}{2}\\log 2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{12}-\\frac{1}{4}\\log 2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-38fda3377944",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of the integral $\\int_{10}^{20}\\frac{1}{\\left(x-3)(x-2\\right)}dx$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log\\left(\\frac{34}{21}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log\\left(\\frac{17}{7}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log\\left(\\frac{17}{18}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log\\left(\\frac{68}{63}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a4350d334e8e",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The values of $a$ for which $\\int_0^a(3x^2+4x-5)dx<a^3-2$ are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}<a<2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\le a\\le 2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a\\le\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a\\ge 2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e417ed1f175f",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $I_n=\\int_n^{n+1}x[x]dx$, where $[x]$ denotes greatest integer function and $n\\in N$. If $I_n=18$, then the value of $n$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c379324e5518",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_0^1\\tan^{-1}\\left[\\frac{1}{1-x+x^2}\\right]dx=2k$, then the value of $k$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\int_0^1\\tan^{-1}x\\,dx$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\int_0^1\\cot^{-1}x\\,dx$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\int_0^1\\tan^{-1}x\\,dx$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c4a83f8374c1",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_0^{\\infty}\\frac{1}{\\left(x^2+1)(x^2+16\\right)}dx=\\frac{\\pi}{k^2-9}$, then $k=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pm 2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm 5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pm 4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pm 7$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fcb9ecb4275e",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_{-1}^4f(x)dx=4$ and $\\int_2^4(5-f(x))dx=7$ then $\\int_2^{-1}f(x)dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-893a404fd2a3",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $a>4$ and $\\int_{-2}^1\\frac{1}{x^2+4x+a}\\,dx=\\frac{1}{3}\\tan^{-1}(1)$, then the value of $a$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a=9$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$a=3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a=13$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$a=12$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-abfb070b8e5e",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int_0^xf(t)\\,dt=x+\\int_x^0t\\cdot f(t)\\,dt$ then the value of $f(1)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6c8effb25a5c",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of the integral $\\int_0^{\\pi/4}\\frac{\\cos x}{\\sqrt{1-\\sin^2x}}\\,dx$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-be799341bd3d",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\int_0^{\\pi/4}\\log(1+\\tan x)\\,dx=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4}\\log(2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2}\\log(2)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{8}\\log(2)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\log(2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fc05374c2093",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\int_0^1\\frac{\\sin^{-1}\\sqrt{x(2-x)}}{\\cos^{-1}x+\\sin^{-1}\\sqrt{x(2-x)}}\\,dx=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8b05dcac24ac",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\int_0^{\\log 10}\\left[\\frac{e^x\\sqrt{e^x-1}}{e^x+8}\\right]dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2}(4+\\pi)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}(4-\\pi)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{4}(4-\\pi)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}(4+\\pi)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cc56f61f2bfd",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of the integral $\\int_{-\\pi/2}^{\\pi/2}\\left(\\frac{x^2\\cos x}{1+e^x}\\right)dx$ is equal to $\\left(\\frac{\\pi^2}{A}\\right)-B$. Then $\\left(\\frac{A}{B}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1ad3f7bf074e",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)$ is an even function, then $\\int_{-2}^2(|x|+f(x)\\sin x)\\,\\text{d}x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d7b1107bb344",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\int_0^{\\pi}|\\sin 2x|\\,\\text{d}x=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-06e758e1a348",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\int_{\\pi/6}^{\\pi/3}\\sin 2x\\log(\\tan x)~dx=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{3}}{2}-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{3}}{2}+\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{\\sqrt{3}-1}{2}\\right)-\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-69428630d1e0",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\sin(\\tan^{-1}x)$, then $\\int_0^1xf''(x)dx$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{1}{2\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2\\sqrt{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-90f4786f996d",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int_{-1}^4f(x)dx=9$ and $\\int_2^4(7-f(x))dx=10$, then $\\int_2^{-1}f(x)dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$13$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$19$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-19$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-5$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-34214d5eec2a",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $I=\\int_1^3e^x\\frac{(x+2)^2}{(x+4)^2}\\,dx$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e\\left(\\frac{3e^2}{7}+\\frac{1}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e\\left(\\frac{3e^2}{7}-\\frac{1}{5}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$e^2\\left(\\frac{3e}{7}-\\frac{1}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$e\\left(\\frac{3e^2}{7}-\\frac{e}{5}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b6236ab89483",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\int_{\\pi/5}^{3\\pi/10}\\frac{1}{1+\\sqrt{\\tan x}}\\,dx=\\cdots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{20}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{25}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b7d1a839e246",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of the integral $\\int_{1/2}^2\\frac{1}{x}\\,\\text{sin}^{101}\\left(x-\\frac{1}{x}\\right)dx$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{101}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-abb8df8b965f",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\int_0^{\\log 5}\\frac{e^x\\sqrt{e^x-1}}{e^x+3}\\,dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2-\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4-\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2-\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4-\\pi$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f7a749ce3261",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\int_{\\pi/6}^{\\pi/3}\\frac{\\sin x-\\cos x}{1+\\sin x\\cos x}\\,dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{24}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi^2}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0b40e4667bb1",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of integral $\\int_0^1\\cot^{-1}(1+x^2-x)\\,dx$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}-\\log 2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\pi-\\log 2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}-\\log 2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi-\\log 2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-33140b298678",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\int_{-\\pi}^{\\pi}\\frac{2x(1+\\sin x)}{1+\\cos^2x}dx$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\sqrt{2}\\pi^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pi^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi^2}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{\\pi^2}{\\sqrt{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3fa8cbef6143",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\int_0^{\\pi}\\frac{1}{1+2^{\\cos x}}\\,dx$ is _____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-80bd4bd4a4e8",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $I_n=\\int_1^e(\\log_ex)^n\\,dx$ where $n\\in Z^{+}$ and $I_m+mI_{2026}=e$, then $m=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2024$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2025$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2026$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2027$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-27176683fd2c",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of the definite integral $\\int_0^{\\pi}\\frac{1}{5+4\\cos x}\\,dx$ is equal to ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-41087c6ca007",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_a^b(x^2-x)\\,dx=18,\\int_a^bx^3\\,dx=0$, then $a+b$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-514261d64206",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The function $f(x)=\\int_0^x\\frac{dt}{1+\\cos t}$ satisfies which of the following differential equations?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\frac{df}{dx}=1+[f(x)]^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{df}{dx}=1+[f(x)]^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\frac{df}{dx}=1-[f(x)]^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{df}{dx}=1-[f(x)]^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e79f7502f16e",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=x-[x]$ for every real number $x$, where $[x]$ is integral part of $x$. then $\\int_{-1}^1f(x)\\,dx$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1/2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-02ffeee73dc8",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $[\\cdot]$ denotes the greatest integer function, then $\\int_0^{\\pi/3}[\\tan x]\\,dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{12}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4ad19f16a30d",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of the definite integral $\\int_0^{\\log_e5}\\frac{e^x\\sqrt{e^x-1}}{e^x+3}\\,dx$ is equal to...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5+\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5-\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4+\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4-\\pi$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-53631a33d3c7",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\int_0^2|4x-5|\\,dx=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{17}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{18}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{25}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{13}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f285cc215a55",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_0^2x(2-x)^b\\,dx=\\frac{32}{7}$, where $b\\in N$ then $b=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7410eb60c5fb",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $[x]$ is the greatest integer function not greater than $x$, then the value of $\\int_0^2x[x^2]\\,dx$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e7395d60e9e4",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\int_2^4(\\{x\\}+[x])\\,dx=$...(where $\\{x\\}$ and $[x]$ are the fractional part function and the greatest integer function, respectively)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-11fb965dd63c",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of integral $\\int_0^{\\infty}\\frac{1}{1+e^x}\\,dx$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log 2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\log\\left(\\frac{2}{e}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\log e$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log\\left(\\frac{4}{e}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7fd9eceaf9c7",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)$ is an antiderivative of $\\frac{x+1}{\\sqrt{x-1}}$ with respect to $x$, then value of $f(5)-f(2)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{14}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{26}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aeebc0787e36",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=|5x-3|$ is defined on interval $[0,1]$, then the value of $\\int_0^1f(x)\\,dx$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{13}{10}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{9}{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{17}{10}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-39fe3bab59ab",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\int_0^{\\pi/2}\\frac{\\cos 3x+1}{2\\cos x-1}dx$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8778e94dacbd",
+      "subtopic": "definite-integral-as-a-limit-of-sum",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\lim_{n\\rightarrow\\infty}\\left(\\frac{n}{(n+1)\\sqrt{2n+1}}+\\frac{n}{(n+2)\\sqrt{2(2n+2)}}+\\frac{n}{(n+3)\\sqrt{3(2n+3)}}+\\cdots+\\frac{1}{2n\\sqrt{3}}\\right)$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi/3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\pi/2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pi/4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9830eba5e172",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int_0^{f(x)}dt=x\\cos(\\pi x)$ then $f'(4)=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d904caeb27ca",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)$ be odd and continuous on $[-a,a]$. Then the value of $\\int_{-a}^axf(x^2)dx$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$f(a)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2f(a)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2a$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-638f274cd9a5",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_0^{\\pi}\\log(\\sin x)\\,dx=k$, then the value of $\\int_0^{\\frac{\\pi}{4}}\\log(1+\\tan x)\\,dx$ in terms of $k$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{k}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{k}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{k}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{k}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7dcd08d1dea3",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\int_1^2\\frac{1}{x(1+\\log x)^2}\\,dx$ is.......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\log 2}{1-\\log 2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\log 2}{1+\\log 2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\log 2}{-1+\\log 2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-\\log 2}{1+\\log 2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fac08544a935",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "$\\int_0^{\\frac{\\pi}{2}}(1+\\sin x)^3\\,dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{2}-\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\pi}{4}+\\frac{11}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-38905fa07c5c",
+      "subtopic": "newton-lebnitz-rule-of-differentiation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int_0^1\\frac{dx}{\\sqrt{x+1}-\\sqrt{x}}=\\sqrt{2}k$, then the value of $k$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-41172540e046",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $[x]$ denotes the greatest integer less than or equal to $x$, then the value of the integral $\\int_0^2x^2[x]\\,dx$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4e9398ef1dd3",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int_{-\\pi/2}^{\\pi/2}(\\sin^2x+\\sin^3x)dx=k$, then the value of $k$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-82554c16e144",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $I_n=\\int_0^{\\pi/4}\\tan^nx~dx,n\\in N$ then $I_{n+2}+I_n$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{n+1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{n-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{n-2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-93376ff2ef93",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The value of the integral $\\int_{1/e}^e\\frac{\\left|\\log x\\right|}{x^2}dx$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{e^2-1}{2e}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{e}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2-\\frac{2}{e}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1-\\frac{1}{e}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-04efade55b3c",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int_{\\alpha}^{2026-\\alpha}\\frac{(2026-x)^2}{x^2+(2026-x)^2}\\,dx=100$, then $\\alpha=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$913$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1013$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1113$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1213$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1af97b06d600",
+      "subtopic": "properties-of-definite-integration",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\int_0^2|4x-5|\\,dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{17}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-17}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{17}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-4}{17}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

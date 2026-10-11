@@ -1,0 +1,61 @@
+{
+ "ref": "PYQ-CHEM-889c38c646ca",
+ "subject": "Chemistry",
+ "chapter": "Aldehydes, Ketones and Carboxylic Acids",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "D",
+ "verdict": "verified",
+ "solution": "Key idea: Tollens' reagent oxidises only a free –CHO group. A cyclic sugar can give –CHO only if its anomeric carbon is a hemiacetal (free $\\mathrm{-OH}$ and ring $\\mathrm{O}$ on the same carbon), because the ring then opens to the aldehyde in base.\nIf the anomeric $\\mathrm{-OH}$ is replaced by $\\mathrm{-OCH_3}$, the carbon is an acetal (a glycoside). It is stable in base, cannot open, and does not reduce Tollens' reagent.\nStructure A: the anomeric carbon has a free $\\mathrm{-OH}$. It is a hemiacetal, so it reacts and gives a silver mirror.\nStructure D: the anomeric carbon has a free $\\mathrm{-OH}$. It is a hemiacetal, so it reacts.\nStructure B: the anomeric carbon has $\\mathrm{-OCH_3}$ (a methyl glucoside). It is an acetal and does not react.\nStructure C: the anomeric carbon of the furanose ring has $\\mathrm{-OCH_3}$. It is an acetal and does not react.\nAnswer: (D) B and C",
+ "final_answer": "D",
+ "solver_model": "claude-opus-5-5",
+ "checker_model": "claude-opus-5-5",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "D",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "Key idea: Tollens' reagent oxidises only a free –CHO group. A cyclic sugar can give –CHO only if its anomeric carbon is a hemiacetal (free $\\mathrm{-OH}$ and ring $\\mathrm{O}$ on the same carbon), because the ring then opens to the aldehyde in base.\nIf the anomeric $\\mathrm{-OH}$ is replaced by $\\mathrm{-OCH_3}$, the carbon is an acetal (a glycoside). It is stable in base, cannot open, and does not reduce Tollens' reagent.\nStructure A: the anomeric carbon has a free $\\mathrm{-OH}$. It is a hemiacetal, so it reacts and gives a silver mirror.\nStructure D: the anomeric carbon has a free $\\mathrm{-OH}$. It is a hemiacetal, so it reacts.\nStructure B: the anomeric carbon has $\\mathrm{-OCH_3}$ (a methyl glucoside). It is an acetal and does not react.\nStructure C: the anomeric carbon of the furanose ring has $\\mathrm{-OCH_3}$. It is an acetal and does not react.\nAnswer: (D) B and C",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "calculations": []
+   },
+   "calc_check": []
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 664,
+   "cache_read": 1023,
+   "output": 1146,
+   "thinking": 125,
+   "api_cost_usd": 0.028444600000000004,
+   "turns": 2,
+   "seconds": 14.1,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 2,
+   "cache_create": 1114,
+   "cache_read": 1199,
+   "output": 566,
+   "thinking": 119,
+   "api_cost_usd": 0.0204798,
+   "turns": 2,
+   "seconds": 9.8,
+   "shell_runs": [],
+   "permission_denials": 0,
+   "error": null
+  }
+ ],
+ "finished_at": "2026-09-26T21:26:46+00:00"
+}

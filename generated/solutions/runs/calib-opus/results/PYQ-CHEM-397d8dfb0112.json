@@ -1,0 +1,50 @@
+{
+ "ref": "PYQ-CHEM-397d8dfb0112",
+ "subject": "CHEM",
+ "type": "single_correct",
+ "has_figure": true,
+ "answer_key": "B",
+ "verdict": "verified",
+ "attempts": [
+  {
+   "attempt": 1,
+   "final_answer": "B",
+   "matches_key": true,
+   "confidence": "high",
+   "solution": "$S_N1$ rate depends on the stability of the carbocation, which is most stable when planar ($sp^2$).\nIV: $Ph_3C^+$ (trityl) is stabilised by resonance over three phenyl rings, so it is the most stable and reacts fastest.\nIII: $(CH_3)_3C^+$ is planar and stabilised by $+I$ and hyperconjugation (9 α-H), but has no resonance, so it is slower than IV.\nI and II are rigid bridgehead bromides: the bridgehead cation cannot become planar, so it is highly destabilised and both react much more slowly than III.\nBicyclo[2.2.1] (norbornyl, II) is more strained than bicyclo[2.2.2] (I), so its bridgehead cation is the least stable.\nOrder of rate: $\\text{II} < \\text{I} < \\text{III} < \\text{IV}$\nAnswer: (B)",
+   "checker": {
+    "verdict": "correct",
+    "issues": [],
+    "recomputed_with_python": false
+   }
+  }
+ ],
+ "calls": [
+  {
+   "stage": "solve1",
+   "model": "claude-opus-5-5",
+   "input": 4,
+   "cache_create": 870,
+   "cache_read": 3727,
+   "output": 1119,
+   "thinking": 636,
+   "api_cost_usd": 0.030101399999999997,
+   "turns": 3,
+   "seconds": 14.4,
+   "error": false
+  },
+  {
+   "stage": "check1",
+   "model": "claude-opus-5-5",
+   "input": 4,
+   "cache_create": 1225,
+   "cache_read": 4083,
+   "output": 679,
+   "thinking": 484,
+   "api_cost_usd": 0.0242126,
+   "turns": 3,
+   "seconds": 11.3,
+   "error": false
+  }
+ ]
+}

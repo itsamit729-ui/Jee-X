@@ -1,0 +1,24 @@
+{
+  "name": "calib-opus",
+  "solver": "claude-opus-5-5",
+  "checker": "claude-opus-5-5",
+  "questions": 25,
+  "verdicts": {
+    "verified": 24,
+    "key_mismatch": 1
+  },
+  "first_attempt_matches_key": 24,
+  "calls": 50,
+  "tokens": {
+    "input": 120,
+    "cache_create": 51965,
+    "cache_read": 82063,
+    "output": 46888,
+    "thinking": 13755,
+    "all": 181036,
+    "per_question": 7241,
+    "output_per_question": 1876
+  },
+  "api_equivalent_cost_usd": 1.37,
+  "wall_seconds_total_calls": 580
+}
