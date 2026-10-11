@@ -14,7 +14,8 @@ from sqlalchemy.orm import Session
 
 from app.auth import cookie_options, get_auth_account, utcnow
 from app.database import get_db
-from app.models.authentication import AuthAccount, GoogleIdentity
+from app.models.authentication import AuthAccount, GoogleIdentity, AuthTerms
+from app.services.terms import TERMS_VERSION
 from app.models.identity import User
 from app.routers.authentication import new_session
 from app.services.authentication import hash_password, throttle
@@ -129,6 +130,7 @@ def callback(request: Request, code: str = '', state: str = '', db: Session = De
         account = AuthAccount(id=str(uuid.uuid4()), email=email,
                               password_hash=hash_password(secrets.token_urlsafe(48)),
                               verified_at=utcnow(), created_at=utcnow())
+        account.terms = AuthTerms(version=TERMS_VERSION)
         db.add(account)
         db.add(GoogleIdentity(google_sub=sub, account_id=account.id))
         try:

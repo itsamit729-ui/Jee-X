@@ -165,7 +165,7 @@ export default function Profile() {
       <AppHeader />
       <main className="wrap-narrow page">
         <div className="page-head">
-          <h1 className="page-title">Profile</h1><Link to="/account/security" className="btn btn-secondary btn-sm">Change password</Link>
+          <h1 className="page-title">Profile</h1><Link to="/account/security" className="btn btn-secondary btn-sm">Account security</Link>
         </div>
 
         <div className="panel">

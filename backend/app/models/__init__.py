@@ -103,7 +103,7 @@ from app.models.ranking import JeeXRating, RatedContest, ContestEntry
 
 from app.models.public_profile import PublicProfile
 
-from app.models.authentication import AuthAccount, AuthSession, AuthEmailToken, AuthRateLimit, GoogleIdentity
+from app.models.authentication import AuthAccount, AuthSession, AuthEmailToken, AuthRateLimit, GoogleIdentity, AuthTerms
 
 from app.models.teaching import (TeacherAccess, Classroom, ClassroomMember, TeachingAssignment,
     AssignmentClassroom, AssignmentRecipient, ClassroomNotification)

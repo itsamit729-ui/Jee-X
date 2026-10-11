@@ -4,6 +4,7 @@ import hmac
 import uuid
 from typing import Literal
 from app.services.teacher_enrollment import enable_teacher
+from app.services.terms import TermsAcceptance, accept_terms
 from datetime import timedelta
 from fastapi import APIRouter, Depends, HTTPException, Request, Response
 from pydantic import BaseModel, ConfigDict, Field, field_validator
@@ -43,6 +44,7 @@ class LoginBody(EmailBody):
 class RegisterBody(EmailBody):
     account_type: Literal['student', 'teacher'] = 'student'
     password: str = Field(min_length=15, max_length=128)
+    terms: TermsAcceptance
 
 
 class TokenBody(BaseModel):
@@ -72,6 +74,7 @@ def session_data(account, session, db):
     access = user.teacher_access if user else None
     return {'authenticated': True, 'csrf_token': session.csrf_token,
             'user': {'id': account.id, 'email': account.email, 'name': user.name if user else '',
+                     'terms_required': bool(account.terms and not account.terms.accepted_at),
                      'teacher': bool(access and access.active), 'email_verified': bool(account.verified_at), 'onboarded': bool(account.user_id)}}
 
 
@@ -117,6 +120,7 @@ def register(body: RegisterBody, request: Request, db: Session = Depends(get_db)
     if db.query(AuthAccount).filter_by(email=body.email).first():
         return result
     account = AuthAccount(id=str(uuid.uuid4()), email=body.email, password_hash=encoded, created_at=utcnow())
+    accept_terms(account, body.terms, utcnow())
     try:
         db.add(account)
         db.flush()
@@ -128,6 +132,17 @@ def register(body: RegisterBody, request: Request, db: Session = Depends(get_db)
     except IntegrityError:
         db.rollback()
     return result
+
+
+@router.post('/terms')
+def record_terms(body: TermsAcceptance, account: AuthAccount = Depends(get_auth_account),
+                 db: Session = Depends(get_db)):
+    account = db.query(AuthAccount).filter_by(id=account.id).with_for_update().populate_existing().one()
+    # A retry must not rewrite the original declaration or timestamp.
+    if not account.terms or not account.terms.accepted_at:
+        accept_terms(account, body, utcnow())
+        db.commit()
+    return {'message': 'Your acceptance has been saved.'}
 
 
 @router.post('/login', dependencies=[Depends(require_browser_request)])

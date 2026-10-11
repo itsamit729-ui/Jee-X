@@ -30,7 +30,7 @@ def env(monkeypatch):
     monkeypatch.setenv('AUTH_EMAIL_FROM', 'hello@example.com')
     engine = create_engine('sqlite://', connect_args={'check_same_thread': False}, poolclass=StaticPool)
     tables = [models.TeacherAccess.__table__, models.AuditLog.__table__, models.User.__table__, models.StudentProfile.__table__, models.ProfileAvatar.__table__,
-              models.AuthAccount.__table__, models.AuthSession.__table__, models.AuthEmailToken.__table__, models.AuthRateLimit.__table__, models.GoogleIdentity.__table__]
+              models.AuthTerms.__table__, models.AuthAccount.__table__, models.AuthSession.__table__, models.AuthEmailToken.__table__, models.AuthRateLimit.__table__, models.GoogleIdentity.__table__]
     Base.metadata.create_all(engine, tables=tables)
     sessions = sessionmaker(bind=engine)
     app = FastAPI()
@@ -49,6 +49,8 @@ def env(monkeypatch):
 
 
 def post(client, path, **body):
+    if path == 'register':
+        body.setdefault('terms', {'version': '2026-10-11', 'age_band': '18_plus', 'accepted': True})
     return client.post('/api/auth/' + path, json=body)
 
 
@@ -213,6 +215,7 @@ def test_google_signin_uses_subject_and_does_not_take_password_account(env, monk
     with sessions() as db:
         account = db.query(models.AuthAccount).filter_by(email='google@example.com').one()
         assert db.query(models.GoogleIdentity).one().account_id == account.id
+        assert account.terms is not None and account.terms.accepted_at is None
         assert bool(account.user_id) == (account_type == 'teacher')
         if account_type == 'teacher':
             assert db.get(models.TeacherAccess, account.user_id).active
@@ -422,3 +425,66 @@ def test_signup_cannot_promote_existing_account_or_select_admin(env):
         assert db.query(models.TeacherAccess).count() == 0
         assert db.query(models.AuthAccount).one().user_id is None
     assert post(client, 'register', email='admin@example.com', password=PASSWORD, account_type='admin').status_code == 422
+
+
+def test_signup_requires_current_terms_and_guardian_declaration(env):
+    client, sessions, _, _ = env
+    original = {'email': EMAIL, 'password': PASSWORD}
+    assert client.post('/api/auth/register', json=original).status_code == 422
+    for terms in [
+        {'version': 'old', 'age_band': '18_plus', 'accepted': True},
+        {'version': '2026-10-11', 'age_band': '18_plus', 'accepted': False},
+        {'version': '2026-10-11', 'age_band': 'under_18', 'accepted': True},
+    ]:
+        assert client.post('/api/auth/register', json={**original, 'terms': terms}).status_code == 422
+    with sessions() as db:
+        assert db.query(models.AuthAccount).count() == 0
+    declaration = {'version': '2026-10-11', 'age_band': 'under_18', 'accepted': True, 'guardian_declared': True}
+    assert client.post('/api/auth/register', json={**original, 'terms': declaration}).status_code == 202
+    with sessions() as db:
+        record = db.query(models.AuthTerms).one()
+        assert record.accepted_at and record.version == '2026-10-11'
+        assert record.age_band == 'under_18'
+        assert record.accepted_by == 'guardian_declaration'
+    # A repeated registration must not change the original acceptance or age group.
+    assert post(client, 'register', **original).status_code == 202
+    with sessions() as db:
+        assert db.query(models.AuthTerms).one().age_band == 'under_18'
+
+
+def test_pending_terms_blocks_study_apis_and_acceptance_requires_csrf(env):
+    client, sessions, _, _ = env
+    login(env)
+    with sessions() as db:
+        record = db.query(models.AuthTerms).one()
+        record.accepted_at = None  # Same pending state created by Google signup.
+        record.accepted_by = None
+        record.age_band = None
+        db.commit()
+    assert client.get('/api/auth/session').json()['user']['terms_required'] is True
+    assert client.get('/api/me').status_code == 403
+    assert client.post('/api/onboarding', json={
+        'name': 'Student', 'username': 'pendinguser', 'dob': '2009-01-01', 'class_level': '12'
+    }).status_code == 403
+    body = {'version': '2026-10-11', 'age_band': 'under_18', 'accepted': True, 'guardian_declared': True}
+    assert client.post('/api/auth/terms', json=body, headers={'X-CSRF-Token': 'wrong'}).status_code == 403
+    assert client.post('/api/auth/terms', json={**body, 'guardian_declared': False}).status_code == 422
+    assert client.post('/api/auth/terms', json=body).status_code == 200
+    assert client.get('/api/auth/session').json()['user']['terms_required'] is False
+    assert client.get('/api/me').status_code == 200
+    with sessions() as db:
+        timestamp = db.query(models.AuthTerms).one().accepted_at
+    assert client.post('/api/auth/terms', json={**body, 'age_band': '18_plus'}).status_code == 200
+    with sessions() as db:
+        record = db.query(models.AuthTerms).one()
+        assert record.accepted_at == timestamp and record.age_band == 'under_18'
+
+
+def test_legacy_account_without_terms_record_still_signs_in(env):
+    client, sessions, _, _ = env
+    login(env)
+    with sessions() as db:
+        db.query(models.AuthTerms).delete()
+        db.commit()
+    assert client.get('/api/auth/session').json()['user']['terms_required'] is False
+    assert client.get('/api/me').status_code == 200

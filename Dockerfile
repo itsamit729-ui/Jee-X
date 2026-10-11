@@ -4,6 +4,8 @@ COPY frontend/package*.json ./
 RUN npm ci
 COPY frontend/ ./
 COPY generated/ /build/generated/
+ARG VITE_LEGAL_OPERATOR_NAME
+ARG VITE_SUPPORT_EMAIL
 RUN npm run build
 
 FROM python:3.12-slim

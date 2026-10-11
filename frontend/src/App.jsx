@@ -25,6 +25,8 @@ const SubjectTest = lazy(() => import('./pages/SubjectTest.jsx'))
 const DailyQuestion = lazy(() => import('./pages/DailyQuestion.jsx'))
 const Rewards = lazy(() => import('./pages/Rewards.jsx'))
 const AuthPage = lazy(() => import('./auth/AuthPage.jsx'))
+const TermsPage = lazy(() => import('./auth/TermsPage.jsx'))
+const Legal = lazy(() => import('./pages/Legal.jsx'))
 const Admin = lazy(() => import('./pages/Admin.jsx'))
 const ImageQuestions = lazy(() => import('./pages/ImageQuestions.jsx'))
 const Scenarios = lazy(() => import('./pages/Scenarios.jsx'))
@@ -33,12 +35,15 @@ import ProtectedRoute from './components/ProtectedRoute.jsx'
 export default function App() {
   const location = useLocation()
   const isAdmin = location.pathname === '/admin'
-  const isAuthPage = /^\/(login|signup|forgot-password|reset-password|verify-email|account\/security)$/.test(location.pathname)
+  const isAuthPage = /^\/(login|signup|signup\/terms|terms|privacy|forgot-password|reset-password|verify-email|account\/security)$/.test(location.pathname)
 
   return (
     <>{!isAdmin && !isAuthPage && <IITianFactToast />}<Suspense fallback={<Loader fullScreen label={isAdmin ? "Opening admin console" : "Opening your study space"} />}><Routes>
       <Route path="/login" element={<AuthPage key="login" mode="login" />} />
       <Route path="/signup" element={<AuthPage key="signup" mode="signup" />} />
+      <Route path="/signup/terms" element={<TermsPage />} />
+      <Route path="/terms" element={<Legal />} />
+      <Route path="/privacy" element={<Legal privacy />} />
       <Route path="/forgot-password" element={<AuthPage key="forgot" mode="forgot" />} />
       <Route path="/reset-password" element={<AuthPage key="reset" mode="reset" />} />
       <Route path="/verify-email" element={<AuthPage key="verify" mode="verify" />} />

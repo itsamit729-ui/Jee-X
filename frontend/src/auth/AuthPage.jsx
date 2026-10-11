@@ -4,6 +4,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Eye, EyeOff, Mail } from 'lucide-r
 import { Logo } from '../components/Brand.jsx'
 import { request } from '../lib/api.js'
 import { safeReturnTo, useAuth } from './AuthContext.jsx'
+import TermsFields, { emptyTerms } from './TermsFields.jsx'
 
 const COPY = {
   login: ['Welcome back.', 'Your next good session starts here.', 'Sign in'],
@@ -11,7 +12,7 @@ const COPY = {
   forgot: ['Forgot your password?', 'We’ll send you a link to choose a new one.', 'Send reset link'],
   reset: ['A fresh start.', 'Choose a new password for your account.', 'Update password'],
   verify: ['Check your inbox.', 'Verify your email to start practising.', 'Verify email'],
-  change: ['Update your password.', 'A long, unique password keeps your account protected.', 'Save new password'],
+  change: ['Account security.', 'Change your password or connect Google for your next sign-in.', 'Save new password'],
 }
 
 function PasswordField({ id, label = 'Password', value, onChange, newPassword = false }) {
@@ -28,7 +29,8 @@ export default function AuthPage({ mode = 'login' }) {
   const [params] = useSearchParams()
   const returnTo = safeReturnTo(params.get('returnTo'))
   const [accountType, setAccountType] = useState('student')
-  const destination = account => account.teacher && returnTo === '/dashboard' ? '/teacher' : account.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`
+  const [terms, setTerms] = useState(emptyTerms)
+  const destination = account => account.terms_required ? `/signup/terms?returnTo=${encodeURIComponent(returnTo)}` : account.teacher && returnTo === '/dashboard' ? '/teacher' : account.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`
   const [email, setEmail] = useState(user?.email || '')
   const [password, setPassword] = useState('')
   const [currentPassword, setCurrentPassword] = useState('')
@@ -42,7 +44,7 @@ export default function AuthPage({ mode = 'login' }) {
     if (window.location.hash) window.history.replaceState(null, '', window.location.pathname + window.location.search)
   }, [])
   useEffect(() => {
-    if (['login', 'signup'].includes(mode)) {
+    if (['login', 'signup', 'change'].includes(mode)) {
       request('/api/auth/google/enabled').then(data => setGoogleEnabled(Boolean(data.enabled))).catch(() => {})
     }
   }, [mode])
@@ -60,7 +62,7 @@ export default function AuthPage({ mode = 'login' }) {
         navigate(destination(account), { replace: true })
       } else {
         const paths = { signup: 'register', forgot: 'forgot-password', reset: 'reset-password', verify: linkToken ? 'verify-email' : 'resend-verification', change: 'change-password' }
-        const body = mode === 'signup' ? { email, password, account_type: accountType } : mode === 'reset' ? { token: linkToken, password }
+        const body = mode === 'signup' ? { email, password, account_type: accountType, terms } : mode === 'reset' ? { token: linkToken, password }
           : mode === 'verify' && linkToken ? { token: linkToken } : mode === 'change' ? { current_password: currentPassword, password } : { email }
         const result = await request(`/api/auth/${paths[mode]}`, { method: 'POST', body })
         if (mode === 'signup') setVerificationRequired(result.verification_required !== false)
@@ -91,6 +93,7 @@ export default function AuthPage({ mode = 'login' }) {
         {emailVisible && <div className="native-auth-field"><label htmlFor="auth-email">Email address</label><input id="auth-email" type="email" autoComplete="username" placeholder="you@example.com" required maxLength={254} value={email} onChange={e => setEmail(e.target.value)} /></div>}
         {mode === 'change' && <PasswordField id="current-password" label="Current password" value={currentPassword} onChange={e => setCurrentPassword(e.target.value)} />}
         {passwordVisible && <PasswordField id="auth-password" value={password} onChange={e => setPassword(e.target.value)} newPassword={mode !== 'login'} />}
+        {mode === 'signup' && <TermsFields value={terms} onChange={setTerms}/>}
         {mode === 'login' && <div className="native-auth-forgot"><Link to="/forgot-password">Forgot password?</Link></div>}
         {mode === 'verify' && linkToken && <p className="native-auth-link-note"><Mail size={20}/>Confirm your email address to activate your account.</p>}
         {mode === 'reset' && !linkToken && <p className="native-auth-error">Open the link from your reset email, or <Link to="/forgot-password">request a new one</Link>.</p>}
@@ -99,6 +102,7 @@ export default function AuthPage({ mode = 'login' }) {
       </form>}
       {!message && googleEnabled && ['login', 'signup'].includes(mode) && <div className="native-auth-google">
         <span>or</span><a href={`/api/auth/google/start?account_type=${mode === 'signup' ? accountType : 'student'}`} className="native-auth-google-button">Continue with Google</a>
+        {mode === 'signup' && <small>New Google accounts review the same terms after Google sign-in, before using study features.</small>}
       </div>}
       {mode === 'change' && googleEnabled && <div className="native-auth-google">
         <span>Google sign-in</span><button type="button" className="native-auth-google-button" onClick={connectGoogle}>Connect Google to this account</button>
@@ -106,13 +110,13 @@ export default function AuthPage({ mode = 'login' }) {
       {mode === 'change' && params.get('google_connected') && <p role="status">Google is connected. You can sign in either way.</p>}
       {!message && ['login', 'signup'].includes(mode) && params.get('google_error') &&
         <p className="native-auth-error" role="alert">{params.get('google_error') === 'existing'
-          ? 'This email already has an account. Sign in with your password.'
+          ? 'This email already has a password account. Sign in with your password, open Account security, and choose “Connect Google to this account”. You can then sign in directly with Google.'
           : 'Google sign-in could not finish. Please try again.'}</p>}
       {!message && <div className="native-auth-bottom">
         {mode === 'login' ? <><p>New here? <Link to={`/signup?returnTo=${encodeURIComponent(returnTo)}`}>Create an account</Link></p><Link to="/verify-email">Resend verification email</Link></>
           : mode === 'signup' ? <><p>Already have an account? <Link to="/login">Sign in</Link></p><small>New accounts start with a fresh profile.</small></>
           : <Link to={mode === 'change' ? '/profile' : '/login'}>{mode === 'change' ? 'Back to profile' : 'Back to sign in'}</Link>}
       </div>}
-    </section></main><footer className="native-auth-footer">A little practice. A clearer next step.</footer>
+    </section></main><footer className="native-auth-footer"><Link to="/terms">Terms & Conditions</Link> · <Link to="/privacy">Privacy Notice</Link></footer>
   </div>
 }

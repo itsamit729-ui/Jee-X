@@ -1,5 +1,6 @@
 """Native accounts are independent of legacy Auth0 identities."""
 from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String
+from sqlalchemy.orm import relationship
 from app.database import Base
 
 
@@ -12,6 +13,17 @@ class AuthAccount(Base):
     verified_at = Column(DateTime, nullable=True)
     disabled = Column(Boolean, nullable=False, default=False)
     created_at = Column(DateTime, nullable=False)
+    terms = relationship('AuthTerms', uselist=False, lazy='joined', cascade='all, delete-orphan')
+
+
+class AuthTerms(Base):
+    """Declared acceptance, not verified parental identity. Null acceptance gates new Google users."""
+    __tablename__ = 'auth_terms'
+    account_id = Column(String(36), ForeignKey('auth_accounts.id', ondelete='CASCADE'), primary_key=True)
+    version = Column(String(32), nullable=False)
+    age_band = Column(String(16), nullable=True)
+    accepted_by = Column(String(32), nullable=True)
+    accepted_at = Column(DateTime, nullable=True)
 
 
 class GoogleIdentity(Base):

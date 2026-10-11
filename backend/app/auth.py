@@ -81,6 +81,8 @@ def get_auth_account(request: Request, db: Session = Depends(get_db)) -> AuthAcc
         raise HTTPException(403, 'Verify your email before continuing.')
     if user and user.status != 'active':
         raise HTTPException(403, 'This account is suspended.')
+    if account.terms and not account.terms.accepted_at and not request.url.path.startswith('/api/auth/'):
+        raise HTTPException(403, 'Review the signup terms with your parent or guardian if you are under 18 before continuing.')
     if request.method not in {'GET', 'HEAD', 'OPTIONS'}:
         require_browser_request(request)
         if not hmac.compare_digest(session.csrf_token, request.headers.get('x-csrf-token', '')):
