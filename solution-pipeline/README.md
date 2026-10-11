@@ -71,6 +71,7 @@ The database machine also needs: `pip install -r requirements.txt` and a `.env` 
 
 | What | Command | Who |
 |---|---|---|
+| Clean dataset for one year (`datasets/<exam>-<year>/`) | `python pipeline/export_dataset.py --year 2026` | database machine |
 | Build / refresh the question pack | `python pipeline/export_questions.py` (options: `--year 2026 --exam jee_main --subject PHY --only-missing`) | database machine |
 | Solve the next batch | `python pipeline/run_batch.py` (`--limit 50`, `--shard 1/2`, `--refs PYQ-...`) | any |
 | Progress and tokens | `python pipeline/status.py [--shard 1/2]` | any |
