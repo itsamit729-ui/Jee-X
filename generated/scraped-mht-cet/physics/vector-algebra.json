@@ -1,0 +1,925 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Vector Algebra",
+    "slug": "vector-algebra",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "vector-arithmetic",
+      "name": "Vector arithmetic",
+      "position": 1
+    },
+    {
+      "slug": "dot-product-and-cross-product",
+      "name": "Dot product and cross product",
+      "position": 2
+    },
+    {
+      "slug": "vector-projections",
+      "name": "Vector projections",
+      "position": 3
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-ff5a821abd3b",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The vectors $(\\vec{A}+\\vec{B})$ and $(\\vec{A}-\\vec{B})$ are perpendicular to each other. This is possible under the condition",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$|\\vec{A}|=|\\vec{B}|$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{A}\\cdot\\vec{B}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{A}\\times\\vec{B}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{A}\\cdot\\vec{B}=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-42b402b6f7a1",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\vec{A}=5\\hat{i}+2\\hat{j}$ and $\\vec{B}=a\\hat{i}+3\\hat{j}$ are perpendicular to each other, the value of 'a' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-6}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{6}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-4}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1f6f408e8ad9",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The resultant of two vectors $\\vec{A}$ and $\\vec{B}$ is $\\vec{C}$. If the magnitude of $\\vec{B}$ is doubled, the new resultant vector becomes perpendicular to $\\vec{A}$. Then the magnitude of $\\vec{C}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$B$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3B$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4B$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ff5db834487c",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The vector sum of the two forces $\\vec{A}$ and $\\vec{B}$ is perpendicular to their vector difference. Hence forces $\\vec{A}$ and $\\vec{B}$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "perpendicular to each other",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "unequal in magnitude",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "parallel to each other",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "equal in magnitude",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d448bd322a0e",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the values of $a$ and $b$ if vectors $a\\hat{i}+b\\hat{j}=\\hat{n}$ and $(\\hat{i}+\\hat{j})$ are perpendicular to each other",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2},\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0,0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2},-\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{1}{\\sqrt{2}}\\right),\\left(-\\frac{1}{\\sqrt{2}}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-31c0fabad705",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The vector $\\vec{P}=a\\hat{i}+a\\hat{j}+3\\hat{k}$ and $\\vec{Q}=a\\hat{i}-2\\hat{j}-\\hat{k}$ are perpendicular to each other. Then positive value of '$a$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$13$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4782e2508f9f",
+      "subtopic": "vector-arithmetic",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A vector $\\vec{A}$ has magnitude $6$ units is added to vector $\\vec{B}$ which is along $x$-axis. The resultant of $\\vec{A}$ and $\\vec{B}$ is along $y$-axis. If the magnitude of the resultant of $\\vec{A}$ and $\\vec{B}$ is $3$ times that of $\\vec{B}$ then the magnitude of $\\vec{B}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3.6}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f6ecb151fca4",
+      "subtopic": "vector-arithmetic",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The resultant $\\vec{R}$ of $\\vec{P}$ and $\\vec{Q}$ is perpendicular to $\\vec{P}$. Also $|\\vec{P}|=|\\vec{R}|$. The angle between $\\vec{P}$ and $\\vec{Q}$ is\n($\\tan 45^{\\circ}=1$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7\\pi}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5924bd5df6ae",
+      "subtopic": "vector-arithmetic",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A vector $\\vec{A}$ when added to the sum of the vectors $(\\hat{i}-2\\hat{j}+2\\hat{k})$ and $(-2\\hat{i}+\\hat{j}-\\hat{k})$ gives a unit vector along Y axis. The magnitude of vector $\\vec{A}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{10}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-39a291ee1498",
+      "subtopic": "vector-arithmetic",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\vec{A}$ and $\\vec{B}$ be two non-zero vectors of different magnitude. Which one of the following is the correct equation ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\vec{A}\\cdot\\vec{B}=-\\vec{B}\\cdot\\vec{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\vec{A}\\times\\vec{B}=\\vec{B}\\times\\vec{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\vec{A}+\\vec{B}=\\vec{B}+\\vec{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\vec{A}-\\vec{B}=\\vec{B}-\\vec{A}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-18ec25869828",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $|\\vec{A}\\times\\vec{B}|=\\sqrt{3}(\\vec{A}\\cdot\\vec{B})$ then the value of $|\\vec{A}+\\vec{B}|$ is ($\\tan 60^{\\circ}=\\sqrt{3}$, $\\cos 60^{\\circ}=\\frac{1}{2}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left[A^2+B^2+\\frac{AB}{\\sqrt{3}}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$A+B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(A^2+B^2+\\sqrt{3}AB)^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(A^2+B^2+AB)^{\\frac{1}{2}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ba2c8fa136d6",
+      "subtopic": "vector-projections",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The angle made by a vector $\\vec{B}=3\\hat{i}+2\\hat{j}+4\\hat{k}$ with Y axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cos^{-1}\\left(\\frac{4}{\\sqrt{11}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos^{-1}\\left(\\frac{3}{\\sqrt{17}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos^{-1}\\left(\\frac{2}{\\sqrt{29}}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\cos^{-1}\\left(\\frac{5}{\\sqrt{23}}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b4947662aa43",
+      "subtopic": "vector-arithmetic",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{P}=\\hat{i}+\\hat{j}+\\hat{k}$ and $\\vec{Q}=-(\\hat{i}+\\hat{j}+\\hat{k})$. The angle between $(\\vec{P}-\\vec{Q})$ and $\\vec{P}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$90^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$30^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-72234ba9261e",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Vectors $a\\hat{i}+b\\hat{j}+\\hat{k}$ and $2\\hat{i}-3\\hat{j}+4\\hat{k}$ are perpendicular to each other when $3a+2b=7$, the ratio of a to b is $x/2$. The value of x is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aebd6cdc7c6b",
+      "subtopic": "vector-arithmetic",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Resultant of two vectors $\\vec{P}$ and $\\vec{Q}$ is of magnitude A. If $\\vec{Q}$ is reversed, then the resultant is of magnitude B. The value of $A^2+B^2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$P^2+Q^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$P^2-Q^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2(P^2+Q^2)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2(P^2-Q^2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4e65573b3c47",
+      "subtopic": "vector-arithmetic",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "There are two vectors $\\vec{A}=6\\hat{i}+9\\hat{j}-\\hat{k}$ and $\\vec{B}=2\\hat{i}+3\\hat{j}-p\\hat{k}$ which have the same direction. The value of 'p' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c8a2eb6b4125",
+      "subtopic": "vector-projections",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The angle made by vector $\\vec{A}=2\\hat{i}+3\\hat{j}$ with x-axis and that with y-axis are respectively.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan^{-1}2\\sqrt{13}$ , $\\tan^{-1}3\\sqrt{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos^{-1}\\frac{2}{\\sqrt{13}}$ , $\\cos^{-1}\\frac{3}{\\sqrt{13}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\cos^{-1}\\frac{1}{\\sqrt{2}}$ , $\\cos^{-1}\\frac{1}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sin^{-1}\\frac{1}{\\sqrt{6}}$ , $\\sin^{-1}\\frac{1}{2\\sqrt{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b45864dda672",
+      "subtopic": "vector-arithmetic",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If a unit vector is represented by $\\vec{U}=0.9\\,\\hat{i}-0.2\\,\\hat{j}+m\\hat{k}$, then the value of m is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.85$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{0.15}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{0.77}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3c1a4ec6d2cf",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For two vectors $\\vec{P}$ and $\\vec{Q}$, $\\vec{P}\\cdot\\vec{Q}=|\\vec{P}\\times\\vec{Q}|$\nThe magnitude of $\\vec{R}=\\vec{P}+\\vec{Q}$ is ($\\cos 45^{\\circ}=\\frac{1}{\\sqrt{2}}$) ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{P^2+Q^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{P^2+Q^2}}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{P^2+Q^2+\\frac{PQ}{\\sqrt{2}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{P^2+Q^2+\\sqrt{2}\\,PQ}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3d8772a14625",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a vector $\\vec{p}$, 'x' and 'y' components have magnitudes 2 units and 5 units respectively. A vector $\\vec{q}$, along negative Y axis has magnitude of 3 units. Then $\\vec{p}\\cdot\\vec{q}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-10$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-15$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1e3df7c56136",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A vector $\\vec{A}$ of magnitude $7\\sqrt{2}$ unit, another vector $\\vec{B}$ of magnitude $14$ unit are inclined at an angle of $60^{\\circ}$. The magnitude of the scalar product $(\\vec{A}\\cdot\\vec{B})$ is $\\left[\\cos(60)^{\\circ}=\\frac{1}{2}\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$49\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$7\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$14\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e91fbcb1499e",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of parallelogram formed by vectors $\\vec{P}=2\\hat{i}-\\hat{j}+5\\hat{k}$ and $\\vec{Q}=3\\hat{i}-2\\hat{j}+4\\hat{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{72}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{86}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{104}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{240}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-66c672e00ae5",
+      "subtopic": "dot-product-and-cross-product",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If two vectors $\\vec{A}=4\\hat{i}+n\\hat{j}+2\\hat{k}$ and $\\vec{B}=2\\hat{i}+2\\hat{j}-\\hat{k}$ are mutually perpendicular to each other then value of 'n' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$+3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$+1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9fe1d39b59e6",
+      "subtopic": "vector-arithmetic",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\vec{P}=\\hat{i}+\\hat{j}+\\hat{k}$ and $\\vec{Q}=-\\hat{i}-\\hat{j}-\\hat{k}$. The angle between $(\\vec{P}-\\vec{Q})$ and $\\vec{P}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$90^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$30^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$60^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0^{\\circ}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

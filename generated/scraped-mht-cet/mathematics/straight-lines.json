@@ -1,0 +1,2519 @@
+{
+  "subject": "MATH",
+  "chapter": {
+    "name": "Straight Lines",
+    "slug": "straight-lines",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 9,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "angle-between-lines",
+      "name": "Angle between two lines",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "distance-of-a-point-from-a-line",
+      "name": "Distance of a point from a line",
+      "position": 2
+    },
+    {
+      "slug": "pair-of-straight-lines",
+      "name": "Pair of straight lines",
+      "position": 3
+    },
+    {
+      "slug": "various-forms-of-straight-line",
+      "name": "Various forms of straight line",
+      "position": 4
+    },
+    {
+      "slug": "family-of-straight-line",
+      "name": "Family of straight line",
+      "position": 5
+    },
+    {
+      "slug": "angle-between-two-lines",
+      "name": "Angle between two lines",
+      "position": 6
+    },
+    {
+      "slug": "section-formula",
+      "name": "Section formula",
+      "position": 7
+    },
+    {
+      "slug": "coordinate-systems-and-coordinates",
+      "name": "Coordinate systems and coordinates",
+      "position": 8
+    },
+    {
+      "slug": "centers-of-triangle",
+      "name": "Centers of triangle",
+      "position": 9
+    },
+    {
+      "slug": "area-of-triangle-and-condition-of-collinearity",
+      "name": "Area of triangle and condition of collinearity",
+      "position": 10
+    },
+    {
+      "slug": "locus",
+      "name": "Locus",
+      "position": 11
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-MATH-570c68a815ad",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the equation $x^2-ky^2-4x+6y-5=0$ represents a pair of straight lines, then their point of intersection is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(1,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(2,3)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(3,4)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(4,5)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7e7f10b25485",
+      "subtopic": "family-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of a line passing through the point of the intersection of the lines $x-y+1=0$ and $2x+3y-8=0$ and having x intercept $3$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+y+3=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+y-3=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x-y+3=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-x+y-2=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5a76b4ee93c6",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the distance between the lines represented by $(x-2y)^2+k(x-2y)=0$ is $3$ units and $k>0$ then the equations of the lines are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x-2y=0$ and $x-2y+\\sqrt{3}=0$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x-2y=0$ and $x-2y+\\sqrt{5}=0$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x-2y=0$ and $x-2y+3\\sqrt{3}=0$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x-2y=0$ and $x-2y+3\\sqrt{5}=0$.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6e04489c61c8",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the slope of one of the two lines given by $\\frac{x^2}{a}+\\frac{2xy}{h}+\\frac{y^2}{b}=0$ is twice that of the other, then $h^2:ab=$ ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8:9$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$9:8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ab3c9b9fc7b5",
+      "subtopic": "locus",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The line $2x+y=4$ intersects X and Y axes at points A and B respectively. Let $C(p,q)$ be the point such that the lines AC and BC are perpendicular. The distance of point C from the midpoint of segment AB is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8019c092e433",
+      "subtopic": "distance-of-a-point-from-a-line",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The coordinates of the foot of the perpendicular from the point $(2,3)$ on the line $x+y-11=0$ are ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-6,5)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(5,6)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(-5,6)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(6,5)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ab29d14a46a1",
+      "subtopic": "coordinate-systems-and-coordinates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A line passes through the points $O(0,0),A(3,3)$. Then the polar coordinates of point A are ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(3\\sqrt{3},\\frac{\\pi^c}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(3\\sqrt{2},\\frac{\\pi^c}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(3\\sqrt{2},\\frac{\\pi^c}{4}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left(2\\sqrt{2},\\frac{\\pi^c}{4}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cd5446ed268b",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the sum of the slopes of the line represented by $x^2+kxy-3y^2=0$ is twice their product, then the acute angle between the lines $x^2+k\\,xy\\cos ec\\,\\alpha+y^2=0$ is ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\alpha$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\alpha$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{2}+\\alpha$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}-\\alpha$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-040a9b070301",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $(2,8)$ is one vertex and $x-y+3=0$ is one diagonal of a square, then the equation of the other diagonal is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+y-10=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x+y+10=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x-y+10=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x-y-10=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8293fcee160e",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The product of the lengths of the perpendiculars drawn from the point $(3,4)$ to the lines represented by $3x^2-5xy+2y^2=0$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{26}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{26}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{26}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$26$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-32decdb5aea2",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The joint equation of the pair of lines through the origin and making an angle of $\\frac{\\pi}{4}$ with the line $3x+y-6=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2x^2+3xy-2y^2=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2x^2+3xy+2y^2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+3xy-y^2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2-3xy+y^2=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f7144fef0ad5",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the triangle formed by the co-ordinate axes and a line $px+qy=r$ (where p, q and r are positive real numbers) is $\\frac{1}{54}$ sq.units, then ....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "p, 3r, q are in G.P.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$p^2+q^2=r^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "p, $3\\sqrt{3}$ r, q are in G.P.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "p, 27 r, q are in G.P.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-107308a36525",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the straight line passing through the point $(-5,3)$ such that the portion of the line intercepted between the axes is divided by the point in the ratio $4:3$ (from the X-axis to the Y-axis) is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9x+20y+105=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9x-20y-105=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9x-20y+105=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$9x+20y-105=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-866a4145c409",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the equation $kx^2-5xy+6y^2+x-3y=0$ represents a pair of straight lines, then the co-ordinates of their point of intersection are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-3,-1)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(-3,1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(3,-1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(3,1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-eb4539d33ca6",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The pair of straight lines represented by the equation $\\sqrt{3}x^2-4xy+\\sqrt{3}y^2=0$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "coincident.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "perpendicular.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "inclined at $30^{\\circ}$ to each other.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "inclined at $60^{\\circ}$ to each other.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-089e98b397f8",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A straight line passes through the point $(3,3)$ and intersects the positive $x$ and $y$ axes at the points $A(h,0)$ and $B(0,k)$ respectively. If O is the origin, then the minimum area of $\\triangle OAB$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9$ square units.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$18$ square units.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$27$ square units.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$36$ square units.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9d237ec8b663",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the equation $x^2-y^2-x+\\lambda y-2=0$ (where $\\lambda>0$) represents a pair of lines, then the coordinates of their point of intersection are:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(1,3)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{1}{2},\\frac{3}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{3}{2},\\frac{1}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(0,-1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-24a89e68428f",
+      "subtopic": "distance-of-a-point-from-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The points on the line $x+y-4=0$ which are at one unit distance from the line $4x+3y-10=0$ are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(5,-1)$ and $(-2,6)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(3,1)$ and $(-7,11)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(9,-5)$ and $(-11,15)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(-4,8)$ and $(2,2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9a6aa9cf151f",
+      "subtopic": "coordinate-systems-and-coordinates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The polar coordinates of point $P$ are $\\left(\\sqrt{2},\\frac{\\pi}{4}\\right)$. If $Q$ is the image of $P$ about $y$ axis, then the polar coordinates of $Q$ are ______",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\sqrt{2},\\frac{-3\\pi}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(-\\sqrt{2},\\frac{\\pi}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(-\\sqrt{2},\\frac{3\\pi}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\sqrt{2},\\frac{3\\pi}{4}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c0375fc42a6b",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If two lines represented by the equation $x^2+bcy^2=(b+c)xy$ are coincident, then ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$b=c^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$b^2=c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$b=c$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$b=-c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d411c215f998",
+      "subtopic": "distance-of-a-point-from-a-line",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The coordinates of the foot of the perpendicular from the point $(2,3)$ on the line $y=3x+4$ is given by ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{37}{10},\\frac{-1}{10}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{-1}{10},\\frac{37}{10}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{10}{37},-10\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{2}{3},-\\frac{1}{3}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-098162d80e4c",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $P(a,b)$ is the midpoint of a line segment intercepted between the coordinate axes, then the equation of the line is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+y=2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$ax+by=2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x+y=2ab$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{x}{a}+\\frac{y}{b}=2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-edf2dc0facda",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The joint equation of pair of lines passing through origin and perpendicular to the lines given by $3x^2+4xy-5y^2=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5x^2+4xy-3y^2=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$5x^2-4xy-3y^2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3x^2-4xy+5y^2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5x^2+4xy+3y^2=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-002a89d5039f",
+      "subtopic": "section-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Point C and D divide segment AB respectively internally and externally, in the ratio m:n then B divides CD internally in the ratio --------",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(m+n):m$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(m+n):n$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(m-n):(m+n)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(m+n):(m-n)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-46f8a0a9eac1",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the sum of the cubes of slopes of two lines represented by the equation $ax^2+2hxy+by^2=0$ is $1$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8h^3-6abh+b^3=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$b^3+2h(4h^2-ab)=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3h^3=4ab^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a^2+2h^3+3b^2=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-58023a523d9c",
+      "subtopic": "coordinate-systems-and-coordinates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the polar coordinates of the point P are $\\left(1,\\frac{7\\pi}{4}\\right)$, then the sum of the squares of abscissa and ordinate of Cartesian coordinates of point P is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b13445dcc00f",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $P(2,7)$ is the mid-point of a line segment intercepted between the co-ordinate axes, then the equation of line is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2x+7y=28$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2x-7y=28$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7x+2y=28$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7x+2y=14$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6fe22c7d899f",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $\\theta$ is the acute angle between the lines represented by the equation $x^2-3xy+2y^2=0$, then $\\frac{3\\sin\\theta+2\\cos\\theta}{3\\sin\\theta-2\\cos\\theta}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a1b7826a1db4",
+      "subtopic": "centers-of-triangle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a triangle $ABC$ has vertices $A(1,-6),B(2,-3)$ and $C(3,-2)$, then the coordinates of its orthocenter are....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-6,1)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(6,1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-2,3)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(3,2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-be681356acb3",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The triangle formed by the lines $2x^2-3xy-2y^2=0$ and $3x-y=7$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Right angled but not isosceles",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "isosceles with base angle $30^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Right angled with one angle $60^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Right angled isosceles",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-88fe935e415a",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the line passing through the point of intersection of the lines $x+2y+6=0$ and $2x-y=2$ and making an intercept 5 on the y-axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$39x+2y-10=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$39x-2y+10=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x+4y-20=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x-4y+20=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8dfffa5911e7",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The line $x+y=3$ intersects the pair of straight lines $x^2-3xy+y^2=0$ at points A and B. Then the co-ordinates of the mid-point of AB are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{5}{2},\\frac{3}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{1}{2},\\frac{1}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(-\\frac{3}{2},\\frac{1}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{3}{2},\\frac{3}{2}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-85abf9b10894",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the equation $mx^2-y^2+2y+n=3$ represents a pair of perpendicular lines, then the values of $m$ and $n$ respectively are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1,3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1,2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1,-3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1,-2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-86fba92173a7",
+      "subtopic": "distance-of-a-point-from-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The sum of the ordinates of the points on the line $4x+3y=10$ whose distance from the line $x+y-4=0$ is $\\sqrt{2}$ is equal to ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-10$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$18$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-74676ff5c80e",
+      "subtopic": "angle-between-two-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equations of the lines passing through the center of circle $x^2+y^2-4x-10y-7=0$ and intersecting the line $3x-y-1=0$ at an angle $\\frac{\\pi}{4}$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2y=x+8$ or $y=9-2x$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x+2y=8$ or $2x-y=9$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x+2y+8=0$ or $y-2x=9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2y-x+8=0$ or $2x-y=9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ecdc40a7f0da",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\theta_1$ and $\\theta_2$ are the acute angles between the lines $3x^2-7xy+4y^2=0$ and $6x^2-5xy+y^2=0$ respectively, then ...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\theta_1=\\theta_2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\theta_1=2\\theta_2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\theta_1=\\theta_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\theta_1+\\theta_2=\\frac{\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-127ebb74677c",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $4ab=3h^2$, then the ratio of the slopes of the lines represented by $ax^2+2hxy+by^2=0$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-50370e137dd7",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The number of lines passing through A (3, 4) and the sum of whose non-zero intercepts is zero is (are)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-839f21bb51d5",
+      "subtopic": "area-of-triangle-and-condition-of-collinearity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A triangle has two fixed vertices A $(a,0)$ and B$(0,b)$ . Let its third vertex C is moving along the line $x=y$. If $s$ is the area of triangle ABC, then $\\frac{ds}{dx}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a+b$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\left(\\frac{a+b}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{a-b}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{a}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-57a547519638",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If $\\theta$ is the acute angle between the lines $2x^2+7xy+3y^2=0$, then the value of $\\frac{2\\cos\\theta-3\\sin\\theta}{4\\sin\\theta+5\\cos\\theta}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{1}{9}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{9}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b7dfd1cb1cdd",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The combined equation of the pair of lines passing through the origin and making an angle $\\frac{\\pi}{4}$ with the line $3x+y-6=0$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+3xy-2y^2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2x^2-3xy+y^2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2x^2-xy+3y^2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2x^2+3xy-2y^2=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c72c609c33f6",
+      "subtopic": "family-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The line $(2+k)x+(1+k)y=5+7k$ passes through the fixed point for different values of k. If 'd' is the distance of a fixed point from the origin, then $d^2=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$29$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$37$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$65$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$85$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-577d86d6f7ba",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The joint equation of a pair of lines passing through point $(1,4)$, one of which is parallel to X-axis and the other makes an angle of $45^{\\circ}$ with the positive direction of X-axis, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2-xy-x+4y-12=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$xy-y^2-4x+7y-12=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x^2+2xy-y^2+7=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$xy-2y^2+3x+2y+17=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6b9b39743e82",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $A(2,-3)$ and $C(-6,7)$ are opposite vertices of a rhombus ABCD, then the equation of diagonal BD is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5x-4y+2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5x+4y+2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4x-5y+18=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4x+5y+18=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b5cdf8711afa",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The measure of the acute angle between the pair of lines $2x^2+xy-y^2-x+2y-1=0$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan^{-1}\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan^{-1}1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos^{-1}\\frac{1}{\\sqrt{10}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\cos^{-1}\\sqrt{10}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0bf9be66be0a",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the equation $ax^2+4xy-2y^2+4x+8y+1=0$ represents a pair of straight lines, then the coordinates of their point of intersection are.........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{1}{2},-\\frac{3}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(-\\frac{3}{2},\\frac{1}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{1}{2},\\frac{3}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(-\\frac{1}{2},\\frac{3}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dd06596a2780",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The line $y=2x+c$ passes through a point that is equidistant from both the axes and lies in the first quadrant $(x>0,y>0)$. Then the value of c is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8d928cde3ede",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two lines are given by $x^2-4xy+4y^2+kx-2ky=0$, then the value of k so that the distance between them is 3 is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\sqrt{5}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c9b631963467",
+      "subtopic": "distance-of-a-point-from-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The line $L_1$ given by $\\frac{x}{p}+\\frac{y}{2}=1$ passes through the point $(5,0)$. The line $L_2$ given by $\\frac{x}{10}+\\frac{y}{q}=1$ is parallel to $L_1$. Then the distance between the lines $L_1$ and $L_2$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{10}{\\sqrt{29}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{19}{2\\sqrt{29}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{\\sqrt{41}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{10}{\\sqrt{41}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2d2896aaf09e",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The combined equation of lines parallel to the coordinate axes and passing through the point of intersection of lines represented by $x^2-6xy+5y^2+10x-14y+9=0$ is $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$xy+2x+y+2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$xy+2x-y-2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$xy-2x+y-2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$xy-2x-y+2=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-712dccc329d9",
+      "subtopic": "centers-of-triangle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The coordinates of the orthocenter of the triangle whose sides are represented by the lines $4x-7y+10=0$, $x+y=5$ and $7x+4y=15$ are $\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(1,2)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(1,-2)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-1,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(-1,-2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bfb1f500fa4b",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the combined equation of angle bisectors of the lines $x^2-2pxy-y^2=0$ is $x^2-2qxy-y^2=0$, then which of the following is true?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2p+q=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2p+3q=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$pq=1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$pq+1=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dea01bc70510",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A straight line L passes through the point of intersection of the lines $x-y+1=0$ and $2x+y-7=0$. If L intersects the positive x-axis at $A(a,0)$ and the positive y-axis at $B(0,b)$, then the minimum area of the triangle $OAB$ (where $O$ is the origin) is ....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$ square units.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12$ square units.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$24$ square units.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$48$ square units.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0cd6e55d1bd9",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If two lines represented by $x^2-(1+\\sqrt{3})xy+\\sqrt{3}y^2=0$ make angles $\\alpha$ and $\\beta$ with the X-axis, then $\\tan(\\alpha+\\beta)$ is...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{3}-1}{\\sqrt{3}+1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1+\\sqrt{3}}{1-\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{3}+1}{\\sqrt{3}-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}+1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6f8058fdd552",
+      "subtopic": "family-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The family of straight lines $4ax+3by+c=0$ such that $a+b+c=0$ (where a, b, c are real constants) are concurrent at the point...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(4,3)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{1}{2},\\frac{1}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{1}{4},\\frac{1}{3}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{1}{3},\\frac{1}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bccf5707447a",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If one of the lines given by $6x^2-xy+4ky^2=0$ is $3x+4y=0$, then $k$ lies in the interval:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-3,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$[0,1]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$[-1,1]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$[-3,0)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dc4818fbef92",
+      "subtopic": "family-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the line which passes through the point of intersection of lines $x+2y+6=0$, $2x-y=2$ and which makes intercept 5 on Y - axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$39x-2y+10=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$39x+2y+10=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$39x+2y-10=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$39x-2y-10=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-16fbf67f0807",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the line $\\sqrt{3}x-y+4=0$ in the normal form is _____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\cos\\frac{\\pi}{3}+y\\sin\\frac{\\pi}{3}=2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x\\cos\\frac{5\\pi}{6}+y\\sin\\frac{5\\pi}{6}=2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x\\cos\\frac{\\pi}{6}+y\\sin\\frac{\\pi}{6}=2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x\\cos\\frac{\\pi}{4}+y\\sin\\frac{\\pi}{4}=2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f7e1251bf4cb",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the slopes of the lines given by $ax^2+2hxy+by^2=0$ are in the ratio $2:3$, then $h^2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2ab}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3ab}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{24ab}{25}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{25ab}{24}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-007bcf189640",
+      "subtopic": "various-forms-of-straight-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of a triangle formed by a line with the coordinate axes is $49$ sq. units. If the perpendicular drawn from the origin to this line makes an angle of $45^{\\circ}$ with the positive X-axis, then the equation of line is....",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+y=7$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+y=7\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x+y=\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x+y=2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-013dd261e2aa",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the equation $16x^2-24xy+9y^2-8x+6y-35=0$ represents a pair of straight lines, then the equation of the locus of points equidistant from these two lines is..........",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4x-3y-1=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4x-3y+1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8x-6y-1=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8x-6y+1=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6dc74c25072c",
+      "subtopic": "distance-of-a-point-from-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A straight line makes equal negative intercepts on the coordinate axes. If the perpendicular distance from the origin to the line is 4 units, then the equation of the line is ......",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+y+4=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+y+4\\sqrt{2}=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x-y+4=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x-y+4\\sqrt{2}=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6f89ccd17146",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the angle made by the lines represented by the equation $ax^2+2hxy+by^2=0$ with X-axis are $\\alpha$ and $\\beta$, then $\\tan(\\alpha+\\beta)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{h}{a+b}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2h}{a-b}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2h}{a+b}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{h}{a-b}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3bd312349269",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The area of the triangle (in sq. units) formed by the pair of lines $x^2-4y^2-8x+16=0$ and the line $x=2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4467f58f153e",
+      "subtopic": "distance-of-a-point-from-a-line",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If $p_1$ and $p_2$ are the lengths of perpendiculars from the origin to the lines $x\\sec\\theta+y\\csc\\theta=a$ and $x\\cos\\theta-y\\sin\\theta=a\\cos(2\\theta)$ respectively, then $4p_1^2+p_2^2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2a^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4a^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$a^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3a^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f28fd757d9a1",
+      "subtopic": "pair-of-straight-lines",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the equation $ax^2-y^2+2y+c=1$ represents a pair of perpendicular lines, then the values of $a$ and $c$ respectively are...",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1,-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0,1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1,0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2,3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

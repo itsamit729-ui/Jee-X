@@ -1,0 +1,3399 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Alternating Current",
+    "slug": "alternating-current",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 20,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "lcr-series-circuit",
+      "name": "LCR Series Circuit",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "ac-circuits-and-power-in-ac-circuits",
+      "name": "Ac circuits and power in ac circuits",
+      "position": 2
+    },
+    {
+      "slug": "ac-generator-and-transformer",
+      "name": "Ac generator and transformer",
+      "position": 3
+    },
+    {
+      "slug": "quality-factor",
+      "name": "Quality factor",
+      "position": 4
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-7ee17e4e7bd0",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an AC circuit $E=50\\sin(500t)$, $I=600\\sin\\left(500t+\\frac{\\pi}{3}\\right)mA$. What is the power dissipated in the circuit? [$\\cos 60^{\\circ}=0.5$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$ W",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$75$ W",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7.5$ W",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$50$ W",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a21b97c657c2",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An inductor of reactance $100$ $\\Omega$, a capacitor of reactance $50$ $\\Omega$, and a resistor of resistance $50$ $\\Omega$ are connected in series with an AC source of $10$ V, $50$ Hz. Average power dissipated by the circuit is ____",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$ W",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2$ W",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$ W",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$ W",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ed3626d6e366",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the circuit shown below, the ac source has voltage $V=30\\cos(\\omega t)$ volt with $\\omega=2000$ rad/s. What will be the amplitude of the current?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/alternating-current/PYQ-PHY-ed3626d6e366.png",
+        "alt": "Figure for this Alternating Current question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{5}$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{\\sqrt{5}}$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3$ A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3.3$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1cde0179d72f",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A light bulb connected in series with a capacitor and an a.c.source is glowing with certain brightness. On reducing the value of capacitance and frequency respectively, the brightness of the bulb",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "is reduced, is reduced",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "is more, is more",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "is more, is reduced",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "is reduced, is more",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-905fcf17ab21",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an a.c. circuit containing L, C and R in series, the ratio of apparent power to the true power is\n(Z= impedance of the circuit and R= resistance )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$RZ$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos\\varphi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cot\\varphi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{Z}{R}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e381f90a0a22",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An ideal transformer converts $220$V a.c. to $3.3$ KV a.c. to transmit a power of $4.4$ KW. If primary coil has $600$ turns then alternating current in the secondary coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{3}$ A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{4}$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{3}$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-eb1cc89c1177",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In series LCR circuit, resistance is $18~\\Omega$ and impedance $33~\\Omega$. An r.m.s. Voltage of $220$ V is applied across the circuit. The true power consumed in a c. circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$400$ W",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$600$ W",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$200$ W",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$800$ W",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5edb763df7f8",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An e.m.f. $e=E_0\\cos\\omega t$ is applied to a circuit containing L, C and R in series where $X_L=4R$ and $X_C=R$. The average power dissipated in the circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{E_0^2}{20R}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{E_0^2}{10R}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{E_0^2}{5R}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{E_0^2}{2R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c9d5b68fe9af",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a series LCR circuit, the inductance $L=20$ mH, capacitor $C=2\\,\\mu$F and resistance $R=100$ ohm. The frequency at which resonance occurs is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{(10)^2}{2\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{(10)^3}{3\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{(10)^4}{4\\pi}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{10}{\\pi}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-84780fb2d1a4",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the given circuit, r.m.s. value of current through the resistor $R$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/alternating-current/PYQ-PHY-84780fb2d1a4.png",
+        "alt": "Figure for this Alternating Current question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$20$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$ A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.5$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{2}$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8d40b3a04e7b",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An inductor of self inductance $1$H connected in series with a resistor of $100\\,\\pi\\,\\Omega$ and an a.c. supply of $100\\,\\pi$V, $50$ Hz. Maximum current flowing in the circuit in ampere is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f5419940d61e",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A capacitor of $10\\,\\mu F$ has reactance $2\\times 10^{-3}\\,\\Omega$. The corresponding frequency is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{25}{\\pi}\\,MHz$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{25}{\\pi}\\,Hz$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.5$ MHz",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2.5}{\\pi}\\,MHz$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-22039907baaa",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An alternating e.m.f. is given by $e=e_0\\sin\\omega t$. In what time the e.m.f. will have half its maximum value, if 'e' starts from zero? ($\\sin 30^{\\circ}=0.5$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{T}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{T}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{T}{12}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{T}{16}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3978c8e4f979",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A resistor of 100 $\\Omega$, inductor of self inductance $\\left(\\frac{4}{\\pi^2}\\right)$ H and a capacitor of unknown capacity are connected in series to an a.c. source of 200 V and 50 Hz. When the current and voltage are in phase, the value of capacity is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$40~\\mu F$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$50~\\mu F$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$20~\\mu F$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$25~\\mu F$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-745c4d4df853",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In series LCR resonant circuit, R=800 $\\Omega$, C = 2 $\\mu$F and voltage across resistance is 200 V. The angular frequency is 250 rad/s. At resonance the voltage across the capacitance is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$250$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$500$ V",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1000$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$750$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ca3ecdb9b746",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In series LCR circuit C = 2 uF, L=1 mH and R= 10 $\\Omega$. What is the ratio of energies stored in the capacitor and inductor when maximum current flows through circuit?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.2:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.8:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0c796be3b426",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An inductor of $0.5$ mH, a capacitor of $20$ $\\mu$F and resistance $20\\,\\Omega$ are connected in series with a $220$ V ac source. If the current is in phase with the emf, the amplitude of current of the circuit is $[x]^{1/2}$ A. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$61$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$121$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$242$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$442$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8ef3a063fe82",
+      "subtopic": "quality-factor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the circuit shown, the ratio of the quality factor and the band width is\n(Given: band width = R/L)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/alternating-current/PYQ-PHY-8ef3a063fe82.png",
+        "alt": "Figure for this Alternating Current question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{1}{LC}}\\frac{L^2}{R^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{1}{LC}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{1}{LC}}\\frac{L}{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{1}{LC}}\\frac{R}{L}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9efb3569dc93",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a series LR circuit with $X_L=R$. Power factor is $P_1$. If a capacitor of capacitance $C$ with $X_c=X_L$ is added to the circuit the power factor becomes $P_2$. The ratio of $P_1$ to $P_2$ will be :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-076501648f74",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an LCR series circuit, a. c. voltage source is connected in series. When L is removed from the circuit, the phase difference between the voltage and the current is $\\pi/3$. If instead C is removed, the phase difference is again $\\pi/3$. The power factor of the circuit is $\\left(\\tan\\frac{\\pi}{3}=\\sqrt{3}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-91ae05f4e8d7",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A transformer having efficiency $90\\%$ is working on $200$ V and $3$ KW power supply. If the current in the secondary coil is $6$A, the voltage across the secondary coil and the current in the primary coil, respectively, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$300$ V, $15$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$450$ V, $15$ A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$450$ V, $13.5$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$600$ V, $15$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dbb24cc64602",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "For series LCR circuit, the current is observed to lead the applied voltage. An additional capacitor $C_1$ when joined with capacitor C, makes the power factor of the circuit unity. The capacitor $C_1$ must be connected in",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "series with C and has magnitude $\\frac{C}{\\left(\\omega^2LC-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "series with C and has magnitude $\\frac{\\left(1-\\omega^2LC\\right)}{\\omega^2L}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "parallel with C and has magnitude $\\frac{\\left(1-\\omega^2LC\\right)}{\\omega^2L}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "parallel with C and has magnitude $\\frac{C}{\\left(\\omega^2LC-1\\right)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fcd337681a11",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the value of inductance L for which the current is maximum in series LCR circuit with $C=10$ $\\mu$F and $\\omega=1000$/s ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100$ mH",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10$ mH",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1000$ mH",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5c426b0a1ab0",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An inductance of negligible resistance, whose reactance is $120$ $\\Omega$ at $200$ Hz is connected to a $240$ V, $60$ Hz Power line. The current in the inductor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6.66$ A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$6.60$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5.45$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$54.5$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-767759e921d4",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An alternating voltage $V=200\\sqrt{2}\\sin(100t)$ volt is connected to a $1$ $\\mu$F capacitor through an a.c. ammeter. The reading of the ammeter will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$20$ mA",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$40$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$80$ mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ab5d8c60fc34",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an a.c. circuit, if the power factor changes from $0.5$ to $0.25$ then the increase in impedance is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "twice",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "half",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "four times",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "eight times",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e7dd0de95194",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A step down transformer has $50$ turns on secondary and $1000$ turns on primary winding. If a transformer is connected to $220$ V and $1$ A a.c. source, what is the output current of the transformer?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{20}$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$20$ A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$100$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0df610aebfcf",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A resistance of $20\\,\\Omega$ is connected to a source of alternating potential $V=220\\sin(100\\pi t)$. The time taken by current to change from its peak value to r.m.s. value is $\\left(\\sin\\frac{\\pi}{4}=\\frac{1}{\\sqrt{2}}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.2$ s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.25$ s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25\\times 10^{-3}$ s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2.5\\times 10^{-3}$ s",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2f89a7252310",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A coil of self inductance $L$ is connected in series with a bulb B and an a.c. source. Brightness of the bulb decreases when",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "frequency of a.c. source is decreased",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "number of turns in the coil is reduced",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "an iron rod is inserted in the coil",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "a capacitance of reactance $X_c$ is included in the same circuit",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8c24d2d00362",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an a.c. circuit, if the frequency is doubled, what happens to the capacitive reactance ($X_c$) and the current ($I$)?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$X_c$ is halved and $I$ is doubled",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$X_c$ is doubled, $I$ is halved",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Both $X_c$ and $I$ are halved",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Both $X_c$ and $I$ are doubled",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-69f42f8f1f7e",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An alternating voltage is $E=100\\sin\\left(\\omega t+\\frac{\\pi}{6}\\right)$ V. The voltage will be maximum for the first time when t is\n$\\left(\\sin\\frac{\\pi}{2}=1\\right)$ (T = Periodic time)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{T}{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{T}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{T}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{T}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a9cb2fe41351",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A $10~\\mu$F capacitor is charged to $25$ V of potential. The battery is then disconnected and a pure $100$ mH coil is connected across the capacitor so that L-C oscillations are set up. The maximum current in the coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.25$ A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.01$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.5$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.6$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e1cecd0d21bb",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An arc lamp requires a direct current of $10$ A at $90$ V to function. If it is connected to $220$ V (rms), $50$ Hz a.c. supply, the series inductor needed for it to work is nearly",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\pi}$ H",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{5\\pi}$ H",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2\\pi}$ H",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4\\pi}$ H",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fb166d7319ab",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A current of $5$ A is flowing at $220$ V in the primary coil of a transformer. If the voltage produced in the secondary coil is $2200$ V and $50\\%$ of power is lost, then the current in secondary will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.5$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.25$ A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.5$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5869592ce596",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Determine the frequency for which a $10\\,\\mu\\text{F}$ capacitor has a reactance of $2\\times 10^{-3}\\,\\Omega$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{25}{\\pi}$ MHz",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{20}{\\pi}$ MHz",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\times 10^{-3}$ MHz",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10\\pi$ MHz",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-59bffede987d",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A series LCR circuit is connected to an a.c. source of $220$ V, $50$ Hz. The circuit contains a resistance $R=80\\,\\Omega$, an inductor of inductive reactance $70\\,\\Omega$ and capacitor of capacitive reactance $130\\,\\Omega$. The power factor of the circuit is $\\frac{x}{10}$. The value of x is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ed84396e73f1",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A coil has inductive reactance $3$ H. The ratio of its reactance when it is first connected to an a.c. source and then to d.c. source is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "infinite",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1.5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1377b80fb0e2",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an LCR series circuit, at resonance,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the impedance is maximum",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the current is minimum",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the current leads the voltage by $\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "the current and voltage are in phase",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-253f2f8f8360",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An electric lamp connected in series with a capacitor and an a.c source is glowing with certain brightness. On reducing the frequency of source the brightness of the lamp",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "is increased",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "is reduced",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "remain the same",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "becomes zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-688523f5df58",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A series resonant circuit consists of an inductor 'L' and capacitor 'C' which produces resonant frequency 'f'. If 'L' is increased by '2L' and 'C' is changed to '9C' the resonant frequency will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{f}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{f}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{f}{2\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{f}{3\\sqrt{3}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3f5fe1e6bb11",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The natural frequency of L-C circuit is $125000$ Hz. Then the capacitor C is replaced by another capacitor with a dielectric medium of dielectric constant K. Now the frequency decreases by $25$ KHz. The value of K is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.56$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1.7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-610a550497d1",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An alternating voltage $V=200\\sqrt{2}\\sin(100t)$ volt is connected to $1~\\mu F$ capacitor through a.c. ammeter. The reading of ammeter is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5~\\text{mA}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10~\\text{mA}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$15~\\text{mA}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20~\\text{mA}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7c73dcee250d",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which one of the following graph represents the correct variation of inductive reactance ($X_L$) with angular frequency ($\\omega$)?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/alternating-current/PYQ-PHY-7c73dcee250d.png",
+        "alt": "Figure for this Alternating Current question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "B",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "D",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ee02310e6864",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If a transformer of an amplifier has output impedance $8000~\\Omega$ and the speaker has input impedance of $8~\\Omega$, the primary and secondary turns of this transformer connected between the output of amplifier and to loudspeaker should have the ratio",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1000:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$100:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:32$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$32:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-265b8f8931be",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Same current is flowing in two AC circuits. First contains only inductance and second contains only capacitance. If frequency of AC is increased for both, the current will",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increase in first circuit and decrease in second",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "increase in both circuits",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decrease in both circuits",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "decrease in first circuit and increase in second",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2d4ece1f344b",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An alternating voltage $V=200\\sqrt{2}\\sin(100t)$ volt is connected to $1\\,\\mu F$ capacitor through ammeter (AC). The reading of ammeter is (in mA)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$15$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-423d414f71a2",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An AC source is $120$ V - $60$ Hz. The value of voltage after $\\frac{1}{720}$ s from start will be $\\left(\\sin 30^{\\circ}=\\frac{1}{2}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$20.2\\,V$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$42.4\\,V$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$84.8\\,V$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$106.9\\,V$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0eb5e9d0e3da",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An alternating e.m.f. is given by $e=e_0\\sin\\omega t$. In what time the e.m.f. will have half its maximum value, if 'e' Starts from zero?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\text{T}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\text{T}}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\text{T}}{12}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\text{T}}{16}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0f30f5ea6b03",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "With gradual increase in frequency of an a.c. supply, the impedance of an LCR series circuit",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "remains constant",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "first decreases, becomes minimum and then increases",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bdd1de6d4dcf",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When a capacitor is connected in series LR circuit, the alternating current flowing in the circuit",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "decreases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "remains constant",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "is zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d356f125011d",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A step down transformer has turns ratio 20:1. If 8V are applied across $0.4~\\Omega$ secondary then the primary current will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$ A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5e6c803348ad",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An inductor of inductance $2~\\mu\\text{H}$ is connected in series with a resistance, a variable capacitor and an a.c. source of 10 kHz. The value of capacitance for which maximum current is drawn in to the circuit is $\\frac{1}{x}~\\text{F}$, where the value of x is (Take $\\pi^2=10$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8000$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$600$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$400$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1600$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-62ba942cab92",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Series LCR circuit containing an a.c. source of 100V has a inductor and a capacitor of reactance $24~\\Omega$ and $16~\\Omega$ respectively. If a resistance of $6~\\Omega$ is connected in series, then the potential difference across the series combination of inductor and capacitor only is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$80\\text{V}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$8\\text{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$40\\text{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20\\text{V}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c5ad024159b7",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Alternating current of peak value $\\left(\\frac{2}{\\pi}\\right)$ A flows through the primary coil of a transformer. The coefficient of mutual inductance between primary and secondary coils is 1H. The peak value of induced e.m.f. in the secondary coil is\n(Frequency of a.c. = 50 Hz)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100\\text{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$300\\text{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$200\\text{V}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$400\\text{V}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-28127415dd0a",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The resistor '$R$' inductance '$L$' and capacitance '$C$' are connected in series with an a.c. source. When 'L' is removed from the circuit, the phase difference between voltage and current in the circuit is $\\frac{\\pi}{3}$. If instead, C is removed from the circuit, the phase difference is again $\\frac{\\pi}{3}$. The power factor of the circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c626cf5ed00e",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In LCR series circuit at resonance",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the current is minimum.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the impedance is maximum.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the current leads the voltage by $\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "the current and voltage are in phase.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e9fe3100dc72",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The LC series resonant circuit produces a resonant frequency '$f$'. If L is tripled and 'C' is increased by 3C, the resonant frequency will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{f}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{f}{2\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6f$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{f}{3\\sqrt{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fcfeff1c843d",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A transformer has 120 turns in the primary coil and carries 5A current. Input power is one kilowatt. To have 560 V output, the number of turns in secondary coil will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$168$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$200$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$336$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$400$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2ebebefe9b07",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an a.c. circuit with pure capacitance 'C' and a.c. source $E=E_0\\sin\\omega t$, the equation of instantaneous current is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$I=E_0\\,\\omega C\\cdot\\sin(\\omega t)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$I=E_0\\omega C\\sin\\left(\\omega t+\\frac{\\pi}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$I=\\frac{E_0}{\\omega C}\\sin(\\omega t)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$I=\\frac{E_0}{\\omega C}\\sin\\left(\\omega t+\\frac{\\pi}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5b88967c31f6",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In LCR circuit, at a particular angular frequency the capacitive reactance and inductive reactance is same. If the angular frequency is doubled, the ratio of the reactance of the capacitor to that of the inductor will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ff66c25dee81",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a series LCR circuit alternating e.m.f. and current are given by the equations $V=V_0\\sin(\\omega t)$ and $I=I_0\\sin\\left(\\omega t+\\frac{\\pi}{3}\\right)$ respectively. The average power dissipated in the circuit over one cycle of a.c. is $(\\cos 60^{\\circ}=0.5)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{V_0I_0}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{3}}{2}V_0I_0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{V_0I_0}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1275c2cb99db",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an a.c. circuit, a resistance R is connected in series with an inductance 'L'. If phase angle between voltage and current is $45^{\\circ}$, the value of inductive reactance will be\n($\\sin 45^{\\circ}=\\frac{1}{\\sqrt{2}}=\\cos 45^{\\circ}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$R$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}R$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sqrt{2}}R$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-948b70781f4a",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an oscillating LC circuit, the maximum charge on the capacitor is Q. When the energy is stored equally between the electric and magnetic fields, the charge on the capacitor becomes",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{Q}{\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$Q\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{Q}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{Q}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e6fd81fd0f10",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An a.c. source is applied to a series LR circuit with $X_L=3R$ and power factor is $X_1$. Now a capacitor with $X_c=R$ is added in series to LR circuit and power factor is $X_2$. The ratio $X_1$ to $X_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:\\sqrt{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0894b992a5b4",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the series LCR circuit shown in figure the impedance is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/alternating-current/PYQ-PHY-0894b992a5b4.png",
+        "alt": "Figure for this Alternating Current question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$300\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$500\\,\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$700\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$900\\,\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0c1212ee2d36",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A series combination of resistor 'R' and capacitor 'C' is connected to an a.c. source of angular frequency '$\\omega$'. Keeping the voltage same, if the frequency is changed to $\\left(\\frac{\\omega}{3}\\right)$ the current becomes half of the original current. Then the ratio of capacitive reactance and resistance is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{0.3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{0.6}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9e8efd016195",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an LCR series circuit, the potential difference across the terminals of the inductor, capacitor and resistor is 60 V, 30 V and 40 V respectively. Then supply voltage will be equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$50$ V",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$70$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$130$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1fad37d48c81",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An alternating voltage $e=150\\sqrt{2}\\sin 100t$ volt is applied to a capacitor of capacity $2~\\mu\\text{F}$. The root mean square value of current in the circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$300$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$150$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$30$ mA",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$15$ mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-59f61e9e030e",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For a series LCR circuit inductive reactance $X_L$ is equal to resistance $R$ and also equal to twice the capacitive reactance $X_C$. The impedance of the circuit and the phase difference between voltage V and current i are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{5}R,~\\tan^{-1}\\left(\\frac{1}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{5}R,~\\tan^{-1}(2)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{5}R}{2},~\\tan^{-1}\\left(\\frac{1}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{5}R}{2},~\\tan^{-1}(2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8727984fb7dd",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an LCR circuit at resonance, the a.c. source current is\nA) maximum in a series LCR circuit only.\nB) maximum in a parallel LCR circuit only.\nC) maximum in both series and parallel LCR circuits.\nD) minimum in both series and parallel LCR circuits.\nThe correct answer is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "B",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "D",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "A",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4a1b26e2b7bc",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "When a.c. source is connected across a pure capacitor, the correct phase relation between current and emf is shown in figure.",
+      "image": {
+        "url": "/question-images/mht-cet/physics/alternating-current/PYQ-PHY-4a1b26e2b7bc.png",
+        "alt": "Figure for this Alternating Current question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "(C)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "(A)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "(B)",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "(D)",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7ebfcf7ff558",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In series LCR circuit $R=10\\,\\Omega$ and impedance is $30\\,\\Omega$. An r.m.s. voltage $210$ V, is applied across the circuit. The true power consumed in AC circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$360$ W",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$420$ W",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$490$ W",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$600$ W",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9a79a48e5022",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two coils P and S have a mutual inductance of ($\\pi$) mH. The secondary coil S has resistance $4\\,\\Omega$ and self inductance $(60/\\pi)$ mH. If the current in the primary is $I_p=12\\sin(50\\pi t)$, then the maximum value of the current induced in coil S is [Take $\\pi^2=10$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.8$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.5$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.2$ A",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b95768427011",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an oscillating LC circuit the maximum charge on the capacitor is Q. When the energy is stored equally between the electric and magnetic fields, the charge on the capacitor (q) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$Q$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{Q}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{Q}{\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{Q}{\\sqrt{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0d4b70a72440",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A transformer having an efficiency 80% is working on $200\\text{ V}$ and $4\\text{ kW}$ power supply. If the current in the secondary coil is $5\\text{ A}$, the voltage across the secondary coil and the current in the primary coil, respectively, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10\\text{ A},600\\text{ V}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$20\\text{ A},640\\text{ V}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$25\\text{ A},680\\text{ V}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$40\\text{ A},700\\text{ V}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-571548d683a7",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An inductor of inductance $L$ and a resistor of resistance $R$ are joined in series and connected to an a.c. source of frequency $\\omega$. The power dissipated in the circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\left(R^2+\\omega^2L^2\\right)}{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{V}{\\left(R^2+\\omega^2L^2\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{V^2R}{\\left(R^2+\\omega^2L^2\\right)}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{R^2+\\omega^2L^2}{V^2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-59bf904e4a7c",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a discharging series L-C-R circuit, $C=2~\\mu\\text{F}$, $L=1\\text{ mH}$ and $R=10~\\Omega$. The ratio of the energies stored in the inductor and in the capacitor, when the maximum current flows in the circuit, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7733bbd5b546",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An alternating voltage is given by $V=V_0\\sin\\left(\\omega t+\\frac{\\pi}{4}\\right)$. The time when the voltage is maximum for the first time is\n($T$ = periodic time of the alternating voltage, $\\cos 0^{\\circ}=\\sin 90^{\\circ}=1$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{T}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{T}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{T}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{T}{12}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-523c8a378456",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "To reduce the resonant frequency in an L-C-R series circuit with a generator,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the iron core of the inductor should be removed and the value of the capacitor is kept constant.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the dielectric in the capacitor should be removed and the value of the inductor is kept constant.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the generator frequency should be reduced.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "another capacitor should be added in parallel to the first capacitor and the value of the inductor is kept constant.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8d014d5b6d00",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A $40$ $\\mu$F capacitor is charged to $10$ volts of potential. The battery is disconnected, and a pure $100$ mH coil is connected across the capacitor so that LC oscillations are set up. Then, the maximum current in the coil is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.25$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.10$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.30$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.20$ A",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8ffa6aecf470",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The output of step-down transformer is measured to be $36$ V when connected to $6$ W light bulb. The value of peak current is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{2}}A$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2\\sqrt{2}}A$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3\\sqrt{2}}A$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4\\sqrt{2}}A$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-46969d9b7874",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a series LCR circuit, the voltage across R is $100$ V, $R=1\\,\\text{K}\\,\\Omega$ and $C=2\\,\\mu\\text{F}$. The angular frequency $\\omega$ is $200$ rad s${}^{-1}$. At resonance, the voltage across '$L$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$150$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$200$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$250$ V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$300$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-778e51d44b35",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When an inductance '$L$' and resistor '$R$' are connected in series to $25$V, $50$ Hz supply, a current of $0.5$ A flows in the circuit. The current lags behind in phase from applied voltage by $\\left(\\frac{\\pi}{3}\\right)$ radian. The value of R is $\\left(\\cos 60^{\\circ}=\\frac{1}{2}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$20\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$25\\,\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$40\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$50\\,\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bc6941ae8e65",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which graph shows the correct variation of r.m.s. current '$i$' with frequency '$f$' of a.c. in case of series resonant circuit ?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/alternating-current/PYQ-PHY-bc6941ae8e65.png",
+        "alt": "Figure for this Alternating Current question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$(R)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(P)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(S)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(Q)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-00b7f3f4311a",
+      "subtopic": "ac-generator-and-transformer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A current of 4 A is flowing at 230 V in the primary coil of a transformer. If the voltage produced in the secondary coil is 2300 V and 40 % of power is lost, then the current in the secondary will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.24$ A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.2$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.12$ A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.4$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-53a50157b51a",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Given below are the two circuits, choose the correct option.",
+      "image": {
+        "url": "/question-images/mht-cet/physics/alternating-current/PYQ-PHY-53a50157b51a.png",
+        "alt": "Figure for this Alternating Current question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "At resonance, current in (B) is less than that in (A)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "The r.m.s. current in (B) can be larger than that in (A)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The r.m.s. current in (A) is always equal to that in (B)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "The r.m.s. current in (B) can never be larger than that in (A)",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5b2c0ac49a18",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an LCR series circuit an alternating voltage source of frequency $F$ is connected. The current leads the voltage by $45^{\\circ}$. The value of $L$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1+2\\pi FCR}{2\\pi FC}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1+2\\pi FCR}{4\\pi^2F^2C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1-2\\pi FCR}{4\\pi^2F^2C}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1+2\\pi FR}{4\\pi^2F^2C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5e98a8718bbd",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a L-R circuit of 4 mH inductance and $3~\\Omega$ resistance, e.m.f. $E=\\cos(1000t)$ V is applied. The amplitude of current is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.6$ A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$ A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.2$ A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.4$ A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a9e290354382",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A resistor of $200\\,\\Omega$, an inductor of self inductance $\\left(\\frac{2}{\\pi^2}\\right)$ H and a capacitor of unknown capacity are connected in series to an a.c. source of $100$ V and $50$ Hz. When the current and voltage are in phase the capacitance and the power dissipated is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\times 10^{-5}$ F, $25$ W",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\times 10^{-5}$ F, $100$ W",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\times 10^{-5}$ F, $50$ W",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3\\times 10^{-5}$ F, $200$ W",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fb8ae36649a1",
+      "subtopic": "ac-circuits-and-power-in-ac-circuits",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The correct phasor diagram for an a.c. circuit containing only pure capacitor.",
+      "image": {
+        "url": "/question-images/mht-cet/physics/alternating-current/PYQ-PHY-fb8ae36649a1.png",
+        "alt": "Figure for this Alternating Current question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "(3)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "(2)",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "(1)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "(4)",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

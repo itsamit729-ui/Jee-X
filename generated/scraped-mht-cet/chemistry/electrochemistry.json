@@ -1,0 +1,2928 @@
+{
+  "subject": "CHEM",
+  "chapter": {
+    "name": "Electrochemistry",
+    "slug": "electrochemistry",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 19,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "conductance-solutions",
+      "name": "Conductance and Kohlrausch's Law",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "electrochemical-series-cell-and-their-emf",
+      "name": "Electrochemical series cell and their emf",
+      "position": 2
+    },
+    {
+      "slug": "conductance-and-electrolysis",
+      "name": "Conductance and electrolysis",
+      "position": 3
+    },
+    {
+      "slug": "batteries-fuel-cells-and-corrosion",
+      "name": "Batteries fuel cells and corrosion",
+      "position": 4
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-CHEM-1825a8148a95",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following statements is true about the voltaic cell?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It converts chemical energy into electrical energy.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "It converts electrical energy into chemical energy.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The anode of voltaic cells is positive.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "The cathode of voltaic cell is negative.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-58b9e8f913d6",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify the function of salt bridge.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "As cathode",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "As anode",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "To connect two half cells.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "To measure electrode potential.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-890d6125cb32",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following statements is correct regarding electrolysis of molten NaCl?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Pale green $\\text{Cl}_2$ gas released at anode",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Molten silvery white sodium is deposited at cathode",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Decomposition of NaCl into Na metal and $\\text{Cl}_2$ gas",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Both options A and B",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-91749af082d2",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "At $298$ K, the specific conductance ($\\kappa$) of a $0.0020$ M NaCl solution is $2.50\\times 10^{-4}\\text{ S cm}^{-1}$. Calculate the molar conductivity ($\\Lambda_m$) of the solution in $\\text{S cm}^2\\text{ mol}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$125$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$62.5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12.5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$250$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2d32e7fa0b9b",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The standard potential of $\\text{Cu}^{+2}/\\text{Cu}$ is $0.34$ V at $298$ K. Calculate its potential at the same temperature when the $\\text{Cu}^{+2}$ ion concentration is $0.1$ M.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.64$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.34$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.31$ V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.37$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5b3a7c9fea04",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which from following options is true when an electrolyte solution is diluted ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "both $\\Lambda$ and $k$ increases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "both $\\Lambda$ and $k$ decreases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\Lambda$ increases and $k$ decreases",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\Lambda$ decreases and $k$ increases",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b112b698f99e",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate $E_{cell}^o$ of the following cell at $298$ K.\n$\\text{Pb}_{(s)}\\,|\\,\\text{Pb}_{(aq)}^{+2}\\,||\\,\\text{Ag}_{(aq)}^{+}\\,|\\,\\text{Ag}_{(s)}$\n$E^o\\text{Pb}^{+2}/\\text{Pb}=-0.126$ V, $E^o\\,\\text{Ag}^{+}/\\text{Ag}=+0.799$ V",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-0.925$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.936$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.925$ V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.673$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c0004e9c0d9d",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The standard electrode potential for $\\text{Ag}_{(aq)}^{+}+e^{-}\\rightarrow\\text{Ag}_{(s)}$ is $0.79$ V. What is the stranded potential for the reaction: $2\\text{Ag}_{(s)}\\rightarrow 2\\text{Ag}_{(aq)}^{+}+2e^{-}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$+1.58$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1.58$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$+0.79$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-0.79$ V",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d94a4134ee95",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the SI unit of molar conductivity?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{S m}^2\\text{mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\Omega^{-1}\\text{cm}^2\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{Sm}^{-2}\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Omega^{-1}\\text{cm}^{-2}\\text{mol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0901e6abb54f",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "When same quantity of electricity is passed through two different cells containing copper sulfate and silver nitrate, if $0.99$ g Ag and $0.29$ g Cu are deposited, calculate the molar mass of Ag (Molar mass of Cu = $63.2$ g/mol)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$63.5$ g/mol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10.78$ g/mol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$107.8$ g/mol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$31.6$ g/mol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2fd506c535a3",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "When $4$ A current was passed through a salt solution for $45$ minutes, $2.977$ g metal was deposited. Calculate the charge on metal ion having molar mass $106.4$ g mol${}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$+1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$+2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$+3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$+4$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-3f8ea3a0a84c",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify from following cell reactions that is spontaneous under standard state of conditions.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{Ca(s)}+\\text{Cd}^{2+}\\text{(aq)}\\rightarrow\\text{Ca}^{2+}\\text{(aq)}+\\text{Cd(s)}$, $[E_{\\text{Ca}}^0=-2.866$ V & $E_{\\text{Cd}}^0=-0.403$ V$]$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\text{Br}^{-}\\text{(s)}+\\text{Sn}^{2+}\\text{(aq)}\\rightarrow\\text{Br}_2\\text{(l)}+\\text{Sn(s)}$, $[E_{\\text{Br}}^0=1.08$ V & $E_{\\text{Sn}}^0=-0.136$ V$]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\text{Ag(s)}+\\text{Ni}^{2+}\\text{(aq)}\\rightarrow 2\\text{Ag}^{+}\\text{(aq)}+\\text{Ni(s)}$, $[E_{\\text{Ag}}^0=0.799$ V & $E_{\\text{Ni}}^0=-0.257$ V$]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\text{Au(s)}+\\text{Zn}^{2+}\\text{(aq)}\\rightarrow 2\\text{Au}^{+}\\text{(aq)}+\\text{Zn(s)}$, $[E_{\\text{Au}}^0=1.68$ V & $E_{\\text{Zn}}^0=-0.763$ V$]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-666491ac1e4a",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify the correct name of law.\n\"At infinite dilution each ion migrates independent of co-ion and contributes to total molar conductivity of an elctrolyte irrespective of the nature of other ion to which it is associated.\"",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Henry's law",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Raoult's law",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Nernst derivative law",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Kohlrausch's law of independent migration of ions",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ce6e2875016c",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the molar conductivity of 0.2 M KCl solution at 298 K ($k=0.0248~\\Omega^{-1}$cm${}^{-1}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$143~\\Omega^{-1}$ cm${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$98~\\Omega^{-1}$ cm${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$124~\\Omega^{-1}$ cm${}^2$ mol${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$87~\\Omega^{-1}$ cm${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-06cf751f184e",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following solutions will have the highest electrical conductivity?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Distilled water",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Sugar solution",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Salt solution",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Alcohol solution",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-63baa78e5d29",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following statements is correct regarding the cathode of electrochemical cell ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Oxidation occurs at the cathode",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Reduction occurs at cathode",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Usually denoted by a negative sign",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Is usually made up of non conducting material.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8a5cd62bd0d2",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following reaction is possible at anode?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{F}_2+2e^{-}\\rightarrow 2\\text{F}^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\text{H}^{+}+\\frac{1}{2}\\text{O}_2+2e^{-}\\rightarrow\\text{H}_2\\text{O}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{Fe}^{2+}\\rightarrow\\text{Fe}^{3+}+1e^{-}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\text{Cu}^{2+}+2e^{-}\\rightarrow\\text{Cu}(s)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6af24272a33f",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following statements is NOT true about electrolysis of aqueous sodium chloride ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{H}_2$ gas is liberated at anode.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\text{Cl}_2$ gas is released at anode.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "NaCl solution is converted to sodium hydroxide.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{O}_2$ gas is not liberated at anode.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d95838332ff3",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The standard EMF of the cell, Ni | $\\text{Ni}^{2+}$ || $\\text{Cu}^{2+}$ | Cu is $0.59$ Volt. The standard reduction potential of a copper electrode is $0.34$ volt. What is the standard electrode potential of nickel electrode ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.25$ volt",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-0.25$ volt",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.93$ volt",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-0.93$ volt",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-274add42573f",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following is the strongest reducing agent?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{Ag}^{+}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{Li}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\text{F}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{Au}^{+}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5edd29575003",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the electrode potential of $\\text{Mg}^{2+}/\\text{Mg}$ electrode having $0.01$ M concentration of $\\text{Mg}^{2+}$ ($E^{\\circ}\\text{Mg}^{2+}/\\text{Mg}=-2.36$ V).",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2.42$ V",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-2.30$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-2.89$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.84$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a818a0c9a01b",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "When $6$ g Cu metal is deposited at the cathode during the passage of $3$ ampere current through its salt solution for $x$ minutes. Calculate the value of $x$ if the molar mass of copper is $63.5$ $\\text{g mol}^{-1}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$50.1$ minutes",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$202.6$ minutes",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$152$ minutes",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$101.3$ minutes",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1ea402328ebe",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The molar conductivity of HCl, $\\text{CH}_3\\text{COONa}$ and NaCl are $426.16\\,\\text{S cm}^2/\\text{mol}$, $91.0\\,\\text{S cm}^2/\\text{mol}$ and $126.4\\,\\text{S cm}^2/\\text{mol}$. What would be the $\\Lambda_0$ for $\\text{CH}_3\\text{COOH}$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$461.56\\,\\text{S cm}^2/\\text{mol}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$390.76\\,\\text{S cm}^2/\\text{mol}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-208.76\\,\\text{S cm}^2/\\text{mol}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$643.56\\,\\text{S cm}^2/\\text{mol}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1fc3e4c87727",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the standard potential of the cell that has the following reaction.\n$\\text{Zn}_{(s)}+2\\text{H}_{(1M)}^{+}\\rightarrow\\text{H}_{2(g,1\\text{atm})}+\\text{Zn}_{(1M)}^{2+}$ if $E^0(\\text{Zn}^{2+}/\\text{Zn})=-0.763$ V.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.763$ V",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.381$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-0.763$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.14$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4e70a1b1fda3",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is molar conductivity of acetic acid in $0.02$ M solution if its conductivity at the same concentration is $8\\times 10^{-5}\\,\\text{ohm}^{-1}\\text{cm}^{-1}$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10\\,\\text{ohm}^{-1}\\text{cm}^2\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8\\,\\text{ohm}^{-1}\\text{cm}^2\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\,\\text{ohm}^{-1}\\text{cm}^2\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4\\,\\text{ohm}^{-1}\\text{cm}^2\\text{mol}^{-1}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c4d22c3ade73",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two solutions have concentration ratio $0.4$ and conductivity ratio $0.2$. What is the ratio of their molar conductivities?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-cc2fe93a10c1",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the molar conductivity of $0.001$ M $\\text{AgNO}_3$ solution if the conductivity of $0.001$ M $\\text{AgNO}_3$ solution is $1.3\\times 10^{-4}$ ohm${}^{-1}$ cm${}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$130$ ohm${}^{-1}$ cm${}^2$ mol${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$125$ ohm${}^{-1}$ cm${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$140$ ohm${}^{-1}$ cm${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$135$ ohm${}^{-1}$ cm${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2ac4518c9535",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The molar conductivity of $0.01$ M monobasic acid at $25{\\,}^{\\circ}\\text{C}$ is $15$ ohm${}^{-1}$ cm${}^2$ mol${}^{-1}$. The molar conductivity of the same acid at infinite dilution is $375$ ohm${}^{-1}$ cm${}^2$ mol${}^{-1}$. Calculate $[\\text{H}^{+}]$ in solution.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.0\\times 10^{-4}$ M",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.0\\times 10^{-4}$ M",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4.0\\times 10^{-4}$ M",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5.0\\times 10^{-4}$ M",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-3fa18fe70b6f",
+      "subtopic": "batteries-fuel-cells-and-corrosion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which from following statements regarding mercury battery is NOT true?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It is a primary dry cell.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "It consists of Zn anode amalgamated with mercury.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The electrolyte is strongly acidic.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "In this Hg is obtained by reduction of HgO",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-958e800979d8",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The molar conductivity of $0.04$ M $\\text{AB}_2$ type salt solution at $300$ K is $200\\,\\Omega^{-1}\\text{cm}^2\\text{mol}^{-1}$. Find the conductivity.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.006\\,\\Omega^{-1}\\text{cm}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.008\\,\\Omega^{-1}\\text{cm}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.01\\,\\Omega^{-1}\\text{cm}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.015\\,\\Omega^{-1}\\text{cm}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-34af72da62f2",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The $E_{\\text{cell}}^0$ of $\\text{Al}_{(s)}|\\text{Al}^{3+}(1\\text{M})||\\text{Pb}^{2+}(1\\text{M})|\\text{Pb}_{(s)}$ cell is 1.5 V if $E_{\\text{Pb}}^0$ is $-0.14$ V then $E_{\\text{Al}}^0$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.64$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-1.64$ V",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.36$ V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-1.36$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7e320e2d46a4",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the concentration of silver nitrate solution if molar conductivity and conductivity of silver nitrate at $25^{\\circ}$C are respectively 120 ohm${}^{-1}$ cm${}^2$ mol${}^{-1}$ and 0.0024 ohm${}^{-1}$ cm${}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.01$ M",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.02$ M",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.03$ M",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.04$ M",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-91e70e3ec86e",
+      "subtopic": "batteries-fuel-cells-and-corrosion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following is an electrolyte in dry cell ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Potassium hydroxide",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Sulphuric acid",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Ammonium chloride and zinc chloride",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Manganese dioxide",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1b11f6297983",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify the $E_{red}$ value from following, if $\\text{CuSO}_4$ solution dipped with Cu rod is diluted to $10$ times.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "More by $0.02958$ V, than $E_{red}^0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Less by $0.02958$ V, than $E_{red}^0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "More by $0.0592$ V, than $E_{red}^0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Less by $0.0592$ V, than $E_{red}^0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2c7b1cb43cba",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the mass of cobalt deposited when $10$ ampere current is passed for $109$ minutes through cobalt chloride solution. (Molar mass of $\\text{Co}=59$ g/mol)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4.0~\\text{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$20.0~\\text{g}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$40.0~\\text{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6.6~\\text{g}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9aa022a85546",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following is the correct expression for molar conductivity of $\\text{Na}_2\\text{SO}_4$ at infinite dilution?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Lambda_0(\\text{Na}_2\\text{SO}_4)=2\\lambda_{(\\text{Na}^{+})}^0+\\lambda^0(\\text{SO}_4^{2-})$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\Lambda_0(\\text{Na}_2\\text{SO}_4)=\\lambda_{(\\text{Na}^{+})}^0+2\\lambda^0(\\text{SO}_4^{2-})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\Lambda_0(\\text{Na}_2\\text{SO}_4)=\\lambda^0(\\text{Na}^{+})+\\lambda^0(\\text{SO}_4^{2-})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Lambda_0(\\text{Na}_2\\text{SO}_4)=(1/2)\\lambda^0(\\text{Na}^{+})+\\lambda^0(\\text{SO}_4^{2-})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1cf765823e6e",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The main function of a salt bridge in an electrochemical cell is to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Increase cell potential",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Decreases the reaction rate",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Maintain electrical neutrality in half-cells",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Increase the reaction rate",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8cd432074292",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A conductivity cell containing $0.01$ M KCl produces resistance $600$ ohms at $25^{\\circ}C$. Find the cell constant if conductivity of $0.01$ M KCl at the same temperature is $0.0014$ $\\text{ohm}^{-1}\\,\\text{cm}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.8\\,\\text{cm}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.84\\,\\text{cm}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.88\\,\\text{cm}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.76\\,\\text{cm}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d5934be836d4",
+      "subtopic": "batteries-fuel-cells-and-corrosion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If a galvanized iron sheet is scratched and the iron surface is exposed to the atmosphere, the iron does not undergo corrosion. This is because:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Zinc forms a protective oxide layer that covers the scratch.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Iron has a higher reduction potential than zinc, making iron the cathode.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Zinc has a lower oxidation potential than iron, acting as a sacrificial anode.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Electrons flow from the iron to the zinc to prevent oxidation.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-28580617bf00",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The cells A and B contain aqueous solutions of ferrous chloride and ferric chloride respectively. The mass of iron deposited by the same quantity of electricity in cells A and B is in the ratio.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a0ac320d991b",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify the reaction from following so that the standard potential of $\\text{Cu}^{+2}/\\text{Cu}$ electrode is 0.34 V. with respective to SHE ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{Cu}\\rightarrow\\text{Cu}^{+2}+2e^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{Cu}^{+2}+2e^{-}\\rightarrow\\text{Cu}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\text{Cu}^{+}\\rightarrow\\text{Cu}^{+2}+e^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{Cu}^{+3}\\rightarrow\\text{Cu}^{+2}+e^{-}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a25242c8335d",
+      "subtopic": "batteries-fuel-cells-and-corrosion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What happens during the discharge of a lead storage battery?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{SO}_2$ is evolved",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Pb is formed",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{H}_2\\text{SO}_4$ is consumed",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\text{PbSO}_4$ is consumed",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1911429d3d0a",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "What mass of silver (Atomic mass = 108 g/mol) deposited by a quantity of electricity which displaces 5600 mL of $\\text{O}_2$ at STP ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5.4~\\text{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10.8~\\text{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$54.0~\\text{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$108.0~\\text{g}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ad7b4a442e87",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following statements is not correct ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Delta G^{\\circ}$ is an extensive property.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$E^{\\circ}$ cell is an intensive property.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "For a chemical reaction to be spontaneous $\\Delta G$ must be $-\\text{ve}$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Electrical work is equal to $\\Delta G$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d231bf8e096b",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following reactions takes place at anode during the electrolysis of molten NaCl?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{Na}_{(l)}^{+}+\\text{e}^{-}\\rightarrow\\text{Na}_{(l)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{Na}_{(s)}\\rightarrow\\text{Na}_{(l)}^{+}+\\text{e}^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{Cl}_{2(g)}+2\\text{e}^{-}\\rightarrow 2\\text{Cl}_{(l)}^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\text{Cl}_{(l)}^{-}\\rightarrow\\text{Cl}_{2(g)}+2\\text{e}^{-}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-268698218525",
+      "subtopic": "batteries-fuel-cells-and-corrosion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following hot aqueous solutions is used to dip carbon rods of $\\text{H}_2-\\text{O}_2$ fuel cell ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{KCl}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{KOH}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\text{H}_2\\text{SO}_4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{NH}_4\\text{Cl}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6d40dcc457ef",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The conductivity of 0.02 M of KCl solution at 298 K is 0.0123 $\\text{ohm}^{-1}~\\text{cm}^{-1}$. If the resistance of the cell containing this solution is 120 ohms, what is the value of the cell constant ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.050~\\text{cm}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.025~\\text{cm}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.376~\\text{cm}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.476~\\text{cm}^{-1}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-833388657e37",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the emf of cell, $\\text{Cu}_{(s)}|\\text{Cu}_{(1M)}^{2+}\\|\\text{Ag}_{(1M)}^{+}|\\text{Ag}$ is 0.463 V at $25~^{\\circ}\\text{C}$ and standard potential of Cu electrode is 0.337 V. Find the standard potential of Ag electrode",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.128~\\text{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-0.128~\\text{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.8~\\text{V}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-0.8~\\text{V}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4aca03229577",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The graphical variation of molar conductivity $(\\Lambda)$ against square root of molar concentration $(\\sqrt{c})$ of certain electrolyte 'X' is linear with intercept on y axis. Identify X from following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{CH}_3\\text{COOH}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{NH}_4\\text{OH}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{HCOOH}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{CH}_3\\text{COONa}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-88e0d39e50bb",
+      "subtopic": "batteries-fuel-cells-and-corrosion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the change in oxidation number of Pb at positive electrode of lead accumulator acting as galvanic cell ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases by 1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreases by 1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increases by 2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "decreases by 2",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-afd1b36f458d",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If standard reduction potential $(E^0)$ of $\\left(\\text{Al}_{(aq)}^{+3}|\\text{Al}_{(s)}\\right)$, $\\left(\\text{Fe}_{(aq)}^{+2}|\\text{Fe}_{(s)}\\right)$, $\\left(\\text{Cu}_{(aq)}^{+2}|\\text{Cu}_{(s)}\\right)$ and $\\left(\\text{Ag}_{(aq)}^{+1}|\\text{Ag}_{(s)}\\right)$ are $-1\\cdot 66$ V, $-0\\cdot 44$ V, $+0\\cdot 34$ V and $+0\\cdot 79$ V respectively. Which of the following reaction is non spontaneous ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\text{Ag}_{(s)}+\\text{Fe}_{(aq)}^{+2}\\rightarrow 2\\text{Ag}_{(aq)}^{+1}+\\text{Fe}_{(s)}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\text{Al}_{(s)}+3\\text{Cu}_{(aq)}^{+2}\\rightarrow 2\\text{Al}_{(aq)}^{+3}+3\\text{Cu}_{(s)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{Fe}_{(s)}+\\text{Cu}_{(aq)}^{+2}\\rightarrow\\text{Fe}_{(aq)}^{+2}+\\text{Cu}_{(s)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\text{Al}_{(s)}+3\\text{Fe}_{(aq)}^{+2}\\rightarrow 2\\text{Al}_{(aq)}^{+3}+3\\text{Fe}_{(s)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-222def52b8f7",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following net cell reactions occurs in a galvanic cell containing cadmium electrode and standard hydrogen electrode?\n$\\text{E}_{(\\text{Cd}_{(aq)}^{2+}|\\text{Cd}_{(s)})}^{\\circ}=-0.403~\\text{V}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{H}_{2(g)}+\\text{Cd}_{(aq)}^{2+}\\longrightarrow 2\\text{H}_{(aq)}^{+}+\\text{Cd}_{(s)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{Cd}_{(s)}+2\\text{H}_{(aq)}^{+}\\longrightarrow\\text{Cd}_{(aq)}^{2+}+\\text{H}_{2(g)}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\text{H}_{2(g)}+\\text{Cd}_{(aq)}^{2+}\\longrightarrow 4\\text{H}_{(aq)}^{+}+\\text{Cd}_{(s)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\text{Cd}_{(s)}+2\\text{H}_{(aq)}^{+}\\longrightarrow 2\\text{Cd}_{(aq)}^{2+}+\\text{H}_{2(g)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-387056f30b01",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For a certain redox reaction in galvanic cell $\\text{X}_{(s)}+\\text{Y}_{(aq)}^{2+}\\longrightarrow\\text{X}_{(aq)}^{2+}+\\text{Y}_{(s)}$, $\\text{E}^{\\circ}$ cell is $0.0296~\\text{V}$ at $298~\\text{K}$. What is equilibrium constant of reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$100$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1000$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ccc50be703e9",
+      "subtopic": "batteries-fuel-cells-and-corrosion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What happens in the oxidation number of Mn during working of dry cell.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Increases by 1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreases by 1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Increases by 2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "decreases by 2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-063238a47ceb",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If standard reduction potential of four electrodes A, B, C, D are $+2.5\\,\\text{V},+3.0\\,\\text{V},-2.0\\,\\text{V}$ and $-1.5\\,\\text{V}$ respectively. When is the standard emf of cell maximum?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "'A' is anode and 'B' is cathode",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "'B' is anode and 'D' is cathode",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "'C' is anode and 'B' is cathode",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "'B' is anode and 'C' is cathode",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-09812578293c",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A galvanic cell consist copper electrode and standard hydrogen electrode. If $E^{\\circ}\\left(\\text{Cu}_{(aq)}^{+2}|\\text{Cu}_{(s)}\\right)=+0.34\\,\\text{V}$, then identify a reaction taking place at positive electrode during working of cell.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{Cu}_{(s)}\\longrightarrow\\text{Cu}_{(aq)}^{+2}+2e^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{Cu}_{(aq)}^{+2}+2e^{-}\\longrightarrow\\text{Cu}_{(s)}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\text{H}_2\\text{(g)}\\longrightarrow 2\\text{H}_{(aq)}^{+}+2e^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{H}_{(aq)}^{+}+2e^{-}\\longrightarrow\\text{H}_2\\text{(g)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1c41420816b3",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If standard reduction potential of Zn, Ni and Fe are $-0.76\\,\\text{V}$, $-0.23\\,\\text{V}$ and $-0.44\\,\\text{V}$ respectively. For the reaction (Stated below) to be spontaneous find out electrodes X and Y considering above electrode potentials\n$\\text{X}_{(s)}+\\text{Y}_{(aq)}^{+2}\\longrightarrow\\text{X}_{(aq)}^{+2}+\\text{Y}_{(s)}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "X = Ni , Y = Fe",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "X = Ni , Y = Zn",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "X = Fe , Y = Zn",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "X = Zn , Y = Ni",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0f40ad96793f",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the conductivity of $0.02~\\text{M}~\\text{AgNO}_3$ solution having cell constant $1.2~\\text{cm}^{-1}$ and resistance $95.0~\\text{ohms}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.140\\times 10^{-2}~\\Omega^{-1}~\\text{cm}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.263\\times 10^{-2}~\\Omega^{-1}~\\text{cm}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.340\\times 10^{-2}~\\Omega^{-1}~\\text{cm}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.463\\times 10^{-2}~\\Omega^{-1}~\\text{cm}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-558dd7ad8496",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is number of moles of electron passed when a current of $2$ Amp flows through solution of electrolyte for $10$ minutes?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.784\\times 10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.243\\times 10^{-2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2.022\\times 10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8.041\\times 10^{-2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8d8c4245ad12",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "During the electrolysis of aqueous NaCl the product formed at cathode is?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{Cl}_{2(g)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{O}_{2(g)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{Na}_{(s)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{H}_{2(g)}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4b8faa25c8a7",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following equimolar solutions is the best conductor of electricity at same temperature ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{CH}_3\\text{COOH}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{NH}_4\\text{OH}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{HCl}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\text{C}_6\\text{H}_{12}\\text{O}_6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5e7896216d47",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is molar conductivity of $\\text{CH}_3\\text{COOH}$ at zero concentration if the molar conductivities of $\\text{H}_2\\text{SO}_4$, $\\text{K}_2\\text{SO}_4$ and $\\text{CH}_3\\text{COOK}$ at zero concentrations are respectively x, y and z $\\Omega^{-1}\\text{cm}^2\\text{mol}^{-1}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\left(x-y\\right)}{2}+z$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(x-y+2z)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(x+y-z)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\left(x-y\\right)}{2}+2z$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ab61023066ff",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "What must be the molarity of $\\text{BaCl}_2$ solution to have molar conductivity $240\\,\\Omega^{-1}\\text{cm}^2\\text{mol}^{-1}$ and conductivity $0.012\\,\\Omega^{-1}\\text{cm}^{-1}$ at $25^{\\circ}\\text{C}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.01$ M",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.02$ M",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.05$ M",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.1$ M",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-68b627fbfa30",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A battery delivers a steady current of $3.00$ ampere for $10.0$ hours. Calculate the number of moles of electrons passed.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.12$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4.5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2.7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7f42c3ee5c3f",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The molar conductivity of $0.01\\text{M}$ acetic acid at $25^{\\circ}$C is $16\\text{ S m}^2\\text{ mol}^{-1}$. Find its percent dissociation in the $0.01\\text{M}$ solution if molar conductivity of acetic acid at zero concentration is $390\\text{ S m}^2\\text{ mol}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.2\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4.1\\%$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-eadc3371e6ca",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the common unit of molar conductivity?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{S m}^2\\text{ mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{ohm}^{-1}\\text{ cm}^2\\text{ mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\text{ohm cm}^2\\text{ mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{ohm}^{-1}\\text{ cm}^2\\text{ mol}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4c00182938a1",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the molar conductivity of a $0.5$ mol/dm${}^3$ $\\text{AgNO}_3$ solution if electrolytic conductivity of it is $5.76\\times 10^{-3}$ S cm${}^{-1}$ at $298$ K?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.88$ S cm${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$11.52$ S cm${}^2$ mol${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.086$ S cm${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$28.8$ S cm${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7524a42a2930",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "For the cell\n$\\text{Ni}_{(s)}|\\text{Ni}_{(1M)}^{++}||\\text{Cu}_{(1M)}^{++}|\\text{Cu}_{(s)}$, if the concentration of an ion in the anode compartment is doubled, then the emf of cell will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increased by $2$ V.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreased by $2$ V.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increased by $0.00891$ V.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "decreased by $0.00891$ V.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a27ca6091cd0",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Identify the value of $1$ S cm${}^2$ mol${}^{-1}$ from following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{-4}$ S m${}^2$ mol${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$10^2$ S m${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10^{-2}$ S m${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^4$ S m${}^2$ mol${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8a28a78fc9fb",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the quantity of electricity required to produce $8$ g of Mg (molar mass = $24~\\text{g mol}^{-1}$) from $\\text{MgCl}_2$ solution ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.222$ F",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.444$ F",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.666$ F",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.888$ F",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-92f8d7828941",
+      "subtopic": "batteries-fuel-cells-and-corrosion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following reactions occurs at cathode during recharging of lead accumulator ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{PbO}_{2(s)}+4\\text{H}_{(aq.)}^{+}+\\text{SO}_4^{2-}{}_{(aq.)}+2e^{-}\\rightarrow\\text{Pb}_{(s)}+\\text{PbSO}_{4(s)}+2\\text{H}_2\\text{O}_{(\\mathcal{l})}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{PbO}_{2(s)}+4\\text{H}^{+}~2e^{-}\\rightarrow\\text{Pb}^{2+}+2\\text{H}_2\\text{O}_{(\\mathcal{l})}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{Pb}_{(s)}+\\text{SO}_4^{2-}{}_{(aq.)}\\rightarrow\\text{PbSO}_{4(s)}+2e^{-}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{PbSO}_{4(s)}+2e^{-}\\rightarrow\\text{Pb}_{(s)}+\\text{SO}_4^{2-}{}_{(aq.)}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ababa4311eaa",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What is the molar conductivity of $0.02$ M KI solution if its conductivity is $4.37\\times 10^{-4}\\,\\Omega^{-1}\\,\\text{cm}^{-1}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8.74~\\Omega^{-1}\\,\\text{cm}^2\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$21.85~\\Omega^{-1}\\,\\text{cm}^2\\text{mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$43.70~\\Omega^{-1}\\,\\text{cm}^2\\text{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$13.65~\\Omega^{-1}\\,\\text{cm}^2\\text{mol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8390b4b45a0b",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If molar conductance at infinite dilution for $\\text{CH}_3\\text{COO}^{-}$ and $\\text{H}^{+}$ ions are $50~\\text{S cm}^2~\\text{mol}^{-1}$ and $350~\\text{S cm}^2~\\text{mol}^{-1}$ respectively, molar conductivity of $5\\times 10^{-2}$ M $\\text{CH}_3\\text{COOH}$ is $20~\\text{S cm}^2\\text{mol}^{-1}$. What is the hydrogen ion concentration in $\\text{mol/dm}^3$ of $\\text{CH}_3\\text{COOH}$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\times 10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5\\times 10^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.5\\times 10^{-3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2.5\\times 10^{-4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-958bb528cbb1",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Determine the electrode potential of $\\text{Sn}^{2+}(0.01\\text{M})~|~\\text{Sn(s)}$ at $25^{\\circ}\\text{C}$ if $E_{\\text{Sn}}^{\\circ}$ is $-0.136$ V.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.186$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-0.186$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-0.195$ V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.195$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e2b5e36df14b",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following expressions indicates the correct relationship between molar conductivity of strong electrolyte and its concentration?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Lambda=\\Lambda_0+\\sqrt{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\Lambda=\\Lambda_0-a\\sqrt{c}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\Lambda=\\Lambda_0+a\\sqrt{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Lambda=\\Lambda_0-\\sqrt{c}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0d6736a123de",
+      "subtopic": "conductance-and-electrolysis",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The molar conductivities of NaCl, HCl and $\\text{C}_2\\text{H}_5\\text{COONa}$ at infinite dilution are $126.45$, $426.16$ and $91$ ohm${}^{-1}$cm${}^2$. The molar conductivity of $\\text{C}_2\\text{H}_5\\text{COOH}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$201.28$ ohm${}^{-1}$cm${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$698.28$ ohm${}^{-1}$cm${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$540.48$ ohm${}^{-1}$cm${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$390.71$ ohm${}^{-1}$cm${}^2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6a756233eb04",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Identify the FALSE statement from the following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Standard cell potential of galvanic cell is an extensive property.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Standard electrode potential is an intensive property.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "For spontaneous cell reaction in galvanic cell, free energy change should be negative.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "For spontaneous cell reaction in galvanic cell equilibrium constant of reaction should be greater than 1.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e30216876b90",
+      "subtopic": "electrochemical-series-cell-and-their-emf",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the standard emf of Zn-Cu cell if $E^{\\circ}(\\text{Zn}^{2+}/\\text{Zn})=-0.76$ V and $E^0(\\text{Cu}^{2+}/\\text{Cu})=0.34$ V",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.42$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.76$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.1$ V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1.52$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

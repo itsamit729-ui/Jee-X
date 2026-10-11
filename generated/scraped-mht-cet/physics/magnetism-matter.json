@@ -1,0 +1,703 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Magnetism and Matter",
+    "slug": "magnetism-matter",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 18,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "magnetic-properties-of-materials",
+      "name": "Magnetic properties of materials",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "magnetic-properties-of-matter",
+      "name": "Magnetic properties of matter",
+      "position": 2
+    },
+    {
+      "slug": "bar-magnet-or-magnetic-dipole",
+      "name": "Bar magnet or magnetic dipole",
+      "position": 3
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-c37f8a2594ca",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The relation between total magnetic field $(B)$, magnetic intensity $(H)$, permeability of free space $(\\mu_0)$ and susceptibility $(\\chi)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{B}{H}=\\mu_0(1+\\chi)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$BH=\\mu_0(1+\\chi)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{H}{B}=\\mu_0(1-\\chi)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{H}{B}=\\mu_0(1+\\chi)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-72457632ab19",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "An iron rod is placed parallel to magnetic field intensity 2000 A/m. The magnetic flux through rod is $6\\times 10^{-4}$ wb and its cross sectional area is 3 cm${}^2$. The magnetic permeability of the rod in wb/A-m is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10^{-3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$10^{-4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1c868eceb372",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A rod with a circular cross-section area $2$ cm${}^2$ and length $40$ cm is wound uniformly with $400$ turns of an insulated wire. If a current $0.4$ A flows in the wire winding, the total magnetic flux produced inside the winding is $4\\pi\\times 10^{-6}$ Wb. The relative permeability of the rod is\n(Given permeability of vacuum $\\mu_0=4\\pi\\times 10^{-7}$ N m A${}^{-2}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12.5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$32/5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$125$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5/16$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-acec310bcfab",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "An iron rod is placed parallel to magnetic field of intensity H. The magnetic flux through the rod is $\\Phi$ and its cross-sectional area is A. The magnetic permeability ($\\mu$) of the rod is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\Phi AH$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{AH}{\\Phi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\Phi}{AH}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$A/\\Phi H$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0d73a0e414b2",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A domain in a ferromagnetic substance is in the form of a cube of side '$L$'. If it contains '$N$' atoms and each atomic dipole moment $M$ then the magnetisation of the domain is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{N}{ML^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{MN}{L^3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{M}{NL^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$MNL^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-016c4be4e695",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The angle made by electron's orbital angular momentum ($L$) with the direction of the orbital magnetic moment ($M$) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$120^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$180^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$90^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3c8dc85fb479",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A paramagnetic substance in the form of a cube with sides $1$ cm has a magnetic dipole moment $20\\times 10^{-6}$ J/T when a magnetic intensity $60\\times 10^3$ A/m is applied. Its magnetic susceptibility is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.3\\times 10^{-4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3.3\\times 10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4.3\\times 10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2.3\\times 10^{-2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4480e6ec6b55",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The product of magnetic susceptibility ($\\chi$) and absolute temperature (T) is constant for a",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "diamagnetic substance.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "paramagnetic substance.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "ferromagnetic substance.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "paramagnetic as well as ferromagnetic substance.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2083f98ccd14",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "An iron rod is placed parallel to magnetic field intensity 1000 A/m. The magnetic flux through the rod is $3\\times 10^{-4}$ Wb and its cross-sectional area is $1.5~\\text{cm}^2$. The magnetic permeability of rod in $\\text{Wb/}_{\\text{A-m}}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\times 10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\times 10^{-3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\times 10^{-4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1\\times 10^{-2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-85987e459b5a",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A magnetising field of $5000$ A/m produces a magnetic flux of $4\\times 10^{-5}$ Wb in an iron rod of cross-sectional area $0.4~\\text{cm}^2$. The permeability of the rod (in Wb/Am) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\times 10^{-6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1\\times 10^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\times 10^{-4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3\\times 10^{-5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ea5839d201be",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The relationship between the magnetic susceptibility ($\\chi$) and magnetic permeability ($\\mu$) of a material is ($\\mu_0$ and $\\mu_r$ is the permeability of free space and relative permeability respectively)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\chi=\\frac{\\mu}{\\mu_0}-1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\chi=\\frac{\\mu_r}{\\mu_0}+1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\chi=\\mu_r+1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\chi=1-\\frac{\\mu}{\\mu_0}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8fe64d6a61e7",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic moment produced in a sample of 2 gram is $8\\times 10^{-7}\\,\\text{A/m}^2$. If its density is $4~\\text{g/cm}^3$ then the magnetization of the sample is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.6$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1.2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f4306b6a5e65",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The region inside a current carrying toroid is filled with a material (Niobium) having susceptibility $\\chi=2.6\\times 10^{-5}$. The percentage increase in the magnetic field in the presence of Niobium over that without it, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.6\\times 10^{-5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.6\\times 10^{-4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.6\\times 10^{-3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2.6\\times 10^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0de063bae486",
+      "subtopic": "bar-magnet-or-magnetic-dipole",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The frequency of oscillation of a small magnet in a magnetic field of induction 'B' is '$n$'. If the frequency of oscillations of the same magnet in a field of induction 'X' falls to $\\left(\\frac{n}{3}\\right)$, the value of 'X' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3B$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{B}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{B}{9}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ef533c13f3ac",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A diamagnetic liquid is filled in a U-tube. One arm of a U-tube is placed in an external magnetic field with the meniscus in line with the field. The level of the liquid in that arm will",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "rise.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "fall.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "oscillate slowly.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "remains as it is.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ebc0f69f9008",
+      "subtopic": "bar-magnet-or-magnetic-dipole",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A magnetic dipole lying parallel to a magnetic field requires '$W$' units of work to turn it through $30^{\\circ}$. The torque required to keep this needle in this position is\n$\\left[\\sin 30^{\\circ}=\\cos 60^{\\circ}=0.5,\\sin 60^{\\circ}=\\cos 30^{\\circ}=\\frac{\\sqrt{3}}{2},\\sin 0^{\\circ}=\\cos 90^{\\circ}=1\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}W$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{\\sqrt{3}}W$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{W}{\\left(\\sqrt{3}-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{W}{\\left(2-\\sqrt{3}\\right)}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-734fc3d25382",
+      "subtopic": "magnetic-properties-of-matter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Soft iron is used in making an electromagnet because",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It has low permeability",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "It has high coercivity",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "It has high retentivity",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "It has low retentivity",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cf40dbff3357",
+      "subtopic": "bar-magnet-or-magnetic-dipole",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The periodic time of a magnet in vibration magnetometer is $T_0$. If a magnet is replaced by another magnet whose moment of inertia is three times and magnetic moment is one-third of the original magnet, then time period of new magnet will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{T_0}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{T_0}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\,T_0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}\\,T_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

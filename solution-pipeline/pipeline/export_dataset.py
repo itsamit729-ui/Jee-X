@@ -28,7 +28,7 @@ from db import VERIFIED_NOTE, engine  # noqa: E402
 
 SUBJECT = {"PHY": "Physics", "CHEM": "Chemistry", "MATH": "Mathematics"}
 SUBJECT_DIR = {"PHY": "physics", "CHEM": "chemistry", "MATH": "mathematics"}
-EXAM_NAME = {"jee_main": "JEE Main", "jee_advanced": "JEE Advanced"}
+EXAM_NAME = {"jee_main": "JEE Main", "jee_advanced": "JEE Advanced", "mht_cet": "MHT CET"}
 
 
 def main():

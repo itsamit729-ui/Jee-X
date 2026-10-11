@@ -1,0 +1,940 @@
+{
+  "subject": "CHEM",
+  "chapter": {
+    "name": "States Of Matter Gaseous And Liquid States",
+    "slug": "states-of-matter-gaseous-and-liquid-states",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "critical-phenomenon-and-liquefaction",
+      "name": "Critical phenomenon and liquefaction",
+      "position": 1
+    },
+    {
+      "slug": "real-gas-and-van-der-walls-equation",
+      "name": "Real gas and van der walls equation",
+      "position": 2
+    },
+    {
+      "slug": "ideal-gas-equation",
+      "name": "Ideal gas equation",
+      "position": 3
+    },
+    {
+      "slug": "gas-laws",
+      "name": "Gas laws",
+      "position": 4
+    },
+    {
+      "slug": "daltons-law-of-partial-pressure",
+      "name": "Daltons law of partial pressure",
+      "position": 5
+    },
+    {
+      "slug": "kinetic-theory-of-gases",
+      "name": "Kinetic theory of gases",
+      "position": 6
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-CHEM-2497c3892914",
+      "subtopic": "kinetic-theory-of-gases",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "According to the kinetic molecular theory of gases, the average kinetic energy of gas molecules:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Increases with increase in pressure",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Decreases with increase in volume",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Is directly proportional to the absolute temperature",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Is the same for all gases at the same volume",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bf749b218f94",
+      "subtopic": "gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A syringe has a volume of $10.0~\\text{cm}^3$ at a pressure of $1$ atm. If the end is sealed and the plunger is pushed down (constant temperature), what will be the final volume when the pressure becomes $3.5$ atm?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$35.0~\\text{cm}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.86~\\text{cm}^3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.286~\\text{cm}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3.50~\\text{cm}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c795fa8bddfa",
+      "subtopic": "gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A hot air balloon has a volume of $2800$ dm${}^3$ at $100{\\,}^{\\circ}$C. What is the volume if air cools to $27{\\,}^{\\circ}$C?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2252$ dm${}^3$.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2450$ dm${}^3$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2656$ dm${}^3$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2912$ dm${}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-17155a950c56",
+      "subtopic": "critical-phenomenon-and-liquefaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which among the following gases is difficult to liquefy ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Chlorine gas",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Nitrogen gas",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Ammonia gas",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Sulphur dioxide gas",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ca27662e7c64",
+      "subtopic": "ideal-gas-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the temperature of 2 moles of gas occupying a volume of 5.0 liters at 24.6 atmospheres?\n($R=0.0821$ L atm K${}^{-1}$ mol${}^{-1}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$476^{\\circ}$C",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$480^{\\circ}$C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$440^{\\circ}$C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$450^{\\circ}$C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ec73323fa673",
+      "subtopic": "ideal-gas-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A gas occupies a volume of $0.35$ dm${}^3$ at $290$ K and $2$ atm. Pressure. Calculate the volume of gas at STP.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.11$ dm${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.66$ dm${}^3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.11$ dm${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3.5$ dm${}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2d12cf10dbeb",
+      "subtopic": "gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A sample of nitrogen gas occupies a volume of $320$ cm${}^3$ at STP. Calculate its volume at $66{\\,}^{\\circ}$C and $0.825$ bar pressure",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$481.6$ cm${}^3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$332.4$ cm${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$80$ cm${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$104.9$ cm${}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-71b831526d85",
+      "subtopic": "gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Find the new volume of the gas at temperature at $25^{\\circ}\\text{C}$ by keeping constant pressure. If the same gas occupies $240$ $\\text{dm}^3$ volume at $10^{\\circ}\\text{C}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$252.72$ $\\text{dm}^3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$227.91$ $\\text{dm}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$225.27$ $\\text{dm}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$272.19$ $\\text{dm}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e3a9cf4b0c0c",
+      "subtopic": "gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The volume of a given mass of a gas at $27^{\\circ}\\text{C}$ is $2.1\\,\\text{dm}^3$. Calculate the new volume of a gas at constant pressure when the temperature is $7^{\\circ}\\text{C}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.96\\,\\text{dm}^3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1.50\\,\\text{dm}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.34\\,\\text{dm}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.18\\,\\text{dm}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b661b0dc7df3",
+      "subtopic": "ideal-gas-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following gases has the highest density under normal conditions?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{O}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{SO}_2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\text{CH}_4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{N}_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f6de1a4fe8ba",
+      "subtopic": "real-gas-and-van-der-walls-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the compressibility factor of $1$ mole of a certain real gas if it occupies $0.4\\text{ dm}^3$ at $300$ K and $40$ atm. [R $=0.082$ atm $\\text{dm}^3\\text{K}^{-1}\\text{mol}^{-1}$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.45$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.65$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.85$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.00$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-52fc2dbb59cb",
+      "subtopic": "gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Calculate the new pressure of the gas enclosed in a cylinder when it compressed from 5 L to 2 L at 1 atm and 300 K. The final temperature in this process is 500 K.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.5$ atm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.12$ atm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.5$ atm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4.16$ atm",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a5b0833e29e9",
+      "subtopic": "real-gas-and-van-der-walls-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following gases exhibits positive deviation from ideal behavior at all pressures?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{H}_2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\text{O}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{CH}_4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\text{CO}_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-60376355745a",
+      "subtopic": "kinetic-theory-of-gases",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following statements is true about ideal gas ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It shows deviation from Boyle's law and Charles' law.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Its molecules are not perfectly elastic.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "It does not exist.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Intermolecular attraction is present in it, hence a collision takes place with loss of kinetic energy.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bebbefa711e2",
+      "subtopic": "gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "At constant temperature, a gas occupies a volume of 200 mL at a pressure of 500 mm Hg. What will be its volume at 800 mm Hg pressure?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$280~\\text{mL}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$125~\\text{mL}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$100~\\text{mL}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$350~\\text{mL}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c088fdf7417a",
+      "subtopic": "gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "$V_0$ and $V_t$ are volumes of an ideal gas at $0~^{\\circ}\\text{C}$ and $t~^{\\circ}\\text{C}$ respectively, find ratio $\\frac{V_t}{V_0}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{273}\\times t$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1+273\\times t$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1+\\frac{t}{273}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{273+t}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-175ddaa58a77",
+      "subtopic": "gas-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A gas at $10{\\,}^{\\circ}\\text{C}$ occupies a volume of 283 mL. if it is heated to $20{\\,}^{\\circ}\\text{C}$ keeping the pressure constant. What is the new volume of gas ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$566\\text{ mL}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$450\\text{ mL}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$350\\text{ mL}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$293\\text{ mL}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c6fc4bc33daf",
+      "subtopic": "daltons-law-of-partial-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What ratio by mass of 'Ne' and $\\text{CH}_4$ should be mixed so that partial pressure exerted by each gas is same?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5:4$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bf96ebe5768b",
+      "subtopic": "daltons-law-of-partial-pressure",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A container contains mixture of He and Ne gases at certain temperature. He is 20 % by mass of mixture. What is the ratio of partial pressure of Helium to Neon ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5:4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-72575d5539cc",
+      "subtopic": "kinetic-theory-of-gases",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following is not an illustration of viscosity?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Gradation of lubricant oils",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Indication of Cardiovascular disease",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Cleansing action of soap",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Thickening of glass panes of old buildings",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1647da763764",
+      "subtopic": "real-gas-and-van-der-walls-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "What types of intermolecular forces are present in $\\text{N}_2$ molecules?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "London dispersion forces",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Dipole-dipole interactions",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Dipole-induced dipole interactions",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Hydrogen bonding",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-fc2664d37528",
+      "subtopic": "critical-phenomenon-and-liquefaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "What is the value of critical temperature of $\\text{CO}_2$ in ${}^{\\circ}$C?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$33.2^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$30.98^{\\circ}\\text{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$154.3^{\\circ}\\text{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$126.0^{\\circ}\\text{C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0570ce718bc2",
+      "subtopic": "ideal-gas-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Find the number of moles of $\\text{CO}_2$ present in a sample occuping $4\\times 10^{-3}\\,\\text{m}^3$ at $1.104\\times 10^5\\,\\text{Nm}^{-2}$ pressure ($R\\times T=2208~\\text{J mol}^{-1}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.1$ mole",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.2$ mole",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.3$ mole",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.4$ mole",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-77c09ec67e87",
+      "subtopic": "daltons-law-of-partial-pressure",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A mixture of 0.5 mol $\\text{N}_2$ gas, 1.0 mol $\\text{O}_2$ gas and 1.5 mol $\\text{H}_2$ gas exerts a total pressure of 18 bar. Find the partial pressure of $\\text{O}_{2(g)}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4.0$ bar",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6.0$ bar",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8.0$ bar",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10.0$ bar",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

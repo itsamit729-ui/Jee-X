@@ -120,6 +120,7 @@ def plan(db, files, status):
             existing_chapters.append(f"{code}/{slug}")
             data["chapter"] = {"name": chapter.name, "slug": slug, "class_level": chapter.class_level,
                                "in_main": chapter.in_main, "in_advanced": chapter.in_advanced,
+                               "in_mht_cet": chapter.in_mht_cet or data["chapter"].get("in_mht_cet", False),
                                "position": chapter.position}
             db_subtopics = {s.slug: s for s in chapter.subtopics}
             data["subtopics"] = [

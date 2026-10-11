@@ -141,7 +141,8 @@ analytical — stats, ratings, ranks, leaderboards, regrades — is computed fro
 - **Syllabus links are always foreign keys** (`subject_id`, `chapter_id`, `subtopic_id`) — never a
   copied name like `"Physics"`.
 - **Enumerations** are lowercase strings guarded by `CHECK` constraints, with one vocabulary
-  everywhere: exams are always `'jee_main' | 'jee_advanced'`.
+  everywhere: the exams students prepare for are always `'jee_main' | 'jee_advanced'`; a question can
+  also come from `'mht_cet'`, which is stored but kept out of the JEE question pools.
 - **Stable references:** questions and passages carry a human-readable `ref` (`PHY-KIN-001`) that
   survives edits and re-imports. Integer `id`s are internal and never appear in question files.
 - **Delete rules:**
@@ -248,6 +249,7 @@ CREATE TABLE chapters (
   class_level  TEXT NOT NULL CHECK (class_level IN ('11', '12')),   -- which year of school teaches it
   in_main      BOOLEAN NOT NULL DEFAULT TRUE,
   in_advanced  BOOLEAN NOT NULL DEFAULT TRUE,
+  in_mht_cet   BOOLEAN NOT NULL DEFAULT FALSE,                       -- has MHT-CET questions
   position     INTEGER NOT NULL DEFAULT 0,
   UNIQUE (subject_id, slug)
 );
@@ -281,7 +283,7 @@ CREATE TABLE questions (
   difficulty         INTEGER NOT NULL CHECK (difficulty BETWEEN 1 AND 10),   -- 1 = very easy, 10 = very hard
   expected_time_sec  INTEGER NOT NULL,
   source_type        TEXT NOT NULL CHECK (source_type IN ('pyq', 'original', 'adapted')),
-  exam               TEXT CHECK (exam IN ('jee_main', 'jee_advanced')),
+  exam               TEXT CHECK (exam IN ('jee_main', 'jee_advanced', 'mht_cet')),
   year               INTEGER,
   shift              TEXT,                       -- e.g. '27 Jan 2024, Shift 1'
   status             TEXT NOT NULL DEFAULT 'draft'

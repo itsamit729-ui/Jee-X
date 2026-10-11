@@ -1,0 +1,1036 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Units, Dimensions and Errors",
+    "slug": "units-dimensions",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 1,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "dimensions-of-physical-quantities",
+      "name": "Dimensions of physical quantities",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "errors-in-measurement",
+      "name": "Errors in measurement",
+      "position": 2
+    },
+    {
+      "slug": "unit-of-physical-quantities",
+      "name": "Unit of physical quantities",
+      "position": 3
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-6efd3fd9c462",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The period of oscillation of a simple pendulum is given by $T=2\\pi\\sqrt{\\frac{l}{g}}$ where $l$ is about $80$ cm and is known to have $0.1$ cm accuracy. The period is about $1.5$ s. The time of $50$ oscillations is measured by a stop watch of least count $0.1$ s. The percentage error in $g$ is nearly",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.4$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d111adaf4194",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A quantity P is related as $X^{-2}Y^{-3/2}Z^{2/5}$ where X,Y,Z are independent parameters which have fractional errors of $0.1,0.2$ and $0.5$ respectively in measurement. The maximum fractional error in P is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.7$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.8$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aac695caf6ba",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A particular physical quantity is given by $X=2\\pi\\sqrt{\\frac{a}{b}}$ and the measured value of 'a' is $40$ unit with $0.01$ unit accuracy. The value of 'b' is $\\frac{98}{10}$ unit with $1$ unit accuracy. The % error in $X$ is nearly",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7a24fb4d2ba8",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A quantity $Q$ is formulated $X^{-2}Y^{+\\frac{3}{2}}Z^{-\\frac{2}{5}}$. $X$, $Y$ and $Z$ are independent parameters which have fractional errors of $0.1$, $0.2$ and $0.5$ respectively in measurement. The maximum fractional error of $Q$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.7$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.8$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-816bab219607",
+      "subtopic": "unit-of-physical-quantities",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "According to Boyle's law, the product PV remains constant. The SI unit of PV is same as that of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "momentum",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "energy",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "force",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "impulse",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f24bc173d682",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The period of oscillation of a simple pendulum is $T=2\\pi(L/g)^{1/2}$. Measured value of 'L' is 10 cm known to 1 mm accuracy and time for 100 oscillations is 50 second, using a watch of 1 second resolution. The percentage error in the measurement of 'g' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e927537feb0a",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The length of a cylinder is measured with a meter rod having least count $0.1$ cm. Its diameter is measured with vernier calipers having least count $0.01$ cm. Length of cylinder is $8.0$ cm and radius is $4.0$ cm. Find the percentage error in the calculated value of the volume.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.25\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.75\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.5\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2.75\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7968f9afd226",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The percentage error in the measurement of mass and speed are $2\\%$ and $3\\%$ respectively. The maximum error in the estimation of kinetic energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$11$ %",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8$ %",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5$ %",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1$ %",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-082da8aa6121",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The resistance of a conductor is $R=V/I$ where voltage $V=100\\pm 5$ V and current $I=10\\pm 0.2$ A. The error in the calculation of $R$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5.2\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2.5\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-47b2367012e5",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the error in the measurement of volume of the sphere is $6\\%$ then the error in the measurement of its surface area will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7.5\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3af3845fe417",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The period of oscillation of a simple pendulum is $T=2\\pi\\sqrt{\\frac{l}{g}}$ where $l$ is about $100$ cm and has $1$ mm accuracy. The period is about $2$ s. The time of $100$ oscillations is measured by a stopwatch of least count $0.1$ s. The percentage error in '$g$' is (gravitation acceleration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.1\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.2\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.8\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-008e8bec7efa",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The length of rod is measured by meter scale having least count $0.1$ cm and diameter is measured by vernier callipers having least count $0.01$ cm. Length of rod is $5.0$ cm and radius $2.0$ cm. The percentage error in the calculated value of the volume is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.5\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6d8c32d19e96",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A wire has mass $(0.3\\pm 0.003)$ gram, radius $(0.5\\pm 0.005)$ mm and length $(6\\pm 0.06)$ cm. The maximum error in the measurement of density is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2340787c355a",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A physical quantity $C$ is related to four other quantities $P$, $Q$, $R$ and $S$ as $C=\\frac{PQ^2}{R^3\\sqrt{S}}$. The percentage error in the measurement of $P$, $Q$, $R$ and $S$ are $1\\%$, $2\\%$, $3\\%$ and $2\\%$ respectively. The percentage error in the measurement of $C$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$18\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15\\%$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6174d9c1e664",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A wire has mass $(0.3\\pm 0.003)$ gram, radius $(0.5\\pm 0.005)$ cm and length $(6\\pm 0.06)$ cm. The maximum percentage error in the measurement of density is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\,\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\,\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\,\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5\\,\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-244ba34673a8",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The error in the measurement of length and mass of a cube is 3% and 4% respectively. The error in the measurement of its density will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$13~\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$6~\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9~\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15~\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d3b4ba7e893a",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Mass and volume of a body are found to be $(6.00\\pm 0.03)$ kg and $(2.00\\pm 0.02)$ $\\text{m}^3$ respectively. Then the density of a body is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(3.00\\pm 0.010)$ $\\text{kg/m}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(3.00\\pm 0.015)$ $\\text{kg/m}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(3.00\\pm 0.020)$ $\\text{kg/m}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(3.00\\pm 0.045)$ $\\text{kg/m}^3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7a615c52f354",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A force 'F' is applied on a square plate of side 'L'. If the percentage error in determining 'L' is 3% and that in 'F' is 2% then the percentage error in determining the pressure is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8\\%$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d9e771875fea",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If two resistors of resistances have values $R_1=(350\\pm 3)~\\Omega$ and $R_2=(140\\pm 4)~\\Omega$. The percentage error for the sum and difference of $R_1$ and $R_2$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.43\\%$ , $3.33\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$7\\%$ , $1\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1\\%$ , $7\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3.33\\%$ , $1.43\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a16bcb96cb4b",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The maximum error in the measurement of the density and mass of the uniform cube are 8% and 2% respectively. Hence, the maximum error in the measurement of length will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e2a73bf5a427",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The voltage across a lamp is $(6.0\\pm 0.3)$ volt and the current passing through it is $(4.0\\pm 0.1)$ ampere. The power consumed in watt will be (using percentage error)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(24.0\\pm 1.8)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(24.0\\pm 0.75)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(22.0\\pm 0.4)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(18.0\\pm 0.4)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-03aea6808c49",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A cuboid has volume $V=l\\times l\\times\\sqrt{l}$, where $l$ is the length of one side. When the length $l$ is measured by a meter scale of least count $1\\,\\text{mm}$, the relative percentage error in the measurement of its volume is $6.25\\%$. Then the relative percentage error in measurement of its length and the value of the length $l$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\%$ and $2$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.5\\%$ and $4$ cm",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.8\\%$ and $3.6$ cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1\\%$ and $3$ cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-34c59db219e3",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a certain system, the quantities A and B are measured as $8\\pm 0.08$ and $6\\pm 0.06$ respectively. Let $x=AB$, $y=A+B$ and $z=A-B$. The correct order of % error in $x$, $y$ and $z$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=y>z$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x<z<y$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$z>x>y$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x>z>y$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8c48b7b37eb0",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A wire has mass $(0.4\\pm 0.002)$ g, radius $(0.6\\pm 0.006)$ mm and length $(8\\pm 0.04)$ cm. The percentage error in the measurement of its density is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.55\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3.55\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-777e5ff93712",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The percentage error in the measurement of mass of a body and its speed are $0.73\\%$ and $1.84\\%$ respectively. The percentage error in the measurement of its momentum and kinetic energy are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.57\\%$ , $2.75\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.57\\%$ , $4.41\\%$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.46\\%$ , $1.84\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.84\\%$ , $3.70\\%$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a048317b7bc2",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A physical quantity $x$ is related as $x=\\sqrt{a}~b^2c^3d^{-4}$. Relative errors in the quantities $a$, $b$, $c$ and $d$ are 2%, 1%, 3% and 4% respectively. Relative error in $x$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "30%",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "28%",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "24%",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "18%",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fa22df2abdba",
+      "subtopic": "errors-in-measurement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Mass and volume of a body are found to be $(6.00\\pm 0.03)$ kg and $(2.00\\pm 0.02)$ m${}^3$ respectively. Then the density of the body is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\pm 0.010$ kg/m${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\pm 0.015$ kg/m${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\pm 0.020$ kg/m${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\pm 0.045$ kg/m${}^3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

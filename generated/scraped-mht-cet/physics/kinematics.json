@@ -1,0 +1,909 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Kinematics",
+    "slug": "kinematics",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 2,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "projectile-motion",
+      "name": "Projectile Motion",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "non-uniform-motion-in-one-dimension",
+      "name": "Non uniform motion in one dimension",
+      "position": 2
+    },
+    {
+      "slug": "motion-under-gravity",
+      "name": "Motion under gravity",
+      "position": 3
+    },
+    {
+      "slug": "uniform-motion-in-one-dimension",
+      "name": "Uniform motion in one dimension",
+      "position": 4
+    },
+    {
+      "slug": "relative-motion-in-two-dimension",
+      "name": "Relative motion in two dimension",
+      "position": 5
+    },
+    {
+      "slug": "graph-based-problem",
+      "name": "Graph based problem",
+      "position": 6
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-b2dfc9b6a7a4",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A car passes three points A, B and C at $3$ m/s, $6$ m/s and $9$ m/s respectively in a straight line with uniform acceleration. If distance $AB=60$ m then find the distance BC.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$100$ m",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$75$ m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$200$ m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$125$ m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-85ba68fa95b4",
+      "subtopic": "relative-motion-in-two-dimension",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Airplanes A and B are flying with constant velocity in the same vertical plane at angles $30^{\\circ}$ and $60^{\\circ}$ with respect to the horizontal as shown in the figure. The speed of A is $100\\sqrt{3}$ m/s. At time $t=0$ s, an observer in A finds B at a distance of $500$ m. This observer sees B moving with a constant velocity perpendicular to the line of motion of A. If at $t=t_0$, A just escapes being hit by B, $t_0$ in second is\n$\\{\\sin(30)^{\\circ}=0.5,\\cos(30)^{\\circ}=3^{0.5}/2\\}$",
+      "image": {
+        "url": "/question-images/mht-cet/physics/kinematics/PYQ-PHY-85ba68fa95b4.png",
+        "alt": "Figure for this Kinematics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bc6fddb86dc4",
+      "subtopic": "graph-based-problem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The velocity time graph of a body moving in a straight line is shown in a figure. The ratio of displacement to distance travelled by the body in time $0$ to $10$ s is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/kinematics/PYQ-PHY-bc6fddb86dc4.png",
+        "alt": "Figure for this Kinematics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5d7a4af90932",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A particle is projected from ground with speed u and at an angle $\\theta$ with horizontal. If at maximum height from ground, the speed of a particle is half times its initial velocity of projection then its maximum height attained is $(\\cos 60^{\\circ}=0.5,\\sin 60^{\\circ}=\\sqrt{3}/2)$ (g = acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2u^2}{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3u^2}{8g}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{u^2}{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{u^2}{2g}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a9aa37851fb6",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If two spheres are projected at angles $45^{\\circ}$ and $60^{\\circ}$ with horizontal and the maximum heights reached are same. The ratio of their initial velocities is ($\\sin 45^{\\circ}=\\frac{1}{\\sqrt{2}},\\sin 60^{\\circ}=\\frac{\\sqrt{3}}{2}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}:\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}:\\sqrt{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c6d59b27e1e8",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A stone is thrown at an angle $\\theta$ with the horizontal reaches a maximum height $H$, then the time of flight of stone will be ($g$ = acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{2H}{g}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2(2H\\sin\\theta)^{\\frac{1}{2}}}{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2{\\left(\\frac{2H}{g}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{(2H\\sin\\theta)^{\\frac{1}{2}}}{g}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5721ebf158aa",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "If the initial velocity of projection be doubled, keeping the angle of projection same, the maximum height reached by it will",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "remain the same",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "be doubled",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "become four times",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "be halved",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-827109eee639",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A stone falls from the top of a tower of height $100$ m and at the same time another stone is projected vertically upwards from the ground with a velocity $25$ m/s. The two stones meet after",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$ s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5$ s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$ s",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3$ s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d1bc7dad7379",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A batsman hits a ball with a velocity 'v', making an angle of $60^{\\circ}$ with the vertical. After some time direction of velocity is making an angle of $60^{\\circ}$ with the horizontal. The speed of the ball at this instant is\n$\\left[\\cos(60^{\\circ})=\\frac{1}{2},\\cos(30^{\\circ})=\\frac{\\sqrt{3}}{2}\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{3}}{2}v$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}v$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{v}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$V$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-15f921a00acd",
+      "subtopic": "uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A student runs along a circular track of diameter $80$ m. The distance travelled and the magnitude of displacement of the student when he covers ${\\left(\\frac{3}{4}\\right)}^{th}$ of the circle is (in m)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$60\\pi,\\;40\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$40\\pi,\\;60\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$120\\pi,\\;80\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$80\\pi,\\;120\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3e4a41cf81c1",
+      "subtopic": "uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A person travelling in a straight line moves with uniform velocity $V_1$ for a distance $x$ and with a uniform velocity $V_2$ for the next $\\frac{3x}{2}$ distance. The average velocity in this motion is $\\frac{50}{7}$ m/s. If $V_1$ is $5$ m/s then $V_2$ (in m/s) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$15$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-466322a89256",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A ball is released from height 'h' which makes perfectly elastic collision with ground. The frequency of periodic vibratory motion is (g=acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\sqrt{\\frac{g}{2h}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\sqrt{\\frac{2h}{g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2\\pi}\\sqrt{\\frac{g}{2h}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2\\pi}\\sqrt{\\frac{2h}{g}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-eb6bf07ebc4e",
+      "subtopic": "relative-motion-in-two-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two boys are standing at points A and B on ground where distance AB = a. The boy at point B starts running perpendicular to line AB with velocity '$V_1$'. The boy at point A starts running simultaneously with velocity 'V' and catches the other boy in time 't'. The value of 't' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left[\\frac{a^2}{\\left(V^2-V_1^2\\right)}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "${\\left[\\frac{a^2}{\\left(V_1^2-V^2\\right)}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\frac{a^2}{\\left(V^2-V_1^2\\right)}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\frac{a^2}{\\left(V_1^2-V^2\\right)}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-64f07a3c2e48",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two objects are projected with same velocity 'u' at different angles $\\alpha$ and $\\beta$ with the horizontal. If $\\alpha+\\beta=90^{\\circ}$, the ratio of horizontal range of the first object to the second object will be $[\\sin(\\pi-\\theta)=\\sin\\theta]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-25f6838c366b",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two balls A and B are projected at an angle of $45^{\\circ}$ and $60^{\\circ}$ respectively, so that the maximum heights reached are same for both. The ratio of initial velocity of projection of ball A to that for ball B is\n$(\\sin 30^{\\circ}=\\cos 60^{\\circ}=\\frac{1}{2},~\\sin 45^{\\circ}=\\cos 45^{\\circ}=\\frac{1}{\\sqrt{2}},~\\sin 60^{\\circ}=\\cos 30^{\\circ}=\\frac{\\sqrt{3}}{2})$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}:2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}:\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}:\\sqrt{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-624c53a901ce",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A ball P is projected at an angle of $60^{\\circ}$ with the vertical with certain initial speed. Another ball Q of the same mass as that of ball P is projected vertically upwards with the same initial speed as that of P. At the highest point, the ratio of potential energy of ball P to that of ball Q is\n$(\\sin 30^{\\circ}=0.5)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:4$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0baa71943b0a",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For a projectile motion, the range R is 'n' times the maximum height H. So the angle of projection is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin^{-1}\\left(\\frac{2}{n}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos^{-1}\\left(\\frac{4}{n}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\tan^{-1}\\left(\\frac{4}{n}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\tan^{-1}\\left(\\frac{2}{n}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0fbf6af53a27",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the trajectory of a ball projected at an angle $\\theta$ with the horizontal, is given as $y=x-\\frac{gx^2}{2}$\nThe initial velocity of the ball is\n[Given : $\\tan 45^{\\circ}=1$, $\\cos 45^{\\circ}=\\frac{1}{\\sqrt{2}}$ ]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sqrt{2}\\,\\text{m/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\,\\text{m/s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}\\,\\text{m/s}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sqrt{2}}\\,\\text{m/s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7d640a56afad",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A juggler throws balls into air. He throws one ball whenever the previous one is at its highest point. If he throws 4 balls in one second, the height from which each ball returns is nearly [acceleration due to gravity is $9.8\\text{ m/s}^2$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30\\text{ cm}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$40\\text{ cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$50\\text{ cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$60\\text{ cm}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a4e766592d2e",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The minute hand of a wall-clock is $10$ cm long. The average velocity of the tip of the minute hand between $6.00$ am to $7.30$ am is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{270}$ cm/s",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{180}$ cm/s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{90}$ cm/s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f9aaccbafe24",
+      "subtopic": "relative-motion-in-two-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A boat crosses a river from one bank A to another bank B which is opposite. The distance between them is D. The speed of water is $V_W$ and that of boat relative to water is $V_B$. If $V_B=2V_W$, the time taken by the boat to cross the river directly along AB is $\\left(\\sin 30^{\\circ}=\\frac{1}{2}\\right)$, $\\left(\\cos 30^{\\circ}=\\frac{\\sqrt{3}}{2}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{D}{V_B\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{D\\sqrt{2}}{V_B}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2D}{V_B\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}D}{2V_B}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4493bf36184d",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two spheres are projected at angles $30^{\\circ}$ and $45^{\\circ}$ with the horizontal. The maximum height reached by both is same. The ratio of their initial velocities is, $\\left(\\sin 45^{\\circ}=\\frac{1}{\\sqrt{2}},\\sin 30^{\\circ}=0.5\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2}:\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bf76ac45e5b1",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A body moving with uniform acceleration travel $16$ m in the third second of its motion and $24$ m in the fifth second of its motion. The velocity of the body in $10$ second is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$42$ m/s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$46$ m/s",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$50$ m/s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$56$ m/s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

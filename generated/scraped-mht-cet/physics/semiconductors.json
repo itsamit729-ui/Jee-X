@@ -1,0 +1,2878 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Semiconductors",
+    "slug": "semiconductors",
+    "class_level": "12",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "logic-gates",
+      "name": "Logic gates",
+      "position": 1
+    },
+    {
+      "slug": "semiconductor-and-p-n-junction-diode",
+      "name": "Semiconductor and p n junction diode",
+      "position": 2
+    },
+    {
+      "slug": "transistors",
+      "name": "Transistors",
+      "position": 3
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-224114d5e66e",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When the conductivity of a semiconductor is only due to breaking of covalent bonds, the semiconductor is called",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "extrinsic.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "intrinsic.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "p-type.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "n-type.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a02143761ee5",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In common emitter transistor amplifier, the output resistance is $500$ k$\\Omega$ and the current gain $\\beta=50$. If power gain of amplifier is $5\\times 10^6$, what is the input resistance?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$325\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$150\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$350\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$250\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b47f085dae46",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "What does the following combination of gates produce?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-b47f085dae46.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "NAND gate",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "NOR gate",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "XOR gate",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "AND gate",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4725a4e85f92",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the case of NAND gate, if A and B are inputs and Y is the output then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$Y=\\overline{A+B}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$Y=A\\cdot B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$Y=\\overline{A\\cdot B}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$Y=A+B$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5c5336dd09c5",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In energy band diagram of insulators, a band gap and the conduction band is respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "very high, empty",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "very low, empty",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "very high, completely filed",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "very low, partially filled",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-baeec66c2e03",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In common emitter mode of transistor, the d.c. current gain is $20$, the emitter current is $7$ mA. The collector current is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{14}{3}$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{20}{3}$ mA",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7}{3}$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{8}{3}$ mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-58bb2d1dc7ef",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A LED emits visible light when its",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "junction is hot.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "holes and electrons recombine.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "depletion region widens.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "junction is reverse biased.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fff565b48ed1",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In one branch, $40\\,\\Omega$ resistance and a p-n junction diode are connected in series and in another branch, $40\\,\\Omega$ resistance is connected. Both the branches are connected in parallel to each other. The total resistance of the circuit when a) diode is forward biased and when b) diode is reverse biased respectively are {consider the p-n junction diode as an ideal diode}",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$40\\,\\Omega$ and $20\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60\\,\\Omega$ and $30\\,\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$20\\,\\Omega$ and $40\\,\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$30\\,\\Omega$ and $60\\,\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-73dd92db028c",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Pure silicon crystal at $300$K has equal electron and hole concentration $2\\times 10^{16}$ per m${}^3$. Doping by indium increases hole concentration to $4\\times 10^{22}$ per m${}^3$. Electron concentration in doped silicon is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\times 10^9/m^3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{10}/m^3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8\\times 10^{10}/m^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^9/m^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8f46ff259d46",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The circuit shown contains two ideal diodes $D_1$ and $D_2$. If a cell of e.m.f. $3$V and negligible internal resistance is connected, then the current through $70\\,\\Omega$ resistance in ampere is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-8f46ff259d46.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.01$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.02$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.03$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b487d3996611",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The output $Y$ of the given logic circuit is similar to the output of",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-b487d3996611.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "AND gate",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "NAND gate",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "OR gate",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "NOR gate",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-775523b73c41",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In common emitter mode of transistor, the d.c. current gain is 20, the emitter current is 7 mA. The collector current is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{20}{3}$ mA",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{14}{5}$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{8}{13}$ mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-921fdc216b30",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In transistor amplifier, base emitter junction is forward biased and collector base junction is reversed biased. The current gain is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\Delta I_C}{\\Delta I_B}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\Delta I_B}{\\Delta I_C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\Delta I_E}{\\Delta I_B}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\Delta I_B}{\\Delta I_E}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-01cc3477adfd",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Choose the correct statement about Zener diode:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It works as a voltage regulator in reverse bias and behaves like simple pn junction diode in forward bias.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "It works as a voltage regulator in both forward and reverse bias.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "It works a voltage regulator only in forward bias.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "It works as a voltage regulator in forward bias and behaves like simple pn junction diode in reverse bias.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4055482bccc1",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A pure silicon crystal at temperature $300$ K has electron and hole concentration ($n_i$) $10^{16}$ per m${}^3$ each and $10^{21}$ phosphorus atoms ($n_e$) are added per cubic metre. The new hole concentration in silicon crystal is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{19}$ per m${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{21}$ per m${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10^5$ per m${}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^{11}$ per m${}^3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ce70a7822861",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "If transistor having $\\alpha=0.9$, is used in CE configuration, then for a change of $0.4$ mA in base current, what will be the change in collector current?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.6$ mA",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.9$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$36$ mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2703acc25a85",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In common emitter amplifier, using output resistance $5000$ $\\Omega$ and input resistance $2000$ $\\Omega$, if the peak value of input signal voltage is $10$ mV and $\\beta=50$, then peak value of output voltage is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\times 10^{-6}$ V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12.50\\times 10^{-6}$ V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.25$ V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$125.0$ V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4c39225b0fc3",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "There is no hole current in good conductors because they",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "have large forbidden energy gap.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "have overlapping valence and conduction bands.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "are full of electrons.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "have no valence band.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1caf920a8159",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an n-p-n transistor the collector current is $9$ mA. If $90\\%$ of the electrons from the emitter reach the collector then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\beta=9.0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "the base current is $10$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the emitter current is $1$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\beta=0.9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9664bf47af69",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The following circuit is equivalent to",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-9664bf47af69.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "AND gate",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "NAND gate",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "NOR gate",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "OR gate",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-187fe9baaf79",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the middle of the depletion region of reversed biased p-n junction the",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "electric field is zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "potential is infinite",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "electric field is maximum",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "potential is zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5fde802fcec0",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "For a transistor, the current ratio $\\alpha_{DC}=\\frac{69}{70}$. The current gain $\\beta_{DC}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$66$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$67$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$69$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$71$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-988cc121da4d",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "$\\beta$, $R_L$ and $r$ are the a.c. current gain, load resistance and the input resistance of a transistor respectively in common emitter configuration, the voltage gain and the power gain are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\beta\\,(R_L/r)$ and $\\beta^2\\,(R_L/r)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\beta\\,(r/R_L)$ and $\\beta^2\\,(r/R_L)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\beta\\,(R_L/r)$ and $\\beta\\,(R_L/r)^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\beta\\,(r/R_L)$ and $\\beta\\,(r/R_L)^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6b04168fad60",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The output Y, when all the three inputs are first high and then low, will respectively be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-6b04168fad60.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$1,0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1,1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0,0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0,1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-769747fbbc18",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an intrinsic semiconductor, at any ordinary temperature, the correct relation between the number of electrons per unit volume ($n_e$) and number of holes per unit volume ($n_h$) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$n_e=n_h$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$n_e>n_h$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$n_e<n_h$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$n_e=n_h=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aaeb87212709",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The current gain in the common emitter mode of a transistor is $10$. The input impedance is $20~k\\Omega$ and load resistance $100~k\\Omega$. The power gain is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$300$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$500$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$200$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$100$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6c18aaf2fb90",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Photodiode is a device",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "in which photocurrent is dependent on reverse bias.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "in which photocurrent is independent of incident radiation.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "which is always operated in forward bias.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "which is always operated in reverse bias.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-974ef461ae3a",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If p-n junction diode is forward biased then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "width of depletion layer decreases.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "width of depletion layer increases.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "barrier voltage increases",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "electric conduction is not possible",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f03fe24bb560",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For a p-n junction diode, breakdown voltage occurs when",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "reverse bias is decreased",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "reverse bias is not changed",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "reverse-bias is increased",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "forward bias is increased",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-246c537173b6",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the diagram shown, the resistance between points A and B is '$R_1$' when an ideal diode D is forward biased and is '$R_2$' when ideal diode D is reverse biased. The ratio $R_1/R_2$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-246c537173b6.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-87bee246971d",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the logic circuit diagram, when all the four inputs, A, B, C, D are 'one' the outputs $Y_1$, $Y_2$, $Y_3$ are respectively (1, 1, 0). When the inputs A and C are changed to zero and B and D are still 'one', then the outputs $Y_1$, $Y_2$, $Y_3$ are respectively change to",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-87bee246971d.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$1,1,1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1,0,0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0,1,0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0,0,1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dafbdc012a17",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In common emitter amplifier, a change of $0.2$ mA in the base current causes a change of $5$ mA in the collector current. If input resistance is $2$ k$\\Omega$ and voltage gain is $75$, the load resistance used in the circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$ k$\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$ k$\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4$ k$\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$ k$\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-686fa5ea0aef",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In an n-p-n transistor in common emitter configuration when $V_{BE}$ is increased by small amount then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$I_B$ increases and $I_C$ increases proportionally",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$I_B$ increases and $I_C$ remain constant",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$I_B$ remain constant and $I_C$ increases",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "both $I_B$ and $I_C$ remain nearly constant",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e77ed06feac8",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If an alternating voltage is applied across a diode in series with a load resistance then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "a d.c. voltage appears across load",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "an a.c. voltage appears across load",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a pulsating voltage appears across load",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "no voltage appears across load",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fe4c171d2317",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In semiconductors, at room temperature the",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "valance band is partially empty and the conduction band is partially filled.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "valance band is completely filled and the conduction band is partially filled.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "valance band is completely filled.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "conduction band is completely empty.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-135c111e0461",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The Zener diode has reverse breakdown voltage $V_Z$. The current through the load resistance $R_L$ is $I_L$. The current through Zener diode is\n($V_0$ = Input voltage , $R_S$ = Series resistance)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\left(V_0-V_Z\\right)}{R_S}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\left(V_0-V_Z\\right)}{R_L}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{V_Z}{R_L}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{V_0-V_Z}{R_S}\\right)-I_L$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-46c639026ff4",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "At room temperature, a p-type semiconductor has",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "large number of holes and few electrons",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "large number of free electrons and few holes",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "equal number of free electrons and holes",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "no electrons or holes",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a403305261d1",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "An AND gate is followed by a NOT gate in series. With two input $A$ and $B$, the Boolean expression for the output $Y$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\overline{A+B}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\overline{A\\cdot B}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$A\\cdot B$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$A+B$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7103bb2702ae",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a transistor amplifier, a change of 0.2 mA in the base current causes a change of 5 mA in the collector current. If input resistance is $2~\\text{k}\\Omega$ and voltage gain is 75, the load resistance used in the circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4~\\text{k}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6~\\text{k}\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8~\\text{k}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2~\\text{k}\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c110a705c1a7",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When a small amount of impurity atoms are added to a semiconductor then generally its resistivity",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreases",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "does not change",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "may increase or decrease depending upon the percentage of doping",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dd33546acda1",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The resultant gate and its Boolean expression in the given circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-dd33546acda1.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\text{AND},\\overline{\\text{A}+\\text{B}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\text{NAND},\\text{A}+\\text{B}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\text{OR},\\text{A}+\\text{B}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\text{NOR},\\text{A}-\\text{B}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-42bac14e91e1",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following statement is NOT correct in the case of LED?\n(A) It is a heavily doped p-n junction diode.\n(B) It emits light only when it is forward biased.\n(C) It emits light only when it is reverse biased.\n(D) The energy of the light emitted is equal to or slightly less than the energy gap of the semiconductor used.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "B",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "C",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "D",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a642143a0df1",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Electrical conductivity of insulators is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "exactly zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "extremely large",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "extremely small",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "sometimes small and sometimes large",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e6f82cc39c81",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In which of the logic gate the following statement is true? \"The output is high when either of the inputs is high but not if both inputs are high\"",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "NAND",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "NOR",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "X-OR",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "OR",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-29e3414a8015",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the circuit shown in figure all the three diodes D1, D2, D3 have forward resistance $50~\\Omega$ each and infinite backward resistance. If the battery voltage is 5V, the current through $100~\\Omega$ resistance is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-29e3414a8015.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$60$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$30$ mA",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$20$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10$ mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-53e7866c94e3",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "To get the truth table shown from the following logic circuit, the gate G should be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-53e7866c94e3.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "NAND gate.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "NOR gate.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "AND gate.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "OR gate.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f9c3d0c5468b",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "When the Zener diode is used as a voltage regulator, it is connected in",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "forward bias and in parallel with load.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "reverse bias and in series with load.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "forward bias and in series with load.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "reverse bias and in parallel with load.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-25b040f182ff",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the following digital circuit, the output 'Y' will be '1' (one) for inputs 'A' and 'B' having values",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-25b040f182ff.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$A=0,B=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$A=0,B=1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$A=1,B=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$A=1,B=1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8caf23fbe7e9",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A semiconductor X is made by doping a germanium crystal with indium $(Z=49)$. A second semiconductor Y is made by doping germanium crystal with arsenic $(Z=33)$. Both are joined end to end and connected to a battery as shown. Which of the following statements is correct?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-8caf23fbe7e9.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "X is p-type, Y is n-type and the junction is forward biased.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "X is p-type, Y is n-type and the junction is reverse biased.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "X is n-type, Y is p-type and the junction is forward biased.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "X is n-type, Y is p-type and the junction is reverse biased.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bc2bb0c96555",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In common emitter configuration of transistor amplifier, $r_i$, $R_L$ and $\\beta$ represent the input resistance, load resistance and the a.c. current gain respectively. The voltage gain $A_V$ and power gain $A_P$ are represented in magnitude respectively by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\beta\\left(\\frac{r_i}{R_L}\\right),\\beta^2\\left(\\frac{r_i}{R_L}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\beta\\left(\\frac{R_L}{r_i}\\right),\\beta{\\left(\\frac{R_L}{r_i}\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\beta\\left(\\frac{R_L}{r_i}\\right),\\beta^2\\left(\\frac{R_L}{r_i}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\beta\\left(\\frac{r_i}{R_L}\\right),\\beta{\\left(\\frac{r_i}{R_L}\\right)}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cb7346d5faed",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following logic gates will have an output of '1' (one) for the given inputs?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-cb7346d5faed.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "D",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "B",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f9dbffa6a907",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which one of the following statements is 'WRONG' regarding LED?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "LED's have long lifetime if properly manufactured.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Colours produced by LED's do not fade out.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "LED's are energy efficient.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Brightness of light emitted by LED cannot be controlled.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fddcaeea5c07",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A diode and resistance are connected as shown in figures.\nOut of the following statements, which one is true?\nDiode in\nA) fig (1) and fig (2) are both forward biased.\nB) fig (1) and fig (2) are both reverse biased.\nC) fig (1) is forward biased and in fig (2) is reverse biased.\nD) fig (1) is reverse biased and in fig (2) is forward biased.",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-fddcaeea5c07.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "D",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "B",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2e16444af9cf",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "For intrinsic semiconductor, if $n_h$ and $n_e$ represent the number of holes per unit volume and the number of free electrons per unit volume respectively then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$n_h<n_e$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$n_h>n_e$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$n_h=n_e$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$n_h\\ne n_e$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-469daad471b6",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The output Y of the given logic circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-469daad471b6.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\overline{\\left(A\\cdot B\\right)}+\\overline{\\left(C\\cdot B\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\overline{\\left(A+B\\right)}\\cdot\\overline{\\left(B\\cdot C\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\overline{\\left(A\\cdot B\\right)}+\\overline{\\left(B+C\\right)}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(A+B)+(B+C)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4ece4ea3f7eb",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In an NPN transistor, the collector current is 28 mA. If 80% electrons reach the collector, its base current in mA is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7$ mA",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$14$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$28$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$35$ mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1bc7686569e1",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The material used for solar cell should have band gap\n(A) equal to zero.\n(B) equal to $0.08$ eV.\n(C) between $1.0$ eV to $1.8$ eV.\n(D) equal to $2$ eV.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "D",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "C",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "B",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-20493d0b4ce0",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In n-type semiconductor\nA) pentavalent impurity are dopants and holes are majority carriers.\nB) trivalent impurity are dopants and electrons are minority carriers.\nC) pentavalent impurity are dopants and electrons are majority carriers.\nD) trivalent impurity are dopants and holes are majority carriers.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "C",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "B",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "D",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8066fc66b80c",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "For a two input logic gate, when the inputs are 'zero' and 'zero' the output is 'one'. When the inputs are 'one' and 'zero' the output is 'zero'. The type of logic gate is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "NAND",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "OR",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "NOR",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "XOR",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-446100bad5a0",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the following electrical circuit, the reading in the milliammeter is\n(Take knee voltage of silicon diode $=0.7$ V)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-446100bad5a0.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$25.5$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$21.5$ mA",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$18.5$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15.8$ mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aca036f2242a",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In a transistor, comparing the doping of emitter, base and collector, the part which is heavily doped and that which is lightly doped are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "collector and emitter",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "emitter and base",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "collector and base",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "emitter and collector",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c02b14187798",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The Boolean expression for the given combination of logic gates is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-c02b14187798.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$Y=(A+B)\\cdot\\bar{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$Y=(A\\cdot B)\\cdot\\bar{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$Y=(A+B)+C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$Y=(A\\cdot B)+\\bar{C}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-13b13f6e8da6",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the following circuit, the current through the Zener diode is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-13b13f6e8da6.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$5.00\\text{ mA}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6.25\\text{ mA}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$11.25\\text{ mA}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16.25\\text{ mA}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9c1a770091eb",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "If two inputs of a NOR gate are shorted, the resulting gate is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "a NAND gate.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "an OR gate.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "an AND gate.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "a NOT gate.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f8c8505e3af4",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The band diagrams of three semiconductors p, n and intrinsic are given in the figures (1), (2) and (3). C and V are the conduction and valence bands and $E_F$ is the Fermi level. Figures, from (2),(1) and (3) respectively represent the type of semiconductors as",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-f8c8505e3af4.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "intrinsic, n and p",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "p, intrinsic and n",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "intrinsic, p and n",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "n, intrinsic and p",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-40c051978e51",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "In the energy band diagram of a p-type semiconductor, the \"Acceptor Energy Level\" is located",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "exactly in the middle of the forbidden gap",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "inside the conduction band",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "just below the conduction band",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "just above the valence band",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-67f1b976742c",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "For the logic circuit given below, for\na) input $A=0$ and input $B=1$, and\nb) input $A=1$ and input $B=1$, the output $E$ is respectively",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-67f1b976742c.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "zero and one.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "one and zero.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "zero and zero.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "one and one.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a038b11ce065",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "To use Zener diode of maximum power rating $1.0$ W as a $4.0$ V stabilized power supply, the maximum current flowing through Zener diode will",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.25$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$25$ mA",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$250$ mA",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2500$ mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-32f3567cac62",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the band structure of n-type semiconductor , the free electrons donated by impurity atoms occupy energy levels in",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the conduction band.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the valence band.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the band gap and are close to conduction band.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "the band gap and are close to valence band.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-35d9533cd870",
+      "subtopic": "transistors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a common emitter transistor amplifier, AC current gain is $65$, the load resistance is $5400\\,\\Omega$ and input resistance of the transistor is $450\\,\\Omega$. The voltage gain is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$460$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$540$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$780$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7800$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ba4d50dd7be1",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The output Y of the following digital logic circuit will be '1' (one) for the inputs",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-ba4d50dd7be1.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$A=1$ , $B=0$ , $C=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$A=1$ , $B=0$ , $C=1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$A=1$ , $B=1$ , $C=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$A=1$ , $B=1$ , $C=1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-041a21d9bca6",
+      "subtopic": "semiconductor-and-p-n-junction-diode",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The depletion region of p-n junction",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases if reverse biased.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "increases if forward biased.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decreases if reverse biased.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "remains same in reverse and forward biasing.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-13c7acc4da9d",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In Boolean expression $A+B=Y$ implies that",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$Y$ exists when $A$ or $B$ exists but not when both $A$ and $B$ exist.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$Y$ exists only when $A$ and $B$ both exist.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$Y$ exists when both $A$ and $B$ do not exist.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$Y$ exists when $A$ exists or $B$ exists or both $A$ and $B$ exist",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-20af162cf897",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "To get output zero for the following circuit, the correct choice for the input is\na. $A=1,B=1,C=0$\nb. $A=0,B=1,C=0$\nc. $A=1,B=1,C=1$\nd. $A=1,B=0,C=1$",
+      "image": {
+        "url": "/question-images/mht-cet/physics/semiconductors/PYQ-PHY-20af162cf897.png",
+        "alt": "Figure for this Semiconductors question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "a and b",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "c and d",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a and c",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "b and d",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-943b1f23bed4",
+      "subtopic": "logic-gates",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In a two input logic gate, when one input is '1' and the other is '0' (zero), the output is '1'. But even if both inputs are '0' (zero), the output is '1'. The logic gate is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "an AND gate.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "an X-OR gate.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a NAND gate.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "a NOR gate.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

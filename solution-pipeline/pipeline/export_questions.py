@@ -30,7 +30,7 @@ SUBJECT = {"PHY": "Physics", "CHEM": "Chemistry", "MATH": "Mathematics"}
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--year", type=int)
-    parser.add_argument("--exam", choices=["jee_main", "jee_advanced"])
+    parser.add_argument("--exam", choices=["jee_main", "jee_advanced", "mht_cet"])
     parser.add_argument("--subject", choices=sorted(SUBJECT))
     parser.add_argument("--only-missing", action="store_true", help="only questions whose solution is empty")
     args = parser.parse_args()

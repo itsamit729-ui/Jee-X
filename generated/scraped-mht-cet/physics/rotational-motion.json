@@ -1,0 +1,2215 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Rotational Motion",
+    "slug": "rotational-motion",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 5,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "moment-of-inertia",
+      "name": "Moment of inertia",
+      "position": 1
+    },
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "angular-momentum",
+      "name": "Angular momentum",
+      "position": 2
+    },
+    {
+      "slug": "combined-translational-and-rotational-motion",
+      "name": "Combined translational and rotational motion",
+      "position": 3
+    },
+    {
+      "slug": "torque",
+      "name": "Torque",
+      "position": 4
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-8a8568311f4b",
+      "subtopic": "torque",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A wheel is rotating at $600$ rpm about its axis of rotation. When the power is cut off, it comes to rest in half a minute. Its angular retardation expressed in $\\text{rad}/\\text{s}^2$ is (retardation is uniform)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9e118d9874d7",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A flywheel rotating about a fixed axis has a kinetic energy of $500$ joule, if its angular frequency is $5$ Hz, then calculate the moment of inertia of the wheel about the axis of rotation. ($\\pi^2=10$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.6\\text{ kg m}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1\\text{ kg m}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.75\\text{ kg m}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.15\\text{ kg m}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-044e34fb5c8c",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Let M and L be the mass and length of thin uniform rod respectively. In first case, axis of rotation is passing through centre and perpendicular to length of rod. In second case axis of rotation is passing through one end and perpendicular to length of rod. The ratio of radius of gyration in first case to second case is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6873a4fe88ba",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "The moment of inertia of a ring about an axis passing through its centre and perpendicular to its plane is I. It is rotating with angular velocity $\\omega$. Another identical ring is gently placed on it so that their centres coincide. If both rings are rotating about the same axis then loss in kinetic energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$I\\omega^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{I\\omega^2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{I\\omega^2}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{I\\omega^2}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8322b0fdfacf",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Four solid spheres, each of diameter $\\sqrt{5}$ cm and mass $0.5$ kg are placed with their centres at the corners of a square of side $4$ cm. The M.I. of the system about the diagonal of the square is $N\\times 10^{-4}$ kg-m${}^2$, then $N$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b9e560b6b325",
+      "subtopic": "torque",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following sentence is true?\na. Moment of a couple is independent of the axis of rotation or the points of application of forces.\nb. Moment of a couple produces translational acceleration.\nc. Moment of a couple can be balanced by single force.\nd. Moment of a couple depends upon the axis of rotation or the points of application of forces.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "d",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "c",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "b",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "a",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ff853271d4f6",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "In the case of rotational dynamics, which of the following statements is correct? {$S$ = linear displacement, $\\alpha$ = angular acceleration, $r$ = radius vector, $a$ = linear acceleration, $L$ = angular momentum, $p$ = linear momentum, $\\theta$ = angular displacement}\n1. $S=r\\times\\theta,a=r\\times\\alpha,L=p\\times r$\n2. $S=\\theta\\times r,a=\\alpha\\times r,L=r\\times p$\n3. $S=r\\cdot\\theta,a=r\\cdot\\alpha,L=p\\cdot r$\n4. $S=\\omega\\times r,a=r\\times p,L=r\\times f$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-60317e1605f4",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two loops $A$ and $B$ of radii $R_1$ and $R_2$ are made from uniform wire. If moment of inertia of loops $A$ and $B$ is $I_A$ and $I_B$ respectively then $\\frac{R_1}{R_2}$ is (Given: $\\frac{I_A}{I_B}=27$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$27:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$81:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c28f5b667253",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two bodies rotate with kinetic energies $E_1$ and $E_2$, moment of inertia about their axes of rotation is $I_1$ and $I_2$. If $3I_1=I_2$ and $E_1=27E_2$ then the ratio of the angular momenta $L_1$ to $L_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$27:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d2e134364dd8",
+      "subtopic": "torque",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "12 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A disc of mass $100$ kg and radius $1$m is rotating at $300$ r.p.m. The torque required to rotate the disc in opposite direction with same speed in time $50$ second is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\pi\\,Nm$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10\\pi\\,Nm$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$20\\pi\\,Nm$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$40\\pi\\,Nm$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-af74453d8d9d",
+      "subtopic": "torque",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A disc of radius 0.4 m and mass 1 kg rotates about an axis passing through its centre and perpendicular to its plane. The angular acceleration is 10 rad/s${}^2$. The tangential force applied to the rim of the disc is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$ N",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2$ N",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3$ N",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4$ N",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cca5bfb0c6cd",
+      "subtopic": "combined-translational-and-rotational-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A body slides down a smooth inclined plane of inclination $\\theta$ and reaches the bottom with velocity 'V'. If the same body is a ring which rolls down the same inclined plane then linear velocity at the bottom of the plane is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{V}{\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{V}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$V$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2V$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-89eeed1e87e9",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A thin uniform rod of length $2$ m cross-sectional area 'A' and density 'd' is rotated about an axis passing through the centre and perpendicular to its length with angular velocity $\\omega$. If the value of $\\omega$ in terms of its rotational kinetic energy $E$ is $(\\alpha E/Ad)^{1/2}$, then the value of $\\alpha$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ac3a6c55b3e0",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Moment of inertia of a disc of mass $M$ and radius 'R' about any of its diameter is $MR^2/4$. The moment of inertia of this disc about an axis normal to the disc and passing through a point on its edge will be, $(x/2)MR^2$. The value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d6a85a62ceab",
+      "subtopic": "combined-translational-and-rotational-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solid sphere of mass $1$ kg rolls without slipping on a plane surface. Its kinetic energy is $7\\times 10^{-3}$ J. The speed of the center of mass of the sphere in cm s${}^{-1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$100$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1000$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9a198fe0a27d",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "Moment of inertia of a thin uniform rod rotating about the perpendicular axis passing through its centre is I. If the same rod is bent in to a ring and its moment of inertia about its diameter is $I_1$, then the ratio $I/I_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\pi^2}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\pi^2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\pi^2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{8\\pi^2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c6f4e7db8116",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The moment of inertia of two equal masses each of mass m at separation L connected by a rod of mass M about an axis passing through centre and perpendicular to the length of rod is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/rotational-motion/PYQ-PHY-c6f4e7db8116.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{(M+3m)L^2}{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{(M+6m)L^2}{12}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{ML^2}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{ML^2}{12}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2850756305fd",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A thin wire of length $L$ and uniform linear mass density $\\rho$ is bent into a circular loop with centre at '$O$' as shown in figure. The moment of inertia of the loop about the axis $XX'$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/rotational-motion/PYQ-PHY-2850756305fd.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\rho L^3}{16\\pi^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\rho L^3}{8\\pi^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{16}\\rho L^3\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3\\rho L^3}{8\\pi^2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a9fe33189099",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "The ratio of radius of gyration of circular disc about a tangential axis in its plane and of a circular ring of the same radius about a tangential axis in its plane is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{5}:\\sqrt{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1:\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-47477721126d",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A disc of moment of inertia $I_1$ is rotating in horizontal plane about an axis passing through centre and perpendicular to its plane with constant angular speed $\\omega_1$. Another disc of moment of inertia $I_2$ having zero angular speed is placed co-axially on a rotating disc. Now, both the discs are rotating with constant angular speed $\\omega_2$. The energy lost by the entire system is $\\frac{x\\omega_1^2}{2}$ where the value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\frac{\\left(I_1+I_2\\right)}{I_1I_2}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{I_1I_2}{\\left(I_1-I_2\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\left(I_1-I_2\\right)}{I_1I_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{I_1I_2}{\\left(I_1+I_2\\right)}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4e48aed56853",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A particle of mass $m$ is projected with speed $v$ at $45^{\\circ}$ with the horizontal. The magnitude of angular momentum of the particle about the point of projection when the particle is at its maximum height $h$ is $\\left(\\cos 45^{\\circ}=\\frac{1}{\\sqrt{2}}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{mvh^2}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{mv^2h}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{mvh}{\\sqrt{2}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f95a1b37029c",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The moment of inertia of a solid sphere about an axis passing through centre of gravity is $\\frac{2MR^2}{5}$ where M is the mass and R is the radius. The radius of gyration about a parallel axis at a distance $2R$ from first axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{22}{5}}\\,R$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5R}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{12}{5}}\\,R$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-66b6ef920200",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A particle of mass m is projected with velocity V making an angle of $45^{\\circ}$ with the horizontal. The magnitude of the angular momentum of the projectile about an axis of projection when the particle is at maximum height h is ($g$ = acceleration due to gravity) $\\left(\\sin 45^{\\circ}=\\frac{1}{\\sqrt{2}}\\right)$ $\\left(\\cos 45^{\\circ}=\\frac{1}{\\sqrt{2}}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{mV^3}{4\\sqrt{2}g}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{mV^3}{\\sqrt{2}g}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$m\\sqrt{2gh^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7bac0fc1b7a2",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solid sphere is rotating about a diameter at an angular velocity $\\omega$. If it cools so that its radius reduces to ${\\left(\\frac{1}{n}\\right)}^{\\text{th}}$ of its original value, its angular velocity becomes",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\omega}{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\omega}{n^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$n\\omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$n^2\\omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0a8bacf53efa",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "If the earth suddenly contracts to ${\\left(\\frac{1}{3}\\right)}^{rd}$ of its present size without change in its mass, the ratio kinetic energy of the earth after and before contraction will be (Earth is assumed to be a rotating sphere about itself)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8416cb62769e",
+      "subtopic": "torque",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The power (P) is supplied to rotating body having moment of inertia 'I' and angular acceleration '$\\alpha$'. Its instantaneous angular velocity is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{I}{P\\alpha}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\alpha}{PI}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{P\\alpha}{I}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{P}{I\\alpha}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0342744cc42a",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A thin uniform rod of length $L$ and mass $m$ is swinging freely about a horizontal axis passing through its end. Its maximum angular speed is $\\omega$. Its centre of mass rises to a maximum height of ($g$ = acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{L^2\\omega^2}{2g}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{L\\omega}{6g}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{L\\omega}{2g}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{L^2\\omega^2}{6g}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-07cc449d20a2",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A square frame ABCD is formed by 4 identical rods each of mass $m$ and length $\\mathcal{l}$. This frame is in XY plane such that side AB coincides with x-axis and side AD along y-axis. The moment of inertia of the frame about x-axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5m\\mathcal{l}^2}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2m\\mathcal{l}^2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4m\\mathcal{l}^2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{m\\mathcal{l}^2}{12}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4e8acc7296a8",
+      "subtopic": "combined-translational-and-rotational-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A circular ring and a solid sphere having same radius roll down on an inclined plane from rest without slipping. The ratio of their velocities when reached at the bottom of the plane $\\sqrt{\\frac{x}{5}}$ where the value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.5$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2.5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cd824bffe4f7",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Moment of inertia of a disc of mass $m$ and radius $R$ about the centre of mass and perpendicular to plane is $I_1$ and moment of inertia of disc at a distance $\\frac{2R}{3}$ from centre and perpendicular to plane is $I_2$ then $I_1/I_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{6}{17}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{9}{17}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{8}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d167f8c746be",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A Solid sphere has mass M and radius R. Its moment of inertia about a parallel axis passing through a point at a distance R/3 from its centre is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8\\text{MR}^2/11$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$11\\text{MR}^2/15$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$23\\text{MR}^2/45$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$13\\text{MR}^2/20$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-324994e4ffe0",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A uniform solid cylinder with radius R and length L has moment of inertia $I_1$ about the axis of the cylinder. A concentric solid cylinder of radius $R/2$ and length $L/2$ is carved out of the original cylinder. If $I_2$ is the moment of inertia of the carved out portion of the cylinder then $I_1/I_2$ is (Both $I_1$ and $I_2$ are about the axis of the cylinder)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$16:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$32:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5650aa977da9",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Solid sphere is rotating about an axis as shown in figure. If the radius of the sphere is 5 cm, then radius of gyration about that axis will be $\\sqrt{x}$ cm. The value of x is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/rotational-motion/PYQ-PHY-5650aa977da9.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$100$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$110$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$120$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$140$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-699509a990c2",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "16 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solid sphere of mass M and a disc of mass $\\frac{M}{2}$ have the same radius. The ratio of moment of inertia of the disc about a tangent in its plane to the moment of inertia of the sphere about its tangent will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$15:8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$25:56$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$12:7$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16:9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1b139051e91f",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Four point masses m, 2m, 3m and 4m are kept at the corners A, B, C and D respectively of a square ABCD of side '$b$'. The moment of inertia of the system about an axis perpendicular to the plane of the square and passing through the point D is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12~mb^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10~mb^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8~mb^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5~mb^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3356c3b4a049",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two bodies A and B have moment of inertia $I_A$ and $I_B$, and angular momenta $L_A$ and $L_B$ respectively. Both of them have same kinetic energy of rotation. So the ratio $L_A$ to $L_B$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{I_A}{I_B}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{I_A^2}{I_B^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{I_A}{I_B}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{I_B}{I_A}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5319ffd754f5",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A system of five solid spheres each of mass '$m$' and radius '$r$' are rotating about an axis AA' as shown in figure. Hence the moment of inertia of the system about the axis of rotation AA' is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/rotational-motion/PYQ-PHY-5319ffd754f5.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$6~mr^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5~mr^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4~mr^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3~mr^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-09750a2dbcef",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Radius of gyration of a thin uniform circular disc about the axis passing through its centre and perpendicular to its plane is $K_c$. Radius of gyration of the same disc about a diamter of the disc is $K_d$. the ratio $K_d:K_c$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a08e4743b59f",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solid sphere of radius R and mass M is rotating about its diameter. The moment of intertia of the solid sphere rotating about an axis at a distance $\\frac{R}{3}$ from the centre and parallel to that diameter is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{11}{15}MR^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{13}{20}MR^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{23}{45}MR^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{47}{45}MR^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e89d89d0e54d",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A mass tied to a string is whirled in a horizontal circular path with a constant angular velocity and its angular momentum is 'L'. If the length of the string is now halved, keeping angular velocity same then the angular momentum will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{L}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{L}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$L$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2L$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-37c49ed9b061",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The angular momentum of a rotating body is 'L'. When the frequency of rotating body is tripled and its kinetic energy is made one-third, the new angular momentum becomes",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9L$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6L$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{L}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{L}{9}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6503b7edad4b",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The radius of gyration K of a hollow sphere of mass M and radius R about an axis XY is equal to R as shown in figure. The distance of that axis from the center of the sphere is h. The value of h is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/rotational-motion/PYQ-PHY-6503b7edad4b.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{R}{\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{R}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{R}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2R}{\\sqrt{3}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9c5514b17306",
+      "subtopic": "combined-translational-and-rotational-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A solid cylinder and a solid sphere having the same mass and radius roll down on the same smooth inclined plane. The ratio of the acceleration of the cylinder $(a_c)$ to that of the sphere $(a_s)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{14}{15}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{15}{14}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{13}{14}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{11}{15}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4393ebafbda8",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Given identical rings are arranged in a hexagonal plane pattern so as to touch each neighbouring ring as shown in figure. Each ring has mass M and radius R. The moment of inertia of the system of seven rings about an axis passing through the centre of central ring and normal to plane of all rings is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/rotational-motion/PYQ-PHY-4393ebafbda8.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$31MR^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$19MR^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$11MR^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7MR^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-67857f4247aa",
+      "subtopic": "combined-translational-and-rotational-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solid sphere rolls without slipping on an inclied plane at an angle $\\theta$. The ratio of total kinetic energy to its rotational kinetic energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6951eec5fa52",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "18 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A kathak dancer is standing on horizontal surface with folded hands. In the begining dancer is rotating about his central axis and his kinetic energy is 'K' at that time. The kathak dancer now stretches his arms so that the moment of inertia of the dancer becomes three times and the angular velocity becomes one-third. The kinetic energy of the dancer now is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{K}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{K}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3K$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6K$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3eca45a77dc6",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "The radius of gyration of a solid sphere of radius 'R' and mass 'M' about its diameter is $K_d$ and that about a tangent of a solid sphere is $K_t$. The ratio of $K_d$ to $K_t$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{7}{5}\\right)}^{1/2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${\\left(\\frac{7}{2}\\right)}^{1/2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${\\left(\\frac{2}{7}\\right)}^{1/2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\frac{2}{5}\\right)}^{1/2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dea47f144cd4",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A thin uniform rod AB of mass '$m$' and length '$l$' is hinged at one end A to the ground level. Initially the rod stands vertically and is allowed to fall freely to the ground in the vertical plane. The angular velocity of the rod when its B end strikes the ground is\n($g$ = acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{2g}{l}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{3g}{l}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{mg}{l}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{mg}{3l}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-13584de37ffa",
+      "subtopic": "torque",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A force of $3\\hat{i}+2\\hat{j}-\\hat{k}$ N acts on a particle with position vector $\\hat{i}+\\hat{j}-\\hat{k}$ m. The magnitude of torque of given force is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{5}\\,\\text{N}\\,m$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{8}\\,\\text{N}\\,m$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{6}\\,\\text{N}\\,m$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{10}\\,\\text{N}\\,m$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-288899f2d585",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A ring of mass $M$ and radius $R$ is rotating with angular speed $\\omega$ about a fixed vertical axis passing through its centre $O$ with two point masses each of mass $\\frac{M}{8}$ at rest at $O$. These masses can move radially outwards along two mass-less rods fixed on the ring as shown in figure. At some instant the angular speed of the system is $\\frac{8\\omega}{9}$ and one of the masses is at a distance of $\\frac{3}{5}R$ from point $O$. At this instant, the distance of the other mass from point $O$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/rotational-motion/PYQ-PHY-288899f2d585.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2R}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{R}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3R}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4R}{5}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5163964cacaa",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Three rings each of mass $M$ and radius $R$ are arranged as shown in the figure. The moment of inertia of a system about axis $YY'$ will be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/rotational-motion/PYQ-PHY-5163964cacaa.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3MR^2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3MR^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7MR^2}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5MR^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-626088f7966f",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "A uniform rod of length $l$ is free to rotate in a vertical plane about a fixed horizontal axis through point B. The rod begins rotating from rest, from its unstable equilibrium position. The angular velocity $\\omega$, when it has turned through an angle $\\theta$, is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/rotational-motion/PYQ-PHY-626088f7966f.png",
+        "alt": "Figure for this Rotational Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{6g}{l}}\\cos\\frac{\\theta}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{6g}{l}}\\sin\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{6g}{l}}\\sin\\frac{\\theta}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{6g}{l}}\\cos\\theta$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c4bec0b90b0b",
+      "subtopic": "combined-translational-and-rotational-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A solid sphere rolls down from the top of an inclined plane. On reaching the bottom of the plane, its velocity is '$V_1$'. When the same sphere slides down from the top of the same plane of same height, its velocity on reaching the bottom is '$V_2$'. The ratio $V_1:V_2$ is (neglect friction)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{7}:\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{7}:\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}:\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{5}:\\sqrt{7}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e05cd769ebfc",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A body is rotating about its own axis. Its rotational kinetic energy is '$x$' and its angular momentum is '$y$'. Hence its moment of inertia about its own axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x}{2y}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{y}{2x}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x^2}{2y}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{y^2}{2x}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f3bc3d70f4af",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two identical rings A and B of same mass and radius are revolving, ring A arounds its own diameter and ring B about tangential axis in its own plane. Both the rings A and B have same rotational kinetic energy. The ratio of the angular velocity of ring B to that of ring A is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:\\sqrt{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c391548f5bab",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A solid sphere of mass 5 kg and a disc of mass 4 kg have the same radius. The ratio of moment of inertia of the sphere about its tangent to the moment of inertia of the disc about a tangent in its plane will be $x:y$. The value of $x$ and $y$ respectively is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5,8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6,7$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7,5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4,3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6c6c7a99419a",
+      "subtopic": "moment-of-inertia",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "At the corners of an equilateral triangle of side L, point masses, each of mass $2$ kg are placed. The moment of inertia of the system about an axis along any one side is (in kg$-$m${}^2$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3L^2}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{L^2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3L^2}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4L^2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b24f92f12dfa",
+      "subtopic": "angular-momentum",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "20 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "The moment of inertia of two rotating bodies 'X' and 'Y' are $I_1$ and $I_2$ respectively where $I_2>I_1$. If $K_x$ and $K_y$ are their rotational kinetic energies and their angular momenta are equal, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$K_x=K_y$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$K_x>K_y$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$K_x<K_y$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$K_x=\\frac{K_y}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

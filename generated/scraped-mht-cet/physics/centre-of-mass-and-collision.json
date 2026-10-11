@@ -1,0 +1,416 @@
+{
+  "subject": "PHY",
+  "chapter": {
+    "name": "Centre Of Mass And Collision",
+    "slug": "centre-of-mass-and-collision",
+    "class_level": "11",
+    "in_main": true,
+    "in_advanced": true,
+    "position": 0,
+    "in_mht_cet": true
+  },
+  "subtopics": [
+    {
+      "slug": "general",
+      "name": "General",
+      "position": 99
+    },
+    {
+      "slug": "collision",
+      "name": "Collision",
+      "position": 1
+    },
+    {
+      "slug": "center-of-mass-of-continuous-mass-distribution",
+      "name": "Center of mass of continuous mass distribution",
+      "position": 2
+    },
+    {
+      "slug": "center-of-mass-of-discrete-particles",
+      "name": "Center of mass of discrete particles",
+      "position": 3
+    }
+  ],
+  "passages": [],
+  "questions": [
+    {
+      "ref": "PYQ-PHY-b10a0ad65881",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "11 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "A mass M moving with velocity V along X-axis collides and sticks to another mass 2M which is moving along Y-axis with velocity 3V. The velocity of the combination, after the collision is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$V\\hat{i}+2V\\hat{j}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{V}{3}\\hat{i}+2V\\hat{j}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$V\\hat{i}+3V\\hat{j}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2V\\hat{i}+4V\\hat{j}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f2d128c13632",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "A stationary body explodes into two parts of masses $M_1$ and $M_2$. They move in opposite directions with velocities $V_1$ and $V_2$. The ratio of their kinetic energies is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{M_1}{M_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{M_2}{M_1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{M_1^2}{M_2^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{M_2^2}{M_1^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-27318d0e4773",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A block of mass 'm' collides with another stationary block of mass '2m'. The lighter block comes to rest after collision. If the velocity of the first block is 'V' then the coefficient of restitution is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.8$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ea3b9d8d1a1a",
+      "subtopic": "center-of-mass-of-continuous-mass-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "13 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Figure shows a composite system of two uniform rods of length as shown. The co-ordinates of the centre of mass of the system of rods are",
+      "image": {
+        "url": "/question-images/mht-cet/physics/centre-of-mass-and-collision/PYQ-PHY-ea3b9d8d1a1a.png",
+        "alt": "Figure for this Centre Of Mass And Collision question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{L}{2},\\frac{2L}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{L}{4},\\frac{2L}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{L}{6},\\frac{2L}{3}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{L}{6},\\frac{L}{3}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a7bb0f926fc9",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "14 May 2026, Shift 2",
+      "status": "draft",
+      "stem": "Three identical blocks A, B and C are placed on a horizontal frictionless surface. The blocks B and C are at rest. Block A is approaching towards B with a speed $10$ m/s. The coefficient of restitution for all collisions is $0.5$. The speed of block C just after collision is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/centre-of-mass-and-collision/PYQ-PHY-a7bb0f926fc9.png",
+        "alt": "Figure for this Centre Of Mass And Collision question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$5.6$ m/s",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$6$ m/s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8$ m/s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10$ m/s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6a3ca9b14741",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Two masses $m_1$ and $m_2$ moving with velocities $V_1$ and $V_2$ in opposite directions collide elastically and after collision $m_1$ and $m_2$ move with velocities $V_2$ and $V_1$ respectively. The ratio $\\frac{m_2}{m_1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.25$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.50$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.75$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3e6b2ee8a003",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "In case of perfectly elastic collision,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the total kinetic energy before collision is equal to the total kinetic energy after collision.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "the total kinetic energy before collision is less than total kinetic energy after collision.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the total kinetic energy before collision is greater than the total kinetic energy after collision.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "coefficient of restitution is equal to zero.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-efede6ac46c7",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "15 May 2026, Shift 1",
+      "status": "draft",
+      "stem": "A block of mass $m$ moving on a frictionless surface at speed $V$ collides elastically with a block of same mass, initially at rest. Now, the first block moves at an angle $\\theta$ with its initial direction and has speed $V_1$. The speed of the second block after collision is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{V_1^2-V^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{V^2-V_1^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{V^2+V_1^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{V-V_1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b077f2a4b965",
+      "subtopic": "center-of-mass-of-discrete-particles",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "17 Apr 2026, Shift 1",
+      "status": "draft",
+      "stem": "Three identical spheres, each of mass 'm' kg, are kept as shown in the figure, touching each other, with their centers on a straight line. If their centers are marked as A, B, C respectively, the distance of center of mass of the system from A is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/centre-of-mass-and-collision/PYQ-PHY-b077f2a4b965.png",
+        "alt": "Figure for this Centre Of Mass And Collision question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{AB+BC}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{AB+AC}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{AC+BC}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{AB+BC+AC}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-caa32c46bd02",
+      "subtopic": "center-of-mass-of-discrete-particles",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2026,
+      "shift": "19 Apr 2026, Shift 2",
+      "status": "draft",
+      "stem": "Two particles of masses $2$ g and $4$ g are situated at the opposite ends, A and B of a wooden bar respectively. Let $l(AB)=9$ cm. The center of mass of the system will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6$ cm from B.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3$ cm from A.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2$ cm from B.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6$ cm from A.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    }
+  ]
+}

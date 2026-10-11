@@ -39,7 +39,8 @@ def create_subject_test(body: schemas.SubjectTestCreate,
              .select_from(models.Question)
              .join(models.Subtopic, models.Subtopic.id == models.Question.subtopic_id)
              .join(models.Chapter, models.Chapter.id == models.Subtopic.chapter_id)
-             .filter(models.Question.status == 'published', func.length(func.trim(models.Question.stem)) > 0,
+             .filter(models.Question.status == 'published', models.Question.jee_question(),
+                     func.length(func.trim(models.Question.stem)) > 0,
                      func.length(func.trim(models.Question.solution)) > 0,
                      ~models.Question.assets.any(bad_asset),
                      ~models.Question.passage.has(models.Passage.assets.any(bad_asset)),
