@@ -49,7 +49,7 @@ def test_bitsat_filters_keys_scoring_and_ownership():
         assert len(catalog['years']) == 5
         english = next(s for s in catalog['years'][0]['subjects'] if s['code']=='ENG')
         assert english['available'] == 3
-        assert client.post('/api/pyqs/bitsat/practice',json={'year':2021,'subject_code':'ENG'}).status_code == 422
+        assert client.post('/api/pyqs/bitsat/practice',json={'year':1800,'subject_code':'ENG'}).status_code == 422
         assert client.post('/api/pyqs/bitsat/practice',json={'year':2026,'subject_code':'PHY'}).status_code == 404
         response = client.post('/api/pyqs/bitsat/practice',json={'year':2026,'subject_code':'ENG','count':10})
         assert response.status_code == 201, response.text
@@ -146,7 +146,7 @@ def test_mht_cet_keys_without_solutions_scoring_and_ownership():
         assert len(catalog['years']) == 5
         english = next(s for s in catalog['years'][0]['subjects'] if s['code']=='MATH')
         assert english['available'] == 4
-        assert client.post('/api/pyqs/mht_cet/practice',json={'year':2021,'subject_code':'MATH'}).status_code == 422
+        assert client.post('/api/pyqs/mht_cet/practice',json={'year':1800,'subject_code':'MATH'}).status_code == 422
         assert client.post('/api/pyqs/mht_cet/practice',json={'year':2026,'subject_code':'PHY'}).status_code == 404
         response = client.post('/api/pyqs/mht_cet/practice',json={'year':2026,'subject_code':'MATH','count':10})
         assert response.status_code == 201, response.text
