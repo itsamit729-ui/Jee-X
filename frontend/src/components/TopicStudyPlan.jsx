@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ArrowRight, Check, Flag } from 'lucide-react'
 import { subjectTestBuilderService } from '../lib/subjectTests.js'
 import { requestFullscreen } from '../lib/fullscreen.js'
+import { topicPracticeOptions } from '../lib/planPresentation.js'
 import CollegeHorizon from './CollegeHorizon.jsx'
 import './topic-study-plan.css'
 
@@ -26,7 +27,7 @@ export default function TopicStudyPlan({ data, outlook, compact = false, onStart
   const relevant = topics.filter(t => purposes[stop?.id]?.includes(t.purpose))
   const evidence = topic => topic.accuracy == null ? 'No fresh answers yet — start with a diagnostic topic set.' : `${topic.accuracy}% correct · ${topic.fresh_answers} fresh answers · ${topic.study_days} study days`
   async function start(topic) {
-    const options = { mission: true, assessment: false, subjectCode: topic.subject, chapterId: topic.chapter_id, topicId: topic.topic_id, durationMinutes: 15, mode: 'recommended' }
+    const options = topicPracticeOptions(topic)
     if (!onStartMission) requestFullscreen()
     setBusy(true); setError('')
     try {
@@ -39,7 +40,7 @@ export default function TopicStudyPlan({ data, outlook, compact = false, onStart
     <span className="topic-plan-label">{focus === today ? 'YOUR NEXT STEP' : 'SELECTED TOPIC'} · {focus.minutes} MIN</span>
     <small>{subjects[focus.subject]} · {focus.chapter}</small><h2>{focus.topic}</h2>
     <p><strong>Why this topic:</strong> {focus.reason}</p>
-    <button className="btn btn-primary" disabled={busy || missionBusy} onClick={() => start(focus)}>{busy || missionBusy ? 'Preparing practice…' : focus === today ? 'Start today’s practice' : 'Practise this topic'}<ArrowRight size={17}/></button>
+    <button className="btn btn-primary" disabled={busy || missionBusy} onClick={() => start(focus)}>{busy || missionBusy ? 'Preparing practice…' : 'Start 15-minute practice'}<ArrowRight size={17}/></button>
     <details><summary>Your session & completion check</summary><ol>{focus.steps.map(step => <li key={step}>{step}</li>)}</ol><p><strong>Move forward when:</strong> {focus.check}</p><p>{evidence(focus)}</p>{focus.prerequisites?.length > 0 && <p>Prerequisites: {focus.prerequisites.join(', ')}. Unfinished prerequisites come earlier in your plan.</p>}{focus.bank_note && <p>{focus.bank_note}</p>}<small>Use your notes for the concept review. Practice opens questions from this exact topic.</small></details>
     {focus !== today && <button className="btn btn-quiet" onClick={() => setTopicId(null)}>Return to today’s recommendation</button>}
   </article>

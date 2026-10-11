@@ -8,8 +8,8 @@ import { preloadRoute } from '../lib/preloadRoute.js'
 import './studio-navigation.css'
 
 const main = [
-  ['/dashboard', 'My space', LayoutDashboard], ['/subject-test', 'Practice', Target],
-  ['/pyq', 'PYQs & papers', BookOpen], ['/plan', 'My plan', CalendarCheck],
+  ['/dashboard', 'My space', LayoutDashboard], ['/plan', 'My plan', CalendarCheck],
+  ['/subject-test', 'Practice', Target], ['/pyq', 'PYQs & papers', BookOpen],
 ]
 const groups = [
   { title: 'PRACTISE & PREPARE', items: [
@@ -69,13 +69,14 @@ export default function AppHeader() {
     return () => { document.removeEventListener('pointerdown', dismiss); document.removeEventListener('keydown', escape) }
   }, [open])
   const links = teacher ? [['/teacher', 'Teacher studio', GraduationCap], ...main.slice(1)] : main
+  const activeIndex = links.findIndex(([path]) => pathname === path || pathname.startsWith(`${path}/`))
   const filtered = groups.map(group => ({ ...group, items: group.items.filter(item => `${item[1]} ${item[3]}`.toLowerCase().includes(query.toLowerCase().trim())) })).filter(group => group.items.length)
 
   return <div ref={ref} className={`studio-navigation${isAuthenticated ? ' is-member' : ''}`} onPointerOver={preloadRoute} onFocus={preloadRoute} onBlur={event => { if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) close() }}>
     <a className="skip-link" href="#studio-main">Skip to workspace</a>
-    <header className="studio-topbar"><div className="studio-mobile-logo"><Logo to={isAuthenticated ? '/dashboard' : '/'}/></div>{isAuthenticated && <nav className="studio-top-links" aria-label="Main navigation">{links.map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}</nav>}<div className="studio-top-actions">{isAuthenticated ? <><button ref={trigger} className={`studio-more${open ? ' is-open' : ''}`} onClick={() => setOpen(value => !value)} aria-label={open ? 'Close explore menu' : 'Explore all features'} aria-expanded={open} aria-controls="studio-menu">{open ? <X size={17}/> : <Grid2X2 size={17}/>}<span>Explore</span><kbd title="Control or Command + K">K</kbd></button><InboxBell onTeacher={setTeacher}/><Link className="studio-avatar" to="/profile" aria-label="My profile">{user?.name?.trim()?.[0]?.toUpperCase() || <UserRound size={16}/>}</Link></> : <><Link className="studio-public-home" to="/">Explore Jee Edge<ArrowUpRight size={14}/></Link><button className="btn btn-primary btn-sm" onClick={() => openLogin()}>Log in</button></>}</div></header>
+    <header className="studio-topbar"><div className="studio-mobile-logo"><Logo to={isAuthenticated ? '/dashboard' : '/'}/></div>{isAuthenticated && <nav className={`studio-top-links${activeIndex >= 0 ? ' has-active' : ''}`} style={{ '--nav-index': Math.max(0, activeIndex) }} aria-label="Main navigation">{links.map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}</nav>}<div className="studio-top-actions">{isAuthenticated ? <><button ref={trigger} className={`studio-more${open ? ' is-open' : ''}`} onClick={() => setOpen(value => !value)} aria-label={open ? 'Close explore menu' : 'Explore all features'} aria-expanded={open} aria-controls="studio-menu">{open ? <X size={17}/> : <Grid2X2 size={17}/>}<span>Explore</span><kbd title="Control or Command + K">K</kbd></button><InboxBell onTeacher={setTeacher}/><Link className="studio-avatar" to="/profile" aria-label="My profile">{user?.name?.trim()?.[0]?.toUpperCase() || <UserRound size={16}/>}</Link></> : <><Link className="studio-public-home" to="/">Explore Jee Edge<ArrowUpRight size={14}/></Link><button className="btn btn-primary btn-sm" onClick={() => openLogin()}>Log in</button></>}</div></header>
     {isAuthenticated && open && <div id="studio-menu" className="studio-menu"><div className="studio-search"><Search size={18}/><input ref={searchInput} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="What would you like to work on?" aria-label="Search features"/><button onClick={() => { close(); trigger.current?.focus() }} aria-label="Close explore menu"><X size={17}/></button></div><nav className="studio-menu-groups" aria-label="All workspace features">{filtered.map(group => <div key={group.title}><h2>{group.title}</h2>{group.items.map(item => <NavigationLink key={item[0]} item={item} close={close} detail/>)}</div>)}{!filtered.length && <p className="studio-search-empty" role="status">No matches for “{query}”. Try “mock”, “college” or “class”.</p>}</nav><div className="studio-menu-footer"><span>One place for every part of your preparation.</span><button onClick={logout}><LogOut size={14}/>Sign out</button></div></div>}
-    {isAuthenticated && <nav className="studio-dock" aria-label="Quick navigation">{links.slice(0, 3).map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}<button className={`studio-link${open ? ' active' : ''}`} onClick={() => setOpen(value => !value)} aria-expanded={open} aria-controls="studio-menu"><Grid2X2 size={19}/><span>Explore</span></button></nav>}
+    {isAuthenticated && <nav className="studio-dock" aria-label="Quick navigation">{links.map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}<button className={`studio-link${open ? ' active' : ''}`} onClick={() => setOpen(value => !value)} aria-label="Explore all features" aria-expanded={open} aria-controls="studio-menu"><Grid2X2 size={19}/><span>Explore</span></button></nav>}
     <span id="studio-main" tabIndex={-1}/>
   </div>
 }
