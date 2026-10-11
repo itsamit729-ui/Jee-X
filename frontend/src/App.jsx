@@ -1,6 +1,6 @@
-import { lazy, Suspense } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { IITianFactToast, Loader } from './components/Brand.jsx'
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation, useNavigationType } from 'react-router-dom'
 const PYQs = lazy(() => import('./pages/PYQs.jsx'))
 const Teacher = lazy(() => import('./pages/Teacher.jsx'))
 const Classrooms = lazy(() => import('./pages/Classrooms.jsx'))
@@ -34,6 +34,13 @@ import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 export default function App() {
   const location = useLocation()
+  const navigationType = useNavigationType()
+  useEffect(() => {
+    const titles = { '/': 'Practice, mocks & a clearer path to college', '/dashboard': 'Your study space', '/pyq': 'PYQs & shift papers', '/plan': 'Your study plan', '/subject-test': 'Focused practice', '/ranking': 'Rankings', '/teacher': 'Teacher studio', '/classes': 'My classroom', '/login': 'Welcome back', '/signup': 'Create an account' }
+    document.title = `${titles[location.pathname] || 'Your exam preparation'} · Jee Edge`
+    // Search/filter changes should keep their position; new pages start at the top.
+    if (navigationType !== 'POP' && !location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [location.pathname])
   const isAdmin = location.pathname === '/admin'
   const isAuthPage = /^\/(login|signup|signup\/terms|terms|privacy|forgot-password|reset-password|verify-email|account\/security)$/.test(location.pathname)
 

@@ -1,0 +1,10 @@
+/* Motion supports navigation and feedback; exam clocks and question state are untouched. */
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+.btn{transition:background-color .18s,border-color .18s,color .18s,transform .18s,box-shadow .18s}
+.btn:hover:not(:disabled){transform:translateY(-1px)}.btn-primary:hover:not(:disabled){box-shadow:0 4px 12px #BA431F20}.btn:active:not(:disabled){transform:translateY(1px);box-shadow:none}
+.btn>svg{transition:transform .18s}.btn:hover:not(:disabled)>svg:last-child{transform:translateX(2px)}
+:is(.input,.native-auth-field input,.signup-terms select){transition:border-color .18s,box-shadow .18s}
+:is(.input,.native-auth-field input,.signup-terms select):focus-visible{border-color:var(--pen);box-shadow:0 0 0 3px var(--pen-soft)}
+.native-auth-main{animation:workspace-arrive .35s both}.native-auth-card h1{font-weight:550}.native-auth-card .btn{border-radius:8px}
+@keyframes workspace-arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.btn>svg,.native-auth-main{animation:none!important;transition:none!important}.btn:hover:not(:disabled){transform:none}}

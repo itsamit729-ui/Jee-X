@@ -3,7 +3,7 @@ import { Logo } from '../components/Brand.jsx'
 import { TERMS_VERSION } from '../auth/TermsFields.jsx'
 
 export default function Legal({ privacy = false }) {
-  const support = import.meta.env.VITE_SUPPORT_EMAIL
+  const support = import.meta.env.VITE_SUPPORT_EMAIL || 'admin@jeeedge.in'
   const operator = import.meta.env.VITE_LEGAL_OPERATOR_NAME
   return <div className="native-auth-page"><header className="native-auth-header"><Logo/><Link to="/signup">Back to signup</Link></header>
     <main className="legal-document"><p className="native-auth-eyebrow">JEE EDGE · VERSION {TERMS_VERSION}</p><h1>{privacy ? 'Privacy Notice' : 'Terms & Conditions'}</h1>

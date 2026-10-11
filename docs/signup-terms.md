@@ -12,7 +12,7 @@ New Google accounts receive a pending acceptance record and must finish `/signup
 
 ## Owner information still needed
 
-Set frontend build variables `VITE_LEGAL_OPERATOR_NAME` to the real legal operator and `VITE_SUPPORT_EMAIL` to a monitored account/privacy contact, then rebuild. They are public, not secrets. No operator identity or email has been invented. Until supplied, those sections are omitted; the legal notice still needs owner completion and review. The operator must actually handle correction, deletion, withdrawal and complaints before publishing the corresponding contact wording. Retention/deletion policy and backups also need operational review; no automated deletion period is promised by these documents.
+The public account/privacy contact is `admin@jeeedge.in`, as supplied by the owner. `VITE_SUPPORT_EMAIL` can override it at build time. Founder names are intentionally not published at the owner’s request. The legal operator identity remains unresolved; `Jee Edge team` is not represented as an incorporated entity. If later supplied, set `VITE_LEGAL_OPERATOR_NAME` to the actual legal operator and rebuild. They are public, not secrets. No operator identity or email has been invented. The operator section is omitted until supplied; the legal notice still needs owner completion and review. The operator must actually handle correction, deletion, withdrawal and complaints before publishing the corresponding contact wording. Retention/deletion policy and backups also need operational review; no automated deletion period is promised by these documents.
 
 ## Important limits for a minors-focused service
 

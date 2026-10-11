@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { ArrowUpRight, BookOpen } from 'lucide-react'
+import { useNavigate, useSearchParams } from 'react-router-dom'
+import { ArrowUpRight, BookOpen, Clock3, Layers3, ChevronDown } from 'lucide-react'
 import AppHeader from '../components/AppHeader.jsx'
 import { request } from '../lib/api.js'
 import { requestFullscreen } from '../lib/fullscreen.js'
@@ -8,7 +8,8 @@ import './pyqs.css'
 
 export default function PYQs() {
   const navigate = useNavigate()
-  const [exam, setExam] = useState('mht_cet')
+  const [params, setParams] = useSearchParams()
+  const exam = params.get('exam') === 'bitsat' ? 'bitsat' : 'mht_cet'
   const [view, setView] = useState('papers')
   const [catalog, setCatalog] = useState(null)
   const [year, setYear] = useState(2026)
@@ -19,6 +20,7 @@ export default function PYQs() {
   const [retry, setRetry] = useState(0)
   useEffect(() => {
     let active = true
+    setView(exam === 'bitsat' ? 'practice' : 'papers')
     setError(''); setCatalog(null)
     request(`/api/pyqs/${exam}`).then(data => { if (active) { setCatalog(data); setYear(data.years.find(y => y.papers?.length || y.subjects.some(s => s.available))?.year || data.years[0]?.year || 2026) } })
       .catch(e => { if (active) setError(e.message) })
@@ -39,21 +41,23 @@ export default function PYQs() {
     finally { setBusy(false) }
   }
   return <div className="crackjee-root"><AppHeader/><main className="pyq-shell">
-    <header className="pyq-heading"><div><span className="pyq-eyebrow">THE QUESTION ARCHIVE</span><h1>Learn from the years before.</h1><p>Choose a year, choose a shift, and take its timed mock.</p></div><BookOpen size={36} aria-hidden="true"/></header>
-    <div className="pyq-years" aria-label="Exam">{[["mht_cet", "MHT CET"], ["bitsat", "BITSAT"]].map(([code, label]) => <button key={code} disabled={busy} aria-pressed={exam === code} onClick={() => { setExam(code); setSubject("PHY"); setYear(2026) }}>{label}</button>)}</div>
+    <header className="pyq-heading"><div><span className="pyq-eyebrow">THE QUESTION ARCHIVE</span><h1>The years before.<br/><span>Your next step forward.</span></h1><p>Pick your paper, find your rhythm, and learn from every attempt.</p></div><span className="pyq-heading-icon"><BookOpen size={33} strokeWidth={1.2} aria-hidden="true"/></span></header>
+    <div className="pyq-exams" role="group" aria-label="Exam">{[["mht_cet", "MHT-CET", 'Year & shift mocks · Subject practice'], ["bitsat", "BITSAT", 'Memory-based question practice']].map(([code, label, detail]) => <button key={code} disabled={busy} aria-pressed={exam === code} onClick={() => { setParams({ exam: code }); setSubject("PHY"); setYear(2026) }}><Layers3 size={19}/><span><strong>{label}</strong><small>{detail}</small></span><ArrowUpRight size={16}/></button>)}</div>
     <section className="pyq-panel" aria-labelledby="pyq-title">
       <div className="pyq-panel-heading"><h2 id="pyq-title">{exam === "bitsat" ? "BITSAT" : "MHT CET"}</h2><span className="tag">Memory-based</span></div>
+      <details className="pyq-source-note"><summary>About these questions & paper coverage<ChevronDown size={14}/></summary>
       {exam === "bitsat" && <><p className="muted">Recalled questions, reviewed before publication. These practice sets are not official papers or full exam simulations.</p>
       <p className="muted" style={{fontSize:12}}>Initial collection: selected 2022–2023 questions, with new worked solutions. Source: <a href="https://huggingface.co/datasets/datavorous/entrance-exam-dataset" target="_blank" rel="noreferrer">datavorous and contributors</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0</a>. Year labels follow the source; coverage is incomplete.</p></>}
       {exam === "mht_cet" && <p className="muted">Chapter-wise questions reconstructed by ExamSIDE, with source answer keys. These are not official papers. Worked solutions are being added; some questions currently show only the answer key.</p>}
+      </details>
       {error && <div role="alert" className="alert">{error} {!catalog && <button className="btn btn-secondary" onClick={() => setRetry(v => v+1)}>Retry</button>}</div>}
       {!catalog && !error && <p role="status">Loading the archive…</p>}
       {catalog && <>
-        <div className="pyq-years" aria-label="Exam year">{catalog.years.map(item => <button type="button" key={item.year} aria-pressed={year===item.year} disabled={busy} onClick={() => setYear(item.year)}>{item.year}</button>)}</div>
-        <div className="pyq-years" aria-label="Practice format">{[['papers', 'Year & shift mocks'], ['practice', 'Subject practice']].map(([code, label]) => <button key={code} disabled={busy} aria-pressed={view === code} onClick={() => setView(code)}>{label}</button>)}</div>
+        <div className="pyq-filter-heading"><span>01</span>Choose a year</div><div className="pyq-years" role="group" aria-label="Exam year">{catalog.years.map(item => <button type="button" key={item.year} aria-pressed={year===item.year} disabled={busy} onClick={() => setYear(item.year)}>{item.year}</button>)}</div>
+        <div className="pyq-filter-heading"><span>02</span>Choose your session</div><div className="pyq-years pyq-format" role="group" aria-label="Practice format">{[['papers', 'Year & shift mocks'], ['practice', 'Subject practice']].map(([code, label]) => <button key={code} disabled={busy} aria-pressed={view === code} onClick={() => setView(code)}>{label}</button>)}</div>
         {view === 'papers' ? <>
           <p className="muted">{papers.length ? `${papers.length} shift mocks · All available subjects · 180 minutes · Auto-submit` : 'No dated shift papers are available for this year yet. Subject practice remains available when questions have no shift metadata.'}</p>
-          {papers.length > 0 && <p className="muted">Reconstructed from available questions; some papers have incomplete coverage. MHT CET mocks use 90 minutes for Physics/Chemistry, followed by 90 minutes for Mathematics. Original question order may differ.</p>}
+          {papers.length > 0 && <p className="pyq-timing-note"><Clock3 size={15}/><span>Reconstructed papers may be incomplete. MHT-CET: 90 min Physics/Chemistry → 90 min Mathematics. Original question order may differ.</span></p>}
           <div className="pyq-papers">{papers.map(paper => <article className="pyq-paper" key={paper.shift}>
             <div><h3>{paper.shift}</h3><span className="tag">{paper.available} questions</span></div>
             <p><strong>{paper.subjects.reduce((total, s) => total + s.available * (exam === 'bitsat' ? 3 : s.code === 'MATH' ? 2 : 1), 0)} marks</strong> · {exam === 'mht_cet' ? (['PHY', 'CHEM', 'MATH'].every(code => paper.subjects.find(s => s.code === code)?.available === 50) ? '150-question reconstruction' : 'Partial paper — some questions are missing') : 'Reconstructed paper'}</p>

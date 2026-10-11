@@ -1,5 +1,11 @@
 // Fetch the route code on intent, before the click. No student data is fetched.
 const routes = {
+  '/free-test': () => import('../pages/FreeTest.jsx'),
+  '/login': () => import('../auth/AuthPage.jsx'),
+  '/signup': () => import('../auth/AuthPage.jsx'),
+  '/test': () => import('../pages/MockTest.jsx'),
+  '/scenarios': () => import('../pages/Scenarios.jsx'),
+  '/daily': () => import('../pages/DailyQuestion.jsx'),
   '/pyq': () => import('../pages/PYQs.jsx'),
   '/pricing': () => import('../pages/Pricing.jsx'),
   '/dashboard': () => import('../pages/Dashboard.jsx'),
