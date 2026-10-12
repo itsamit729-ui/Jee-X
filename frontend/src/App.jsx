@@ -31,13 +31,51 @@ const Admin = lazy(() => import('./pages/Admin.jsx'))
 const ImageQuestions = lazy(() => import('./pages/ImageQuestions.jsx'))
 const Scenarios = lazy(() => import('./pages/Scenarios.jsx'))
 import ProtectedRoute from './components/ProtectedRoute.jsx'
+const MHTCETLanding = lazy(() => import('./pages/MHTCETLanding.jsx'))
+
+const SEO_PAGES = {
+  '/': ['JEE & MHT-CET Practice, Mocks and Study Plans', 'Prepare for JEE, MHT-CET and BITSAT with focused practice, exam mocks, progress insights and a clearer study plan.'],
+  '/syllabus': ['JEE & Entrance Exam Syllabus 2026 | Jee Edge', 'Browse official 2026 engineering entrance exam syllabi with subject links and direct links to examination authority PDFs.'],
+  '/pricing': ['Jee Edge Plans for Students and Teachers', 'Compare Jee Edge free study tools and the upcoming Student Plus and teacher pilot plans.'],
+  '/free-test': ['Free JEE Practice Warm-up | Jee Edge', 'Try a free ten-question Physics, Chemistry and Mathematics warm-up with explanations. No account required to begin.'],
+  '/image-questions': ['Physics Circuit Diagram Questions | Jee Edge', 'Practice current electricity questions with circuit diagrams, answer checks and worked solutions.'],
+  '/mhtcet-mock-tests': ['MHT-CET Year and Shift Mock Tests | Jee Edge', 'Explore MHT-CET mock practice organized by exam year and shift, with timed sections designed to help students rehearse exam day.'],
+}
+
+function updateSeo(pathname) {
+  const page = SEO_PAGES[pathname]
+  const privateRoute = !page
+  const title = page?.[0] || 'Your exam preparation'
+  const description = page?.[1] || ''
+  document.title = `${title} · Jee Edge`
+  const setMeta = (selector, attribute, value) => {
+    let element = document.head.querySelector(selector)
+    if (!element) {
+      element = document.createElement('meta')
+      const [key, name] = attribute
+      element.setAttribute(key, name)
+      document.head.appendChild(element)
+    }
+    element.content = value
+  }
+  setMeta('meta[name="description"]', ['name', 'description'], description)
+  setMeta('meta[name="robots"]', ['name', 'robots'], privateRoute ? 'noindex, nofollow' : 'index, follow')
+  setMeta('meta[property="og:title"]', ['property', 'og:title'], `${title} · Jee Edge`)
+  setMeta('meta[property="og:description"]', ['property', 'og:description'], description)
+  setMeta('meta[property="og:type"]', ['property', 'og:type'], 'website')
+  setMeta('meta[property="og:url"]', ['property', 'og:url'], `https://jeeedge.in${pathname === '/' ? '/' : pathname}`)
+  setMeta('meta[name="twitter:title"]', ['name', 'twitter:title'], `${title} · Jee Edge`)
+  setMeta('meta[name="twitter:description"]', ['name', 'twitter:description'], description)
+  let canonical = document.head.querySelector('link[rel="canonical"]')
+  if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
+  canonical.href = `https://jeeedge.in${pathname === '/' ? '/' : pathname}`
+}
 
 export default function App() {
   const location = useLocation()
   const navigationType = useNavigationType()
   useEffect(() => {
-    const titles = { '/': 'Practice, mocks & a clearer path to college', '/dashboard': 'Your study space', '/pyq': 'PYQs & shift papers', '/plan': 'Your study plan', '/subject-test': 'Focused practice', '/ranking': 'Rankings', '/teacher': 'Teacher studio', '/classes': 'My classroom', '/login': 'Welcome back', '/signup': 'Create an account' }
-    document.title = `${titles[location.pathname] || 'Your exam preparation'} · Jee Edge`
+    updateSeo(location.pathname)
     // Search/filter changes should keep their position; new pages start at the top.
     if (navigationType !== 'POP' && !location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [location.pathname])
@@ -70,6 +108,7 @@ export default function App() {
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/free-test" element={<FreeTest />} />
       <Route path="/image-questions" element={<ImageQuestions />} />
+      <Route path="/mhtcet-mock-tests" element={<MHTCETLanding />} />
       <Route path="/advanced" element={<ProtectedRoute><Advanced /></ProtectedRoute>} />
       <Route path="/plan" element={<ProtectedRoute><Roadmap /></ProtectedRoute>} />
       <Route path="/roadmap" element={<ProtectedRoute><Navigate replace to={'/plan' + location.search + location.hash} /></ProtectedRoute>} />

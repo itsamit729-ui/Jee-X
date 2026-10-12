@@ -14,7 +14,7 @@ const tasters = [
 ]
 const exams = [
   { label: 'JEE Main', text: 'Personalised practice, full mocks and a study plan that grows with you.', to: '/plan', action: 'Explore JEE preparation' },
-  { label: 'MHT-CET', text: 'Year and shift mocks, subject practice and college cutoffs after your mock.', to: '/pyq?exam=mht_cet', action: 'Explore MHT-CET papers' },
+  { label: 'MHT-CET', text: 'Year and shift mocks, subject practice and college cutoffs after your mock.', to: '/mhtcet-mock-tests', action: 'Explore MHT-CET papers' },
   { label: 'BITSAT', text: 'Build your concepts with the available memory-based BITSAT question collection.', to: '/pyq?exam=bitsat', action: 'Explore BITSAT questions' },
   { label: 'JEE Advanced', text: 'Explore IIT choices, Advanced cutoffs and the next stage of your preparation.', to: '/advanced', action: 'Explore IIT & Advanced' },
 ]
