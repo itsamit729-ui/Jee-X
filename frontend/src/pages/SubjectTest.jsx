@@ -341,9 +341,9 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
 
   const focusLabel = chapters.find(c => String(c.id) === chapterId)?.name || subjects?.find(s => s.code === subjectCode)?.name || (mode === 'topic' ? 'Choose a subject' : 'All subjects')
   const approaches = [
-    { key: 'recommended', Icon: Target, title: 'Personalised practice', hint: 'Let your answers guide the next set', detail: 'Questions are selected using your recent answers and study priorities. If you’re new, your first set helps find your starting point.' },
-    { key: 'topic', Icon: Compass, title: 'Choose a chapter', hint: 'Work on what you’re studying now', detail: 'Pick a subject, then narrow it to a chapter. You’ll get a focused set from the available question bank.' },
-    { key: 'revision', Icon: RotateCcw, title: 'Revise & remember', hint: 'Come back to concepts you’ve practised', detail: 'Revisit previously practised concepts. If there isn’t enough history yet, we include questions to establish a starting point.' },
+    { key: 'recommended', Icon: Target, title: 'Personalised practice', hint: 'Questions shaped by your recent answers.', detail: 'Questions are selected using your recent answers and study priorities. If you’re new, your first set helps find your starting point.' },
+    { key: 'topic', Icon: Compass, title: 'Choose a chapter', hint: 'Pick a subject or focus on one chapter.', detail: 'Pick a subject, then narrow it to a chapter. You’ll get a focused set from the available question bank.' },
+    { key: 'revision', Icon: RotateCcw, title: 'Revise & remember', hint: 'Revisit concepts you’ve practised before.', detail: 'Revisit previously practised concepts. If there isn’t enough history yet, we include questions to establish a starting point.' },
   ]
   const approach = approaches.find(item => item.key === mode)
   const questionLimit = { 5: 3, 15: 8, 30: 16 }[durationMinutes]
@@ -352,8 +352,8 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
     <main className="wrap practice-page practice-setup">
       <header className="practice-welcome">
         <div><span className="practice-eyebrow"><span className="practice-live-dot"/> JEE QUESTION PRACTICE</span>
-          <h1>Practise questions.<br className="practice-mobile-break"/> <em>Learn from every answer.</em></h1>
-          <p>Build confidence with short question sets. Choose your focus, solve at your own pace, then learn from every answer.</p>
+          <h1><span className="practice-desktop-only">Practise questions. <em>Learn from every answer.</em></span><span className="practice-mobile-only">A little practice.<br/><em>A little progress.</em></span></h1>
+          <p>Short question sets, at your pace. Review your answers and solutions when you finish.</p>
         </div>
         <a className="practice-paper-link" href="/pyq"><BookOpen size={19}/><span>Want an exam paper?<strong>Explore PYQs & mocks <ArrowUpRight size={14}/></strong></span></a>
       </header>
@@ -361,15 +361,26 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
       <div className="practice-studio">
         <section className="practice-config" aria-labelledby="practice-config-title">
           <div className="practice-section-heading"><span className="practice-number">01</span><h2 id="practice-config-title">What do you want to work on?</h2></div>
+          <div className="practice-mobile-only practice-mobile-field">
+            <label htmlFor="practice-approach">Practice type</label>
+            <select id="practice-approach" className="input" value={mode} disabled={starting} aria-describedby="practice-mode-description" onChange={e => setMode(e.target.value)}>{approaches.map(item => <option key={item.key} value={item.key}>{item.title}</option>)}</select>
+          </div>
           <div className="practice-choices" role="group" aria-label="Practice approach">
             {approaches.map(({key, Icon, title, hint}) => <button key={key} type="button" className={`practice-choice ${mode === key ? 'is-active' : ''}`} disabled={starting} aria-pressed={mode === key} aria-describedby="practice-mode-description" onClick={() => setMode(key)}>
               <span className="practice-choice-icon"><Icon size={20}/></span><span className="practice-choice-copy"><strong>{title}</strong><small>{hint}</small></span><span className="practice-choice-check" aria-hidden="true">{mode === key && <Check size={12}/>}</span>
             </button>)}
           </div>
-          <p id="practice-mode-description" className="practice-mode-description" aria-live="polite">{approach.detail}</p>
+          <p id="practice-mode-description" className="practice-mode-description" aria-live="polite"><span className="practice-desktop-only">{approach.detail}</span><span className="practice-mobile-only">{approach.hint}</span></p>
 
           <fieldset className="practice-focus-fields" disabled={starting}>
             <legend>Choose your focus <span>{mode === 'topic' ? 'Select a subject to begin' : 'Optional · keep all subjects for a mixed set'}</span></legend>
+            <div className="practice-mobile-only practice-mobile-field">
+              <label htmlFor="practice-subject">Subject</label>
+              <select id="practice-subject" className="input" value={subjectCode} disabled={subjects === null} onChange={e => setSubjectCode(e.target.value)}>
+                <option value="" disabled={mode === 'topic'}>{subjects === null ? 'Loading subjects…' : mode === 'topic' ? 'Choose a subject' : 'All subjects'}</option>
+                {subjects?.map(s => <option key={s.code} value={s.code}>{s.name}</option>)}
+              </select>
+            </div>
             <div className="practice-focus-options" role="group" aria-label="Subject">
               {mode !== 'topic' && <button type="button" aria-pressed={!subjectCode} onClick={() => setSubjectCode('')}>All subjects</button>}
               {subjects === null ? <span role="status" className="practice-loading-subjects">Loading subjects…</span> : subjects.map(s => <button key={s.code} type="button" aria-pressed={subjectCode === s.code} onClick={() => setSubjectCode(s.code)}>{s.name}</button>)}
@@ -387,6 +398,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
         </section>
 
         <aside className="practice-ticket" aria-labelledby="practice-ticket-title">
+          <p className="practice-mobile-only practice-mobile-summary" aria-live="polite">Up to {questionLimit} questions <span>· Self-paced</span></p>
           <div className="practice-ticket-top"><span className="practice-eyebrow">YOUR NEXT SESSION</span><span className="practice-self-paced"><Clock3 size={12}/> Self-paced</span></div>
           <h2 id="practice-ticket-title">{approach.title}</h2>
           <div className="practice-ticket-quantity" aria-live="polite"><div><span>UP TO</span><strong key={questionLimit}>{questionLimit}<small> questions</small></strong></div><span className="practice-ticket-estimate">About<br/><b>{durationMinutes} minutes</b></span></div>
@@ -399,7 +411,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
 
       {error && <div className="alert" role="alert">{error} <button type="button" className="btn btn-secondary btn-sm" onClick={() => setLoadVersion(v => v + 1)}>Retry loading</button></div>}
       <div className="practice-bottom-line"><p><span>01</span> Choose your set <ArrowRight size={13}/><span>02</span> Solve at your pace <ArrowRight size={13}/><span>03</span> Submit & review</p><a href="/plan">See how this fits your plan <ArrowUpRight size={14}/></a></div>
-      <details className="practice-plan-suggestion" open={showPlanSuggestion} onToggle={e => setShowPlanSuggestion(e.currentTarget.open)}><summary><Target size={18}/><span>Continue the next topic in My Plan<small>Open your suggested topic and the reason behind it.</small></span><ChevronDown size={18}/></summary>{showPlanSuggestion && <GoalJourney onStartMission={startTest} missionBusy={starting} preferredSubject={requestedSubject} preferredChapter={requestedChapter}/>}</details>
+      <details className="practice-plan-suggestion" open={showPlanSuggestion} onToggle={e => setShowPlanSuggestion(e.currentTarget.open)}><summary><Target size={18}/><span>Suggested practice from My Plan<small>Open your suggested topic and the reason behind it.</small></span><ChevronDown size={18}/></summary>{showPlanSuggestion && <GoalJourney onStartMission={startTest} missionBusy={starting} preferredSubject={requestedSubject} preferredChapter={requestedChapter}/>}</details>
     </main>
   </div>
 }

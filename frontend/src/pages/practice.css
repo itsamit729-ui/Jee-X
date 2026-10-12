@@ -23,5 +23,54 @@
 @media(hover:hover){.practice-choice:hover:not(:disabled),.practice-size-options button:hover:not(:disabled){border-color:var(--pen);transform:translateY(-2px)}.practice-focus-options button:hover:not(:disabled){border-color:var(--pen)}}
 @keyframes practice-arrive{from{opacity:0;transform:translateY(9px)}to{opacity:1;transform:none}}@keyframes practice-count{from{opacity:.5;transform:translateY(5px)}to{opacity:1;transform:none}}
 @media(max-width:1000px){.practice-paper-link{display:none}.practice-studio{grid-template-columns:minmax(0,1.5fr) minmax(275px,1fr)}.practice-config,.practice-ticket{padding:22px}.practice-choices{grid-template-columns:1fr;gap:7px}.practice-choice{flex-direction:row;align-items:center;gap:11px;padding:11px 36px 11px 13px}.practice-choice-copy small{margin-top:3px}.practice-choice-check{top:calc(50% - 8px)}.practice-mode-description{min-height:0}.practice-bottom-line{align-items:flex-start;flex-direction:column;gap:13px}}
-@media(max-width:680px){.practice-welcome{margin:1px 0 21px}.practice-welcome h1{font-size:30px;margin:10px 0}.practice-welcome p{font-size:12px;max-width:44ch}.practice-mobile-break{display:block}.practice-studio{grid-template-columns:1fr;border-radius:14px}.practice-config,.practice-ticket{padding:20px}.practice-section-heading h2{font-size:14px}.practice-choice{min-height:62px}.practice-choice-copy strong{font-size:12px}.practice-choice-copy small{font-size:10px}.practice-mode-description{font-size:11px;margin-bottom:19px}.practice-focus-options button{min-height:44px;padding:10px 12px}.practice-size-options button{padding:12px 9px;gap:10px}.practice-size-options button>span{font-size:9px}.practice-ticket{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.practice-ticket-top{grid-column:1/-1}.practice-ticket h2{grid-column:1/-1;margin:16px 0}.practice-ticket-quantity{grid-column:1/-1;padding-bottom:15px}.practice-ticket-quantity strong{font-size:47px}.practice-ticket-focus{grid-column:1/-1;min-height:0;padding:14px 0}.practice-ticket-outcome{grid-column:1/-1;padding:17px 0}.practice-setup .practice-ticket .btn,.practice-ticket-note{grid-column:1/-1}.practice-ticket-note{min-height:0}.practice-bottom-line p{gap:6px;font-size:9px;flex-wrap:wrap;line-height:1.6}.practice-bottom-line p>svg{margin:0 2px;width:10px}.practice-plan-suggestion>summary{padding:16px}.practice-plan-suggestion>summary small{line-height:1.5}.practice-plan-suggestion>summary>span{font-size:11px}}
+/* Small screens use a single form, without repeating the desktop cards. */
+.practice-mobile-only { display: none; }
+@media (max-width: 680px) {
+  .practice-setup { padding-top: 26px; }
+  .practice-setup .practice-desktop-only { display: none; }
+  .practice-setup .practice-mobile-only { display: block; }
+  .practice-welcome { margin: 0 0 30px; }
+  .practice-welcome h1 { font-size: 29px; line-height: 1.18; margin: 12px 0; }
+  .practice-welcome p { font-size: 14px; line-height: 1.65; max-width: 36ch; }
+  .practice-welcome .practice-eyebrow { font-size: 10px; }
+  .practice-studio { display: block; border: 0; border-radius: 0; background: transparent; box-shadow: none; overflow: visible; }
+  .practice-config { padding: 0; }
+  .practice-config > .practice-section-heading:first-child,
+  .practice-choices,
+  .practice-focus-options,
+  .practice-focus-fields > legend,
+  .practice-number { display: none; }
+  .practice-mobile-field > label,
+  .practice-chapter-field > label { display: block; margin-bottom: 10px; font-size: 14px; font-weight: 600; color: var(--ink); }
+  .practice-mobile-field .input,
+  .practice-chapter-field .input { width: 100%; min-height: 50px; font-size: 16px; padding: 12px; border-radius: 10px; background-color: var(--surface); }
+  .practice-mode-description { font-size: 13px; line-height: 1.6; min-height: 0; margin: 10px 0 26px; }
+  .practice-chapter-field { display: block; margin-top: 22px; }
+  .practice-chapter-field > span { display: block; margin-top: 8px; font-size: 12px; }
+  .practice-size-heading { border: 0; padding: 0; margin: 28px 0 12px; }
+  .practice-section-heading h2 { font-size: 14px; font-weight: 600; }
+  .practice-section-heading p { font-size: 12px; line-height: 1.6; margin-top: 6px; }
+  .practice-size-options { gap: 10px; }
+  .practice-size-options button { min-height: 52px; padding: 12px 8px; align-items: center; justify-content: center; }
+  .practice-size-options button > span { display: none; }
+  .practice-size-options strong { font-size: 19px; letter-spacing: -.02em; }
+  .practice-size-options strong small { font-size: 14px; }
+  .practice-ticket { display: block; margin-top: 28px; padding: 22px 0 0; border-top: 1px solid var(--line); background: transparent; color: var(--ink); overflow: visible; }
+  .practice-ticket::before,
+  .practice-ticket-top,
+  .practice-ticket > h2,
+  .practice-ticket-quantity,
+  .practice-ticket-focus,
+  .practice-ticket-outcome { display: none; }
+  .practice-mobile-summary { margin: 0 0 16px; font-size: 14px; font-weight: 600; line-height: 1.6; }
+  .practice-mobile-summary > span { color: var(--ink-3); font-size: 13px; font-weight: 400; white-space: nowrap; }
+  .practice-setup .practice-ticket .btn { min-height: 52px; margin: 0; padding: 14px 18px; border-radius: 10px; font-size: 15px; }
+  .practice-ticket-note { min-height: 0; margin: 12px 0 0; font-size: 12px; line-height: 1.6; color: var(--ink-3); }
+  .practice-bottom-line { display: none; }
+  .practice-plan-suggestion { margin-top: 30px; border-radius: 10px; background: transparent; }
+  .practice-plan-suggestion > summary { min-height: 56px; gap: 10px; padding: 16px 12px; }
+  .practice-plan-suggestion > summary > span { font-size: 13px; line-height: 1.5; }
+  .practice-plan-suggestion > summary > svg { flex-shrink: 0; }
+  .practice-plan-suggestion > summary small { display: none; }
+}
 @media(prefers-reduced-motion:reduce){.practice-studio,.practice-ticket-quantity strong{animation:none}.practice-setup :is(button,a,summary>svg){transition:none!important;transform:none!important}}
