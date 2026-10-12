@@ -5,6 +5,7 @@ import time
 import functools
 import hashlib
 import hmac
+import json
 import os
 import re
 import uuid
@@ -189,7 +190,8 @@ def dispatch(tasks, manual_reel=False):
         tasks.add_task(comments.drain_safe)
     hold = budget.cached('publishing-hold')
     if hold:
-        return {'state': 'delivery_hold', **hold}
+        tasks.add_task(refresh_hold, hold)
+        return {'state': 'delivery_hold', **hold, 'delivery_check': 'requested'}
     slot = MANUAL_REEL_SLOT if manual_reel else current_slot()
     if slot is None:
         return {'state': 'idle', 'next_slot': '07:00 Asia/Kolkata'}
@@ -294,6 +296,44 @@ def refresh_delivery(day, owner, post_id):
         pass
 
 
+@tracked
+def refresh_hold(expected):
+    """Reconcile the held post without creating or retrying any Buffer post."""
+    from app.models.social_job import SocialCache
+    post_id = expected.get('post_id')
+    if not post_id:
+        return
+    try:
+        # A durable lease limits checks across cron calls, manual tests and workers.
+        with SessionLocal() as db:
+            budget.locked(db)
+            current = db.get(SocialCache, 'publishing-hold')
+            if not current or json.loads(current.value) != expected:
+                return
+            check = db.get(SocialCache, 'hold-delivery-check')
+            if check and check.value == post_id and check.expires_at > datetime.utcnow():
+                return
+            db.merge(SocialCache(name='hold-delivery-check', value=post_id,
+                                expires_at=datetime.utcnow()+timedelta(minutes=30)))
+            db.commit()
+        post = worker.buffer('query($id:PostId!) { post(input:{id:$id}) { id status } }', {'id': post_id}).get('post')
+        if not post or post.get('id') != post_id or post.get('status') != 'sent':
+            return
+        with SessionLocal() as db:
+            budget.locked(db)
+            current = db.get(SocialCache, 'publishing-hold')
+            # Do not clear a different hold installed while the request was running.
+            if not current or json.loads(current.value) != expected:
+                return
+            db.query(SocialJob).filter_by(post_id=post_id).update(
+                {'state': 'published', 'error': None, 'updated_at': datetime.utcnow()}, synchronize_session=False)
+            db.delete(current)
+            db.commit()
+    except Exception:
+        # Missing posts, quota exhaustion and network errors cannot prove delivery.
+        pass
+
+
 def hold_delivery(post):
     # Treat any reported delivery failure conservatively; API status alone cannot
     # identify spam or distinguish a stale Buffer error from a live Instagram post.
@@ -317,8 +357,15 @@ def run_job(day, owner):
                     db.query(SocialJob).filter(SocialJob.post_id == post['id']).update({'state':'published'}, synchronize_session=False)
             cleanup(db)
             db.commit()
-        failed_delivery = next((p for p in recent if p['status'] in ('error', 'failed', 'notSent')), None)
-        if failed_delivery:
+        for failed_delivery in (p for p in recent if p['status'] in ('error', 'failed', 'notSent')):
+            # A historical list entry can lag behind recovery on the exact post.
+            try:
+                delivered = worker.buffer('query($id:PostId!) { post(input:{id:$id}) { id status } }', {'id': failed_delivery['id']}).get('post')
+            except Exception:
+                delivered = None
+            if delivered and delivered.get('id') == failed_delivery['id'] and delivered.get('status') == 'sent':
+                failed_delivery['status'] = 'sent'
+                continue
             hold_delivery(failed_delivery)
             raise worker.ServiceError('Publishing held for 24 hours after a Buffer delivery failure; inspect the existing post. Already queued posts are not paused.')
         calendar_day, slot = day.split(':')

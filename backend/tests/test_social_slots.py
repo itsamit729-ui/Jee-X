@@ -250,10 +250,79 @@ def test_old_env_cannot_restore_thirty_posts(monkeypatch):
 def test_reported_delivery_error_holds_new_posts(setup,monkeypatch):
     client,factory,clock,submitted=setup
     monkeypatch.setattr(social.worker,'posts',lambda *a:[{'id':'failed-post','status':'error','text':'Existing post'}])
+    monkeypatch.setattr(social.worker,'buffer',lambda *a:{'post':{'id':'failed-post','status':'error'}})
     client.post('/api/social/trigger',headers=AUTH)
     assert not submitted
     assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='delivery_hold'
     assert client.get('/api/social/status',headers=AUTH).json()['publishing_hold']['post_id']=='failed-post'
+
+
+def test_recovered_hold_marks_exact_post_published_without_reposting(setup):
+    client,factory,_,submitted=setup
+    with factory() as db:
+        db.add(SocialSlot(day='2026-10-06:s00',owner='original',state='needs_review',
+                         post_id='recovered',error='Delivery failed',updated_at=datetime.utcnow(),attempts=1))
+        db.commit()
+    social.hold_delivery({'id':'recovered'})
+    result=client.post('/api/social/trigger',headers=AUTH).json()
+    assert result['state']=='delivery_hold' and result['delivery_check']=='requested'
+    assert social.budget.cached('publishing-hold') is None
+    assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='published'
+    with factory() as db:
+        job=db.get(SocialSlot,'2026-10-06:s00')
+        assert job.post_id=='recovered' and job.attempts==1 and job.error is None
+    assert not submitted
+
+
+@pytest.mark.parametrize('post',[None,{'id':'held','status':'error'},
+    {'id':'held','status':'scheduled'},{'id':'held','status':'sending'},
+    {'id':'other','status':'sent'}])
+def test_hold_requires_exact_sent_post_and_checks_are_throttled(setup,monkeypatch,post):
+    client,_,_,submitted=setup
+    calls=[]
+    def read(query,variables):
+        calls.append(variables)
+        return {'post':post}
+    monkeypatch.setattr(social.worker,'buffer',read)
+    social.hold_delivery({'id':'held'})
+    for _ in range(3):
+        assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='delivery_hold'
+    assert calls==[{'id':'held'}]
+    assert social.budget.cached('publishing-hold')['post_id']=='held'
+    assert not submitted
+
+
+def test_hold_survives_status_read_failure(setup,monkeypatch):
+    client,_,_,submitted=setup
+    def fail(*args):
+        raise social.worker.ServiceError('Buffer local free-tier budget reached')
+    monkeypatch.setattr(social.worker,'buffer',fail)
+    social.hold_delivery({'id':'held'})
+    assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='delivery_hold'
+    assert social.budget.cached('publishing-hold')['post_id']=='held'
+    assert not submitted
+
+
+def test_recovery_cannot_clear_a_replaced_hold(setup,monkeypatch):
+    client,_,_,submitted=setup
+    social.hold_delivery({'id':'held'})
+    def read(*args):
+        social.budget.cache('publishing-hold',{'post_id':'new-failure','reason':'review'},86400)
+        return {'post':{'id':'held','status':'sent'}}
+    monkeypatch.setattr(social.worker,'buffer',read)
+    client.post('/api/social/trigger',headers=AUTH)
+    assert social.budget.cached('publishing-hold')['post_id']=='new-failure'
+    assert not submitted
+
+
+def test_stale_failure_list_cannot_rehold_confirmed_sent_post_or_duplicate_it(setup,monkeypatch):
+    client,_,_,submitted=setup
+    monkeypatch.setattr(social.worker,'posts',lambda *a:[{'id':'recovered','status':'error',
+        'text':'Existing post\nJeeEdge daily 2026-10-06 / s00'}])
+    client.post('/api/social/trigger',headers=AUTH)
+    assert social.budget.cached('publishing-hold') is None
+    assert client.get('/api/social/status',headers=AUTH).json()['jobs'][0]['post_id']=='recovered'
+    assert not submitted
 
 
 def test_repetition_gate_holds_before_render_and_submit(setup,monkeypatch):

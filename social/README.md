@@ -113,7 +113,14 @@ quota or creating jobs; frozen or queued slots can differ from this preview.
 A Buffer timeout or uncertain submission is held for review, never blindly
 resubmitted. `scheduled` means Buffer accepted it; `published` means Buffer was
 observed reporting sent. Buffer error statuses hold new work for twenty-four
-hours. Inspect the existing post before retrying or removing any record.
+hours. During a hold, trigger/test calls request a read-only check of the exact
+flagged post, at most once every thirty minutes. Only that post reporting `sent`
+clears the hold early; unrelated published posts, missing posts and read errors
+do not. The triggering response may still say `delivery_hold` because the check
+runs in the background; inspect status afterward, or let the next cron run proceed.
+Stale failures in the recent-post list are checked against the exact post before
+holding again. These checks use the existing Buffer budget and never resubmit a post.
+Inspect the existing post before retrying or removing any record.
 `SOCIAL_PAUSED=true` stops new jobs; pause existing queued posts in Buffer itself.
 Confirmed published or safely failed assets become eligible for cleanup after
 seven days; uncertain submissions retain their media.
