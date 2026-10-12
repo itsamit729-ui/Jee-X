@@ -74,6 +74,7 @@ def start(body: Start, exam: Literal['bitsat', 'mht_cet'] = 'bitsat', user: mode
 class PaperStart(BaseModel):
     year: int = Field(ge=1900, le=2100)
     shift: str = Field(min_length=1, max_length=50)
+    acquisition_source: Literal['direct', 'google', 'youtube', 'instagram', 'whatsapp', 'telegram', 'teacher', 'other'] | None = None
 
 
 @router.post('/{exam}/papers', response_model=schemas.SubjectTestOut, status_code=201)
@@ -88,7 +89,10 @@ def start_paper(body: PaperStart, exam: Literal['bitsat', 'mht_cet'],
     if not ids:
         raise HTTPException(404, 'No published questions are available for this paper.')
     title = f'{"BITSAT" if exam == "bitsat" else "MHT CET"} {body.year} · {body.shift} · Shift mock'
-    # This is timed practice with available source questions, not a sectional exam simulation.
+    if exam == 'mht_cet' and body.acquisition_source is not None:
+        from app.services.paper_discovery import count_event, paper_slug
+        count_event(db, paper_slug(body.year, body.shift), body.acquisition_source, 'mock_start')
+    # Use available questions within the existing timed exam contract.
     return create_attempt(db, user, exam, ids, title, 'PCM' if exam == 'mht_cet' else 'ALL', 10800, is_mock=True)
 
 

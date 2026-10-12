@@ -1,3 +1,4 @@
+import { clearPaperReturn } from '../lib/paperReturn.js'
 import { useEffect, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ArrowUpRight, BookOpen, Clock3, Layers3, ChevronDown } from 'lucide-react'
@@ -8,6 +9,7 @@ import './pyqs.css'
 
 export default function PYQs() {
   const navigate = useNavigate()
+  useEffect(() => { clearPaperReturn() }, [])
   const [params, setParams] = useSearchParams()
   const exam = params.get('exam') === 'bitsat' ? 'bitsat' : 'mht_cet'
   const [view, setView] = useState('papers')
@@ -22,19 +24,21 @@ export default function PYQs() {
     let active = true
     setView(exam === 'bitsat' ? 'practice' : 'papers')
     setError(''); setCatalog(null)
-    request(`/api/pyqs/${exam}`).then(data => { if (active) { setCatalog(data); setYear(data.years.find(y => y.papers?.length || y.subjects.some(s => s.available))?.year || data.years[0]?.year || 2026) } })
+    request(`/api/pyqs/${exam}`).then(data => { if (active) { setCatalog(data); setYear(data.years.find(y => y.year === Number(params.get('year')))?.year || data.years.find(y => y.papers?.length || y.subjects.some(s => s.available))?.year || data.years[0]?.year || 2026) } })
       .catch(e => { if (active) setError(e.message) })
     return () => { active = false }
   }, [retry, exam])
   const subjects = catalog?.years.find(item => item.year === year)?.subjects || []
   const selected = subjects.find(item => item.code === subject)
   const papers = catalog?.years.find(item => item.year === year)?.papers || []
+  const requestedShift = params.get('shift')
+  const selectedPaper = requestedShift && year === Number(params.get('year')) ? papers.find(p => p.shift === requestedShift) : null
   async function start(paper = null) {
     requestFullscreen()
     setBusy(true); setError('')
     try {
       const test = await request(`/api/pyqs/${exam}/${paper ? 'papers' : 'practice'}`, {
-        method: 'POST', body: paper ? { year, shift: paper.shift } : { year, subject_code: subject, count },
+        method: 'POST', body: paper ? { year, shift: paper.shift, acquisition_source: ['direct','google','youtube','instagram','whatsapp','telegram','teacher','other'].includes(params.get('source')) ? params.get('source') : undefined } : { year, subject_code: subject, count },
       })
       navigate(`/subject-test?pyq=${exam}`, { state: { missionTest: test } })
     } catch (e) { setError(e.message) }
@@ -56,6 +60,8 @@ export default function PYQs() {
         <div className="pyq-filter-heading"><span>01</span>Choose a year</div><div className="pyq-years" role="group" aria-label="Exam year">{catalog.years.map(item => <button type="button" key={item.year} aria-pressed={year===item.year} disabled={busy} onClick={() => setYear(item.year)}>{item.year}</button>)}</div>
         <div className="pyq-filter-heading"><span>02</span>Choose your session</div><div className="pyq-years pyq-format" role="group" aria-label="Practice format">{[['papers', 'Year & shift mocks'], ['practice', 'Subject practice']].map(([code, label]) => <button key={code} disabled={busy} aria-pressed={view === code} onClick={() => setView(code)}>{label}</button>)}</div>
         {view === 'papers' ? <>
+          {selectedPaper && <div className="pyq-timing-note"><div><strong>Your selected paper: {selectedPaper.shift}</strong><p>{selectedPaper.available} available questions · Ready when you are.</p><button className="btn btn-primary" disabled={busy} onClick={() => start(selectedPaper)}>{busy ? 'Preparing…' : 'Start selected mock'}</button></div></div>}
+          {requestedShift && year === Number(params.get('year')) && !selectedPaper && <p role="status">That paper is no longer available. Choose another shift below.</p>}
           <p className="muted">{papers.length ? `${papers.length} shift mocks · All available subjects · 180 minutes · Auto-submit` : 'No dated shift papers are available for this year yet. Subject practice remains available when questions have no shift metadata.'}</p>
           {papers.length > 0 && <p className="pyq-timing-note"><Clock3 size={15}/><span>Reconstructed papers may be incomplete. MHT-CET: 90 min Physics/Chemistry → 90 min Mathematics. Original question order may differ.</span></p>}
           <div className="pyq-papers">{papers.map(paper => <article className="pyq-paper" key={paper.shift}>

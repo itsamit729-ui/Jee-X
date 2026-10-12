@@ -115,3 +115,5 @@ from app.models.social_job import SocialJob, SocialMedia, SocialSlot, SocialAsse
 from app.models.social_job import SocialUsage, SocialQuotaLock, SocialCache
 
 from app.models.social_comment import SocialLesson, SocialComment, SocialCommentDispatch
+
+from app.models.acquisition import AcquisitionCount

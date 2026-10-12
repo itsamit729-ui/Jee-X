@@ -1,3 +1,4 @@
+import { rememberPaperReturn, pendingPaperReturn } from '../lib/paperReturn.js'
 import { useEffect, useState } from 'react'
 import { Link, Navigate, useNavigate, useSearchParams } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, CheckCircle2, Eye, EyeOff, Mail } from 'lucide-react'
@@ -27,7 +28,8 @@ export default function AuthPage({ mode = 'login' }) {
   const { login, refreshSession, user, isAuthenticated, isLoading } = useAuth()
   const navigate = useNavigate()
   const [params] = useSearchParams()
-  const returnTo = safeReturnTo(params.get('returnTo'))
+  const returnTo = safeReturnTo(params.get('returnTo') || pendingPaperReturn())
+  useEffect(() => { rememberPaperReturn(returnTo) }, [returnTo])
   const [accountType, setAccountType] = useState('student')
   const [terms, setTerms] = useState(emptyTerms)
   const destination = account => account.terms_required ? `/signup/terms?returnTo=${encodeURIComponent(returnTo)}` : account.teacher && returnTo === '/dashboard' ? '/teacher' : account.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`

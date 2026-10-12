@@ -67,6 +67,8 @@ app.include_router(test_attempts.router)
 app.include_router(subjects.router)
 app.include_router(subject_tests.router)
 app.include_router(pyqs.router)
+from app.routers import public_papers
+app.include_router(public_papers.router)
 app.include_router(subject_test_attempts.router)
 app.include_router(predictions.router)
 app.include_router(daily_question.router)

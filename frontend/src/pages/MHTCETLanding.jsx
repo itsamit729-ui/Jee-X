@@ -16,7 +16,7 @@ export default function MHTCETLanding() {
         <p className="muted" style={{fontSize:12,letterSpacing:1}}>MHT-CET PRACTICE</p>
         <h1 className="page-title">MHT-CET mocks by year and shift</h1>
         <p className="muted">Rehearse an MHT-CET paper in a timed mock, choose a year and shift, then review your attempt and explore your college outlook.</p>
-        <Link className="btn btn-primary" to="/pyq?exam=mht_cet">Browse MHT-CET papers <ArrowRight size={16}/></Link>
+        <a className="btn btn-primary" href="/mhtcet/papers">Browse MHT-CET papers <ArrowRight size={16}/></a>
       </section>
       <section aria-label="How MHT-CET mock practice works" style={{display:'grid',gap:16,margin:'28px 0'}}>
         {features.map(({Icon,title,text}, index) => <article className="panel" key={title} style={{display:'flex',gap:16,alignItems:'flex-start'}}>
@@ -25,8 +25,8 @@ export default function MHTCETLanding() {
       </section>
       <section className="panel" style={{marginBottom:24}}>
         <h2 style={{fontSize:20}}>How to start</h2>
-        <p className="muted" style={{lineHeight:1.7}}>Open the MHT-CET question archive, select the available paper by year and shift, and start your mock. You’ll need to sign in to access the archive and save your result. Paper availability can vary as the archive is updated.</p>
-        <Link className="btn btn-secondary" to="/pyq?exam=mht_cet">Go to the MHT-CET archive <ArrowRight size={16}/></Link>
+        <p className="muted" style={{lineHeight:1.7}}>Open the MHT-CET question archive, select the available paper by year and shift, and start your mock. Browse papers and previews without an account. Sign in to start a mock and save your result. Paper availability can vary as the archive is updated.</p>
+        <a className="btn btn-secondary" href="/mhtcet/papers">Go to the MHT-CET archive <ArrowRight size={16}/></a>
       </section>
       <p className="muted" style={{fontSize:12,lineHeight:1.6}}>Jee Edge is an independent exam practice platform and is not affiliated with the MHT-CET examination authority.</p>
     </main>
