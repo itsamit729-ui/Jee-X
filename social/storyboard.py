@@ -30,12 +30,18 @@ FORMATS=('predict','compare','spot_trap')
 
 
 def fallback(content):
+    from social import creative
+    if creative.active(content):
+        return creative.plan(content)
     n=int(hashlib.sha256(content['lesson_id'].encode()).hexdigest()[:8],16)
     return {'format':FORMATS[n%3],'hook_index':n%3,'pace':'steady' if n%2 else 'brisk',
             'accent':'blue' if n%2 else 'cream','ending':'save','source':'authored'}
 
 
 def validate(value,content):
+    from social import creative
+    if creative.active(content):
+        return isinstance(value,dict) and value.get('version') == creative.VERSION and value.get('format') in creative.FORMATS and value.get('soundtrack') in range(4)
     if not isinstance(value,dict) or value.get('format') not in FORMATS:return False
     return (type(value.get('hook_index')) is int and value['hook_index'] in range(3)
         and value.get('pace') in ('brisk','steady') and value.get('accent') in ('blue','cream')
@@ -49,4 +55,7 @@ def plan(content):
 
 
 def beats(plan):
+    from social import creative
+    if plan.get('version') == creative.VERSION and plan.get('format') in creative.TIMINGS:
+        return creative.TIMINGS[plan['format']]
     return (4,17,23,28)

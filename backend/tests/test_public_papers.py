@@ -93,3 +93,23 @@ def test_aggregate_events_validate_origin_and_paper(setup):
     assert client.get('/api/admin/paper-acquisition').status_code == 401
     with factory() as db:
         assert db.query(models.AcquisitionCount).one().count == 2
+
+
+def test_instagram_landing_has_real_destinations_and_aggregate_tracking(setup):
+    client,_,factory=setup
+    response=client.get('/start?to=cet&utm_source=instagram')
+    assert response.status_code==200
+    assert 'rel="canonical" href="https://jeeedge.in/start"' in response.text
+    assert 'data-paper="instagram" data-source="instagram"' in response.text
+    assert response.text.index('<h2>Choose an MHT-CET paper') < response.text.index('<h2>Try a free warm-up')
+    assert '/free-test?source=instagram' in response.text
+    assert '/mhtcet/papers?utm_source=instagram' in response.text
+    assert '/subject-test?source=instagram' in response.text
+    assert 'sign in for a timed mock' in response.text
+    assert client.get('/start?to=https://example.com').status_code==422
+    assert 'https://jeeedge.in/start' in client.get('/sitemap.xml').text
+    headers={'origin':'http://localhost:5173','x-jee-request':'1'}
+    for event in ('view','start_click'):
+        assert client.post('/api/public-papers/events',json={'paper':'instagram','source':'instagram','event':event},headers=headers).status_code==204
+    with factory() as db:
+        assert {(r.event,r.source,r.count) for r in db.query(models.AcquisitionCount)}=={('view','instagram',1),('start_click','instagram',1)}

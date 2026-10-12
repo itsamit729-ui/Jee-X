@@ -179,6 +179,10 @@ def carousel(c,copy,output):
             fit(d,title,(112 if kind=='notebook' else 98,246,870,325),154 if role=='working' else 66,ink,face=face,bold=True)
             d.line((112,622,980,622),fill=accent,width=3)
             fit(d,body,(112,676,866,500),49,ink,face=face)
+        from social import creative
+        if creative.active(c) and index == len(slides)-1:
+            d.rectangle((0,1240,1080,1350),fill=COLORS[kind][0])
+            fit(d,'Continue practising at jeeedge.in/start',(60,1268,960,56),30,ink,bold=True)
         p=Path(output)/f'{index+1}.png';im.save(p);paths.append(p)
     return paths
 

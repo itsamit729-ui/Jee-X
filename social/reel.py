@@ -1,4 +1,4 @@
-"""Bounded animated teaching Reels with bundled CC BY music."""
+"""Bounded teaching Reels with original sound and legacy licensed music."""
 import hashlib
 import json
 import subprocess
@@ -6,7 +6,7 @@ import time
 from functools import lru_cache
 from pathlib import Path
 from PIL import Image, ImageDraw
-from social import worker, motion, cinema, storyboard, sound
+from social import worker, motion, cinema, storyboard, sound, creative
 MAX_VIDEO_BYTES = 8 * 1024 * 1024
 FPS = 24
 DURATION = 28
@@ -14,7 +14,9 @@ AUDIO = Path(__file__).with_name('audio') / 'carefree-28s.mp3'
 MANIFEST = AUDIO.with_name('license.json')
 
 
-def music_credit():
+def music_credit(content=None):
+    if content and creative.active(content):
+        return 'Music: original synthesized rhythm and transition cues by Jee Edge.'
     data = json.loads(MANIFEST.read_text())
     return (f'Music: "{data["title"]}" by {data["artist"]} ({data["source"]}). '
             f'CC BY 4.0: {data["license"]}. Excerpt; volume and fades adjusted. Original synthesized cues by JeeEdge.')
@@ -49,22 +51,25 @@ def frame(content, copy, seconds):
     if not storyboard.validate(plan,content):plan=storyboard.fallback(content)
     if (copy or {}).get('hook'):
         plan={**plan, 'hook':copy['hook']}
-    from social import art_direction
+    from social import art_direction, reel_design
+    if creative.active(content):
+        return reel_design.frame(content, plan, seconds)
     return art_direction.reel_frame(content,plan,seconds)
 
 
 def render(content, directory, copy=None):
     started = time.monotonic()
-    audio = verified_audio()
     directory = Path(directory)
     plan=(copy or {}).get('storyboard')
     if not storyboard.validate(plan,content):plan=storyboard.fallback(content)
     copy={**(copy or {}),'storyboard':plan}
+    duration = storyboard.beats(plan)[-1]
+    audio = sound.bed(directory/'music.wav',plan) if creative.active(content) else verified_audio()
     effects=sound.render(directory/'effects.wav',plan)
     frames = directory / 'frames'
     frames.mkdir()
     try:
-        for index in range(DURATION*FPS):
+        for index in range(duration*FPS):
             if time.monotonic()-started >= 150:
                 raise worker.ServiceError('Animation exceeded the rendering time budget.')
             frame(content,copy or {},index/FPS).save(frames / f'{index:04d}.jpg',quality=88)
@@ -72,8 +77,8 @@ def render(content, directory, copy=None):
         raise worker.ServiceError('Animation frames could not be written.') from None
     output = directory / 'reel.mp4'
     clips = copy.get('voice_clips', [])
-    music_volume = '0.07' if clips else '0.24'
-    filters = [f'[1:a]volume={music_volume},afade=t=in:d=0.5,afade=t=out:st=26:d=2[m]',
+    music_volume = ('0.3' if clips else '0.9') if creative.active(content) else ('0.07' if clips else '0.24')
+    filters = [f'[1:a]volume={music_volume},afade=t=in:d=0.5,afade=t=out:st={duration-2}:d=2[m]',
                '[2:a]volume=0.4[fx]']
     labels = '[m][fx]'
     extra_inputs = []
@@ -86,7 +91,7 @@ def render(content, directory, copy=None):
     command = ['ffmpeg','-hide_banner','-loglevel','error','-nostdin','-y',
                '-threads','1','-framerate',str(FPS),'-i',str(frames/'%04d.jpg'),
                '-i',str(audio),'-i',str(effects),*extra_inputs,
-               '-t',str(DURATION),'-map','0:v:0','-map','[mix]',
+               '-t',str(duration),'-map','0:v:0','-map','[mix]',
                '-filter_complex_threads','1','-filter_complex',';'.join(filters),
                '-c:v','libx264','-threads','1','-filter_threads','1','-preset','veryfast',
                '-crf','26','-pix_fmt','yuv420p','-r','30','-c:a','aac','-ac','2','-b:a','96k',
@@ -104,6 +109,6 @@ def render(content, directory, copy=None):
     audio = next((s for s in probe['streams'] if s['codec_type'] == 'audio'), {})
     if audio.get('codec_name') != 'aac' or int(audio.get('channels', 0)) != 2:
         raise worker.ServiceError('Reel audio validation failed.')
-    if not 27 <= float(probe['format']['duration']) <= 29 or output.stat().st_size > MAX_VIDEO_BYTES:
+    if not duration-.2 <= float(probe['format']['duration']) <= duration+.2 or output.stat().st_size > MAX_VIDEO_BYTES:
         raise worker.ServiceError('Reel duration or size exceeds the free-worker budget.')
     return output

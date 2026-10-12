@@ -56,12 +56,12 @@ def assets():
         tags += f'<script type="module" src="/{escape(entry["file"], quote=True)}"></script>'
     return tags
 
-def page(title, description, path, content, paper='archive'):
+def page(title, description, path, content, paper='archive', source='direct'):
     title, description, url = escape(title), escape(description), escape(ORIGIN + path)
     return HTMLResponse(f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} · Jee Edge</title><meta name="description" content="{description}"><meta name="robots" content="index, follow"><link rel="canonical" href="{url}">
 <meta property="og:title" content="{title} · Jee Edge"><meta property="og:description" content="{description}"><meta property="og:url" content="{url}"><meta property="og:type" content="website"><meta name="twitter:card" content="summary">
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" sizes="96x96" href="/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="stylesheet" href="/public-papers.css">{assets()}</head><body data-paper="{escape(paper, quote=True)}"><a class="skip" href="#main">Skip to papers</a><header><a class="brand" href="/">JEE <span>EDGE</span></a><nav><a href="/mhtcet/papers">MHT-CET papers</a><a href="/pricing">Plans</a></nav></header><main id="main">{content}</main><footer><p>Independent preparation platform. Not affiliated with the examination authority.</p><a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> · <a href="mailto:admin@jeeedge.in">Contact</a></footer></body></html>''', headers={'Cache-Control': 'no-cache'})
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48 64x64"><link rel="icon" type="image/png" sizes="96x96" href="/favicon.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="stylesheet" href="/public-papers.css">{assets()}</head><body data-paper="{escape(paper, quote=True)}" data-source="{escape(source, quote=True)}"><a class="skip" href="#main">Skip to papers</a><header><a class="brand" href="/">JEE <span>EDGE</span></a><nav><a href="/mhtcet/papers">MHT-CET papers</a><a href="/pricing">Plans</a></nav></header><main id="main">{content}</main><footer><p>Independent preparation platform. Not affiliated with the examination authority.</p><a href="/terms">Terms</a> · <a href="/privacy">Privacy</a> · <a href="mailto:admin@jeeedge.in">Contact</a></footer></body></html>''', headers={'Cache-Control': 'no-cache'})
 
 @router.get('/mhtcet/papers', response_class=HTMLResponse)
 def archive(db: Session = Depends(get_db)):
@@ -105,9 +105,24 @@ def paper_page(year: int, slug: str, db: Session = Depends(get_db)):
     content += f'</section><a class="button" data-start href="{escape(target, quote=True)}">Continue to timed mock →</a><p><a href="/mhtcet/papers">Explore more papers</a></p>'
     return page(f'MHT-CET {p["shift"]} Question Paper & Mock', f'Preview {p["available"]} available questions from MHT-CET {p["shift"]}. Sign in for a timed reconstructed mock.', path_for(p), content, p['slug'])
 
+@router.get('/start', response_class=HTMLResponse)
+def instagram_start(to: Literal['warmup', 'cet', 'practice'] = 'warmup'):
+    choices = {
+        'warmup': ('01', 'Try a free warm-up', 'Ten Physics, Chemistry and Maths questions, with explanations. No signup needed to begin.', '/free-test?source=instagram', 'Start the warm-up'),
+        'cet': ('02', 'Choose an MHT-CET paper', 'Browse actual available years and shifts. Preview questions freely, then sign in for a timed mock.', '/mhtcet/papers?utm_source=instagram', 'Browse year & shift papers'),
+        'practice': ('03', 'Work on a chapter', 'Sign in, choose a subject and chapter, and review your answers after practice.', '/subject-test?source=instagram', 'Choose a chapter'),
+    }
+    content = '<div class="social-start"><p class="eyebrow">FROM THE REEL TO YOUR NEXT QUESTION</p><h1>Seen the idea?<br>Now try it.</h1><p class="intro">One useful concept is a start. Choose the practice that fits your next few minutes.</p>'
+    for key in [to] + [k for k in choices if k != to]:
+        number, title, body, href, label = choices[key]
+        content += f'<section class="card"><span class="eyebrow">{number} / {"START HERE" if key == to else "ALSO ON JEE EDGE"}</span><h2>{title}</h2><p>{body}</p><a class="button {"" if key == to else "secondary"}" data-start href="{escape(href, quote=True)}">{label} →</a></section>'
+    content += '<p class="hint">Reels use original teaching examples. The paper archive separately labels reconstructed papers and their available coverage.</p></div>'
+    return page('Free Practice & MHT-CET Papers', 'Continue from Jee Edge on Instagram: try a free warm-up, preview MHT-CET year and shift papers, or choose chapter practice.', '/start', content, paper='instagram', source='instagram')
+
+
 @router.get('/sitemap.xml', include_in_schema=False)
 def sitemap(db: Session = Depends(get_db)):
-    paths = ['/', '/syllabus', '/pricing', '/free-test', '/image-questions', '/mhtcet-mock-tests', '/mhtcet/papers']
+    paths = ['/', '/syllabus', '/pricing', '/free-test', '/image-questions', '/mhtcet-mock-tests', '/mhtcet/papers', '/start']
     paths += [path_for(p) for p in papers(db)]
     xml = '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join(f'<url><loc>{escape(ORIGIN + p)}</loc></url>' for p in paths) + '</urlset>'
     return Response(xml, media_type='application/xml', headers={'Cache-Control': 'public, max-age=300'})
@@ -119,7 +134,7 @@ class Event(BaseModel):
 
 @router.post('/api/public-papers/events', status_code=204, dependencies=[Depends(require_browser_request)])
 def event(body: Event, db: Session = Depends(get_db)):
-    if body.paper != 'archive' and not any(p['slug'] == body.paper for p in papers(db)):
+    if body.paper not in ('archive', 'instagram') and not any(p['slug'] == body.paper for p in papers(db)):
         raise HTTPException(404, 'Paper not found')
     count_event(db, body.paper, body.source, body.event)
     db.commit()

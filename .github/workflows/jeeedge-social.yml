@@ -1,18 +1,22 @@
-name: JeeEdge Instagram
+name: JeeEdge Instagram preview
 on:
   workflow_dispatch:
     inputs:
       preview_only:
-        description: Generate a preview without posting
+        description: Preview the active renderer (never publishes)
         type: boolean
         default: true
+      day:
+        description: Optional preview date (YYYY-MM-DD)
+        type: string
+        default: ''
 permissions:
-  contents: write
+  contents: read
 concurrency:
-  group: jeeedge-instagram
+  group: jeeedge-instagram-preview
   cancel-in-progress: false
 jobs:
-  daily:
+  preview:
     if: inputs.preview_only == true
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -25,18 +29,27 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r social/requirements.txt
-      - name: Generate and schedule carousel
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core
+      - name: Render two Reels and two carousels without provider calls
         env:
-          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          GITHUB_TOKEN: ${{ github.token }}
-          GROQ_MODEL: ${{ vars.GROQ_MODEL || 'openai/gpt-oss-20b' }}
-          PREVIEW_ONLY: ${{ inputs.preview_only && 'true' || 'false' }}
-        run: python social/worker.py
+          PREVIEW_DAY: ${{ inputs.day }}
+        run: |
+          if [ -n "$PREVIEW_DAY" ]; then
+            python -m social.preview --day "$PREVIEW_DAY"
+          else
+            python -m social.preview
+          fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: jeeedge-preview-${{ github.run_id }}
-          path: social/output/
+          path: |
+            social/output/**/reel.mp4
+            social/output/**/cover.png
+            social/output/**/caption.txt
+            social/output/**/scene-*.png
+            social/output/**/[1-8].png
+            social/output/contact-sheet.jpg
+            social/output/plan.json
           if-no-files-found: ignore
           retention-days: 14

@@ -26,7 +26,7 @@ OUT = Path(__file__).parent / 'output'
 MEDIA_BRANCH = 'jeeedge-social-media'
 REPO = os.getenv('GITHUB_REPOSITORY', 'itsamit729-ui/Jee-X')
 HANDLE = 'jeeedge'
-SITE = 'https://jee-edge.onrender.com/'
+SITE = 'https://jeeedge.in/'
 
 
 class ServiceError(RuntimeError):

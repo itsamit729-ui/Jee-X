@@ -2,7 +2,7 @@
 import json
 import os
 import re
-from social import worker, hooks, art_direction
+from social import worker, hooks, art_direction, creative
 
 
 def call(prompt, schema, max_tokens=1536, reasoning_effort="low"):
@@ -18,11 +18,15 @@ def call(prompt, schema, max_tokens=1536, reasoning_effort="low"):
 
 
 def authored(content):
+    if creative.active(content):
+        return {'hook':creative.opening(content), 'editorial_source':'authored',
+                'caption':creative.caption(content)}
     return {'hook':art_direction.joke(content)[0] if art_direction.style(content)=='casefile' else hooks.opening(content), 'editorial_source':'authored',
             'caption':art_direction.caption(content)}
 
 
 def normalized_caption(value):
+    value = value.split('\n\nTry it on Jee Edge:', 1)[0]
     value = value.split('\n\nMusic:', 1)[0]
     value = re.sub(r'JeeEdge daily \d{4}-\d{2}-\d{2} / s\d{2}', '', value)
     return ' '.join(re.findall(r'[a-z]+', value.lower()))
@@ -38,15 +42,20 @@ def repeated(caption, recent):
 def package(content, kind, recent=()):
     fallback = authored(content)
     direction = art_direction.style(content)
+    brief = (creative.BRIEFS[content['story_format']] if creative.active(content) and kind == 'reel'
+             else art_direction.BRIEFS[direction])
     lower, upper = art_direction.CAPTION_LIMITS[direction]
     try:
         context = {k: content[k] for k in ('subject','topic','rule','condition','trap','question','answer','solution',
                    'why','transfer_question','transfer_answer','hook','level') if k in content}
-        if direction=='casefile':
+        if direction=='casefile' and not (creative.active(content) and kind == 'reel'):
             context['original_joke'] = dict(zip(('brain','reality'),art_direction.joke(content)))
         draft = call('Create three distinct English hooks (each <=65 characters) and one educational caption '
             f'({lower} to {upper} characters) for an original JEE ' + kind + '. '
-            + art_direction.BRIEFS[direction] + ' '
+            + brief + ' '
+            'The opening MUST concern the exact supplied worked question. Do not hook with a different transfer problem. '
+            'The answer appears early and must actually resolve the opening. Avoid giving the answer in a question-led hook. '
+            'Live-site promotion is appended by code; spend this draft on the lesson only. '
             'Open a concrete curiosity gap: a choice, surprising constraint, calculation or plausible wrong answer. '
             'Make the payoff specific and deliverable from this lesson. No generic learn-this or spot-the-trap hooks. '
             'For reels keep each hook to at most 10 spoken words and 65 characters. '
@@ -81,8 +90,8 @@ def package(content, kind, recent=()):
             'topic-specific question or make a precise contrast whose answer the lesson actually delivers. '
             'Reject generic filler, altered math, misleading hooks and engagement requests. '
             'Judge whether the caption sounds like a specific tutor note instead of a stock social template. '
-            'The assigned editorial direction is: '+art_direction.BRIEFS[direction]+' '
-            'Reject hooks that could be pasted onto another topic unchanged. Select strongest hook index (0,1,2). '
+            'The assigned editorial direction is: '+brief+' '
+            'Reject hooks that could be pasted onto another topic unchanged or ask a different question from the worked example. Select strongest hook index (0,1,2). '
             + json.dumps({'lesson':context,'draft':draft}),
             {'type':'object','properties':{'approved':{'type':'boolean'},'chosen':{'type':'integer','enum':[0,1,2]},
               'clarity':{'type':'integer','enum':[1,2,3,4,5]},'educational_value':{'type':'integer','enum':[1,2,3,4,5]},
@@ -93,7 +102,7 @@ def package(content, kind, recent=()):
                 or type(review['educational_value']) is not int or review['educational_value'] < 4
                 or any(type(review.get(k)) is not int or review[k]<4 for k in ('hook_specificity','payoff'))):
             raise ValueError('Review rejected')
-        return {'hook':art_direction.joke(content)[0] if direction=='casefile' else hooks[review['chosen']].strip(), 'caption':caption.strip(), 'editorial_source':'groq_reviewed'}
+        return {'hook':art_direction.joke(content)[0] if direction=='casefile' and not creative.active(content) else hooks[review['chosen']].strip(), 'caption':caption.strip(), 'editorial_source':'groq_reviewed'}
     except (worker.ServiceError, ValueError, TypeError, KeyError, IndexError):
         print('Using authored teaching caption; editorial unavailable or quality gate not met.', flush=True)
         return fallback

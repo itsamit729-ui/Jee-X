@@ -54,12 +54,18 @@ def daily_plan(day, count, reels):
     serial = date.fromisoformat(day).toordinal()
     pool = {int(c['lesson_id'].split(':')[0]): c for c in (lessons.lesson(day,i) for i in range(lessons.TOTAL))}
     rings = [tuple(x for pair in zip(range(s*10,s*10+10),range(30+s*10,40+s*10)) for x in pair) for s in range(3)]
-    groups = [[pool[ring[(serial*4+j)%20]] for j in range(4)] for ring in rings]
-    candidates = [groups[s][j] for j in range(4) for s in range(3)]
+    # Advance by actual output, so a smaller free-tier schedule still reaches
+    # every lesson rather than repeatedly taking a subset of the 12-item plan.
+    candidates = [pool[rings[(serial*count+i)%3][((serial*count+i)//3)%20]] for i in range(count)]
     from social.storyboard import DIAGRAM_TOPICS
-    visual = sorted(candidates, key=lambda c: c['topic'] not in DIAGRAM_TOPICS)
-    # Interleaved subjects keep the Reel subset varied too.
-    video_choices = visual[:reels]
+    from social.diagrams import TOPICS as NEW_DIAGRAMS
+    # Vary subjects as well as choosing supported diagrams for Reel positions.
+    video_choices = []
+    for _ in range(reels):
+        available = [c for c in candidates if c not in video_choices]
+        video_choices.append(min(available, key=lambda c: (
+            sum(v['subject'] == c['subject'] for v in video_choices),
+            c['topic'] not in DIAGRAM_TOPICS + NEW_DIAGRAMS)))
     video_indices = [i for i in range(count) if (i+1)*reels//count > i*reels//count]
     video = dict(zip(video_indices, video_choices))
     counts = {s: sum(c['subject']==s for c in video.values()) for s in ('PHYSICS','CHEMISTRY','MATHS')}
@@ -76,6 +82,8 @@ def daily_plan(day, count, reels):
             counts[choice['subject']] += 1
             used.add(choice['topic'])
         kind = index in video
-        result.append(art_direction.attach(enrich(choice), serial, ordinals[kind]))
+        from social import creative
+        styled = art_direction.attach(enrich(choice), serial, ordinals[kind])
+        result.append(creative.attach(styled, day, ordinals[kind]))
         ordinals[kind] += 1
     return result

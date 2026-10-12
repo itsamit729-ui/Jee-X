@@ -82,9 +82,9 @@ def test_twelve_slots_and_retry_no_duplicates(setup):
     assert sum(len(p['assets'])==8 for p in submitted)==8
     for post in submitted:
         is_video = post['metadata']['instagram']['type'] == 'reel'
-        assert ('Kevin MacLeod' in post['text']) == is_video
-        if is_video:
-            assert 'https://creativecommons.org/licenses/by/4.0/' in post['text']
+        assert ('Music: original synthesized rhythm' in post['text']) == is_video
+        assert 'jeeedge.in/start' in post['text']
+        assert 'Kevin MacLeod' not in post['text']
     assert len(set(p['text'].splitlines()[-1] for p in submitted))==12
     assert all('bio' not in p['text'] for p in submitted)
     assert all(j['state']=='published' for j in client.get('/api/social/status',headers=AUTH).json()['jobs'])
@@ -116,6 +116,22 @@ def test_auth_pause_and_early_window(setup,monkeypatch):
     monkeypatch.setenv('SOCIAL_PAUSED','true')
     assert client.post('/api/social/trigger',headers=AUTH).status_code==503
     assert not submitted
+
+
+def test_content_plan_is_private_and_cannot_publish(setup):
+    client,factory,_,submitted=setup
+    assert client.get('/api/social/plan').status_code==401
+    response=client.get('/api/social/plan',headers=AUTH)
+    assert response.status_code==200 and response.json()['preview_only'] is True
+    items=response.json()['items']
+    assert len(items)==12
+    videos=[c for c in items if c['kind']=='reel']
+    assert len({c['story'] for c in videos})==4
+    assert {c['seconds'] for c in videos}=={23,24,25,27}
+    assert all(c['destination'].startswith('https://jeeedge.in/start?') for c in items)
+    assert not submitted
+    with factory() as db:
+        assert db.query(SocialSlot).count()==db.query(SocialUsage).count()==0
 
 
 def test_legacy_record_counts_toward_daily_cap(setup,monkeypatch):

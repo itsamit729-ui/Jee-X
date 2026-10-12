@@ -20,7 +20,7 @@ from app.database import SessionLocal
 from app.models.social_job import SocialSlot as SocialJob, SocialAsset as SocialMedia, SocialDispatch
 from app.models.social_job import SocialJob as LegacyJob
 from app.routers.social import media as legacy_media
-from social import worker, reel, lessons, editorial, storyboard, narration, quality
+from social import worker, reel, lessons, editorial, storyboard, narration, quality, creative
 from app.services import social_budget as budget
 from app.services import instagram_comments as comments
 from app.services import social_speech
@@ -112,6 +112,16 @@ def cleanup(db):
 def status_data(job):
     return {'day': job.day[:10], 'slot': job.day.split(':')[-1], 'state': job.state, 'attempts': job.attempts,
             'post_id': job.post_id, 'error': job.error, 'updated_at': job.updated_at.isoformat()}
+
+
+@router.get('/plan', dependencies=[Depends(authorize)])
+def plan_preview():
+    items=quality.daily_plan(today(),daily_target(),reel_target())
+    return {'day':today(), 'preview_only':True, 'items':[
+        {'slot':f's{i:02}', 'kind':'reel' if is_reel(f's{i:02}') else 'carousel',
+         'topic':c['topic'], 'hook':creative.opening(c), 'story':c['story_format'],
+         'seconds':creative.TIMINGS[c['story_format']][-1] if is_reel(f's{i:02}') else None,
+         'destination':creative.url(c)} for i,c in enumerate(items)]}
 
 
 @router.get('/status', dependencies=[Depends(authorize)])
@@ -333,7 +343,7 @@ def run_job(day, owner):
                 candidate = next((c for c in candidates if c['topic'] not in used_topics), None)
                 if candidate is None:
                     raise worker.ServiceError('All visual topics already used today; hold the test to avoid a repeated lesson.')
-                content=quality.enrich(candidate)
+                content=creative.attach(quality.enrich(candidate),calendar_day,len(used_topics))
             else:
                 content=slot_problem(day)
         video = is_reel(slot)
@@ -344,9 +354,9 @@ def run_job(day, owner):
             if any(f'JeeEdge daily {d} / ' in (p.get('text') or '') for d in (calendar_day, yesterday))]
         copy = editorial.package(content, 'reel' if video else 'carousel', recent=recent_captions)
         logging.getLogger('uvicorn.error').info(
-            'JeeEdge content slot=%s bank=v2 topic=%s format=%s editorial=%s hook_chars=%d design=%s',
+            'JeeEdge content slot=%s bank=v2 topic=%s format=%s editorial=%s hook_chars=%d design=%s story=%s journey=%s',
             day, content['topic'], 'reel' if video else 'carousel',
-            copy.get('editorial_source','unknown'), len(copy['hook']), content.get('art_direction','legacy-derived'))
+            copy.get('editorial_source','unknown'), len(copy['hook']), content.get('art_direction','legacy-derived'),content.get('story_format','legacy'),content.get('journey','none'))
         if editorial.repeated(copy['caption'], recent_captions):
             raise worker.ServiceError('Caption repeats a recent lesson; holding this slot for content review.')
         if video:
@@ -403,12 +413,12 @@ def run_job(day, owner):
                 with Image.open(io.BytesIO(body)) as image:
                     if image.format != 'JPEG' or image.size != (1080, 1350):
                         raise worker.ServiceError('Public carousel verification failed.')
-        credit = ('\n\n' + reel.music_credit()) if video else ''
+        credit = ('\n\n' + reel.music_credit(content)) if video else ''
         # Durable fence MUST commit before the non-idempotent Buffer mutation.
         if not transition(day, owner, 'running', 'submitting'):
             return
         submitting = True
-        caption = copy['caption'] + credit + '\n\n' + marker
+        caption = copy['caption'] + (creative.caption_suffix(content) if creative.active(content) else '') + credit + '\n\n' + marker
         payload = {'text': caption, 'channelId': channel['id'], 'schedulingType': 'automatic',
                    'mode': 'customScheduled', 'dueAt': (datetime.now(timezone.utc) + timedelta(minutes=5)).isoformat(),
                    'metadata': {'instagram': {'type': 'reel' if video else 'post', 'shouldShareToFeed': True}},

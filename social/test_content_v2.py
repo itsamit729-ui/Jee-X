@@ -44,7 +44,7 @@ def test_tts_reservation_fits_existing_free_budget():
     for d in range(7,12):
         plan=quality.daily_plan(f'2026-10-{d:02}',12,4)
         scripts=[text for c in plan[2::3] for _,_,text in narration.scenes(c,storyboard.fallback(c))]
-        assert len(scripts)==13
+        assert len(scripts)==12
         assert all(len(text)<=200 for text in scripts)
         assert sum(len(text.encode())+32 for text in scripts)<3200
 

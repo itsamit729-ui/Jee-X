@@ -29,6 +29,9 @@ RULES = {
 
 
 def scenes(content, plan):
+    from social import creative
+    if creative.active(content):
+        return creative.spoken(content, plan)
     topic = content['topic']
     opening = plan.get('hook') or hooks.opening(content)
     rule = RULES.get(topic,content.get('why',content['rule']))
@@ -75,9 +78,9 @@ def prepare(content, plan, directory, fetch):
         except (ValueError, wave.Error, EOFError, OSError) as error:
             log.warning('JeeEdge TTS scene=%d skipped: invalid audio or file error (%s).', index, type(error).__name__)
             continue
-    if art_direction.style(content)=='casefile' and len(clips)!=len(scenes(content,plan)):
+    if (art_direction.style(content)=='casefile' or content.get('creative_version') == 4) and len(clips)!=len(scenes(content,plan)):
         # Do not leave only a spoken misconception when its correction failed.
-        log.warning('JeeEdge comic narration incomplete; using the complete visual joke with music.')
+        log.warning('JeeEdge narration incomplete; using the complete visual lesson with music.')
         plan['subtitles']=[]
         return []
     return clips
