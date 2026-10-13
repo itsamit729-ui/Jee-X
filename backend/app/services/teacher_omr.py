@@ -23,11 +23,16 @@ def path(identity, suffix='png'):
     WORK.mkdir(parents=True,exist_ok=True)
     return WORK / (identity+'.'+suffix)
 
-def cells(index):
+def cells(index,id_grid=False):
     col,row=divmod(index,50)
-    return [(42+138*col+32+20*k,210+11*row) for k in range(4)]
+    return [(42+138*col+32+20*k,(330+8.5*row if id_grid else 210+11*row)) for k in range(4)]
+
+def id_cells(column):
+    return [(54+20*column,190+12*digit) for digit in range(10)]
+
 
 def sheet_pdf(paper,sheet,name):
+    id_grid=name is None
     out=io.BytesIO(); c=canvas.Canvas(out,pagesize=(WIDTH,HEIGHT))
     c.setTitle('Jee Edge OMR - '+paper.title)
     for x,y in MARKERS:
@@ -35,19 +40,29 @@ def sheet_pdf(paper,sheet,name):
     c.setFont('Helvetica-Bold',16);c.drawString(42,HEIGHT-62,'Jee Edge | Answer sheet')
     c.setFont('Helvetica',10)
     # Reusable copies identify only the paper/set; the teacher assigns the student.
-    student_line='Name: ____________________  Student ID: __________' if name is None else 'Student: '+name[:50]
+    student_line='Name: ________________________________________' if name is None else 'Student: '+name[:50]
     for y,text in [(86,paper.title[:65]),(106,student_line),(126,f'Paper {paper.id} | Version {paper.version} | Set {sheet.variant}'),(151,'Fill one bubble completely with a dark pen. Do not fold the sheet.'),(167,'Print at 100% on A4. Keep all four corner squares visible in your photo.')]:
+        if id_grid and y>=140: continue
         while c.stringWidth(text,'Helvetica',10)>(400 if y<140 else 510): text=text[:-1]
         c.drawString(42,HEIGHT-y,text)
     qr=QrCodeWidget('JEEOMR:'+sheet.id);x1,y1,x2,y2=qr.getBounds();d=Drawing(78,78,transform=[78/(x2-x1),0,0,78/(y2-y1),0,0]);d.add(qr)
     renderPDF.draw(d,c,WIDTH-125,HEIGHT-140)
+    if id_grid:
+        c.setFont('Helvetica-Bold',9);c.drawString(42,HEIGHT-149,'STUDENT OMR ID - write and shade all 10 digits')
+        for column in range(10):
+            x=54+20*column;c.rect(x-8,HEIGHT-178,16,18)
+            for x,y in id_cells(column): c.circle(x,HEIGHT-y,3.5,stroke=1,fill=0)
+        c.setFont('Helvetica',8)
+        for digit in range(10): c.drawRightString(40,HEIGHT-(190+12*digit)-3,str(digit))
+        for y,text in [(193,'Use the OMR ID shown in My classroom.'),(209,'Include every leading zero.'),(225,'Write one digit in each box.'),(241,'Shade that digit below the same box.'),(257,'Fill exactly one bubble per column.'),(281,'Fill answers in dark ink. Print A4 at 100%.'),(297,'Keep all four corner squares visible.')]:
+            c.drawString(285,HEIGHT-y,text)
     for col in range((len(sheet.question_order)+49)//50):
         c.setFont('Helvetica-Bold',8)
-        for k,(x,y) in enumerate(cells(col*50)): c.drawCentredString(x,HEIGHT-197,'ABCD'[k])
+        for k,(x,y) in enumerate(cells(col*50,id_grid)): c.drawCentredString(x,HEIGHT-(318 if id_grid else 197),'ABCD'[k])
     for i,_ in enumerate(sheet.question_order):
-        pts=cells(i);c.setFont('Helvetica',8);c.drawRightString(pts[0][0]-12,HEIGHT-pts[0][1]-3,str(i+1))
+        pts=cells(i,id_grid);c.setFont('Helvetica',8);c.drawRightString(pts[0][0]-12,HEIGHT-pts[0][1]-3,str(i+1))
         for k,(x,y) in enumerate(pts):
-            c.circle(x,HEIGHT-y,4,stroke=1,fill=0)
+            c.circle(x,HEIGHT-y,3.4 if id_grid else 4,stroke=1,fill=0)
     c.setFont('Helvetica',8);c.drawString(42,40,'Use only with its matching question paper. Review scan results before publishing scores.')
     c.showPage();c.save();return out.getvalue()
 
@@ -84,7 +99,7 @@ def detect(data):
     if not code.startswith('JEEOMR:') or len(code)!=39: raise ValueError('Matching Jee Edge QR code was not readable. Upload the correct sheet upright with a sharper QR code.')
     return code[7:],aligned
 
-def bubbles(aligned,count):
+def bubbles(aligned,count,id_grid=False):
     gray=cv2.cvtColor(aligned,cv2.COLOR_BGR2GRAY)
     # Inner disk excludes the printed ring; option labels sit above the columns.
     dark=cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV,31,12)
@@ -92,8 +107,8 @@ def bubbles(aligned,count):
     overlay=aligned.copy()
     for i in range(count):
         scores=[]
-        for x,y in cells(i):
-            cx,cy=int(x*2),int(y*2);r=5
+        for x,y in cells(i,id_grid):
+            cx,cy=int(x*2),int(y*2);r=4 if id_grid else 5
             crop=dark[cy-r:cy+r+1,cx-r:cx+r+1]
             yy,xx=np.ogrid[-r:r+1,-r:r+1];mask=xx*xx+yy*yy<=r*r
             scores.append(float(np.mean(crop[mask]>0)))
@@ -103,8 +118,29 @@ def bubbles(aligned,count):
         answer='ABCD'[marked[0]] if status=='marked' else ''
         results.append({'number':i+1,'status':status,'answer':answer,'strength':[round(v,3) for v in scores]})
         color=(0,130,0) if status in ('marked','blank') else (0,100,255)
-        for k,(x,y) in enumerate(cells(i)):
+        for k,(x,y) in enumerate(cells(i,id_grid)):
             if scores[k]>.3: cv2.circle(overlay,(int(x*2),int(y*2)),12,color,2)
     ok,encoded=cv2.imencode('.jpg',overlay,[cv2.IMWRITE_JPEG_QUALITY,75])
     if not ok: raise ValueError('Preview generation failed.')
     return results,encoded.tobytes()
+
+
+def read_student_id(aligned):
+    """Decode shaded digits only. Never guess from handwriting or roster proximity."""
+    gray=cv2.cvtColor(aligned,cv2.COLOR_BGR2GRAY)
+    dark=cv2.adaptiveThreshold(gray,255,cv2.ADAPTIVE_THRESH_GAUSSIAN_C,cv2.THRESH_BINARY_INV,31,12)
+    digits=[];columns=[]
+    for column in range(10):
+        strengths=[]
+        for x,y in id_cells(column):
+            cx,cy=int(x*2),int(y*2);r=4
+            crop=dark[cy-r:cy+r+1,cx-r:cx+r+1]
+            yy,xx=np.ogrid[-r:r+1,-r:r+1];mask=xx*xx+yy*yy<=r*r
+            strengths.append(float(np.mean(crop[mask]>0)))
+        marked=[i for i,v in enumerate(strengths) if v>=.75]
+        uncertain=any(.2<v<.75 for v in strengths)
+        valid=len(marked)==1 and not uncertain
+        digits.append(str(marked[0]) if valid else '?')
+        columns.append({'column':column+1,'status':'clear' if valid else 'ambiguous','strength':[round(v,3) for v in strengths]})
+    code=''.join(digits)
+    return {'digits':code,'status':'clear' if '?' not in code else 'ambiguous','columns':columns}

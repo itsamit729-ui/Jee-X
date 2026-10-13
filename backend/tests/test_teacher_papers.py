@@ -211,3 +211,60 @@ def test_reusable_omr_multiple_students_and_identity_review(studio,variant):
         assert db.query(m.TeacherScan).filter_by(paper_id=pid,state='reviewed').count()==2
     grant(c,4);active[0]=4
     assert c.get(f'/api/teacher/papers/{pid}/blank-omr.pdf').status_code==404
+
+
+def shade_id(image,code):
+    draw=ImageDraw.Draw(image)
+    for column,digit in enumerate(code):
+        x,y=omr.id_cells(column)[int(digit)]
+        draw.ellipse((x*2-6,y*2-6,x*2+6,y*2+6),fill='black')
+    return image
+
+
+def test_id_grid_and_200_answers_do_not_overlap(tmp_path):
+    sheet=SimpleNamespace(id='a'*32,variant='B',question_order=list(range(200)))
+    paper=SimpleNamespace(id=1,title='Reusable ID template',version=1)
+    image=render_sheet(omr.sheet_pdf(paper,sheet,None))
+    _,aligned=omr.detect(encode(image))
+    assert omr.read_student_id(aligned)['status']=='ambiguous'
+    shade_id(image,'0000000123')
+    draw=ImageDraw.Draw(image)
+    for i,k in [(0,0),(49,1),(50,2),(199,3)]:
+        x,y=omr.cells(i,True)[k];draw.ellipse((x*2-5,y*2-5,x*2+5,y*2+5),fill='black')
+    for rendered in (image,image.rotate(180)):
+        _,aligned=omr.detect(encode(rendered))
+        assert omr.read_student_id(aligned)['digits']=='0000000123'
+        found,_=omr.bubbles(aligned,200,id_grid=True)
+        assert [found[i]['answer'] for i in (0,49,50,199)]==['A','B','C','D']
+        assert all(row['status']=='blank' for i,row in enumerate(found) if i not in (0,49,50,199))
+    x,y=omr.id_cells(0)[1];draw.ellipse((x*2-6,y*2-6,x*2+6,y*2+6),fill='black')
+    _,aligned=omr.detect(encode(image));assert omr.read_student_id(aligned)['status']=='ambiguous'
+
+
+def test_shaded_student_id_matches_roster_without_manual_selection(studio):
+    c,factory,active,room=studio
+    qid=own_question(c);paper=finish(c,create(c,[qid]));pid=paper['id']
+    pdf=c.get(f'/api/teacher/papers/{pid}/blank-omr.pdf?variant=B').content
+    for code,status in [('0000000001','matched'),('0000000999','not_in_roster')]:
+        image=shade_id(render_sheet(pdf),code)
+        r=c.post(f'/api/teacher/papers/{pid}/scans',json={'image_base64':base64.b64encode(encode(image)).decode()})
+        assert r.status_code==202,r.text
+        sid=r.json()['id']
+        row=next(s for s in c.get(f'/api/teacher/papers/{pid}/scans').json()['scans'] if s['id']==sid)
+        assert row['state']=='review',row
+        assert row['result']['identity']['status']==status
+        assert row['student_id']==(1 if status=='matched' else None)
+        if status=='matched':
+            result=c.post(f'/api/teacher/scans/{sid}/review',json={'version':1,'answers':['A']})
+            assert result.status_code==200,result.text
+            assert result.json()['result']['score']==4
+        else:
+            assert c.post(f'/api/teacher/scans/{sid}/review',json={'version':1,'answers':['A']}).status_code==422
+    # Legacy reusable sheets retain their original layout and manual identity review.
+    with factory() as db:
+        p1=db.get(m.TeacherPaper,pid)
+        sh=SimpleNamespace(id=p.generic_sheet_id(p1,'A',layout=1),variant='A',question_order=[qid])
+        legacy=omr.sheet_pdf(p1,sh,'________________________')
+    uploaded=c.post(f'/api/teacher/papers/{pid}/scans',json={'image_base64':base64.b64encode(legacy).decode()}).json()['id']
+    row=next(s for s in c.get(f'/api/teacher/papers/{pid}/scans').json()['scans'] if s['id']==uploaded)
+    assert row['state']=='review' and row['student_id'] is None and row['variant']=='A'

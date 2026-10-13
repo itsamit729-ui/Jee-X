@@ -474,7 +474,7 @@ def student_classes(user=Depends(get_current_db_user), db: Session = Depends(get
             expire_saved(db, a, r)
         assignments.append({**assignment_summary(a), 'status': status_for(a, r, attempt), 'score': attempt.score if attempt and attempt.submitted_at else None})
     db.commit()
-    return {'classes': [{'id': r.id, 'name': r.name, 'teacher': name} for r, name in rooms], 'assignments': assignments}
+    return {'omr_id': f'{user.id:010d}', 'classes': [{'id': r.id, 'name': r.name, 'teacher': name} for r, name in rooms], 'assignments': assignments}
 
 
 @router.get('/assignments/{assignment_id}')

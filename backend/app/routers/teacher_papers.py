@@ -285,8 +285,9 @@ def order_for(p,variant):
     if variant=='B': random.Random(f'paper-{p.id}').shuffle(ids)
     return ids
 
-def generic_sheet_id(p,variant):
-    return hashlib.sha256(f'jeeedge-reusable-omr:{p.id}:{variant}'.encode()).hexdigest()[:32]
+def generic_sheet_id(p,variant,layout=2):
+    suffix=':idgrid-v2' if layout==2 else ''
+    return hashlib.sha256(f'jeeedge-reusable-omr:{p.id}:{variant}{suffix}'.encode()).hexdigest()[:32]
 
 
 def check_omr(p):
@@ -374,13 +375,27 @@ def process_scan(identity):
                 sid,aligned=omr.detect(omr.path(identity,'input').read_bytes())
                 sh=db.get(m.TeacherSheet,sid);p=db.get(m.TeacherPaper,scan.paper_id)
                 if not p or p.teacher_id!=scan.teacher_id: raise ValueError('Paper is unavailable.')
-                template_variant=next((v for v in ('A','B') if sid==generic_sheet_id(p,v)),None)
+                template=next(((v,layout) for layout in (2,1) for v in ('A','B') if sid==generic_sheet_id(p,v,layout)),None)
+                template_variant,layout=template if template else (None,0)
                 if template_variant:
                     count=len(p.questions);scan.result={'template_variant':template_variant}
+                    if layout==2:
+                        identity_result=omr.read_student_id(aligned)
+                        if identity_result['status']=='clear':
+                            uid=int(identity_result['digits'])
+                            t.lock_user(db,scan.teacher_id)
+                            if uid in roster(db,scan.teacher_id):
+                                matched=db.query(m.TeacherSheet).filter_by(paper_id=p.id,student_id=uid,variant=template_variant).first()
+                                if not matched:
+                                    matched=m.TeacherSheet(id=secrets.token_hex(16),paper_id=p.id,student_id=uid,variant=template_variant,question_order=order_for(p,template_variant),created_at=utcnow())
+                                    db.add(matched);db.flush()
+                                scan.sheet_id=matched.id;identity_result['status']='matched'
+                            else: identity_result['status']='not_in_roster'
+                        scan.result={**scan.result,'identity':identity_result}
                 elif sh and sh.paper_id==scan.paper_id:
                     count=len(sh.question_order);scan.sheet_id=sid
                 else: raise ValueError('This QR code belongs to another paper. Select the matching paper.')
-                found,preview=omr.bubbles(aligned,count)
+                found,preview=omr.bubbles(aligned,count,id_grid=layout==2)
                 omr.path(identity,'jpg').write_bytes(preview)
                 scan.detection=found;scan.state='review';db.commit()
         except Exception as e:
@@ -451,7 +466,9 @@ def review(sid:str,b:ReviewIn,user=Depends(t.require_teacher),db=Depends(get_db)
         recipient=db.query(m.AssignmentRecipient).filter_by(assignment_id=p.assignment_id,user_id=sh.student_id).with_for_update().populate_existing().first()
         if recipient and recipient.attempt_id: raise HTTPException(409,'This student has already started online. Finish or review that attempt instead of adding an offline score.')
     qmap={q['question_id']:q for q in p.questions}
+    identity_result=(s.result or {}).get('identity')
     s.answers=b.answers;s.result=offline_score(p,sh,b.answers)
+    if identity_result: s.result={**s.result,'identity':identity_result}
     s.state='reviewed';s.reviewed_at=utcnow();s.version+=1
     db.add(m.AuditLog(actor_id=user.id,action='omr_reviewed',entity='teacher_paper',entity_id=p.id,after={'scan_id':s.id,'student_id':sh.student_id,'variant':sh.variant,'score':s.result['score']},reason='Teacher confirmed all detected answers.'))
     if p.assignment_id:
