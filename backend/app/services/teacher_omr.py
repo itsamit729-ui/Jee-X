@@ -40,8 +40,9 @@ def sheet_pdf(paper,sheet,name):
     c.setFont('Helvetica-Bold',16);c.drawString(42,HEIGHT-62,'Jee Edge | Answer sheet')
     c.setFont('Helvetica',10)
     # Reusable copies identify only the paper/set; the teacher assigns the student.
+    set_label=f'Set {sheet.variant}' if (getattr(paper,'settings',None) or {}).get('sets_enabled',True) else 'Standard paper - no sets'
     student_line='Name: ________________________________________' if name is None else 'Student: '+name[:50]
-    for y,text in [(86,paper.title[:65]),(106,student_line),(126,f'Paper {paper.id} | Version {paper.version} | Set {sheet.variant}'),(151,'Fill one bubble completely with a dark pen. Do not fold the sheet.'),(167,'Print at 100% on A4. Keep all four corner squares visible in your photo.')]:
+    for y,text in [(86,paper.title[:65]),(106,student_line),(126,f'Paper {paper.id} | Version {paper.version} | {set_label}'),(151,'Fill one bubble completely with a dark pen. Do not fold the sheet.'),(167,'Print at 100% on A4. Keep all four corner squares visible in your photo.')]:
         if id_grid and y>=140: continue
         while c.stringWidth(text,'Helvetica',10)>(400 if y<140 else 510): text=text[:-1]
         c.drawString(42,HEIGHT-y,text)
