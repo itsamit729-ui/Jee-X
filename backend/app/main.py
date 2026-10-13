@@ -31,6 +31,8 @@ from app.routers import (
     college_insights,
     teaching,
     teacher_papers,
+    learning,
+    teaching_tools,
     teacher_profile,
     plans,
     social_slots,
@@ -84,6 +86,8 @@ app.include_router(college_insights.router)
 app.include_router(teaching.router)
 app.include_router(teacher_papers.router)
 app.include_router(teacher_profile.router)
+app.include_router(learning.router)
+app.include_router(teaching_tools.router)
 app.include_router(plans.router)
 
 

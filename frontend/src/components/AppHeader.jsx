@@ -30,6 +30,7 @@ const groups = [
   ] },
   { title: 'LEARN TOGETHER', items: [
     ['/ranking', 'Rankings & contests', Trophy, 'Compete and track your rating'],
+    ['/learning', 'Mistakes & revision', BookOpen, 'Review mistakes and ask your teacher'],
     ['/classes', 'My classroom', Users, 'Your classes and assignments'],
     ['/rewards', 'Rewards', Coins, 'Your practice milestones'],
     ['/profile', 'My profile', UserRound, 'Your details and public profile'],

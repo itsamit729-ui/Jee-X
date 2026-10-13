@@ -278,7 +278,7 @@ def publish(body: PublishIn, user=Depends(require_teacher), db: Session = Depend
     return publish_assignment(body, user, db)
 
 
-def publish_assignment(body, user, db, frozen_questions=None, commit=True):
+def publish_assignment(body, user, db, frozen_questions=None, commit=True, recipient_ids=None):
     existing = db.query(m.TeachingAssignment).filter_by(teacher_id=user.id, request_key=body.request_key).first()
     if existing:
         return {'id': existing.id, 'title': existing.title}
@@ -292,6 +292,9 @@ def publish_assignment(body, user, db, frozen_questions=None, commit=True):
     rooms = [owned_class(db, cid, user) for cid in sorted(set(body.classroom_ids))]
     recipients = sorted({uid for (uid,) in db.query(m.ClassroomMember.user_id).join(m.User, m.User.id == m.ClassroomMember.user_id).filter(
         m.ClassroomMember.classroom_id.in_([r.id for r in rooms]), m.ClassroomMember.active.is_(True), m.User.status == 'active').all()})
+    if recipient_ids is not None:
+        if not set(recipient_ids)<=set(recipients): raise HTTPException(422, 'Recipients must be active students in the selected classes.')
+        recipients=sorted(set(recipient_ids))
     if not recipients:
         raise HTTPException(409, 'Ask students to join a selected class before publishing.')
     questions = {q.id: q for q in question_query(db, user.id).filter(m.Question.id.in_(body.question_ids)).all()}

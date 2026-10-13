@@ -61,6 +61,7 @@ class Generate(BaseModel):
     sections: list[Section] = Field(default_factory=list, max_length=20)
     locked_ids: list[int] = Field(default_factory=list, max_length=200)
     exclude_ids: list[int] = Field(default_factory=list, max_length=400)
+    taught_only: bool = False
     exclude_assigned: bool = True
     source: Literal['all','pyq','original'] = 'all'
 
@@ -71,6 +72,12 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
     query = query.filter(or_(m.Question.exam == b.exam, m.Question.exam.is_(None)))
     if b.source != 'all': query = query.filter(m.Question.source_type == b.source)
     if b.chapter_ids: query = query.filter(m.Chapter.id.in_(b.chapter_ids))
+    if b.taught_only:
+        if not b.classroom_ids: raise HTTPException(422, 'Select classes to use their taught syllabus.')
+        sets=[{x.chapter_id for x in db.query(m.TaughtChapter).filter_by(classroom_id=cid)} for cid in set(b.classroom_ids)]
+        taught=set.intersection(*sets)
+        if not taught: raise HTTPException(422, 'No chapters are marked taught in every selected class.')
+        query=query.filter(m.Chapter.id.in_(taught))
     # Metadata-only selection is bounded. Content/diagrams load only for selected IDs.
     meta = query.with_entities(m.Question.id, m.Question.difficulty, m.Question.type, m.Question.year,
         m.Question.shift, m.Question.source_type, m.Question.exam, m.Question.subtopic_id,

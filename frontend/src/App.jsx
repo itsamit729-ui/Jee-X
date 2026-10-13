@@ -5,6 +5,7 @@ const PYQs = lazy(() => import('./pages/PYQs.jsx'))
 import { useAuth } from './auth/AuthContext.jsx'
 import { isTeacherAccount, teacherRouteRedirect } from './lib/workspaceRoutes.js'
 const TeacherProfile = lazy(() => import('./pages/TeacherProfile.jsx'))
+const Learning = lazy(() => import('./pages/Learning.jsx'))
 const Teacher = lazy(() => import('./pages/Teacher.jsx'))
 const Classrooms = lazy(() => import('./pages/Classrooms.jsx'))
 const Assignment = lazy(() => import('./pages/Assignment.jsx'))
@@ -106,6 +107,7 @@ export default function App() {
       <Route path="/teacher/profile" element={<ProtectedRoute><TeacherProfile /></ProtectedRoute>} />
       <Route path="/teacher/account" element={<ProtectedRoute><TeacherProfile /></ProtectedRoute>} />
       <Route path="/teacher" element={<ProtectedRoute><Teacher /></ProtectedRoute>} />
+      <Route path="/learning" element={<ProtectedRoute><Learning /></ProtectedRoute>} />
       <Route path="/classes" element={<ProtectedRoute><Classrooms /></ProtectedRoute>} />
       <Route path="/assignments/:id" element={<ProtectedRoute><Assignment /></ProtectedRoute>} />
       <Route path="/notifications" element={<ProtectedRoute><Notifications /></ProtectedRoute>} />

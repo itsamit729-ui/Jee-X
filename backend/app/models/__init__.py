@@ -120,3 +120,4 @@ from app.models.acquisition import AcquisitionCount
 
 from app.models.teacher_papers import TeacherPaper, TeacherSheet, TeacherScan
 from app.models.teacher_profile import TeacherProfile
+from app.models.learning_tools import RevisionCard, RevisionSession, TaughtChapter, TeacherBlueprint, QuestionDoubt
