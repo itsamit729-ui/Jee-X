@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { omrReadiness, scheduleError, downloadTeacherFile } from '../src/lib/teacherPaper.js'
-const q={question_id:1,type:'single_correct',options:['A','B','C','D'].map((label,i)=>({id:i,label,is_correct:i===0}))}
+const q={question_id:1,type:'single_correct',options:['A','B','C','D'].map((label,i)=>({id:i,label,content:`Choice ${label}`,is_correct:i===0}))}
 
 test('OMR readiness distinguishes mixed formats, malformed labels and ambiguous keys',()=>{
   assert.equal(omrReadiness([]).eligible,false)

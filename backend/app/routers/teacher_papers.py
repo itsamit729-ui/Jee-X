@@ -18,6 +18,7 @@ from app.database import get_db, SessionLocal
 from app.auth import utcnow
 from app.routers import teaching as t
 from app.services import mixed_omr, paper_answers
+from app.services.teacher_question_content import presentation
 
 router = APIRouter(prefix='/api/teacher', tags=['teacher papers'])
 EXAMS = Literal['jee_main', 'jee_advanced', 'mht_cet', 'bitsat']
@@ -238,6 +239,7 @@ def assign(pid:int,b:Schedule,user=Depends(t.require_teacher),db=Depends(get_db)
     p=owned(db,pid,user)
     if not p.finalized: raise HTTPException(409,'Finalise the paper first.')
     if p.assignment_id: return {'id':p.assignment_id,'title':p.title}
+    if any(q['type']!='numerical' and any(not o['content'] for o in presentation(q['stem'],q['options'])[1]) for q in p.questions):raise HTTPException(409,'This saved paper has missing answer choices. Duplicate it and replace the incomplete questions before assigning it.')
     if db.query(m.TeacherScan.id).filter_by(paper_id=pid,state='reviewed').first(): raise HTTPException(409,'Offline results already exist. Duplicate the paper for a new online assignment, or assign online before reviewing scans.')
     try:
         data=t.PublishIn(**b.model_dump(),**{k:p.settings[k] for k in ('instructions','duration_minutes','marks_correct','marks_wrong')},title=p.title,question_ids=[q['question_id'] for q in p.questions],request_key=f'paper-assignment-{p.id:016d}')
@@ -317,12 +319,13 @@ def check_variant(p,variant):
 def omr_report(questions):
     issues=[]
     for index,q in enumerate(questions):
-        options=q.get('options',[]);reason=None
+        _,options=presentation(q.get('stem',''),q.get('options',[]));reason=None
         if q.get('type')=='numerical':
             if q.get('answer_min') is None or q.get('answer_max') is None or not all(math.isfinite(float(q[k])) for k in ('answer_min','answer_max')) or q['answer_min']>q['answer_max']: reason='Needs a valid numerical answer range'
         elif q.get('type') in ('single_correct','multi_correct'):
             labels=[o.get('label') for o in options];correct=sum(bool(o.get('is_correct')) for o in options)
-            if not 2<=len(options)<=4 or len(set(labels))!=len(labels) or not set(labels)<={'A','B','C','D'}:reason='Needs two to four distinct A-D options'
+            if any(not o.get('content') for o in options):reason='Missing answer option content'
+            elif not 2<=len(options)<=4 or len(set(labels))!=len(labels) or not set(labels)<={'A','B','C','D'}:reason='Needs two to four distinct A-D options'
             elif not correct or (q['type']=='single_correct' and correct!=1):reason='Needs a valid answer key'
         else:reason='Unsupported question format'
         if reason:issues.append({'number':index+1,'question_id':q['question_id'],'reason':reason})

@@ -1,3 +1,4 @@
+import { missingOptions } from './questionOptions.js'
 import { API_URL } from './api.js'
 
 export function omrReadiness(questions = []) {
@@ -6,6 +7,7 @@ export function omrReadiness(questions = []) {
   questions.forEach((q, i) => {
     const options = q.options || [], labels=options.map(o=>o.label), correct=options.filter(o=>o.is_correct).length
     let reason = ''
+    if (missingOptions([q]).length) reason = 'Missing answer option content'
     if(q.type!=='single_correct'||options.length!==4) mixed=true
     if(q.type==='numerical') {
       if(q.answer_min==null||q.answer_max==null||!Number.isFinite(Number(q.answer_min))||!Number.isFinite(Number(q.answer_max))||Number(q.answer_min)>Number(q.answer_max)) reason='Needs a valid numerical answer range'

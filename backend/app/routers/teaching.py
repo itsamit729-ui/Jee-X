@@ -17,6 +17,7 @@ from app.deps import get_current_db_user
 from app.routers.admin_dashboard import _require_admin
 from app.services.authentication import throttle
 from app.services.grading import _grade_one
+from app.services.teacher_question_content import presentation
 from app.services.teacher_enrollment import enable_teacher
 
 router = APIRouter(prefix='/api', tags=['classrooms'])
@@ -203,7 +204,7 @@ def restore_member(class_id: int, student_id: int, user=Depends(require_teacher)
 
 
 def question_query(db, teacher_id=None):
-    return db.query(m.Question).options(selectinload(m.Question.options), selectinload(m.Question.assets),
+    return db.query(m.Question).filter(~m.Question.options.any((func.trim(m.QuestionOption.content) == '') & ~m.Question.stem.contains('(' + m.QuestionOption.label + ')'))).options(selectinload(m.Question.options), selectinload(m.Question.assets),
         joinedload(m.Question.passage).selectinload(m.Passage.assets),
         joinedload(m.Question.subtopic).joinedload(m.Subtopic.chapter).joinedload(m.Chapter.subject)).filter(
         or_(m.Question.status == 'published', (m.Question.status == 'draft') & (m.Question.created_by == teacher_id)) if teacher_id else m.Question.status == 'published', m.Question.type.in_(['single_correct', 'multi_correct', 'numerical']))
@@ -211,9 +212,12 @@ def question_query(db, teacher_id=None):
 
 def freeze(q, version):
     options = [{'id': o.id, 'label': o.label, 'content': o.content, 'is_correct': o.is_correct} for o in sorted(q.options, key=lambda o: o.position)]
-    if not q.stem or (q.type == 'numerical' and (q.answer_min is None or q.answer_max is None or q.answer_min > q.answer_max)) or (q.type != 'numerical' and (len(options) < 2 or not any(o['is_correct'] for o in options))):
+    stem, options = presentation(q.stem, options)
+    if q.type != 'numerical' and any(not option['content'] for option in options):
+        raise HTTPException(409, f'Question {q.ref} has missing answer option content. Choose another question.')
+    if not stem or (q.type == 'numerical' and (q.answer_min is None or q.answer_max is None or q.answer_min > q.answer_max)) or (q.type != 'numerical' and (len(options) < 2 or not any(o['is_correct'] for o in options))):
         raise HTTPException(409, f'Question {q.ref} has an incomplete answer key. Choose another question.')
-    return {'question_id': q.id, 'version': version, 'ref': q.ref, 'type': q.type, 'stem': q.stem,
+    return {'question_id': q.id, 'version': version, 'ref': q.ref, 'type': q.type, 'stem': stem,
         'options': options, 'answer_min': float(q.answer_min) if q.answer_min is not None else None,
         'answer_max': float(q.answer_max) if q.answer_max is not None else None, 'solution': q.solution,
         'assets': [{'url': a.url, 'alt_text': a.alt_text} for a in q.assets],
