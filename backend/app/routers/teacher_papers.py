@@ -285,11 +285,27 @@ def order_for(p,variant):
     if variant=='B': random.Random(f'paper-{p.id}').shuffle(ids)
     return ids
 
+def generic_sheet_id(p,variant):
+    return hashlib.sha256(f'jeeedge-reusable-omr:{p.id}:{variant}'.encode()).hexdigest()[:32]
+
+
+def check_omr(p):
+    if not p.finalized: raise HTTPException(409,'Finalise the paper before creating OMR sheets.')
+    if any(q['type']!='single_correct' or len(q['options'])!=4 or sum(o['is_correct'] for o in q['options'])!=1 for q in p.questions): raise HTTPException(422,'OMR supports single-correct A–D questions with four options. Numerical/multi-correct papers remain available online and for printing.')
+
+
+@router.get('/papers/{pid}/blank-omr.pdf')
+def blank_sheet_download(pid:int,variant:Literal['A','B']='A',user=Depends(t.require_teacher),db=Depends(get_db)):
+    from types import SimpleNamespace
+    from app.services.teacher_omr import sheet_pdf
+    p=owned(db,pid,user);check_omr(p)
+    sheet=SimpleNamespace(id=generic_sheet_id(p,variant),variant=variant,question_order=order_for(p,variant))
+    return Response(sheet_pdf(p,sheet,None),media_type='application/pdf',headers={'Content-Disposition':f'attachment; filename="omr-{p.id}-{variant}-print-multiple-copies.pdf"'})
+
 @router.post('/papers/{pid}/sheets')
 def sheets(pid:int,b:SheetIn,user=Depends(t.require_teacher),db=Depends(get_db)):
     p=owned(db,pid,user)
-    if not p.finalized: raise HTTPException(409,'Finalise the paper before creating OMR sheets.')
-    if any(q['type']!='single_correct' or len(q['options'])!=4 or sum(o['is_correct'] for o in q['options'])!=1 for q in p.questions): raise HTTPException(422,'OMR supports single-correct A–D questions with four options. Numerical/multi-correct papers remain available online and for printing.')
+    check_omr(p)
     if not set(b.student_ids)<=roster(db,user.id): raise HTTPException(404,'Student is not active in your classes.')
     result=[]
     for uid in sorted(set(b.student_ids)):
@@ -357,10 +373,16 @@ def process_scan(identity):
                 scan.state='processing';db.commit()
                 sid,aligned=omr.detect(omr.path(identity,'input').read_bytes())
                 sh=db.get(m.TeacherSheet,sid);p=db.get(m.TeacherPaper,scan.paper_id)
-                if not sh or sh.paper_id!=scan.paper_id or p.teacher_id!=scan.teacher_id: raise ValueError('This QR code belongs to another paper. Select the matching paper.')
-                found,preview=omr.bubbles(aligned,len(sh.question_order))
+                if not p or p.teacher_id!=scan.teacher_id: raise ValueError('Paper is unavailable.')
+                template_variant=next((v for v in ('A','B') if sid==generic_sheet_id(p,v)),None)
+                if template_variant:
+                    count=len(p.questions);scan.result={'template_variant':template_variant}
+                elif sh and sh.paper_id==scan.paper_id:
+                    count=len(sh.question_order);scan.sheet_id=sid
+                else: raise ValueError('This QR code belongs to another paper. Select the matching paper.')
+                found,preview=omr.bubbles(aligned,count)
                 omr.path(identity,'jpg').write_bytes(preview)
-                scan.sheet_id=sid;scan.detection=found;scan.state='review';db.commit()
+                scan.detection=found;scan.state='review';db.commit()
         except Exception as e:
             with SessionLocal() as db:
                 scan=db.get(m.TeacherScan,identity)
@@ -387,7 +409,7 @@ def scans(pid:int,user=Depends(t.require_teacher),db=Depends(get_db)):
         if s.state in ('queued','processing') and s.created_at<utcnow()-timedelta(minutes=10): s.state='failed';s.error='Processing was interrupted. Upload the image again.'
         sh=db.get(m.TeacherSheet,s.sheet_id) if s.sheet_id else None
         student=db.get(m.User,sh.student_id) if sh else None
-        output.append(dict(id=s.id,state=s.state,error=s.error,version=s.version,detection=s.detection,answers=s.answers,result=s.result,student=student.name if student else None,student_id=sh.student_id if sh else None,variant=sh.variant if sh else None))
+        output.append(dict(id=s.id,state=s.state,error=s.error,version=s.version,detection=s.detection,answers=s.answers,result=s.result,student=student.name if student else None,student_id=sh.student_id if sh else None,variant=sh.variant if sh else (s.result or {}).get('template_variant')))
     db.commit();return {'scans':output}
 
 @router.get('/scans/{sid}/preview')
@@ -399,6 +421,7 @@ def preview(sid:str,user=Depends(t.require_teacher),db=Depends(get_db)):
 
 class ReviewIn(BaseModel):
     version:int=Field(ge=1)
+    student_id:int|None=Field(None,ge=1)
     answers:list[Literal['','A','B','C','D','invalid']]=Field(min_length=1,max_length=200)
 
 @router.post('/scans/{sid}/review')
@@ -407,7 +430,19 @@ def review(sid:str,b:ReviewIn,user=Depends(t.require_teacher),db=Depends(get_db)
     if s.version!=b.version or s.state!='review': raise HTTPException(409,'This scan is already reviewed or changed. Reload it.')
     from app.services import teacher_omr as omr
     if not omr.path(sid,'jpg').is_file(): raise HTTPException(410,'Preview expired. Upload the sheet again before reviewing.')
-    sh=db.get(m.TeacherSheet,s.sheet_id)
+    sh=db.get(m.TeacherSheet,s.sheet_id) if s.sheet_id else None
+    if not sh:
+        variant=(s.result or {}).get('template_variant')
+        if variant not in ('A','B'): raise HTTPException(409,'Sheet identity is unavailable. Upload again.')
+        if not b.student_id: raise HTTPException(422,'Select the student whose name and ID are written on this sheet.')
+        if b.student_id not in roster(db,user.id): raise HTTPException(404,'Student is not active in your classes.')
+        sh=db.query(m.TeacherSheet).filter_by(paper_id=p.id,student_id=b.student_id,variant=variant).first()
+        if not sh:
+            sh=m.TeacherSheet(id=secrets.token_hex(16),paper_id=p.id,student_id=b.student_id,variant=variant,question_order=order_for(p,variant),created_at=utcnow())
+            db.add(sh);db.flush()
+        s.sheet_id=sh.id
+    elif b.student_id is not None and b.student_id!=sh.student_id:
+        raise HTTPException(422,'A personalised sheet cannot be assigned to a different student.')
     if len(b.answers)!=len(sh.question_order): raise HTTPException(422,'Review every answer, including blanks.')
     other=db.query(m.TeacherScan).join(m.TeacherSheet,m.TeacherSheet.id==m.TeacherScan.sheet_id).filter(m.TeacherScan.paper_id==p.id,m.TeacherScan.state=='reviewed',m.TeacherSheet.student_id==sh.student_id).first()
     if other: raise HTTPException(409,'This student already has a reviewed offline result for this paper. Duplicate scans cannot add another score.')
@@ -418,7 +453,7 @@ def review(sid:str,b:ReviewIn,user=Depends(t.require_teacher),db=Depends(get_db)
     qmap={q['question_id']:q for q in p.questions}
     s.answers=b.answers;s.result=offline_score(p,sh,b.answers)
     s.state='reviewed';s.reviewed_at=utcnow();s.version+=1
-    db.add(m.AuditLog(actor_id=user.id,action='omr_reviewed',entity='teacher_paper',entity_id=p.id,after={'scan_id':s.id,'score':s.result['score']},reason='Teacher confirmed all detected answers.'))
+    db.add(m.AuditLog(actor_id=user.id,action='omr_reviewed',entity='teacher_paper',entity_id=p.id,after={'scan_id':s.id,'student_id':sh.student_id,'variant':sh.variant,'score':s.result['score']},reason='Teacher confirmed all detected answers.'))
     if p.assignment_id:
         assignment=db.get(m.TeachingAssignment,p.assignment_id)
         if recipient:

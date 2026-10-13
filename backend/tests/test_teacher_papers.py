@@ -176,3 +176,38 @@ def test_reference_generation_and_remedial_need_real_evidence(studio):
     assert not {100,101}&{q['question_id'] for q in similar.json()['questions']}
     assert all(q['subtopic_id']==1 and q['difficulty']==5 for q in similar.json()['questions'])
     assert c.post('/api/teacher/papers/generate',json={'mode':'remedial','classroom_ids':[room['id']]}).status_code==422
+
+@pytest.mark.parametrize('variant',['A','B'])
+def test_reusable_omr_multiple_students_and_identity_review(studio,variant):
+    c,factory,active,room=studio
+    qids=[own_question(c),own_question(c)]
+    draft=create(c,qids);pid=draft['id']
+    assert c.get(f'/api/teacher/papers/{pid}/blank-omr.pdf').status_code==409
+    finish(c,draft)
+    pdf=c.get(f'/api/teacher/papers/{pid}/blank-omr.pdf?variant={variant}')
+    assert pdf.status_code==200 and 'print-multiple-copies' in pdf.headers['content-disposition']
+    assert c.get(f'/api/teacher/papers/{pid}/blank-omr.pdf?variant=X').status_code==422
+    data={'image_base64':base64.b64encode(pdf.content).decode()}
+    active[0]=2
+    assert c.post('/api/classrooms/join',json={'code':room['join_code']}).status_code==200
+    active[0]=3
+    for uid in (1,2):
+        uploaded=c.post(f'/api/teacher/papers/{pid}/scans',json=data);assert uploaded.status_code==202,uploaded.text
+        sid=uploaded.json()['id']
+        row=next(s for s in c.get(f'/api/teacher/papers/{pid}/scans').json()['scans'] if s['id']==sid)
+        assert row['state']=='review' and row['student_id'] is None and row['variant']==variant
+        review={'version':1,'answers':['A','A']}
+        assert c.post(f'/api/teacher/scans/{sid}/review',json=review).status_code==422
+        assert c.post(f'/api/teacher/scans/{sid}/review',json={**review,'student_id':999}).status_code==404
+        result=c.post(f'/api/teacher/scans/{sid}/review',json={**review,'student_id':uid})
+        assert result.status_code==200,result.text
+        assert result.json()['result']['score']==8
+    duplicate=c.post(f'/api/teacher/papers/{pid}/scans',json=data).json()['id']
+    assert c.post(f'/api/teacher/scans/{duplicate}/review',json={**review,'student_id':1}).status_code==409
+    other=finish(c,create(c,qids))
+    wrong=c.post(f"/api/teacher/papers/{other['id']}/scans",json=data).json()['id']
+    with factory() as db:
+        assert db.get(m.TeacherScan,wrong).state=='failed'
+        assert db.query(m.TeacherScan).filter_by(paper_id=pid,state='reviewed').count()==2
+    grant(c,4);active[0]=4
+    assert c.get(f'/api/teacher/papers/{pid}/blank-omr.pdf').status_code==404

@@ -34,8 +34,11 @@ def sheet_pdf(paper,sheet,name):
         c.rect(float(x)-5,HEIGHT-float(y)-5,10,10,fill=1,stroke=0)
     c.setFont('Helvetica-Bold',16);c.drawString(42,HEIGHT-62,'Jee Edge | Answer sheet')
     c.setFont('Helvetica',10)
-    # Keep identifiable text bounded; the QR carries only an opaque sheet ID.
-    for y,text in [(86,paper.title[:65]),(106,'Student: '+name[:50]),(126,f'Paper {paper.id} | Version {paper.version} | Set {sheet.variant}'),(151,'Fill one bubble completely with a dark pen. Do not fold the sheet.'),(167,'Print at 100% on A4. Keep all four corner squares visible in your photo.')]: c.drawString(42,HEIGHT-y,text)
+    # Reusable copies identify only the paper/set; the teacher assigns the student.
+    student_line='Name: ____________________  Student ID: __________' if name is None else 'Student: '+name[:50]
+    for y,text in [(86,paper.title[:65]),(106,student_line),(126,f'Paper {paper.id} | Version {paper.version} | Set {sheet.variant}'),(151,'Fill one bubble completely with a dark pen. Do not fold the sheet.'),(167,'Print at 100% on A4. Keep all four corner squares visible in your photo.')]:
+        while c.stringWidth(text,'Helvetica',10)>(400 if y<140 else 510): text=text[:-1]
+        c.drawString(42,HEIGHT-y,text)
     qr=QrCodeWidget('JEEOMR:'+sheet.id);x1,y1,x2,y2=qr.getBounds();d=Drawing(78,78,transform=[78/(x2-x1),0,0,78/(y2-y1),0,0]);d.add(qr)
     renderPDF.draw(d,c,WIDTH-125,HEIGHT-140)
     for col in range((len(sheet.question_order)+49)//50):
