@@ -1,10 +1,14 @@
-# Signup terms and privacy notice — 11 October 2026
+# Signup terms and privacy notice — 13 October 2026
+
+The current signup form has one required acceptance checkbox and no age-group selector. An adult accepts for themselves, or a parent/legal guardian aged 18+ accepts for the under-18 student. The guardian instruction is visible before the checkbox. This applies to email signup and the Google pending-terms page.
+
+Current payload: `{ "version": "2026-10-13", "accepted": true }`. New records store `age_band = NULL` and `accepted_by = adult_or_guardian_declaration`. This describes the actual combined declaration; it does not identify which alternative applies, infer adulthood, verify a parent, or remove date of birth from the existing student profile. Previous records are retained. The server accepts the previous 2026-10-11 payload for cached clients with its original age and guardian checks and records that previous version accurately. No database migration is required.
 
 The user-facing documents live at `/terms` and `/privacy` (source: `frontend/src/pages/Legal.jsx`). Both are accessible without signing in and have a Print / save as PDF action. Signup links open in a new tab so entered form values remain intact.
 
 ## Acceptance flow
 
-Email signup requires the current document version, age band and explicit unchecked acceptance. Under-18 signup additionally requires a declaration made by the parent/legal guardian, not simply a student claiming permission. The backend rejects missing, outdated or declined acceptance and under-18 submissions without that declaration.
+Email signup requires an explicit acceptance that starts unchecked. For under-18 students, the parent/legal guardian must complete the combined adult-or-guardian acceptance. The backend rejects missing acceptance, unknown versions and declined acceptance. Cached clients using the previous form retain its separate guardian requirement. A checkbox declaration alone is not verified parental consent.
 
 New Google accounts receive a pending acceptance record and must finish `/signup/terms` before using onboarding or protected study APIs. Authentication, sign-out and acceptance remain available. Google supplies the account email and subject identifier before this terms step. Existing accounts remain usable; historical acceptance is not fabricated. Explicitly connecting Google does not change an account's acceptance.
 

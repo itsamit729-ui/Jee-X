@@ -488,3 +488,18 @@ def test_legacy_account_without_terms_record_still_signs_in(env):
         db.commit()
     assert client.get('/api/auth/session').json()['user']['terms_required'] is False
     assert client.get('/api/me').status_code == 200
+
+
+def test_combined_terms_needs_no_age_group_and_does_not_infer_adulthood(env):
+    client, sessions, _, _ = env
+    original = {'email': EMAIL, 'password': PASSWORD}
+    current = {'version': '2026-10-13', 'accepted': True}
+    assert client.post('/api/auth/register', json={**original, 'terms': {**current, 'accepted': False}}).status_code == 422
+    assert client.post('/api/auth/register', json={**original, 'terms': {**current, 'age_band': '18_plus'}}).status_code == 422
+    assert client.post('/api/auth/register', json={**original, 'terms': current}).status_code == 202
+    with sessions() as db:
+        record = db.query(models.AuthTerms).one()
+        assert record.version == '2026-10-13'
+        assert record.age_band is None
+        assert record.accepted_by == 'adult_or_guardian_declaration'
+        assert record.accepted_at
