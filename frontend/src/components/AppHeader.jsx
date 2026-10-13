@@ -101,11 +101,12 @@ function TeacherHeader() {
     <a className="skip-link" href="#teacher-content">Skip to workspace</a>
     <header className="studio-topbar">
       <div className="tw-brand"><div className="studio-mobile-logo"><Logo to="/teacher"/></div><span className="tw-brand-label">For teachers</span></div>
+      <TeacherWorkspaceNav compact/>
       <div className="studio-top-actions">
         <InboxBell/>
         <Link className="tw-account-link" to="/teacher/profile" aria-label="Your teacher profile"><span className="studio-avatar">{user?.name?.trim()?.[0]?.toUpperCase() || <UserRound size={16}/>}</span><span className="tw-account-name">{user?.name || 'Teacher'}<small>Teacher account</small></span></Link>
         <button className="btn btn-quiet btn-sm tw-sign-out" onClick={logout}>Sign out</button>
-        <button ref={trigger} className="tw-menu-toggle" aria-expanded={open} aria-controls="teacher-mobile-menu" aria-label={open ? 'Close teacher navigation' : 'Open teacher navigation'} onClick={() => setOpen(v => !v)}>{open ? <X size={21}/> : <Menu size={21}/>}</button>
+        <button ref={trigger} className="tw-menu-toggle" aria-expanded={open} aria-controls="teacher-mobile-menu" aria-label={open ? 'Close teacher navigation' : 'Open teacher navigation'} onClick={() => setOpen(v => !v)}>{open ? <X size={19}/> : <Menu size={19}/>}<span>More</span></button>
       </div>
     </header>
     {open && <div ref={menu} id="teacher-mobile-menu" className="tw-mobile-menu"><TeacherWorkspaceNav close={() => setOpen(false)}/><button className="btn btn-quiet" onClick={logout}><LogOut size={16}/>Sign out</button></div>}

@@ -4,7 +4,6 @@ import { ArrowUpRight, Bell, BookOpen, RefreshCw } from 'lucide-react'
 import { request } from '../../lib/api.js'
 import AppHeader from '../AppHeader.jsx'
 import { useAuth } from '../../auth/AuthContext.jsx'
-import TeacherWorkspaceNav from './TeacherWorkspaceNav.jsx'
 import './classroom.css'
 import './teacher-workspace.css'
 
@@ -15,7 +14,7 @@ export function ErrorMessage({ error }) { return error ? <p className="cl-error"
 export function Empty({ title, children }) { return <div className="cl-empty"><BookOpen size={28}/><h3>{title}</h3><p>{children}</p></div> }
 export function Shell({ eyebrow, title, intro, action, children }) {
   const { user } = useAuth()
-  if (user?.account_type === 'teacher' || user?.teacher) return <div className="crackjee-root cl-root tw-root"><AppHeader/><div className="tw-layout"><aside className="tw-sidebar"><TeacherWorkspaceNav/></aside><main id="teacher-content" className="cl-wrap tw-content"><header className="cl-hero tw-page-head"><div><span className="cl-eyebrow">{eyebrow}</span><h1>{title}</h1><p>{intro}</p></div>{action}</header>{children}</main></div></div>
+  if (user?.account_type === 'teacher' || user?.teacher) return <div className="crackjee-root cl-root tw-root"><AppHeader/><div className="tw-layout"><main id="teacher-content" className="cl-wrap tw-content"><header className="cl-hero tw-page-head"><div><span className="cl-eyebrow">{eyebrow}</span><h1>{title}</h1><p>{intro}</p></div>{action}</header>{children}</main></div></div>
   return <div className="crackjee-root cl-root"><AppHeader/><main className="cl-wrap"><header className="cl-hero"><div><span className="cl-eyebrow">{eyebrow}</span><h1>{title}</h1><p>{intro}</p></div>{action}</header>{children}</main></div>
 }
 export function useLoad(path) {

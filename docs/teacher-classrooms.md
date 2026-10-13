@@ -102,7 +102,7 @@ Scanned PDFs may contain up to 60 pages within 8 MB; image limits remain 8 MB an
 
 ## Teacher workspace experience
 
-Teacher accounts open on an overview with real class, student, test and draft counts, upcoming assignments and links to the next setup task. A shared sidebar covers classes, papers, students, reports, syllabus, student questions and account settings. On smaller screens the same navigation is available from the header menu. Existing report links and the legacy `tab=build` link still work; invalid section names return to Overview.
+Teacher accounts open on an overview with real class, student, test and draft counts, upcoming assignments and links to the next setup task. A compact header provides Overview, Classes, Papers, Students and Reports. The More menu contains the full workspace navigation, including syllabus, student questions and account settings. On smaller screens all navigation is available from the header menu. Teacher pages use the full content width with no navigation sidebar. Existing report links and the legacy `tab=build` link still work; invalid section names return to Overview.
 
 Paper creation has three steps: Set up, Add questions, and Review & finalise. Teachers can generate questions, browse the bank or write private questions in separate panels. Drafts remain editable; finalised papers have separate question paper, answer key, answer sheet and online assignment views. Answer sheets separate printing, uploads and review/results. The current scan review requirement is shown accurately; this UI change does not enable automatic scoring or handwriting OCR.
 
