@@ -6,7 +6,8 @@ const q={question_id:1,type:'single_correct',options:['A','B','C','D'].map((labe
 test('OMR readiness distinguishes mixed formats, malformed labels and ambiguous keys',()=>{
   assert.equal(omrReadiness([]).eligible,false)
   assert.equal(omrReadiness([q]).eligible,true)
-  const report=omrReadiness([q,{...q,question_id:2,type:'numerical'},{...q,question_id:3,options:q.options.slice(0,3)}])
+  assert.equal(omrReadiness([{...q,type:'multi_correct',options:q.options.map(o=>({...o,is_correct:true}))},{question_id:2,type:'numerical',answer_min:-0.125,answer_max:-0.12,options:[]}]).eligible,true)
+  const report=omrReadiness([q,{...q,question_id:2,type:'numerical'},{...q,question_id:3,options:q.options.slice(0,1)}])
   assert.equal(report.eligible,false);assert.equal(report.eligible_count,1)
   assert.deepEqual(report.issues.map(i=>i.number),[2,3])
   assert.equal(omrReadiness([{...q,options:q.options.map(o=>({...o,is_correct:true}))}]).eligible,false)

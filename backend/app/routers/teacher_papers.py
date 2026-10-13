@@ -3,6 +3,7 @@ import base64
 import csv
 import hashlib
 import io
+import math
 import random
 import secrets
 from collections import Counter
@@ -16,6 +17,7 @@ from app import models as m
 from app.database import get_db, SessionLocal
 from app.auth import utcnow
 from app.routers import teaching as t
+from app.services import mixed_omr, paper_answers
 
 router = APIRouter(prefix='/api/teacher', tags=['teacher papers'])
 EXAMS = Literal['jee_main', 'jee_advanced', 'mht_cet', 'bitsat']
@@ -254,8 +256,12 @@ def references(user=Depends(t.require_teacher),db=Depends(get_db)):
 class PrivateQuestion(BaseModel):
     subtopic_id:int
     stem:str=Field(min_length=5,max_length=16000)
-    options:list[str]=Field(min_length=4,max_length=4)
-    correct:Literal['A','B','C','D']
+    type:Literal['single_correct','multi_correct','numerical']='single_correct'
+    options:list[str]=Field(default_factory=list,max_length=4)
+    correct:Literal['A','B','C','D']|None=None
+    correct_options:list[Literal['A','B','C','D']]=Field(default_factory=list,max_length=4)
+    answer_min:float|None=None
+    answer_max:float|None=None
     solution:str=Field('',max_length=16000)
     difficulty:int=Field(5,ge=1,le=10)
 
@@ -265,11 +271,16 @@ def topics(user=Depends(t.require_teacher),db=Depends(get_db)):
 
 @router.post('/questions/private',status_code=201)
 def private(b:PrivateQuestion,user=Depends(t.require_teacher),db=Depends(get_db)):
-    if not db.get(m.Subtopic,b.subtopic_id) or any(not x.strip() or len(x)>8000 for x in b.options): raise HTTPException(422,'Choose a valid topic and four non-empty options.')
+    if not db.get(m.Subtopic,b.subtopic_id):raise HTTPException(422,'Choose a valid topic.')
+    correct=set(b.correct_options or ([b.correct] if b.correct else []))
+    if b.type=='numerical':
+        if b.answer_min is None or b.answer_max is None or not all(math.isfinite(v) and abs(v)<=3.4e38 for v in (b.answer_min,b.answer_max)) or b.answer_min>b.answer_max:raise HTTPException(422,'Enter a finite numerical answer range, minimum first (magnitude at most 3.4 × 10^38).')
+        if b.options or correct:raise HTTPException(422,'Numerical questions use an answer range, not choices.')
+    elif not 2<=len(b.options)<=4 or any(not x.strip() or len(x)>8000 for x in b.options) or not correct or not correct<=set('ABCD'[:len(b.options)]) or (b.type=='single_correct' and len(correct)!=1):raise HTTPException(422,'Choose two to four non-empty options and a valid answer key.')
     ref='T'+str(user.id)+'-'+secrets.token_hex(10)
-    q=m.Question(ref=ref,subtopic_id=b.subtopic_id,type='single_correct',stem=b.stem,solution=b.solution,difficulty=b.difficulty,expected_time_sec=120,source_type='original',status='draft',created_by=user.id,version=1,content_hash=hashlib.sha256(ref.encode()).hexdigest())
+    q=m.Question(ref=ref,subtopic_id=b.subtopic_id,type=b.type,answer_min=b.answer_min if b.type=='numerical' else None,answer_max=b.answer_max if b.type=='numerical' else None,stem=b.stem,solution=b.solution,difficulty=b.difficulty,expected_time_sec=120,source_type='original',status='draft',created_by=user.id,version=1,content_hash=hashlib.sha256(ref.encode()).hexdigest())
     db.add(q);db.flush()
-    for i,content in enumerate(b.options): db.add(m.QuestionOption(question_id=q.id,label='ABCD'[i],content=content,is_correct='ABCD'[i]==b.correct,position=i+1))
+    for i,content in enumerate(b.options): db.add(m.QuestionOption(question_id=q.id,label='ABCD'[i],content=content,is_correct='ABCD'[i] in correct,position=i+1))
     db.flush();db.expire(q,['options']);frozen=t.freeze(q,1)
     db.add(m.QuestionRevision(question_id=q.id,version=1,content=frozen));db.commit()
     return frozen
@@ -306,13 +317,19 @@ def check_variant(p,variant):
 def omr_report(questions):
     issues=[]
     for index,q in enumerate(questions):
-        options=q.get('options',[])
-        reason=None
-        if q.get('type')!='single_correct': reason='Numerical answer' if q.get('type')=='numerical' else 'Multiple-correct answer'
-        elif len(options)!=4 or {o.get('label') for o in options}!={'A','B','C','D'}: reason='Needs exactly four options labelled A, B, C and D'
-        elif sum(bool(o.get('is_correct')) for o in options)!=1: reason='Needs exactly one correct option'
-        if reason: issues.append({'number':index+1,'question_id':q['question_id'],'reason':reason})
-    return {'eligible':bool(questions) and len(questions)<=200 and not issues,'issues':issues,'eligible_count':len(questions)-len(issues),'total':len(questions)}
+        options=q.get('options',[]);reason=None
+        if q.get('type')=='numerical':
+            if q.get('answer_min') is None or q.get('answer_max') is None or not all(math.isfinite(float(q[k])) for k in ('answer_min','answer_max')) or q['answer_min']>q['answer_max']: reason='Needs a valid numerical answer range'
+        elif q.get('type') in ('single_correct','multi_correct'):
+            labels=[o.get('label') for o in options];correct=sum(bool(o.get('is_correct')) for o in options)
+            if not 2<=len(options)<=4 or len(set(labels))!=len(labels) or not set(labels)<={'A','B','C','D'}:reason='Needs two to four distinct A-D options'
+            elif not correct or (q['type']=='single_correct' and correct!=1):reason='Needs a valid answer key'
+        else:reason='Unsupported question format'
+        if reason:issues.append({'number':index+1,'question_id':q['question_id'],'reason':reason})
+    mixed=mixed_omr.needs_mixed(questions)
+    return {'eligible':bool(questions) and len(questions)<=200 and not issues,'issues':issues,'eligible_count':len(questions)-len(issues),'total':len(questions),'layout':'mixed' if mixed else 'compact',
+        'page_count':len(mixed_omr.pages_for(questions,[q['question_id'] for q in questions])) if mixed and not issues else 1}
+
 
 def order_for(p,variant):
     ids=[q['question_id'] for q in p.questions]
@@ -320,7 +337,7 @@ def order_for(p,variant):
     return ids
 
 def generic_sheet_id(p,variant,layout=2):
-    suffix=':idgrid-v2' if layout==2 else ''
+    suffix=':mixed-v3' if layout==3 else ':idgrid-v2' if layout==2 else ''
     return hashlib.sha256(f'jeeedge-reusable-omr:{p.id}:{variant}{suffix}'.encode()).hexdigest()[:32]
 
 
@@ -337,7 +354,7 @@ def blank_sheet_download(pid:int,variant:Literal['A','B']='A',user=Depends(t.req
     from types import SimpleNamespace
     from app.services.teacher_omr import sheet_pdf
     p=owned(db,pid,user);check_omr(p);check_variant(p,variant)
-    sheet=SimpleNamespace(id=generic_sheet_id(p,variant),variant=variant,question_order=order_for(p,variant))
+    sheet=SimpleNamespace(id=generic_sheet_id(p,variant,3 if mixed_omr.needs_mixed(p.questions) else 2),variant=variant,question_order=order_for(p,variant))
     return Response(sheet_pdf(p,sheet,None),media_type='application/pdf',headers={'Content-Disposition':f'attachment; filename="omr-{p.id}-{variant}-print-multiple-copies.pdf"'})
 
 @router.post('/papers/{pid}/sheets')
@@ -371,15 +388,15 @@ def scan(pid:int,b:ScanIn,tasks:BackgroundTasks,user=Depends(t.require_teacher),
     check_omr(p)
     active=db.query(m.TeacherScan).filter(m.TeacherScan.teacher_id==user.id,m.TeacherScan.state.in_(['queued','processing']),m.TeacherScan.created_at>utcnow()-timedelta(minutes=10)).count()
     global_active=db.query(m.TeacherScan).filter(m.TeacherScan.state.in_(['queued','processing']),m.TeacherScan.created_at>utcnow()-timedelta(minutes=10)).count()
-    if global_active>=8: raise HTTPException(429,'The scan queue is busy. Retry after current scans finish.')
-    if active>=3: raise HTTPException(429,'Three scans are processing. Wait for them before uploading more.')
+    if global_active>=120: raise HTTPException(429,'The scan queue is busy. Retry after current scans finish.')
+    if active>=60: raise HTTPException(429,'Sixty pages are processing. Wait for them before uploading more.')
     try:
         data=base64.b64decode(b.image_base64,validate=True)
         if len(data)>8_000_000: raise ValueError('Maximum upload size is 8 MB.')
         if data.startswith(b'%PDF-'):
             import pypdfium2 as pdfium
             with pdfium.PdfDocument(data) as document:
-                if not 1<=len(document)<=3: raise ValueError('Upload PDF batches of one to three pages.')
+                if not 1<=len(document)<=60: raise ValueError('Upload PDF batches of one to sixty pages.')
                 images=[]
                 for page in document:
                     width,height=page.get_size()
@@ -390,8 +407,8 @@ def scan(pid:int,b:ScanIn,tasks:BackgroundTasks,user=Depends(t.require_teacher),
         else:
             omr.decode_image(data);images=[data]
     except ValueError as e: raise HTTPException(422,str(e)[:200])
-    except Exception: raise HTTPException(422,'Upload a valid JPEG, PNG or PDF below 8 MB. PDFs may contain up to three pages.')
-    if active+len(images)>3 or global_active+len(images)>8: raise HTTPException(429,'Wait for current scans to finish before uploading this batch.')
+    except Exception: raise HTTPException(422,'Upload a valid JPEG, PNG or PDF below 8 MB. PDFs may contain up to sixty pages.')
+    if active+len(images)>60 or global_active+len(images)>120: raise HTTPException(429,'Wait for current scans to finish before uploading this batch.')
     identities=[]
     for image in images:
         identity=secrets.token_hex(16);omr.path(identity,'input').write_bytes(image)
@@ -410,13 +427,17 @@ def process_scan(identity):
                 if not scan or scan.state!='queued': return
                 scan.state='processing';db.commit()
                 sid,aligned=omr.detect(omr.path(identity,'input').read_bytes())
+                mixed_page=None
+                if sid.startswith('v3:'):
+                    _,sid,page_text=sid.split(':');mixed_page=int(page_text)
                 sh=db.get(m.TeacherSheet,sid);p=db.get(m.TeacherPaper,scan.paper_id)
                 if not p or p.teacher_id!=scan.teacher_id: raise ValueError('Paper is unavailable.')
-                template=next(((v,layout) for layout in (2,1) for v in (('A','B') if sets_enabled(p) else ('A',)) if sid==generic_sheet_id(p,v,layout)),None)
+                if mixed_omr.needs_mixed(p.questions)!=(mixed_page is not None): raise ValueError('This answer-sheet layout does not match the paper. Download its current sheet.')
+                template=next(((v,layout) for layout in ((3,) if mixed_page is not None else (2,1)) for v in (('A','B') if sets_enabled(p) else ('A',)) if sid==generic_sheet_id(p,v,layout)),None)
                 template_variant,layout=template if template else (None,0)
                 if template_variant:
                     count=len(p.questions);scan.result={'template_variant':template_variant}
-                    if layout==2:
+                    if layout in (2,3):
                         identity_result=omr.read_student_id(aligned)
                         if identity_result['status']=='clear':
                             uid=int(identity_result['digits'])
@@ -432,7 +453,18 @@ def process_scan(identity):
                 elif sh and sh.paper_id==scan.paper_id:
                     count=len(sh.question_order);scan.sheet_id=sid
                 else: raise ValueError('This QR code belongs to another paper. Select the matching paper.')
-                found,preview=omr.bubbles(aligned,count,id_grid=layout==2)
+                if mixed_page is not None:
+                    variant=template_variant or sh.variant
+                    pages=mixed_omr.pages_for(p.questions,order_for(p,variant))
+                    if mixed_page>=len(pages): raise ValueError('Invalid page number for this paper.')
+                    items=pages[mixed_page]
+                    scan.result={**(scan.result or {}),'layout':3,'page_index':mixed_page,'page_count':len(pages),'question_order':[i['question_id'] for i in items]}
+                    found,preview=mixed_omr.scan(aligned,items)
+                else:
+                    found,preview=omr.bubbles(aligned,count,id_grid=layout==2)
+                    question_ids=order_for(p,template_variant) if template_variant else sh.question_order
+                    lookup={q['question_id']:q for q in p.questions}
+                    found=[{**d,'question_id':qid,'type':lookup[qid]['type'],'labels':[o['label'] for o in lookup[qid]['options']]} for d,qid in zip(found,question_ids)]
                 omr.path(identity,'jpg').write_bytes(preview)
                 scan.detection=found;scan.state='review';db.commit()
         except Exception as e:
@@ -462,8 +494,21 @@ def scans(pid:int,user=Depends(t.require_teacher),db=Depends(get_db)):
         if s.state in ('queued','processing') and s.created_at<utcnow()-timedelta(minutes=10): s.state='failed';s.error='Processing was interrupted. Upload the image again.'
         sh=db.get(m.TeacherSheet,s.sheet_id) if s.sheet_id else None
         student=db.get(m.User,sh.student_id) if sh else None
-        output.append(dict(preview_available=omr.path(s.id,'jpg').is_file(),id=s.id,state=s.state,error=s.error,version=s.version,detection=s.detection,answers=s.answers,result=s.result,student=student.name if student else None,student_id=sh.student_id if sh else None,variant=sh.variant if sh else (s.result or {}).get('template_variant')))
+        can_reopen=s.state=='page_reviewed' and sh and not db.query(m.TeacherScan.id).join(m.TeacherSheet,m.TeacherSheet.id==m.TeacherScan.sheet_id).filter(m.TeacherScan.paper_id==pid,m.TeacherScan.state=='reviewed',m.TeacherSheet.student_id==sh.student_id).first()
+        output.append(dict(can_reopen=bool(can_reopen),preview_available=omr.path(s.id,'jpg').is_file(),id=s.id,state=s.state,error=s.error,version=s.version,detection=s.detection,answers=s.answers,result=s.result,student=student.name if student else None,student_id=sh.student_id if sh else None,variant=sh.variant if sh else (s.result or {}).get('template_variant')))
     db.commit();return {'scans':output}
+
+@router.post('/scans/{sid}/reopen-page')
+def reopen_page(sid:str,b:VersionIn,user=Depends(t.require_teacher),db=Depends(get_db)):
+    from app.services import teacher_omr as omr
+    row=own_scan(db,sid,user);owned(db,row.paper_id,user)
+    if row.state!='page_reviewed' or row.version!=b.version:raise HTTPException(409,'Reload this page before editing it.')
+    sheet=db.get(m.TeacherSheet,row.sheet_id)
+    if db.query(m.TeacherScan.id).join(m.TeacherSheet,m.TeacherSheet.id==m.TeacherScan.sheet_id).filter(m.TeacherScan.paper_id==row.paper_id,m.TeacherScan.state=='reviewed',m.TeacherSheet.student_id==sheet.student_id).first():raise HTTPException(409,'The full paper has already been scored.')
+    row.state='review' if omr.path(sid,'jpg').is_file() else 'superseded'
+    row.version+=1
+    db.add(m.AuditLog(actor_id=user.id,action='omr_page_reopened',entity='teacher_paper',entity_id=row.paper_id,after={'scan_id':row.id,'student_id':sheet.student_id,'state':row.state},reason='Teacher reopened a confirmed page before final scoring.'))
+    db.commit();return {'state':row.state,'version':row.version}
 
 @router.get('/scans/{sid}/preview')
 def preview(sid:str,user=Depends(t.require_teacher),db=Depends(get_db)):
@@ -475,7 +520,7 @@ def preview(sid:str,user=Depends(t.require_teacher),db=Depends(get_db)):
 class ReviewIn(BaseModel):
     version:int=Field(ge=1)
     student_id:int|None=Field(None,ge=1)
-    answers:list[Literal['','A','B','C','D','invalid']]=Field(min_length=1,max_length=200)
+    answers:list[str]=Field(min_length=1,max_length=200)
 
 @router.post('/scans/{sid}/review')
 def review(sid:str,b:ReviewIn,user=Depends(t.require_teacher),db=Depends(get_db)):
@@ -502,40 +547,67 @@ def review(sid:str,b:ReviewIn,user=Depends(t.require_teacher),db=Depends(get_db)
     elif b.student_id is not None and b.student_id!=sh.student_id:
         raise HTTPException(422,'A personalised sheet cannot be assigned to a different student.')
     if sh.student_id not in roster(db,user.id): raise HTTPException(404,'Student is no longer active in your classes. Restore membership before saving a score.')
-    if len(b.answers)!=len(sh.question_order): raise HTTPException(422,'Review every answer, including blanks.')
+    page_meta=s.result or {}
+    page_order=page_meta.get('question_order',sh.question_order)
+    if len(b.answers)!=len(page_order) or any(len(a)>100 for a in b.answers): raise HTTPException(422,'Review every answer on this page, including blanks.')
+    qmap={q['question_id']:q for q in p.questions}
+    page_answers=[paper_answers.normalize(qmap[qid],answer) for qid,answer in zip(page_order,b.answers)]
     other=db.query(m.TeacherScan).join(m.TeacherSheet,m.TeacherSheet.id==m.TeacherScan.sheet_id).filter(m.TeacherScan.paper_id==p.id,m.TeacherScan.state=='reviewed',m.TeacherSheet.student_id==sh.student_id).first()
     if other: raise HTTPException(409,'This student already has a reviewed offline result for this paper. Duplicate scans cannot add another score.')
     if p.assignment_id:
         t.lock_user(db,sh.student_id)
         recipient=db.query(m.AssignmentRecipient).filter_by(assignment_id=p.assignment_id,user_id=sh.student_id).with_for_update().populate_existing().first()
         if recipient and recipient.attempt_id: raise HTTPException(409,'This student has already started online. Finish or review that attempt instead of adding an offline score.')
-    qmap={q['question_id']:q for q in p.questions}
-    identity_result=(s.result or {}).get('identity')
-    s.answers=b.answers;s.result=offline_score(p,sh,b.answers)
-    if identity_result: s.result={**s.result,'identity':identity_result}
+    identity_result=page_meta.get('identity')
+    full_answers=page_answers
+    if page_meta.get('layout')==3:
+        pages=mixed_omr.pages_for(p.questions,sh.question_order)
+        previous=db.query(m.TeacherScan).filter_by(paper_id=p.id,sheet_id=sh.id,state='page_reviewed').with_for_update().all()
+        confirmed={r.result['page_index']:r for r in previous}
+        page_index=page_meta['page_index']
+        if page_index in confirmed:raise HTTPException(409,'This page is already confirmed for this student. Duplicate pages cannot change saved answers.')
+        s.answers=page_answers;s.result={**page_meta,'student_id':sh.student_id};s.state='page_reviewed';s.reviewed_at=utcnow();s.version+=1
+        confirmed[page_index]=s
+        if len(confirmed)<len(pages):
+            db.commit();return {'complete':False,'confirmed_pages':len(confirmed),'page_count':len(pages),'missing_pages':[i+1 for i in range(len(pages)) if i not in confirmed]}
+        collected={}
+        for index,row in confirmed.items():
+            expected=[i['question_id'] for i in pages[index]]
+            if row.result.get('question_order')!=expected or len(row.answers)!=len(expected):raise HTTPException(409,'Page contents changed. Re-upload the matching answer sheet.')
+            collected.update(zip(expected,row.answers))
+        if set(collected)!=set(sh.question_order):raise HTTPException(409,'Some answers are missing. Review every page.')
+        full_answers=[collected[qid] for qid in sh.question_order]
+        # Keep page membership so a corrected key can regrade the full paper later.
+        page_meta={**page_meta,'confirmed_scan_ids':[r.id for r in confirmed.values()]}
+    s.answers=full_answers;s.result=offline_score(p,sh,full_answers)
+    if identity_result:s.result={**s.result,'identity':identity_result}
+    if page_meta.get('layout')==3:s.result={**s.result,**{k:page_meta[k] for k in ('layout','page_index','page_count','confirmed_scan_ids')}}
     s.state='reviewed';s.reviewed_at=utcnow();s.version+=1
-    db.add(m.AuditLog(actor_id=user.id,action='omr_reviewed',entity='teacher_paper',entity_id=p.id,after={'scan_id':s.id,'student_id':sh.student_id,'variant':sh.variant,'score':s.result['score'],'identity':identity_result},reason='Teacher confirmed all detected answers.'))
+    db.add(m.AuditLog(actor_id=user.id,action='omr_reviewed',entity='teacher_paper',entity_id=p.id,after={'scan_id':s.id,'student_id':sh.student_id,'variant':sh.variant,'score':s.result['score'],'identity':identity_result},reason='Teacher confirmed all pages and detected answers.'))
     if p.assignment_id:
         assignment=db.get(m.TeachingAssignment,p.assignment_id)
         if recipient:
             attempt=m.TestAttempt(user_id=sh.student_id,test_id=assignment.test_id,started_at=utcnow(),attempt_number=1,counts_for_rank=False)
             db.add(attempt);db.flush();recipient.attempt_id=attempt.id
-            recipient.draft=[{'question_id':qid,'option_ids':[o['id'] for o in qmap[qid]['options'] if o['label']==answer],'numeric_answer':None,'time_taken_sec':0,'invalid':answer=='invalid'} for qid,answer in zip(sh.question_order,b.answers)]
+            recipient.draft=[paper_answers.draft(qmap[qid],answer) for qid,answer in zip(sh.question_order,full_answers)]
             t.finalize(db,assignment,recipient,attempt)
-    db.commit();return {'result':s.result}
+    db.commit();return {'complete':True,'result':s.result}
 
 
 def offline_score(p,sh,answers):
     qmap={q['question_id']:q for q in p.questions};details=[]
     for qid,answer in zip(sh.question_order,answers):
-        q=qmap[qid];key=next(o['label'] for o in q['options'] if o['is_correct']);outcome='skipped' if not answer else 'correct' if answer==key else 'wrong'
+        q=qmap[qid];outcome=paper_answers.outcome(q,answer)
         details.append(dict(question_id=qid,answer=answer,outcome=outcome,marks=p.settings['marks_correct'] if outcome=='correct' else -p.settings['marks_wrong'] if outcome=='wrong' else 0,topic=q['topic']))
     correct=sum(d['outcome']=='correct' for d in details);attempted=sum(d['outcome']!='skipped' for d in details)
     return dict(score=sum(d['marks'] for d in details),max_score=len(details)*p.settings['marks_correct'],correct=correct,attempted=attempted,accuracy=round(correct*100/attempted,2) if attempted else 0,questions=details)
 
 class KeyCorrection(BaseModel):
     question_id:int
-    correct:Literal['A','B','C','D']
+    correct:Literal['A','B','C','D']|None=None
+    correct_options:list[Literal['A','B','C','D']]=Field(default_factory=list,max_length=4)
+    answer_min:float|None=None
+    answer_max:float|None=None
 
 class CorrectKeyIn(BaseModel):
     version:int=Field(ge=1)
@@ -553,9 +625,15 @@ def correct_key(pid:int,b:CorrectKeyIn,user=Depends(t.require_teacher),db=Depend
     if len({c.question_id for c in b.corrections})!=len(b.corrections): raise HTTPException(422,'Each question may be corrected once.')
     for change in b.corrections:
         q=qmap.get(change.question_id)
-        if not q or q['type']!='single_correct' or change.correct not in [o['label'] for o in q['options']]: raise HTTPException(422,'Choose an existing single-correct question and option.')
-        before.append({'question_id':q['question_id'],'correct':[o['label'] for o in q['options'] if o['is_correct']]})
-        for o in q['options']: o['is_correct']=o['label']==change.correct
+        if not q:raise HTTPException(422,'Choose a question from this saved paper.')
+        before.append({'question_id':q['question_id'],'correct':[o['label'] for o in q['options'] if o['is_correct']],'answer_min':q['answer_min'],'answer_max':q['answer_max']})
+        correct=set(change.correct_options or ([change.correct] if change.correct else []))
+        if q['type']=='numerical':
+            if correct or change.answer_min is None or change.answer_max is None or not all(math.isfinite(v) and abs(v)<=3.4e38 for v in (change.answer_min,change.answer_max)) or change.answer_min>change.answer_max:raise HTTPException(422,'Enter a finite, ordered numerical answer range within ±3.4e38.')
+            q['answer_min']=change.answer_min;q['answer_max']=change.answer_max
+        else:
+            if not correct or not correct<={o['label'] for o in q['options']} or (q['type']=='single_correct' and len(correct)!=1):raise HTTPException(422,'Choose the correct option or options for this question.')
+            for o in q['options']:o['is_correct']=o['label'] in correct
     p.questions=questions;p.version+=1;p.updated_at=utcnow()
     online=offline=0
     if p.assignment_id:
@@ -588,8 +666,8 @@ def correct_key(pid:int,b:CorrectKeyIn,user=Depends(t.require_teacher),db=Depend
             attempt.submitted_at=submitted;r.result={**r.result,'submitted_at':t.stamp(submitted)}
             online+=1
     for scan,sh in db.query(m.TeacherScan,m.TeacherSheet).join(m.TeacherSheet,m.TeacherSheet.id==m.TeacherScan.sheet_id).filter(m.TeacherScan.paper_id==p.id,m.TeacherScan.state=='reviewed').all():
-        identity=(scan.result or {}).get('identity')
-        scan.result={**offline_score(p,sh,scan.answers),**({'identity':identity} if identity else {})};scan.version+=1;offline+=1
+        metadata={k:v for k,v in (scan.result or {}).items() if k in ('identity','layout','page_index','page_count','confirmed_scan_ids')}
+        scan.result={**offline_score(p,sh,scan.answers),**metadata};scan.version+=1;offline+=1
     db.add(m.AuditLog(actor_id=user.id,action='teacher_key_corrected',entity='teacher_paper',entity_id=p.id,
         before={'keys':before,'version':b.version},after={'keys':[c.model_dump() for c in b.corrections],'version':p.version,'online_results':online,'offline_results':offline},reason=b.reason.strip()))
     db.commit();return {'paper':payload(p),'online_results':online,'offline_results':offline}

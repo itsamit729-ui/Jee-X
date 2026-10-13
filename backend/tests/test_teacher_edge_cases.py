@@ -30,15 +30,13 @@ def test_no_set_paper_pdf_and_invalid_variant(studio,tmp_path):
     assert c.get('/api/teacher/papers').json()['papers'][0]['omr']['eligible']
 
 
-def test_mixed_formats_explain_every_blocker_and_reject_scans_early(studio):
+def test_mixed_formats_remain_printable_scannable_and_assignable(studio):
     c,f,active,room=studio
     qid=own_question(c)
     paper=finish(c,standard(c,[100,120,qid]));pid=paper['id']
-    assert paper['omr']['eligible'] is False
-    assert paper['omr']['eligible_count']==1
-    assert [r['number'] for r in paper['omr']['issues']]==[1,2]
-    r=c.get(f'/api/teacher/papers/{pid}/blank-omr.pdf');assert r.status_code==422 and '1, 2' in r.json()['detail']
-    r=c.post(f'/api/teacher/papers/{pid}/scans',json={'image_base64':'x'*100});assert r.status_code==422 and 'OMR' in r.json()['detail']
+    assert paper['omr']['eligible'] and paper['omr']['layout']=='mixed'
+    assert paper['omr']['eligible_count']==3 and paper['omr']['issues']==[]
+    r=c.get(f'/api/teacher/papers/{pid}/blank-omr.pdf');assert r.status_code==200 and r.headers['content-type']=='application/pdf'
     # Same mixed paper is still assignable online.
     now=utcnow();schedule={'classroom_ids':[room['id']],'opens_at':now.isoformat()+'Z','due_at':(now+timedelta(days=1)).isoformat()+'Z','solutions_at':(now+timedelta(days=1)).isoformat()+'Z'}
     assert c.post(f'/api/teacher/papers/{pid}/assign',json=schedule).status_code==200

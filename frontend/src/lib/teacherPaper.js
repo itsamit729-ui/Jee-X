@@ -2,15 +2,20 @@ import { API_URL } from './api.js'
 
 export function omrReadiness(questions = []) {
   const issues = []
+  let mixed = false
   questions.forEach((q, i) => {
-    const options = q.options || []
+    const options = q.options || [], labels=options.map(o=>o.label), correct=options.filter(o=>o.is_correct).length
     let reason = ''
-    if (q.type !== 'single_correct') reason = q.type === 'numerical' ? 'Numerical answer' : 'Multiple-correct answer'
-    else if (options.length !== 4 || new Set(options.map(o => o.label)).size !== 4 || options.some(o => !['A', 'B', 'C', 'D'].includes(o.label))) reason = 'Needs four options labelled A, B, C and D'
-    else if (options.filter(o => o.is_correct).length !== 1) reason = 'Needs exactly one correct option'
+    if(q.type!=='single_correct'||options.length!==4) mixed=true
+    if(q.type==='numerical') {
+      if(q.answer_min==null||q.answer_max==null||!Number.isFinite(Number(q.answer_min))||!Number.isFinite(Number(q.answer_max))||Number(q.answer_min)>Number(q.answer_max)) reason='Needs a valid numerical answer range'
+    } else if(['single_correct','multi_correct'].includes(q.type)) {
+      if(options.length<2||options.length>4||new Set(labels).size!==labels.length||labels.some(l=>!['A','B','C','D'].includes(l))) reason='Needs two to four distinct A-D options'
+      else if(!correct||(q.type==='single_correct'&&correct!==1)) reason='Needs a valid answer key'
+    } else reason='Unsupported question format'
     if (reason) issues.push({ number: i + 1, question_id: q.question_id, reason })
   })
-  return { eligible: questions.length > 0 && questions.length <= 200 && !issues.length, issues, total: questions.length, eligible_count: questions.length - issues.length }
+  return { eligible: questions.length > 0 && questions.length <= 200 && !issues.length, issues, total: questions.length, eligible_count: questions.length - issues.length, layout:mixed?'mixed':'compact' }
 }
 
 export function scheduleError(schedule, now = Date.now()) {

@@ -32,6 +32,8 @@ def id_cells(column):
 
 
 def sheet_pdf(paper,sheet,name):
+    from app.services import mixed_omr
+    if mixed_omr.needs_mixed(getattr(paper,'questions',[])): return mixed_omr.pdf(paper,sheet,name)
     id_grid=name is None
     out=io.BytesIO(); c=canvas.Canvas(out,pagesize=(WIDTH,HEIGHT))
     c.setTitle('Jee Edge OMR - '+paper.title)
@@ -73,6 +75,20 @@ def decode_image(data):
         image=ImageOps.exif_transpose(image).convert('RGB');image.thumbnail((2200,2200))
         return cv2.cvtColor(np.asarray(image),cv2.COLOR_RGB2BGR)
 
+def read_qr(aligned):
+    detector=cv2.QRCodeDetector()
+    code,points,_=detector.detectAndDecode(aligned)
+    if code:return code,points
+    # Dense numerical grids can distract the full-page QR locator. The QR has
+    # fixed geometry; try isolated upright and upside-down corners as well.
+    for x1,y1,x2,y2 in [(880,70,1160,320),(30,1364,310,1614)]:
+        crop=aligned[y1:y2,x1:x2]
+        code,points,_=detector.detectAndDecode(cv2.resize(crop,None,fx=2,fy=2,interpolation=cv2.INTER_CUBIC))
+        if code:
+            if points is not None:points=points/2+np.float32([x1,y1])
+            return code,points
+    return '',None
+
 def detect(data):
     image=decode_image(data); gray=cv2.cvtColor(image,cv2.COLOR_BGR2GRAY)
     _,binary=cv2.threshold(gray,0,255,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)
@@ -91,12 +107,15 @@ def detect(data):
     if len(set(corners))!=4: raise ValueError('Could not align the page. Upload an upright A4 scan.')
     matrix=cv2.getPerspectiveTransform(np.float32(corners),MARKERS*2)
     aligned=cv2.warpPerspective(image,matrix,(WIDTH*2,HEIGHT*2),borderValue=(255,255,255))
-    code,points,_=cv2.QRCodeDetector().detectAndDecode(aligned)
+    code,points=read_qr(aligned)
     if points is not None and points[0,:,1].mean()>HEIGHT:
         aligned=cv2.rotate(aligned,cv2.ROTATE_180)
-        code,points,_=cv2.QRCodeDetector().detectAndDecode(aligned)
+        code,points=read_qr(aligned)
     if points is not None and not (points[0,:,0].mean()>WIDTH and points[0,:,1].mean()<HEIGHT*.45):
         raise ValueError('Sheet orientation could not be confirmed. Upload the page upright.')
+    from app.services.mixed_omr import parse_code
+    mixed=parse_code(code)
+    if mixed:return mixed,aligned
     if not code.startswith('JEEOMR:') or len(code)!=39: raise ValueError('Matching Jee Edge QR code was not readable. Upload the correct sheet upright with a sharper QR code.')
     return code[7:],aligned
 
