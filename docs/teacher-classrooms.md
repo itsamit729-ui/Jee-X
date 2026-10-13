@@ -98,3 +98,12 @@ Mixed sheets print a page-specific QR, question numbers/types, and a student ID 
 Every page must be uploaded and confirmed for the same paper, order/set and student before a single final score is created or imported to the classroom assignment. Page order does not matter. Duplicate pages, mixed students/sets, and incomplete papers cannot silently produce a partial final score. Confirmed pages can be reopened before final scoring; if their preview expired, reopening clears that page confirmation and requires a new upload. Completed results retain the original duplicate-score fence. Key corrections regrade completed results, while incomplete papers use the latest key at completion.
 
 Scanned PDFs may contain up to 60 pages within 8 MB; image limits remain 8 MB and 25 megapixels. Up to 60 pending pages per teacher and 120 globally are queued with serial detector execution. The UI tracks page confirmation and shows missing pages after each confirmation. The existing scan JSON records hold versioned page metadata and answers; no schema migration or paid OCR service is needed. Legacy QR sheets and their original geometry remain supported.
+
+
+## Teacher workspace experience
+
+Teacher accounts open on an overview with real class, student, test and draft counts, upcoming assignments and links to the next setup task. A shared sidebar covers classes, papers, students, reports, syllabus, student questions and account settings. On smaller screens the same navigation is available from the header menu. Existing report links and the legacy `tab=build` link still work; invalid section names return to Overview.
+
+Paper creation has three steps: Set up, Add questions, and Review & finalise. Teachers can generate questions, browse the bank or write private questions in separate panels. Drafts remain editable; finalised papers have separate question paper, answer key, answer sheet and online assignment views. Answer sheets separate printing, uploads and review/results. The current scan review requirement is shown accurately; this UI change does not enable automatic scoring or handwriting OCR.
+
+Student and test lists include search, results exports and clear empty states. Syllabus coverage and personal follow-up are separate views. Student doubts can be filtered by reply status. Profile edits show saved/unsaved status and warn before leaving with changes. Print styles exclude workspace navigation and controls. The existing palette is retained, and transitions respect reduced-motion preferences.

@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext.jsx'
-import { LayoutDashboard, BookOpen, Target, Trophy, Users, CalendarCheck, GraduationCap, Shapes, Library, MessageCircle, Coins, UserRound, LogOut, Grid2X2, X, Search, ArrowUpRight, ChevronRight } from 'lucide-react'
+import { LayoutDashboard, BookOpen, Target, Trophy, Users, CalendarCheck, GraduationCap, Shapes, Library, MessageCircle, Coins, UserRound, LogOut, Grid2X2, X, Search, ArrowUpRight, ChevronRight, Menu } from 'lucide-react'
 import { Logo } from './Brand.jsx'
 import InboxBell from './classroom/InboxBell.jsx'
 import { preloadRoute } from '../lib/preloadRoute.js'
 import './studio-navigation.css'
+import TeacherWorkspaceNav from './classroom/TeacherWorkspaceNav.jsx'
+import './classroom/teacher-workspace.css'
 
 const main = [
   ['/dashboard', 'My space', LayoutDashboard], ['/plan', 'My plan', CalendarCheck],
@@ -82,9 +84,33 @@ function StudentHeader() {
 }
 
 function TeacherHeader() {
-  const { logout } = useAuth()
-  const links = [['classes','Classes',Users],['papers','Papers & OMR',BookOpen],['students','Students',UserRound],['tests','Reports',CalendarCheck]]
-  return <div className="studio-navigation is-member teacher-navigation"><header className="studio-topbar"><div className="studio-mobile-logo"><Logo to="/teacher"/></div><nav className="studio-top-links" aria-label="Teacher navigation">{links.map(([key,label,Icon])=><Link className="studio-link" key={key} to={`/teacher?tab=${key}`}><Icon size={17}/><span>{label}</span></Link>)}</nav><div className="studio-top-actions"><InboxBell/><Link className="studio-link" to="/teacher/profile" aria-label="Teacher profile and account"><UserRound size={18}/><span>Profile</span></Link><button className="btn btn-quiet btn-sm" onClick={logout}>Sign out</button></div></header><nav className="studio-dock" aria-label="Teacher quick navigation">{links.map(([key,label,Icon])=><Link className="studio-link" key={key} to={`/teacher?tab=${key}`}><Icon size={18}/><span>{label}</span></Link>)}</nav><span id="studio-main" tabIndex={-1}/></div>
+  const { logout, user } = useAuth()
+  const { pathname, search } = useLocation()
+  const [open, setOpen] = useState(false)
+  const trigger = useRef(null), menu = useRef(null)
+  useEffect(() => { setOpen(false) }, [pathname, search])
+  useEffect(() => {
+    if (!open) return
+    menu.current?.querySelector('a')?.focus()
+    const escape = event => { if (event.key === 'Escape') { setOpen(false); trigger.current?.focus() } }
+    const outside = event => { if (!menu.current?.contains(event.target) && !trigger.current?.contains(event.target)) setOpen(false) }
+    document.addEventListener('keydown', escape); document.addEventListener('pointerdown', outside)
+    return () => { document.removeEventListener('keydown', escape); document.removeEventListener('pointerdown', outside) }
+  }, [open])
+  return <div className="studio-navigation teacher-navigation tw-header">
+    <a className="skip-link" href="#teacher-content">Skip to workspace</a>
+    <header className="studio-topbar">
+      <div className="tw-brand"><div className="studio-mobile-logo"><Logo to="/teacher"/></div><span className="tw-brand-label">For teachers</span></div>
+      <div className="studio-top-actions">
+        <InboxBell/>
+        <Link className="tw-account-link" to="/teacher/profile" aria-label="Your teacher profile"><span className="studio-avatar">{user?.name?.trim()?.[0]?.toUpperCase() || <UserRound size={16}/>}</span><span className="tw-account-name">{user?.name || 'Teacher'}<small>Teacher account</small></span></Link>
+        <button className="btn btn-quiet btn-sm tw-sign-out" onClick={logout}>Sign out</button>
+        <button ref={trigger} className="tw-menu-toggle" aria-expanded={open} aria-controls="teacher-mobile-menu" aria-label={open ? 'Close teacher navigation' : 'Open teacher navigation'} onClick={() => setOpen(v => !v)}>{open ? <X size={21}/> : <Menu size={21}/>}</button>
+      </div>
+    </header>
+    {open && <div ref={menu} id="teacher-mobile-menu" className="tw-mobile-menu"><TeacherWorkspaceNav close={() => setOpen(false)}/><button className="btn btn-quiet" onClick={logout}><LogOut size={16}/>Sign out</button></div>}
+    <span id="studio-main" tabIndex={-1}/>
+  </div>
 }
 export default function AppHeader() {
   const { user } = useAuth()
