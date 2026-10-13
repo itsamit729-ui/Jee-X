@@ -595,6 +595,8 @@ def inbox_query(db, uid):
     r = m.AssignmentRecipient
     base = db.query(m.ClassroomNotification).outerjoin(r, (r.assignment_id == m.ClassroomNotification.assignment_id) & (r.user_id == uid)).filter(
         m.ClassroomNotification.user_id == uid, m.ClassroomNotification.available_at <= utcnow())
+    if db.get(m.TeacherAccess,uid):
+        base=base.filter(or_(m.ClassroomNotification.href.like('/teacher%'),m.ClassroomNotification.href.like('/account/%')))
     member_ids = member_assignment_ids(db, uid)
     return base.filter(or_(m.ClassroomNotification.assignment_id.is_(None), m.ClassroomNotification.kind == 'closed',
         m.ClassroomNotification.assignment_id.in_(member_ids))).filter(or_(m.ClassroomNotification.kind != 'reminder',

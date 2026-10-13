@@ -20,7 +20,7 @@ from app.routers.public_profiles import router, _buckets
 def setup():
     _buckets.clear()
     engine = create_engine('sqlite://', connect_args={'check_same_thread': False}, poolclass=StaticPool)
-    tables = [models.User, models.StudentProfile, models.PublicProfile, models.ProfileAvatar, models.JeeXRating,
+    tables = [models.User, models.TeacherAccess, models.StudentProfile, models.PublicProfile, models.ProfileAvatar, models.JeeXRating,
               models.RatedContest, models.ContestEntry, models.Test, models.TestAttempt, models.DailyQuestionAssignment]
     Base.metadata.create_all(engine, tables=[m.__table__ for m in tables])
     db = sessionmaker(bind=engine, expire_on_commit=False)()
@@ -172,3 +172,12 @@ def test_public_rate_limit(setup):
     for _ in range(60): assert c.get('/api/public-profiles/missing').status_code==404
     result=c.get('/api/public-profiles/missing')
     assert result.status_code==429 and result.headers['retry-after']=='60'
+
+
+def test_legacy_teacher_student_record_is_not_a_public_student_profile(setup):
+    db,c,_,_=setup
+    db.add(models.TeacherAccess(user_id=1,active=True,granted_at=datetime.utcnow()))
+    db.commit();db.expire_all()
+    assert c.get('/api/public-profiles/student1').status_code==404
+    assert c.get('/api/public-profiles/student1/avatar').status_code==404
+    assert c.get('/api/public-profiles/student2').status_code==200

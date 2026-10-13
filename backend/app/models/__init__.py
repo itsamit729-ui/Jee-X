@@ -119,3 +119,4 @@ from app.models.social_comment import SocialLesson, SocialComment, SocialComment
 from app.models.acquisition import AcquisitionCount
 
 from app.models.teacher_papers import TeacherPaper, TeacherSheet, TeacherScan
+from app.models.teacher_profile import TeacherProfile

@@ -63,6 +63,10 @@ def avatar_url(user):
 @router.put('/profile/avatar')
 async def save_avatar(request: Request, response: Response, user=Depends(get_current_db_user), db: Session = Depends(get_db)):
     active_student(user)
+    return await store_avatar_image(request,response,user,db)
+
+
+async def store_avatar_image(request,response,user,db):
     if request.headers.get('content-type', '').split(';')[0] not in ('image/jpeg', 'image/png', 'image/webp'):
         raise HTTPException(415, 'Choose a JPEG, PNG or WebP image.')
     try:
@@ -153,7 +157,7 @@ def resolve(db, username):
         raise HTTPException(404, 'Profile unavailable.', headers={'Cache-Control': 'no-store'})
     found = db.query(models.User, PublicProfile).outerjoin(PublicProfile, PublicProfile.user_id == models.User.id).filter(
         models.User.username == username, models.User.status == 'active', models.User.role == 'student').first()
-    if not found or not found[0].student_profile:
+    if not found or not found[0].student_profile or found[0].teacher_access:
         raise HTTPException(404, 'Profile unavailable.', headers={'Cache-Control': 'no-store'})
     return found
 

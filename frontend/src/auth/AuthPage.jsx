@@ -5,6 +5,8 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Eye, EyeOff, Mail } from 'lucide-r
 import { Logo } from '../components/Brand.jsx'
 import { request } from '../lib/api.js'
 import { safeReturnTo, useAuth } from './AuthContext.jsx'
+import AppHeader from '../components/AppHeader.jsx'
+import { isTeacherAccount, teacherRouteRedirect } from '../lib/workspaceRoutes.js'
 import TermsFields, { emptyTerms } from './TermsFields.jsx'
 
 const COPY = {
@@ -12,7 +14,7 @@ const COPY = {
   signup: ['Make room for progress.', 'Create your Jee Edge account.', 'Create account'],
   forgot: ['Forgot your password?', 'We’ll send you a link to choose a new one.', 'Send reset link'],
   reset: ['A fresh start.', 'Choose a new password for your account.', 'Update password'],
-  verify: ['Check your inbox.', 'Verify your email to start practising.', 'Verify email'],
+  verify: ['Check your inbox.', 'Verify your email to access your account.', 'Verify email'],
   change: ['Account security.', 'Change your password or connect Google for your next sign-in.', 'Save new password'],
 }
 
@@ -26,13 +28,15 @@ function PasswordField({ id, label = 'Password', value, onChange, newPassword = 
 
 export default function AuthPage({ mode = 'login' }) {
   const { login, refreshSession, user, isAuthenticated, isLoading } = useAuth()
+  const teacher=isTeacherAccount(user)
+  const profilePath=teacher?'/teacher/profile':'/profile'
   const navigate = useNavigate()
   const [params] = useSearchParams()
   const returnTo = safeReturnTo(params.get('returnTo') || pendingPaperReturn())
   useEffect(() => { rememberPaperReturn(returnTo) }, [returnTo])
   const [accountType, setAccountType] = useState('student')
   const [terms, setTerms] = useState(emptyTerms)
-  const destination = account => account.terms_required ? `/signup/terms?returnTo=${encodeURIComponent(returnTo)}` : account.teacher && returnTo === '/dashboard' ? '/teacher' : account.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`
+  const destination = account => account.terms_required ? `/signup/terms?returnTo=${encodeURIComponent(returnTo)}` : isTeacherAccount(account) ? (teacherRouteRedirect(returnTo.split('?')[0]) || returnTo) : account.onboarded ? returnTo : `/onboarding?returnTo=${encodeURIComponent(returnTo)}`
   const [email, setEmail] = useState(user?.email || '')
   const [password, setPassword] = useState('')
   const [currentPassword, setCurrentPassword] = useState('')
@@ -83,12 +87,12 @@ export default function AuthPage({ mode = 'login' }) {
   }
 
   return <div className="native-auth-page">
-    <header className="native-auth-header"><Logo /><Link to="/" className="native-auth-back"><ArrowLeft size={15}/>Back to Jee Edge</Link></header>
+    <>{teacher&&mode==='change'?<AppHeader/>:<header className="native-auth-header"><Logo to={teacher?'/teacher':'/'}/><Link to={teacher?'/teacher':'/'} className="native-auth-back"><ArrowLeft size={15}/>{teacher?'Back to Teacher Studio':'Back to Jee Edge'}</Link></header>}</>
     <main className="native-auth-main"><section className="native-auth-card" aria-labelledby="auth-heading">
-      <span className="native-auth-eyebrow">{mode === 'signup' && accountType === 'teacher' ? 'YOUR TEACHING SPACE' : 'YOUR STUDY SPACE'}</span><h1 id="auth-heading">{title}</h1><p className="native-auth-subtitle">{subtitle}</p>
+      <span className="native-auth-eyebrow">{teacher || (mode === 'signup' && accountType === 'teacher') ? 'YOUR TEACHING SPACE' : 'YOUR STUDY SPACE'}</span><h1 id="auth-heading">{title}</h1><p className="native-auth-subtitle">{subtitle}</p>
       {message ? <div className="native-auth-success" role="status"><CheckCircle2 size={25}/><p>{message}</p>
         {(mode === 'forgot' || (mode === 'signup' && verificationRequired)) && <small>Use the most recent email. Links expire after 30 minutes.</small>}
-        <Link className="btn btn-primary" to={mode === 'change' ? '/profile' : `/login?returnTo=${encodeURIComponent(mode === 'signup' && accountType === 'teacher' ? '/teacher' : returnTo)}`}>{mode === 'change' ? 'Back to profile' : mode === 'signup' && !verificationRequired ? 'Sign in' : 'Back to sign in'}<ArrowRight size={16}/></Link>
+        <Link className="btn btn-primary" to={mode === 'change' ? profilePath : `/login?returnTo=${encodeURIComponent(mode === 'signup' && accountType === 'teacher' ? '/teacher' : returnTo)}`}>{mode === 'change' ? 'Back to profile' : mode === 'signup' && !verificationRequired ? 'Sign in' : 'Back to sign in'}<ArrowRight size={16}/></Link>
         {mode === 'signup' && verificationRequired && <Link to="/verify-email">Resend verification email</Link>}
       </div> : <form onSubmit={submit}>
         {mode === 'signup' && <fieldset className="native-auth-roles"><legend>I’m here as a</legend>{[['student', 'Student', 'Practise and improve'], ['teacher', 'Teacher', 'Create classes and tests']].map(([value, title, hint]) => <label key={value} className={accountType === value ? 'selected' : ''}><input type="radio" name="account-type" value={value} checked={accountType === value} onChange={() => setAccountType(value)}/><span><strong>{title}</strong><small>{hint}</small></span></label>)}</fieldset>}
@@ -117,7 +121,7 @@ export default function AuthPage({ mode = 'login' }) {
       {!message && <div className="native-auth-bottom">
         {mode === 'login' ? <><p>New here? <Link to={`/signup?returnTo=${encodeURIComponent(returnTo)}`}>Create an account</Link></p><Link to="/verify-email">Resend verification email</Link></>
           : mode === 'signup' ? <><p>Already have an account? <Link to="/login">Sign in</Link></p><small>New accounts start with a fresh profile.</small></>
-          : <Link to={mode === 'change' ? '/profile' : '/login'}>{mode === 'change' ? 'Back to profile' : 'Back to sign in'}</Link>}
+          : <Link to={mode === 'change' ? profilePath : '/login'}>{mode === 'change' ? 'Back to profile' : 'Back to sign in'}</Link>}
       </div>}
     </section></main><footer className="native-auth-footer"><Link to="/terms">Terms & Conditions</Link> · <Link to="/privacy">Privacy Notice</Link></footer>
   </div>

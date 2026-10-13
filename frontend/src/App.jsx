@@ -2,6 +2,9 @@ import { lazy, Suspense, useEffect } from 'react'
 import { IITianFactToast, Loader } from './components/Brand.jsx'
 import { Routes, Route, Navigate, useLocation, useNavigationType } from 'react-router-dom'
 const PYQs = lazy(() => import('./pages/PYQs.jsx'))
+import { useAuth } from './auth/AuthContext.jsx'
+import { isTeacherAccount, teacherRouteRedirect } from './lib/workspaceRoutes.js'
+const TeacherProfile = lazy(() => import('./pages/TeacherProfile.jsx'))
 const Teacher = lazy(() => import('./pages/Teacher.jsx'))
 const Classrooms = lazy(() => import('./pages/Classrooms.jsx'))
 const Assignment = lazy(() => import('./pages/Assignment.jsx'))
@@ -72,18 +75,24 @@ function updateSeo(pathname) {
 }
 
 export default function App() {
+  const {user,isLoading}=useAuth()
+  const teacher=isTeacherAccount(user)
   const location = useLocation()
   const navigationType = useNavigationType()
   useEffect(() => {
     updateSeo(location.pathname)
+    if(teacher) document.title='Teacher Studio · Jee Edge'
     // Search/filter changes should keep their position; new pages start at the top.
     if (navigationType !== 'POP' && !location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-  }, [location.pathname])
+  }, [location.pathname,teacher])
   const isAdmin = location.pathname === '/admin'
   const isAuthPage = /^\/(login|signup|signup\/terms|terms|privacy|forgot-password|reset-password|verify-email|account\/security)$/.test(location.pathname)
 
+  if(isLoading) return <Loader fullScreen label="Opening Jee Edge"/>
+  const redirect=teacher?teacherRouteRedirect(location.pathname):null
+  if(redirect) return <Navigate replace to={redirect}/>
   return (
-    <>{!isAdmin && !isAuthPage && <IITianFactToast />}<Suspense fallback={<Loader fullScreen label={isAdmin ? "Opening admin console" : "Opening your study space"} />}><Routes>
+    <>{!teacher && !isAdmin && !isAuthPage && <IITianFactToast />}<Suspense fallback={<Loader fullScreen label={isAdmin ? "Opening admin console" : teacher ? "Opening your teaching workspace" : "Opening your study space"} />}><Routes>
       <Route path="/login" element={<AuthPage key="login" mode="login" />} />
       <Route path="/signup" element={<AuthPage key="signup" mode="signup" />} />
       <Route path="/signup/terms" element={<TermsPage />} />
@@ -94,6 +103,8 @@ export default function App() {
       <Route path="/verify-email" element={<AuthPage key="verify" mode="verify" />} />
       <Route path="/account/security" element={<ProtectedRoute><AuthPage mode="change" /></ProtectedRoute>} />
       <Route path="/pyq" element={<ProtectedRoute><PYQs /></ProtectedRoute>} />
+      <Route path="/teacher/profile" element={<ProtectedRoute><TeacherProfile /></ProtectedRoute>} />
+      <Route path="/teacher/account" element={<ProtectedRoute><TeacherProfile /></ProtectedRoute>} />
       <Route path="/teacher" element={<ProtectedRoute><Teacher /></ProtectedRoute>} />
       <Route path="/classes" element={<ProtectedRoute><Classrooms /></ProtectedRoute>} />
       <Route path="/assignments/:id" element={<ProtectedRoute><Assignment /></ProtectedRoute>} />
