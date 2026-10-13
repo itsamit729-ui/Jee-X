@@ -117,3 +117,5 @@ from app.models.social_job import SocialUsage, SocialQuotaLock, SocialCache
 from app.models.social_comment import SocialLesson, SocialComment, SocialCommentDispatch
 
 from app.models.acquisition import AcquisitionCount
+
+from app.models.teacher_papers import TeacherPaper, TeacherSheet, TeacherScan

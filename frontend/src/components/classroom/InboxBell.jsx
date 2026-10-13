@@ -12,7 +12,7 @@ export default function InboxBell({ onTeacher }) {
       pending = true
       try {
         const data = await request('/api/notifications', { cache: false })
-        if (active) { setCount(data.unread_count); onTeacher(data.teacher) }
+        if (active) { setCount(data.unread_count); onTeacher?.(data.teacher) }
       } catch { /* Keep navigation usable during a temporary outage. */ }
       finally { pending = false }
     }

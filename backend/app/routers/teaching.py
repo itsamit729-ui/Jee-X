@@ -202,11 +202,11 @@ def restore_member(class_id: int, student_id: int, user=Depends(require_teacher)
     return {'restored': True}
 
 
-def question_query(db):
+def question_query(db, teacher_id=None):
     return db.query(m.Question).options(selectinload(m.Question.options), selectinload(m.Question.assets),
         joinedload(m.Question.passage).selectinload(m.Passage.assets),
         joinedload(m.Question.subtopic).joinedload(m.Subtopic.chapter).joinedload(m.Chapter.subject)).filter(
-        m.Question.status == 'published', m.Question.type.in_(['single_correct', 'multi_correct', 'numerical']))
+        or_(m.Question.status == 'published', (m.Question.status == 'draft') & (m.Question.created_by == teacher_id)) if teacher_id else m.Question.status == 'published', m.Question.type.in_(['single_correct', 'multi_correct', 'numerical']))
 
 
 def freeze(q, version):
@@ -231,7 +231,7 @@ def safe_question(q):
 def question_bank(q: str = Query('', max_length=150), subject: str = Query('', max_length=12), chapter_id: int | None = None,
                   difficulty: int | None = Query(None, ge=1, le=10), offset: int = Query(0, ge=0, le=10000),
                   user=Depends(require_teacher), db: Session = Depends(get_db)):
-    query = question_query(db).join(m.Subtopic).join(m.Chapter).join(m.Subject)
+    query = question_query(db, user.id).join(m.Subtopic).join(m.Chapter).join(m.Subject)
     if subject:
         query = query.filter(m.Subject.code == subject)
     if chapter_id:
@@ -256,7 +256,7 @@ class PublishIn(BaseModel):
     title: str = Field(min_length=3, max_length=150)
     instructions: str = Field('', max_length=2000)
     classroom_ids: list[int] = Field(min_length=1, max_length=20)
-    question_ids: list[int] = Field(min_length=1, max_length=100)
+    question_ids: list[int] = Field(min_length=1, max_length=200)
     opens_at: datetime
     due_at: datetime
     solutions_at: datetime
@@ -275,6 +275,10 @@ class PublishIn(BaseModel):
 
 @router.post('/teacher/assignments', status_code=201)
 def publish(body: PublishIn, user=Depends(require_teacher), db: Session = Depends(get_db)):
+    return publish_assignment(body, user, db)
+
+
+def publish_assignment(body, user, db, frozen_questions=None, commit=True):
     existing = db.query(m.TeachingAssignment).filter_by(teacher_id=user.id, request_key=body.request_key).first()
     if existing:
         return {'id': existing.id, 'title': existing.title}
@@ -290,14 +294,14 @@ def publish(body: PublishIn, user=Depends(require_teacher), db: Session = Depend
         m.ClassroomMember.classroom_id.in_([r.id for r in rooms]), m.ClassroomMember.active.is_(True), m.User.status == 'active').all()})
     if not recipients:
         raise HTTPException(409, 'Ask students to join a selected class before publishing.')
-    questions = {q.id: q for q in question_query(db).filter(m.Question.id.in_(body.question_ids)).all()}
+    questions = {q.id: q for q in question_query(db, user.id).filter(m.Question.id.in_(body.question_ids)).all()}
     if len(questions) != len(body.question_ids):
         raise HTTPException(409, 'Some selected questions are no longer published. Refresh the question bank.')
     versions = dict(db.query(m.QuestionRevision.question_id, func.max(m.QuestionRevision.version)).filter(
         m.QuestionRevision.question_id.in_(body.question_ids)).group_by(m.QuestionRevision.question_id).all())
     if len(versions) != len(questions):
         raise HTTPException(409, 'A selected question has no revision record. Choose another question.')
-    frozen = [freeze(questions[qid], versions[qid]) for qid in body.question_ids]
+    frozen = frozen_questions if frozen_questions is not None else [freeze(questions[qid], versions[qid]) for qid in body.question_ids]
     test = m.Test(title='Class test: ' + body.title.strip(), kind='chapter', pattern='jee_main', duration_sec=body.duration_minutes * 60,
         ranked=False, created_by=user.id, opens_at=body.opens_at, closes_at=body.due_at, results_at=body.solutions_at)
     db.add(test)
@@ -322,7 +326,8 @@ def publish(body: PublishIn, user=Depends(require_teacher), db: Session = Depend
         notify(db, uid, 'Solutions ready: ' + assignment.title, 'Review your answers and work through the explanations.', href, 'solutions', assignment.id, assignment.solutions_at)
     notify(db, user.id, 'Test closed: ' + assignment.title, 'Open your class report to review submissions and topic accuracy.',
         f'/teacher?report={assignment.id}', 'closed', assignment.id, assignment.due_at)
-    db.commit()
+    if commit: db.commit()
+    else: db.flush()
     return {'id': assignment.id, 'title': assignment.title, 'recipients': len(recipients)}
 
 
@@ -376,7 +381,7 @@ def student_payload(a, r, attempt=None):
 class DraftIn(BaseModel):
     model_config = ConfigDict(allow_inf_nan=False)
     version: int = Field(ge=0)
-    answers: list[schemas.SubjectTestAnswerIn] = Field(default_factory=list, max_length=100)
+    answers: list[schemas.SubjectTestAnswerIn] = Field(default_factory=list, max_length=200)
 
 
 def validated_answers(a, body):
@@ -404,6 +409,7 @@ def finalize(db, a, r, attempt):
     # Practice grading serializes mastery updates through the student profile.
     db.query(m.StudentProfile).filter_by(user_id=r.user_id).with_for_update().populate_existing().first()
     answers = {v['question_id']: schemas.SubjectTestAnswerIn(**v) for v in r.draft}
+    invalid = {v['question_id'] for v in r.draft if v.get('invalid') is True}
     results, subjects = [], {}
     response_rows = []
     correct = attempted = total_marks = total_time = 0
@@ -413,6 +419,7 @@ def finalize(db, a, r, attempt):
         ans = answers.get(q['question_id'], schemas.SubjectTestAnswerIn(question_id=q['question_id']))
         question = SimpleNamespace(type=q['type'], answer_min=q['answer_min'], answer_max=q['answer_max'], options=[SimpleNamespace(**o) for o in q['options']])
         outcome, correct_ids = _grade_one(question, ans)
+        if q['question_id'] in invalid: outcome = 'wrong'
         marks = a.marks_correct if outcome == 'correct' else -a.marks_wrong if outcome == 'wrong' else 0
         time_taken = min(ans.time_taken_sec, a.duration_sec)
         response_rows.append(dict(attempt_id=attempt.id, user_id=r.user_id, question_id=q['question_id'], question_version=q['version'],

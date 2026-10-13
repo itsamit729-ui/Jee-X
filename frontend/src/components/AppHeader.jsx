@@ -31,7 +31,6 @@ const groups = [
   { title: 'LEARN TOGETHER', items: [
     ['/ranking', 'Rankings & contests', Trophy, 'Compete and track your rating'],
     ['/classes', 'My classroom', Users, 'Your classes and assignments'],
-    ['/teacher', 'Teacher studio', GraduationCap, 'Create classes and assign tests'],
     ['/rewards', 'Rewards', Coins, 'Your practice milestones'],
     ['/profile', 'My profile', UserRound, 'Your details and public profile'],
     ['/account/security', 'Account security', UserRound, 'Password and Google sign-in'],
@@ -41,7 +40,7 @@ function NavigationLink({ item, close, detail = false }) {
   const [to, label, Icon, description] = item
   return <NavLink to={to} onClick={close} className={({ isActive }) => `studio-link${isActive ? ' active' : ''}`}><Icon size={18} strokeWidth={1.6}/><span>{label}{detail && description && <small>{description}</small>}</span>{detail && <ChevronRight className="studio-link-arrow" size={13}/>}</NavLink>
 }
-export default function AppHeader() {
+function StudentHeader() {
   const { pathname, search } = useLocation()
   const { isAuthenticated, user, openLogin, logout } = useAuth()
   const [open, setOpen] = useState(false)
@@ -79,4 +78,14 @@ export default function AppHeader() {
     {isAuthenticated && <nav className="studio-dock" aria-label="Quick navigation">{links.map(item => <NavigationLink key={item[0]} item={item} close={close}/>)}<button className={`studio-link${open ? ' active' : ''}`} onClick={() => setOpen(value => !value)} aria-label="Explore all features" aria-expanded={open} aria-controls="studio-menu"><Grid2X2 size={19}/><span>Explore</span></button></nav>}
     <span id="studio-main" tabIndex={-1}/>
   </div>
+}
+
+function TeacherHeader() {
+  const { logout } = useAuth()
+  const links = [['classes','Classes',Users],['papers','Papers & OMR',BookOpen],['students','Students',UserRound],['tests','Reports',CalendarCheck]]
+  return <div className="studio-navigation is-member teacher-navigation"><header className="studio-topbar"><div className="studio-mobile-logo"><Logo to="/teacher"/></div><nav className="studio-top-links" aria-label="Teacher navigation">{links.map(([key,label,Icon])=><Link className="studio-link" key={key} to={`/teacher?tab=${key}`}><Icon size={17}/><span>{label}</span></Link>)}</nav><div className="studio-top-actions"><InboxBell/><Link className="studio-link" to="/account/security" aria-label="Account security"><UserRound size={18}/></Link><button className="btn btn-quiet btn-sm" onClick={logout}>Sign out</button></div></header><nav className="studio-dock" aria-label="Teacher quick navigation">{links.map(([key,label,Icon])=><Link className="studio-link" key={key} to={`/teacher?tab=${key}`}><Icon size={18}/><span>{label}</span></Link>)}</nav><span id="studio-main" tabIndex={-1}/></div>
+}
+export default function AppHeader() {
+  const { user } = useAuth()
+  return user?.account_type === 'teacher' || user?.teacher ? <TeacherHeader/> : <StudentHeader/>
 }

@@ -24,6 +24,8 @@ def enable_teacher(db, account):
         if not access.active:
             raise HTTPException(403, 'Teacher access was removed from this account. Contact support to restore it.')
         return user
+    if user.student_profile:
+        raise HTTPException(409, 'This is an existing student account. Sign up with a separate email for teaching; your student history is preserved.')
     db.add(m.TeacherAccess(user_id=user.id, active=True, granted_at=utcnow()))
     db.add(m.AuditLog(actor_id=user.id, action='teacher_self_enrolled', entity='user', entity_id=user.id,
         before={'active': False}, after={'active': True}, reason='Account owner selected teacher mode.'))
