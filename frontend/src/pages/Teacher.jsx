@@ -1,10 +1,11 @@
+import SearchField from '../components/SearchField.jsx'
 import DeferredDetails from '../components/DeferredDetails.jsx'
 import { TeacherLearning, Doubts } from '../components/classroom/LearningTools.jsx'
 import TeacherPapers, { TeacherStudents } from '../components/classroom/TeacherPapers.jsx'
 import { useAuth } from '../auth/AuthContext.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { ArrowRight, Check, Copy, Plus, Users, X, Files, CalendarClock, ArrowUpRight, CheckCircle2, Circle, Printer, MessageCircle, Search } from 'lucide-react'
+import { ArrowRight, Check, Copy, Plus, Users, X, Files, CalendarClock, ArrowUpRight, CheckCircle2, Circle, Printer, MessageCircle } from 'lucide-react'
 import QuestionContent from '../components/classroom/QuestionContent.jsx'
 import { AssignmentCard, classApi, Empty, ErrorMessage, LoadState, Shell, statusLabel, useLoad, when } from '../components/classroom/shared.jsx'
 
@@ -55,7 +56,7 @@ function Overview({ classes, assignments }) {
 function Tests({ load }) {
   const [query,setQuery]=useState(''),[filter,setFilter]=useState('all')
   const tests=(load.data?.assignments||[]).filter(a=>a.title.toLowerCase().includes(query.toLowerCase())&&(filter==='all'||(filter==='active')===(new Date(a.due_at).getTime()>Date.now())))
-  return <><div className="tw-toolbar"><label className="tw-search"><Search size={17}/><input type="search" aria-label="Find a test" placeholder="Find a test…" value={query} onChange={e=>setQuery(e.target.value)}/></label><label className="tw-filter">Show<select value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All tests</option><option value="active">Open & upcoming</option><option value="closed">Closed tests</option></select></label><button className="btn btn-secondary" disabled={load.loading} onClick={load.reload}>Refresh</button></div><LoadState {...load}/>{tests.length?<div className="cl-grid">{tests.map(a=><AssignmentCard key={a.id} assignment={a} teacher/>)}</div>:!load.loading&&!load.error&&<Empty title={query||filter!=='all'?'No matching tests':'Your first test starts with a paper'}>{query||filter!=='all'?'Try another title or choose All tests.':<>Create a paper, review the questions and assign it to your class.<Link className="btn btn-primary" to="/teacher?tab=papers&create=1">Create a paper<ArrowRight size={15}/></Link></>}</Empty>}</>
+  return <><div className="tw-toolbar"><SearchField className="tw-search" label="Find a test" placeholder="Find a test…" value={query} onChange={e=>setQuery(e.target.value)}/><label className="tw-filter">Show<select value={filter} onChange={e=>setFilter(e.target.value)}><option value="all">All tests</option><option value="active">Open & upcoming</option><option value="closed">Closed tests</option></select></label><button className="btn btn-secondary" disabled={load.loading} onClick={load.reload}>Refresh</button></div><LoadState {...load}/>{tests.length?<div className="cl-grid">{tests.map(a=><AssignmentCard key={a.id} assignment={a} teacher/>)}</div>:!load.loading&&!load.error&&<Empty title={query||filter!=='all'?'No matching tests':'Your first test starts with a paper'}>{query||filter!=='all'?'Try another title or choose All tests.':<>Create a paper, review the questions and assign it to your class.<Link className="btn btn-primary" to="/teacher?tab=papers&create=1">Create a paper<ArrowRight size={15}/></Link></>}</Empty>}</>
 }
 
 export default function Teacher() {

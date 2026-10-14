@@ -1,0 +1,8 @@
+.workspace-search{display:grid;grid-template-columns:18px minmax(0,1fr);align-items:center;gap:12px;min-width:0;max-width:100%;padding:0 14px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink-3);transition:border-color .16s,box-shadow .16s}
+.workspace-search>svg{position:static;display:block;pointer-events:none}
+.workspace-search>input,.cl-root .workspace-search>input,.tw-root .workspace-search>input{display:block;min-width:0;width:100%;height:auto;min-height:46px;padding:11px 0;border:0;border-radius:0;background:transparent;color:var(--ink);font:inherit;font-size:14px;line-height:1.5;box-shadow:none}
+.workspace-search:focus-within{border-color:var(--pen);box-shadow:0 0 0 3px var(--pen-soft)}
+.workspace-search>input:focus,.cl-root .workspace-search>input:focus{outline:none;box-shadow:none}
+.workspace-search>input::placeholder{color:var(--ink-3);opacity:1}
+@media(max-width:640px){.workspace-search>input,.cl-root .workspace-search>input,.tw-root .workspace-search>input{font-size:16px;min-height:48px}}
+@media(prefers-reduced-motion:reduce){.workspace-search{transition:none}}

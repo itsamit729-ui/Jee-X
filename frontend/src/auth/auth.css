@@ -12,8 +12,10 @@
 .native-auth-card input{display:block;box-sizing:border-box;width:100%;min-height:49px;border:1px solid #CBCBD3;border-radius:6px;background:#FFF;color:#202126;padding:12px 14px;font:inherit;font-size:15px}
 .native-auth-card input:focus{outline:2px solid #BA431F;outline-offset:2px}
 .native-auth-card small{display:block;font-size:12px;line-height:1.5;color:#71727C;margin-top:8px}
-.native-auth-password{position:relative}.native-auth-password input{padding-right:50px}
-.native-auth-password button{position:absolute;right:4px;top:4px;width:41px;height:41px;display:grid;place-items:center;border:0;background:transparent;color:#71727C;border-radius:4px;cursor:pointer}
+.native-auth-password{display:grid;grid-template-columns:minmax(0,1fr) 45px;align-items:center;border:1px solid #CBCBD3;border-radius:6px;background:#FFF;min-width:0}
+.native-auth-card .native-auth-password input{min-width:0;border:0;background:transparent;padding:12px 14px;outline:none}
+.native-auth-password:focus-within{outline:2px solid #BA431F;outline-offset:2px}
+.native-auth-password button{position:static;width:41px;height:41px;display:grid;place-items:center;border:0;background:transparent;color:#71727C;border-radius:4px;cursor:pointer}
 .native-auth-forgot{display:flex;justify-content:flex-end;margin:-3px 0 16px;font-size:13px}
 .native-auth-card a{color:#963318;text-underline-offset:3px}
 .native-auth-submit{width:100%;min-height:49px;justify-content:center;gap:10px;margin-top:7px}

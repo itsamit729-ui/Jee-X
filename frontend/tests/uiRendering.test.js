@@ -7,7 +7,8 @@ import { buildSync } from 'esbuild'
 
 const filename=fileURLToPath(import.meta.url)
 const output=buildSync({
-  stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import MathText from './src/components/MathText.jsx';import DeferredDetails from './src/components/DeferredDetails.jsx';
+  stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import MathText from './src/components/MathText.jsx';import DeferredDetails from './src/components/DeferredDetails.jsx';import SearchField from './src/components/SearchField.jsx';
+    export const search=()=>renderToStaticMarkup(<SearchField label="Find a student" placeholder="Find by name, username or OMR ID…" value="Aditi" onChange={()=>{}}/>);
     export const math=text=>renderToStaticMarkup(<MathText text={text}/>);
     export function report(open){let renders=0;function HeavyQuestion(){renders++;return <MathText text={'Solve $x^2=4$'}/>};const html=renderToStaticMarkup(<DeferredDetails summary="Question 1" initialOpen={open}><HeavyQuestion/></DeferredDetails>);return {html,renders}}`,resolveDir:path.resolve(path.dirname(filename),'..'),loader:'jsx'},
   bundle:true,write:false,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom/server'],loader:{'.css':'empty'},
@@ -15,7 +16,7 @@ const output=buildSync({
 const compiled=new Module(filename)
 compiled.paths=Module._nodeModulePaths(path.dirname(filename))
 compiled._compile(output,filename)
-const {math,report}=compiled.exports
+const {math,report,search}=compiled.exports
 
 test('closed report rows defer actual question rendering and opened rows retain maths',()=>{
   const closed=report(false),opened=report(true)
@@ -35,4 +36,14 @@ test('math keeps inline and display equations contained, preserves lines and esc
   assert.match(html,/&lt;img/)
   assert.doesNotMatch(html,/<img/)
   assert.equal(math(''),'')
+})
+
+test('search keeps the icon separate from a labelled, editable search input',()=>{
+  const html=search()
+  assert.match(html,/<svg[^>]*aria-hidden="true"/)
+  assert.match(html,/<\/svg><input/)
+  assert.match(html,/aria-label="Find a student"/)
+  assert.match(html,/type="search"/)
+  assert.match(html,/value="Aditi"/)
+  assert.equal((html.match(/<input/g)||[]).length,1)
 })
