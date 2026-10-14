@@ -47,7 +47,7 @@ def package(content, kind, recent=()):
     lower, upper = art_direction.CAPTION_LIMITS[direction]
     try:
         context = {k: content[k] for k in ('subject','topic','rule','condition','trap','question','answer','solution',
-                   'why','transfer_question','transfer_answer','hook','level') if k in content}
+                   'why','transfer_question','transfer_answer','hook','level','worked_steps','content_tier') if k in content}
         if direction=='casefile' and not (creative.active(content) and kind == 'reel'):
             context['original_joke'] = dict(zip(('brain','reality'),art_direction.joke(content)))
         draft = call('Create three distinct English hooks (each <=65 characters) and one educational caption '
@@ -58,6 +58,7 @@ def package(content, kind, recent=()):
             'Live-site promotion is appended by code; spend this draft on the lesson only. '
             'Open a concrete curiosity gap: a choice, surprising constraint, calculation or plausible wrong answer. '
             'Make the payoff specific and deliverable from this lesson. No generic learn-this or spot-the-trap hooks. '
+            'For advanced_v1 lessons, preserve the actual multi-step deduction. Do not replace it with a basic formula fact or claim it is an official PYQ. '
             'For reels keep each hook to at most 10 spoken words and 65 characters. '
             'Write naturally and specifically. Do not begin with a chapter label or always end with a question. '
             'Avoid stock phrases: unlock, master, ace, game-changer, did you know, test your knowledge, '
@@ -89,6 +90,7 @@ def package(content, kind, recent=()):
             'Also score hook_specificity and payoff from 1 to 5: the chosen hook must ask a concrete '
             'topic-specific question or make a precise contrast whose answer the lesson actually delivers. '
             'Reject generic filler, altered math, misleading hooks and engagement requests. '
+            'If worked_steps are supplied, reject a caption that removes the central constraint or reduces the lesson to a one-step shortcut. '
             'Judge whether the caption sounds like a specific tutor note instead of a stock social template. '
             'The assigned editorial direction is: '+brief+' '
             'Reject hooks that could be pasted onto another topic unchanged or ask a different question from the worked example. Select strongest hook index (0,1,2). '

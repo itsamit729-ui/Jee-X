@@ -9,6 +9,12 @@ VERSION = 4
 FORMATS = ('challenge', 'answer_first', 'mistake_check', 'visual_proof')
 TIMINGS = {'challenge': (5, 12, 19, 24), 'answer_first': (3, 11, 18, 23),
            'mistake_check': (4, 12, 20, 25), 'visual_proof': (4, 13, 21, 27)}
+DEEP_TIMINGS = {'challenge':(6,20,34,41), 'answer_first':(5,20,34,41),
+                'mistake_check':(6,21,35,42), 'visual_proof':(6,21,35,42)}
+
+def timing_for_plan(plan):
+    return (DEEP_TIMINGS if plan.get('depth')=='advanced_v1' else TIMINGS)[plan['format']]
+
 LABELS = {'challenge': 'MAKE YOUR CALL', 'answer_first': 'ANSWER FIRST. NOW WHY?',
           'mistake_check': 'CHECK THE ASSUMPTION', 'visual_proof': 'WATCH THE IDEA WORK'}
 BRIEFS = {
@@ -97,7 +103,7 @@ def attach(c, day, ordinal):
     # A topic gets another approach on its next rotation, not just new colours.
     seed = serial // 5 + ordinal
     return {**c, 'creative_version': VERSION, 'story_format': FORMATS[(serial + ordinal) % 4],
-            'creative_seed': seed, 'journey': ('warmup', 'cet', 'practice')[(serial + ordinal) % 3]}
+            'creative_seed': seed, 'journey': 'practice' if c.get('content_tier')=='advanced_v1' else ('warmup', 'cet', 'practice')[(serial + ordinal) % 3]}
 
 def opening(c):
     return HOOKS.get(c['topic'], c.get('hook') or c['question'])
@@ -128,11 +134,13 @@ def plan(c):
     kind = c.get('story_format', 'challenge')
     if kind not in FORMATS:
         kind = 'challenge'
-    return {'version':VERSION, 'format':kind, 'beats':TIMINGS[kind], 'hook':opening(c),
+    depth=c.get('content_tier')
+    beats=(DEEP_TIMINGS if depth=='advanced_v1' else TIMINGS)[kind]
+    return {'version':VERSION, 'format':kind, 'depth':depth, 'beats':beats, 'hook':opening(c),
             'soundtrack':int(c.get('creative_seed',0)) % 4, 'source':'authored', 'subtitles':[]}
 
 def spoken(c, p):
-    reveal, worked, close, end = TIMINGS[p['format']]
+    reveal, worked, close, end = timing_for_plan(p)
     # Keep complete sentences; no arbitrary truncation of formulae or conditions.
     why = c.get('why', c['rule'])
     explanation = why if len(why) <= 200 else c['rule']

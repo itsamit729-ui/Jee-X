@@ -5,10 +5,10 @@ import math
 from social import lessons, quality, editorial, storyboard, narration, reel
 
 
-def test_full_five_day_bank_without_repetition():
+def test_full_five_day_foundation_bank_without_repetition():
     topics=[]
     for day in range(5):
-        plan=quality.daily_plan((date(2026,10,7)+timedelta(days=day)).isoformat(),12,4)
+        plan=quality.daily_plan((date(2026,10,7)+timedelta(days=day)).isoformat(),12,0)
         topics.extend(c['topic'] for c in plan)
     assert len(topics)==len(set(topics))==60
 

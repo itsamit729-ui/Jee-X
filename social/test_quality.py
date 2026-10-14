@@ -11,7 +11,7 @@ def test_daily_plan_balanced_unique_and_no_next_day_repeat():
         topics={c['topic'] for c in plan}
         assert len(topics)==12 and not topics & previous
         assert Counter(c['subject'] for c in plan)=={'PHYSICS':4,'CHEMISTRY':4,'MATHS':4}
-        assert all(plan[i]['topic'] in storyboard.VISUAL_TOPICS for i in (2,5,8,11))
+        assert all(plan[i]['topic'] in storyboard.REEL_TOPICS for i in (2,5,8,11))
         previous=topics
         for total in range(1,13):
             for reels in range(min(4,total)+1):

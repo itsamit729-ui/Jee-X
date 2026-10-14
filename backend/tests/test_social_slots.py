@@ -97,7 +97,7 @@ def test_twelve_slots_and_retry_no_duplicates(setup):
     assert all(j['state']=='published' for j in client.get('/api/social/status',headers=AUTH).json()['jobs'])
     reel_topics=[social.slot_problem(f'2026-10-06:s{i:02d}')['topic'] for i in range(12) if social.is_reel(f's{i:02d}')]
     assert len(set(reel_topics))==4
-    assert set(reel_topics)<=set(social.storyboard.VISUAL_TOPICS)
+    assert set(reel_topics)<=set(social.storyboard.REEL_TOPICS)
 
 
 def test_media_head_range_and_format(setup):
@@ -134,7 +134,7 @@ def test_content_plan_is_private_and_cannot_publish(setup):
     assert len(items)==12
     videos=[c for c in items if c['kind']=='reel']
     assert len({c['story'] for c in videos})==4
-    assert {c['seconds'] for c in videos}=={23,24,25,27}
+    assert {c['seconds'] for c in videos}=={41,42}
     assert all(c['destination'].startswith('https://jeeedge.in/start?') for c in items)
     assert not submitted
     with factory() as db:

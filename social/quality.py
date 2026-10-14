@@ -1,6 +1,6 @@
 """Authored reasoning and transfer checks; AI never edits these answers."""
 from datetime import date
-from social import lessons
+from social import lessons, advanced
 
 # why, transfer question, transfer answer. These extend the foundational example
 # with a boundary case or linked calculation, without claiming to be actual PYQs.
@@ -46,10 +46,10 @@ def enrich(content):
 
 
 def daily_plan(day, count, reels):
-    """Twenty distinct topics per subject; four per day, a five-day rotation.
+    """Balance the foundation carousel bank and a separate multi-step Reel bank.
 
-    Saved job snapshots remain immutable. All topics have an authored visual
-    proof board; physical diagrams are used only for supported simulations.
+    Saved snapshots remain immutable. Deep Reels use authored derivations;
+    physical diagrams are shown only for the supported concept simulations.
     """
     serial = date.fromisoformat(day).toordinal()
     pool = {int(c['lesson_id'].split(':')[0]): c for c in (lessons.lesson(day,i) for i in range(lessons.TOTAL))}
@@ -73,6 +73,7 @@ def daily_plan(day, count, reels):
     result = []
     from social import art_direction
     ordinals = {True:0,False:0}
+    advanced_ordinals = {}
     for index in range(count):
         if index in video:
             choice = video[index]
@@ -82,6 +83,10 @@ def daily_plan(day, count, reels):
             counts[choice['subject']] += 1
             used.add(choice['topic'])
         kind = index in video
+        if kind:
+            subject=choice['subject']
+            choice=advanced.pick(day,subject,advanced_ordinals.get(subject,0))
+            advanced_ordinals[subject]=advanced_ordinals.get(subject,0)+1
         from social import creative
         styled = art_direction.attach(enrich(choice), serial, ordinals[kind])
         result.append(creative.attach(styled, day, ordinals[kind]))

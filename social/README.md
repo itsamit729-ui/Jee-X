@@ -37,16 +37,32 @@ of the carousel layout; a four-Reel day uses one of each:
 
 | Story | Opening and payoff | Length |
 | --- | --- | --- |
-| Challenge | Make a call, then check the answer and working | 24 s |
-| Answer first | See the result immediately, then learn why | 23 s |
-| Mistake check | Question a specific misconception and resolve it | 25 s |
-| Visual proof | Connect a concept illustration to the worked example | 27 s |
+| Challenge | Make a call, then follow a three-step derivation | 41 s |
+| Answer first | See the result, then establish the model and working | 41 s |
+| Mistake check | Challenge a plausible wrong model and repair it | 42 s |
+| Visual proof | Reveal the constraint, equations and final deduction | 42 s |
 
 Hooks concern the actual worked question. Captions vary their entry point and
-keep the question, solution and essential condition. Sixty authored lessons
-rotate across Physics, Chemistry and Maths. A twelve-item schedule covers the
-bank in five days; a four-item schedule covers it in fifteen days. Reels also
-balance subjects. Different pacing, compositions, authored motion, diagram
+keep the question, solution and essential condition.
+
+The sixty-lesson foundational bank remains available for carousels. Automatic
+and manual Reels now draw from a separate 24-lesson multi-step bank, eight per
+subject (`content_tier: advanced_v1`). Topics include moving-wedge constraints,
+falling-rod reactions, coupled oscillations, gas dissociation equilibria, buffer
+neutralisation, concentration cells, Bayes updates and inverse-function second
+derivatives. These are original authored problems, not claimed official PYQs.
+Their complexity comes from linked deductions and boundary conditions, not an
+unsupported difficulty or score label. Each carries three immutable worked
+steps and a follow-up check. New Reel slots preserve the default four/day;
+this change does not reduce posting volume or raise provider quotas.
+
+The picker balances the three subjects, avoids repeating a topic on adjacent
+days, and reaches the entire advanced bank across an eight-day default run.
+Chapter practice is the destination for these deeper lessons. Foundational
+23–27 second snapshots already saved or queued retain their original content
+and timings. The longer profile applies only to the new deep lessons.
+
+Different pacing, compositions, authored motion, diagram
 reveals and four original synthesized music beds provide variation without
 provider calls. Eleven additional concept drawings cover parallel resistance,
 series springs/capacitors, mole fraction, gas ratios, arithmetic pairing,
@@ -83,7 +99,8 @@ cache; failed attempts back off thirty minutes. There is no paid voice fallback.
 Local preview videos intentionally use music only and do not verify live TTS.
 
 Video remains 720×1280, 24 fps source / 30 fps H.264 output, AAC stereo audio.
-Essential text avoids the right interaction rail and bottom caption area; speech
+Deep working appears as three numbered steps, revealed in sequence rather than
+a single dense paragraph. Essential text avoids the right interaction rail and bottom caption area; speech
 has a separate subtitle band. One-thread encoding, the 180-second render ceiling
 and 8 MiB output limit remain enforced. Throughput depends on Render hardware.
 

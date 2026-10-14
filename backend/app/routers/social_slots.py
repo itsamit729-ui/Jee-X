@@ -22,7 +22,7 @@ from app.database import SessionLocal
 from app.models.social_job import SocialSlot as SocialJob, SocialAsset as SocialMedia, SocialDispatch
 from app.models.social_job import SocialJob as LegacyJob
 from app.routers.social import media as legacy_media
-from social import worker, reel, lessons, editorial, storyboard, narration, quality, creative
+from social import worker, reel, lessons, editorial, storyboard, narration, quality, creative, advanced
 from app.services import social_budget as budget
 from app.services import instagram_comments as comments
 from app.services import social_speech
@@ -140,7 +140,8 @@ def plan_preview():
     return {'day':today(), 'preview_only':True, 'items':[
         {'slot':f's{i:02}', 'kind':'reel' if is_reel(f's{i:02}') else 'carousel',
          'topic':c['topic'], 'hook':creative.opening(c), 'story':c['story_format'],
-         'seconds':creative.TIMINGS[c['story_format']][-1] if is_reel(f's{i:02}') else None,
+         'level':c.get('level'),'content_tier':c.get('content_tier'),
+         'seconds':storyboard.beats(storyboard.plan(c))[-1] if is_reel(f's{i:02}') else None,
          'destination':creative.url(c)} for i,c in enumerate(items)]}
 
 
@@ -571,7 +572,7 @@ def run_job(day, owner):
                 if saved:content=json.loads(saved.content)
                 elif slot==MANUAL_REEL_SLOT:
                     used={json.loads(row.content).get('topic') for row in db.query(SocialLesson).filter(SocialLesson.slot.startswith(calendar_day+':')).all()}
-                    candidates=[lessons.visual_lesson(calendar_day,i) for i in range(len(storyboard.VISUAL_TOPICS))]
+                    candidates=[advanced.manual(calendar_day,i) for i in range(len(advanced.BANK))]
                     candidate=next((c for c in candidates if c['topic'] not in used),None)
                     if candidate is None:raise worker.ServiceError('All visual topics already used today; hold the test to avoid a repeated lesson.')
                     content=creative.attach(quality.enrich(candidate),calendar_day,len(used))

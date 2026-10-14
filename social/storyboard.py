@@ -26,6 +26,8 @@ for _topic in VISUAL_TOPICS:
     if _topic not in HOOKS:
         _c = next(c for c in (lessons.lesson('2026-10-07',i) for i in range(lessons.TOTAL)) if c['topic']==_topic)
         HOOKS[_topic] = (hooks.opening(_c),)*3
+from social import advanced
+REEL_TOPICS = VISUAL_TOPICS + tuple(c['topic'] for c in advanced.BANK)
 FORMATS=('predict','compare','spot_trap')
 
 
@@ -57,5 +59,5 @@ def plan(content):
 def beats(plan):
     from social import creative
     if plan.get('version') == creative.VERSION and plan.get('format') in creative.TIMINGS:
-        return creative.TIMINGS[plan['format']]
+        return creative.timing_for_plan(plan)
     return (4,17,23,28)

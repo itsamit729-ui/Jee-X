@@ -10,7 +10,7 @@ def test_smaller_schedules_reach_the_whole_bank_and_reels_span_subjects():
     topics=[]
     for offset in range(15):
         day=(date(2026,10,12)+timedelta(days=offset)).isoformat()
-        topics.extend(c['topic'] for c in quality.daily_plan(day,4,2))
+        topics.extend(c['topic'] for c in quality.daily_plan(day,4,0))
         reels=quality.daily_plan(day,12,4)[2::3]
         assert {c['story_format'] for c in reels} == set(creative.FORMATS)
         assert len({creative.plan(c)['soundtrack'] for c in reels}) == 4

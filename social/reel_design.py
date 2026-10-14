@@ -31,7 +31,7 @@ def diagram(im, c, t, revealed, box):
     im.paste(cropped,(x+(w-cropped.width)//2,y+(h-cropped.height)//2))
 
 def frame(c, p, t):
-    kind = p['format']; reveal,worked,close,end = creative.TIMINGS[kind]
+    kind = p['format']; reveal,worked,close,end = storyboard.beats(p)
     bg,ink,accent,panel = PALETTES[kind]
     im=Image.new('RGB',(720,1280),bg); d=ImageDraw.Draw(im)
     phase=0 if t<reveal else 1 if t<worked else 2 if t<close else 3
@@ -44,7 +44,7 @@ def frame(c, p, t):
     d.rounded_rectangle((54,150,96,187),radius=8,fill=accent)
     d.text((61,156),'JE',font=art.font(20,'sans',True),fill=bg)
     d.text((111,160),'JEE EDGE / '+c['subject'],font=art.font(16,'mono'),fill=ink)
-    tag(d,creative.LABELS[kind] if phase==0 else ('THE PAYOFF','THE WORKING','YOUR NEXT STEP')[phase-1],212,accent)
+    tag(d,('MULTI-STEP / '+creative.LABELS[kind]) if phase==0 and c.get('content_tier')=='advanced_v1' else creative.LABELS[kind] if phase==0 else ('THE PAYOFF','THE WORKING','YOUR NEXT STEP')[phase-1],212,accent)
     has_diagram=c['topic'] in storyboard.DIAGRAM_TOPICS or c['topic'] in diagrams.TOPICS
     if phase==0:
         title=c['answer'] if kind=='answer_first' else p.get('hook') or creative.opening(c)
@@ -82,6 +82,16 @@ def frame(c, p, t):
         else:
             d.rounded_rectangle((54,707,628,902),radius=20,fill=panel)
             text(d,c['rule'],(77,731,527,146),32,ink,False,26)
+    elif phase==2 and c.get('content_tier')=='advanced_v1':
+        text(d,'Build the argument.',(54,253+shift,563,119),51,ink,True,35)
+        shown=min(3,1+int(3*(t-worked)/(close-worked)))
+        for index,step in enumerate(c['worked_steps'][:shown]):
+            y=400+index*128
+            d.rounded_rectangle((54,y,628,y+114),radius=14,fill=panel)
+            d.text((70,y+18),f'{index+1:02}',font=art.font(18,'mono',True),fill=accent)
+            text(d,step,(109,y+16,499,84),31,ink,False,24)
+        tag(d,'KEEP THE MODEL HONEST',788,accent)
+        text(d,c['condition'],(54,820,563,108),27,ink,False,22)
     elif phase==2:
         title='Watch this step.' if kind=='mistake_check' else 'From given to answer.'
         text(d,title,(54,253+shift,563,119),51,ink,True,35)
