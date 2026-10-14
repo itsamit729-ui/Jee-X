@@ -1,15 +1,23 @@
+# Web API and validation
 fastapi==0.115.0
 uvicorn[standard]==0.30.6
 sqlalchemy==2.0.35
 pydantic==2.12.5
 python-dotenv==1.0.1
 requests==2.32.3
-pymysql==1.1.1
-Pillow>=11,<13
+pymysql[rsa]==1.1.1
+# IANA timezone fallback for Asia/Kolkata on minimal deployment images.
+tzdata==2026.5
+
+# Account authentication
 argon2-cffi==25.1.0
 email-validator==2.3.0
 
-reportlab>=4.2,<5
-numpy>=2,<3
+# Image processing (keep aligned with social/requirements.txt).
+Pillow==12.3.0
+
+# Teacher paper PDFs, OMR detection and PDF rasterisation.
+reportlab==4.4.9
+numpy==2.3.5
 opencv-python-headless==4.11.0.86
-pypdfium2>=4.30,<6
+pypdfium2==5.14.0
