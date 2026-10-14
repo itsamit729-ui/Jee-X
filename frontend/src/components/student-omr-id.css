@@ -1,0 +1,9 @@
+.student-omr-id{border:1px solid var(--line);border-radius:10px;background:var(--page);padding:18px;margin:0 0 24px;min-width:0}
+.student-omr-id-heading{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px;font-weight:600;color:var(--ink)}
+.student-omr-id-heading>span:last-child{font-size:11px;font-weight:400;color:var(--ink-2)}
+.student-omr-id-value{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:12px 0}
+.student-omr-id-value>strong{font:600 22px/1.5 ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;font-variant-numeric:tabular-nums;user-select:all;overflow-wrap:anywhere}
+.student-omr-id .btn{flex-shrink:0;margin:0}
+.student-omr-id>p{font-size:12px;line-height:1.7;color:var(--ink-2);margin:0}
+.student-omr-id>p[role=status]{margin-top:8px;color:var(--pen)}
+@media(max-width:480px){.student-omr-id{padding:16px}.student-omr-id-value>strong{font-size:20px;letter-spacing:.08em}.student-omr-id .btn{font-size:12px;padding-inline:10px;gap:6px}}

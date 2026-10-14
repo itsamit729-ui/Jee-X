@@ -1,3 +1,4 @@
+import StudentOmrId from '../components/StudentOmrId.jsx'
 import PublicProfileSettings from '../components/PublicProfileSettings.jsx'
 import RatingSummary from '../components/RatingSummary.jsx'
 import { useEffect, useRef, useState } from 'react'
@@ -192,6 +193,8 @@ export default function Profile() {
           </div>
           {avatarError && <p className="alert" role="alert">{avatarError}</p>}
           {avatarMessage && <p className="hint hint-ok" role="status">{avatarMessage}</p>}
+
+          <StudentOmrId studentId={profile.id}/>
 
           {!editing ? (
             <dl className="dl">

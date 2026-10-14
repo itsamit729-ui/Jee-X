@@ -7,7 +7,8 @@ import { buildSync } from 'esbuild'
 
 const filename=fileURLToPath(import.meta.url)
 const output=buildSync({
-  stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import MathText from './src/components/MathText.jsx';import DeferredDetails from './src/components/DeferredDetails.jsx';import SearchField from './src/components/SearchField.jsx';
+  stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import MathText from './src/components/MathText.jsx';import DeferredDetails from './src/components/DeferredDetails.jsx';import SearchField from './src/components/SearchField.jsx';import StudentOmrId from './src/components/StudentOmrId.jsx';
+    export const omr=studentId=>renderToStaticMarkup(<StudentOmrId studentId={studentId}/>);
     export const search=()=>renderToStaticMarkup(<SearchField label="Find a student" placeholder="Find by name, username or OMR ID…" value="Aditi" onChange={()=>{}}/>);
     export const math=text=>renderToStaticMarkup(<MathText text={text}/>);
     export function report(open){let renders=0;function HeavyQuestion(){renders++;return <MathText text={'Solve $x^2=4$'}/>};const html=renderToStaticMarkup(<DeferredDetails summary="Question 1" initialOpen={open}><HeavyQuestion/></DeferredDetails>);return {html,renders}}`,resolveDir:path.resolve(path.dirname(filename),'..'),loader:'jsx'},
@@ -16,7 +17,7 @@ const output=buildSync({
 const compiled=new Module(filename)
 compiled.paths=Module._nodeModulePaths(path.dirname(filename))
 compiled._compile(output,filename)
-const {math,report,search}=compiled.exports
+const {math,report,search,omr}=compiled.exports
 
 test('closed report rows defer actual question rendering and opened rows retain maths',()=>{
   const closed=report(false),opened=report(true)
@@ -46,4 +47,14 @@ test('search keeps the icon separate from a labelled, editable search input',()=
   assert.match(html,/type="search"/)
   assert.match(html,/value="Aditi"/)
   assert.equal((html.match(/<input/g)||[]).length,1)
+})
+
+test('student profile shows the existing ten-digit OMR identity and a copy control',()=>{
+  const html=omr(11)
+  assert.match(html,/0000000011/)
+  assert.match(html,/Your permanent OMR ID/)
+  assert.match(html,/Copy your OMR ID/)
+  assert.match(html,/leading zeros/)
+  assert.doesNotMatch(html,/<input/)
+  assert.equal(omr(undefined),'')
 })
