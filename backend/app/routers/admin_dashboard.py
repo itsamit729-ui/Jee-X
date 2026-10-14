@@ -13,10 +13,10 @@ from collections import defaultdict
 from datetime import datetime, time, timedelta, timezone
 from threading import Lock
 
-from fastapi import APIRouter, Depends, Header, HTTPException, Request, Response
+from fastapi import APIRouter, Depends, Header, HTTPException, Request, Response, Query
 from pydantic import BaseModel, Field
-from sqlalchemy import case, func
-from sqlalchemy.orm import Session
+from sqlalchemy import case, func, or_
+from sqlalchemy.orm import Session, joinedload
 
 from app import models
 from app.database import get_db
@@ -148,7 +148,8 @@ def admin_dashboard(
     window_start = _start_of_ist_day_utc_naive(window_start_day)
 
     total_users = db.query(func.count(models.User.id)).scalar() or 0
-    student_users = db.query(func.count(models.User.id)).filter(models.User.role == "student").scalar() or 0
+    teacher_ids = db.query(models.TeacherAccess.user_id).filter(models.TeacherAccess.active.is_(True))
+    student_users = db.query(func.count(models.User.id)).filter(models.User.role == "student", ~models.User.id.in_(teacher_ids)).scalar() or 0
     new_users_today = db.query(func.count(models.User.id)).filter(models.User.created_at >= today_start).scalar() or 0
     new_users_7d = db.query(func.count(models.User.id)).filter(models.User.created_at >= week_start).scalar() or 0
     active_today = (
@@ -201,11 +202,12 @@ def admin_dashboard(
         or 0
     )
     daily_completed_today = (
-        db.query(func.count(models.DailyQuestionAssignment.id))
+        db.query(func.count(func.distinct(models.DailyQuestionAssignment.id)))
         .join(models.TestAttempt, models.TestAttempt.test_id == models.DailyQuestionAssignment.test_id)
         .filter(
             models.DailyQuestionAssignment.assigned_date == today,
             models.TestAttempt.submitted_at.isnot(None),
+            models.TestAttempt.user_id == models.DailyQuestionAssignment.user_id,
         )
         .scalar()
         or 0
@@ -293,7 +295,7 @@ def admin_dashboard(
         for day in days
     ]
 
-    recent_users_rows = db.query(models.User).order_by(models.User.created_at.desc()).limit(10).all()
+    recent_users_rows = db.query(models.User).options(joinedload(models.User.student_profile)).order_by(models.User.created_at.desc(), models.User.id.desc()).limit(10).all()
     recent_users = []
     for user in recent_users_rows:
         profile = user.student_profile
@@ -338,6 +340,8 @@ def admin_dashboard(
         "overview": {
             "total_users": int(total_users),
             "student_users": int(student_users),
+            "teacher_users": db.query(models.TeacherAccess).filter_by(active=True).count(),
+            "pending_profiles": db.query(models.AuthAccount).filter(models.AuthAccount.user_id.is_(None), models.AuthAccount.disabled.is_(False)).count(),
             "new_users_today": int(new_users_today),
             "new_users_7d": int(new_users_7d),
             "active_users_today": int(active_today),
@@ -362,8 +366,150 @@ def admin_dashboard(
             "open_question_reports": int(open_question_reports),
         },
         "questions": {"status": status_counts, "subjects": subjects},
+        "teaching": {
+            "classrooms": db.query(models.Classroom).count(),
+            "memberships": db.query(models.ClassroomMember).filter_by(active=True).count(),
+            "students": db.query(func.count(func.distinct(models.ClassroomMember.user_id))).filter(models.ClassroomMember.active.is_(True)).scalar() or 0,
+            "assignments": db.query(models.TeachingAssignment).count(),
+            "papers": db.query(models.TeacherPaper).count(),
+            "finalized_papers": db.query(models.TeacherPaper).filter_by(finalized=True).count(),
+            "scans": {state: count for state, count in db.query(models.TeacherScan.state, func.count(models.TeacherScan.id)).group_by(models.TeacherScan.state)},
+        },
         "attempts": {"by_kind": attempt_kinds},
         "growth": growth,
         "recent_users": recent_users,
         "recent_attempts": recent_attempts,
     }
+
+
+@router.get('/users', dependencies=[Depends(_require_admin)])
+def admin_users(response: Response, q: str = Query('', max_length=150),
+                role: str = Query('all', pattern='^(all|student|teacher)$'),
+                offset: int = Query(0, ge=0), limit: int = Query(25, ge=1, le=100),
+                db: Session = Depends(get_db)):
+    response.headers['Cache-Control'] = 'no-store'
+    teacher_ids = db.query(models.TeacherAccess.user_id).filter(models.TeacherAccess.active.is_(True))
+    query = db.query(models.User).options(joinedload(models.User.student_profile), joinedload(models.User.teacher_access))
+    if q.strip():
+        term = q.strip()
+        terms = [column.contains(term, autoescape=True) for column in (models.User.name, models.User.username, models.User.email)]
+        if term.isascii() and term.isdecimal() and len(term) <= 10:
+            terms.append(models.User.id == int(term))
+        query = query.filter(or_(*terms))
+    if role == 'teacher':
+        query = query.filter(models.User.id.in_(teacher_ids))
+    elif role == 'student':
+        query = query.filter(models.User.role == 'student', ~models.User.id.in_(teacher_ids))
+    total = query.count()
+    rows = query.order_by(models.User.created_at.desc(), models.User.id.desc()).offset(offset).limit(limit).all()
+    return {'total': total, 'offset': offset, 'limit': limit, 'items': [{
+        'id': u.id, 'name': u.name, 'username': u.username, 'email': u.email,
+        'role': 'teacher' if u.teacher_access and u.teacher_access.active else u.role,
+        'status': u.status, 'omr_id': str(u.id).zfill(10),
+        'target_exam': u.student_profile.target_exam if u.student_profile else None,
+        'target_year': u.student_profile.target_year if u.student_profile else None,
+        'created_at': _iso_ist(u.created_at), 'last_active_at': _iso_ist(u.last_active_at),
+    } for u in rows]}
+
+
+@router.get('/questions', dependencies=[Depends(_require_admin)])
+def admin_questions(response: Response, q: str = Query('', max_length=150),
+                    exam: str = Query('', max_length=30), status: str = Query('', pattern='^(|draft|reviewed|published|retired)$'),
+                    kind: str = Query('', pattern='^(|single_correct|multi_correct|numerical)$'),
+                    offset: int = Query(0, ge=0), limit: int = Query(25, ge=1, le=100),
+                    db: Session = Depends(get_db)):
+    response.headers['Cache-Control'] = 'no-store'
+    query = db.query(models.Question, models.Subject.code, models.Chapter.name).join(
+        models.Subtopic, models.Question.subtopic_id == models.Subtopic.id).join(
+        models.Chapter, models.Subtopic.chapter_id == models.Chapter.id).join(
+        models.Subject, models.Chapter.subject_id == models.Subject.id)
+    if q.strip():
+        term = q.strip()
+        query = query.filter(or_(models.Question.ref.contains(term, autoescape=True), models.Question.stem.contains(term, autoescape=True)))
+    if exam: query = query.filter(models.Question.exam == exam)
+    if status: query = query.filter(models.Question.status == status)
+    if kind: query = query.filter(models.Question.type == kind)
+    total = query.count()
+    rows = query.order_by(models.Question.updated_at.desc(), models.Question.id.desc()).offset(offset).limit(limit).all()
+    return {'total': total, 'offset': offset, 'limit': limit, 'items': [{
+        'id': question.id, 'ref': question.ref, 'stem': question.stem, 'subject': subject, 'chapter': chapter,
+        'exam': question.exam, 'year': question.year, 'shift': question.shift, 'status': question.status,
+        'type': question.type, 'difficulty': question.difficulty, 'version': question.version,
+    } for question, subject, chapter in rows]}
+
+
+@router.get('/paper-coverage', dependencies=[Depends(_require_admin)])
+def admin_coverage(response: Response, exam: str = Query('', max_length=30),
+                   offset: int = Query(0, ge=0), limit: int = Query(25, ge=1, le=100), db: Session = Depends(get_db)):
+    response.headers['Cache-Control'] = 'no-store'
+    query = db.query(models.Question.exam, models.Question.year, models.Question.shift,
+                     func.count(models.Question.id), func.sum(case((models.Question.status == 'published', 1), else_=0))).filter(
+        models.Question.source_type == 'pyq').group_by(models.Question.exam, models.Question.year, models.Question.shift)
+    if exam: query = query.filter(models.Question.exam == exam)
+    total = query.count()
+    rows = query.order_by(models.Question.year.desc(), models.Question.exam, models.Question.shift).offset(offset).limit(limit).all()
+    return {'total': total, 'offset': offset, 'limit': limit, 'items': [dict(exam=exam, year=year, shift=shift,
+        total=count, published=int(published or 0)) for exam, year, shift, count, published in rows]}
+
+
+@router.get('/classrooms', dependencies=[Depends(_require_admin)])
+def admin_classrooms(response: Response, q: str = Query('', max_length=150), offset: int = Query(0, ge=0),
+                     limit: int = Query(25, ge=1, le=100), db: Session = Depends(get_db)):
+    response.headers['Cache-Control'] = 'no-store'
+    members = db.query(models.ClassroomMember.classroom_id.label('class_id'), func.count().label('members')).filter(
+        models.ClassroomMember.active.is_(True)).group_by(models.ClassroomMember.classroom_id).subquery()
+    query = db.query(models.Classroom, models.User.username, members.c.members).join(
+        models.User, models.Classroom.teacher_id == models.User.id).outerjoin(members, members.c.class_id == models.Classroom.id)
+    if q.strip():
+        query = query.filter(or_(models.Classroom.name.contains(q.strip(), autoescape=True), models.User.username.contains(q.strip(), autoescape=True)))
+    total = query.count()
+    rows = query.order_by(models.Classroom.created_at.desc(), models.Classroom.id.desc()).offset(offset).limit(limit).all()
+    return {'total': total, 'offset': offset, 'limit': limit, 'items': [dict(id=c.id, name=c.name, teacher=username,
+        members=int(count or 0), created_at=_iso_ist(c.created_at)) for c, username, count in rows]}
+
+
+@router.get('/operations', dependencies=[Depends(_require_admin)])
+def admin_operations(response: Response, queue: str = Query('reports', pattern='^(reports|rewards|imports|scans)$'),
+                     offset: int = Query(0, ge=0), limit: int = Query(25, ge=1, le=100), db: Session = Depends(get_db)):
+    """Bounded operational ledgers. Never expose shipping data, raw scans or import paths."""
+    response.headers['Cache-Control'] = 'no-store'
+    if queue == 'reports':
+        query = db.query(models.QuestionReport, models.Question.ref).join(models.Question, models.Question.id == models.QuestionReport.question_id).filter(models.QuestionReport.status == 'open')
+        total = query.count()
+        rows = query.order_by(models.QuestionReport.created_at, models.QuestionReport.id).offset(offset).limit(limit).all()
+        items = [dict(id=r.id, reference=ref, detail=r.reason[:600], status=r.status, at=_iso_ist(r.created_at)) for r, ref in rows]
+    elif queue == 'rewards':
+        query = db.query(models.RewardRedemption, models.User.username, models.RewardCatalogItem.name).join(models.User, models.User.id == models.RewardRedemption.user_id).join(models.RewardCatalogItem, models.RewardCatalogItem.id == models.RewardRedemption.catalog_item_id).filter(models.RewardRedemption.status == 'pending')
+        total = query.count()
+        rows = query.order_by(models.RewardRedemption.requested_at, models.RewardRedemption.id).offset(offset).limit(limit).all()
+        items = [dict(id=r.id, reference='@'+username, detail=f'{name} · {r.coins_spent} coins', status=r.status, at=_iso_ist(r.requested_at)) for r, username, name in rows]
+    elif queue == 'imports':
+        query = db.query(models.ImportRun)
+        total = query.count()
+        rows = query.order_by(models.ImportRun.created_at.desc(), models.ImportRun.id.desc()).offset(offset).limit(limit).all()
+        items = [dict(id=r.id, reference=f'Import #{r.id}', detail=f'{r.added} added · {r.updated} updated', status='has_errors' if r.errors else 'completed', at=_iso_ist(r.created_at)) for r in rows]
+    else:
+        query = db.query(models.TeacherScan, models.TeacherPaper.title, models.User.username).join(models.TeacherPaper, models.TeacherPaper.id == models.TeacherScan.paper_id).join(models.User, models.User.id == models.TeacherScan.teacher_id)
+        total = query.count()
+        rows = query.order_by(models.TeacherScan.created_at.desc(), models.TeacherScan.id).offset(offset).limit(limit).all()
+        items = [dict(id=r.id, reference=title, detail='Teacher @'+username, status=r.state, at=_iso_ist(r.created_at)) for r, title, username in rows]
+    return {'total': total, 'offset': offset, 'limit': limit, 'items': items}
+
+
+@router.get('/registrations', dependencies=[Depends(_require_admin)])
+def admin_registrations(response: Response, q: str = Query('', max_length=150),
+                        state: str = Query('all', pattern='^(all|pending|complete|disabled)$'),
+                        offset: int = Query(0, ge=0), limit: int = Query(25, ge=1, le=100),
+                        db: Session = Depends(get_db)):
+    response.headers['Cache-Control'] = 'no-store'
+    query = db.query(models.AuthAccount.id, models.AuthAccount.email, models.AuthAccount.user_id,
+                     models.AuthAccount.verified_at, models.AuthAccount.disabled, models.AuthAccount.created_at)
+    if q.strip(): query = query.filter(models.AuthAccount.email.contains(q.strip(), autoescape=True))
+    if state == 'pending': query = query.filter(models.AuthAccount.user_id.is_(None), models.AuthAccount.disabled.is_(False))
+    elif state == 'complete': query = query.filter(models.AuthAccount.user_id.isnot(None), models.AuthAccount.disabled.is_(False))
+    elif state == 'disabled': query = query.filter(models.AuthAccount.disabled.is_(True))
+    total = query.count()
+    rows = query.order_by(models.AuthAccount.created_at.desc(), models.AuthAccount.id).offset(offset).limit(limit).all()
+    return {'total': total, 'offset': offset, 'limit': limit, 'items': [dict(id=r.id, email=r.email,
+        profile_id=r.user_id, status='disabled' if r.disabled else 'complete' if r.user_id else 'pending',
+        verified=bool(r.verified_at), created_at=_iso_ist(r.created_at)) for r in rows]}
