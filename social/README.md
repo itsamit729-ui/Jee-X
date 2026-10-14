@@ -197,6 +197,63 @@ ordinary daily cap. This is **not** a preview endpoint and must not be placed on
 a recurring schedule. These development checks do not call it against a live
 account. Comments remain independently configured; see [COMMENTS.md](COMMENTS.md).
 
+## YouTube Shorts
+
+The same prepared MP4 can now be published to YouTube through the existing
+Buffer account. Instagram and YouTube have separate delivery records and
+submission fences. No second render, voice request, Google developer project,
+YouTube API key or additional publishing subscription is introduced by this code.
+The existing Buffer and hosting budgets remain shared and unchanged.
+
+One-time setup after deploying `origin/feature/version-1`:
+
+1. Connect the intended YouTube channel in [Buffer](https://publish.buffer.com/).
+   Follow [Buffer's YouTube setup instructions](https://support.buffer.com/en-us/articles/using-youtube-shorts-with-buffer-Jl8iR6jIck).
+2. Open Admin → Reels & publishing health → YouTube Shorts.
+3. Click **Find connected YouTube channels**, select the intended channel,
+   enable mirroring and **Save Shorts setup**. Discovery and saving setup do not
+   publish anything. The selected channel is validated by its exact Buffer ID;
+   the worker never guesses the first YouTube channel on an account.
+4. Keep the existing `POST /api/social/trigger` cron. New scheduled Reels prepared
+   after activation get a separate Short on a following trigger. At most one
+   Short is submitted per trigger; Buffer is asked to publish five minutes later.
+
+Shorts start disabled. Activation or a channel change never backfills existing
+videos. Manual `/test-reel` videos and carousels are excluded. Deactivation stops
+new submissions; already accepted Buffer posts keep their scheduled delivery.
+`SOCIAL_PAUSED=true` pauses new work on both platforms. The default four scheduled
+Reels become four Instagram videos plus four YouTube Shorts, not eight renders.
+
+Each Short gets an authored title (at most 100 characters), its own description,
+YouTube-tagged chapter-practice link, Education category (`27`), public privacy,
+AI-content disclosure, and subscriber notifications off. The general entrance-
+exam content is configured `madeForKids=false`. No YouTube music-library sound
+or notification-based manual publishing is required: the shared video includes
+original generated music and optional narration.
+
+Shorts persist in the new `social_shorts` table, created by the normal startup
+`Base.metadata.create_all`; existing tables and Instagram rows are not altered.
+The original MP4 remains available while either platform has an unresolved
+submission, and for 48 hours after the latest confirmed platform update. Source
+videos interrupted between render and Shorts checkpoint are recovered locally
+on the next trigger, using their immutable preparation timestamp.
+
+Delivery checks are read-only. The existing **Check Buffer delivery** button
+checks both platforms; GET status also reports Shorts without calling Buffer.
+Timeouts after the YouTube submission fence remain unconfirmed and are never
+blindly resubmitted. Exact-post reads or a unique Shorts slot marker can recover
+an accepted submission. Failed pre-submission work retries at most three times,
+with a ten-minute backoff; an administrator can queue a safe retry after fixing
+its error. The retry endpoint refuses accepted or uncertain posts. Unsubmitted
+Shorts expire after 48 hours. A Short already visible on YouTube can be recorded
+as operator-confirmed with its public URL, without reposting.
+
+Shorts delivery failure never changes an Instagram job state. Prepared Shorts
+can still be delivered during an Instagram publishing hold. Shared generation
+continues to use the existing Reel workflow: if that workflow cannot prepare a
+video, there is no new MP4 to mirror. Shared Buffer headroom is reserved for
+Instagram; Shorts defer when the existing free-worker budget is tight.
+
 ## Preview and verification
 
 Run from the repository root with Pillow and FFmpeg installed:

@@ -130,6 +130,27 @@ def find_channel():
     return matches[0]
 
 
+def youtube_channels():
+    """Explicit discovery, never select the first channel on an account."""
+    orgs=buffer('{ account { organizations { id } } }')['account']['organizations']
+    rows=[]
+    for org in orgs:
+        channels=buffer('query($input:ChannelsInput!){channels(input:$input){id name displayName service isQueuePaused isDisconnected isLocked}}',
+                        {'input':{'organizationId':org['id']}})['channels']
+        rows.extend({**c,'organization_id':org['id']} for c in channels if c.get('service','').lower()=='youtube')
+    return rows
+
+
+def find_youtube_channel(channel_id):
+    rows=[c for c in youtube_channels() if c['id']==channel_id]
+    if len(rows)!=1:raise ServiceError('Selected YouTube channel is not available in this Buffer account. Reconnect it and select it in Admin.')
+    channel=rows[0]
+    if channel.get('isDisconnected'):raise ServiceError('YouTube is disconnected in Buffer. Reconnect the selected channel.')
+    if channel.get('isLocked'):raise ServiceError('The YouTube channel is locked in Buffer. Check the connected-channel allowance.')
+    if channel.get('isQueuePaused'):raise ServiceError('The YouTube queue is paused in Buffer.')
+    return channel
+
+
 POST_FIELDS = 'id text status dueAt sentAt schedulingType externalLink error { message }'
 
 

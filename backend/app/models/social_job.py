@@ -1,5 +1,5 @@
 """Durable daily publication fence and public carousel media."""
-from sqlalchemy import Column, String, Integer, DateTime, LargeBinary, ForeignKey
+from sqlalchemy import Column, String, Integer, DateTime, LargeBinary, ForeignKey, Text
 from sqlalchemy.dialects.mysql import MEDIUMBLOB
 from app.database import Base
 
@@ -74,3 +74,23 @@ class SocialSpeech(Base):
     id = Column(String(64), primary_key=True)
     created_at = Column(DateTime, nullable=False, index=True)
     audio = Column(LargeBinary().with_variant(MEDIUMBLOB(), 'mysql'))
+
+
+class SocialShort(Base):
+    """One independent YouTube delivery per prepared Reel; never owns a render."""
+    __tablename__ = 'social_shorts'
+    day = Column(String(32), ForeignKey('social_slots.day'), primary_key=True)
+    channel_id = Column(String(128), nullable=False)
+    organization_id = Column(String(128))
+    asset_id = Column(String(32), nullable=False)
+    payload = Column(Text, nullable=False)
+    state = Column(String(24), nullable=False, index=True)
+    owner = Column(String(32), nullable=False)
+    attempts = Column(Integer, nullable=False, default=0)
+    created_at = Column(DateTime, nullable=False)
+    updated_at = Column(DateTime, nullable=False)
+    checked_at = Column(DateTime)
+    due_at = Column(DateTime)
+    post_id = Column(String(128))
+    external_link = Column(String(500))
+    error = Column(String(500))

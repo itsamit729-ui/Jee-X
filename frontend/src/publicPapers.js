@@ -8,7 +8,7 @@ for (const node of document.querySelectorAll('.math')) {
   ] })
 }
 const allowed = ['google', 'youtube', 'instagram', 'whatsapp', 'telegram', 'teacher', 'direct']
-const requested = new URLSearchParams(location.search).get('utm_source') || (document.body.dataset.source === 'instagram' ? 'instagram' : null)
+const requested = new URLSearchParams(location.search).get('utm_source') || (['instagram', 'youtube'].includes(document.body.dataset.source) ? document.body.dataset.source : null)
 let referrer = ''
 try { referrer = new URL(document.referrer).hostname } catch {}
 const referred = /(^|\.)google\.[a-z.]+$/.test(referrer) ? 'google' : /(^|\.)youtube\.com$/.test(referrer) ? 'youtube' : referrer && referrer !== location.hostname ? 'other' : 'direct'

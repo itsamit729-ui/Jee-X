@@ -113,3 +113,24 @@ def test_instagram_landing_has_real_destinations_and_aggregate_tracking(setup):
         assert client.post('/api/public-papers/events',json={'paper':'instagram','source':'instagram','event':event},headers=headers).status_code==204
     with factory() as db:
         assert {(r.event,r.source,r.count) for r in db.query(models.AcquisitionCount)}=={('view','instagram',1),('start_click','instagram',1)}
+
+
+def test_youtube_landing_preserves_source_and_records_aggregate_events(setup):
+    client, _, factory = setup
+    response = client.get('/start?to=practice&utm_source=youtube&utm_campaign=shorts')
+    assert response.status_code == 200
+    assert 'data-paper="youtube" data-source="youtube"' in response.text
+    assert 'Continue from Jee Edge on YouTube:' in response.text
+    assert 'rel="canonical" href="https://jeeedge.in/start"' in response.text
+    assert response.text.index('<h2>Work on a chapter') < response.text.index('<h2>Try a free warm-up')
+    for path in ('/subject-test?source=youtube', '/free-test?source=youtube', '/mhtcet/papers?utm_source=youtube'):
+        assert path in response.text
+    headers = {'origin': 'http://localhost:5173', 'x-jee-request': '1'}
+    for event in ('view', 'start_click'):
+        assert client.post('/api/public-papers/events', json={'paper': 'youtube', 'source': 'youtube', 'event': event}, headers=headers).status_code == 204
+    with factory() as db:
+        assert {(r.event, r.source, r.count) for r in db.query(models.AcquisitionCount)} == {('view', 'youtube', 1), ('start_click', 'youtube', 1)}
+    fallback = client.get('/start?utm_source=%3Cscript%3E')
+    assert fallback.status_code == 200
+    assert 'data-paper="instagram" data-source="instagram"' in fallback.text
+    assert '<script>' not in fallback.text

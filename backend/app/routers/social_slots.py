@@ -19,7 +19,7 @@ from pydantic import BaseModel, Field
 from sqlalchemy import func, or_
 from sqlalchemy.exc import IntegrityError
 from app.database import SessionLocal
-from app.models.social_job import SocialSlot as SocialJob, SocialAsset as SocialMedia, SocialDispatch
+from app.models.social_job import SocialSlot as SocialJob, SocialAsset as SocialMedia, SocialDispatch, SocialShort
 from app.models.social_job import SocialJob as LegacyJob
 from app.routers.social import media as legacy_media
 from social import worker, reel, lessons, editorial, storyboard, narration, quality, creative, advanced
@@ -27,6 +27,7 @@ from app.services import social_budget as budget
 from app.services import instagram_comments as comments
 from app.services import social_speech
 from app.services import social_pipeline as pipeline
+from app.services import social_shorts as shorts
 from app.models.social_job import SocialCache
 from app.routers.admin_dashboard import _require_admin
 from urllib.parse import urlsplit
@@ -121,7 +122,7 @@ def cleanup(db):
     # Keep unknown submissions intact. Confirmed delivery/failures have a bounded
     # retention window so a healthy week cannot fill the whole free media budget.
     cutoff=datetime.utcnow()-timedelta(days=2)
-    old=db.query(SocialJob.day).filter(SocialJob.updated_at<cutoff,or_(SocialJob.state.in_(['published','confirmed_published']),
+    old=db.query(SocialJob.day).filter(~SocialJob.day.in_(db.query(SocialShort.day).filter(or_(SocialShort.state.notin_(['published','confirmed_published','expired']),SocialShort.updated_at>=cutoff))),SocialJob.updated_at<cutoff,or_(SocialJob.state.in_(['published','confirmed_published']),
         (SocialJob.state.in_(['failed','expired'])) & SocialJob.post_id.is_(None)))
     db.query(SocialMedia).filter(SocialMedia.day.in_(old)).delete(synchronize_session=False)
     from app.models.social_job import SocialUsage
@@ -176,7 +177,7 @@ def status_report():
                     slot=f's{index:02d}'
                     upcoming.append({'slot':slot,'kind':'reel' if is_reel(slot) else 'carousel','at':at.isoformat()})
         return {'read_only':True,'daily_target':daily_target(),'reels_target':reel_target(),'jobs':jobs,'usage':budget.report(),
-                'publishing_hold':hold,'configuration':config,'health':pipeline.health(jobs,heartbeat,hold,config),
+                'youtube':shorts.report(db),'publishing_hold':hold,'configuration':config,'health':pipeline.health(jobs,heartbeat,hold,config),
                 'last_reconciliation':cache.get('delivery-reconciliation'),'next_windows':upcoming[:daily_target()],
                 'cron':{'method':'POST','path':'/api/social/trigger','timezone':'Asia/Kolkata','interval_minutes':10,
                         'note':'GET /api/social/status never generates or publishes a post.'}}
@@ -190,6 +191,7 @@ def status():
 @router.post('/reconcile',status_code=202,dependencies=[Depends(authorize)])
 def reconcile(tasks:BackgroundTasks):
     tasks.add_task(reconcile_pending,True)
+    tasks.add_task(shorts.check,True)
     return {'state':'checking_delivery','publishes_new_work':False,'status_path':'/api/social/status'}
 
 
@@ -230,6 +232,88 @@ def confirm_published(day:str,body:ConfirmPublished):
         pipeline.write(db,pipeline.key('confirmation',day),{'before':before,'after':job.state,'post_id':job.post_id,'instagram_url':link,'at':pipeline.stamp(job.updated_at)},30*86400)
         db.commit()
     return {'state':'confirmed_published','publishes_new_work':False}
+
+
+class ShortsSetup(BaseModel):
+    enabled:bool
+    channel_id:str|None=Field(None,max_length=128)
+    expected_updated_at:str|None=Field(None,max_length=64)
+
+
+@admin_router.get('/youtube/channels')
+def youtube_channels():
+    try:
+        with budget.tracked():rows=worker.youtube_channels()
+        return {'channels':[{'id':c['id'],'name':c.get('displayName') or c.get('name') or c['id'],
+            'available':not any(c.get(k) for k in ('isDisconnected','isLocked','isQueuePaused')),
+            'disconnected':bool(c.get('isDisconnected')),'locked':bool(c.get('isLocked')),'paused':bool(c.get('isQueuePaused'))} for c in rows]}
+    except Exception as error:raise HTTPException(503,safe_error(error))
+
+
+@admin_router.post('/youtube/config')
+def youtube_setup(body:ShortsSetup):
+    channel=None
+    if body.enabled:
+        if not body.channel_id:raise HTTPException(422,'Choose the YouTube channel connected to your Buffer account.')
+        try:
+            with budget.tracked():channel=worker.find_youtube_channel(body.channel_id)
+        except Exception as error:raise HTTPException(503,safe_error(error))
+    with SessionLocal() as db:
+        budget.locked(db);previous=shorts.settings(db)
+        if body.expected_updated_at!=previous.get('updated_at'):
+            raise HTTPException(409,'Shorts setup changed. Refresh before saving.')
+        now=pipeline.stamp(datetime.utcnow())
+        starts=previous.get('starts_at') if previous['enabled'] and previous.get('channel_id')==body.channel_id else now
+        config={'enabled':body.enabled,'channel_id':body.channel_id or previous.get('channel_id'),
+                'channel_name':(channel or {}).get('displayName') or (channel or {}).get('name') or previous.get('channel_name'),
+                'starts_at':starts,'updated_at':now}
+        pipeline.write(db,shorts.CONFIG,config,3650*86400)
+        cached=db.get(SocialCache,pipeline.key('youtube-channel',config['channel_id'] or ''))
+        if cached:db.delete(cached)
+        db.commit()
+    return {'settings':config,'publishes_new_work':False,'note':'Only Reels prepared after enabling this setup are mirrored. Existing queues stay unchanged.'}
+
+
+class ConfirmShort(BaseModel):
+    expected_updated_at:str=Field(min_length=1,max_length=64)
+    youtube_url:str=Field(min_length=10,max_length=2048)
+    confirmed:bool=False
+
+
+@admin_router.post('/youtube/jobs/{day}/confirm-published')
+def confirm_short(day:str,body:ConfirmShort):
+    url=shorts.youtube_link(body.youtube_url)
+    if not body.confirmed or not url:raise HTTPException(422,'Check the matching existing YouTube Short and provide its public URL.')
+    with SessionLocal() as db:
+        row=db.query(SocialShort).filter_by(day=day).with_for_update().first()
+        if not row:raise HTTPException(404,'Short not found.')
+        if row.state not in ('delivery_failed','needs_review','blocked') or row.updated_at!=pipeline.parse_time(body.expected_updated_at):
+            raise HTTPException(409,'This Short changed or does not need confirmation. Refresh its status.')
+        before=row.state;row.state='confirmed_published';row.external_link=url;row.error=None;row.updated_at=datetime.utcnow()
+        pipeline.write(db,pipeline.key('youtube-confirmation',day),{'before':before,'url':url,'at':pipeline.stamp(row.updated_at)},30*86400)
+        db.commit()
+    return {'state':'confirmed_published','publishes_new_work':False}
+
+
+class RetryShort(BaseModel):
+    expected_updated_at:str=Field(min_length=1,max_length=64)
+
+
+@admin_router.post('/youtube/jobs/{day}/retry')
+def retry_short(day:str,body:RetryShort):
+    with SessionLocal() as db:
+        budget.locked(db);config=shorts.settings(db)
+        row=db.query(SocialShort).filter_by(day=day).with_for_update().first()
+        if not row:raise HTTPException(404,'Short not found.')
+        if row.state!='failed' or row.post_id or row.updated_at!=pipeline.parse_time(body.expected_updated_at):
+            raise HTTPException(409,'Only a failed pre-submission Short can be retried. Refresh the row; uncertain deliveries are never resent.')
+        if not config['enabled'] or config['channel_id']!=row.channel_id or row.created_at<datetime.utcnow()-timedelta(days=2):
+            raise HTTPException(409,'Enable the matching channel first. Expired Shorts are not backfilled.')
+        if not db.get(SocialMedia,row.asset_id):raise HTTPException(409,'The original prepared video is unavailable.')
+        row.state='ready';row.attempts=0;row.error=None;row.updated_at=datetime.utcnow()
+        pipeline.write(db,pipeline.key('youtube-retry',day),{'at':pipeline.stamp(row.updated_at),'post_id':None},30*86400)
+        db.commit()
+    return {'state':'ready','will_submit_on_next_trigger':True}
 
 
 # Preserve all existing public carousel links.
@@ -287,6 +371,7 @@ def dispatch(tasks, manual_reel=False, require_voice=False):
         raise HTTPException(503, 'BUFFER_API_KEY must be configured; editorial and voice can use the authored fallback.')
     if require_voice and os.getenv('SOCIAL_TTS_ENABLED', 'true').strip().lower() != 'true':
         raise HTTPException(503, 'Enable SOCIAL_TTS_ENABLED before requesting a narrated test Reel')
+    tasks.add_task(shorts.tick)
     if not manual_reel and comments.enabled():
         tasks.add_task(comments.drain_safe)
     hold = budget.cached('publishing-hold')
@@ -618,9 +703,12 @@ def run_job(day, owner):
                         if retained>96*1024*1024:raise worker.ServiceError('Social media storage reached 96 MiB. Reconcile older queued posts; their media is retained until delivery is known.')
                         db.add(SocialMedia(id=media_id,day=day,image=data,mime=mime))
                         urls.append(f'{media_origin()}/api/social/assets/{media_id}.{extension}')
-                    manifest={'urls':urls,'kind':'reel' if video else 'carousel','caption':caption}
+                    manifest={'urls':urls,'kind':'reel' if video else 'carousel','caption':caption,'created_at':pipeline.stamp(datetime.utcnow())}
                     pipeline.write(db,pipeline.key('prepared',day),manifest)
                     db.commit()
+        if video:
+            try:shorts.prepare(day)
+            except Exception as error:logging.getLogger('uvicorn.error').warning('Shorts checkpoint deferred: %s',safe_error(error))
         if today()!=calendar_day:raise worker.ServiceError('Generation crossed midnight; wait for the next daily trigger.')
         phase='verify_public_media';stage(day,owner,phase)
         for url in urls:

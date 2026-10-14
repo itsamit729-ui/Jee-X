@@ -106,18 +106,20 @@ def paper_page(year: int, slug: str, db: Session = Depends(get_db)):
     return page(f'MHT-CET {p["shift"]} Question Paper & Mock', f'Preview {p["available"]} available questions from MHT-CET {p["shift"]}. Sign in for a timed reconstructed mock.', path_for(p), content, p['slug'])
 
 @router.get('/start', response_class=HTMLResponse)
-def instagram_start(to: Literal['warmup', 'cet', 'practice'] = 'warmup'):
+def social_start(to: Literal['warmup', 'cet', 'practice'] = 'warmup', utm_source: str = 'instagram'):
+    source = 'youtube' if utm_source == 'youtube' else 'instagram'
+    platform = 'YouTube' if source == 'youtube' else 'Instagram'
     choices = {
-        'warmup': ('01', 'Try a free warm-up', 'Ten Physics, Chemistry and Maths questions, with explanations. No signup needed to begin.', '/free-test?source=instagram', 'Start the warm-up'),
-        'cet': ('02', 'Choose an MHT-CET paper', 'Browse actual available years and shifts. Preview questions freely, then sign in for a timed mock.', '/mhtcet/papers?utm_source=instagram', 'Browse year & shift papers'),
-        'practice': ('03', 'Work on a chapter', 'Sign in, choose a subject and chapter, and review your answers after practice.', '/subject-test?source=instagram', 'Choose a chapter'),
+        'warmup': ('01', 'Try a free warm-up', 'Ten Physics, Chemistry and Maths questions, with explanations. No signup needed to begin.', f'/free-test?source={source}', 'Start the warm-up'),
+        'cet': ('02', 'Choose an MHT-CET paper', 'Browse actual available years and shifts. Preview questions freely, then sign in for a timed mock.', f'/mhtcet/papers?utm_source={source}', 'Browse year & shift papers'),
+        'practice': ('03', 'Work on a chapter', 'Sign in, choose a subject and chapter, and review your answers after practice.', f'/subject-test?source={source}', 'Choose a chapter'),
     }
-    content = '<div class="social-start"><p class="eyebrow">FROM THE REEL TO YOUR NEXT QUESTION</p><h1>Seen the idea?<br>Now try it.</h1><p class="intro">One useful concept is a start. Choose the practice that fits your next few minutes.</p>'
+    content = '<div class="social-start"><p class="eyebrow">FROM THE VIDEO TO YOUR NEXT QUESTION</p><h1>Seen the idea?<br>Now try it.</h1><p class="intro">One useful concept is a start. Choose the practice that fits your next few minutes.</p>'
     for key in [to] + [k for k in choices if k != to]:
         number, title, body, href, label = choices[key]
         content += f'<section class="card"><span class="eyebrow">{number} / {"START HERE" if key == to else "ALSO ON JEE EDGE"}</span><h2>{title}</h2><p>{body}</p><a class="button {"" if key == to else "secondary"}" data-start href="{escape(href, quote=True)}">{label} →</a></section>'
-    content += '<p class="hint">Reels use original teaching examples. The paper archive separately labels reconstructed papers and their available coverage.</p></div>'
-    return page('Free Practice & MHT-CET Papers', 'Continue from Jee Edge on Instagram: try a free warm-up, preview MHT-CET year and shift papers, or choose chapter practice.', '/start', content, paper='instagram', source='instagram')
+    content += '<p class="hint">Our videos use original teaching examples. The paper archive separately labels reconstructed papers and their available coverage.</p></div>'
+    return page('Free Practice & MHT-CET Papers', f'Continue from Jee Edge on {platform}: try a free warm-up, preview MHT-CET year and shift papers, or choose chapter practice.', '/start', content, paper=source, source=source)
 
 
 @router.get('/sitemap.xml', include_in_schema=False)
@@ -134,7 +136,7 @@ class Event(BaseModel):
 
 @router.post('/api/public-papers/events', status_code=204, dependencies=[Depends(require_browser_request)])
 def event(body: Event, db: Session = Depends(get_db)):
-    if body.paper not in ('archive', 'instagram') and not any(p['slug'] == body.paper for p in papers(db)):
+    if body.paper not in ('archive', 'instagram', 'youtube') and not any(p['slug'] == body.paper for p in papers(db)):
         raise HTTPException(404, 'Paper not found')
     count_event(db, body.paper, body.source, body.event)
     db.commit()
