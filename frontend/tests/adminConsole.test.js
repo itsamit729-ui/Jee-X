@@ -5,8 +5,8 @@ import { fileURLToPath } from 'node:url'
 import Module from 'node:module'
 import { buildSync } from 'esbuild'
 const filename=fileURLToPath(import.meta.url)
-const output=buildSync({stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import Overview,{TeachingSummary} from './src/components/admin/AdminOverview.jsx';import {DataTable,Pager,validSection,SECTIONS} from './src/components/admin/AdminShared.jsx';import {OperationsLedger,PeopleDirectory} from './src/components/admin/AdminResources.jsx';
-export {validSection,SECTIONS};export const overview=data=>renderToStaticMarkup(<Overview data={data} onSection={()=>{}}/>);export const teaching=data=>renderToStaticMarkup(<TeachingSummary data={data}/>);export const table=rows=>renderToStaticMarkup(<DataTable rows={rows} empty="No matching people." columns={[{key:'name',label:'Person'}]}/>);export const pager=data=>renderToStaticMarkup(<Pager data={data} offset={0} busy={false} setOffset={()=>{}}/>);export const scans=()=>renderToStaticMarkup(<OperationsLedger token="test" initialQueue="scans"/>);export const people=()=>renderToStaticMarkup(<PeopleDirectory token="test"/>);`,resolveDir:path.resolve(path.dirname(filename),'..'),loader:'jsx'},bundle:true,write:false,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom/server'],loader:{'.css':'empty'}}).outputFiles[0].text
+const output=buildSync({stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import CreativeCapacity from './src/components/admin/AdminCreativeCapacity.jsx';import Overview,{TeachingSummary} from './src/components/admin/AdminOverview.jsx';import {DataTable,Pager,validSection,SECTIONS} from './src/components/admin/AdminShared.jsx';import {OperationsLedger,PeopleDirectory} from './src/components/admin/AdminResources.jsx';
+export {validSection,SECTIONS};export const capacity=data=>renderToStaticMarkup(<CreativeCapacity data={data}/>);export const overview=data=>renderToStaticMarkup(<Overview data={data} onSection={()=>{}}/>);export const teaching=data=>renderToStaticMarkup(<TeachingSummary data={data}/>);export const table=rows=>renderToStaticMarkup(<DataTable rows={rows} empty="No matching people." columns={[{key:'name',label:'Person'}]}/>);export const pager=data=>renderToStaticMarkup(<Pager data={data} offset={0} busy={false} setOffset={()=>{}}/>);export const scans=()=>renderToStaticMarkup(<OperationsLedger token="test" initialQueue="scans"/>);export const people=()=>renderToStaticMarkup(<PeopleDirectory token="test"/>);`,resolveDir:path.resolve(path.dirname(filename),'..'),loader:'jsx'},bundle:true,write:false,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom/server'],loader:{'.css':'empty'}}).outputFiles[0].text
 const compiled=new Module(filename);compiled.paths=Module._nodeModulePaths(path.dirname(filename));compiled._compile(output,filename)
 const ui=compiled.exports
 const data={overview:{total_users:0,student_users:0,teacher_users:0,new_users_today:0,new_users_7d:0,active_users_today:0,total_questions:0,published_questions:0,submitted_attempts:0,attempts_today:0,questions_solved:0,average_accuracy:0},community:{open_question_reports:0,pending_redemptions:0,rated_users:0,rated_contests:0,outstanding_coins:0},daily:{completion_rate:0,assigned_today:0,completed_today:0},growth:[{date:'2026-10-14',signups:0,active_users:0,attempts:0}],recent_users:[],recent_attempts:[],teaching:{classrooms:0,students:0,assignments:0,papers:0,finalized_papers:0,scans:{}}}
@@ -39,4 +39,17 @@ test('all sections are reachable and teaching opens the OMR queue with labelled 
  assert.match(ui.scans(),/aria-pressed="true">OMR scans/)
  assert.match(ui.people(),/aria-label="Find a person or OMR ID"/)
  assert.match(ui.people(),/Account type/)
+})
+
+
+test('publishing capacity distinguishes configured targets, real narration and unobserved provider use',()=>{
+ const input={capacity:{source_reels_per_day:4,source_reels_ceiling:5,shorts_per_day:4,narration_requests_per_new_reel:5,scope:'This automation only'},configuration:{editorial_configured:true},jobs:[{day:'2026-10-15',slot:'s02',kind:'reel',creative:{topic:'Rod reaction',engine:'visual_v1',seconds:40,voice_expected:5,voice_ready:0,render_seconds:12,media_bytes:524288}}]}
+ const html=ui.capacity(input)
+ assert.match(html,/4 \/ 5/)
+ assert.match(html,/Music fallback/)
+ assert.match(html,/0\/5 clips embedded/)
+ assert.match(html,/This automation only/)
+ assert.match(html,/0.50.*MB/)
+ assert.match(ui.capacity({...input,jobs:[]}),/Older jobs did not collect this telemetry/)
+ assert.equal(ui.capacity({}),'')
 })

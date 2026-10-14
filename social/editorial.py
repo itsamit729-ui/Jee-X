@@ -48,13 +48,17 @@ def package(content, kind, recent=()):
     try:
         context = {k: content[k] for k in ('subject','topic','rule','condition','trap','question','answer','solution',
                    'why','transfer_question','transfer_answer','hook','level','worked_steps','content_tier') if k in content}
+        from social import retention
+        if retention.active(content):
+            visual=retention.brief(content)
+            context['visual_story']={k:visual[k] for k in ('hook','setup','visual')}
         if direction=='casefile' and not (creative.active(content) and kind == 'reel'):
             context['original_joke'] = dict(zip(('brain','reality'),art_direction.joke(content)))
         draft = call('Create three distinct English hooks (each <=65 characters) and one educational caption '
             f'({lower} to {upper} characters) for an original JEE ' + kind + '. '
             + brief + ' '
             'The opening MUST concern the exact supplied worked question. Do not hook with a different transfer problem. '
-            'The answer appears early and must actually resolve the opening. Avoid giving the answer in a question-led hook. '
+            'The worked steps and final payoff must resolve the opening. Avoid giving the answer in a question-led hook. '
             'Live-site promotion is appended by code; spend this draft on the lesson only. '
             'Open a concrete curiosity gap: a choice, surprising constraint, calculation or plausible wrong answer. '
             'Make the payoff specific and deliverable from this lesson. No generic learn-this or spot-the-trap hooks. '

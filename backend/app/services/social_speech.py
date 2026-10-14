@@ -41,9 +41,18 @@ def fetch(text):
                 return None
             size = db.query(func.coalesce(func.sum(func.length(SocialSpeech.audio)), 0)).scalar()
             if size + narration.MAX_BYTES > 32*1024*1024:
-                db.commit()
-                log.warning('JeeEdge TTS skipped: audio cache storage budget reached.')
-                return None
+                # Rendered MP4s embed their audio. Old cached clips can be evicted
+                # without breaking an existing post or retaining extra DB media.
+                victims=db.query(SocialSpeech.id,func.length(SocialSpeech.audio)).filter(
+                    SocialSpeech.audio.isnot(None),SocialSpeech.id!=identity).order_by(SocialSpeech.created_at).limit(32).all()
+                for old_id,length in victims:
+                    db.query(SocialSpeech).filter_by(id=old_id).delete(synchronize_session=False)
+                    size-=length
+                    if size+narration.MAX_BYTES<=32*1024*1024:break
+                if size+narration.MAX_BYTES>32*1024*1024:
+                    db.commit()
+                    log.warning('JeeEdge TTS skipped: audio cache storage budget reached.')
+                    return None
             # Claim while holding the existing cross-process database mutex.
             # Old failed records automatically become eligible after 30 minutes;
             # no schema migration, key rotation, or same-call retry loop.

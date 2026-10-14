@@ -135,7 +135,7 @@ def test_content_plan_is_private_and_cannot_publish(setup):
     assert len(items)==12
     videos=[c for c in items if c['kind']=='reel']
     assert len({c['story'] for c in videos})==4
-    assert {c['seconds'] for c in videos}=={41,42}
+    assert {c['seconds'] for c in videos}=={40}
     assert all(c['destination'].startswith('https://jeeedge.in/start?') for c in items)
     assert not submitted
     with factory() as db:
@@ -252,7 +252,7 @@ def test_real_request_hook_reserves_before_network_and_settles_usage(setup,monke
 def test_old_env_cannot_restore_thirty_posts(monkeypatch):
     monkeypatch.setenv('SOCIAL_DAILY_TARGET','30')
     monkeypatch.setenv('SOCIAL_REELS_PER_DAY','10')
-    assert social.daily_target()==12 and social.reel_target()==4
+    assert social.daily_target()==12 and social.reel_target()==5
 
 
 def test_unrelated_historical_delivery_error_does_not_block_new_posts(setup,monkeypatch):
@@ -432,3 +432,19 @@ def test_only_one_manual_exception_after_twelve_regular_submissions(setup,monkey
     assert len(submitted)==1
     with factory() as db:
         assert db.query(SocialSlot).count()==13
+
+
+def test_five_reel_opt_in_preserves_four_default_and_reports_actual_voice(setup,monkeypatch):
+    client,_,clock,_=setup
+    assert social.reel_target()==4
+    monkeypatch.setenv('SOCIAL_REELS_PER_DAY','5')
+    assert social.reel_target()==5
+    data=client.get('/api/social/status',headers=AUTH).json()
+    assert data['capacity']['source_reels_ceiling']==5
+    assert data['capacity']['source_reels_per_day']==5
+    clock[0]=datetime(2026,10,6,9,40)
+    assert client.post('/api/social/trigger',headers=AUTH).status_code==202
+    job=client.get('/api/social/status',headers=AUTH).json()['jobs'][0]
+    assert job['creative']['engine']=='visual_v1'
+    assert job['creative']['voice_expected']==5 and job['creative']['voice_ready']==0
+    assert job['creative']['render_seconds']>=1

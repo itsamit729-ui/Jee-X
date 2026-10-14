@@ -66,7 +66,7 @@ def daily_target():
 
 def reel_target():
     try:
-        return max(0, min(4, daily_target(), int(os.getenv('SOCIAL_REELS_PER_DAY', '4'))))
+        return max(0, min(5, daily_target(), int(os.getenv('SOCIAL_REELS_PER_DAY', '4'))))
     except ValueError:
         return min(4, daily_target())
 
@@ -159,7 +159,7 @@ def status_report():
             progress=cache.get(pipeline.key('progress',row.day)) or {}
             manifest=cache.get(pipeline.key('prepared',row.day)) or {}
             jobs.append({**status_data(row),'updated_at':pipeline.stamp(row.updated_at),'kind':kinds.get(row.day) or manifest.get('kind') or progress.get('kind') or ('reel' if row.day.endswith(':s99') else 'unknown'),
-                'stage':progress.get('stage'),'prepared':bool(manifest),'due_at':(delivery or {}).get('due_at'),
+                'stage':progress.get('stage'),'prepared':bool(manifest),'creative':manifest.get('creative'),'due_at':(delivery or {}).get('due_at'),
                 'delivery_checked_at':(delivery or {}).get('checked_at'),'operator_confirmed_at':(delivery or {}).get('operator_confirmed_at'),'published_url':(delivery or {}).get('external_link')})
         heartbeat=cache.get('last-publish-trigger')
         hold=cache.get('publishing-hold')
@@ -179,6 +179,10 @@ def status_report():
         return {'read_only':True,'daily_target':daily_target(),'reels_target':reel_target(),'jobs':jobs,'usage':budget.report(),
                 'youtube':shorts.report(db),'publishing_hold':hold,'configuration':config,'health':pipeline.health(jobs,heartbeat,hold,config),
                 'last_reconciliation':cache.get('delivery-reconciliation'),'next_windows':upcoming[:daily_target()],
+                'capacity':{'source_reels_per_day':reel_target(),'source_reels_ceiling':5,
+                    'shorts_per_day':reel_target() if shorts.settings(db)['enabled'] else 0,
+                    'narration_requests_per_new_reel':5,'new_engine':'visual_v1',
+                    'scope':'Configured output and this automation’s ledger only; provider-wide usage, audience retention and remaining account allowances are not observed.'},
                 'cron':{'method':'POST','path':'/api/social/trigger','timezone':'Asia/Kolkata','interval_minutes':10,
                         'note':'GET /api/social/status never generates or publishes a post.'}}
 
@@ -684,7 +688,9 @@ def run_job(day, owner):
                 phase='render';stage(day,owner,phase)
                 ticket=budget.reserve('render',units=180);started=time.monotonic()
                 try:paths=[reel.render(content,directory,copy)] if video else worker.render(content,copy,directory)
-                finally:budget.settle(ticket,units=int(time.monotonic()-started)+1)
+                finally:
+                    render_seconds=int(time.monotonic()-started)+1
+                    budget.settle(ticket,units=render_seconds)
                 with SessionLocal() as db:
                     job=db.query(SocialJob).filter_by(day=day,owner=owner,state='running').with_for_update().first()
                     if not job:return
@@ -703,7 +709,13 @@ def run_job(day, owner):
                         if retained>96*1024*1024:raise worker.ServiceError('Social media storage reached 96 MiB. Reconcile older queued posts; their media is retained until delivery is known.')
                         db.add(SocialMedia(id=media_id,day=day,image=data,mime=mime))
                         urls.append(f'{media_origin()}/api/social/assets/{media_id}.{extension}')
-                    manifest={'urls':urls,'kind':'reel' if video else 'carousel','caption':caption,'created_at':pipeline.stamp(datetime.utcnow())}
+                    manifest={'urls':urls,'kind':'reel' if video else 'carousel','caption':caption,'created_at':pipeline.stamp(datetime.utcnow()),
+                              'creative':{'engine':content.get('story_engine') or ('creative_v4' if creative.active(content) else 'legacy'),
+                                  'topic':content['topic'],'story':content.get('story_format'),
+                                  'seconds':storyboard.beats(copy['storyboard'])[-1] if video else None,
+                                  'voice_expected':len(narration.scenes(content,copy['storyboard'])) if video else 0,
+                                  'voice_ready':len(copy.get('voice_clips',[])), 'editorial':copy.get('editorial_source','unknown'),
+                                  'render_seconds':render_seconds,'media_bytes':sum(len(p.read_bytes()) for p in paths)}}
                     pipeline.write(db,pipeline.key('prepared',day),manifest)
                     db.commit()
         if video:

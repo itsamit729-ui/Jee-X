@@ -53,6 +53,9 @@ def frame(content, copy, seconds):
         plan={**plan, 'hook':copy['hook']}
     from social import art_direction, reel_design
     if creative.active(content):
+        if content.get('story_engine')=='visual_v1' and plan.get('engine')=='visual_v1':
+            from social import retention_design
+            return retention_design.frame(content,plan,seconds)
         return reel_design.frame(content, plan, seconds)
     return art_direction.reel_frame(content,plan,seconds)
 

@@ -115,3 +115,29 @@ def test_real_voice_mix(tmp_path):
     imag=sum(x*math.sin(2*math.pi*1000*i/8000) for i,x in enumerate(values))
     # Confirms that narration, not just the licensed music, reached the AAC track.
     assert 2*math.hypot(real,imag)/len(values)>2000
+
+
+def test_full_audio_cache_evicts_old_clips_instead_of_disabling_future_narration(monkeypatch):
+    from datetime import datetime,timedelta
+    from sqlalchemy import create_engine
+    from sqlalchemy.orm import sessionmaker
+    from app.database import Base
+    from app.models.social_job import SocialSpeech,SocialQuotaLock,SocialUsage,SocialCache
+    from app.services import social_speech as speech,social_budget as budget
+    engine=create_engine('sqlite://');Base.metadata.create_all(engine,tables=[c.__table__ for c in (SocialSpeech,SocialQuotaLock,SocialUsage,SocialCache)])
+    factory=sessionmaker(bind=engine)
+    monkeypatch.setattr(speech,'SessionLocal',factory);monkeypatch.setattr(budget,'SessionLocal',factory)
+    monkeypatch.setenv('GROQ_API_KEY','test');monkeypatch.setenv('SOCIAL_TTS_ENABLED','true')
+    with factory() as db:
+        db.add(SocialSpeech(id='old',audio=wav(1),created_at=datetime.utcnow()-timedelta(days=2)))
+        db.add(SocialSpeech(id='backoff',audio=None,created_at=datetime.utcnow()))
+        db.commit()
+    # Make one small cached clip sufficient to cross the conservative reservation.
+    monkeypatch.setattr(speech.narration,'MAX_BYTES',32*1024*1024)
+    monkeypatch.setattr(speech.worker,'request',lambda *a,**kw:wav(1))
+    assert speech.fetch('New explanation')==wav(1)
+    with factory() as db:
+        assert db.get(SocialSpeech,'old') is None
+        assert db.get(SocialSpeech,'backoff') is not None
+        assert db.query(SocialSpeech).filter(SocialSpeech.audio.isnot(None)).count()==1
+    engine.dispose()

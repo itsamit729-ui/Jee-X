@@ -13,6 +13,9 @@ DEEP_TIMINGS = {'challenge':(6,20,34,41), 'answer_first':(5,20,34,41),
                 'mistake_check':(6,21,35,42), 'visual_proof':(6,21,35,42)}
 
 def timing_for_plan(plan):
+    if plan.get('engine') == 'visual_v1':
+        from social.retention import BEATS
+        return BEATS
     return (DEEP_TIMINGS if plan.get('depth')=='advanced_v1' else TIMINGS)[plan['format']]
 
 LABELS = {'challenge': 'MAKE YOUR CALL', 'answer_first': 'ANSWER FIRST. NOW WHY?',
@@ -102,10 +105,13 @@ def attach(c, day, ordinal):
     serial = date.fromisoformat(day).toordinal()
     # A topic gets another approach on its next rotation, not just new colours.
     seed = serial // 5 + ordinal
-    return {**c, 'creative_version': VERSION, 'story_format': FORMATS[(serial + ordinal) % 4],
+    from social import retention
+    return {**c, **({'story_engine':retention.ENGINE} if c.get('content_tier')=='advanced_v1' else {}), 'creative_version': VERSION, 'story_format': FORMATS[(serial + ordinal) % 4],
             'creative_seed': seed, 'journey': 'practice' if c.get('content_tier')=='advanced_v1' else ('warmup', 'cet', 'practice')[(serial + ordinal) % 3]}
 
 def opening(c):
+    from social import retention
+    if retention.active(c):return retention.brief(c)['hook']
     return HOOKS.get(c['topic'], c.get('hook') or c['question'])
 
 def destination(c):
@@ -136,10 +142,15 @@ def plan(c):
         kind = 'challenge'
     depth=c.get('content_tier')
     beats=(DEEP_TIMINGS if depth=='advanced_v1' else TIMINGS)[kind]
-    return {'version':VERSION, 'format':kind, 'depth':depth, 'beats':beats, 'hook':opening(c),
+    from social import retention
+    engine={'engine':retention.ENGINE} if retention.active(c) else {}
+    if engine:beats=retention.BEATS
+    return {**engine, 'version':VERSION, 'format':kind, 'depth':depth, 'beats':beats, 'hook':opening(c),
             'soundtrack':int(c.get('creative_seed',0)) % 4, 'source':'authored', 'subtitles':[]}
 
 def spoken(c, p):
+    from social import retention
+    if retention.active(c) and p.get('engine')==retention.ENGINE:return retention.scenes(c,p)
     reveal, worked, close, end = timing_for_plan(p)
     # Keep complete sentences; no arbitrary truncation of formulae or conditions.
     why = c.get('why', c['rule'])

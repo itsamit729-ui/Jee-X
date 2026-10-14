@@ -7,7 +7,10 @@ from social.storyboard import beats
 
 def render(path,plan):
     rate=24000;duration=beats(plan)[-1];data=array('h',[0])*(duration*rate)
-    transitions=(0,)+beats(plan)[:3]
+    if plan.get('engine')=='visual_v1':
+        from social.retention import CUTS
+        transitions=CUTS[:-1]
+    else:transitions=(0,)+beats(plan)[:3]
     for index,at in enumerate(transitions):
         length=.22 if index else .13
         for i in range(int(rate*length)):

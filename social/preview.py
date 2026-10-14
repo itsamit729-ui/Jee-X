@@ -46,5 +46,5 @@ if __name__=='__main__':
     parser.add_argument('--reels',type=int,default=2)
     parser.add_argument('--stills-only',action='store_true')
     args=parser.parse_args()
-    if not 1<=args.count<=12 or not 0<=args.reels<=min(4,args.count):parser.error('Use 1..12 items and 0..min(4,count) reels.')
+    if not 1<=args.count<=12 or not 0<=args.reels<=min(5,args.count):parser.error('Use 1..12 items and 0..min(5,count) reels.')
     generate(args.day,args.output,args.count,args.reels,not args.stills_only)

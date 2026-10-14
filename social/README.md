@@ -32,15 +32,16 @@ choices, never redirect to an arbitrary website.
 
 ## Stories and content
 
-New snapshots have `creative_version: 4`. Four Reel formats rotate independently
+New snapshots have `creative_version: 4`; advanced lessons also carry
+`story_engine: visual_v1`. Existing saved snapshots keep their old renderer. Four Reel formats rotate independently
 of the carousel layout; a four-Reel day uses one of each:
 
 | Story | Opening and payoff | Length |
 | --- | --- | --- |
-| Challenge | Make a call, then follow a three-step derivation | 41 s |
-| Answer first | See the result, then establish the model and working | 41 s |
-| Mistake check | Challenge a plausible wrong model and repair it | 42 s |
-| Visual proof | Reveal the constraint, equations and final deduction | 42 s |
+| Challenge | Predict, follow the model, then change a condition | 40 s |
+| Answer first | See the result, then hear all three deductions | 40 s |
+| Mistake check | Identify an assumption, repair it, then test a variation | 40 s |
+| Visual proof | Trace an exact model alongside one deduction at a time | 40 s |
 
 Hooks concern the actual worked question. Captions vary their entry point and
 keep the question, solution and essential condition.
@@ -107,7 +108,9 @@ and 8 MiB output limit remain enforced. Throughput depends on Render hardware.
 ## Schedule, budgets and recovery
 
 The existing maximum is twelve items/day: eight carousels and four Reels.
-`SOCIAL_DAILY_TARGET=1..12` and `SOCIAL_REELS_PER_DAY=0..min(4,target)` lower it.
+`SOCIAL_DAILY_TARGET=1..12` and `SOCIAL_REELS_PER_DAY=0..min(5,target)` configure it. Four Reels remain the
+default; five is an explicit opt-in for the next day. Total source posts stay
+within the same twelve-item ceiling, and YouTube reuses each MP4.
 Change targets between days because allocation depends on them. A four-Reel-only
 schedule is possible with both values set to four. The worker skips windows that
 never created a job; it does not backfill a burst. An existing interrupted or
@@ -283,3 +286,29 @@ reach and watch time must be assessed from Instagram Insights. Admin → Practic
 discovery shows aggregate Instagram start-page/paper views and start-button
 clicks alongside successful paper mock starts. These do not measure completed
 warm-ups, followers, Reel watch time or unique visitors.
+
+
+## Visual stories and measured capacity
+
+The new advanced visual engine cuts at 0, 3, 8, 15, 22, 30 and 36 seconds. Its
+five bounded narration requests explain the setup, each of three deductions and
+the changed-condition question. A follow-up answer stays visible through the
+end. Topic-specific drawings and exact charts replace long held paragraph cards.
+Original music and transition cues are generated locally; no additional paid
+services, model calls or second YouTube render are needed for the drawings.
+
+The 32 MiB TTS cache evicts old completed clips when necessary. Existing rendered
+videos already embed their audio, so eviction does not change their sound.
+Partial narration continues to use the complete visual/music fallback.
+
+Admin → Publishing reports the actual engine, expected/embedded voice clips,
+editorial source, render wall time and file size for newly prepared work. The
+capacity panel distinguishes our five-source-video ceiling from provider limits.
+It cannot see audience retention, external account usage or a provider account's
+remaining allowance. Four remains the automatic default; select five with
+`SOCIAL_REELS_PER_DAY=5` only for a new day's schedule, and use the existing
+usage ledger to see whether local budgets constrain that output. No quota was
+increased and no existing queued video is replaced.
+
+The research method and its engagement-data limitations are documented in
+[`docs/social-content-review-2026-10.md`](../docs/social-content-review-2026-10.md).
