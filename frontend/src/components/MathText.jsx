@@ -1,3 +1,4 @@
+import { memo, useMemo } from 'react'
 import katex from 'katex'
 import 'katex/dist/katex.min.css'
 
@@ -10,7 +11,7 @@ function renderMath(tex, displayMode) {
   try {
     return katex.renderToString(tex, { throwOnError: false, displayMode })
   } catch {
-    return tex
+    return tex.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))
   }
 }
 
@@ -24,31 +25,32 @@ function textWithLineBreaks(text, keyPrefix) {
   ))
 }
 
-export default function MathText({ text, style }) {
-  if (!text) return null
+function MathText({ text, style }) {
+  // Timers and form edits must not typeset an unchanged question again.
+  const content = useMemo(() => {
+    if (!text) return null
+    const parts = []
+    let last = 0
+    let match
+    MATH_RE.lastIndex = 0
+    while ((match = MATH_RE.exec(text))) {
+      if (match.index > last) parts.push({ type: 'text', content: text.slice(last, match.index) })
+      if (match[1] !== undefined) parts.push({ type: 'block', content: match[1] })
+      else parts.push({ type: 'inline', content: match[2] })
+      last = match.index + match[0].length
+    }
+    if (last < text.length) parts.push({ type: 'text', content: text.slice(last) })
 
-  const parts = []
-  let last = 0
-  let match
-  MATH_RE.lastIndex = 0
-  while ((match = MATH_RE.exec(text))) {
-    if (match.index > last) parts.push({ type: 'text', content: text.slice(last, match.index) })
-    if (match[1] !== undefined) parts.push({ type: 'block', content: match[1] })
-    else parts.push({ type: 'inline', content: match[2] })
-    last = match.index + match[0].length
-  }
-  if (last < text.length) parts.push({ type: 'text', content: text.slice(last) })
-
-  return (
-    <span style={style}>
-      {parts.map((p, i) =>
-        p.type === 'text' ? (
-          textWithLineBreaks(p.content, i)
-        ) : (
-          <span key={i} style={p.type === 'block' ? { display: 'block', margin: '8px 0' } : undefined}
-            dangerouslySetInnerHTML={{ __html: renderMath(p.content, p.type === 'block') }} />
-        )
-      )}
-    </span>
-  )
+    return parts.map((p, i) =>
+      p.type === 'text' ? (
+        textWithLineBreaks(p.content, i)
+      ) : (
+        <span key={i} className={`math-fragment math-${p.type}`}
+          dangerouslySetInnerHTML={{ __html: renderMath(p.content, p.type === 'block') }} />
+      )
+    )
+  }, [text])
+  return content ? <span className="math-text" style={style}>{content}</span> : null
 }
+
+export default memo(MathText)

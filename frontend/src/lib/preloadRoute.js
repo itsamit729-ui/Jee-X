@@ -10,6 +10,12 @@ const routes = {
   '/pricing': () => import('../pages/Pricing.jsx'),
   '/dashboard': () => import('../pages/Dashboard.jsx'),
   '/plan': () => import('../pages/Roadmap.jsx'),
+  '/practice': () => import('../pages/SubjectTest.jsx'),
+  '/teacher/profile': () => import('../pages/TeacherProfile.jsx'),
+  '/teacher/account': () => import('../pages/TeacherProfile.jsx'),
+  '/notifications': () => import('../pages/Notifications.jsx'),
+  '/learning': () => import('../pages/Learning.jsx'),
+  '/profile': () => import('../pages/Profile.jsx'),
   '/subject-test': () => import('../pages/SubjectTest.jsx'),
   '/teacher': () => import('../pages/Teacher.jsx'),
   '/classes': () => import('../pages/Classrooms.jsx'),
@@ -19,6 +25,7 @@ const routes = {
 }
 const pending = new Map()
 export function preloadRoute(event) {
+  if (event.pointerType === 'touch') return
   if (navigator.connection?.saveData || /(^|-)2g$/.test(navigator.connection?.effectiveType || '')) return
   const link = event.target.closest?.('a[href]')
   if (!link) return

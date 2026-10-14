@@ -11,7 +11,7 @@ button svg,a svg{flex-shrink:0}
 .logo-monogram{width:29px;height:29px;background:var(--pen);color:white;font-size:21px;font-weight:800;display:inline-grid;place-items:center;line-height:1;transform:skew(-8deg)}
 .btn{border-radius:5px;font-weight:600;font-size:13px}
 .btn-lg{height:52px;padding-inline:23px;font-size:14px}
-.btn svg{margin-left:10px}
+.btn svg{margin-left:0}
 
 .site-header{position:sticky;top:0;z-index:30;background:#fffffff5;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
 .site-header-row{height:76px;display:flex;align-items:center;justify-content:space-between;gap:25px}

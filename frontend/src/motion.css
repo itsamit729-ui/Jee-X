@@ -1,10 +1,32 @@
-/* Motion supports navigation and feedback; exam clocks and question state are untouched. */
-html{scroll-behavior:smooth;scroll-padding-top:85px}
+/* Short, one-shot feedback; no scroll listeners or continuously moving cards. */
+html{scroll-behavior:smooth;scroll-padding-top:90px}
 .btn{transition:background-color .18s,border-color .18s,color .18s,transform .18s,box-shadow .18s}
-.btn:hover:not(:disabled){transform:translateY(-1px)}.btn-primary:hover:not(:disabled){box-shadow:0 4px 12px #BA431F20}.btn:active:not(:disabled){transform:translateY(1px);box-shadow:none}
-.btn>svg{transition:transform .18s}.btn:hover:not(:disabled)>svg:last-child{transform:translateX(2px)}
+.btn:active:not(:disabled){transform:translateY(1px);box-shadow:none}
+.btn>svg{transition:transform .18s}
 :is(.input,.native-auth-field input,.signup-terms select){transition:border-color .18s,box-shadow .18s}
 :is(.input,.native-auth-field input,.signup-terms select):focus-visible{border-color:var(--pen);box-shadow:0 0 0 3px var(--pen-soft)}
-.native-auth-main{animation:workspace-arrive .35s both}.native-auth-card h1{font-weight:550}.native-auth-card .btn{border-radius:8px}
-@keyframes workspace-arrive{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.btn>svg,.native-auth-main{animation:none!important;transition:none!important}.btn:hover:not(:disabled){transform:none}}
+.native-auth-main{animation:workspace-arrive .28s both}.native-auth-card h1{font-weight:550}.native-auth-card .btn{border-radius:8px}
+:is(.studio-page-heading,.practice-welcome,.tw-page-head,.page-head){animation:workspace-fade .24s ease-out}
+:is(.studio-session-grid,.tw-primary-actions,.tw-stats)>*{animation:workspace-arrive .28s ease-out backwards}
+:is(.studio-session-grid,.tw-primary-actions,.tw-stats)>:nth-child(2){animation-delay:35ms}
+:is(.studio-session-grid,.tw-primary-actions,.tw-stats)>:nth-child(3){animation-delay:70ms}
+:is(.studio-session-grid,.tw-primary-actions,.tw-stats)>:nth-child(4){animation-delay:105ms}
+.disclosure-content{min-width:0;animation:workspace-arrive .18s ease-out}
+:is(.cl-feedback,.cl-error,.cl-success,.practice-why){animation:workspace-fade .2s ease-out}
+:is(.studio-session,.tw-primary-actions>a,.tw-stats>a,.tw-shortcuts>a){transition:transform .18s ease,border-color .18s,background-color .18s}
+@media(hover:hover) and (pointer:fine){
+  .btn:hover:not(:disabled){transform:translateY(-1px)}
+  .btn-primary:hover:not(:disabled){box-shadow:0 4px 12px #BA431F20}
+  .btn:hover:not(:disabled)>svg:last-child:not(:first-child){transform:translateX(2px)}
+  :is(.studio-session,.tw-primary-actions>a,.tw-stats>a,.tw-shortcuts>a):hover{transform:translateY(-2px);border-color:var(--pen)}
+}
+@media(hover:none){:is(.btn,.tw-stats>a,.tw-primary-actions>a,.practice-path,.studio-session):hover{transform:none}}
+@keyframes workspace-arrive{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes workspace-fade{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  :is(.btn,.btn>svg,.native-auth-main,.studio-page-heading,.practice-welcome,.tw-page-head,.page-head,.disclosure-content,.cl-feedback,.cl-error,.cl-success,.practice-why),
+  :is(.studio-session-grid,.tw-primary-actions,.tw-stats)>*,
+  :is(.studio-session,.tw-shortcuts>a){animation:none!important;transition:none!important;transform:none!important}
+}
+@media print{.disclosure-content,.tw-section{animation:none!important}.math-fragment{overflow:visible}}

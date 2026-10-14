@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { useNavigate, useSearchParams, useLocation } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams, useLocation } from 'react-router-dom'
 import { ArrowLeft, ArrowUpRight, Target, Compass, RotateCcw, Clock3, ArrowRight, Check, BookOpen, ChevronDown } from 'lucide-react'
 import { catalogService, subjectTestBuilderService, subjectTestGraderService } from '../lib/subjectTests.js'
 import MathText from '../components/MathText.jsx'
@@ -355,7 +355,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
           <h1><span className="practice-desktop-only">Practise questions. <em>Learn from every answer.</em></span><span className="practice-mobile-only">A little practice.<br/><em>A little progress.</em></span></h1>
           <p>Short question sets, at your pace. Review your answers and solutions when you finish.</p>
         </div>
-        <a className="practice-paper-link" href="/pyq"><BookOpen size={19}/><span>Want an exam paper?<strong>Explore PYQs & mocks <ArrowUpRight size={14}/></strong></span></a>
+        <Link className="practice-paper-link" to="/pyq"><BookOpen size={19}/><span>Want an exam paper?<strong>Explore PYQs & mocks <ArrowUpRight size={14}/></strong></span></Link>
       </header>
 
       <div className="practice-studio">
@@ -410,7 +410,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
       </div>
 
       {error && <div className="alert" role="alert">{error} <button type="button" className="btn btn-secondary btn-sm" onClick={() => setLoadVersion(v => v + 1)}>Retry loading</button></div>}
-      <div className="practice-bottom-line"><p><span>01</span> Choose your set <ArrowRight size={13}/><span>02</span> Solve at your pace <ArrowRight size={13}/><span>03</span> Submit & review</p><a href="/plan">See how this fits your plan <ArrowUpRight size={14}/></a></div>
+      <div className="practice-bottom-line"><p><span>01</span> Choose your set <ArrowRight size={13}/><span>02</span> Solve at your pace <ArrowRight size={13}/><span>03</span> Submit & review</p><Link to="/plan">See how this fits your plan <ArrowUpRight size={14}/></Link></div>
       <details className="practice-plan-suggestion" open={showPlanSuggestion} onToggle={e => setShowPlanSuggestion(e.currentTarget.open)}><summary><Target size={18}/><span>Suggested practice from My Plan<small>Open your suggested topic and the reason behind it.</small></span><ChevronDown size={18}/></summary>{showPlanSuggestion && <GoalJourney onStartMission={startTest} missionBusy={starting} preferredSubject={requestedSubject} preferredChapter={requestedChapter}/>}</details>
     </main>
   </div>

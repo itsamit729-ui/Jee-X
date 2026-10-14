@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { memo, useRef, useState } from 'react'
 import './question-assets.css'
 
 function QuestionImage({ asset }) {
@@ -13,16 +13,18 @@ function QuestionImage({ asset }) {
       Diagram could not load. {alt}
       <button type="button" onClick={() => setFailed(false)}>Retry image</button>
     </div> : <button type="button" className="question-image-button" onClick={() => dialog.current?.showModal()} aria-label="Expand question diagram">
-      <img src={url} alt={alt} onError={() => setFailed(true)} />
+      <img decoding="async" src={url} alt={alt} onError={() => setFailed(true)} />
       <span>Expand diagram ↗</span>
     </button>}
     <dialog ref={dialog} className="question-image-dialog" onClick={e => { if (e.target === e.currentTarget) dialog.current.close() }}>
       <button type="button" className="btn btn-secondary" autoFocus onClick={() => dialog.current.close()}>Close diagram</button>
-      <img src={url} alt={alt} />
+      <img decoding="async" loading="lazy" src={url} alt={alt} />
     </dialog>
   </figure>
 }
 
-export default function QuestionAssets({ assets = [] }) {
+function QuestionAssets({ assets = [] }) {
   return assets.map((asset, i) => <QuestionImage key={`${asset.url}-${i}`} asset={asset} />)
 }
+
+export default memo(QuestionAssets)

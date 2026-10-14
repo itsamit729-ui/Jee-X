@@ -97,7 +97,7 @@ function TeacherHeader() {
     document.addEventListener('keydown', escape); document.addEventListener('pointerdown', outside)
     return () => { document.removeEventListener('keydown', escape); document.removeEventListener('pointerdown', outside) }
   }, [open])
-  return <div className="studio-navigation teacher-navigation tw-header">
+  return <div className="studio-navigation teacher-navigation tw-header" onPointerOver={preloadRoute} onFocus={preloadRoute}>
     <a className="skip-link" href="#teacher-content">Skip to workspace</a>
     <header className="studio-topbar">
       <div className="tw-brand"><div className="studio-mobile-logo"><Logo to="/teacher"/></div><span className="tw-brand-label">For teachers</span></div>
