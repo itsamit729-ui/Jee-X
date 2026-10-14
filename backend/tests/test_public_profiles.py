@@ -21,7 +21,8 @@ def setup():
     _buckets.clear()
     engine = create_engine('sqlite://', connect_args={'check_same_thread': False}, poolclass=StaticPool)
     tables = [models.User, models.TeacherAccess, models.StudentProfile, models.PublicProfile, models.ProfileAvatar, models.JeeXRating,
-              models.RatedContest, models.ContestEntry, models.Test, models.TestAttempt, models.DailyQuestionAssignment]
+              models.RatedContest, models.ContestEntry, models.Test, models.TestAttempt, models.DailyQuestionAssignment,
+              models.Subject, models.Chapter, models.Subtopic, models.Question, models.QuestionResponse]
     Base.metadata.create_all(engine, tables=[m.__table__ for m in tables])
     db = sessionmaker(bind=engine, expire_on_commit=False)()
     for uid in (1, 2, 3):
@@ -181,3 +182,58 @@ def test_legacy_teacher_student_record_is_not_a_public_student_profile(setup):
     assert c.get('/api/public-profiles/student1').status_code==404
     assert c.get('/api/public-profiles/student1/avatar').status_code==404
     assert c.get('/api/public-profiles/student2').status_code==200
+    assert c.get('/api/profile/learning-summary').status_code==403
+    assert c.get('/api/profile/public-settings').status_code==403
+
+
+def test_private_learning_snapshot_counts_only_owned_released_recent_exam_attempts(setup):
+    db, c, active, _ = setup
+    now = datetime.utcnow()
+    subject = models.Subject(code='PHY', name='Physics'); db.add(subject); db.flush()
+    chapter = models.Chapter(subject_id=subject.id, name='Motion', slug='motion', class_level='11')
+    db.add(chapter); db.flush()
+    topic = models.Subtopic(chapter_id=chapter.id, name='Speed', slug='speed'); db.add(topic); db.flush()
+    questions = []
+    for i in range(6):
+        q = models.Question(ref=f'q{i}', subtopic_id=topic.id, type='single_correct', stem='PRIVATE question',
+                            solution='PRIVATE answer', difficulty=5, expected_time_sec=60,
+                            source_type='original', content_hash=f'hash{i}', version=1)
+        db.add(q); db.flush(); questions.append(q)
+
+    def add_attempt(title, outcomes, user_id=1, pattern='jee_main', submitted=None, results_at=None, response_user=None):
+        test = models.Test(title=title, kind='mock', pattern=pattern, duration_sec=600, results_at=results_at)
+        db.add(test); db.flush()
+        attempt = models.TestAttempt(user_id=user_id, test_id=test.id, submitted_at=submitted)
+        db.add(attempt); db.flush()
+        for q, outcome in zip(questions, outcomes):
+            db.add(models.QuestionResponse(attempt_id=attempt.id, user_id=response_user or user_id,
+                question_id=q.id, question_version=1, outcome=outcome, time_taken_sec=30))
+
+    add_attempt('valid', ['correct', 'partial', 'wrong', 'skipped', 'timed_out'], submitted=now)
+    add_attempt('repeat', ['correct'], submitted=now)
+    add_attempt('not submitted', ['correct'])
+    add_attempt('other student', ['correct'], user_id=2, submitted=now)
+    add_attempt('old', ['correct'], submitted=now-timedelta(days=91))
+    add_attempt('other exam', ['correct'], pattern='mht_cet', submitted=now)
+    add_attempt('future submission', ['correct'], submitted=now+timedelta(days=1))
+    add_attempt('results pending', ['correct'], submitted=now, results_at=now+timedelta(days=1))
+    # Malformed legacy ownership must not leak another student's response.
+    add_attempt('cross-owner response', ['correct'], submitted=now, response_user=2)
+    db.commit()
+    res = c.get('/api/profile/learning-summary')
+    assert res.status_code == 200 and res.headers['cache-control'] == 'no-store'
+    assert res.json() == dict(exam='jee_main', days=90, completed_tests=3, answered=4, correct=2, accuracy=50,
+                             subjects=[dict(name='Physics', answered=4, correct=2, accuracy=50)])
+    public = c.get('/api/public-profiles/student1').json()
+    assert 'subjects' not in public and 'accuracy' not in str(public) and 'PRIVATE' not in str(public)
+    active[0] = 3
+    assert c.get('/api/profile/learning-summary').json() == dict(exam='jee_main', days=90,
+        completed_tests=0, answered=0, correct=0, accuracy=None, subjects=[])
+
+
+def test_learning_snapshot_requires_authenticated_active_student(setup):
+    db, c, _, app = setup
+    user = db.get(models.User, 1); user.status = 'suspended'; db.commit()
+    assert c.get('/api/profile/learning-summary').status_code == 403
+    app.dependency_overrides.pop(get_current_db_user)
+    assert c.get('/api/profile/learning-summary').status_code in (401, 403)

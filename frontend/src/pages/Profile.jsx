@@ -4,17 +4,16 @@ import RatingSummary from '../components/RatingSummary.jsx'
 import { useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext.jsx'
-import { Pencil } from 'lucide-react'
-import { API_URL, api } from '../lib/api.js'
+import { ExternalLink, Pencil } from 'lucide-react'
+import { api, request } from '../lib/api.js'
 import AppHeader from '../components/AppHeader.jsx'
 import { Loader } from '../components/Brand.jsx'
 import StreakCalendar from '../components/StreakCalendar.jsx'
+import StudentProfileStory from '../components/StudentProfileStory.jsx'
+import ProfileLearning from '../components/ProfileLearning.jsx'
+import '../public-profile.css'
 
 const CLASSES = [['11', 'Class 11'], ['12', 'Class 12'], ['dropper', 'Dropper']]
-
-function initials(name = '') {
-  return name.trim().split(/\s+/).slice(0, 2).map((p) => p[0]?.toUpperCase()).join('')
-}
 
 // "2008-05-14" -> "14 May 2008", read as a local date so no timezone shifts it.
 function formatDate(iso) {
@@ -41,6 +40,29 @@ export default function Profile() {
   const [avatarMessage, setAvatarMessage] = useState('')
   const [avatarVersion, setAvatarVersion] = useState(0)
   const debounceRef = useRef(null)
+  const usernameRequest = useRef(0)
+  const [section, setSection] = useState('public')
+  const [publicEditing, setPublicEditing] = useState(false)
+  const [publicProfile, setPublicProfile] = useState(null)
+  const [publicError, setPublicError] = useState('')
+  const [publicVersion, setPublicVersion] = useState(0)
+  const [shareMessage, setShareMessage] = useState('')
+
+  useEffect(() => () => { clearTimeout(debounceRef.current); usernameRequest.current++ }, [])
+  useEffect(() => {
+    if (!profile?.username) return
+    let active = true
+    setPublicProfile(current => current?.username === profile.username ? current : null); setPublicError('')
+    request(`/api/public-profiles/${encodeURIComponent(profile.username)}`).then(data => {
+      if (active) setPublicProfile(data)
+    }).catch(e => { if (active) setPublicError(e.message) })
+    return () => { active = false }
+  }, [profile?.username, publicVersion])
+
+  async function shareProfile() {
+    try { await navigator.clipboard.writeText(`${window.location.origin}/u/${encodeURIComponent(profile.username)}`); setShareMessage('Public profile link copied.') }
+    catch { setShareMessage('Open your public profile and copy the address to share it.') }
+  }
 
   useEffect(() => {
     let active = true
@@ -66,6 +88,8 @@ export default function Profile() {
   }, [navigate, loadVersion])
 
   const handleUsernameChange = (value) => {
+    clearTimeout(debounceRef.current)
+    const requestId = ++usernameRequest.current
     const clean = value.replace(/\s/g, '').toLowerCase()
     setForm((f) => ({ ...f, username: clean }))
     setSaved(false)
@@ -74,7 +98,6 @@ export default function Profile() {
       setUsernameStatus('unchanged')
       return
     }
-    if (debounceRef.current) clearTimeout(debounceRef.current)
     if (clean.length < 3 || !/^[a-z0-9_]{3,20}$/.test(clean)) {
       setUsernameStatus('invalid')
       return
@@ -83,9 +106,9 @@ export default function Profile() {
     debounceRef.current = setTimeout(async () => {
       try {
         const res = await api.checkUsername(clean)
-        setUsernameStatus(res.available ? 'available' : 'taken')
+        if (requestId === usernameRequest.current) setUsernameStatus(res.available ? 'available' : 'taken')
       } catch {
-        setUsernameStatus(null)
+        if (requestId === usernameRequest.current) setUsernameStatus(null)
       }
     }, 400)
   }
@@ -99,6 +122,8 @@ export default function Profile() {
   }
 
   const cancelEditing = () => {
+    clearTimeout(debounceRef.current)
+    usernameRequest.current++
     setForm(profile)
     setEditing(false)
     setError('')
@@ -107,14 +132,14 @@ export default function Profile() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError('')
-    if (usernameStatus === 'taken' || usernameStatus === 'invalid') {
+    if (usernameStatus === 'taken' || usernameStatus === 'invalid' || usernameStatus === 'checking') {
       setError('Fix the username before saving.')
       return
     }
     setSaving(true)
     try {
-      const updated = await api.updateProfile(form)
-      setProfile(updated)
+      const updated = await api.updateProfile({ name: form.name, username: form.username, dob: form.dob, class_level: form.class_level })
+      setProfile(current => ({ ...updated, avatar_url: current.avatar_url ? `/api/public-profiles/${updated.username}/avatar` : null }))
       setEditing(false)
       setSaved(true)
     } catch (err) {
@@ -139,6 +164,7 @@ export default function Profile() {
       const result = await api.uploadAvatar(file)
       setProfile(current => ({ ...current, avatar_url: result.avatar_url }))
       setAvatarVersion(n => n + 1)
+      setPublicVersion(n => n + 1)
       setAvatarMessage('Photo updated.')
     } catch (err) { setAvatarError(err.message) }
     finally { setAvatarBusy(false) }
@@ -151,6 +177,7 @@ export default function Profile() {
     try {
       await api.removeAvatar()
       setProfile(current => ({ ...current, avatar_url: null }))
+      setPublicVersion(n => n + 1)
       setAvatarMessage('Photo removed.')
     } catch (err) { setAvatarError(err.message) }
     finally { setAvatarBusy(false) }
@@ -164,27 +191,18 @@ export default function Profile() {
   return (
     <div className="crackjee-root">
       <AppHeader />
-      <main className="wrap-narrow page">
-        <div className="page-head">
-          <h1 className="page-title">Profile</h1><Link to="/account/security" className="btn btn-secondary btn-sm">Account security</Link>
-        </div>
-
-        <div className="panel">
-          <div className="profile-head">
-            <div className="avatar" role="img" aria-label={profile.avatar_url ? 'Your profile photo' : `Initials ${initials(profile.name)}`}>
-              {profile.avatar_url ? <img src={`${API_URL}${profile.avatar_url}?v=${avatarVersion}`} alt="" /> : initials(profile.name)}
-            </div>
-            <div style={{ flex: 1, minWidth: 0 }}>
-              <h2>{profile.name}</h2>
-              <p className="muted">@{profile.username}</p>
-            </div>
-            {!editing && (
-              <button type="button" className="btn btn-secondary btn-sm" onClick={startEditing}>
-                <Pencil size={14} aria-hidden="true" />Edit
-              </button>
-            )}
-          </div>
-
+      <main className="wrap page student-profile-page">
+        <div className="pp-owner-heading"><div><p className="pp-eyebrow">YOUR SPACE ON JEE EDGE</p><h1>Your profile.</h1><p className="pp-muted">A little about you. Every step of your journey.</p></div><Link to={`/u/${encodeURIComponent(profile.username)}`} className="btn btn-secondary btn-sm">View as a visitor <ExternalLink size={14} aria-hidden="true" /></Link></div>
+        <nav className="pp-owner-tabs" aria-label="Profile sections">
+          {[['public', 'Public profile'], ['progress', 'My progress'], ['account', 'Account details']].map(([key, label]) => <button key={key} type="button" aria-current={section === key ? 'page' : undefined} onClick={() => { setSection(key); setShareMessage('') }}>{label}</button>)}
+        </nav>
+        {section === 'public' && <div className="pp-owner-section">
+          <div className="pp-owner-notice"><span>Everyone can view your student profile. You choose your public name, bio and activity sharing.</span></div>
+          {publicError && <div className="pp-card" role="alert"><p>{publicError}</p><button className="btn btn-secondary" onClick={() => setPublicVersion(n => n + 1)}>Retry public profile</button></div>}
+          {!publicProfile && !publicError && <div className="pp-card" role="status">Loading your public profile…</div>}
+          {publicProfile && <StudentProfileStory isOwner profile={publicProfile} onShare={shareProfile} avatarVersion={avatarVersion} message={shareMessage} actions={<button className="btn btn-primary btn-sm" aria-expanded={publicEditing} aria-controls="public-profile-editor" onClick={() => setPublicEditing(open => !open)}><Pencil size={14} aria-hidden="true" />{publicEditing ? 'Close editor' : 'Edit public profile'}</button>}>
+          {publicEditing && <div id="public-profile-editor"><PublicProfileSettings username={profile.username} onSaved={() => setPublicVersion(n => n + 1)} />
+            <section className="pp-card"><p className="pp-eyebrow">YOUR PUBLIC PHOTO</p><h2>Put a face to your profile.</h2>
           <div className="profile-photo-actions">
             <input id="profile-photo" className="visually-hidden" type="file" accept="image/jpeg,image/png,image/webp" onChange={changeAvatar} disabled={avatarBusy} />
             <label htmlFor="profile-photo" className={`btn btn-secondary btn-sm ${avatarBusy ? 'profile-photo-disabled' : ''}`}>{avatarBusy ? 'Updating photo…' : profile.avatar_url ? 'Change photo' : 'Add photo'}</label>
@@ -194,10 +212,17 @@ export default function Profile() {
           {avatarError && <p className="alert" role="alert">{avatarError}</p>}
           {avatarMessage && <p className="hint hint-ok" role="status">{avatarMessage}</p>}
 
-          <StudentOmrId studentId={profile.id}/>
-
+            </section></div>}
+          </StudentProfileStory>}
+        </div>}
+        {section === 'progress' && <div className="pp-owner-section"><ProfileLearning /><RatingSummary /><StreakCalendar /></div>}
+        {section === 'account' && <div className="pp-owner-section pp-account-grid"><section className="pp-card">
+          <div className="pp-section-heading"><div><p className="pp-eyebrow">ONLY YOU CAN SEE THIS</p><h2>Account details</h2></div>{!editing && <button className="btn btn-secondary btn-sm" onClick={startEditing}><Pencil size={14} aria-hidden="true" />Edit details</button>}</div>
+          <p className="pp-muted">Your full name, birthday and email stay in your account. Your username is public.</p>
           {!editing ? (
             <dl className="dl">
+              <div><dt>Full name</dt><dd>{profile.name}</dd></div>
+              <div><dt>Username</dt><dd>@{profile.username}</dd></div>
               <div><dt>Email</dt><dd>{user?.email || 'Not set'}</dd></div>
               <div><dt>Date of birth</dt><dd>{formatDate(profile.dob)}</dd></div>
               <div><dt>Class</dt><dd>{classText(profile.class_level)}</dd></div>
@@ -241,7 +266,7 @@ export default function Profile() {
               {error && <p className="alert" role="alert">{error}</p>}
 
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-                <button type="submit" className="btn btn-primary" disabled={saving}>
+                <button type="submit" className="btn btn-primary" disabled={saving || usernameStatus === 'checking' || usernameStatus === 'taken' || usernameStatus === 'invalid'}>
                   {saving ? <><span className="spin" aria-hidden="true" />Saving</> : 'Save changes'}
                 </button>
                 <button type="button" className="btn btn-secondary" onClick={cancelEditing} disabled={saving}>Cancel</button>
@@ -250,13 +275,10 @@ export default function Profile() {
           )}
 
           {saved && !editing && <p className="hint hint-ok" style={{ marginTop: 18 }} role="status">Changes saved.</p>}
-        </div>
+        </section>
 
-        <PublicProfileSettings username={profile.username} />
-        <RatingSummary />
-        <div style={{ marginTop: 20 }}>
-          <StreakCalendar />
-        </div>
+        <section className="pp-card pp-account-tools"><p className="pp-eyebrow">YOUR STUDENT IDENTITY</p><h2>Ready for class.</h2><StudentOmrId studentId={profile.id} /><p className="pp-muted">Your permanent OMR ID is for matching your offline test sheets to your account.</p><Link to="/account/security" className="btn btn-secondary">Account security</Link><p className="pp-muted">Manage your password, Google sign-in and active sessions.</p></section>
+        </div>}
       </main>
     </div>
   )

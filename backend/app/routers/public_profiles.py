@@ -9,6 +9,7 @@ import re
 from fastapi import APIRouter, Depends, HTTPException, Query, Request, Response
 from PIL import Image, ImageOps, UnidentifiedImageError
 from pydantic import BaseModel, ConfigDict, Field
+from sqlalchemy import case, func, or_
 from sqlalchemy.orm import Session
 
 from app import models
@@ -52,8 +53,38 @@ class SettingsIn(BaseModel):
 
 
 def active_student(user):
-    if user.status != 'active' or user.role != 'student' or not user.student_profile:
+    if user.status != 'active' or user.role != 'student' or not user.student_profile or user.teacher_access:
         raise HTTPException(403, 'An active student profile is required.')
+
+
+@router.get('/profile/learning-summary')
+def learning_summary(response: Response, user=Depends(get_current_db_user), db: Session = Depends(get_db)):
+    """Owner-only aggregates; never included in the public profile response."""
+    active_student(user)
+    response.headers['Cache-Control'] = 'no-store'
+    now = datetime.utcnow()
+    attempt, test, answer = models.TestAttempt, models.Test, models.QuestionResponse
+    submitted = db.query(attempt.id).join(test, test.id == attempt.test_id).filter(
+        attempt.user_id == user.id, attempt.submitted_at >= now - timedelta(days=90),
+        attempt.submitted_at <= now, test.pattern == user.student_profile.target_exam,
+        or_(test.results_at.is_(None), test.results_at <= now))
+    completed = submitted.count()
+    # Count response rows, not question IDs: reattempts are separate practice.
+    rows = db.query(models.Subject.name, func.count(answer.id),
+                    func.sum(case((answer.outcome == 'correct', 1), else_=0))).select_from(answer).join(
+        models.Question, models.Question.id == answer.question_id).join(
+        models.Subtopic, models.Subtopic.id == models.Question.subtopic_id).join(
+        models.Chapter, models.Chapter.id == models.Subtopic.chapter_id).join(
+        models.Subject, models.Subject.id == models.Chapter.subject_id).filter(
+        answer.attempt_id.in_(submitted), answer.user_id == user.id,
+        answer.outcome.in_(['correct', 'partial', 'wrong'])).group_by(
+        models.Subject.id, models.Subject.name).order_by(models.Subject.name).all()
+    answered = sum(n for _, n, _ in rows)
+    correct = sum(int(n or 0) for _, _, n in rows)
+    return dict(exam=user.student_profile.target_exam, days=90, completed_tests=completed,
+                answered=answered, correct=correct, accuracy=round(100 * correct / answered) if answered else None,
+                subjects=[dict(name=name, answered=n, correct=int(c or 0), accuracy=round(100 * (c or 0) / n))
+                          for name, n, c in rows])
 
 
 def avatar_url(user):

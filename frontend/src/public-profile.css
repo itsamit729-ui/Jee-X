@@ -2,3 +2,113 @@
 
 
 .pp-avatar img { width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
+
+/* One profile language for the student and their visitors. */
+.pp-page{background:var(--page);color:var(--ink)}
+.pp-main,.student-profile-page{max-width:1100px!important}
+.student-profile-page{padding-top:30px!important;padding-bottom:64px!important}
+.pp-card{border-color:var(--line);border-radius:16px;padding:26px;box-shadow:none}
+.pp-muted{color:var(--ink-2)}
+.pp-eyebrow{color:var(--pen);display:flex;align-items:center;gap:7px;line-height:1.5}
+.pp-card h2{font-size:21px;letter-spacing:-.025em;line-height:1.25;margin-bottom:12px;overflow-wrap:anywhere}
+.pp-card .pp-section-heading{align-items:center;margin-bottom:18px}
+.pp-card .pp-section-heading h2{margin-bottom:0}
+.pp-card .pp-section-heading .pp-eyebrow{margin-bottom:8px}
+.pp-chip{display:inline-flex;align-items:center;gap:7px;background:var(--page);border:1px solid var(--line);border-radius:7px;padding:6px 10px;font-size:12px;font-weight:600;color:var(--ink-2);line-height:1.5;max-width:100%}
+.pp-hero{display:block;padding:0;overflow:hidden}
+.pp-cover{height:114px;background:var(--ink);color:#e9b39c;display:flex;align-items:center;justify-content:space-between;padding:24px 32px;position:relative;overflow:hidden}
+.pp-cover:after{content:'';position:absolute;width:300px;height:300px;border:1px solid #ffffff12;border-radius:50%;right:-70px;top:-160px}
+.pp-cover>span{font-size:10px;letter-spacing:.2em}
+.pp-cover>svg{transform:rotate(-12deg);opacity:.65;position:absolute;right:36px;top:18px}
+.pp-hero-body{display:flex;gap:20px;align-items:center;padding:0 30px 22px;position:relative}
+.pp-avatar{width:88px;height:88px;border:5px solid var(--surface);background:var(--pen-soft);color:var(--pen);border-radius:24px;margin-top:-24px;box-shadow:0 2px 6px #20212608}
+.pp-identity{padding-top:20px}
+.pp-identity :is(h1,h2){font-size:clamp(25px,3.3vw,36px);line-height:1.15;letter-spacing:-.04em;margin:0;overflow-wrap:anywhere}
+.pp-identity .pp-eyebrow{font-size:10px;margin:0 0 8px}
+.pp-identity>.pp-muted{margin-bottom:0}
+.pp-hero-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;padding-top:20px;max-width:350px}
+.pp-hero-foot{border-top:1px solid var(--line);padding:16px 30px;display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between}
+.pp-hero-foot>.pp-muted{font-size:12px}
+.pp-story-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:18px;align-items:stretch}
+.pp-story-grid>.pp-card{min-width:0}
+.pp-about h2{font-size:19px}
+.pp-bio{font-size:15px;margin:0;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8;color:var(--ink-2)}
+.pp-goal{display:flex;align-items:center;gap:14px;border-top:1px solid var(--line);padding-top:20px;margin-top:24px;color:var(--pen)}
+.pp-goal small{display:block;font-size:11px;color:var(--ink-2);margin-bottom:4px}
+.pp-goal strong{font-size:17px;color:var(--ink)}
+.pp-goal strong span{color:var(--pen);margin-left:8px}
+.pp-next-step{background:linear-gradient(130deg,var(--surface) 60%,var(--pen-soft))}
+.pp-placement-steps{display:flex;gap:10px;margin:18px 0}
+.pp-placement-steps span{display:grid;place-items:center;position:relative;width:34px;height:34px;border:1px solid var(--line);border-radius:50%;background:var(--surface);font-size:12px;color:var(--ink-3)}
+.pp-placement-steps .is-complete{background:var(--pen);border-color:var(--pen);color:#fff}
+.pp-rating-note{display:flex;gap:8px;align-items:flex-start;font-size:11px;color:var(--ink-2);line-height:1.6;margin-top:20px}
+.pp-rating-note svg{flex-shrink:0;margin-top:2px}
+.pp-stats{gap:12px}
+.pp-stats .pp-card{padding:20px;gap:7px}
+.pp-stats strong{font-size:29px}
+.pp-badges{margin-top:20px}
+.pp-badges>div{background:var(--page);border:1px solid var(--line);font-size:13px}
+.pp-feedback{margin:0 0 20px;padding:12px 18px;background:var(--pen-soft);border-radius:8px;color:var(--pen-dark);font-size:13px}
+.pp-streak-numbers{display:flex;flex-wrap:wrap;gap:24px;margin:24px 0}
+.pp-streak-numbers p{display:flex;flex-direction:column;gap:4px}
+.pp-streak-numbers strong{font-size:28px;line-height:1.2}
+.pp-streak-numbers span{font-size:12px;color:var(--ink-2)}
+.pp-heatmap{display:grid;grid-template-rows:repeat(7,1fr);grid-auto-flow:column;gap:4px}
+.pp-heatmap time{display:block;aspect-ratio:1.7;border-radius:3px;background:var(--page);border:1px solid var(--line)}
+.pp-heatmap .is-active,.pp-calendar-note .is-active{background:var(--pen);border-color:var(--pen)}
+.pp-calendar-note{font-size:11px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:14px}
+.pp-calendar-note>span{display:flex;align-items:center;gap:6px}
+.pp-calendar-note i{display:inline-block;width:10px;height:10px;border:1px solid var(--line);border-radius:2px;background:var(--page)}
+.pp-owner-heading{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:26px}
+.pp-owner-heading h1{font-size:36px;margin-bottom:10px;letter-spacing:-.04em}
+.pp-owner-tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);margin-bottom:22px}
+.pp-owner-tabs button{border:0;border-bottom:2px solid transparent;background:none;padding:12px 0;color:var(--ink-2);font-size:13px;font-weight:600;min-height:46px}
+.pp-owner-tabs button[aria-current]{border-color:var(--pen);color:var(--pen)}
+.pp-owner-notice{font-size:12px;color:var(--ink-2);line-height:1.7;margin-bottom:18px}
+.pp-owner-section{animation:profile-arrive .3s ease-out both}
+.pp-owner-section>.panel{margin-bottom:20px}
+.pp-account-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:20px;align-items:start}
+.pp-account-grid>.pp-card{min-width:0}
+.pp-account-grid .dl dd{overflow-wrap:anywhere}
+.pp-account-grid .field:first-child{margin-top:20px}
+.pp-account-tools>.btn{margin:24px 0 10px}
+.pp-learning-stats{display:grid;grid-template-columns:repeat(3,1fr);margin:24px 0;gap:16px}
+.pp-learning-stats>div{display:flex;flex-direction:column;border-left:2px solid var(--line);padding-left:18px;gap:6px}
+.pp-learning-stats strong{font-size:30px;line-height:1.2}
+.pp-learning-stats span{font-size:12px;color:var(--ink-2)}
+.pp-subheading{font-size:15px;margin-bottom:16px}
+.pp-subjects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:20px 0}
+.pp-subjects>div>div:first-child{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px}
+.pp-subjects span,.pp-subjects small{font-size:11px;color:var(--ink-2)}
+.pp-subject-track{height:5px;background:var(--page);border-radius:5px;margin:12px 0 6px;overflow:hidden}
+.pp-subject-track i{display:block;height:100%;background:var(--pen);border-radius:inherit;transition:width .4s ease-out}
+.pp-progress-empty{padding-top:12px;color:var(--ink-2);font-size:14px;line-height:1.7}
+.pp-progress-empty>.btn{margin-top:18px}
+.student-profile-page :is(button,a,input,textarea):focus-visible{outline:3px solid var(--pen);outline-offset:4px}
+@keyframes profile-arrive{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(max-width:760px){
+  .student-profile-page{padding-inline:16px!important;padding-top:24px!important}
+  .pp-owner-heading{align-items:flex-start;flex-wrap:wrap;gap:14px}
+  .pp-owner-heading h1{font-size:30px}
+  .pp-hero-body{padding:0 20px 20px;gap:14px;flex-wrap:wrap}
+  .pp-identity{flex-basis:calc(100% - 100px)}
+  .pp-hero-actions{max-width:none;justify-content:flex-start;width:100%;padding-top:0}
+  .pp-cover{height:94px;padding:20px}
+  .pp-cover>svg{right:10px;top:12px;width:85px}
+  .pp-hero-foot{padding:14px 20px}
+  .pp-story-grid,.pp-account-grid{grid-template-columns:1fr;gap:0}
+  .pp-stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pp-stats .pp-card{padding:17px}
+  .pp-subjects{grid-template-columns:1fr}
+  .pp-learning-stats{gap:10px}
+  .pp-learning-stats>div{padding-left:10px}
+  .pp-learning-stats strong{font-size:26px}
+  .pp-learning-stats span{font-size:11px}
+  .pp-owner-tabs{gap:20px}
+  .pp-owner-tabs button{font-size:12px}
+  .pp-heatmap{gap:3px}
+  .pp-heatmap time{aspect-ratio:1}
+  .pp-streak-numbers{gap:18px}
+  .pp-streak-numbers span{font-size:11px}
+}
+@media(prefers-reduced-motion:reduce){.pp-owner-section{animation:none}.pp-subject-track i{transition:none}}

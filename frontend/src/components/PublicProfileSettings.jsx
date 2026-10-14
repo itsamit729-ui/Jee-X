@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { request } from '../lib/api.js'
 import '../public-profile.css'
 
-export default function PublicProfileSettings({ username }) {
+export default function PublicProfileSettings({ username, onSaved }) {
 
   const [form, setForm] = useState(null)
   const [busy, setBusy] = useState(false)
@@ -26,7 +26,7 @@ export default function PublicProfileSettings({ username }) {
     e.preventDefault(); setBusy(true); setError(''); setMessage('')
     try {
       const data = await request('/api/profile/public-settings', { method: 'PATCH', body: form })
-      setForm(data); setMessage('Public profile updated.')
+      setForm(data); setMessage('Public profile updated.'); onSaved?.(data)
     } catch (e) { setError(e.message) } finally { setBusy(false) }
   }
   async function copy() {
@@ -34,7 +34,7 @@ export default function PublicProfileSettings({ username }) {
     catch { setError('Could not copy. Open your public profile and copy its address.') }
   }
   return <section className="public-settings pp-card">
-    <p className="pp-eyebrow">YOUR PRESENCE</p><h2>Public profile</h2>
+    <p className="pp-eyebrow">MAKE IT YOURS</p><h2>Edit your public story</h2>
     <p className="pp-muted">Every student has a public profile. Your email, date of birth, shipping details and test answers stay private. Leaderboard visibility is managed separately in Rankings.</p>
     {error && <p role="alert">{error} {!form && <button onClick={() => setRetry(n => n+1)}>Retry</button>}</p>}
     {!form && !error && <p role="status">Loading profile settings…</p>}
@@ -44,8 +44,8 @@ export default function PublicProfileSettings({ username }) {
         <label htmlFor="public-name">Public display name <span className="pp-muted">(optional)</span></label>
         <input id="public-name" className="input" maxLength={80} value={form.display_name} onChange={e => update('display_name', e.target.value)} placeholder="Use a name you’re comfortable sharing" />
         <label htmlFor="public-bio">Short bio</label>
-        <textarea id="public-bio" className="input" rows={3} maxLength={280} value={form.bio} onChange={e => update('bio', e.target.value)} placeholder="What are you working towards?" />
-        <small className="pp-muted">{form.bio.length}/280</small>
+        <textarea id="public-bio" className="input" rows={3} maxLength={280} value={form.bio} onChange={e => update('bio', e.target.value)} placeholder="Your goal, favourite subjects, or what you’re learning right now…" />
+        <small className="pp-muted">{form.bio.length}/280 · Leave out your phone number, school address and other personal details.</small>
         <label className="pp-check"><input type="checkbox" checked={form.show_activity} onChange={e => update('show_activity', e.target.checked)} />Show daily-question activity and streaks</label>
         <button className="btn btn-primary" type="submit">{busy ? 'Saving…' : 'Save public profile'}</button>
       </fieldset>
