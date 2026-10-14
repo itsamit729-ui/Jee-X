@@ -113,7 +113,7 @@ def find_channel():
     matches = []
     for org in orgs:
         channels = buffer('query($input: ChannelsInput!) { channels(input:$input) '
-                          '{ id name displayName service isQueuePaused } }',
+                          '{ id name displayName service isQueuePaused isDisconnected isLocked } }',
                           {'input': {'organizationId': org['id']}})['channels']
         for channel in channels:
             names = [str(channel.get(k, '')).lower().lstrip('@') for k in ('name', 'displayName')]
@@ -121,19 +121,38 @@ def find_channel():
                 matches.append((org['id'], channel))
     if len(matches) != 1:
         raise ServiceError('Expected exactly one Instagram channel named jeeedge. Check Buffer.')
+    if matches[0][1].get('isDisconnected'):
+        raise ServiceError('Instagram is disconnected in Buffer; reconnect the channel.')
+    if matches[0][1].get('isLocked'):
+        raise ServiceError('The Instagram channel is locked in Buffer; check the connected channel plan.')
     if matches[0][1]['isQueuePaused']:
         raise ServiceError('The Buffer channel is paused.')
     return matches[0]
 
 
+POST_FIELDS = 'id text status dueAt sentAt schedulingType externalLink error { message }'
+
+
+def post(post_id):
+    return buffer('query($id:PostId!) { post(input:{id:$id}) { '+POST_FIELDS+' } }', {'id':post_id}).get('post')
+
+
 def posts(org, channel, start):
-    result = buffer('query($input:PostsInput!) { posts(first:100,input:$input) '
-                    '{ edges { node { id text status } } pageInfo { hasNextPage } } }',
-                    {'input': {'organizationId': org, 'filter': {
-                        'channelIds': [channel], 'startDate': start}}})['posts']
-    if result['pageInfo']['hasNextPage']:
-        raise ServiceError('Post history needs pagination; stopping to protect against duplicates.')
-    return [edge['node'] for edge in result['edges']]
+    # Bounded pagination handles the old 30-post/day history without treating a
+    # full first page as a permanent publishing failure.
+    rows, cursor = [], None
+    for _ in range(3):
+        result = buffer('query($input:PostsInput!,$after:String) { posts(first:100,after:$after,input:$input) '
+                        '{ edges { node { '+POST_FIELDS+' } } pageInfo { hasNextPage endCursor } } }',
+                        {'after':cursor,'input':{'organizationId':org,'filter':{'channelIds':[channel],'startDate':start}}})['posts']
+        rows.extend(edge['node'] for edge in result['edges'])
+        if not result['pageInfo']['hasNextPage']:
+            return rows
+        next_cursor = result['pageInfo'].get('endCursor')
+        if not next_cursor or next_cursor == cursor:
+            raise ServiceError('Buffer history pagination did not advance; no post submitted.')
+        cursor = next_cursor
+    raise ServiceError('Buffer history exceeds 300 posts; shorten the history window before posting.')
 
 
 def problem(day, variant=None):

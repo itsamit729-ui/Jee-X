@@ -15,7 +15,8 @@ from zoneinfo import ZoneInfo
 
 from fastapi import APIRouter, BackgroundTasks, Depends, Header, HTTPException, Request
 from fastapi.responses import Response
-from sqlalchemy import func
+from pydantic import BaseModel, Field
+from sqlalchemy import func, or_
 from sqlalchemy.exc import IntegrityError
 from app.database import SessionLocal
 from app.models.social_job import SocialSlot as SocialJob, SocialAsset as SocialMedia, SocialDispatch
@@ -25,11 +26,17 @@ from social import worker, reel, lessons, editorial, storyboard, narration, qual
 from app.services import social_budget as budget
 from app.services import instagram_comments as comments
 from app.services import social_speech
+from app.services import social_pipeline as pipeline
+from app.models.social_job import SocialCache
+from app.routers.admin_dashboard import _require_admin
+from urllib.parse import urlsplit
 from PIL import Image
 
 router = APIRouter(prefix='/api/social', tags=['social'])
 # This is the backend origin, not a caller-controlled Host header or frontend URL.
 MEDIA_ORIGIN = 'https://jee-edge.onrender.com'
+LEASE = timedelta(minutes=15)
+RETRY_DELAY = timedelta(minutes=10)
 MANUAL_REEL_SLOT = 's99'  # Reserved; never selected by the automatic schedule.
 
 
@@ -97,17 +104,29 @@ def find_channel():
     if cached:
         return cached[0], cached[1]
     result = worker.find_channel()
-    budget.cache('buffer-channel', result, 86400)
+    budget.cache('buffer-channel', result, 3600)
+    budget.cache('channel-health', {'checked_at':pipeline.stamp(datetime.utcnow()),'state':'connected'},3600)
     return result
 
 
+def media_origin():
+    origin=(os.getenv('SOCIAL_MEDIA_ORIGIN') or os.getenv('RENDER_EXTERNAL_URL') or MEDIA_ORIGIN).rstrip('/')
+    parsed=urlsplit(origin)
+    if parsed.scheme!='https' or not parsed.hostname or parsed.username or parsed.password or parsed.query or parsed.fragment or parsed.path:
+        raise worker.ServiceError('SOCIAL_MEDIA_ORIGIN must be a public HTTPS origin with no path or credentials.')
+    return origin
+
+
 def cleanup(db):
-    cutoff = (datetime.utcnow()-timedelta(days=7)).date().isoformat()
-    old = db.query(SocialJob.day).filter(SocialJob.day < cutoff, SocialJob.state.in_(['published','failed']))
+    # Keep unknown submissions intact. Confirmed delivery/failures have a bounded
+    # retention window so a healthy week cannot fill the whole free media budget.
+    cutoff=datetime.utcnow()-timedelta(days=2)
+    old=db.query(SocialJob.day).filter(SocialJob.updated_at<cutoff,or_(SocialJob.state.in_(['published','confirmed_published']),
+        (SocialJob.state.in_(['failed','expired'])) & SocialJob.post_id.is_(None)))
     db.query(SocialMedia).filter(SocialMedia.day.in_(old)).delete(synchronize_session=False)
-    from app.models.social_job import SocialUsage, SocialCache
-    db.query(SocialUsage).filter(SocialUsage.created_at < datetime.utcnow()-timedelta(days=31)).delete()
-    db.query(SocialCache).filter(SocialCache.expires_at < datetime.utcnow()-timedelta(days=2)).delete()
+    from app.models.social_job import SocialUsage
+    db.query(SocialUsage).filter(SocialUsage.created_at<datetime.utcnow()-timedelta(days=31)).delete()
+    db.query(SocialCache).filter(SocialCache.expires_at<datetime.utcnow()-timedelta(days=2)).delete()
 
 
 def status_data(job):
@@ -125,13 +144,91 @@ def plan_preview():
          'destination':creative.url(c)} for i,c in enumerate(items)]}
 
 
+def status_report():
+    with SessionLocal() as db:
+        rows=db.query(SocialJob).order_by(SocialJob.day.desc()).limit(90).all()
+        days=[row.day for row in rows]
+        names=['last-publish-trigger','publishing-hold','delivery-reconciliation']+[pipeline.key(kind,row.day) for row in rows for kind in ('progress','prepared')]+[pipeline.key('delivery',row.post_id or row.day) for row in rows]
+        cache={r.name:json.loads(r.value) for r in db.query(SocialCache).filter(SocialCache.name.in_(names),SocialCache.expires_at>datetime.utcnow()).all()}
+        kinds={day:('reel' if mime=='video/mp4' else 'carousel') for day,mime in db.query(SocialMedia.day,SocialMedia.mime).filter(SocialMedia.day.in_(days)).distinct().all()}
+        jobs=[]
+        for row in rows:
+            delivery=cache.get(pipeline.key('delivery',row.post_id or row.day))
+            progress=cache.get(pipeline.key('progress',row.day)) or {}
+            manifest=cache.get(pipeline.key('prepared',row.day)) or {}
+            jobs.append({**status_data(row),'updated_at':pipeline.stamp(row.updated_at),'kind':kinds.get(row.day) or manifest.get('kind') or progress.get('kind') or ('reel' if row.day.endswith(':s99') else 'unknown'),
+                'stage':progress.get('stage'),'prepared':bool(manifest),'due_at':(delivery or {}).get('due_at'),
+                'delivery_checked_at':(delivery or {}).get('checked_at'),'operator_confirmed_at':(delivery or {}).get('operator_confirmed_at'),'published_url':(delivery or {}).get('external_link')})
+        heartbeat=cache.get('last-publish-trigger')
+        hold=cache.get('publishing-hold')
+        config={'paused':os.getenv('SOCIAL_PAUSED','').lower()=='true','buffer_configured':bool(os.getenv('BUFFER_API_KEY')),
+                'trigger_configured':len(os.getenv('SOCIAL_TRIGGER_SECRET',''))>=32,'editorial_configured':bool(os.getenv('GROQ_API_KEY')),
+                'voice_enabled':os.getenv('SOCIAL_TTS_ENABLED','true').lower()=='true'}
+        upcoming=[]
+        now=local_now()
+        for offset in (0,1):
+            date=now.date()+timedelta(days=offset)
+            for index in range(daily_target()):
+                at=datetime.combine(date,datetime.min.time(),tzinfo=ZoneInfo('Asia/Kolkata'))+timedelta(minutes=420+(960*index+daily_target()-1)//daily_target())
+                compare=now if now.tzinfo else now.replace(tzinfo=ZoneInfo('Asia/Kolkata'))
+                if at>compare:
+                    slot=f's{index:02d}'
+                    upcoming.append({'slot':slot,'kind':'reel' if is_reel(slot) else 'carousel','at':at.isoformat()})
+        return {'read_only':True,'daily_target':daily_target(),'reels_target':reel_target(),'jobs':jobs,'usage':budget.report(),
+                'publishing_hold':hold,'configuration':config,'health':pipeline.health(jobs,heartbeat,hold,config),
+                'last_reconciliation':cache.get('delivery-reconciliation'),'next_windows':upcoming[:daily_target()],
+                'cron':{'method':'POST','path':'/api/social/trigger','timezone':'Asia/Kolkata','interval_minutes':10,
+                        'note':'GET /api/social/status never generates or publishes a post.'}}
+
+
 @router.get('/status', dependencies=[Depends(authorize)])
 def status():
+    return status_report()
+
+
+@router.post('/reconcile',status_code=202,dependencies=[Depends(authorize)])
+def reconcile(tasks:BackgroundTasks):
+    tasks.add_task(reconcile_pending,True)
+    return {'state':'checking_delivery','publishes_new_work':False,'status_path':'/api/social/status'}
+
+
+admin_router=APIRouter(prefix='/api/admin/social',tags=['admin'],dependencies=[Depends(_require_admin)])
+
+
+@admin_router.get('')
+def admin_status():
+    return status_report()
+
+
+@admin_router.post('/reconcile',status_code=202)
+def admin_reconcile(tasks:BackgroundTasks):
+    return reconcile(tasks)
+
+
+class ConfirmPublished(BaseModel):
+    expected_updated_at:str=Field(min_length=1,max_length=64)
+    instagram_url:str=Field(min_length=10,max_length=2048)
+    confirmed:bool=False
+
+
+@admin_router.post('/jobs/{day}/confirm-published')
+def confirm_published(day:str,body:ConfirmPublished):
+    link=pipeline.safe_external_link(body.instagram_url)
+    if not body.confirmed or not link or not re.fullmatch(r'/(?:p|reel|reels)/[A-Za-z0-9_-]+/?',urlsplit(link).path):
+        raise HTTPException(422,'Confirm that you checked the matching existing Instagram post and provide its public post or Reel URL.')
+    expected=pipeline.parse_time(body.expected_updated_at)
     with SessionLocal() as db:
-        rows = db.query(SocialJob).order_by(SocialJob.day.desc()).limit(90).all()
-        return {'daily_target': daily_target(), 'reels_target': reel_target(),
-                'jobs': [status_data(row) for row in rows], 'usage': budget.report(),
-                'publishing_hold': budget.cached('publishing-hold')}
+        job=db.query(SocialJob).filter_by(day=day).with_for_update().first()
+        if not job:raise HTTPException(404,'Job not found.')
+        if job.state not in ('delivery_failed','needs_review','blocked') or job.updated_at!=expected:
+            raise HTTPException(409,'This job has changed or does not need a delivery confirmation. Refresh its status.')
+        before=job.state;job.state='confirmed_published';job.error=None;job.updated_at=datetime.utcnow()
+        name=pipeline.key('delivery',job.post_id or job.day)
+        metadata=pipeline.read(db,name) or {}
+        pipeline.write(db,name,{**metadata,'external_link':link,'operator_confirmed_at':pipeline.stamp(job.updated_at)},30*86400)
+        pipeline.write(db,pipeline.key('confirmation',day),{'before':before,'after':job.state,'post_id':job.post_id,'instagram_url':link,'at':pipeline.stamp(job.updated_at)},30*86400)
+        db.commit()
+    return {'state':'confirmed_published','publishes_new_work':False}
 
 
 # Preserve all existing public carousel links.
@@ -175,16 +272,19 @@ def trigger(tasks: BackgroundTasks):
 
 
 @router.post('/test-reel', status_code=202, dependencies=[Depends(authorize)])
-def test_reel(tasks: BackgroundTasks):
-    return dispatch(tasks, manual_reel=True)
+def test_reel(tasks: BackgroundTasks, require_voice:bool=False):
+    return dispatch(tasks, manual_reel=True, require_voice=require_voice)
 
 
-def dispatch(tasks, manual_reel=False):
+def dispatch(tasks, manual_reel=False, require_voice=False):
+    with SessionLocal() as db:
+        pipeline.write(db,'last-publish-trigger',{'at':pipeline.stamp(datetime.utcnow()),'mode':'manual_reel' if manual_reel else 'scheduled'})
+        db.commit()
     if os.getenv('SOCIAL_PAUSED', '').lower() == 'true':
         raise HTTPException(503, 'Social automation is paused')
-    if any(not os.getenv(key) for key in ('GROQ_API_KEY', 'BUFFER_API_KEY')):
-        raise HTTPException(503, 'GROQ_API_KEY and BUFFER_API_KEY must be configured')
-    if manual_reel and os.getenv('SOCIAL_TTS_ENABLED', 'true').strip().lower() != 'true':
+    if not os.getenv('BUFFER_API_KEY'):
+        raise HTTPException(503, 'BUFFER_API_KEY must be configured; editorial and voice can use the authored fallback.')
+    if require_voice and os.getenv('SOCIAL_TTS_ENABLED', 'true').strip().lower() != 'true':
         raise HTTPException(503, 'Enable SOCIAL_TTS_ENABLED before requesting a narrated test Reel')
     if not manual_reel and comments.enabled():
         tasks.add_task(comments.drain_safe)
@@ -192,6 +292,7 @@ def dispatch(tasks, manual_reel=False):
     if hold:
         tasks.add_task(refresh_hold, hold)
         return {'state': 'delivery_hold', **hold, 'delivery_check': 'requested'}
+    tasks.add_task(reconcile_pending)
     slot = MANUAL_REEL_SLOT if manual_reel else current_slot()
     if slot is None:
         return {'state': 'idle', 'next_slot': '07:00 Asia/Kolkata'}
@@ -210,6 +311,16 @@ def dispatch(tasks, manual_reel=False):
         if active:
             return status_data(active)
         legacy = db.get(LegacyJob, today())
+        if not manual_reel:
+            current_index=int(slot[1:])
+            candidates=db.query(SocialJob).filter(SocialJob.day.startswith(today()+':'),SocialJob.day!=today()+':'+MANUAL_REEL_SLOT,
+                SocialJob.attempts<3,or_((SocialJob.state=='failed') & (SocialJob.updated_at<now-RETRY_DELAY),
+                                       (SocialJob.state=='running') & (SocialJob.updated_at<now-LEASE))).order_by(SocialJob.day).all()
+            for candidate in candidates:
+                if not re.fullmatch(r'\d{4}-\d{2}-\d{2}:s\d{2}',candidate.day):continue
+                index=int(candidate.day.split(':s')[-1])
+                if 0<=index<daily_target() and 0<=(current_index-index)*960/daily_target()<=120:
+                    day=candidate.day;slot=day.split(':')[-1];break
         job = db.get(SocialJob, day)
         if not manual_reel and (job is None or job.state == 'failed'):
             # Existing same-day submissions count toward the new target during migration.
@@ -232,10 +343,10 @@ def dispatch(tasks, manual_reel=False):
             if manual_reel and job.state == 'failed' and job.updated_at > now-timedelta(minutes=30):
                 return {**status_data(job), 'retry_after': (job.updated_at+timedelta(minutes=30)).isoformat()+'Z'}
             # Reclaim only pre-submission failures or expired generation leases.
-            eligible = job.state == 'failed' or (job.state == 'running' and job.updated_at < now - timedelta(minutes=15))
+            if job.state=='failed' and job.updated_at>now-(timedelta(minutes=30) if manual_reel else RETRY_DELAY):
+                return {**status_data(job),'retry_after':pipeline.stamp(job.updated_at+(timedelta(minutes=30) if manual_reel else RETRY_DELAY))}
+            eligible = job.state == 'failed' or (job.state == 'running' and job.updated_at < now - LEASE)
             if not eligible or job.attempts >= 3:
-                if job.state in ('scheduled', 'existing', 'submitting', 'needs_review'):
-                    tasks.add_task(refresh_delivery, job.day, job.owner, job.post_id)
                 return status_data(job)
             count = db.query(SocialJob).filter_by(day=day, owner=job.owner, state=job.state,
                                                  updated_at=job.updated_at).update({
@@ -247,6 +358,8 @@ def dispatch(tasks, manual_reel=False):
                 return status_data(db.get(SocialJob, day))
         db.expire_all()
         result = status_data(db.get(SocialJob, day))
+        if manual_reel:
+            pipeline.write(db,pipeline.key('voice-required',day),require_voice);db.commit()
     tasks.add_task(run_job, day, owner)
     return result
 
@@ -261,230 +374,278 @@ def transition(day, owner, before, after, **values):
 
 def safe_error(error):
     # Only controlled ServiceError messages are suitable for the status endpoint.
-    message = str(error) if isinstance(error, worker.ServiceError) else 'Internal worker error; check service logs.'
+    message = str(error) if isinstance(error, worker.ServiceError) else 'Internal worker error ('+type(error).__name__+'); check service logs.'
     for value in os.environ.values():
         if len(value) >= 12:
             message = message.replace(value, '[redacted]')
     return re.sub(r'https?://\S+', '[URL]', message)[:500]
 
 
+def record_delivery(post, day=None, owner=None):
+    state,error=pipeline.remote_state(post)
+    if state!='published' and (post.get('error') or {}).get('message'):
+        error=safe_error(worker.ServiceError('Buffer delivery: '+str(post['error']['message'])))
+    with SessionLocal() as db:
+        confirmed=db.query(SocialJob.state).filter(SocialJob.post_id==post['id'],SocialJob.state.in_(['published','confirmed_published'])).first()
+        if confirmed and (confirmed[0]=='confirmed_published' or state!='published'):return
+        query=db.query(SocialJob).filter(SocialJob.state.in_(pipeline.DELIVERY_STATES))
+        if day:query=query.filter_by(day=day,owner=owner)
+        else:query=query.filter_by(post_id=post['id'])
+        query.update({'state':state,'post_id':post['id'],'error':error,'updated_at':datetime.utcnow()},synchronize_session=False)
+        pipeline.write(db,pipeline.key('delivery',post['id']),{'status':post.get('status'),'due_at':post.get('dueAt'),
+            'sent_at':post.get('sentAt'),'checked_at':pipeline.stamp(datetime.utcnow()),
+            'scheduling_type':post.get('schedulingType'),'external_link':pipeline.safe_external_link(post.get('externalLink'))})
+        db.commit()
+
+
 @tracked
 def refresh_delivery(day, owner, post_id):
-    """Read-only Buffer reconciliation; never creates or retries a remote post."""
     try:
-        if post_id:
-            post = worker.buffer('query($id:PostId!) { post(input:{id:$id}) { id status } }', {'id': post_id})['post']
+        if post_id:post=worker.post(post_id)
         else:
-            org, channel = find_channel()
-            recent = worker.posts(org, channel['id'], (datetime.now(timezone.utc)-timedelta(days=3)).isoformat())
-            date, slot = day.split(':')
-            marker = f'JeeEdge daily {date} / {slot}'
-            post = next((p for p in recent if marker in (p.get('text') or '')), None)
-        if not post:
-            return
-        if post['status'] in ('error', 'failed', 'notSent'):
-            hold_delivery(post)
-        state = 'published' if post['status'] == 'sent' else 'needs_review' if post['status'] in ('error', 'failed', 'notSent') else 'scheduled'
+            org,channel=find_channel()
+            date,slot=day.split(':')
+            marker=f'JeeEdge daily {date} / {slot}'
+            found=[p for p in worker.posts(org,channel['id'],(datetime.now(timezone.utc)-timedelta(days=3)).isoformat()) if marker in (p.get('text') or '').splitlines()]
+            post=found[0] if len(found)==1 else None
+        if post:record_delivery(post,day,owner)
+    except Exception as error:
+        logging.getLogger('uvicorn.error').warning('JeeEdge delivery check deferred: %s',safe_error(error))
+
+
+@tracked
+def reconcile_pending(force=False):
+    """Reconcile every slot, including past windows, without publishing anything."""
+    now=datetime.utcnow()
+    try:
         with SessionLocal() as db:
-            db.query(SocialJob).filter(SocialJob.day == day, SocialJob.owner == owner,
-                SocialJob.state.in_(['scheduled', 'existing', 'submitting', 'needs_review'])).update(
-                {'state': state, 'post_id': post['id'], 'updated_at': datetime.utcnow(),
-                 'error': 'Buffer reports a delivery failure; inspect the existing post.' if state == 'needs_review' else None}, synchronize_session=False)
+            budget.locked(db)
+            previous=pipeline.read(db,'delivery-reconciliation')
+            checked=pipeline.parse_time((previous or {}).get('at'))
+            if checked and now-checked<(timedelta(minutes=1) if force else timedelta(minutes=30)):
+                return
+            pending=db.query(SocialJob).filter(SocialJob.state.in_(pipeline.DELIVERY_STATES)).order_by(SocialJob.updated_at).limit(60).all()
+            rows=[(j.day,j.owner,j.post_id) for j in pending]
+            if not rows and not force:return
+            budget.check(db,'buffer',units=6)
+            pipeline.write(db,'delivery-reconciliation',{'at':pipeline.stamp(now),'state':'checking','posts':len(rows)})
+            if force:
+                cached=db.get(SocialCache,'buffer-channel')
+                if cached:db.delete(cached)
             db.commit()
-    except Exception:
-        # A failed status read must never reopen a submission slot.
-        pass
+        with budget.tracked():
+            org,channel=find_channel()
+            recent=worker.posts(org,channel['id'],(datetime.now(timezone.utc)-timedelta(days=3)).isoformat())
+            by_id={p['id']:p for p in recent}
+            exact_left=6 if force else 1
+            for day,owner,post_id in rows:
+                date,slot=day.split(':')
+                marker=f'JeeEdge daily {date} / {slot}'
+                matches=[p for p in recent if marker in (p.get('text') or '').splitlines()]
+                post=by_id.get(post_id) if post_id else matches[0] if len(matches)==1 else None
+                exact_attempted=False
+                if not post and post_id and exact_left:
+                    post=worker.post(post_id);exact_left-=1;exact_attempted=True
+                if post:record_delivery(post,day,owner)
+                elif exact_attempted or not post_id:
+                    with SessionLocal() as db:
+                        query=db.query(SocialJob).filter_by(day=day,owner=owner).filter(SocialJob.state.in_(pipeline.DELIVERY_STATES))
+                        if exact_attempted or len(matches)>1:
+                            query.update({'state':'needs_review','error':'The existing post is missing or its slot marker is ambiguous. No automatic resubmission.','updated_at':now},synchronize_session=False)
+                        else:
+                            query.filter(SocialJob.state=='submitting',SocialJob.updated_at<now-LEASE).update({'state':'needs_review','error':'Submission outcome is unconfirmed after an interrupted request. Inspect Buffer before taking action.','updated_at':now},synchronize_session=False)
+                        db.commit()
+        hold=budget.cached('publishing-hold')
+        if hold:refresh_hold(hold)
+        with SessionLocal() as db:
+            # Only expired pre-submission work is eligible for abandonment.
+            db.query(SocialJob).filter(SocialJob.day<today()+':',SocialJob.state=='running',SocialJob.updated_at<now-LEASE,SocialJob.post_id.is_(None)).update(
+                {'state':'expired','error':'Interrupted before submission; the original day has ended.','updated_at':now},synchronize_session=False)
+            pipeline.write(db,'delivery-reconciliation',{'at':pipeline.stamp(now),'state':'checked','posts':len(rows)})
+            cleanup(db);db.commit()
+    except Exception as error:
+        message=safe_error(error)
+        with SessionLocal() as db:
+            pipeline.write(db,'delivery-reconciliation',{'at':pipeline.stamp(now),'state':'deferred','error':message})
+            db.commit()
+        logging.getLogger('uvicorn.error').warning('JeeEdge reconciliation deferred: %s',message)
 
 
 @tracked
 def refresh_hold(expected):
-    """Reconcile the held post without creating or retrying any Buffer post."""
-    from app.models.social_job import SocialCache
-    post_id = expected.get('post_id')
-    if not post_id:
-        return
+    """Migrate an old blanket hold to post-level quarantine, never resubmission."""
+    post_id=expected.get('post_id')
+    if not post_id:return
     try:
-        # A durable lease limits checks across cron calls, manual tests and workers.
         with SessionLocal() as db:
             budget.locked(db)
-            current = db.get(SocialCache, 'publishing-hold')
-            if not current or json.loads(current.value) != expected:
-                return
-            check = db.get(SocialCache, 'hold-delivery-check')
-            if check and check.value == post_id and check.expires_at > datetime.utcnow():
-                return
-            db.merge(SocialCache(name='hold-delivery-check', value=post_id,
-                                expires_at=datetime.utcnow()+timedelta(minutes=30)))
+            current=pipeline.read(db,'publishing-hold')
+            if current!=expected:return
+            check=db.get(SocialCache,'hold-delivery-check')
+            if check and check.value==post_id and check.expires_at>datetime.utcnow():return
+            db.merge(SocialCache(name='hold-delivery-check',value=post_id,expires_at=datetime.utcnow()+timedelta(minutes=30)))
             db.commit()
-        post = worker.buffer('query($id:PostId!) { post(input:{id:$id}) { id status } }', {'id': post_id}).get('post')
-        if not post or post.get('id') != post_id or post.get('status') != 'sent':
-            return
+        post=worker.post(post_id)
+        if post and post.get('id')!=post_id:return
+        if post:record_delivery(post)
         with SessionLocal() as db:
             budget.locked(db)
-            current = db.get(SocialCache, 'publishing-hold')
-            # Do not clear a different hold installed while the request was running.
-            if not current or json.loads(current.value) != expected:
-                return
-            db.query(SocialJob).filter_by(post_id=post_id).update(
-                {'state': 'published', 'error': None, 'updated_at': datetime.utcnow()}, synchronize_session=False)
-            db.delete(current)
-            db.commit()
+            current=db.get(SocialCache,'publishing-hold')
+            if not current or json.loads(current.value)!=expected:return
+            if not post:
+                db.query(SocialJob).filter(SocialJob.post_id==post_id,SocialJob.state.in_(pipeline.DELIVERY_STATES)).update(
+                    {'state':'needs_review','error':'The existing Buffer post is no longer visible. It will not be recreated automatically.','updated_at':datetime.utcnow()},synchronize_session=False)
+            pipeline.write(db,'last-hold-resolution',{'at':pipeline.stamp(datetime.utcnow()),'post_id':post_id,
+                'result':'published' if post and pipeline.remote_state(post)[0]=='published' else 'quarantined_without_retry'})
+            db.delete(current);db.commit()
     except Exception:
-        # Missing posts, quota exhaustion and network errors cannot prove delivery.
+        # A failed read cannot resolve the old hold or prove that a post is gone.
         pass
 
 
 def hold_delivery(post):
-    # Treat any reported delivery failure conservatively; API status alone cannot
-    # identify spam or distinguish a stale Buffer error from a live Instagram post.
-    if not budget.cached('publishing-hold'):
-        budget.cache('publishing-hold', {'reason': 'Buffer reports a delivery failure; inspect the existing post and Instagram before resuming.',
-            'post_id': post['id'], 'until': (datetime.now(timezone.utc)+timedelta(hours=24)).isoformat()}, 86400)
+    # Keep the compatibility entry point; a delivery error now quarantines only
+    # that post. A channel circuit below detects repeated, recent failures.
+    record_delivery(post)
+
+
+def stage(day,owner,name):
+    with SessionLocal() as db:
+        job=db.query(SocialJob).filter_by(day=day,owner=owner).with_for_update().first()
+        if not job or job.state not in ('running','submitting'):return False
+        job.updated_at=datetime.utcnow()
+        pipeline.write(db,pipeline.key('progress',day),{'stage':name,'kind':'reel' if is_reel(day.split(':')[-1]) else 'carousel','at':pipeline.stamp(job.updated_at)})
+        db.commit();return True
+
+
+def check_failure_circuit():
+    with SessionLocal() as db:
+        recent=db.query(SocialJob).filter(or_(SocialJob.post_id.isnot(None),SocialJob.state=='confirmed_published'),SocialJob.state.in_(['published','confirmed_published','delivery_failed']),
+            SocialJob.updated_at>datetime.utcnow()-timedelta(days=1),SocialJob.day>=(local_now().date()-timedelta(days=1)).isoformat()+':').order_by(SocialJob.day.desc()).limit(2).all()
+        if len(recent)==2 and all(j.state=='delivery_failed' for j in recent):
+            raise worker.ServiceError('Two recent automation posts failed delivery. Check the Instagram connection in Buffer and reconcile delivery before scheduling more.')
 
 
 @tracked
 def run_job(day, owner):
-    submitting = False
+    submitting=False
+    phase='preflight'
     try:
-        budget.admission()
-        now = datetime.now(timezone.utc)
-        org, channel = find_channel()
-        recent = worker.posts(org, channel['id'], (now - timedelta(days=3)).isoformat())
-        # Reconcile all recently observed delivery states without extra API calls.
+        if not stage(day,owner,phase):return
+        media_origin()
+        org,channel=find_channel()
+        recent=worker.posts(org,channel['id'],(datetime.now(timezone.utc)-timedelta(days=3)).isoformat())
+        # Historical failures belonging to other posts never freeze this slot.
         with SessionLocal() as db:
-            for post in recent:
-                if post['status'] == 'sent':
-                    db.query(SocialJob).filter(SocialJob.post_id == post['id']).update({'state':'published'}, synchronize_session=False)
-            cleanup(db)
-            db.commit()
-        for failed_delivery in (p for p in recent if p['status'] in ('error', 'failed', 'notSent')):
-            # A historical list entry can lag behind recovery on the exact post.
-            try:
-                delivered = worker.buffer('query($id:PostId!) { post(input:{id:$id}) { id status } }', {'id': failed_delivery['id']}).get('post')
-            except Exception:
-                delivered = None
-            if delivered and delivered.get('id') == failed_delivery['id'] and delivered.get('status') == 'sent':
-                failed_delivery['status'] = 'sent'
-                continue
-            hold_delivery(failed_delivery)
-            raise worker.ServiceError('Publishing held for 24 hours after a Buffer delivery failure; inspect the existing post. Already queued posts are not paused.')
-        calendar_day, slot = day.split(':')
-        marker = f'JeeEdge daily {calendar_day} / {slot}'
-        found = next((post for post in recent if marker in (post.get('text') or '')), None)
+            known={pid for (pid,) in db.query(SocialJob.post_id).filter(SocialJob.post_id.isnot(None),SocialJob.state.in_(pipeline.DELIVERY_STATES)).all()}
+        for post in recent:
+            if post['id'] in known:record_delivery(post)
+        check_failure_circuit()
+        calendar_day,slot=day.split(':')
+        marker=f'JeeEdge daily {calendar_day} / {slot}'
+        found=[p for p in recent if marker in (p.get('text') or '').splitlines()]
         if found:
-            transition(day, owner, 'running', 'existing', post_id=found['id'])
+            if len(found)!=1:
+                raise worker.ServiceError('Multiple Buffer posts have this exact slot marker. Inspect them before continuing.')
+            if transition(day,owner,'running','existing',post_id=found[0]['id']):record_delivery(found[0],day,owner)
             return
-        if sum(p['status'] in ('scheduled', 'sending') for p in recent) >= 9:
+        if sum(p['status'] in ('scheduled','sending') for p in recent)>=9:
             raise worker.ServiceError('Buffer queue near capacity; waiting.')
-        # Preserve any existing generation snapshot across a renderer rollout.
-        from app.models.social_comment import SocialLesson
-        import json
         with SessionLocal() as db:
-            saved=db.get(SocialLesson,day)
-            if saved:
-                content=json.loads(saved.content)
-            elif slot == MANUAL_REEL_SLOT:
-                used_topics = {json.loads(row.content).get('topic') for row in db.query(SocialLesson).filter(
-                    SocialLesson.slot.startswith(calendar_day+':')).all()}
-                candidates = [lessons.visual_lesson(calendar_day,i) for i in range(len(storyboard.VISUAL_TOPICS))]
-                candidate = next((c for c in candidates if c['topic'] not in used_topics), None)
-                if candidate is None:
-                    raise worker.ServiceError('All visual topics already used today; hold the test to avoid a repeated lesson.')
-                content=creative.attach(quality.enrich(candidate),calendar_day,len(used_topics))
-            else:
-                content=slot_problem(day)
-        video = is_reel(slot)
-        # Check current/prior-day captions; dates, numbers and music credits are
-        # stripped before comparison so a numeric variant cannot disguise a repeat.
-        yesterday = (local_now().date()-timedelta(days=1)).isoformat()
-        recent_captions = [p.get('text') or '' for p in recent
-            if any(f'JeeEdge daily {d} / ' in (p.get('text') or '') for d in (calendar_day, yesterday))]
-        copy = editorial.package(content, 'reel' if video else 'carousel', recent=recent_captions)
-        logging.getLogger('uvicorn.error').info(
-            'JeeEdge content slot=%s bank=v2 topic=%s format=%s editorial=%s hook_chars=%d design=%s story=%s journey=%s',
-            day, content['topic'], 'reel' if video else 'carousel',
-            copy.get('editorial_source','unknown'), len(copy['hook']), content.get('art_direction','legacy-derived'),content.get('story_format','legacy'),content.get('journey','none'))
-        if editorial.repeated(copy['caption'], recent_captions):
-            raise worker.ServiceError('Caption repeats a recent lesson; holding this slot for content review.')
-        if video:
-            copy['storyboard']=storyboard.plan(content)
-            copy['storyboard']['hook'] = copy['hook']
-            if slot == MANUAL_REEL_SLOT:
-                # Preserve a stable style for the manual test; voice still has a 1.3x speed cap.
-                copy['storyboard']['pace']='brisk'
-        with TemporaryDirectory(prefix='jeeedge-social-') as directory:
-            if video:
-                copy['voice_clips'] = narration.prepare(content, copy['storyboard'], directory, social_speech.fetch)
-                logging.getLogger('uvicorn.error').info('JeeEdge Reel slot=%s narration_clips=%d audio=%s', day, len(copy['voice_clips']), 'voice_and_music' if copy['voice_clips'] else 'music_only')
-            if slot == MANUAL_REEL_SLOT and len(copy.get('voice_clips', [])) != len(narration.scenes(content, copy['storyboard'])):
-                raise worker.ServiceError('Narrated test held: all narration scenes must be valid and fit their scenes. Nothing sent to Buffer; inspect JeeEdge TTS logs before retrying.')
-            ticket = budget.reserve('render', units=180)
-            started = time.monotonic()
-            paths = [reel.render(content, directory, copy)] if video else worker.render(content, copy, directory)
-            budget.settle(ticket, units=int(time.monotonic()-started)+1)
+            manifest=pipeline.read(db,pipeline.key('prepared',day))
+            strict_voice=bool(pipeline.read(db,pipeline.key('voice-required',day)))
+        if manifest:
+            # Media and the exact caption survive a verification failure/restart.
+            urls=manifest['urls'];video=manifest['kind']=='reel';caption=manifest['caption']
+            urls=[media_origin()+urlsplit(url).path for url in urls]
             with SessionLocal() as db:
-                # Lock and verify ownership before replacing this day's media.
-                job = db.query(SocialJob).filter_by(day=day).with_for_update().one()
-                if job.owner != owner or job.state != 'running':
-                    return
-                comments.save_lesson(db, day, content)
-                db.query(SocialMedia).filter_by(day=day).delete()
-                retained = db.query(func.coalesce(func.sum(func.length(SocialMedia.image)), 0)).scalar()
-                if retained > 96 * 1024 * 1024:
-                    raise worker.ServiceError('Social media storage reached its 96 MiB budget; review old media.')
-                urls = []
-                for path in paths:
-                    media_id = uuid.uuid4().hex
-                    if video:
-                        data, mime, extension = path.read_bytes(), 'video/mp4', 'mp4'
-                    else:
-                        stream = io.BytesIO()
-                        with Image.open(path) as image:
-                            image.convert('RGB').save(stream, format='JPEG', quality=92)
-                        data, mime, extension = stream.getvalue(), 'image/jpeg', 'jpg'
-                    retained += len(data)
-                    if retained > 96 * 1024 * 1024:
-                        raise worker.ServiceError('Social media storage would exceed its 96 MiB budget.')
-                    db.add(SocialMedia(id=media_id, day=day, image=data, mime=mime))
-                    urls.append(f'{MEDIA_ORIGIN}/api/social/assets/{media_id}.{extension}')
-                db.commit()
-        if today() != calendar_day:
-            raise worker.ServiceError('Generation crossed midnight; wait for the next daily trigger.')
-        # Verify public fetches before any non-idempotent submission.
-        for url in urls:
-            body = worker.request(url, binary=True)
+                assets=db.query(SocialMedia.id,SocialMedia.mime).filter_by(day=day).all()
+                available={f'{media_origin()}/api/social/assets/{identity}.{'mp4' if mime=='video/mp4' else 'jpg'}' for identity,mime in assets}
+            if not urls or len(set(urls))!=len(urls) or not set(urls)<=available:raise worker.ServiceError('Prepared media no longer matches the stored assets. Inspect this slot before continuing.')
+        else:
+            budget.admission()
+            phase='prepare_lesson';stage(day,owner,phase)
+            from app.models.social_comment import SocialLesson
+            with SessionLocal() as db:
+                saved=db.get(SocialLesson,day)
+                if saved:content=json.loads(saved.content)
+                elif slot==MANUAL_REEL_SLOT:
+                    used={json.loads(row.content).get('topic') for row in db.query(SocialLesson).filter(SocialLesson.slot.startswith(calendar_day+':')).all()}
+                    candidates=[lessons.visual_lesson(calendar_day,i) for i in range(len(storyboard.VISUAL_TOPICS))]
+                    candidate=next((c for c in candidates if c['topic'] not in used),None)
+                    if candidate is None:raise worker.ServiceError('All visual topics already used today; hold the test to avoid a repeated lesson.')
+                    content=creative.attach(quality.enrich(candidate),calendar_day,len(used))
+                else:content=slot_problem(day)
+                job=db.query(SocialJob).filter_by(day=day,owner=owner,state='running').with_for_update().first()
+                if not job:return
+                comments.save_lesson(db,day,content);db.commit()
+            video=is_reel(slot)
+            yesterday=(local_now().date()-timedelta(days=1)).isoformat()
+            recent_captions=[p.get('text') or '' for p in recent if any(f'JeeEdge daily {d} / ' in (p.get('text') or '') for d in (calendar_day,yesterday))]
+            copy=editorial.package(content,'reel' if video else 'carousel',recent=recent_captions)
+            if editorial.repeated(copy['caption'],recent_captions):raise worker.ServiceError('Caption repeats a recent lesson; holding this slot for content review.')
             if video:
-                if len(body) < 12 or body[4:8] != b'ftyp':
-                    raise worker.ServiceError('Public Reel URL did not return an MP4.')
+                copy['storyboard']=storyboard.plan(content);copy['storyboard']['hook']=copy['hook']
+                if slot==MANUAL_REEL_SLOT:copy['storyboard']['pace']='brisk'
+            credit=('\n\n'+reel.music_credit(content)) if video else ''
+            caption=copy['caption']+(creative.caption_suffix(content) if creative.active(content) else '')+credit+'\n\n'+marker
+            if len(caption)>2200:raise worker.ServiceError('Prepared Instagram caption exceeds 2200 characters; nothing submitted.')
+            with TemporaryDirectory(prefix='jeeedge-social-') as directory:
+                phase='narration';stage(day,owner,phase)
+                if video:copy['voice_clips']=narration.prepare(content,copy['storyboard'],directory,social_speech.fetch)
+                if strict_voice and len(copy.get('voice_clips',[]))!=len(narration.scenes(content,copy['storyboard'])):
+                    raise worker.ServiceError('Narrated test held: all narration scenes must be valid. Nothing sent to Buffer; retry later or use the production music fallback.')
+                phase='render';stage(day,owner,phase)
+                ticket=budget.reserve('render',units=180);started=time.monotonic()
+                try:paths=[reel.render(content,directory,copy)] if video else worker.render(content,copy,directory)
+                finally:budget.settle(ticket,units=int(time.monotonic()-started)+1)
+                with SessionLocal() as db:
+                    job=db.query(SocialJob).filter_by(day=day,owner=owner,state='running').with_for_update().first()
+                    if not job:return
+                    cleanup(db)
+                    db.query(SocialMedia).filter_by(day=day).delete()
+                    retained=db.query(func.coalesce(func.sum(func.length(SocialMedia.image)),0)).scalar()
+                    urls=[]
+                    for path in paths:
+                        media_id=uuid.uuid4().hex
+                        if video:data,mime,extension=path.read_bytes(),'video/mp4','mp4'
+                        else:
+                            stream=io.BytesIO()
+                            with Image.open(path) as image:image.convert('RGB').save(stream,format='JPEG',quality=92)
+                            data,mime,extension=stream.getvalue(),'image/jpeg','jpg'
+                        retained+=len(data)
+                        if retained>96*1024*1024:raise worker.ServiceError('Social media storage reached 96 MiB. Reconcile older queued posts; their media is retained until delivery is known.')
+                        db.add(SocialMedia(id=media_id,day=day,image=data,mime=mime))
+                        urls.append(f'{media_origin()}/api/social/assets/{media_id}.{extension}')
+                    manifest={'urls':urls,'kind':'reel' if video else 'carousel','caption':caption}
+                    pipeline.write(db,pipeline.key('prepared',day),manifest)
+                    db.commit()
+        if today()!=calendar_day:raise worker.ServiceError('Generation crossed midnight; wait for the next daily trigger.')
+        phase='verify_public_media';stage(day,owner,phase)
+        for url in urls:
+            body=worker.request(url,binary=True,max_bytes=8*1024*1024)
+            if video:
+                if len(body)<12 or body[4:8]!=b'ftyp':raise worker.ServiceError('Public Reel URL did not return an MP4. Check the configured public media origin.')
             else:
                 with Image.open(io.BytesIO(body)) as image:
-                    if image.format != 'JPEG' or image.size != (1080, 1350):
-                        raise worker.ServiceError('Public carousel verification failed.')
-        credit = ('\n\n' + reel.music_credit(content)) if video else ''
-        # Durable fence MUST commit before the non-idempotent Buffer mutation.
-        if not transition(day, owner, 'running', 'submitting'):
-            return
-        submitting = True
-        caption = copy['caption'] + (creative.caption_suffix(content) if creative.active(content) else '') + credit + '\n\n' + marker
-        payload = {'text': caption, 'channelId': channel['id'], 'schedulingType': 'automatic',
-                   'mode': 'customScheduled', 'dueAt': (datetime.now(timezone.utc) + timedelta(minutes=5)).isoformat(),
-                   'metadata': {'instagram': {'type': 'reel' if video else 'post', 'shouldShareToFeed': True}},
-                   'assets': [{('video' if video else 'image'): {'url': url}} for url in urls]}
-        result = worker.buffer('mutation($input:CreatePostInput!) { createPost(input:$input) '
-                               '{ __typename ... on PostActionSuccess { post { id status } } '
-                               '... on MutationError { message } } }', {'input': payload})['createPost']
-        if not result.get('post'):
-            # Even an unfamiliar rejection is held for review, never blindly retried.
-            raise worker.ServiceError('Buffer did not confirm a post. Check Buffer before retrying. ' + str(result.get('message', 'Unknown response.')))
-        transition(day, owner, 'submitting', 'scheduled', post_id=result['post']['id'], error=None)
-        # Retain media at least 7 days after confirmed publication; uncertain jobs are kept.
+                    if image.format!='JPEG' or image.size!=(1080,1350):raise worker.ServiceError('Public carousel verification failed.')
+        # Existing ambiguous/delivered jobs can never cross this fence twice.
+        if not transition(day,owner,'running','submitting'):return
+        submitting=True;phase='submit';stage(day,owner,phase)
+        payload={'text':caption,'channelId':channel['id'],'schedulingType':'automatic','mode':'customScheduled',
+            'dueAt':(datetime.now(timezone.utc)+timedelta(minutes=5)).isoformat(),
+            'metadata':{'instagram':{'type':'reel' if video else 'post','shouldShareToFeed':True}},
+            'assets':[{('video' if video else 'image'):{'url':url}} for url in urls]}
+        result=worker.buffer('mutation($input:CreatePostInput!) { createPost(input:$input) { __typename ... on PostActionSuccess { post { '+worker.POST_FIELDS+' } } ... on MutationError { message } } }',{'input':payload})['createPost']
+        post=result.get('post')
+        if not post or not post.get('id'):raise worker.ServiceError('Buffer did not confirm a post. Inspect Buffer before retrying. '+str(result.get('message','Unknown response.')))
+        if transition(day,owner,'submitting','scheduled',post_id=post['id'],error=None):
+            record_delivery({**post,'dueAt':post.get('dueAt') or payload['dueAt'],'schedulingType':post.get('schedulingType') or 'automatic'},day,owner)
         with SessionLocal() as db:
-            old = db.query(SocialJob.day).filter(SocialJob.day < (now - timedelta(days=7)).date().isoformat(),
-                                                 SocialJob.state.in_(['published', 'failed']))
-            db.query(SocialMedia).filter(SocialMedia.day.in_(old)).delete(synchronize_session=False)
-            db.commit()
+            pipeline.write(db,pipeline.key('progress',day),{'stage':'accepted_by_buffer','at':pipeline.stamp(datetime.utcnow())});db.commit()
     except Exception as error:
-        message = safe_error(error)
-        transition(day, owner, 'submitting' if submitting else 'running',
-                   'needs_review' if submitting else 'failed', error=message)
-        print(f'JeeEdge social {day}: {message}', flush=True)
+        message=safe_error(error)
+        transition(day,owner,'submitting' if submitting else 'running','needs_review' if submitting else 'failed',error=message)
+        with SessionLocal() as db:
+            pipeline.write(db,pipeline.key('progress',day),{'stage':phase,'kind':'reel' if is_reel(day.split(':')[-1]) else 'carousel','error':message,'at':pipeline.stamp(datetime.utcnow())});db.commit()
+        logging.getLogger('uvicorn.error').warning('JeeEdge social slot=%s stage=%s: %s',day,phase,message)

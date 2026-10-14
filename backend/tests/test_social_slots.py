@@ -21,6 +21,10 @@ REAL_REQUEST = social.worker.request
 AUTH = {'Authorization': 'Bearer ' + 'x' * 32}
 
 
+def seed_legacy_hold(post):
+    social.budget.cache('publishing-hold',{'post_id':post['id'],'reason':'Legacy Buffer delivery hold'},86400)
+
+
 @pytest.fixture
 def setup(monkeypatch):
     engine = create_engine('sqlite://', connect_args={'check_same_thread':False}, poolclass=StaticPool)
@@ -87,6 +91,9 @@ def test_twelve_slots_and_retry_no_duplicates(setup):
         assert 'Kevin MacLeod' not in post['text']
     assert len(set(p['text'].splitlines()[-1] for p in submitted))==12
     assert all('bio' not in p['text'] for p in submitted)
+    with factory() as db:
+        pending=[(row.day,row.owner,row.post_id) for row in db.query(SocialSlot).all()]
+    for args in pending:social.refresh_delivery(*args)
     assert all(j['state']=='published' for j in client.get('/api/social/status',headers=AUTH).json()['jobs'])
     reel_topics=[social.slot_problem(f'2026-10-06:s{i:02d}')['topic'] for i in range(12) if social.is_reel(f's{i:02d}')]
     assert len(set(reel_topics))==4
@@ -247,14 +254,13 @@ def test_old_env_cannot_restore_thirty_posts(monkeypatch):
     assert social.daily_target()==12 and social.reel_target()==4
 
 
-def test_reported_delivery_error_holds_new_posts(setup,monkeypatch):
+def test_unrelated_historical_delivery_error_does_not_block_new_posts(setup,monkeypatch):
     client,factory,clock,submitted=setup
-    monkeypatch.setattr(social.worker,'posts',lambda *a:[{'id':'failed-post','status':'error','text':'Existing post'}])
-    monkeypatch.setattr(social.worker,'buffer',lambda *a:{'post':{'id':'failed-post','status':'error'}})
+    original=social.worker.buffer
+    monkeypatch.setattr(social.worker,'posts',lambda *a:[{'id':'foreign-failure','status':'error','text':'An unrelated old post'}])
     client.post('/api/social/trigger',headers=AUTH)
-    assert not submitted
-    assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='delivery_hold'
-    assert client.get('/api/social/status',headers=AUTH).json()['publishing_hold']['post_id']=='failed-post'
+    assert len(submitted)==1
+    assert social.budget.cached('publishing-hold') is None
 
 
 def test_recovered_hold_marks_exact_post_published_without_reposting(setup):
@@ -263,7 +269,7 @@ def test_recovered_hold_marks_exact_post_published_without_reposting(setup):
         db.add(SocialSlot(day='2026-10-06:s00',owner='original',state='needs_review',
                          post_id='recovered',error='Delivery failed',updated_at=datetime.utcnow(),attempts=1))
         db.commit()
-    social.hold_delivery({'id':'recovered'})
+    seed_legacy_hold({'id':'recovered'})
     result=client.post('/api/social/trigger',headers=AUTH).json()
     assert result['state']=='delivery_hold' and result['delivery_check']=='requested'
     assert social.budget.cached('publishing-hold') is None
@@ -274,22 +280,24 @@ def test_recovered_hold_marks_exact_post_published_without_reposting(setup):
     assert not submitted
 
 
-@pytest.mark.parametrize('post',[None,{'id':'held','status':'error'},
-    {'id':'held','status':'scheduled'},{'id':'held','status':'sending'},
-    {'id':'other','status':'sent'}])
-def test_hold_requires_exact_sent_post_and_checks_are_throttled(setup,monkeypatch,post):
-    client,_,_,submitted=setup
+@pytest.mark.parametrize('post', [None,{'id':'held','status':'scheduled'}, {'id':'held','status':'error'}, {'id':'held','status':'draft'}])
+def test_legacy_hold_is_replaced_by_post_level_state_without_resubmission(setup,monkeypatch,post):
+    client,factory,_,submitted=setup
+    with factory() as db:
+        db.add(SocialSlot(day='2026-10-05:s02',owner='old',state='needs_review',updated_at=datetime.utcnow(),attempts=1,post_id='held'));db.commit()
     calls=[]
     def read(query,variables):
+        assert 'createPost' not in query
         calls.append(variables)
         return {'post':post}
     monkeypatch.setattr(social.worker,'buffer',read)
-    social.hold_delivery({'id':'held'})
-    for _ in range(3):
-        assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='delivery_hold'
-    assert calls==[{'id':'held'}]
-    assert social.budget.cached('publishing-hold')['post_id']=='held'
-    assert not submitted
+    seed_legacy_hold({'id':'held'})
+    assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='delivery_hold'
+    assert social.budget.cached('publishing-hold') is None
+    assert calls==[{'id':'held'}] and not submitted
+    with factory() as db:
+        row=db.get(SocialSlot,'2026-10-05:s02')
+        assert row.state==('needs_review' if post is None else {'scheduled':'scheduled','error':'delivery_failed','draft':'blocked'}[post['status']])
 
 
 def test_hold_survives_status_read_failure(setup,monkeypatch):
@@ -297,7 +305,7 @@ def test_hold_survives_status_read_failure(setup,monkeypatch):
     def fail(*args):
         raise social.worker.ServiceError('Buffer local free-tier budget reached')
     monkeypatch.setattr(social.worker,'buffer',fail)
-    social.hold_delivery({'id':'held'})
+    seed_legacy_hold({'id':'held'})
     assert client.post('/api/social/trigger',headers=AUTH).json()['state']=='delivery_hold'
     assert social.budget.cached('publishing-hold')['post_id']=='held'
     assert not submitted
@@ -305,7 +313,7 @@ def test_hold_survives_status_read_failure(setup,monkeypatch):
 
 def test_recovery_cannot_clear_a_replaced_hold(setup,monkeypatch):
     client,_,_,submitted=setup
-    social.hold_delivery({'id':'held'})
+    seed_legacy_hold({'id':'held'})
     def read(*args):
         social.budget.cache('publishing-hold',{'post_id':'new-failure','reason':'review'},86400)
         return {'post':{'id':'held','status':'sent'}}
@@ -376,12 +384,12 @@ def test_manual_narrated_reel_outside_window_and_idempotency(setup,monkeypatch):
 
 def test_manual_requires_all_voice_scenes_and_no_retry_storm(setup,monkeypatch):
     client,factory,clock,submitted=setup
-    result=client.post('/api/social/test-reel',headers=AUTH)
+    result=client.post('/api/social/test-reel?require_voice=true',headers=AUTH)
     assert result.status_code==202 and not submitted
     with factory() as db:
         job=db.get(SocialSlot,'2026-10-06:s99')
         assert job.state=='failed' and 'all narration scenes' in job.error
-    retry=client.post('/api/social/test-reel',headers=AUTH).json()
+    retry=client.post('/api/social/test-reel?require_voice=true',headers=AUTH).json()
     assert 'retry_after' in retry and retry['attempts']==1
     with factory() as db:
         job=db.get(SocialSlot,'2026-10-06:s99')
@@ -393,7 +401,7 @@ def test_manual_requires_all_voice_scenes_and_no_retry_storm(setup,monkeypatch):
         calls.append(text)
         return wav() if len(calls)==1 else None
     monkeypatch.setattr(social.social_speech,'fetch',one_clip)
-    client.post('/api/social/test-reel',headers=AUTH)
+    client.post('/api/social/test-reel?require_voice=true',headers=AUTH)
     assert not submitted
 
 
@@ -401,7 +409,7 @@ def test_manual_respects_auth_pause_and_delivery_hold(setup,monkeypatch):
     client,_,_,submitted=setup
     assert client.post('/api/social/test-reel').status_code==401
     monkeypatch.setenv('SOCIAL_TTS_ENABLED','false')
-    assert client.post('/api/social/test-reel',headers=AUTH).status_code==503
+    assert client.post('/api/social/test-reel?require_voice=true',headers=AUTH).status_code==503
     monkeypatch.setenv('SOCIAL_TTS_ENABLED','true')
     monkeypatch.setenv('SOCIAL_PAUSED','true')
     assert client.post('/api/social/test-reel',headers=AUTH).status_code==503

@@ -12,8 +12,13 @@ original content. No database migration or additional API key is needed.
 - Set the Instagram profile website to **https://jeeedge.in/start** once.
 - Keep the existing Render cron: `POST /api/social/trigger`, every ten minutes
   between 07:00 and 23:00, Asia/Kolkata, using its existing Bearer secret.
-- Existing `BUFFER_API_KEY`, `GROQ_API_KEY`, `SOCIAL_TRIGGER_SECRET` and connected
-  professional Instagram account remain sufficient.
+- Required: existing `BUFFER_API_KEY`, `SOCIAL_TRIGGER_SECRET` (at least 32
+  characters) and a connected professional Instagram account with automatic
+  publishing. `GROQ_API_KEY` is optional: authored captions and music-only Reels
+  work without it.
+- Public media URLs use `SOCIAL_MEDIA_ORIGIN`, then `RENDER_EXTERNAL_URL`, then
+  the original Render origin. An override must be a public HTTPS origin without
+  a path. Check it if Buffer cannot fetch a video.
 - No video-generation subscription, stock-footage purchase, image-generation
   credits, voice subscription or paid fallback was added.
 
@@ -86,8 +91,11 @@ and 8 MiB output limit remain enforced. Throughput depends on Render hardware.
 
 The existing maximum is twelve items/day: eight carousels and four Reels.
 `SOCIAL_DAILY_TARGET=1..12` and `SOCIAL_REELS_PER_DAY=0..min(4,target)` lower it.
-Change targets between days because allocation depends on them. The worker skips
-missed windows; it does not backfill a burst. Default windows (IST): 07:00 C,
+Change targets between days because allocation depends on them. A four-Reel-only
+schedule is possible with both values set to four. The worker skips windows that
+never created a job; it does not backfill a burst. An existing interrupted or
+failed pre-submission job can recover within two hours, with a ten-minute backoff
+and at most three attempts. Each trigger claims at most one job. Default windows (IST): 07:00 C,
 08:20 C, 09:40 R, 11:00 C, 12:20 C, 13:40 R, 15:00 C, 16:20 C, 17:40 R,
 19:00 C, 20:20 C, 21:40 R. Publication is requested five minutes after generation.
 
@@ -110,27 +118,67 @@ secret. Status reports actual jobs and local budget counters. Plan shows today's
 fresh-slot topics, authored hooks, formats and destinations without spending
 quota or creating jobs; frozen or queued slots can differ from this preview.
 
-A Buffer timeout or uncertain submission is held for review, never blindly
-resubmitted. `scheduled` means Buffer accepted it; `published` means Buffer was
-observed reporting sent. Buffer error statuses hold new work for twenty-four
-hours. During a hold, trigger/test calls request a read-only check of the exact
-flagged post, at most once every thirty minutes. Only that post reporting `sent`
-clears the hold early; unrelated published posts, missing posts and read errors
-do not. The triggering response may still say `delivery_hold` because the check
-runs in the background; inspect status afterward, or let the next cron run proceed.
-Stale failures in the recent-post list are checked against the exact post before
-holding again. These checks use the existing Buffer budget and never resubmit a post.
-Inspect the existing post before retrying or removing any record.
-`SOCIAL_PAUSED=true` stops new jobs; pause existing queued posts in Buffer itself.
-Confirmed published or safely failed assets become eligible for cleanup after
-seven days; uncertain submissions retain their media.
+### Delivery and recovery
 
-The optional `POST /api/social/test-reel` publishes one narrated manual test
-using slot `s99`. It requires all three voice scenes, permits at most one
-submitted test per IST day, and can add one test beyond the ordinary daily cap.
-It is **not** a preview endpoint and must not be placed on a recurring schedule.
-This rollout does not call it. Comments remain independently configured; see
-[COMMENTS.md](COMMENTS.md).
+`GET /api/social/status` is read-only. A successful status request does **not**
+run the publishing workflow. The external cron must use **POST
+`/api/social/trigger`**, with `Authorization: Bearer <existing secret>`. The
+application does not create or repair the external cron configuration. Status
+includes the last valid publishing trigger, next planned windows, job formats,
+stages, due times, last delivery checks, and configuration-presence flags; it
+never returns credentials. A planned window is not a promise of publication.
+
+Triggers reconcile pending deliveries at most every thirty minutes, including
+outside publishing hours. Checks use recent history plus bounded exact-post
+lookups, so older accepted jobs can reach a confirmed state. Authenticated
+`POST /api/social/reconcile` requests a read-only check with a one-minute
+throttle. Neither this endpoint nor status creates or resends a post. Checks
+respect the existing Buffer call budget. Paginated history reads are bounded.
+
+`scheduled` means Buffer accepted the post; `published` means Buffer was observed
+reporting `sent` for automatic publishing. Drafts, approval-required posts,
+notification publishing and unknown results remain distinct attention states.
+A timeout after the durable submission fence is `needs_review`, never blindly
+resubmitted. Failed delivery is quarantined on that post instead of installing
+a global twenty-four-hour hold. Unrelated historical failures do not block fresh
+work. Two recent tracked delivery failures stop fresh submissions until the
+connection or delivery problem is resolved. Reconciliation can clear that
+circuit when it confirms successful delivery.
+
+Legacy global failure holds request an exact read of their flagged post at most
+once every thirty minutes. A successful read migrates the result to that post's
+state and clears the legacy hold, even if it failed or disappeared. API read
+errors preserve the hold. Explicit holds without a post ID are preserved. No
+migration path resubmits the old post.
+
+Frozen lessons survive restarts. Prepared media IDs, full captions and format
+are checkpointed before the public-media check. A transient fetch failure
+reuses those assets on a safe retry instead of rerendering or repeating editorial
+requests. Confirmed published media and safely failed pre-submission assets
+become eligible for cleanup forty-eight hours after their last job update.
+Uncertain submissions retain their media. The 96 MiB active-media ceiling still
+applies; status explains storage and admission failures rather than hiding them.
+`SOCIAL_PAUSED=true` stops new jobs; pause existing queued posts in Buffer itself.
+
+### Admin controls and manual test
+
+Admin → **Reels & publishing health** shows trigger health, pending deliveries,
+preparation stages, errors, saved media, and the last confirmed Reel. **Refresh
+status** reads the ledger; **Check Buffer delivery** requests reconciliation.
+Neither button publishes anything. If Buffer reports failure but the matching
+post is already visible on Instagram, **Already live on Instagram?** lets an
+administrator record its public URL after explicitly checking the lesson and
+caption. This is labelled `confirmed_published`, distinct from provider-confirmed
+publication. It never creates, edits, deletes or resends a remote post.
+
+The optional `POST /api/social/test-reel` publishes one manual test using slot
+`s99`, with the same authored/music fallback as production. Add
+`?require_voice=true` only when intentionally testing all three voice scenes;
+that strict mode stops before submission if narration is unavailable. At most
+one submitted test is permitted per IST day, and it can add one test beyond the
+ordinary daily cap. This is **not** a preview endpoint and must not be placed on
+a recurring schedule. These development checks do not call it against a live
+account. Comments remain independently configured; see [COMMENTS.md](COMMENTS.md).
 
 ## Preview and verification
 
@@ -149,7 +197,7 @@ Keep `preview_only` checked. The old `social/worker.py` publishing CLI is legacy
 use `social.preview` to inspect the active slot renderer.
 
 ```sh
-PYTHONPATH=backend:. python -m pytest -q social backend/tests/test_social.py backend/tests/test_social_slots.py backend/tests/test_public_papers.py
+PYTHONPATH=backend:. python -m pytest -q social backend/tests/test_social.py backend/tests/test_social_slots.py backend/tests/test_social_recovery.py backend/tests/test_public_papers.py
 cd frontend
 npm run build
 ```

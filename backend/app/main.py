@@ -63,6 +63,7 @@ app.add_middleware(
 app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
 
 app.include_router(social_slots.router)
+app.include_router(social_slots.admin_router)
 app.include_router(social_comments.router)
 app.include_router(authentication.router)
 app.include_router(google_login.router)

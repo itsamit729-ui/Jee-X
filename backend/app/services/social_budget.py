@@ -3,7 +3,7 @@ import json
 import uuid
 from contextlib import contextmanager
 from datetime import datetime, timedelta
-from sqlalchemy import func
+from sqlalchemy import func, case
 from sqlalchemy.exc import IntegrityError
 from app.database import SessionLocal
 from app.models.social_job import SocialUsage, SocialQuotaLock, SocialCache
@@ -129,12 +129,18 @@ def record_egress(size):
 
 def report():
     with SessionLocal() as db:
-        now = datetime.utcnow()
-        result = {}
-        for service, windows in LIMITS.items():
-            result[service] = []
-            for seconds, units, tokens in windows:
-                used, consumed = totals(db, service, seconds, now)
-                result[service].append({'window_seconds': seconds, 'used': used, 'budget': units,
-                                        'tokens_used': consumed, 'token_budget': tokens or None})
-        return {'scope': 'This automation only; prior and external account usage is not included.', 'services': result}
+        now=datetime.utcnow()
+        windows=sorted({seconds for limits in LIMITS.values() for seconds,_,_ in limits})
+        columns=[]
+        for seconds in windows:
+            current=SocialUsage.created_at>now-timedelta(seconds=seconds)
+            columns.extend([func.sum(case((current,SocialUsage.units),else_=0)),func.sum(case((current,SocialUsage.tokens),else_=0))])
+        rows=db.query(SocialUsage.service,*columns).filter(SocialUsage.created_at>now-timedelta(seconds=max(windows))).group_by(SocialUsage.service).all()
+        usage={row[0]:{seconds:(row[1+i*2] or 0,row[2+i*2] or 0) for i,seconds in enumerate(windows)} for row in rows}
+        result={}
+        for service,limits in LIMITS.items():
+            result[service]=[]
+            for seconds,units,tokens in limits:
+                used,consumed=usage.get(service,{}).get(seconds,(0,0))
+                result[service].append({'window_seconds':seconds,'used':used,'budget':units,'tokens_used':consumed,'token_budget':tokens or None})
+        return {'scope':'This automation only; prior and external account usage is not included.','services':result}
