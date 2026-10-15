@@ -16,7 +16,7 @@ const main = [
 const groups = [
   { title: 'PRACTISE & PREPARE', items: [
     ['/subject-test', 'Subject practice', Target, 'Choose a chapter and focus'],
-    ['/pyq', 'PYQs & shift papers', BookOpen, 'MHT-CET and BITSAT questions'],
+    ['/pyq', 'PYQs & shift papers', BookOpen, 'JEE Main, MHT-CET and BITSAT questions'],
     ['/test', 'JEE full mock', Shapes, 'Rehearse a complete paper'],
     ['/daily', 'Daily question', CalendarCheck, 'Make practice a habit'],
     ['/scenarios', 'Exam situations', Shapes, 'Work through exam pressure'],

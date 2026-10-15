@@ -131,6 +131,8 @@ def submit_subject_test(
                 marks_awarded=marks_awarded,
                 correct_option_ids=sorted(correct_option_ids),
                 solution=question.solution,
+                answer_min=question.answer_min if question.type == 'numerical' else None,
+                answer_max=question.answer_max if question.type == 'numerical' else None,
             )
         )
 

@@ -14,16 +14,18 @@ router = APIRouter(prefix='/api/pyqs', tags=['pyqs'])
 YEARS = (2026, 2025, 2024, 2023, 2022)
 SUBJECTS = {'PHY': 'Physics', 'CHEM': 'Chemistry', 'MATH': 'Mathematics',
             'ENG': 'English Proficiency', 'LR': 'Logical Reasoning'}
+EXAM_LABELS = {'jee_main': 'JEE Main', 'bitsat': 'BITSAT', 'mht_cet': 'MHT CET'}
+Exam = Literal['jee_main', 'bitsat', 'mht_cet']
 
 
 def eligible(db, exam='bitsat'):
-    return candidate_query(db, exam=exam, require_solution=exam != 'mht_cet').filter(
+    return candidate_query(db, exam=exam, require_solution=exam == 'bitsat').filter(
         models.Question.source_type == 'pyq', models.Question.year.isnot(None),
-        models.Question.type == 'single_correct')
+        models.Question.type.in_(['single_correct', 'numerical'] if exam == 'jee_main' else ['single_correct']))
 
 
 @router.get('/{exam}')
-def catalog(exam: Literal['bitsat', 'mht_cet'] = 'bitsat', db: Session = Depends(get_db)):
+def catalog(exam: Exam = 'bitsat', db: Session = Depends(get_db)):
     rows = (eligible(db, exam).join(models.Subject, models.Subject.id == models.Chapter.subject_id)
             .with_entities(models.Question.year, models.Subject.code, func.count(models.Question.id))
             .group_by(models.Question.year, models.Subject.code).all())
@@ -45,7 +47,7 @@ def catalog(exam: Literal['bitsat', 'mht_cet'] = 'bitsat', db: Session = Depends
         except ValueError:
             return (datetime.max, item['shift'])
     years = sorted(set(YEARS) | {year for year, _, _ in rows}, reverse=True)
-    return {'exam': exam, 'label': 'BITSAT' if exam == 'bitsat' else 'MHT CET', 'source_label': 'Memory-based questions',
+    return {'exam': exam, 'label': EXAM_LABELS[exam], 'source_label': 'Previous-year questions' if exam == 'jee_main' else 'Memory-based questions',
             'years': [{'year': year, 'papers': sorted([p for (y, _), p in papers.items() if y == year], key=paper_order), 'subjects': [
                 {'code': code, 'name': name, 'available': counts.get((year, code), 0)}
                 for code, name in SUBJECTS.items() if exam == 'bitsat' or code in ('PHY', 'CHEM', 'MATH')]} for year in years]}
@@ -55,19 +57,20 @@ class Start(BaseModel):
     year: int = Field(ge=1900, le=2100)
     subject_code: Literal['PHY', 'CHEM', 'MATH', 'ENG', 'LR']
     count: int = Field(default=10, ge=1, le=30)
+    offset: int = Field(default=0, ge=0, le=2_000_000)
 
 
 @router.post('/{exam}/practice', response_model=schemas.SubjectTestOut, status_code=201)
-def start(body: Start, exam: Literal['bitsat', 'mht_cet'] = 'bitsat', user: models.User = Depends(get_current_db_user), db: Session = Depends(get_db)):
-    if exam == 'mht_cet' and body.subject_code not in ('PHY', 'CHEM', 'MATH'):
-        raise HTTPException(422, 'MHT CET practice supports Physics, Chemistry and Mathematics.')
+def start(body: Start, exam: Exam = 'bitsat', user: models.User = Depends(get_current_db_user), db: Session = Depends(get_db)):
+    if exam != 'bitsat' and body.subject_code not in ('PHY', 'CHEM', 'MATH'):
+        raise HTTPException(422, f'{EXAM_LABELS[exam]} practice supports Physics, Chemistry and Mathematics.')
     ids = [row.id for row in eligible(db, exam)
            .join(models.Subject, models.Subject.id == models.Chapter.subject_id)
            .filter(models.Question.year == body.year, models.Subject.code == body.subject_code)
-           .order_by(models.Question.ref).limit(body.count).all()]
+           .order_by(models.Question.ref, models.Question.id).offset(body.offset).limit(body.count).all()]
     if not ids:
         raise HTTPException(404, 'Questions are not available for this selection yet.')
-    title = f'{"BITSAT" if exam == "bitsat" else "MHT CET"} {body.year} · {SUBJECTS[body.subject_code]} · Memory-based practice'
+    title = f'{EXAM_LABELS[exam]} {body.year} · {SUBJECTS[body.subject_code]} · Questions {body.offset+1}–{body.offset+len(ids)}'
     return create_attempt(db, user, exam, ids, title, body.subject_code, len(ids)*90)
 
 
@@ -78,7 +81,7 @@ class PaperStart(BaseModel):
 
 
 @router.post('/{exam}/papers', response_model=schemas.SubjectTestOut, status_code=201)
-def start_paper(body: PaperStart, exam: Literal['bitsat', 'mht_cet'],
+def start_paper(body: PaperStart, exam: Exam,
                 user: models.User = Depends(get_current_db_user), db: Session = Depends(get_db)):
     rows = (eligible(db, exam).join(models.Subject, models.Subject.id == models.Chapter.subject_id)
             .filter(models.Question.year == body.year, models.Question.shift == body.shift,
@@ -88,12 +91,12 @@ def start_paper(body: PaperStart, exam: Literal['bitsat', 'mht_cet'],
     ids = [row.id for row in sorted(rows, key=lambda row: (order[row.code], row.ref))]
     if not ids:
         raise HTTPException(404, 'No published questions are available for this paper.')
-    title = f'{"BITSAT" if exam == "bitsat" else "MHT CET"} {body.year} · {body.shift} · Shift mock'
+    title = f'{EXAM_LABELS[exam]} {body.year} · {body.shift} · Shift mock'
     if exam == 'mht_cet' and body.acquisition_source is not None:
         from app.services.paper_discovery import count_event, paper_slug
         count_event(db, paper_slug(body.year, body.shift), body.acquisition_source, 'mock_start')
     # Use available questions within the existing timed exam contract.
-    return create_attempt(db, user, exam, ids, title, 'PCM' if exam == 'mht_cet' else 'ALL', 10800, is_mock=True)
+    return create_attempt(db, user, exam, ids, title, 'ALL' if exam == 'bitsat' else 'PCM', 10800, is_mock=True)
 
 
 def create_attempt(db, user, exam, ids, title, subject_code, duration_sec, is_mock=False):
@@ -106,8 +109,8 @@ def create_attempt(db, user, exam, ids, title, subject_code, duration_sec, is_mo
                  .join(models.Subject, models.Chapter.subject_id == models.Subject.id)
                  .filter(models.Question.id.in_(ids)).all())
     def marks(q):
-        return 3 if exam == 'bitsat' else (2 if codes[q.id] == 'MATH' else 1)
-    wrong = 1 if exam == 'bitsat' else 0
+        return 4 if exam == 'jee_main' else 3 if exam == 'bitsat' else (2 if codes[q.id] == 'MATH' else 1)
+    wrong = 0 if exam == 'mht_cet' else 1
     by_id = {q.id: q for q in rows}
     questions = [by_id[qid] for qid in ids]
     test = models.Test(title=title, kind='mock' if is_mock else 'chapter', pattern=exam, duration_sec=duration_sec,

@@ -227,6 +227,8 @@ class QuestionResultOut(BaseModel):
     marks_awarded: int
     correct_option_ids: list[int]
     solution: str
+    answer_min: float | None = None
+    answer_max: float | None = None
 
 
 class SubjectTestResultOut(BaseModel):

@@ -15,6 +15,7 @@ import FullscreenGuard from '../components/FullscreenGuard.jsx'
 import { requestFullscreen, useFullscreenLock } from '../lib/fullscreen.js'
 import { GOOD, BAD, PEN, SUBJECT_COLOR } from '../crackjee/ui.js'
 
+import { archiveReturn, resultAnswer } from '../lib/pyqArchive.js'
 import { createPracticeTimer } from '../lib/practiceTimer.js'
 import './practice.css'
 
@@ -26,7 +27,8 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   const [searchParams] = useSearchParams()
   const requestedSubject = searchParams.get('subject')
   const requestedChapter = searchParams.get('chapter')
-  const pyq = ['bitsat', 'mht_cet'].includes(searchParams.get('pyq'))
+  const pyq = ['jee_main', 'bitsat', 'mht_cet'].includes(searchParams.get('pyq'))
+  const pyqReturn = archiveReturn(searchParams)
   const assessment = searchParams.get('assessment') === '1'
   const [deadline, setDeadline] = useState(() => location.state?.missionTest?.is_mock ? Date.now() + location.state.missionTest.duration_sec * 1000 : null)
   const [remaining, setRemaining] = useState(10800)
@@ -158,7 +160,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
 
   const exitTest = () => {
     if (!window.confirm('Leave this test? Your answers will be lost.')) return
-    if (pyq) { navigate('/pyq'); return }
+    if (pyq) { navigate(pyqReturn); return }
     setTest(null)
     setAnswers({})
     setIndex(0)
@@ -196,14 +198,14 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
     }
   }
 
-  const restart = () => { if (pyq) { navigate('/pyq'); return }; setTest(null); setResult(null); setAnswers({}); setIndex(0) }
+  const restart = () => { if (pyq) { navigate(pyqReturn); return }; setTest(null); setResult(null); setAnswers({}); setIndex(0) }
   const isAnswered = (q) => {
     const a = answers[q.question_id]
     return Boolean(a && (a.option_ids?.length || (a.numeric_answer !== null && a.numeric_answer !== undefined)))
   }
   const answeredCount = test ? test.questions.filter(isAnswered).length : 0
 
-  useEffect(() => { if (pyq && !test) navigate('/pyq', { replace: true }) }, [pyq, test, navigate])
+  useEffect(() => { if (pyq && !test) navigate(pyqReturn, { replace: true }) }, [pyq, test, navigate, pyqReturn])
 
   // ---------------------------------------------------------------- RESULTS
   if (result) {
@@ -235,7 +237,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
                   </span>
                 </div>
                 {test.questions.find(q => q.question_id === r.question_id)?.recommendation && <p className="muted" style={{fontSize:13}}>{test.questions.find(q => q.question_id === r.question_id).recommendation.reason}</p>}
-                <p>Correct answer: {test.questions.find(q => q.question_id === r.question_id)?.options.filter(o => r.correct_option_ids.includes(o.id)).map(o => o.label).join(', ') || 'See solution'}</p>
+                <p>Correct answer: {resultAnswer(test.questions.find(q => q.question_id === r.question_id), r)}</p>
                 <p><MathText text={r.solution || 'Worked solution is not available yet.'} /></p>
               </div>
             ))}
