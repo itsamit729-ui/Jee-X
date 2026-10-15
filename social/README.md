@@ -218,8 +218,14 @@ One-time setup after deploying `origin/feature/version-1`:
    publish anything. The selected channel is validated by its exact Buffer ID;
    the worker never guesses the first YouTube channel on an account.
 4. Keep the existing `POST /api/social/trigger` cron. New scheduled Reels prepared
-   after activation get a separate Short on a following trigger. At most one
-   Short is submitted per trigger; Buffer is asked to publish five minutes later.
+   after activation get a separate Short on that same trigger, after preparation.
+   One worker pass runs before generation and another after scheduled generation;
+   each can submit at most one eligible Short, within the shared Buffer budget.
+   Buffer is asked to publish five minutes after acceptance.
+5. For an already prepared waiting video, click **Process waiting Shorts** in
+   Admin. This uses the same leases and duplicate checks without generating an
+   Instagram post. The Shorts worker timestamp and reason show missing checks,
+   disabled publishing and budget deferrals; a ready row is not a failed upload.
 
 Shorts start disabled. Activation or a channel change never backfills existing
 videos. Manual `/test-reel` videos and carousels are excluded. Deactivation stops

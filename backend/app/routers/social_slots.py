@@ -244,6 +244,20 @@ class ShortsSetup(BaseModel):
     expected_updated_at:str|None=Field(None,max_length=64)
 
 
+@admin_router.post('/youtube/trigger',status_code=202)
+def trigger_shorts(tasks:BackgroundTasks):
+    if os.getenv('SOCIAL_PAUSED','').lower()=='true':
+        raise HTTPException(503,'Social publishing is paused on the server.')
+    if not os.getenv('BUFFER_API_KEY'):
+        raise HTTPException(503,'BUFFER_API_KEY must be configured.')
+    with SessionLocal() as db:
+        config=shorts.settings(db)
+        if not config['enabled'] or not config.get('channel_id'):
+            raise HTTPException(409,'Enable Shorts and choose the connected YouTube channel first.')
+    tasks.add_task(shorts.tick)
+    return {'state':'processing_prepared_shorts','instagram_unchanged':True}
+
+
 @admin_router.get('/youtube/channels')
 def youtube_channels():
     try:
@@ -451,6 +465,10 @@ def dispatch(tasks, manual_reel=False, require_voice=False):
         if manual_reel:
             pipeline.write(db,pipeline.key('voice-required',day),require_voice);db.commit()
     tasks.add_task(run_job, day, owner)
+    # The first Shorts tick can only see previously prepared assets. Drain again
+    # after generation so this trigger also hands off its newly prepared Reel.
+    if not manual_reel:
+        tasks.add_task(shorts.tick)
     return result
 
 

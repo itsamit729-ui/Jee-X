@@ -19,7 +19,11 @@ def source(setup,monkeypatch,enabled=True):
     if enabled:enable(factory)
     monkeypatch.setattr(social.worker,'find_youtube_channel',lambda channel:{'id':channel,'organization_id':'org','name':'Jee Edge'})
     clock[0]=clock[0].replace(hour=9,minute=40)
-    assert client.post('/api/social/trigger',headers=AUTH).status_code==202
+    # These unit tests inspect a prepared checkpoint before submission. The
+    # integration test below exercises the complete same-trigger handoff.
+    with monkeypatch.context() as preparation:
+        preparation.setattr(shorts,'tick',lambda:None)
+        assert client.post('/api/social/trigger',headers=AUTH).status_code==202
     return client,factory,instagram
 
 
@@ -246,6 +250,39 @@ def test_shared_budget_defers_without_exhausting_automatic_retries(setup,monkeyp
     shorts.tick()
     with factory() as db:
         row=db.get(SocialShort,'2026-10-06:s02');assert row.state=='ready' and row.attempts==0
+        heartbeat=shorts.report(db)['worker']
+        assert heartbeat['state']=='deferred' and 'budget' in heartbeat['reason']
         db.get(SocialUsage,'budget-test').created_at=datetime.utcnow()-timedelta(days=31);db.commit()
     shorts.tick()
     assert len(calls)==1
+
+
+def test_new_reel_submits_its_short_on_the_same_trigger_without_duplicates(setup,monkeypatch):
+    client,factory,clock,instagram=setup
+    enable(factory)
+    monkeypatch.setattr(social.worker,'find_youtube_channel',lambda channel:{'id':channel,'organization_id':'org'})
+    calls=uploader(monkeypatch,factory)
+    clock[0]=clock[0].replace(hour=9,minute=40)
+    assert client.post('/api/social/trigger',headers=AUTH).status_code==202
+    with factory() as db:
+        row=db.get(SocialShort,'2026-10-06:s02')
+        assert row.state=='scheduled' and row.attempts==1 and row.post_id=='yt1'
+        assert shorts.report(db)['worker']['state']=='processed'
+    assert len(calls)==1 and len(instagram)==1
+    assert client.post('/api/social/trigger',headers=AUTH).status_code==202
+    assert len(calls)==1 and len(instagram)==1
+
+
+def test_admin_can_drain_waiting_short_without_creating_an_instagram_post(setup,monkeypatch):
+    client,factory,instagram=source(setup,monkeypatch)
+    client.app.include_router(social.admin_router)
+    assert client.post('/api/admin/social/youtube/trigger').status_code!=202
+    client.app.dependency_overrides[social._require_admin]=lambda:'verified-admin'
+    calls=uploader(monkeypatch,factory)
+    assert client.post('/api/admin/social/youtube/trigger').json()['instagram_unchanged'] is True
+    assert len(calls)==1 and len(instagram)==1
+    assert client.post('/api/admin/social/youtube/trigger').status_code==202
+    assert len(calls)==1 and len(instagram)==1
+    with factory() as db:
+        config=shorts.settings(db);config['enabled']=False;pipeline.write(db,shorts.CONFIG,config);db.commit()
+    assert client.post('/api/admin/social/youtube/trigger').status_code==409

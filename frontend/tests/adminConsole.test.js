@@ -5,8 +5,8 @@ import { fileURLToPath } from 'node:url'
 import Module from 'node:module'
 import { buildSync } from 'esbuild'
 const filename=fileURLToPath(import.meta.url)
-const output=buildSync({stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import CreativeCapacity from './src/components/admin/AdminCreativeCapacity.jsx';import Overview,{TeachingSummary} from './src/components/admin/AdminOverview.jsx';import {DataTable,Pager,validSection,SECTIONS} from './src/components/admin/AdminShared.jsx';import {OperationsLedger,PeopleDirectory} from './src/components/admin/AdminResources.jsx';
-export {validSection,SECTIONS};export const capacity=data=>renderToStaticMarkup(<CreativeCapacity data={data}/>);export const overview=data=>renderToStaticMarkup(<Overview data={data} onSection={()=>{}}/>);export const teaching=data=>renderToStaticMarkup(<TeachingSummary data={data}/>);export const table=rows=>renderToStaticMarkup(<DataTable rows={rows} empty="No matching people." columns={[{key:'name',label:'Person'}]}/>);export const pager=data=>renderToStaticMarkup(<Pager data={data} offset={0} busy={false} setOffset={()=>{}}/>);export const scans=()=>renderToStaticMarkup(<OperationsLedger token="test" initialQueue="scans"/>);export const people=()=>renderToStaticMarkup(<PeopleDirectory token="test"/>);`,resolveDir:path.resolve(path.dirname(filename),'..'),loader:'jsx'},bundle:true,write:false,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom/server'],loader:{'.css':'empty'}}).outputFiles[0].text
+const output=buildSync({stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import CreativeCapacity from './src/components/admin/AdminCreativeCapacity.jsx';import YouTubeShorts from './src/components/AdminYouTubeShorts.jsx';import Overview,{TeachingSummary} from './src/components/admin/AdminOverview.jsx';import {DataTable,Pager,validSection,SECTIONS} from './src/components/admin/AdminShared.jsx';import {OperationsLedger,PeopleDirectory} from './src/components/admin/AdminResources.jsx';
+export {validSection,SECTIONS};export const shorts=data=>renderToStaticMarkup(<YouTubeShorts data={data} target={4}/>);export const capacity=data=>renderToStaticMarkup(<CreativeCapacity data={data}/>);export const overview=data=>renderToStaticMarkup(<Overview data={data} onSection={()=>{}}/>);export const teaching=data=>renderToStaticMarkup(<TeachingSummary data={data}/>);export const table=rows=>renderToStaticMarkup(<DataTable rows={rows} empty="No matching people." columns={[{key:'name',label:'Person'}]}/>);export const pager=data=>renderToStaticMarkup(<Pager data={data} offset={0} busy={false} setOffset={()=>{}}/>);export const scans=()=>renderToStaticMarkup(<OperationsLedger token="test" initialQueue="scans"/>);export const people=()=>renderToStaticMarkup(<PeopleDirectory token="test"/>);`,resolveDir:path.resolve(path.dirname(filename),'..'),loader:'jsx'},bundle:true,write:false,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom/server'],loader:{'.css':'empty'}}).outputFiles[0].text
 const compiled=new Module(filename);compiled.paths=Module._nodeModulePaths(path.dirname(filename));compiled._compile(output,filename)
 const ui=compiled.exports
 const data={overview:{total_users:0,student_users:0,teacher_users:0,new_users_today:0,new_users_7d:0,active_users_today:0,total_questions:0,published_questions:0,submitted_attempts:0,attempts_today:0,questions_solved:0,average_accuracy:0},community:{open_question_reports:0,pending_redemptions:0,rated_users:0,rated_contests:0,outstanding_coins:0},daily:{completion_rate:0,assigned_today:0,completed_today:0},growth:[{date:'2026-10-14',signups:0,active_users:0,attempts:0}],recent_users:[],recent_attempts:[],teaching:{classrooms:0,students:0,assignments:0,papers:0,finalized_papers:0,scans:{}}}
@@ -52,4 +52,15 @@ test('publishing capacity distinguishes configured targets, real narration and u
  assert.match(html,/0.50.*MB/)
  assert.match(ui.capacity({...input,jobs:[]}),/Older jobs did not collect this telemetry/)
  assert.equal(ui.capacity({}),'')
+})
+
+
+test('Shorts show the actual worker deferral instead of implying every ready job is a missing cron',()=>{
+ const data={settings:{enabled:true,channel_id:'tube'},jobs:[{day:'2026-10-15',slot:'s02',title:'Ramp',state:'ready',attempts:0}],worker:{at:'2026-10-15T08:00:00Z',state:'deferred',reason:'buffer local free-tier budget reached; wait for the rolling window to reset.'},needs_attention:0}
+ const html=ui.shorts(data)
+ assert.match(html,/Ready to submit/)
+ assert.match(html,/Process waiting Shorts/)
+ assert.match(html,/buffer local free-tier budget reached/)
+ assert.doesNotMatch(html,/Waiting for cron/)
+ assert.match(ui.shorts({...data,worker:null}),/No worker check recorded yet/)
 })

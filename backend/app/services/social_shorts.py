@@ -208,25 +208,37 @@ def prepare_recent():
 
 
 def tick():
-    """One prepared Short per cron call, with a pre-submission lease and bounded retries."""
+    """One prepared Short per worker pass, with a pre-submission lease and bounded retries."""
+    outcome={'at':pipeline.stamp(datetime.utcnow()),'state':'checking','reason':None}
     try:
-        if os.getenv('SOCIAL_PAUSED','').lower()=='true':return
+        if os.getenv('SOCIAL_PAUSED','').lower()=='true':
+            outcome.update(state='paused',reason='Social publishing is paused on the server.');return
         prepare_recent();check()
         now=datetime.utcnow();owner=uuid.uuid4().hex
         with SessionLocal() as db:
             budget.locked(db);config=settings(db)
             db.query(SocialShort).filter(SocialShort.state.in_(('ready','failed','running')),SocialShort.post_id.is_(None),
                 SocialShort.created_at<now-timedelta(days=2)).update({'state':'expired','updated_at':now,'error':'Prepared Short expired before submission.'},synchronize_session=False)
-            if not config['enabled']:db.commit();return
+            if not config['enabled']:
+                outcome.update(state='disabled',reason='YouTube Shorts publishing is disabled.');db.commit();return
             budget.check(db,'buffer',units=10)
             row=db.query(SocialShort).filter(SocialShort.channel_id==config['channel_id'],SocialShort.attempts<3,
                 or_(SocialShort.state=='ready',(SocialShort.state=='failed') & (SocialShort.updated_at<now-timedelta(minutes=10)),
                     (SocialShort.state=='running') & (SocialShort.updated_at<now-LEASE))).order_by(SocialShort.created_at).first()
-            if not row:db.commit();return
+            if not row:
+                outcome.update(state='idle',reason='No eligible Short was waiting at this check.');db.commit();return
             day=row.day;row.state='running';row.owner=owner;row.attempts+=1;row.error=None;row.updated_at=now;db.commit()
         run(day,owner)
+        outcome.update(state='processed',reason='Checked the prepared Short for submission.',slot=day)
     except Exception as error:
+        outcome.update(state='deferred',reason=safe_error(error))
         logging.getLogger('uvicorn.error').warning('Shorts tick deferred: %s',safe_error(error))
+    finally:
+        try:
+            with SessionLocal() as db:
+                pipeline.write(db,'youtube-worker',outcome);db.commit()
+        except Exception:
+            logging.getLogger('uvicorn.error').warning('Shorts worker heartbeat could not be saved.')
 
 
 def report(db):
@@ -236,5 +248,5 @@ def report(db):
         'post_id':r.post_id,'error':r.error,'title':json.loads(r.payload)['metadata']['youtube']['title'],
         'updated_at':pipeline.stamp(r.updated_at),'checked_at':pipeline.stamp(r.checked_at),'due_at':pipeline.stamp(r.due_at),
         'published_url':r.external_link,'channel_id':r.channel_id} for r in rows]
-    return {'settings':config,'jobs':jobs,'needs_attention':sum(r.state in ('failed','needs_review','delivery_failed','blocked') for r in rows),
+    return {'settings':config,'worker':pipeline.read(db,'youtube-worker'),'jobs':jobs,'needs_attention':sum(r.state in ('failed','needs_review','delivery_failed','blocked') for r in rows),
             'last_published':next((j for j in jobs if j['state'] in ('published','confirmed_published')),None)}
