@@ -252,6 +252,7 @@ def test_shared_budget_defers_without_exhausting_automatic_retries(setup,monkeyp
         row=db.get(SocialShort,'2026-10-06:s02');assert row.state=='ready' and row.attempts==0
         heartbeat=shorts.report(db)['worker']
         assert heartbeat['state']=='deferred' and 'budget' in heartbeat['reason']
+        assert heartbeat['retry_at'] and heartbeat['budget']['windows'][0]['window_seconds']==900
         db.get(SocialUsage,'budget-test').created_at=datetime.utcnow()-timedelta(days=31);db.commit()
     shorts.tick()
     assert len(calls)==1
@@ -286,3 +287,18 @@ def test_admin_can_drain_waiting_short_without_creating_an_instagram_post(setup,
     with factory() as db:
         config=shorts.settings(db);config['enabled']=False;pipeline.write(db,shorts.CONFIG,config);db.commit()
     assert client.post('/api/admin/social/youtube/trigger').status_code==409
+
+
+def test_quarantined_shorts_back_off_but_can_be_checked_manually(setup,monkeypatch):
+    _,factory,_=source(setup,monkeypatch)
+    calls=[]
+    with factory() as db:
+        row=db.get(SocialShort,'2026-10-06:s02')
+        row.state='delivery_failed';row.post_id='yt1'
+        row.checked_at=datetime.utcnow()-timedelta(hours=1);db.commit()
+    monkeypatch.setattr(social.worker,'post',lambda identity:calls.append(identity) or {'id':identity,'status':'sent','schedulingType':'automatic'})
+    shorts.check()
+    assert calls==[]
+    shorts.check(True)
+    assert calls==['yt1']
+    with factory() as db:assert db.get(SocialShort,'2026-10-06:s02').state=='published'

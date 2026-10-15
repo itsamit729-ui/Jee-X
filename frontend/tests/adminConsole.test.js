@@ -56,10 +56,12 @@ test('publishing capacity distinguishes configured targets, real narration and u
 
 
 test('Shorts show the actual worker deferral instead of implying every ready job is a missing cron',()=>{
- const data={settings:{enabled:true,channel_id:'tube'},jobs:[{day:'2026-10-15',slot:'s02',title:'Ramp',state:'ready',attempts:0}],worker:{at:'2026-10-15T08:00:00Z',state:'deferred',reason:'buffer local free-tier budget reached; wait for the rolling window to reset.'},needs_attention:0}
+ const data={settings:{enabled:true,channel_id:'tube'},jobs:[{day:'2026-10-15',slot:'s02',title:'Ramp',state:'ready',attempts:0}],worker:{at:'2026-10-15T08:00:00Z',state:'deferred',reason:'buffer local free-tier budget reached; wait for the rolling window to reset.',retry_at:'2026-10-15T08:15:00Z'},needs_attention:0}
  const html=ui.shorts(data)
  assert.match(html,/Ready to submit/)
  assert.match(html,/Process waiting Shorts/)
+ assert.match(html,/Earliest budget retry:/)
+ assert.match(html,/estimate; shared usage can change this/)
  assert.match(html,/buffer local free-tier budget reached/)
  assert.doesNotMatch(html,/Waiting for cron/)
  assert.match(ui.shorts({...data,worker:null}),/No worker check recorded yet/)

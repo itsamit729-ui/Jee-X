@@ -2,21 +2,47 @@
 import json
 import uuid
 from contextlib import contextmanager
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from sqlalchemy import func, case
 from sqlalchemy.exc import IntegrityError
 from app.database import SessionLocal
 from app.models.social_job import SocialUsage, SocialQuotaLock, SocialCache
 from social import worker
 
-# Headroom below published limits; no paid fallback and no automatic limit increases.
+# Headroom below Buffer Free's documented 100/250/3000 rolling limits:
+# https://developers.buffer.com/guides/api-limits.html (verified 2026-10-15).
+# No paid fallback; the monthly cap still bounds sustained usage.
 LIMITS = {
-    'buffer': [(900, 95, 0), (86400, 95, 0), (30*86400, 2850, 0)],
+    'buffer': [(900, 95, 0), (86400, 235, 0), (30*86400, 2850, 0)],
     'groq': [(60, 28, 7600), (86400, 950, 190000)],
     'groq_tts': [(60, 8, 1000), (86400, 90, 3200)],
     'render': [(86400, 1800, 0)],
     'egress': [(86400, 64*1024*1024, 0), (30*86400, 1024*1024*1024, 0)],
 }
+
+
+class BudgetExceeded(worker.ServiceError):
+    def __init__(self, message, retry_at=None, details=None):
+        super().__init__(message)
+        self.retry_at = retry_at
+        self.details = details
+
+
+def stamp(value):
+    return value.replace(tzinfo=timezone.utc).isoformat() if value else None
+
+
+def release_time(db, service, seconds, used, consumed, units, tokens, max_units, max_tokens, now):
+    """When enough recorded usage expires for this request, without resetting it."""
+    rows = db.query(SocialUsage.created_at, SocialUsage.units, SocialUsage.tokens).filter(
+        SocialUsage.service == service, SocialUsage.created_at > now-timedelta(seconds=seconds)
+    ).order_by(SocialUsage.created_at).all()
+    for created, spent, spent_tokens in rows:
+        used -= spent
+        consumed -= spent_tokens
+        if used+units <= max_units and (not max_tokens or consumed+tokens <= max_tokens):
+            return created+timedelta(seconds=seconds+1)
+    return None
 
 
 def locked(db):
@@ -39,11 +65,22 @@ def check(db, service, units=0, tokens=0):
     now = datetime.utcnow()
     cooldown = db.get(SocialCache, 'cooldown:'+service)
     if cooldown and cooldown.expires_at > now:
-        raise worker.ServiceError(service + ' provider cooldown active; holding work without paid fallback.')
+        raise BudgetExceeded(service + ' provider cooldown active; holding work without paid fallback.',
+                             stamp(cooldown.expires_at), {'source':'provider_cooldown','service':service})
+    blocked=[]
     for seconds, max_units, max_tokens in LIMITS[service]:
         used, consumed = totals(db, service, seconds, now)
         if used+units > max_units or (max_tokens and consumed+tokens > max_tokens):
-            raise worker.ServiceError(service + ' local free-tier budget reached; wait for the rolling window to reset.')
+            retry=release_time(db,service,seconds,used,consumed,units,tokens,max_units,max_tokens,now)
+            blocked.append({'window_seconds':seconds,'used':int(used),'budget':max_units,
+                            'tokens_used':int(consumed),'token_budget':max_tokens or None,'retry_at':stamp(retry)})
+    if blocked:
+        # All blocked windows must have headroom, not just the first one.
+        retry=max(w['retry_at'] for w in blocked) if all(w['retry_at'] for w in blocked) else None
+        labels={900:'15-minute',86400:'24-hour',30*86400:'30-day'}
+        windows=', '.join(f"{labels.get(w['window_seconds'],str(w['window_seconds'])+'s')} {w['used']}/{w['budget']}" for w in blocked)
+        raise BudgetExceeded(service+f' local free-tier budget reached ({windows}; {units} units needed).',retry,
+                             {'source':'local_ledger','service':service,'units_requested':units,'windows':blocked})
 
 
 def reserve(service, units=1, tokens=0):

@@ -121,7 +121,7 @@ and at most three attempts. Each trigger claims at most one job. Default windows
 
 | Existing local rolling budget | Limit |
 | --- | --- |
-| Buffer | 95 calls / 15 min; 95 / 24 h; 2,850 / 30 days |
+| Buffer | 95 calls / 15 min; 235 / 24 h; 2,850 / 30 days |
 | Groq editorial | 28 calls / 7,600 tokens per minute; 950 / 190,000 per day |
 | Groq speech | 8 calls / 1,000 reserved tokens per minute; 90 / 3,200 per day |
 | Rendering | 1,800 seconds per day |
@@ -318,3 +318,12 @@ increased and no existing queued video is replaced.
 
 The research method and its engagement-data limitations are documented in
 [`docs/social-content-review-2026-10.md`](../docs/social-content-review-2026-10.md).
+
+Buffer Free quota reference: https://developers.buffer.com/guides/api-limits.html
+(verified 2026-10-15: 100 requests/15 minutes, 250/24 hours, 3,000/30 days).
+The local ledger retains headroom and never resets historical usage. Shorts
+worker deferrals identify the blocked windows and earliest estimated retry
+when enough recorded usage expires; external usage can still delay delivery.
+Unresolved Shorts are reconciled every four hours after their initial check,
+while scheduled submissions retain their normal thirty-minute checks. Manual
+delivery checks remain available and never resubmit uncertain posts.

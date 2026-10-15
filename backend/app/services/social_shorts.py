@@ -6,7 +6,7 @@ import re
 import uuid
 from datetime import datetime,timedelta,timezone
 from urllib.parse import urlsplit,parse_qs
-from sqlalchemy import or_
+from sqlalchemy import and_, or_
 from sqlalchemy.exc import IntegrityError
 from app.database import SessionLocal
 from app.models.social_job import SocialShort,SocialSlot,SocialAsset
@@ -111,8 +111,13 @@ def check(force=False):
                 cache=pipeline.read(db,'youtube-delivery-check')
                 last=pipeline.parse_time((cache or {}).get('at'))
                 if last and now-last<timedelta(minutes=1):return
+                quarantine=('needs_review','delivery_failed','blocked')
+                elapsed=SocialShort.checked_at<now-timedelta(minutes=1 if force else 30)
+                if not force:
+                    elapsed=or_(and_(SocialShort.state.notin_(quarantine),elapsed),
+                                and_(SocialShort.state.in_(quarantine),SocialShort.checked_at<now-timedelta(hours=4)))
                 rows=db.query(SocialShort).filter(SocialShort.state.in_(PENDING),or_(SocialShort.checked_at.is_(None),
-                    SocialShort.checked_at<now-timedelta(minutes=1 if force else 30))).order_by(SocialShort.checked_at,SocialShort.updated_at).limit(2).all()
+                    elapsed)).order_by(SocialShort.checked_at,SocialShort.updated_at).limit(2).all()
                 rows=[(r.day,r.post_id,r.organization_id,r.channel_id,r.updated_at,r.due_at) for r in rows]
                 if not rows:return
                 budget.check(db,'buffer',units=10)  # Leave Instagram headroom; never raise the shared budget.
@@ -232,6 +237,8 @@ def tick():
         outcome.update(state='processed',reason='Checked the prepared Short for submission.',slot=day)
     except Exception as error:
         outcome.update(state='deferred',reason=safe_error(error))
+        if isinstance(error,budget.BudgetExceeded):
+            outcome.update(retry_at=error.retry_at,budget=error.details)
         logging.getLogger('uvicorn.error').warning('Shorts tick deferred: %s',safe_error(error))
     finally:
         try:
