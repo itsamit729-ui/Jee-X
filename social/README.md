@@ -327,3 +327,22 @@ when enough recorded usage expires; external usage can still delay delivery.
 Unresolved Shorts are reconciled every four hours after their initial check,
 while scheduled submissions retain their normal thirty-minute checks. Manual
 delivery checks remain available and never resubmit uncertain posts.
+
+### YouTube text validation and existing failed posts
+
+Descriptions and titles convert ASCII maths such as `<=>`, `<=` and `>` to
+YouTube-safe Unicode operators before submission. This leaves the authored
+lesson, Instagram caption and video unchanged. Description validation uses
+YouTube’s 5,000-byte UTF-8 limit, rather than character count; oversized captions
+stop before submission. Existing unsubmitted checkpoints receive the same checks.
+Reference: https://developers.google.com/youtube/v3/docs/videos
+
+For a legacy failed Short with a correctable caption, Admin shows **Repair
+caption & retry existing post**. This authenticates the admin, checks the row
+version, fetches the exact existing Buffer post and verifies its slot marker and
+failed state, then edits and reschedules that same post ID. It preserves current
+Buffer text edits, the existing title and video. Already sent/scheduled posts are
+not rescheduled; valid captions are not retried blindly. An uncertain edit stays
+in review and is reconciled by its existing ID, without creating another post.
+Buffer still determines delivery; its generic unknown error alone cannot prove
+which upstream failure occurred.

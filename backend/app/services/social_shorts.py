@@ -1,5 +1,7 @@
 """Independent Shorts delivery using immutable Reel assets and the existing Buffer budget."""
 import json
+from copy import deepcopy
+from html import unescape
 import logging
 import os
 import re
@@ -15,7 +17,7 @@ from app.services import social_budget as budget,social_pipeline as pipeline
 from social import worker,creative,editorial,reel
 
 CONFIG='youtube-settings'
-PENDING=('scheduled','submitting','needs_review','delivery_failed','blocked')
+PENDING=('scheduled','submitting','needs_review','delivery_failed','blocked','repairing')
 LEASE=timedelta(minutes=15)
 
 
@@ -51,6 +53,34 @@ def marker(day):
     return f'JeeEdge Shorts {date} / {slot}'
 
 
+def youtube_text(value):
+    """YouTube forbids literal ASCII angle brackets, even in maths descriptions."""
+    value=unescape(value).replace('\r\n','\n').replace('\r','\n')
+    for before,after in (('<=>','⇌'),('<->','↔'),('<=','≤'),('>=','≥'),('->','→'),('<-','←'),
+                         ('<','＜'),('>','＞')):
+        value=value.replace(before,after)
+    return ''.join(c for c in value if ord(c)>=32 or c in '\n\t').strip()
+
+
+def validated_payload(value):
+    payload=deepcopy(value)
+    title=' '.join(youtube_text(payload['metadata']['youtube']['title']).split())
+    text=youtube_text(payload['text'])
+    if not 1<=len(title)<=100:
+        raise worker.ServiceError('YouTube title must contain 1–100 characters after math conversion.')
+    if len(text.encode('utf-8'))>5000:
+        raise worker.ServiceError('YouTube description exceeds 5,000 UTF-8 bytes. Shorten the caption before submission.')
+    payload['metadata']['youtube']['title']=title;payload['text']=text
+    return payload
+
+
+def caption_repairable(row):
+    if row.state!='delivery_failed' or not row.post_id or row.external_link:return False
+    payload=json.loads(row.payload)
+    text=youtube_text(payload['text'])
+    return any(c in payload['text'] for c in '<>') and len(text.encode('utf-8'))<=5000
+
+
 def prepare(day):
     """Local checkpoint only; no render, provider request or upload."""
     if day.endswith(':s99'):return
@@ -64,16 +94,15 @@ def prepare(day):
         assets=db.query(SocialAsset).filter_by(day=day,mime='video/mp4').all()
         if not lesson or len(assets)!=1:return
         c=json.loads(lesson.content)
-        title=re.sub('[<>\r\n]','',creative.opening(c)).strip()
+        title=' '.join(youtube_text(creative.opening(c)).split())
         if len(title)>80:title=c['topic']
         title=title+' | Jee Edge #Shorts'
         description=(editorial.authored(c)['caption']+'\n\nPractise by chapter: '
             'https://jeeedge.in/start?utm_source=youtube&utm_medium=organic_social&utm_campaign=shorts&to=practice'
             '\nOriginal teaching example, not an official PYQ.\n'+reel.music_credit(c)+'\n\n'+marker(day))
-        if not 1<=len(title)<=100 or len(description)>5000:raise worker.ServiceError('YouTube title or description exceeds its limit.')
         now=datetime.utcnow()
-        payload={'text':description,'metadata':{'youtube':{'title':title,'categoryId':'27','privacy':'public',
-            'madeForKids':False,'embeddable':True,'notifySubscribers':False,'isAiGenerated':True}}}
+        payload=validated_payload({'text':description,'metadata':{'youtube':{'title':title,'categoryId':'27','privacy':'public',
+            'madeForKids':False,'embeddable':True,'notifySubscribers':False,'isAiGenerated':True}}})
         db.add(SocialShort(day=day,channel_id=config['channel_id'],asset_id=assets[0].id,payload=json.dumps(payload),
             state='ready',owner=uuid.uuid4().hex,attempts=0,created_at=now,updated_at=now))
         try:db.commit()
@@ -161,7 +190,8 @@ def run(day,owner):
                 if not config['enabled'] or config.get('channel_id')!=row.channel_id:
                     raise worker.ServiceError('Shorts publishing is disabled or the selected channel changed.')
                 budget.check(db,'buffer',units=10)
-                channel_id=row.channel_id;asset_id=row.asset_id;payload=json.loads(row.payload)
+                channel_id=row.channel_id;asset_id=row.asset_id;payload=validated_payload(json.loads(row.payload))
+                row.payload=json.dumps(payload);db.commit()
             cached=budget.cached(pipeline.key('youtube-channel',channel_id))
             channel=cached or worker.find_youtube_channel(channel_id)
             if not cached:budget.cache(pipeline.key('youtube-channel',channel_id),channel,3600)
@@ -193,11 +223,66 @@ def run(day,owner):
                 dueAt=pipeline.stamp(due),assets=[{'video':{'url':url}}])
             response=worker.buffer('mutation($input:CreatePostInput!){createPost(input:$input){... on PostActionSuccess{post{'+worker.POST_FIELDS+'}} ... on MutationError{message}}}',{'input':payload})['createPost']
             post=response.get('post')
-            if not post or not post.get('id'):raise worker.ServiceError('Buffer did not confirm the YouTube submission. Inspect the existing queue before taking action.')
+            if not post or not post.get('id'):raise worker.ServiceError('Buffer did not confirm the YouTube submission. Inspect the existing queue before taking action. '+str(response.get('message') or 'No confirmation returned.'))
             record(day,{**post,'dueAt':post.get('dueAt') or pipeline.stamp(due),'schedulingType':post.get('schedulingType') or 'automatic'})
     except Exception as error:
         _transition(day,owner,'submitting' if submitted else 'running','needs_review' if submitted else 'failed',error=safe_error(error))
         logging.getLogger('uvicorn.error').warning('Shorts slot=%s: %s',day,safe_error(error))
+
+
+def repair_caption(day,owner):
+    """Explicit admin recovery: edit and reschedule the same failed Buffer ID."""
+    submitting=False
+    try:
+        with budget.tracked():
+            with SessionLocal() as db:
+                row=db.get(SocialShort,day);config=settings(db)
+                if not row or row.owner!=owner or row.state!='repairing':return
+                if os.getenv('SOCIAL_PAUSED','').lower()=='true' or not config['enabled'] or config.get('channel_id')!=row.channel_id:
+                    raise worker.ServiceError('Shorts setup changed or publishing is paused. Nothing edited.')
+                budget.check(db,'buffer',units=3);post_id=row.post_id
+            post=worker.post(post_id)
+            if not post or post.get('id')!=post_id or marker(day) not in (post.get('text') or '').splitlines():
+                raise worker.ServiceError('Existing Buffer post could not be matched to this Short. Nothing edited.')
+            if post.get('status') not in pipeline.FAILED_REMOTE:
+                record(day,post);return  # Already sent or scheduled; never reschedule it.
+            live_link=youtube_link(post.get('externalLink'))
+            if live_link:
+                _transition(day,owner,'repairing','needs_review',external_link=live_link,
+                            error='Buffer returned a YouTube link for this failed post. Check whether it is already live before retrying.')
+                return
+            current=post.get('text') or ''
+            corrected=youtube_text(current)
+            if not any(c in current for c in '<>'):
+                with SessionLocal() as db:
+                    row=db.query(SocialShort).filter_by(day=day,owner=owner,state='repairing').first()
+                    if row:
+                        payload=json.loads(row.payload);payload['text']=current;row.payload=json.dumps(payload);db.commit()
+                raise worker.ServiceError('The existing Buffer caption already meets YouTube text rules. No retry made; the unknown delivery error needs a different fix.')
+            if len(corrected.encode('utf-8'))>5000:
+                raise worker.ServiceError('Corrected caption exceeds 5,000 UTF-8 bytes. Nothing edited.')
+            with SessionLocal() as db:
+                row=db.query(SocialShort).filter_by(day=day,owner=owner,state='repairing').with_for_update().first()
+                config=settings(db)
+                if not row:return
+                if not config['enabled'] or config.get('channel_id')!=row.channel_id or os.getenv('SOCIAL_PAUSED','').lower()=='true':
+                    raise worker.ServiceError('Shorts setup changed before repair. Nothing edited.')
+                row.updated_at=datetime.utcnow();db.commit()
+            due=pipeline.stamp(datetime.utcnow()+timedelta(minutes=5))
+            submitting=True
+            result=worker.buffer('mutation($input:EditPostInput!){editPost(input:$input){... on PostActionSuccess{post{'+worker.POST_FIELDS+'}} ... on MutationError{message}}}',
+                {'input':{'id':post_id,'text':corrected,'schedulingType':'automatic','mode':'customScheduled','dueAt':due}})['editPost']
+            edited=result.get('post')
+            if not edited or edited.get('id')!=post_id:
+                raise worker.ServiceError('Buffer did not confirm the caption repair. Check the existing post. '+str(result.get('message') or ''))
+            record(day,{**edited,'dueAt':edited.get('dueAt') or due,'schedulingType':edited.get('schedulingType') or 'automatic'})
+            with SessionLocal() as db:
+                row=db.query(SocialShort).filter_by(day=day,owner=owner,post_id=post_id).with_for_update().first()
+                if row:
+                    payload=json.loads(row.payload);payload['text']=corrected;row.payload=json.dumps(payload);db.commit()
+    except Exception as error:
+        _transition(day,owner,'repairing','needs_review' if submitting else 'delivery_failed',error=safe_error(error))
+        logging.getLogger('uvicorn.error').warning('Shorts caption repair slot=%s: %s',day,safe_error(error))
 
 
 def prepare_recent():
@@ -254,6 +339,6 @@ def report(db):
     jobs=[{'day':r.day[:10],'slot':r.day.split(':')[-1],'state':r.state,'attempts':r.attempts,
         'post_id':r.post_id,'error':r.error,'title':json.loads(r.payload)['metadata']['youtube']['title'],
         'updated_at':pipeline.stamp(r.updated_at),'checked_at':pipeline.stamp(r.checked_at),'due_at':pipeline.stamp(r.due_at),
-        'published_url':r.external_link,'channel_id':r.channel_id} for r in rows]
+        'published_url':r.external_link,'channel_id':r.channel_id,'caption_repairable':caption_repairable(r)} for r in rows]
     return {'settings':config,'worker':pipeline.read(db,'youtube-worker'),'jobs':jobs,'needs_attention':sum(r.state in ('failed','needs_review','delivery_failed','blocked') for r in rows),
             'last_published':next((j for j in jobs if j['state'] in ('published','confirmed_published')),None)}

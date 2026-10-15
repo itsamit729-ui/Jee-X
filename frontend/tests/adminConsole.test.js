@@ -66,3 +66,10 @@ test('Shorts show the actual worker deferral instead of implying every ready job
  assert.doesNotMatch(html,/Waiting for cron/)
  assert.match(ui.shorts({...data,worker:null}),/No worker check recorded yet/)
 })
+
+
+test('caption repair is offered only for failed posts with a repairable caption',()=>{
+ const data={settings:{enabled:true,channel_id:'tube'},jobs:[{day:'2026-10-15',slot:'s08',title:'Equilibrium',state:'delivery_failed',post_id:'yt-existing',attempts:1,caption_repairable:true}],needs_attention:1}
+ assert.match(ui.shorts(data),/Repair caption &amp; retry existing post/)
+ assert.doesNotMatch(ui.shorts({...data,jobs:[{...data.jobs[0],state:'published',caption_repairable:false}]}),/Repair caption &amp; retry existing post/)
+})

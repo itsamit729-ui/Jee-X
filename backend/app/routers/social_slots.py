@@ -317,6 +317,26 @@ class RetryShort(BaseModel):
     expected_updated_at:str=Field(min_length=1,max_length=64)
 
 
+@admin_router.post('/youtube/jobs/{day}/repair-caption',status_code=202)
+def repair_short_caption(day:str,body:RetryShort,tasks:BackgroundTasks):
+    if os.getenv('SOCIAL_PAUSED','').lower()=='true':raise HTTPException(503,'Social publishing is paused.')
+    if not os.getenv('BUFFER_API_KEY'):raise HTTPException(503,'BUFFER_API_KEY must be configured.')
+    with SessionLocal() as db:
+        budget.locked(db);config=shorts.settings(db)
+        row=db.query(SocialShort).filter_by(day=day).with_for_update().first()
+        if not row:raise HTTPException(404,'Short not found.')
+        if row.updated_at!=pipeline.parse_time(body.expected_updated_at) or not shorts.caption_repairable(row):
+            raise HTTPException(409,'Only an unchanged failed post with a correctable caption can be repaired. Refresh status.')
+        if not config['enabled'] or config.get('channel_id')!=row.channel_id:
+            raise HTTPException(409,'Enable the matching YouTube channel first.')
+        if not db.get(SocialMedia,row.asset_id):raise HTTPException(409,'The original video is unavailable. Nothing resent.')
+        owner=uuid.uuid4().hex;row.owner=owner;row.state='repairing';row.updated_at=datetime.utcnow();row.error=None
+        pipeline.write(db,pipeline.key('youtube-caption-repair',day),{'at':pipeline.stamp(row.updated_at),'post_id':row.post_id},30*86400)
+        db.commit()
+    tasks.add_task(shorts.repair_caption,day,owner)
+    return {'state':'repairing','creates_new_post':False}
+
+
 @admin_router.post('/youtube/jobs/{day}/retry')
 def retry_short(day:str,body:RetryShort):
     with SessionLocal() as db:
