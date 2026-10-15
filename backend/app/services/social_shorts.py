@@ -75,7 +75,9 @@ def validated_payload(value):
 
 
 def caption_repairable(row):
-    if row.state!='delivery_failed' or not row.post_id or row.external_link:return False
+    legacy_rejection=(row.state=='needs_review' and 'Buffer did not confirm the caption repair.' in (row.error or '')
+                      and 'Invalid post: YouTube posts require a video.' in (row.error or ''))
+    if (row.state!='delivery_failed' and not legacy_rejection) or not row.post_id or row.external_link:return False
     payload=json.loads(row.payload)
     text=youtube_text(payload['text'])
     return any(c in payload['text'] for c in '<>') and len(text.encode('utf-8'))<=5000
@@ -241,6 +243,10 @@ def repair_caption(day,owner):
                 if os.getenv('SOCIAL_PAUSED','').lower()=='true' or not config['enabled'] or config.get('channel_id')!=row.channel_id:
                     raise worker.ServiceError('Shorts setup changed or publishing is paused. Nothing edited.')
                 budget.check(db,'buffer',units=3);post_id=row.post_id
+                asset_id=row.asset_id;payload=validated_payload(json.loads(row.payload))
+                asset=db.get(SocialAsset,asset_id)
+                if not asset or asset.day!=day or asset.mime!='video/mp4':
+                    raise worker.ServiceError('Prepared Reel asset is unavailable. Nothing edited.')
             post=worker.post(post_id)
             if not post or post.get('id')!=post_id or marker(day) not in (post.get('text') or '').splitlines():
                 raise worker.ServiceError('Existing Buffer post could not be matched to this Short. Nothing edited.')
@@ -261,6 +267,11 @@ def repair_caption(day,owner):
                 raise worker.ServiceError('The existing Buffer caption already meets YouTube text rules. No retry made; the unknown delivery error needs a different fix.')
             if len(corrected.encode('utf-8'))>5000:
                 raise worker.ServiceError('Corrected caption exceeds 5,000 UTF-8 bytes. Nothing edited.')
+            url=origin()+f'/api/social/assets/{asset_id}.mp4'
+            body=worker.request(url,binary=True,max_bytes=8*1024*1024)
+            if len(body)<12 or body[4:8]!=b'ftyp':
+                raise worker.ServiceError('Public Shorts asset did not return an MP4. Nothing edited.')
+            payload['text']=corrected
             with SessionLocal() as db:
                 row=db.query(SocialShort).filter_by(day=day,owner=owner,state='repairing').with_for_update().first()
                 config=settings(db)
@@ -269,10 +280,15 @@ def repair_caption(day,owner):
                     raise worker.ServiceError('Shorts setup changed before repair. Nothing edited.')
                 row.updated_at=datetime.utcnow();db.commit()
             due=pipeline.stamp(datetime.utcnow()+timedelta(minutes=5))
+            payload.update(id=post_id,schedulingType='automatic',mode='customScheduled',dueAt=due,
+                           assets=[{'video':{'url':url}}])
             submitting=True
             result=worker.buffer('mutation($input:EditPostInput!){editPost(input:$input){... on PostActionSuccess{post{'+worker.POST_FIELDS+'}} ... on MutationError{message}}}',
-                {'input':{'id':post_id,'text':corrected,'schedulingType':'automatic','mode':'customScheduled','dueAt':due}})['editPost']
+                {'input':payload})['editPost']
             edited=result.get('post')
+            if not edited and result.get('message'):
+                submitting=False  # Explicit validation rejection: no edit was accepted.
+                raise worker.ServiceError('Buffer rejected the caption repair. '+str(result['message']))
             if not edited or edited.get('id')!=post_id:
                 raise worker.ServiceError('Buffer did not confirm the caption repair. Check the existing post. '+str(result.get('message') or ''))
             record(day,{**edited,'dueAt':edited.get('dueAt') or due,'schedulingType':edited.get('schedulingType') or 'automatic'})

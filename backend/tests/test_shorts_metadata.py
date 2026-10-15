@@ -70,15 +70,24 @@ def failed_post(setup,monkeypatch):
     return client,factory,instagram,day,text,updated,url
 
 
-def test_admin_repairs_and_reschedules_the_same_failed_post_without_creating_a_duplicate(setup,monkeypatch):
+@pytest.mark.parametrize('legacy_rejection',[False,True])
+def test_admin_repairs_and_reschedules_the_same_failed_post_without_creating_a_duplicate(setup,monkeypatch,legacy_rejection):
     c,factory,instagram,day,text,updated,url=failed_post(setup,monkeypatch)
     monkeypatch.setattr(worker,'post',lambda identity:{'id':identity,'status':'error','text':text})
+    if legacy_rejection:
+        with factory() as db:
+            row=db.get(SocialShort,day);row.state='needs_review'
+            row.error='Buffer did not confirm the caption repair. Check the existing post. Invalid post: YouTube posts require a video., YouTube posts require a title., YouTube posts require a category.'
+            db.commit()
     edits=[]
     def edit(query,variables):
         assert 'editPost' in query and 'createPost' not in query
         data=variables['input'];edits.append(data)
         assert data['id']=='yt-failed' and data['mode']=='customScheduled'
-        assert 'assets' not in data and 'metadata' not in data
+        assert len(data['assets'])==1 and data['assets'][0]['video']['url'].endswith('.mp4')
+        youtube=data['metadata']['youtube']
+        assert youtube['title'] and youtube['categoryId']=='27'
+        assert youtube['privacy']=='public' and youtube['madeForKids'] is False
         assert '⇌' in data['text'] and '<' not in data['text'] and '>' not in data['text']
         return {'editPost':{'post':{'id':data['id'],'text':data['text'],'status':'scheduled'}}}
     monkeypatch.setattr(worker,'buffer',edit)
@@ -111,6 +120,7 @@ def test_repair_timeout_is_quarantined_without_automatic_recreation(setup,monkey
     assert c.post(url,json={'expected_updated_at':updated}).status_code==202
     with factory() as db:
         row=db.get(SocialShort,day);assert row.state=='needs_review' and row.post_id=='yt-failed'
+        assert not shorts.caption_repairable(row)
         assert '<=>' in json.loads(row.payload)['text']  # No false confirmation after timeout.
     assert c.post(url,json={'expected_updated_at':updated}).status_code==409
     assert calls==[1]
@@ -135,3 +145,38 @@ def test_failed_post_with_a_youtube_link_is_not_rescheduled(setup,monkeypatch):
     assert c.post(url,json={'expected_updated_at':updated}).status_code==202
     with factory() as db:
         row=db.get(SocialShort,day);assert row.state=='needs_review' and row.external_link==link
+
+
+def test_explicit_buffer_validation_rejection_remains_repairable(setup,monkeypatch):
+    c,factory,_,day,text,updated,url=failed_post(setup,monkeypatch)
+    monkeypatch.setattr(worker,'post',lambda identity:{'id':identity,'status':'error','text':text})
+    monkeypatch.setattr(worker,'buffer',lambda *args:{'editPost':{'message':'Invalid post: YouTube posts require a video.'}})
+    assert c.post(url,json={'expected_updated_at':updated}).status_code==202
+    with factory() as db:
+        row=db.get(SocialShort,day)
+        assert row.state=='delivery_failed' and shorts.caption_repairable(row)
+        assert '<=>' in json.loads(row.payload)['text']
+
+
+def test_legacy_rejected_repair_is_available_but_rechecks_live_post(setup,monkeypatch):
+    c,factory,_,day,text,updated,url=failed_post(setup,monkeypatch)
+    with factory() as db:
+        row=db.get(SocialShort,day);row.state='needs_review'
+        row.error='Buffer did not confirm the caption repair. Check the existing post. Invalid post: YouTube posts require a video., YouTube posts require a title., YouTube posts require a category.'
+        db.commit()
+        assert shorts.caption_repairable(row)
+    monkeypatch.setattr(worker,'post',lambda identity:{'id':identity,'status':'sent','text':text})
+    monkeypatch.setattr(worker,'buffer',lambda *args:pytest.fail('Already published post must never be edited'))
+    assert c.post(url,json={'expected_updated_at':updated}).status_code==202
+    with factory() as db:assert db.get(SocialShort,day).state=='published'
+
+
+def test_unavailable_video_stops_repair_before_mutation(setup,monkeypatch):
+    c,factory,_,day,text,updated,url=failed_post(setup,monkeypatch)
+    monkeypatch.setattr(worker,'post',lambda identity:{'id':identity,'status':'error','text':text})
+    monkeypatch.setattr(worker,'request',lambda *args,**kwargs:b'not a video')
+    monkeypatch.setattr(worker,'buffer',lambda *args:pytest.fail('Cannot reschedule a missing video'))
+    assert c.post(url,json={'expected_updated_at':updated}).status_code==202
+    with factory() as db:
+        row=db.get(SocialShort,day)
+        assert row.state=='delivery_failed' and 'did not return an MP4' in row.error

@@ -343,7 +343,11 @@ For a legacy failed Short with a correctable caption, Admin shows **Repair
 caption & retry existing post**. This authenticates the admin, checks the row
 version, fetches the exact existing Buffer post and verifies its slot marker and
 failed state, then edits and reschedules that same post ID. It preserves current
-Buffer text edits, the existing title and video. Already sent/scheduled posts are
+Buffer text edits and sends the stored prepared YouTube title, category and
+settings with the original video URL, after verifying that URL serves an MP4.
+Buffer requires these fields when rescheduling even though the post already exists.
+An explicit validation rejection remains repairable; the legacy missing-video
+rejection can also be repaired after the same live-status checks. Already sent/scheduled posts are
 not rescheduled; valid captions are not retried blindly. An uncertain edit stays
 in review and is reconciled by its existing ID, without creating another post.
 Buffer still determines delivery; its generic unknown error alone cannot prove
