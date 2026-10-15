@@ -23,6 +23,513 @@
   "passages": [],
   "questions": [
     {
+      "ref": "PYQ-MATH-c8f5fbdc873b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "27 Jan 2024, Shift 2",
+      "status": "draft",
+      "stem": "The integral $\\int \\frac{(x^8-x^2)\\,dx}{(x^{12}+3x^6+1)\\tan^{-1}\\left(x^3+\\frac{1}{x^3}\\right)}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log_{e} \\left( \\left| \\tan^{-1}\\left(x^3+\\frac{1}{x^3}\\right) \\right| \\right)^{1/3} + C$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\log_{e} \\left( \\left| \\tan^{-1}\\left(x^3+\\frac{1}{x^3}\\right) \\right| \\right)^{1/2} + C$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log_{e} \\left( \\left| \\tan^{-1}\\left(x^3+\\frac{1}{x^3}\\right) \\right| \\right) + C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log _e ({| \\tan ^{-1} (x^3+\\;{1}/{x^3}) |}) ^3+C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-10c20097aefe",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "29 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "For $x \\in \\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$,\nif $y(x)=\\int \\frac{\\csc x + \\sin x}{\\csc x \\sec x + \\tan x \\sin^2 x} \\, dx$\nand $\\lim\\limits_{x \\rightarrow \\left(\\frac{\\pi}{2}\\right)^{-}} y(x) = 0$ then $y \\left(\\frac{\\pi}{4}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan^{-1} \\left(\\frac{1}{\\sqrt{2}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2} \\tan^{-1} \\left(\\frac{1}{\\sqrt{2}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{1}{\\sqrt{2}} \\tan^{-1} \\left(\\frac{1}{\\sqrt{2}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sqrt{2}} \\tan^{-1} \\left(-\\frac{1}{2}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cc96b2457e55",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "29 Jan 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int \\frac{\\sin^{\\frac{3}{2}} x + \\cos^{\\frac{3}{2}} x}{\\sqrt{\\sin^3 x \\cos^3 x \\sin (x-\\theta)}} \\, dx$ $= A \\sqrt{\\cos \\theta \\tan x - \\sin \\theta} + B \\sqrt{\\cos \\theta - \\sin \\theta \\cot x} + C,$\nwhere $C$ is the integration constant, then $A B$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4 \\csc(2\\theta)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4 \\sec \\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2 \\sec \\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8 \\csc(2\\theta)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d32a469d61b6",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "4 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int \\csc^5 x \\, dx = \\alpha \\cot x \\csc x \\left(\\csc^2 x + \\; \\frac{3}{2}\\right) + \\beta \\log_e \\left| \\tan \\frac{x}{2} \\right| + C$ where $\\alpha, \\beta \\in \\mathbb{R}$ and $C$ is constant of integration , then the value of $8(\\alpha+\\beta)$ equals .....",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-52bd81a2d89a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "6 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int \\frac{1}{a^2 \\sin^2 x + b^2 \\cos^2 x} dx = \\frac{1}{12} \\tan^{-1}(3 \\tan x) +$ constant, then the maximum value of a sin $x + b \\cos x$, is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{40}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{39}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{42}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{41}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7c85e491d54c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "8 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $I(x)=\\int \\frac{6}{\\sin^2 x (1-\\cot x)^2}dx$. If $I(0)=3$, then $I\\left(\\frac{\\pi}{12}\\right)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\sqrt{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ad7978f9426b",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "8 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "$\\text{ If } \\int\\; \\frac{1}{\\sqrt[5]{(x-1)^4(x+3)^6}} dx = A \\left( \\frac{\\alpha x-1}{\\beta x+3} \\right)^B + C$\nwhere $C$ is the constant of integration, then the value of $\\alpha + \\beta + 20 AB$ is _______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 7.0,
+        "max": 7.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b82fbce751e3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "9 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let\n$\\int \\frac{2-\\tan x}{3+\\tan x} dx = \\frac{1}{2} \\left( \\alpha x + \\log_e |\\beta \\sin x + \\gamma \\cos x| \\right) + C$\n, where $C$ is the constant of integration.\nThen $\\alpha + \\frac{\\gamma}{\\beta}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "7",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c71dd4a03820",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "22 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int e^x \\left( \\frac{x \\sin^{-1} x}{\\sqrt{1-x^2}} + \\frac{\\sin^{-1} x}{(1-x^2)^{3/2}} + \\frac{x}{1-x^2} \\right) dx = g(x)+C$, where $C$ is the constant of integration, then $g\\left( \\frac{1}{2} \\right)$ equals:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4} \\sqrt{ \\frac{e}{2} }$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6} \\sqrt{ \\frac{e}{2} }$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4} \\sqrt{ \\frac{e}{3} }$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{6} \\sqrt{ \\frac{e}{3} }$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-14195d318538",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "23 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let\n$I(x)=\\int\\frac{dx}{(x-11)^{\\frac{11}{13}}(x+15)^{\\frac{15}{13}}}$\nIf $I(37)-I(24)=\\frac{1}{4}\\left(\\frac{1}{b^{\\frac{1}{13}}}-\\frac{1}{c^{\\frac{1}{13}}}\\right), b, c \\in \\mathbb{N}$, then $3(b+c)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "22",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "40",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "26",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "39",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5623a917e527",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "23 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\int x^3 \\sin \\; x \\, dx = g(x) + C$, where $C$ is the constant of integration. If $8 \\left( g\\left(\\frac{\\pi}{2}\\right) + g'\\left(\\frac{\\pi}{2}\\right) \\right) = \\alpha \\pi^3 + \\beta \\pi^2 + \\gamma, \\alpha$, $\\beta, \\gamma \\in \\mathbb{Z}$, then $\\alpha + \\beta - \\gamma$ equals:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "62",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "55",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "48",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "47",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fd57fa93b2a0",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "24 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\; \\frac{2 x^2+5 x+9}{\\sqrt{x^2+x+1}} dx = x \\sqrt{x^2+x+1} + \\alpha \\sqrt{x^2+x+1} + ,$ , $\\beta \\log_e \\left| x+ \\frac{1}{2} + \\sqrt{x^2+x+1} \\right| + C$ where $C$ is the constant of integration, then $\\alpha + 2\\beta$ is equal to_____",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-787f1c9cb3ae",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "28 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\int\\;\\frac{1}{x^{1/4}(1+x^{1/4})}\\,dx, f(0)=-6$, then $f(1)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log_e 2+2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2-\\log_e 2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4(\\log_e 2-2)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4(\\log_e 2+2)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-97fa9708efe2",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "3 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=\\int x^3 \\sqrt{3-x^2} \\, dx$. If $5f\\left(\\sqrt{2}\\right)=-4$, then $f( 1)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{6\\sqrt{2}}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{4\\sqrt{2}}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{2\\sqrt{2}}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{8\\sqrt{2}}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b6a494427b9b",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "4 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "$\\;\\; \\text{ If } \\int\\; \\frac{ (\\sqrt{1+x^2}+x)^{10} }{ (\\sqrt{1+x^2}-x)^9 } dx$\n$\\;\\; = \\frac{1}{m} \\left( (\\sqrt{1+x^2}+x)^n (n\\sqrt{1+x^2} - x) \\right) +C$\nwhere $C$ is the constant of integration and $m$, $n \\in \\mathbb{N}$, then $m+n$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 379.0,
+        "max": 379.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-363494f6931d",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "7 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "$\\text{ If } \\int \\left( \\frac{1}{x} + \\frac{1}{x^3} \\right) \\left( 23 \\sqrt{3 x^{-24} + x^{-26}} \\right) dx$\n$= -\\frac{\\alpha}{3(\\alpha+1)} (3 x^\\beta + x^\\gamma)^{\\frac{\\alpha+1}{\\alpha}} + C, x>0, (\\alpha, \\beta, \\gamma \\in \\mathbb{Z})$ where $C$ is the constant of integration, then $\\alpha + \\beta + \\gamma$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 19.0,
+        "max": 19.0
+      },
+      "solution": ""
+    },
+    {
       "ref": "PYQ-MATH-9ba923e0d70b",
       "subtopic": "general",
       "type": "single_correct",

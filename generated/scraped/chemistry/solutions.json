@@ -23,6 +23,998 @@
   "passages": [],
   "questions": [
     {
+      "ref": "PYQ-CHEM-773c57aadebd",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "1 Feb 2024, Shift 1",
+      "status": "draft",
+      "stem": "We have three aqueous solutions of $\\mathrm{NaCl}$ labelled as ' $A$ ', ' $B$ ' and ' $C$ ' with concentration $0.1\\ \\mathrm{M}$, $0.01\\ \\mathrm{M}\\ \\&\\ 0.001\\ \\mathrm{M}$, respectively. The value of van t' Haft factor (i) for these solutions will be in the order.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$i_A < i_B < i_C$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$i_A < i_C < i_B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$i_A=i_B=i_C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$i_A>i_B>i_C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-37ee253efc03",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "1 Feb 2024, Shift 2",
+      "status": "draft",
+      "stem": "Mass of ethylene glycol (antifreeze) to be added to $18.6 \\text{kg}$ of water to protect the freezing point at $-24^{\\circ} \\text{C}$ is_____ $\\text{kg}$ (Molar mass in $\\mathrm{g} \\mathrm{mol}^{-1}$ for ethylene glycol $62, K_{f}$ of water $=1.86 \\mathrm{K} \\mathrm{kg} \\mathrm{mol}^{-1}$ )",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-df723b187562",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "27 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "A solution of two miscible liquids showing negative deviation from Raoult's law will have :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increased vapour pressure, increased boiling point",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "increased vapour pressure, decreased boiling point",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decreased vapour pressure, decreased boiling point",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "decreased vapour pressure, increased boiling point",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0353a34f60b6",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "29 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "The osmotic pressure of a dilute solution is $7 \\times 10^5 \\text{ Pa}$ at $273 \\text{ K}$. Osmotic pressure of the same solution at $283 \\text{ K}$ is $\\times 10^4 \\text{ Nm}^{-2}$.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 73.0,
+        "max": 73.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7ea2bf312932",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "30 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "What happens to freezing point of benzene when small quantity of napthalene is added to benzene?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Increases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Remains unchanged",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "First decreases and then increases",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Decreases",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-be4cbb131023",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "31 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "Identify the mixture that shows positive deviations from Raoult's Law",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(\\mathrm{CH}_3)_2\\mathrm{CO}+\\mathrm{C}_6\\mathrm{H}_5\\mathrm{NH}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{CHCl}_3+\\mathrm{C}_6\\mathrm{H}_6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{CHCl}_3+(\\mathrm{CH}_3)_2\\mathrm{CO}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\mathrm{CH}_3)_2\\mathrm{CO}+\\mathrm{CS}_2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1e522af4c305",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "4 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "$2.5 \\, \\text{g}$ of a non-volatile, non-electrolyte is dissolved in $100 \\, \\text{g}$ of water at $25^{\\circ} \\, \\text{C}$. The solution showed a boiling point elevation by $2^{\\circ} \\, \\text{C}$. Assuming the solute concentration in negligible with respect to the solvent concentration, the vapour pressure of the resulting aqueous solution is ______ $\\text{mm}$ of $\\text{Hg}$ (nearest integer)\n[Given : Molal boiling point elevation constant of water $(\\text{K}_{\\text{b}}) = 0.52 \\, \\text{K} \\cdot \\text{kg} \\, \\text{mol}^{-1}$,\n$1 \\, \\text{atm}$ pressure $= 760 \\, \\text{mm}$ of $\\text{Hg}$, molar mass of water $= 18 \\, \\text{g} \\, \\text{mol}^{-1}]$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 707.0,
+        "max": 707.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-cbe531f9e766",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "4 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "$2.7 \\text{Kg}$ of each of water and acetic acid are mixed, The freezing point of the solution will be $-x^{\\circ} \\mathrm{C}$. Consider the acetic acid does not dimerise in water, nor dissociates in water $x=$ ______ (nearest integer)\n[Given : Molar mass of water $=18 \\mathrm{g}\\,\\mathrm{mol}^{-1}$, acetic acid $=60 \\mathrm{g}\\,\\mathrm{mol}^{-1}]$\n$^{K_f} \\mathrm{H}_2\\mathrm{O}: 1.86 \\mathrm{K}\\,\\mathrm{kg}\\,\\mathrm{mol}^{-1}$\n$K_f$ acetic acid : $3.90 \\mathrm{K}\\,\\mathrm{kg}\\,\\mathrm{mol}^{-1}$\nfreezing point : $\\mathrm{H}_2\\mathrm{O}=273 \\mathrm{K}$, acetic acid $=290 \\mathrm{K}$ ]",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 31.0,
+        "max": 31.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a0a97e14e6bd",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "5 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "An artificial cell is made by encapsulating $0.2\\ \\mathrm{M}$ glucose solution within a semipermeable membrane. The osmotic pressure developed when the artificial cell is placed within a $0.05\\ \\mathrm{M}$ solution of $\\ \\mathrm{NaCl}$ at $300\\ \\mathrm{K}$ is ______ $\\times 10^{-1}\\ \\mathrm{bar}$. (Nearest Integer)\n[Given : $R=0.083\\ \\mathrm{L}\\ \\mathrm{bar}\\ \\mathrm{mol}^{-1}\\ \\mathrm{K}^{-1}$ ]\nAssume complete dissociation of $\\ \\mathrm{NaCl}$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 25.0,
+        "max": 25.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-50d2fd34b92e",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "5 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Considering acetic acid dissociates in water, its dissociation constant is $6.25 \\times 10^{-5}$. If $5\\ \\mathrm{mL}$ of acetic acid is dissolved in 1 litre water, the solution will freeze at $-x \\times 10^{-2}\\ {}^{\\circ}\\ \\mathrm{C}$, provided pure water freezes at $0\\ {}^{\\circ}\\ \\mathrm{C}$.\n$x =$ _______ . (Nearest integer)\nGiven : $\\left(K_f\\right)_{\\text{water}} = 1.86\\ \\mathrm{K}\\ \\mathrm{kg}\\ \\mathrm{mol}^{-1}$.\ndensity of acetic acid is $1.2\\ \\mathrm{g}\\ \\mathrm{mol}^{-1}$\nmolar mass of water $= 18\\ \\mathrm{g}\\ \\mathrm{mol}^{-1}$.\nmolar mass of acetic acid $= 60\\ \\mathrm{g}\\ \\mathrm{mol}^{-1}$.\ndensity of water $= 1\\ \\mathrm{g}\\ \\mathrm{cm}^{-3}$\nAcetic acid dissociates as\n$\\mathrm{CH}_3\\mathrm{COOH} \\rightleftharpoons \\mathrm{CH}_3\\mathrm{COO}^{\\oplus} + \\mathrm{H}^{\\oplus}$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 19.0,
+        "max": 19.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9fa6bbeaf817",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "6 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "When ' $x$ ' $\\times 10^{-2} \\text{mL}$ methanol (molar mass $=32 \\text{g}$; density $=0.792 \\text{g}/\\text{cm}^3$ ) is added to $100 \\text{mL}$ water $(.$ density $=1 \\text{g}/\\text{cm}^3)$, the following diagram is obtained. $x =$ ________ (nearest integer)\n[Given: Molal freezing point depression constant of water at $273.15 \\text{K}$ is $1.86 \\text{K} \\text{kg} \\text{mol}^{-1}$ ]",
+      "image": {
+        "url": "/question-images/pyq/chemistry/solutions/PYQ-CHEM-9fa6bbeaf817.png",
+        "alt": "Figure for this Solutions question"
+      },
+      "options": [],
+      "answer": {
+        "min": 543.0,
+        "max": 543.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f278784e4131",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "8 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "A solution containing $10\\,\\mathrm{g}$ of an electrolyte $\\mathrm{AB}_2$ in $100\\,\\mathrm{g}$ of water boils at $100.52^{\\circ}\\,\\mathrm{C}$. The degree of ionization of the electrolyte $(\\alpha)$ is ________ $\\times 10^{-1}$. (nearest integer)\n[Given : Molar mass of $\\mathrm{AB}_2=200\\,\\mathrm{g}\\,\\mathrm{mol}^{-1}\\cdot K_{\\mathrm{b}}$ (molal boiling point elevation const. of water) $=0.52\\,\\mathrm{K}\\,\\mathrm{kg}\\,\\mathrm{mol}^{-1}$, boiling point of water $=100^{\\circ}\\,\\mathrm{C}$; $\\mathrm{AB}_2$ ionises as $\\mathrm{AB}_2 \\longrightarrow \\mathrm{A}^{2+}+2\\,\\mathrm{B}^{-}]$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 5.0,
+        "max": 5.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b38199cd73a3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "9 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "$0.05\\ \\mathrm{M}\\ \\mathrm{CuSO}_4$ when treated with $0.01\\ \\mathrm{M}\\ \\mathrm{K}_2\\mathrm{Cr}_2\\mathrm{O}_7$ gives green colour solution of $\\mathrm{Cu}_2\\mathrm{Cr}_2\\mathrm{O}_7$. The [SPM : Semi Permeable Membrane]\nDue to osmosis :",
+      "image": {
+        "url": "/question-images/pyq/chemistry/solutions/PYQ-CHEM-b38199cd73a3.png",
+        "alt": "Figure for this Solutions question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Green colour formation observed on side Y.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Green colour formation observed on side $\\mathrm{X}$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Molarity of $\\mathrm{K}_2\\mathrm{Cr}_2\\mathrm{O}_7$ solution is lowered.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Molarity of $\\mathrm{CuSO}_4$ solution is lowered.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-87afbfff843d",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "9 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "The vapour pressure of pure benzene and methyl benzene at $27^{\\circ} \\mathrm{C}$ is given as $80 \\text{Torr}$ and 24 Torr, respectively. The mole fraction of methyl benzene in vapour phase, in equilibrium with an equimolar mixture of those two liquids (ideal solution) at the same temperature is ______ $\\times 10^{-2}$ (nearest integer)",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 23.0,
+        "max": 23.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f11a267107ab",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "2 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A solution is made by mixing one mole of volatile liquid A with 3 moles of volatile liquid B . The vapour pressure of pure A is 200 mm Hg and that of the solution is 500 mm Hg . The vapour pressure of pure B and the least volatile component of the solution, respectively, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$600\\,\\text{mm Hg},\\,\\mathrm{B}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$600\\,\\text{mm Hg},\\,\\mathrm{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1400\\,\\text{mm Hg},\\,\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1400\\,\\text{mm Hg},\\,\\mathrm{B}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-3dc517c1dd2e",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "2 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "When 1 g each of compounds AB and $\\mathrm{AB}_2$ are dissolved in 15 g of water separately, they increased the boiling point of water by 2.7 K and 1.5 K respectively. The atomic mass of A (in amu) is $\\_\\_\\_\\_$ $\\times 10^{-1}$ (Nearest integer)\n(Given: Molal boiling point elevation constant is 0.5 $\\mathrm{K} \\mathrm{kg} \\mathrm{mol}^{-1})$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 25.0,
+        "max": 25.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f4d0155553a8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "22 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "Arrange the following solutions in order of their increasing boiling points.\n(i) $10^{-4} \\mathrm{M} \\mathrm{NaCl}$\n(ii) $10^{-4} \\mathrm{M}$ Urea\n(iii) $10^{-3} \\mathrm{M} \\mathrm{NaCl}$\n(iv) $10^{-2} \\mathrm{M} \\mathrm{NaCl}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "(ii) < (i) $\\equiv$ (iii) < (iv)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "(i) < (ii) < (iii) < (iv)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "(iv) < (iii) < (i) < (ii)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "(ii) < (i) < (iii) < (iv)",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-31a388990be6",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "23 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "When a non-volatile solute is added to the solvent, the vapour pressure of the solvent decreases by 10 mm of Hg . The mole fraction of the solute in the solution is 0.2 . What would be the mole fraction of the solvent if decrease in vapour pressure is 20 mm of Hg ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.6",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0.2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c44f4016d3fd",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "23 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Consider a binary solution of two volatile liquid components 1 and 2. $x_1$ and $y_1$ are the mole fractions of component 1 in liquid and vapour phase, respectively. The slope and intercept of the linear plot of $\\;\\frac{1}{x_1} \\text{vs} \\;\\frac{1}{y_1}$ are given respectively as:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{P_1^0}{P_2^0}, \\;\\frac{P_1^0- P_2^0}{P_2^0}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{P_1^0}{P_2^0}, \\;\\frac{P_2^0- P_1^0}{P_2^0}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{P_2^0}{P_1^0}, \\;\\frac{P_2^0- P_1^0}{P_2^0}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{P_2^0}{P_1^0}, \\;\\frac{P_1^0-P_2^0}{P_2^0}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bca0f8869e87",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "28 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "What is the freezing point depression constant of a solvent, 50 g of which contain 1 g non volatile solute (molar mass $256\\ \\mathrm{g}\\ \\mathrm{mol}^{-1}$ ) and the decrease in freezing point is 0.40 K ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.86\\ \\mathrm{K}\\ \\mathrm{kg}\\ \\mathrm{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5.12\\ \\mathrm{K}\\ \\mathrm{kg}\\ \\mathrm{mol}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4.43\\ \\mathrm{K}\\ \\mathrm{kg}\\ \\mathrm{mol}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3.72\\ \\mathrm{L}\\ \\mathrm{kg}\\ \\mathrm{mol}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0b486e486b45",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "29 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "$1.24\\,\\mathrm{g}^{\\text{of}}\\,\\mathrm{AX}_2$ (molar mass $124\\,\\mathrm{g}\\,\\mathrm{mol}^{-1}$ ) is dissolved in 1 kg of water to form a solution with boiling point of $100.0156^{\\circ}\\,\\mathrm{C}$, while 25.4 g of $\\mathrm{AY}_2$ (molar mass $250\\,\\mathrm{g}\\,\\mathrm{mol}^{-1}$ ) in 2 kg of water constitutes a solution with a boiling point of $100.0260^{\\circ}\\,\\mathrm{C}$.\n$K_{\\mathrm{b}} (\\mathrm{H}_2\\mathrm{O}) = 0.52\\,\\mathrm{K}\\,\\mathrm{kg}\\,\\mathrm{mol}^{-1}$\nWhich of the following is correct?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{AX}_2$ and $\\mathrm{AY}_2$ (both) are fully ionised",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{AX}_2$ is fully ionised while $\\mathrm{AY}_2$ is completely unionised",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{AX}_2$ and $\\mathrm{AY}_2$ (both) are completely unionised",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{AX}_2$ is completely unionised while $\\mathrm{AY}_2$ is fully ionised",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f846a2ed84e7",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "29 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $A_2 B$ is $30 \\%$ ionised in an aqueous solution, then the value of van't Hoff factor (i) is_____$\\times 10^{-1} .$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-cd7afb1d20f3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "29 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Given below are two statements :\nStatement (1 ): NaCl is added to the ice at $0^{\\circ}\\,\\mathrm{C}$, present in the ice cream box to prevent the melting of ice cream.\nStatement (II): On addition of NaCl to ice at $0^{\\circ}\\,\\mathrm{C}$, there is a depression in freezing point.\nIn the light of the above statements, choose the correct answer from the options given below :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Statement-I is true but Statement-II is false",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Both Statement-I and Statement-II are true",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Statement-I is false but Statement-II is true",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Both Statement-I and Statement-II are false",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2237c7fd1108",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "3 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following properties will change when system containing solution 1 will become solution 2",
+      "image": {
+        "url": "/question-images/pyq/chemistry/solutions/PYQ-CHEM-2237c7fd1108.png",
+        "alt": "Figure for this Solutions question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Density",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Concentration",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Gibbs free energy",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Mol heat capacity",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c0f7992f267c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "3 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "2 moles each of ethylene glycol and glucose are dissolved in 500 g of water. The boiling point of the resulting solution is:\n(Given : Ebullioscopic constant of water $=0.52\\,\\text{K}\\,\\text{kg}\\,\\text{mol}^{-1}$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "377.3 K",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "375.3 K",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "379.2 K",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "277.3 K",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b0a9df072514",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "4 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "XY is the membrane/partition between two chambers 1 and 2 containing sugar solutions of concentration $c_1$ and $c_2 (c_1 > c_2) \\mathrm{mol} \\mathrm{L}^{-1}$. For the reverse osmosis to take place identify the correct condition.\n(Here $p_1$ and $p_2$ are pressures applied on chamber 1 and 2)\nA. Membrane/Partition : Cellophane, $p_1 > \\pi$\nB. Membrane/Partition : Porous, $p_2 > \\pi$\nC. Membrane/Partition : Parchment paper, $p_1 > \\pi$\nD. Memberane/Partition : Cellophane, $p_2 > \\pi$\nChoose the correct answer from the option given below.",
+      "image": {
+        "url": "/question-images/pyq/chemistry/solutions/PYQ-CHEM-b0a9df072514.png",
+        "alt": "Figure for this Solutions question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "(1) A and D only",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "(2) A and C only",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "(3) C only",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "(4) B and D only",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9e4a674089bf",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "4 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Sea water, which can be considered as a 6 molar ( 6 M ) solution of NaCl , has a density of $2\\ \\text{g mL}^{-1}$. The concentration of dissolved oxygen ( $\\mathrm{O}_2$ ) in sea water is 5.8 ppm . Then the concentration of dissolved oxygen $(\\mathrm{O}_2)$ in sea water, is $x \\times 10^{-4}\\ \\text{m}$. $x =$ $\\_\\_\\_\\_$ . (Nearest integer) Given: Molar mass of NaCl is $58.5\\ \\text{g mol}^{-1}$ Molar mass of $\\mathrm{O}_2$ is $32\\ \\text{g mol}^{-1}$",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 2.0,
+        "max": 2.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bf31f3163c02",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "4 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Given below are two statements:\nStatement (I): Molal depression constant $K_f$ is given by $\\;\\frac{M_1 R T_f}{\\Delta S_{fus}}$, where symbols have their usual meaning.\nStatement (II): $K_f$ for benzene is less than the $K_f$ for water.\nIn the light of the above statements, choose the most appropriate answer from the options given below:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Statement I is correct but Statement II is incorrect",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Both Statement I and Statement II are correct",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Statement I is incorrect but Statement II is correct",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Both Statement I and Statement II are incorrect",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-896098e76a70",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "7 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Match List-I with List-IIList-IList-II(A) Solution of chloroform and acetone(I) Minimum boiling azeotrope(B) Solution of ethanol and water(II) Dimerizes(C) Solution of benzene and toluene(III) Maximum boiling(D) Solution of acetic acid in benzene(IV)$\\Delta V_{mix}=0$Choose the correct answer from the options given below.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "(A)-(III), (B)-(IV), (C)-(I), (D)-(II)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "(A)-(II), (B)-(I), (C)-(IV), (D)-(III)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "(A)-(II), (B)-(IV), (C)-(I), (D)-(III)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "(A)-(III), (B)-(I), (C)-(IV), (D)-(II)",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ce4a47d3a288",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "7 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Liquid $A$ and $B$ form an ideal solution. The vapour pressures of pure liquids $A$ and $B$ are 350 and 750 mm Hg respectively at the same temperature. If $X_A$ and $X_B$ are the mole fraction of $A$ and $B$ in solution while $y_A$ and $y_B$ are the mole fraction of $A$ and $B$ in vapour phase then,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{x_A}{x_B}=\\;\\frac{y_A}{y_B}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{x_A}{x_B}< \\;\\frac{y_A}{y_B}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{x_A}{x_B}>\\;\\frac{y_A}{y_B}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(x_A-y_A) < (x_B-y_B)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5df1f07d0b02",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "8 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "$\\mathrm{HA}(\\mathrm{aq}) \\rightleftharpoons \\mathrm{H}^{+}(\\mathrm{aq}) + \\mathrm{A}^{-}(\\mathrm{aq})$\nThe freezing point depression of a 0.1 m aqueous solution of a monobasic weak acid HA is $0.20^{\\circ}\\ \\mathrm{C}$. The dissociation constant for the acid is\nGiven: $\\mathrm{K}_f(\\mathrm{H}_2\\mathrm{O}) = 1.8\\ \\mathrm{K}\\ \\mathrm{kg}\\ \\mathrm{mol}^{-1}$, molality $\\equiv$ molarity",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.1 \\times 10^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.38 \\times 10^{-3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.90 \\times 10^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.89 \\times 10^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c6b6f7f4680b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "8 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following binary mixture does not show the behaviour of minimum boiling azeotropes?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{C}_6\\mathrm{H}_5\\mathrm{OH} + \\mathrm{C}_6\\mathrm{H}_5\\mathrm{NH}_2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{H}_2\\mathrm{O} + \\mathrm{CH}_3\\mathrm{COC}_2\\mathrm{H}_5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{CH}_3\\mathrm{OH} + \\mathrm{CHCl}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{CS}_2 + \\mathrm{CH}_3\\mathrm{COCH}_3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
       "ref": "PYQ-CHEM-bb6a1a658362",
       "subtopic": "general",
       "type": "single_correct",
