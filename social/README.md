@@ -14,7 +14,7 @@ original content. No database migration or additional API key is needed.
   between 07:00 and 23:00, Asia/Kolkata, using its existing Bearer secret.
 - Required: existing `BUFFER_API_KEY`, `SOCIAL_TRIGGER_SECRET` (at least 32
   characters) and a connected professional Instagram account with automatic
-  publishing. `GROQ_API_KEY` is optional: authored captions and music-only Reels
+  publishing. `GROQ_API_KEY` is optional: authored captions and local narrated Reels
   work without it.
 - Public media URLs use `SOCIAL_MEDIA_ORIGIN`, then `RENDER_EXTERNAL_URL`, then
   the original Render origin. An override must be a public HTTPS origin without
@@ -91,13 +91,15 @@ the final deduplication marker. Legacy snapshots retain the checked, licensed
 Carefree excerpt and its Kevin MacLeod / CC BY 4.0 attribution.
 
 Existing optional Orpheus English narration uses `GROQ_API_KEY`; disable with
-`SOCIAL_TTS_ENABLED=false`. Three short authored scenes speak the opening,
-reasoning and condition. Measured WAV duration controls alignment and phrase
+`SOCIAL_TTS_ENABLED=false`. Advanced stories use five short authored scenes for the setup, deductions
+and transfer question; legacy stories retain their original scene counts. Measured WAV duration controls alignment and phrase
 subtitles; playback speed is capped at 1.3x and speech is never truncated. If any
-new-story scene fails, the entire Reel uses the complete visual lesson and music.
+new-story scene fails, the renderer attempts a full local narration track;
+if both engines fail, it retains the complete visual lesson and music.
 Successful clips are cached for seven days within the existing 32 MiB speech
 cache; failed attempts back off thirty minutes. There is no paid voice fallback.
-Local preview videos intentionally use music only and do not verify live TTS.
+Earlier music-only preview videos do not verify live Groq access. The offline
+engine is verified independently with actual generated speech.
 
 Video remains 720×1280, 24 fps source / 30 fps H.264 output, AAC stereo audio.
 Deep working appears as three numbered steps, revealed in sequence rather than
@@ -305,7 +307,7 @@ services, model calls or second YouTube render are needed for the drawings.
 
 The 32 MiB TTS cache evicts old completed clips when necessary. Existing rendered
 videos already embed their audio, so eviction does not change their sound.
-Partial narration continues to use the complete visual/music fallback.
+If Groq narration is incomplete, a full local voice track is generated for all scenes. If both engines fail, the complete visual/music fallback remains available.
 
 Admin → Publishing reports the actual engine, expected/embedded voice clips,
 editorial source, render wall time and file size for newly prepared work. The
@@ -346,3 +348,20 @@ not rescheduled; valid captions are not retried blindly. An uncertain edit stays
 in review and is reconciled by its existing ID, without creating another post.
 Buffer still determines delivery; its generic unknown error alone cannot prove
 which upstream failure occurred.
+
+### Reliable speech without extra services
+
+Groq Orpheus remains the preferred voice. If it cannot supply every scene
+(missing key, HTTP error, quota, bad WAV or a clip that does not fit), production
+tries a complete offline track with FFmpeg/libflite. All scenes use one engine
+to avoid changing voice midway. This local voice is simpler than Groq, requires
+no API key or network request, and uses the FFmpeg already installed for video.
+Docker checks for the flite filter at build time. Both explicit
+`SOCIAL_TTS_ENABLED=false` and `SOCIAL_LOCAL_TTS_ENABLED=false` are respected.
+The local backup is enabled by default.
+
+Admin records the actual engine, embedded scene count and primary failure
+reason for each new render, including missing key, provider HTTP status, retry
+backoff and timing failures. Voice audio is loudness-normalized, with a quieter
+music bed while speech is present. Already prepared/uploaded MP4s remain
+immutable; new renders get this behavior, and Shorts reuse that same audio.

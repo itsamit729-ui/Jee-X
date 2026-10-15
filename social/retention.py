@@ -95,7 +95,11 @@ def brief(content):
 
 def scenes(content,plan):
     b=brief(content)
+    # Speak the chemistry rather than spelling long formula strings. The full
+    # formula stays in the visual; these equivalents fit the opening beat.
+    setup={'Squared common ion effect':'K S P is four times ten to minus twelve. Silver: point one molar.',
+           'Base buffer after acid':'Sixty millimoles base; twenty millimoles acid. P K B: five.'}.get(content['topic'],b['setup'])
     # Every mathematical deduction is spoken, rather than only a generic rule.
-    return [(0.1,7.5,(plan.get('hook') or b['hook'])+' '+b['setup']),
+    return [(0.1,7.5,(plan.get('hook') or b['hook'])+' '+setup),
             (8.1,6.5,b['voice'][0]),(15.1,6.5,b['voice'][1]),(22.1,7.5,b['voice'][2]),
             (30.1,5.5,content['transfer_question'])]

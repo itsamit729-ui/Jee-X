@@ -32,6 +32,7 @@ def setup(monkeypatch):
     factory = sessionmaker(bind=engine)
     monkeypatch.setattr(social, 'SessionLocal', factory)
     monkeypatch.setattr(social.social_speech, 'fetch', lambda text: None)
+    monkeypatch.setattr(social.social_speech, 'local_fetch', lambda text: None)
     monkeypatch.setattr(social.budget, 'SessionLocal', factory)
     monkeypatch.setattr(social.shorts,'SessionLocal',factory)
     monkeypatch.delenv('SOCIAL_DAILY_TARGET', raising=False)
@@ -368,6 +369,21 @@ def test_old_failed_slot_cannot_exceed_reduced_daily_cap(setup):
 def enable_test_voice(monkeypatch):
     from social.test_narration import wav
     monkeypatch.setattr(social.social_speech,'fetch',lambda text:wav())
+
+
+def test_scheduled_reel_embeds_full_local_backup_and_reports_why_groq_was_unavailable(setup,monkeypatch):
+    from social.test_narration import wav
+    client,factory,clock,submitted=setup
+    monkeypatch.setattr(social.social_speech,'local_fetch',lambda text:wav())
+    monkeypatch.setattr(social.social_speech,'last_status',lambda:{'reason':'missing_groq_key'})
+    clock[0]=clock[0].replace(hour=9,minute=40)
+    assert client.post('/api/social/trigger',headers=AUTH).status_code==202
+    report=client.get('/api/social/status',headers=AUTH).json()
+    creative=next(j['creative'] for j in report['jobs'] if j['kind']=='reel')
+    assert creative['voice_ready']==creative['voice_expected']==5
+    assert creative['narration']['engine']=='local' and creative['narration']['complete'] is True
+    assert creative['narration']['failures']==[{'scene':0,'reason':'missing_groq_key'}]
+    assert len(submitted)==1
 
 
 def test_manual_narrated_reel_outside_window_and_idempotency(setup,monkeypatch):

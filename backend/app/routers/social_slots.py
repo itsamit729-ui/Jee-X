@@ -165,7 +165,9 @@ def status_report():
         hold=cache.get('publishing-hold')
         config={'paused':os.getenv('SOCIAL_PAUSED','').lower()=='true','buffer_configured':bool(os.getenv('BUFFER_API_KEY')),
                 'trigger_configured':len(os.getenv('SOCIAL_TRIGGER_SECRET',''))>=32,'editorial_configured':bool(os.getenv('GROQ_API_KEY')),
-                'voice_enabled':os.getenv('SOCIAL_TTS_ENABLED','true').lower()=='true'}
+                'voice_enabled':os.getenv('SOCIAL_TTS_ENABLED','true').strip().lower()=='true',
+                'voice_provider_configured':bool(os.getenv('GROQ_API_KEY')),
+                'voice_local_enabled':os.getenv('SOCIAL_LOCAL_TTS_ENABLED','true').strip().lower()=='true'}
         upcoming=[]
         now=local_now()
         for offset in (0,1):
@@ -720,7 +722,7 @@ def run_job(day, owner):
             if len(caption)>2200:raise worker.ServiceError('Prepared Instagram caption exceeds 2200 characters; nothing submitted.')
             with TemporaryDirectory(prefix='jeeedge-social-') as directory:
                 phase='narration';stage(day,owner,phase)
-                if video:copy['voice_clips']=narration.prepare(content,copy['storyboard'],directory,social_speech.fetch)
+                if video:copy['voice_clips']=narration.prepare(content,copy['storyboard'],directory,social_speech.fetch,fallback=social_speech.local_fetch,status=social_speech.last_status)
                 if strict_voice and len(copy.get('voice_clips',[]))!=len(narration.scenes(content,copy['storyboard'])):
                     raise worker.ServiceError('Narrated test held: all narration scenes must be valid. Nothing sent to Buffer; retry later or use the production music fallback.')
                 phase='render';stage(day,owner,phase)
@@ -752,7 +754,7 @@ def run_job(day, owner):
                                   'topic':content['topic'],'story':content.get('story_format'),
                                   'seconds':storyboard.beats(copy['storyboard'])[-1] if video else None,
                                   'voice_expected':len(narration.scenes(content,copy['storyboard'])) if video else 0,
-                                  'voice_ready':len(copy.get('voice_clips',[])), 'editorial':copy.get('editorial_source','unknown'),
+                                  'voice_ready':len(copy.get('voice_clips',[])), 'narration':copy['storyboard'].get('narration') if video else None, 'editorial':copy.get('editorial_source','unknown'),
                                   'render_seconds':render_seconds,'media_bytes':sum(len(p.read_bytes()) for p in paths)}}
                     pipeline.write(db,pipeline.key('prepared',day),manifest)
                     db.commit()

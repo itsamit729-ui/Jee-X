@@ -73,3 +73,13 @@ test('caption repair is offered only for failed posts with a repairable caption'
  assert.match(ui.shorts(data),/Repair caption &amp; retry existing post/)
  assert.doesNotMatch(ui.shorts({...data,jobs:[{...data.jobs[0],state:'published',caption_repairable:false}]}),/Repair caption &amp; retry existing post/)
 })
+
+
+test('audio diagnostics distinguish working local narration from music and show the provider failure',()=>{
+ const data={capacity:{source_reels_per_day:4,source_reels_ceiling:5,shorts_per_day:4,narration_requests_per_new_reel:5},configuration:{voice_enabled:true,voice_provider_configured:true,voice_local_enabled:true},jobs:[{day:'2026-10-15',slot:'s08',kind:'reel',creative:{topic:'Equilibrium',voice_expected:5,voice_ready:5,narration:{engine:'local',failures:[{scene:0,reason:'provider_http_403'}]},media_bytes:1024}}]}
+ const html=ui.capacity(data)
+ assert.match(html,/Local narration/)
+ assert.match(html,/Speech provider returned HTTP 403/)
+ assert.match(html,/5\/5 clips embedded/)
+ assert.doesNotMatch(html,/>Music fallback</)
+})

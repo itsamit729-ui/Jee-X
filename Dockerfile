@@ -17,6 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ ./
 COPY generated/scraped-mht-cet/ ./generated/scraped-mht-cet/
 COPY social/ ./social/
+RUN ffmpeg -hide_banner -filters 2>/dev/null | grep -q flite
 COPY docs/JEE-Predictor-Data/jee-predictor-data/ ./predictor-data/
 COPY --from=frontend /build/frontend/dist ./static
 RUN groupadd --gid 1000 appuser && useradd --create-home --uid 1000 --gid 1000 appuser

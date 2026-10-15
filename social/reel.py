@@ -80,14 +80,14 @@ def render(content, directory, copy=None):
         raise worker.ServiceError('Animation frames could not be written.') from None
     output = directory / 'reel.mp4'
     clips = copy.get('voice_clips', [])
-    music_volume = ('0.3' if clips else '0.9') if creative.active(content) else ('0.07' if clips else '0.24')
+    music_volume = ('0.14' if clips else '0.9') if creative.active(content) else ('0.07' if clips else '0.24')
     filters = [f'[1:a]volume={music_volume},afade=t=in:d=0.5,afade=t=out:st={duration-2}:d=2[m]',
                '[2:a]volume=0.4[fx]']
     labels = '[m][fx]'
     extra_inputs = []
     for index, (path, start, speed) in enumerate(clips):
         extra_inputs += ['-i', str(path)]
-        filters.append(f'[{index+3}:a]atempo={speed:.6f},aresample=24000,'
+        filters.append(f'[{index+3}:a]atempo={speed:.6f},loudnorm=I=-16:TP=-1.5:LRA=7,aresample=24000,'
                        f'aformat=channel_layouts=stereo,adelay={round(start*1000)}:all=1[v{index}]')
         labels += f'[v{index}]'
     filters.append(labels+f'amix=inputs={2+len(clips)}:normalize=0,alimiter=limit=0.8[mix]')

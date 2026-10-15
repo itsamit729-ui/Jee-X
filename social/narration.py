@@ -48,39 +48,64 @@ def duration(data):
     return speech_audio.duration(data)
 
 
-def prepare(content, plan, directory, fetch):
-    clips = []
-    plan["subtitles"] = []
-    for index, (start, window, text) in enumerate(scenes(content, plan)):
-        data = fetch(text)
-        if not data:
-            log.info('JeeEdge TTS scene=%d skipped: no audio available.', index)
-            continue
-        try:
-            data, metrics = speech_audio.normalize(data)
-            seconds = duration(data)
-            speed = max(1.0, seconds / window)
-            if speed > 1.3:  # Never cut off a sentence or rush an explanation.
-                log.warning('JeeEdge TTS scene=%d skipped: speech=%.2fs window=%.2fs required_speed=%.2f', index, seconds, window, speed)
-                continue
-            path = Path(directory) / f'voice-{index}.wav'
-            path.write_bytes(data)
-            clips.append((path, start, speed))
-            words = text.split()
-            chunks = [' '.join(words[j:j+7]) for j in range(0,len(words),7)]
-            actual = seconds / speed
-            total = sum(len(x.split()) for x in chunks)
-            offset = start
-            for chunk in chunks:
-                end = offset + actual * len(chunk.split()) / total
-                plan['subtitles'].append({'start':offset,'end':end,'text':chunk})
-                offset = end
-        except (ValueError, wave.Error, EOFError, OSError) as error:
-            log.warning('JeeEdge TTS scene=%d skipped: invalid audio or file error (%s).', index, type(error).__name__)
-            continue
-    if (art_direction.style(content)=='casefile' or content.get('creative_version') == 4) and len(clips)!=len(scenes(content,plan)):
-        # Do not leave only a spoken misconception when its correction failed.
+def prepare(content, plan, directory, fetch, fallback=None, status=None):
+    scripts = scenes(content, plan)
+    complete_required = art_direction.style(content)=='casefile' or content.get('creative_version') == 4
+
+    def attempt(provider, engine):
+        clips, subtitles, failures = [], [], []
+        target = Path(directory) / ('voice-' + engine)
+        target.mkdir(parents=True, exist_ok=True)
+        for index, (start, window, text) in enumerate(scripts):
+            reason = None
+            data = provider(text)
+            if not data:
+                reason = (status() or {}).get('reason', 'unavailable') if engine=='groq' and status else 'unavailable'
+            else:
+                try:
+                    data, metrics = speech_audio.normalize(data)
+                    seconds = duration(data)
+                    speed = max(1.0, seconds / window)
+                    if speed > 1.3:
+                        reason = 'speech_exceeds_scene_window'
+                    else:
+                        path = target / f'voice-{index}.wav'
+                        path.write_bytes(data)
+                        clips.append((path, start, speed))
+                        words = text.split()
+                        chunks = [' '.join(words[j:j+7]) for j in range(0,len(words),7)]
+                        actual = seconds / speed
+                        total = sum(len(x.split()) for x in chunks)
+                        offset = start
+                        for chunk in chunks:
+                            end = offset + actual * len(chunk.split()) / total
+                            subtitles.append({'start':offset,'end':end,'text':chunk})
+                            offset = end
+                except (ValueError, wave.Error, EOFError, OSError):
+                    reason = 'invalid_audio'
+            if reason:
+                failures.append({'scene':index,'reason':reason})
+                log.warning('JeeEdge narration engine=%s scene=%d reason=%s',engine,index,reason)
+                # Once a complete local backup is available, further failed
+                # provider calls spend quota without improving this video.
+                if fallback and engine=='groq':break
+        return clips, subtitles, failures
+
+    primary, subtitles, failures = attempt(fetch, 'groq')
+    engine = 'groq'
+    chosen = primary
+    if len(primary)!=len(scripts) and fallback:
+        backup, backup_subtitles, backup_failures = attempt(fallback, 'local')
+        if len(backup)==len(scripts):
+            chosen, subtitles, engine = backup, backup_subtitles, 'local'
+        else:
+            failures += [{'scene':f['scene'],'reason':'local_' + f['reason']} for f in backup_failures]
+    if complete_required and len(chosen)!=len(scripts):
+        chosen, subtitles, engine = [], [], 'music'
         log.warning('JeeEdge narration incomplete; using the complete visual lesson with music.')
-        plan['subtitles']=[]
-        return []
-    return clips
+    elif not chosen:
+        engine = 'music'
+    plan['subtitles'] = subtitles if chosen else []
+    plan['narration'] = {'engine':engine,'expected':len(scripts),'embedded':len(chosen),
+                         'failures':failures,'complete':len(chosen)==len(scripts)}
+    return chosen

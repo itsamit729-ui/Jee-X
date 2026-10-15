@@ -3,22 +3,36 @@ import hashlib
 import logging
 import os
 import re
+from contextvars import ContextVar
 from datetime import datetime, timedelta
 from sqlalchemy import func
 from app.database import SessionLocal
 from app.models.social_job import SocialSpeech
 from app.services import social_budget as budget
-from social import narration, speech_audio, worker
+from social import narration, speech_audio, worker, local_speech
 
 log = logging.getLogger('uvicorn.error')
 FAILURE_BACKOFF = timedelta(minutes=30)
+_status=ContextVar('jeeedge_speech_status',default=None)
+
+
+def last_status():
+    return _status.get() or {'reason':'unavailable'}
+
+
+def local_fetch(text):
+    if os.getenv('SOCIAL_TTS_ENABLED','true').strip().lower()!='true' or os.getenv('SOCIAL_LOCAL_TTS_ENABLED','true').strip().lower()!='true':return None
+    return local_speech.fetch(text)
 
 
 def fetch(text):
+    _status.set({'reason':'unavailable'})
     if os.getenv('SOCIAL_TTS_ENABLED', 'true').strip().lower() != 'true' or not os.getenv('GROQ_API_KEY'):
+        _status.set({'reason':'disabled' if os.getenv('SOCIAL_TTS_ENABLED','true').strip().lower()!='true' else 'missing_groq_key'})
         log.info('JeeEdge TTS skipped: disabled or missing Groq key.')
         return None
     if not text or len(text) > 200:
+        _status.set({'reason':'text_length'})
         log.warning('JeeEdge TTS skipped: text length outside 1..200 characters.')
         return None
     identity = hashlib.sha256((narration.MODEL+'|'+narration.VOICE+'|'+text).encode()).hexdigest()
@@ -31,10 +45,12 @@ def fetch(text):
             db.query(SocialSpeech).filter(SocialSpeech.created_at < attempted_at-timedelta(days=7)).delete()
             saved = db.get(SocialSpeech, identity)
             if saved and saved.audio:
+                _status.set({'reason':'cache_hit'})
                 db.commit()
                 log.info('JeeEdge TTS cache=hit clip=%s', identity[:12])
                 return saved.audio
             if saved and attempted_at-saved.created_at < FAILURE_BACKOFF:
+                _status.set({'reason':'retry_backoff'})
                 retry_at = saved.created_at+FAILURE_BACKOFF
                 db.commit()
                 log.info('JeeEdge TTS cache=retry_backoff clip=%s retry_after=%sZ', identity[:12], retry_at.isoformat())
@@ -52,6 +68,7 @@ def fetch(text):
                 if size+narration.MAX_BYTES>32*1024*1024:
                     db.commit()
                     log.warning('JeeEdge TTS skipped: audio cache storage budget reached.')
+                    _status.set({'reason':'audio_cache_full'})
                     return None
             # Claim while holding the existing cross-process database mutex.
             # Old failed records automatically become eligible after 30 minutes;
@@ -77,6 +94,7 @@ def fetch(text):
                 {'audio':data}, synchronize_session=False)
             db.commit()
         log.info('JeeEdge TTS generated clip=%s bytes=%d seconds=%.2f', identity[:12], len(data), metrics['seconds'])
+        _status.set({'reason':'generated'})
         return data
     except Exception as error:
         # Use only controlled codes/numeric metadata. No keys, URLs, response bodies,
@@ -93,6 +111,7 @@ def fetch(text):
                       'provider_cooldown' if 'cooldown active' in message else
                       'response_too_large' if 'size limit' in message else
                       'network_or_timeout' if 'Network request failed' in message else 'service_error')
-        log.warning('JeeEdge TTS fallback clip=%s stage=%s reason=%s metrics=%s; music continues.',
+        log.warning('JeeEdge TTS fallback clip=%s stage=%s reason=%s metrics=%s; renderer selects backup audio.',
                     identity[:12], stage, reason, metrics)
+        _status.set({'reason':reason,'stage':stage})
         return None
