@@ -11,7 +11,12 @@ POST_TTL = 7 * 86400
 
 
 def key(prefix, value):
-    return prefix + ':' + hashlib.sha256(value.encode()).hexdigest()[:32]
+    existing=prefix + ':' + hashlib.sha256(value.encode()).hexdigest()[:32]
+    if len(existing)<=48:return existing  # Preserve every existing valid cache key.
+    # Keep the full namespace in the digest: truncating only the prefix could
+    # make distinct long namespaces collide for the same slot.
+    digest=hashlib.sha256((prefix+'\0'+value).encode()).hexdigest()[:32]
+    return prefix[:15]+':'+digest
 
 
 def read(db, name):
@@ -20,6 +25,8 @@ def read(db, name):
 
 
 def write(db, name, value, seconds=POST_TTL):
+    if not isinstance(name,str) or len(name)>SocialCache.__table__.c.name.type.length:
+        raise ValueError('Social checkpoint name exceeds its 48-character storage limit.')
     encoded=json.dumps(value,ensure_ascii=False)
     if len(encoded)>4000:
         raise ValueError('Social checkpoint exceeds its storage limit.')

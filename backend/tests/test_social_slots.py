@@ -29,6 +29,11 @@ def seed_legacy_hold(post):
 def setup(monkeypatch):
     engine = create_engine('sqlite://', connect_args={'check_same_thread':False}, poolclass=StaticPool)
     Base.metadata.create_all(engine, tables=[m.__table__ for m in (SocialSlot, SocialAsset, SocialDispatch, SocialJob, SocialMedia, SocialUsage, SocialQuotaLock, SocialCache, SocialShort, SocialLesson)])
+    # SQLite otherwise silently accepts overlong VARCHAR values that production
+    # MySQL rejects. Exercise every social workflow with the real name limit.
+    with engine.begin() as connection:
+        for operation in ('INSERT','UPDATE'):
+            connection.exec_driver_sql(f"CREATE TRIGGER social_cache_name_{operation.lower()} BEFORE {operation} ON social_cache WHEN length(NEW.name)>48 BEGIN SELECT RAISE(ABORT,'social_cache.name exceeds 48 characters'); END")
     factory = sessionmaker(bind=engine)
     monkeypatch.setattr(social, 'SessionLocal', factory)
     monkeypatch.setattr(social.social_speech, 'fetch', lambda text: None)
