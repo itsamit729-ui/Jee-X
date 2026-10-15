@@ -134,3 +134,34 @@ def test_youtube_landing_preserves_source_and_records_aggregate_events(setup):
     assert fallback.status_code == 200
     assert 'data-paper="instagram" data-source="instagram"' in fallback.text
     assert '<script>' not in fallback.text
+
+
+def test_year_archive_has_distinct_canonical_breadcrumbs_and_live_sitemap_entries(setup):
+    import json
+    import re
+    from xml.etree import ElementTree
+    client,_,_=setup
+    response=client.get('/mhtcet/papers/2025')
+    assert response.status_code==200
+    assert '<h1>MHT-CET 2025 question papers by shift</h1>' in response.text
+    assert 'rel="canonical" href="https://jeeedge.in/mhtcet/papers/2025"' in response.text
+    schema=json.loads(re.search(r'<script type="application/ld\+json">(.*?)</script>',response.text).group(1))
+    assert schema[1]['@type']=='BreadcrumbList'
+    assert schema[1]['itemListElement'][-1]['item']=='https://jeeedge.in/mhtcet/papers/2025'
+    sitemap=ElementTree.fromstring(client.get('/sitemap.xml').text)
+    locations=[node.text for node in sitemap.iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+    assert 'https://jeeedge.in/mhtcet/papers/2025' in locations
+    assert len(locations)==len(set(locations))
+    assert client.get('/mhtcet/papers/2024').status_code==404
+    assert 'SECRET_SOLUTION' not in response.text
+
+
+def test_structured_metadata_cannot_break_out_of_json_script():
+    import json,re
+    from app.routers.public_papers import page
+    malicious='Question </script><script>alert(1)</script> & test'
+    response=page(malicious,malicious,'/example','<h1>Safe body</h1>',breadcrumbs=[(malicious,'/example')])
+    html=response.body.decode()
+    raw=re.search(r'<script type="application/ld\+json">(.*?)</script>',html).group(1)
+    assert json.loads(raw)[0]['name']==malicious
+    assert '</script>' not in raw and '<script>alert(1)' not in html

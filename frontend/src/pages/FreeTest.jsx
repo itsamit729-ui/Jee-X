@@ -150,7 +150,7 @@ export default function FreeTest() {
           <p>Before any of that, he was a student in front of a question paper.</p>
 
           </div><div className="turn">
-            <span className="eyebrow">THE FIVE-MINUTE WARM-UP</span><h2 style={{ marginTop: 12 }}>Now, your turn.</h2>
+            <span className="eyebrow">THE FIVE-MINUTE WARM-UP</span><h1 style={{ marginTop: 12, fontSize: 28 }}>Free JEE practice warm-up</h1>
             <p>Ten questions in the spirit of the IIT entrance papers of that era. Not the actual paper he sat.</p>
             <div className="chips">
               <span className="tag">10 questions</span>

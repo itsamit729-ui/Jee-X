@@ -2,9 +2,9 @@ import os
 from time import perf_counter
 
 from dotenv import load_dotenv
-from fastapi import FastAPI, Request, HTTPException
+from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
-from fastapi.responses import JSONResponse, FileResponse
+from fastapi.responses import JSONResponse
 from pathlib import Path
 from fastapi.middleware.cors import CORSMiddleware
 from starlette.middleware.gzip import GZipMiddleware
@@ -130,15 +130,5 @@ static_dir = Path(os.getenv('FRONTEND_DIST', '/app/static')).resolve()
 if (static_dir / 'index.html').is_file():
     @app.get('/{path:path}', include_in_schema=False)
     def frontend(path: str):
-        if path == 'api' or path.startswith('api/'):
-            raise HTTPException(404, 'Not found')
-        target = (static_dir / path).resolve()
-        if not target.is_relative_to(static_dir):
-            raise HTTPException(404, 'Not found')
-        if target.is_file():
-            # Vite assets have content hashes; HTML and unversioned files must revalidate.
-            cache = 'public, max-age=31536000, immutable' if path.startswith('assets/') else 'no-cache'
-            return FileResponse(target, headers={'Cache-Control': cache})
-        if path.startswith(('assets/', 'question-images/')):
-            raise HTTPException(404, 'Not found')
-        return FileResponse(static_dir / 'index.html', headers={'Cache-Control': 'no-cache'})
+        from app.services.frontend_delivery import frontend_response
+        return frontend_response(static_dir,path)

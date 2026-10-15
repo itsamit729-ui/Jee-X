@@ -37,16 +37,10 @@ const Scenarios = lazy(() => import('./pages/Scenarios.jsx'))
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 const MHTCETLanding = lazy(() => import('./pages/MHTCETLanding.jsx'))
 
-const SEO_PAGES = {
-  '/': ['JEE & MHT-CET Practice, Mocks and Study Plans', 'Prepare for JEE, MHT-CET and BITSAT with focused practice, exam mocks, progress insights and a clearer study plan.'],
-  '/syllabus': ['JEE & Entrance Exam Syllabus 2026 | Jee Edge', 'Browse official 2026 engineering entrance exam syllabi with subject links and direct links to examination authority PDFs.'],
-  '/pricing': ['Jee Edge Plans for Students and Teachers', 'Compare Jee Edge free study tools and the upcoming Student Plus and teacher pilot plans.'],
-  '/free-test': ['Free JEE Practice Warm-up | Jee Edge', 'Try a free ten-question Physics, Chemistry and Mathematics warm-up with explanations. No account required to begin.'],
-  '/image-questions': ['Physics Circuit Diagram Questions | Jee Edge', 'Practice current electricity questions with circuit diagrams, answer checks and worked solutions.'],
-  '/mhtcet-mock-tests': ['MHT-CET Year and Shift Mock Tests | Jee Edge', 'Explore MHT-CET mock practice organized by exam year and shift, with timed sections designed to help students rehearse exam day.'],
-}
+import SEO_PAGES from './data/seoPages.json'
 
 function updateSeo(pathname) {
+  pathname = pathname.replace(/\/+$/, '') || '/'
   const page = SEO_PAGES[pathname]
   const privateRoute = !page
   const title = page?.[0] || 'Your exam preparation'
