@@ -24,7 +24,9 @@ its original figure URL and paper; ExamsNet's figure file names carry the paper 
 Questions that can't be imported as they are yet (image options, more than one figure, numerical
 answer missing/0/unparseable) are kept in full in <out>/.pending/<subject>/<chapter-slug>.json, with
 the figure URLs, for the later figure step (official-paper crops via Gemini) and answer check to
-complete. Pages that can't be parsed at all are listed in <out>/.reports/<chapter-slug>.json. The
+complete. Since Oct 2026 ExamsNet pages carry no answer key; keys found elsewhere are kept in
+<out>/.answers/<year>.json (scripts/answer_sources.py), and a re-run (served from the page cache)
+fills them in and moves those questions from pending into the chapter files, downloading their figures. Pages that can't be parsed at all are listed in <out>/.reports/<chapter-slug>.json. The
 importer skips dot-directories, so pending questions and reports are never imported.
 
 Re-running merges into the existing output: fields we fill in later (solution, subtopic, difficulty,
@@ -324,10 +326,10 @@ def parse_page(page: str):
     soup = BeautifulSoup(page, "html.parser")
     ld_raw = soup.find("script", type="application/ld+json")
     ld = json.loads(ld_raw.get_text()) if ld_raw else []
-    if not ld or not ld[0].get("hasPart"):
-        raise ValueError("no JSON-LD question")
-    ld_q = ld[0]["hasPart"][0]
-    ld_answers = ld_q.get("suggestedAnswer") or []
+    # Since Oct 2026 ExamsNet no longer puts the answer key in the page (it is only returned after a
+    # "Validate" submission). Such pages are still read in full and kept as pending "no answer key".
+    keyless = not (ld and isinstance(ld, list) and ld[0].get("hasPart"))
+    ld_answers = [] if keyless else (ld[0]["hasPart"][0].get("suggestedAnswer") or [])
 
     stem_node = soup.select_one("#imagewrap a") or soup.select_one("#imagewrap")
     if not stem_node:
@@ -351,7 +353,12 @@ def parse_page(page: str):
 
     question = {"type": qtype, "stem": stem, "raw_date": raw_date}
     option_figures, pending = {}, []
-    if qtype == "numerical":
+    if keyless:
+        pending.append("no answer key on the page")
+    if qtype == "numerical" and keyless:
+        question["answer"] = None
+        question["options"] = []
+    elif qtype == "numerical":
         if len(ld_answers) != 1:
             raise ValueError(f"numerical question has {len(ld_answers)} answers in JSON-LD")
         a = ld_answers[0]
@@ -374,6 +381,14 @@ def parse_page(page: str):
                 option_figures[chr(65 + i)] = figures
                 text = f"{text} [figure]".strip()
             options.append(text)
+        if keyless:
+            question["options"] = [{"label": chr(65 + i), "content": text, "is_correct": None}
+                                   for i, text in enumerate(options)]
+            if option_figures:
+                pending.append(f"options {', '.join(option_figures)} are figures")
+            if len(images) > 1:
+                pending.append(f"{len(images)} figures in question (only one supported)")
+            return question, images, option_figures, pending
         if len(options) != len(ld_answers):
             raise ValueError(f"{len(options)} options on page but {len(ld_answers)} in JSON-LD")
         correct = [(a.get("comment") or {}).get("text", "").strip().lower() == "correct" for a in ld_answers]
@@ -438,6 +453,38 @@ def latest_parts(parts: list[str]) -> list[str]:
     return [path for _, path in last.values()]
 
 
+NO_KEY = "no answer key on the page"
+
+
+def load_answers(out: Path) -> dict:
+    """Keys found elsewhere for keyless pages (scripts/answer_sources.py): <out>/.answers/<year>.json"""
+    answers = {}
+    for path in sorted((out / ".answers").glob("*.json")):
+        answers.update(json.loads(path.read_text(encoding="utf-8")))
+    return answers
+
+
+def apply_answer(parsed: dict, answer) -> None:
+    if parsed["type"] == "numerical":
+        parsed["answer"] = {"min": float(answer), "max": float(answer)}
+    else:
+        right = set(str(answer).split(","))
+        for o in parsed["options"]:
+            o["is_correct"] = o["label"] in right
+
+
+def previous_part(path: str, parts: list[str]):
+    """The ExamsNet part before this one in the same chapter ('...-part-3-questions' -> '...-part-2-questions')."""
+    m = re.match(r"^(.*?)(?:-part-(\d+))?-questions$", path)
+    number = int(m.group(2) or 0)
+    if number <= 1:
+        return None
+    want = f"{m.group(1)}-part-{number - 1}-questions"
+    if want in parts:
+        return want
+    return f"{m.group(1)}-questions" if number - 1 == 1 and f"{m.group(1)}-questions" in parts else None
+
+
 def in_years(year, args) -> bool:
     if not (args.min_year or args.max_year):
         return True
@@ -464,16 +511,19 @@ def scrape_chapter(subject: str, slug: str, entry: dict, args) -> None:
 
     questions, pending, flagged, seen, skipped = {}, {}, [], set(), 0
     done = lambda: args.limit and len(questions) + len(pending) + len(flagged) >= args.limit  # noqa: E731
-    parts = latest_parts(entry["parts"]) if args.recent_only else entry["parts"]
-    for part in parts:
+    parts = latest_parts(entry["parts"]) if args.recent_only else list(entry["parts"])
+    while parts:
+        part = parts.pop(0)
         total = question_count(part, args.delay, args.offline)
         print(f"{part}: {total} questions")
         older_streak = 0
+        reached_older = False
         for n in range(1, total + 1):
             if done():
                 break
             if args.recent_only and older_streak >= RECENT_STOP_AFTER:
                 print(f"  reached questions older than {args.min_year}; rest of this part skipped")
+                reached_older = True
                 break
             source = f"{BASE}{part}/{n}"
             page = trimmed_page(part, n, args.delay, args.offline)
@@ -488,7 +538,7 @@ def scrape_chapter(subject: str, slug: str, entry: dict, args) -> None:
 
             # JEE Main has no multi-correct questions; ExamsNet sometimes shows checkboxes anyway.
             if (args.exam_value == "jee_main" and parsed["type"] == "multi_correct"
-                    and sum(o["is_correct"] for o in parsed["options"]) == 1):
+                    and sum(1 for o in parsed["options"] if o["is_correct"]) <= 1):  # 0: keyless page
                 parsed["type"] = "single_correct"
             raw_date = parsed.pop("raw_date")
             year, shift = parse_shift(raw_date)
@@ -502,6 +552,9 @@ def scrape_chapter(subject: str, slug: str, entry: dict, args) -> None:
             if ref in seen:
                 continue
             seen.add(ref)
+            if NO_KEY in pending_reasons and ref in args.answers:
+                apply_answer(parsed, args.answers[ref]["answer"])
+                pending_reasons = [r for r in pending_reasons if r != NO_KEY]
 
             if pending_reasons:
                 # Complete except for figures/key: kept for the figure step, with the figure URLs.
@@ -546,17 +599,24 @@ def scrape_chapter(subject: str, slug: str, entry: dict, args) -> None:
             print(f"  {n:>3} ok   {ref} {parsed['type']:<14} {shift or '-'}{'  [figure]' if image else ''}")
         if done():
             break
+        # The selected years ran to the end of this part: they continue at the start of the part before it.
+        if args.recent_only and not reached_older:
+            earlier = previous_part(part, entry["parts"])
+            if earlier:
+                print(f"  {args.min_year} questions continue in {earlier}")
+                parts.insert(0, earlier)
 
     for f in flagged:
         print(f"  flagged {f['source']}: {f['reason']}")
 
-    # Keep questions from earlier runs that this run didn't reach (e.g. an earlier run without --limit),
-    # unless this run found they now belong in the other file.
+    # Keep questions from earlier runs that this run didn't reach (other years, or an earlier run without
+    # --limit), unless this run found they now belong in the other file. A --min-year/--max-year run adds
+    # its years to the chapter files and leaves the other years (and their solutions) as they are.
     for ref, q in previous.items():
-        if ref not in pending and in_years(q.get("year"), args):
+        if ref not in pending:
             questions.setdefault(ref, q)
     for ref, q in previous_pending.items():
-        if ref not in questions and in_years(q.get("year"), args):
+        if ref not in questions:
             pending.setdefault(ref, q)
     order = lambda q: (q["year"] or 0, q["shift"] or "", q["ref"])  # noqa: E731
     ordered = sorted(questions.values(), key=order)
@@ -600,6 +660,7 @@ def main():
     args.out = (args.out or exam["out"]).resolve()
     if args.recent_only and not args.min_year:
         parser.error("--recent-only needs --min-year")
+    args.answers = load_answers(args.out)
 
     chapters = discover_chapters(exam, args.delay, args.offline)
     if args.subject:

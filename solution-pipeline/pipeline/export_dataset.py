@@ -21,10 +21,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from sqlalchemy import text  # noqa: E402
-
 from common import HOME  # noqa: E402
-from db import VERIFIED_NOTE, engine  # noqa: E402
 
 SUBJECT = {"PHY": "Physics", "CHEM": "Chemistry", "MATH": "Mathematics"}
 SUBJECT_DIR = {"PHY": "physics", "CHEM": "chemistry", "MATH": "mathematics"}
@@ -35,11 +32,77 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--year", type=int, required=True)
     parser.add_argument("--exam", default="jee_main", choices=sorted(EXAM_NAME))
+    parser.add_argument("--from-files", action="store_true",
+                        help="build from generated/scraped instead of the database (years not imported yet)")
     args = parser.parse_args()
     repo = HOME.parent
     out = repo / "datasets" / f"{args.exam.replace('_', '-')}-{args.year}"
     out.mkdir(parents=True, exist_ok=True)
 
+    if args.from_files:
+        full, pack = from_files(repo, args)
+    else:
+        full, pack = from_database(args)
+    write_dataset(repo, out, args, full, pack)
+
+
+def from_files(repo, args):
+    """The same dataset built from the scraped chapter files, for a year not imported into the database yet.
+    Answers found elsewhere (generated/scraped/.answers) carry their source; a checked solution from the
+    pipeline's key mode (data/keys) is included and marked verified."""
+    answers_file = repo / "generated" / "scraped" / ".answers" / f"{args.year}.json"
+    answer_source = json.loads(answers_file.read_text(encoding="utf-8")) if answers_file.exists() else {}
+    keys = {}
+    for p in (HOME / "data" / "keys").glob("*.json"):
+        r = json.loads(p.read_text(encoding="utf-8"))
+        if r.get("verdict") == "key_found" and r.get("solution"):
+            keys[r["ref"]] = r
+    code = {v: k for k, v in SUBJECT_DIR.items()}
+    full, pack = [], []
+    files = [f for d in SUBJECT_DIR.values() for f in sorted((repo / "generated" / "scraped" / d).glob("*.json"))]
+    for f in files:
+        data = json.loads(f.read_text(encoding="utf-8"))
+        chapter = data["chapter"]
+        subtopics = {s["slug"]: s["name"] for s in data.get("subtopics", [])}
+        for q in data["questions"]:
+            if q.get("year") != args.year or q.get("exam") != args.exam:
+                continue
+            opts = q.get("options") or []
+            a = q.get("answer") or {}
+            answer = (a.get("min") if a.get("min") == a.get("max") else f"{a.get('min')} to {a.get('max')}") \
+                if q["type"] == "numerical" else ",".join(o["label"] for o in opts if o["is_correct"])
+            key = keys.get(q["ref"])
+            solution = q.get("solution") or (key["solution"] if key else None)
+            item = {
+                "ref": q["ref"], "exam": q["exam"], "year": q["year"], "shift": q["shift"],
+                "subject": SUBJECT[code[f.parent.name]], "chapter": chapter["name"], "chapter_slug": chapter["slug"],
+                "class_level": chapter.get("class_level"), "subtopic": subtopics.get(q.get("subtopic"), "General"),
+                "type": q["type"], "stem": q["stem"],
+                "options": [{"label": o["label"], "content": o["content"], "is_correct": bool(o["is_correct"])} for o in opts],
+                "answer": answer,
+                "answer_source": answer_source.get(q["ref"], {}).get("source", "examsnet"),
+                "figure": q.get("image"),
+                "solution": solution, "solution_verified": bool(key),
+                "difficulty": q.get("difficulty"), "expected_time_sec": q.get("expected_time_sec"),
+            }
+            full.append(item)
+            if not key:
+                pack.append({
+                    "ref": q["ref"], "subject": item["subject"], "chapter": chapter["name"], "type": q["type"],
+                    "exam": q["exam"], "year": q["year"], "shift": q["shift"], "stem": q["stem"],
+                    "options": [{"label": o["label"], "content": o["content"]} for o in opts],
+                    "correct": [o["label"] for o in opts if o["is_correct"]],
+                    "answer_min": a.get("min"), "answer_max": a.get("max"), "answer": answer,
+                    "image_url": (q.get("image") or {}).get("url"), "had_solution": bool(q.get("solution")),
+                })
+    full.sort(key=lambda i: (i["subject"], i["chapter_slug"], i["shift"] or "", i["ref"]))
+    return full, pack
+
+
+def from_database(args):
+    from sqlalchemy import text  # only the database mode needs these
+
+    from db import VERIFIED_NOTE, engine
     with engine().connect() as db:
         rows = db.execute(text("""
             SELECT q.id, q.ref, q.type, q.stem, q.answer_min, q.answer_max, q.solution, q.difficulty,
@@ -92,7 +155,10 @@ def main():
                 "image_url": image["url"] if image else None, "had_solution": bool(r["solution"]),
                 "content_hash": r["content_hash"], "version": r["version"],
             })
+    return full, pack
 
+
+def write_dataset(repo, out, args, full, pack):
     pending = []
     for f in sorted((repo / "generated" / "scraped" / ".pending").glob("*/*.json")):
         data = json.loads(f.read_text(encoding="utf-8"))
@@ -120,14 +186,30 @@ def main():
         "by_shift": dict(sorted(Counter(q["shift"] for q in full).items())),
         "by_chapter": {s: dict(sorted(c.items())) for s, c in sorted(by_chapter.items())},
     }
+    if args.from_files:
+        summary["by_answer_source"] = dict(Counter(q["answer_source"] for q in full))
     (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+    where = ("from the scraped question files (not imported into the database yet)" if args.from_files
+             else "exactly as they are in the Jee Edge database")
+    rebuild = f"--year {args.year}" + (" --from-files" if args.from_files else "")
+    sources = ""
+    if args.from_files:
+        names = {"examsnet": "ExamsNet's own key (scraped before Oct 2026)",
+                 "pw-jee-main-math": "PhysicsWallahAI/JEE-Main-2025-Math dataset (NTA-verified), matched by text",
+                 "grafite-jee-mains": "grafite JEE Mains dataset, matched by text within the same shift",
+                 "pipeline-two-solves-checked": "solution pipeline key mode: two independent solves agree and the checker accepts the solution"}
+        sources = "\n## Where the answers come from (`answer_source`)\n" + "".join(
+            f"- `{k}` ({n}): {names.get(k, k)}\n" for k, n in sorted(summary["by_answer_source"].items(), key=lambda x: -x[1])) + (
+            "\nEvery numerical answer not taken from ExamsNet was checked against NTA's official final key: it must be one of "
+            "the numerical answers NTA lists for that shift and subject, or it was left out.\n")
     readme = f"""# {EXAM_NAME[args.exam]} {args.year} — question dataset
 
-{len(full)} published questions from all {len(summary['by_shift'])} shifts of {EXAM_NAME[args.exam]} {args.year}, exactly as they are in the Jee Edge database
+{len(full)} questions from all {len(summary['by_shift'])} shifts of {EXAM_NAME[args.exam]} {args.year}, {where}
 ({summary['by_subject'].get('Physics', 0)} physics, {summary['by_subject'].get('Chemistry', 0)} chemistry, {summary['by_subject'].get('Mathematics', 0)} mathematics;
 {summary['by_type'].get('single_correct', 0)} single-correct, {summary['by_type'].get('numerical', 0)} numerical; {summary['with_figure']} with a figure).
-{summary['verified_solutions']} have a verified solution. Rebuild this folder with `python solution-pipeline/pipeline/export_dataset.py --year {args.year}`.
+{summary['verified_solutions']} have a verified solution. Rebuild this folder with `python solution-pipeline/pipeline/export_dataset.py {rebuild}`.
+{sources}
 
 | File | Contents |
 |---|---|
@@ -147,7 +229,7 @@ Send back `solution-pipeline/data/results/*.json`; they are published from the m
 
 ## Notes
 - Source: questions and keys transcribed by ExamsNet from the official papers; figures carry the ExamsNet watermark until replaced.
-- A small share of source keys are wrong and some texts are incomplete; the solution pipeline flags them (`key_mismatch`). Known: `PYQ-MATH-c040a14493cf` (key 11, correct answer 6), `PYQ-CHEM-69229726df9c` (question text cut off at the source).
+- A small share of source keys are wrong and some texts are incomplete; the solution pipeline flags them (`key_mismatch`).{" Known: `PYQ-MATH-c040a14493cf` (key 11, correct answer 6), `PYQ-CHEM-69229726df9c` (question text cut off at the source)." if args.year == 2026 else ""}
 - Contains answer keys: keep the repository private before sharing it widely.
 """
     (out / "README.md").write_text(readme, encoding="utf-8")
