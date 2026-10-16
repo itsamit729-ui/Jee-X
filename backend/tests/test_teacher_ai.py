@@ -94,7 +94,7 @@ def test_catalog_only_visible_metadata_and_exam_separation(ai_studio,monkeypatch
     def interpret(prompt,exam,catalog):
         assert exam=='jee_main'
         assert 'Question' not in json.dumps(catalog) and 'Solution' not in json.dumps(catalog)
-        assert set(catalog)=={'papers','chapters'}
+        assert set(catalog)=={'papers','chapters','paper_defaults'}
         assert sum(p['count'] for p in catalog['papers']) == 72
         return ai.AIPlan(count=10)
     monkeypatch.setattr(ai,'interpret',interpret)
@@ -162,3 +162,98 @@ def test_ai_selection_does_not_include_own_unpublished_questions(ai_studio,monke
     r=request(c);assert r.status_code==200,r.text
     assert len(r.json()['questions'])==74
     assert 100 not in [q['question_id'] for q in r.json()['questions']]
+
+
+QUICK_KEY='2ad4a600-9af2-414f-a862-3bf662f661e5'
+
+
+def quick(c, **kwargs):
+    return c.post('/api/teacher/papers/ai-create',json={
+        'prompt':'Create 6 balanced JEE Main questions, two per subject.',
+        'request_key':QUICK_KEY,'exam':'jee_main',**kwargs})
+
+
+def test_quick_complete_returns_downloads_and_retries_same_paper(ai_studio,monkeypatch):
+    c,factory,active,_=ai_studio
+    mock_plan(monkeypatch,count=6,duration_minutes=45,marks_correct=3,marks_wrong=0,sets_enabled=True)
+    r=quick(c);assert r.status_code==200,r.text
+    data=r.json();paper=data['paper']
+    assert data['state']=='ready' and paper['finalized']
+    assert len(paper['questions'])==6 and paper['settings']['duration_minutes']==45
+    assert paper['settings']['marks_correct']==3 and paper['settings']['marks_wrong']==0
+    assert [d['variant'] for d in data['downloads']]==['A','B']
+    for link in data['downloads']:
+        response=c.get(link['omr']);assert response.status_code==200,response.text
+        assert response.content.startswith(b'%PDF')
+    # A replay must not call AI, spend quota, mutate the snapshot or create another paper.
+    monkeypatch.setattr(ai,'interpret',lambda *a:pytest.fail('AI called on replay'))
+    assert quick(c).json()['paper']['id']==paper['id']
+    with factory() as db:
+        assert db.query(m.TeacherPaper).count()==1
+        assert db.query(m.TeachingAssignment).count()==0
+    active[0]=1
+    assert quick(c).status_code==403
+    assert c.get(data['downloads'][0]['omr']).status_code==403
+
+
+def test_quick_missing_details_asks_then_finishes_with_answer(ai_studio,monkeypatch):
+    c,factory,_,_=ai_studio
+    mock_plan(monkeypatch)
+    r=quick(c,prompt='Create a physics paper on the full syllabus.')
+    assert r.json()['state']=='needs_details' and 'How many' in r.json()['question']
+    assert not c.get('/api/teacher/papers').json()['papers']
+    def interpret(prompt,exam,catalog):
+        assert 'teacher: 6' in prompt
+        assert catalog['paper_defaults']['duration_minutes']==90
+        return ai.AIPlan(count=6,sections=[ai.AISection(subject='PHY',count=6)])
+    monkeypatch.setattr(ai,'interpret',interpret)
+    r=quick(c,prompt='teacher: Create a physics paper.\nassistant: How many questions?\nteacher: 6',defaults={'duration_minutes':90,'marks_correct':4,'marks_wrong':1,'sets_enabled':False})
+    assert r.status_code==200,r.text
+    assert r.json()['state']=='ready' and r.json()['paper']['settings']['duration_minutes']==90
+    assert len(r.json()['downloads'])==1
+
+
+def test_quick_shortfall_and_invalid_omr_do_not_save(ai_studio,monkeypatch):
+    c,factory,_,_=ai_studio
+    mock_plan(monkeypatch,count=200)
+    assert quick(c).json()['state']=='needs_details'
+    assert not c.get('/api/teacher/papers').json()['papers']
+    from app.routers import teacher_papers as p
+    original=p.omr_report
+    monkeypatch.setattr(p,'omr_report',lambda qs:{'eligible':False})
+    mock_plan(monkeypatch,count=6)
+    assert quick(c).json()['state']=='needs_details'
+    assert not c.get('/api/teacher/papers').json()['papers']
+
+
+def test_quick_request_keys_are_teacher_scoped(ai_studio,monkeypatch):
+    from test_teaching import grant
+    c,factory,active,_=ai_studio
+    mock_plan(monkeypatch,count=3)
+    first=quick(c).json()['paper']['id']
+    grant(c,4);active[0]=4
+    second=quick(c).json()['paper']['id']
+    assert second!=first
+    assert c.get(f'/api/teacher/papers/{first}').status_code==404
+
+
+def test_quick_defaults_and_idempotency_key_are_validated(ai_studio):
+    c,*_=ai_studio
+    assert quick(c,defaults={'duration_minutes':0}).status_code==422
+    assert quick(c,request_key='bad').status_code==422
+
+
+def test_quick_duplicate_has_independent_request_identity(ai_studio,monkeypatch):
+    c,*_=ai_studio
+    mock_plan(monkeypatch,count=3)
+    saved=quick(c).json()['paper']
+    copied=c.post(f"/api/teacher/papers/{saved['id']}/duplicate").json()
+    assert 'ai_request_key' not in copied['settings']
+    assert quick(c).json()['paper']['id']==saved['id']
+
+
+def test_quick_inferred_section_count_cannot_exceed_limit(ai_studio,monkeypatch):
+    c,*_=ai_studio
+    mock_plan(monkeypatch,sections=[{'subject':'PHY','count':200},{'subject':'MATH','count':200}])
+    assert quick(c).json()['state']=='needs_details'
+    assert not c.get('/api/teacher/papers').json()['papers']

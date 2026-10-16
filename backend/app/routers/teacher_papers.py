@@ -188,7 +188,8 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
     return {'questions':[t.freeze(qs[i],qs[i].version) for i in selected], 'warning':warning}
 
 class AIRequest(BaseModel):
-    prompt: str = Field(min_length=10, max_length=1500)
+    prompt: str = Field(min_length=10, max_length=6000)
+    defaults: dict = Field(default_factory=dict)
     exam: EXAMS = 'jee_main'
 
 
@@ -218,7 +219,7 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
         raise HTTPException(422, 'No published questions are available for this exam yet. Choose another exam or use the manual bank.')
     # Return the connection to the pool while waiting on the external provider.
     db.rollback()
-    plan = teacher_ai.interpret(b.prompt.strip(), b.exam, {'papers': papers, 'chapters': chapters})
+    plan = teacher_ai.interpret(b.prompt.strip(), b.exam, {'papers': papers, 'chapters': chapters, 'paper_defaults': b.defaults})
     if plan.clarification:
         raise HTTPException(422, plan.clarification)
     available = {c['id']: c for c in chapters}
@@ -229,6 +230,11 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
     for section in plan.sections:
         if section.subject not in subjects or section.difficulty_min > section.difficulty_max or any(available[cid]['subject'] != section.subject for cid in section.chapter_ids):
             raise HTTPException(422, 'The requested subject/chapter mix is invalid. Please rephrase it.')
+    if plan.count is None:
+        if plan.sections: plan.count = sum(s.count for s in plan.sections)
+        elif plan.selection != 'exact': raise HTTPException(422, 'How many questions should the paper contain?')
+    if plan.count is not None and not 1 <= plan.count <= 200:
+        raise HTTPException(422, 'Choose between 1 and 200 questions.')
     if plan.sections and sum(s.count for s in plan.sections) != plan.count:
         raise HTTPException(422, 'Subject counts do not add up to the requested total. Please specify the counts again.')
     if plan.paper_index is not None and plan.paper_index >= len(papers):
@@ -245,7 +251,7 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
         raise HTTPException(422, 'Specify an available PYQ year or shift.')
     if plan.selection in ('similar', 'exact') and (plan.sections or plan.chapter_ids or plan.source == 'original'):
         raise HTTPException(422, 'Paper matching uses the original mix. Request a subset from the paper to add chapter or subject filters.')
-    config = Generate(exam=b.exam, strict_exam=True, published_only=True, count=plan.count, level=plan.level,
+    config = Generate(exam=b.exam, strict_exam=True, published_only=True, count=plan.count or 30, level=plan.level,
                       mode=plan.selection if plan.selection in ('exact', 'similar') else 'blueprint' if plan.sections else 'quick',
                       year=year, shift=ref['shift'] if ref else None, reference_without_shift=bool(ref and ref['shift'] is None),
                       restrict_to_reference=plan.selection == 'from_paper', chapter_ids=plan.chapter_ids,
@@ -255,7 +261,7 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
     # No database writes to papers/assignments: this response is only a reviewable candidate.
     counts = Counter(q['subject'] for q in result['questions'])
     return {**result, 'configuration': config.model_dump(),
-            'settings': {k:v for k,v in {'title':plan.title, 'duration_minutes':plan.duration_minutes, 'exam':b.exam}.items() if v is not None},
+            'settings': {k:v for k,v in {'title':plan.title, 'duration_minutes':plan.duration_minutes, 'marks_correct':plan.marks_correct, 'marks_wrong':plan.marks_wrong, 'sets_enabled':plan.sets_enabled, 'exam':b.exam}.items() if v is not None},
             'summary': {'count': len(result['questions']), 'subjects': dict(counts), 'selection': plan.selection,
                         'year':year, 'shift':ref['shift'] if ref else None,
                         'chapters':[available[cid]['name'] for cid in dict.fromkeys(ids)], 'level':plan.level}}
@@ -271,6 +277,59 @@ class PaperIn(BaseModel):
     exam: EXAMS = 'jee_main'
     version: int = Field(1,ge=1)
     sets_enabled: bool = True  # Legacy API clients retain A/B; new UI explicitly opts out.
+
+class AIPaperDefaults(BaseModel):
+    duration_minutes: int = Field(60,ge=1,le=240)
+    marks_correct: int = Field(4,ge=1,le=10)
+    marks_wrong: int = Field(1,ge=0,le=10)
+    sets_enabled: bool = False
+    instructions: str = Field('',max_length=2000)
+
+
+class AICompleteRequest(BaseModel):
+    prompt: str = Field(min_length=10, max_length=6000)
+    exam: EXAMS = 'jee_main'
+    request_key: str = Field(min_length=36, max_length=36, pattern=r'^[a-fA-F0-9-]{36}$')
+    defaults: AIPaperDefaults = Field(default_factory=AIPaperDefaults)
+
+
+def completed_ai_paper(p):
+    return {'state':'ready', 'paper':payload(p), 'downloads':[
+        {'variant':v, 'omr':f'/api/teacher/papers/{p.id}/blank-omr.pdf?variant={v}'}
+        for v in (['A','B'] if sets_enabled(p) else ['A'])]}
+
+
+@router.post('/papers/ai-create')
+def ai_create(b: AICompleteRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
+    def existing(lock=False):
+        query=db.query(m.TeacherPaper).filter(m.TeacherPaper.teacher_id==user.id,
+            m.TeacherPaper.settings['ai_request_key'].as_string()==b.request_key)
+        return (query.with_for_update() if lock else query).order_by(m.TeacherPaper.id).first()
+    previous=existing()
+    if previous: return completed_ai_paper(previous)
+    settings=b.defaults.model_dump()
+    # Missing input and ambiguous constraints are returned as a conversational follow-up.
+    try:
+        draft=ai_draft(AIRequest(prompt=b.prompt,exam=b.exam,defaults=settings),user,db)
+    except HTTPException as error:
+        if error.status_code==422:
+            return {'state':'needs_details','question':error.detail}
+        raise
+    settings.update(draft['settings'])
+    title=settings.pop('title', None) or f"{b.exam.replace('_',' ').upper()} - {len(draft['questions'])} questions"
+    settings.pop('exam',None)
+    if not omr_report(draft['questions'])['eligible']:
+        return {'state':'needs_details','question':'Some matching questions cannot be used on an OMR sheet. Should we use a different topic or paper? Please describe the revised selection.'}
+    # Serialize only persistence, not the provider call. Replays return the same saved paper.
+    db.query(m.User).filter_by(id=user.id).with_for_update().one()
+    previous=existing(lock=True)
+    if previous: return completed_ai_paper(previous)
+    settings.update(exam=b.exam,ai_request_key=b.request_key)
+    p=m.TeacherPaper(teacher_id=user.id,title=title,questions=draft['questions'],settings=settings,
+                     finalized=True,version=1,created_at=utcnow(),updated_at=utcnow())
+    db.add(p);db.commit()
+    return completed_ai_paper(p)
+
 
 def save_data(b, db, uid):
     if len(b.title.strip())<3: raise HTTPException(422,'Enter a paper title of at least three characters.')
@@ -302,7 +361,7 @@ def update(pid:int,b:PaperIn,user=Depends(t.require_teacher),db=Depends(get_db))
 @router.post('/papers/{pid}/duplicate',status_code=201)
 def duplicate(pid:int,user=Depends(t.require_teacher),db=Depends(get_db)):
     old=owned(db,pid,user)
-    p=m.TeacherPaper(teacher_id=user.id,title=(old.title+' (copy)')[:150],settings=old.settings,questions=old.questions,created_at=utcnow(),updated_at=utcnow())
+    p=m.TeacherPaper(teacher_id=user.id,title=(old.title+' (copy)')[:150],settings={k:v for k,v in old.settings.items() if k!='ai_request_key'},questions=old.questions,created_at=utcnow(),updated_at=utcnow())
     db.add(p); db.commit(); return payload(p)
 
 class VersionIn(BaseModel):
