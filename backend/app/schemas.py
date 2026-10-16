@@ -149,6 +149,7 @@ class ChapterOut(BaseModel):
 class SubjectTestCreate(BaseModel):
     topic_id: int | None = None
     assessment: bool = False
+    full_mock: bool = False
     subject_code: Literal["PHY", "CHEM", "MATH"] | None = None
     mode: Literal["recommended", "topic", "revision"] = "topic"
     duration_minutes: Literal[5, 15, 30] | None = None

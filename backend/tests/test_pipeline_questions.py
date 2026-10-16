@@ -91,6 +91,17 @@ def test_all_eligible_questions_round_trip_into_current_schema_without_pending_r
         numerical=db.query(models.Question).filter_by(type='numerical').all()
         assert len(numerical)==858 and all(q.answer_min is not None and q.answer_min==q.answer_max for q in numerical)
         assert db.query(models.Asset).count()==301
+        # The entire reviewed bank, including answer-only MCQ/numerical rows,
+        # feeds the same catalog used by practice, baselines and topic planning.
+        from app.services.question_catalog import candidate_query
+        from app.routers.subjects import list_subjects, list_chapters
+        from app.routers.teaching import question_query
+        assert candidate_query(db).count()==2978
+        assert candidate_query(db,require_solution=True).count()==1009
+        assert sum(s.published_question_count for s in list_subjects(db))==2978
+        assert sum(c.published_question_count for code in ('PHY','CHEM','MATH')
+                   for c in list_chapters(code,db))==2978
+        assert question_query(db).count()==2978
         from app.routers.pyqs import catalog
         archive=catalog('jee_main',db)
         assert sum(s['available'] for year in archive['years'] for s in year['subjects'])==2978

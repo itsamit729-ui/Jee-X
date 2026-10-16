@@ -16,7 +16,7 @@ from app.services.practice import choose_questions
 DEFAULTS = {'goal_type': 'marks', 'weekly_hours': 5, 'target_marks': 150, 'college_choices': []}
 
 
-def assessment_questions(candidates, subject_ids, seen):
+def assessment_questions(candidates, subject_ids, seen, allow_repeats=False):
     """Fresh, chapter-diverse assessment, independent of adaptive weakness weights."""
     chosen = []
     rng = random.SystemRandom()
@@ -24,13 +24,15 @@ def assessment_questions(candidates, subject_ids, seen):
         for kind, count in (('single_correct', 20), ('numerical', 5)):
             pool = [q for q in candidates if q.subject_id == subject_ids.get(code)
                     and q.type == kind and q.id not in seen]
+            if len(pool) < count and allow_repeats:
+                pool = [q for q in candidates if q.subject_id == subject_ids.get(code) and q.type == kind]
             if len(pool) < count:
                 raise HTTPException(409, 'Not enough fresh, complete questions for a balanced baseline yet. Continue topic practice; your roadmap remains available.')
             rng.shuffle(pool)
             chapters = defaultdict(int)
             difficulties = defaultdict(int)
             for _ in range(count):
-                q = min(pool, key=lambda q: (chapters[q.chapter_id], difficulties[(q.difficulty - 1) // 3]))
+                q = min(pool, key=lambda q: (q.id in seen, chapters[q.chapter_id], difficulties[(q.difficulty - 1) // 3]))
                 chosen.append((q.id, None))
                 pool.remove(q)
                 chapters[q.chapter_id] += 1

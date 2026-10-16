@@ -110,3 +110,21 @@ resolved once per chapter per batch, and preview avoids per-chunk relationship
 queries and duplicate checks for already-known references. In the local SQL
 statement test, a fresh 25-question batch went from 283 statements to 24. This is
 a query-count measurement, not a claim about production wall-clock speed.
+
+### Site-wide use after publication
+
+Published JEE Main questions from both datasets join topic practice, recommended
+practice, revision, roadmap topic planning, balanced baseline assessments, full mocks from `/test`, daily
+questions, scenario practice and the teacher bank/paper builder automatically.
+Worked solutions are optional; an answer key and supported content remain required.
+Practice subject/chapter counts use the same eligibility rules as session creation.
+Other exams retain their own pools, and pending, held and unpublished records do
+not enter the student pool. Existing attempts and teacher paper snapshots stay fixed.
+Numerical scenario questions support decimals and answer ranges; the range is
+shown only after the scenario ends. Complete both year imports in Admin before
+expecting all 2,978 reviewed questions to be available in production.
+
+The main full mock uses 20 MCQs and 5 numerical questions per subject, 180 minutes
+and +4/−1 scoring, with server-side grading. Unseen questions are preferred,
+with repeats allowed when a subject/format pool runs out. Baseline assessments
+continue to require fresh questions. The free warm-up remains a fixed demo.

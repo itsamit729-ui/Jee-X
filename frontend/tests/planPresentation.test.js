@@ -26,7 +26,7 @@ test('a selected later-week topic launches a 15-minute exact-topic test, not an 
     await subjectTestBuilderService.start(topicPracticeOptions(topics[2]))
     assert.equal(sent.path, '/api/subject-tests')
     assert.equal(sent.method, 'POST')
-    assert.deepEqual(sent.body, { assessment: false, subject_code: 'PHY', chapter_id: 9, topic_id: 73, count: 10, mode: 'recommended', duration_minutes: 15 })
+    assert.deepEqual(sent.body, { assessment: false, full_mock: false, subject_code: 'PHY', chapter_id: 9, topic_id: 73, count: 10, mode: 'recommended', duration_minutes: 15 })
   } finally { globalThis.fetch = original }
 })
 
@@ -55,4 +55,20 @@ test('a default target is labelled suggested until the student saves it', () => 
 test('zero accuracy remains evidence instead of being presented as missing history', () => {
   assert.match(evidenceLabel({ accuracy: 0, fresh_answers: 8, study_days: 2 }), /0% correct · 8 fresh answers · 2 study days/)
   assert.match(evidenceLabel({ accuracy: null }), /No fresh answers yet/)
+})
+
+test('full mocks request a database paper without marking it as a fresh-only baseline', async () => {
+  const original = globalThis.fetch
+  let sent
+  globalThis.fetch = async (path, options) => {
+    sent = { path, body: JSON.parse(options.body) }
+    return { ok: true, status: 201, json: async () => ({ attempt_id: 5, questions: [] }) }
+  }
+  try {
+    await subjectTestBuilderService.start({ fullMock: true })
+    assert.equal(sent.path, '/api/subject-tests')
+    assert.equal(sent.body.full_mock, true)
+    assert.equal(sent.body.assessment, false)
+    assert.equal(sent.body.subject_code, null)
+  } finally { globalThis.fetch = original }
 })

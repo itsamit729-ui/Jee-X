@@ -18,6 +18,7 @@ from app import models, schemas
 from app.database import get_db
 from app.deps import get_current_db_user
 from app.services import rewards
+from app.services.question_catalog import candidate_query
 
 router = APIRouter(prefix="/api/daily-question", tags=["daily-question"])
 
@@ -36,6 +37,8 @@ def _previously_assigned_question_ids(db: Session, user_id: int) -> set[int]:
 
 def _pick_question(db: Session, user: models.User) -> models.Question | None:
     seen = _previously_assigned_question_ids(db, user.id)
+    eligible = candidate_query(db).with_entities(models.Question.id)
+    pool = db.query(models.Question).filter(models.Question.id.in_(eligible))
 
     weak_subtopic_ids = [
         row[0]
@@ -45,10 +48,7 @@ def _pick_question(db: Session, user: models.User) -> models.Question | None:
         .all()
     ]
     for subtopic_id in weak_subtopic_ids:
-        query = db.query(models.Question).filter(
-            models.Question.subtopic_id == subtopic_id, models.Question.status == "published",
-            models.Question.jee_question(),
-        )
+        query = pool.filter(models.Question.subtopic_id == subtopic_id)
         if seen:
             query = query.filter(models.Question.id.notin_(seen))
         candidate = query.first()
@@ -57,7 +57,7 @@ def _pick_question(db: Session, user: models.User) -> models.Question | None:
 
     # No stats yet, or every question in every weak subtopic has already been assigned —
     # fall back to any unseen published question.
-    fallback = db.query(models.Question).filter(models.Question.status == "published", models.Question.jee_question())
+    fallback = pool
     if seen:
         fallback = fallback.filter(models.Question.id.notin_(seen))
     return fallback.first()

@@ -8,12 +8,16 @@ from sqlalchemy.orm import Session
 
 from app import models, schemas
 from app.database import get_db
+from app.services.question_catalog import candidate_query
 
 router = APIRouter(prefix="/api/subjects", tags=["subjects"])
 
 # What a JEE student can practise: other exams' questions and chapters are not counted or listed.
-_published_count = func.count(case(
-    (and_(models.Question.status == "published", models.Question.jee_question()), models.Question.id)))
+def _published_count(db):
+    eligible = candidate_query(db).with_entities(models.Question.id)
+    return func.count(case((models.Question.id.in_(eligible), models.Question.id)))
+
+
 _jee_chapter = or_(models.Chapter.in_main.is_(True), models.Chapter.in_advanced.is_(True))
 
 
@@ -24,7 +28,7 @@ def list_subjects(db: Session = Depends(get_db)):
             models.Subject.code,
             models.Subject.name,
             func.count(func.distinct(models.Chapter.id)).label("chapter_count"),
-            _published_count.label("question_count"),
+            _published_count(db).label("question_count"),
         )
         .outerjoin(models.Chapter, and_(models.Chapter.subject_id == models.Subject.id, _jee_chapter))
         .outerjoin(models.Subtopic, models.Subtopic.chapter_id == models.Chapter.id)
@@ -53,7 +57,7 @@ def list_chapters(code: str, db: Session = Depends(get_db)):
             models.Chapter.slug,
             models.Chapter.class_level,
             models.Chapter.position,
-            _published_count.label("question_count"),
+            _published_count(db).label("question_count"),
         )
         .filter(models.Chapter.subject_id == subject.id, _jee_chapter)
         .outerjoin(models.Subtopic, models.Subtopic.chapter_id == models.Chapter.id)

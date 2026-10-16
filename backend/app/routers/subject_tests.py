@@ -1,6 +1,6 @@
 """Build fixed practice sessions and persist their recommendation evidence."""
 from fastapi import APIRouter, Depends, HTTPException
-from sqlalchemy.orm import Session, selectinload
+from sqlalchemy.orm import Session, selectinload, joinedload
 from app import models, schemas
 from app.database import get_db
 from app.deps import get_current_db_user
@@ -13,9 +13,12 @@ router = APIRouter(prefix='/api/subject-tests', tags=['subject-tests'])
 @router.post('', response_model=schemas.SubjectTestOut, status_code=201)
 def create_subject_test(body: schemas.SubjectTestCreate,
                         user: models.User = Depends(get_current_db_user), db: Session = Depends(get_db)):
-    if body.assessment and (body.subject_code or body.chapter_id or body.topic_id):
-        raise HTTPException(422, 'A baseline assessment covers all three subjects.')
-    if not body.assessment and body.mode == 'topic' and not body.subject_code:
+    if body.assessment and body.full_mock:
+        raise HTTPException(422, 'Choose a baseline assessment or a full mock.')
+    full_paper = body.assessment or body.full_mock
+    if full_paper and (body.subject_code or body.chapter_id or body.topic_id):
+        raise HTTPException(422, 'A full paper covers all three subjects.')
+    if not full_paper and body.mode == 'topic' and not body.subject_code:
         raise HTTPException(422, 'Choose a subject for topic practice.')
     subject = db.query(models.Subject).filter_by(code=body.subject_code).first() if body.subject_code else None
     if body.subject_code and not subject:
@@ -34,7 +37,9 @@ def create_subject_test(body: schemas.SubjectTestCreate,
         if not topic or not body.chapter_id or topic.chapter_id != body.chapter_id:
             raise HTTPException(422, 'Choose a topic belonging to the selected chapter.')
         query = query.filter(models.Question.subtopic_id == body.topic_id)
-    if body.assessment:
+    if body.full_mock:
+        query = query.filter(models.Question.exam.is_(None) | (models.Question.exam == "jee_main"))
+    if full_paper:
         query = query.filter(models.Chapter.in_main.is_(True))
     candidates = query.all()
     if not candidates:
@@ -49,11 +54,11 @@ def create_subject_test(body: schemas.SubjectTestCreate,
                        (models.Question.exam.is_(None) | models.Question.exam.in_(["jee_main", "jee_advanced"])))
                .order_by(models.QuestionResponse.answered_at.desc(), models.QuestionResponse.id.desc()).limit(500).all())
     count = {5: 3, 15: 8, 30: 16}.get(body.duration_minutes, body.count)
-    if body.assessment:
+    if full_paper:
         from app.services.roadmap import assessment_questions
         subject_ids = dict(db.query(models.Subject.code, models.Subject.id).all())
         seen = {r[0] for r in db.query(models.QuestionResponse.question_id).filter_by(user_id=user.id).distinct()}
-        selection = assessment_questions(candidates, subject_ids, seen)
+        selection = assessment_questions(candidates, subject_ids, seen, allow_repeats=body.full_mock)
     else:
         from app.services.journey import practice_context
         journey = practice_context(db, user.id)
@@ -62,7 +67,8 @@ def create_subject_test(body: schemas.SubjectTestCreate,
         selection = choose_questions(candidates, history, count, body.mode, focus_chapters=focus, milestone=active)
     reasons = dict(selection)
     rows = (db.query(models.Question).filter(models.Question.id.in_(reasons))
-            .options(selectinload(models.Question.options), selectinload(models.Question.assets),
+            .options(joinedload(models.Question.subtopic).joinedload(models.Subtopic.chapter).joinedload(models.Chapter.subject),
+                     selectinload(models.Question.options), selectinload(models.Question.assets),
                      selectinload(models.Question.passage).selectinload(models.Passage.assets)).all())
     by_id = {q.id: q for q in rows}
     picked = [by_id[qid] for qid, _ in selection]
@@ -71,28 +77,31 @@ def create_subject_test(body: schemas.SubjectTestCreate,
         title = 'Quick revision' + (f' · {subject.name}' if subject else '')
     if body.assessment:
         title = 'Roadmap baseline assessment'
-    test = models.Test(title=title, kind='mock' if body.assessment else 'chapter', pattern='jee_main',
-                       duration_sec=10800 if body.assessment else (body.duration_minutes * 60 if body.duration_minutes else len(picked) * 90),
+    if body.full_mock:
+        title = 'JEE Main full mock'
+    test = models.Test(title=title, kind='mock' if full_paper else 'chapter', pattern='jee_main',
+                       duration_sec=10800 if full_paper else (body.duration_minutes * 60 if body.duration_minutes else len(picked) * 90),
                        ranked=False, generated_for_user_id=user.id)
     db.add(test)
     db.flush()
     for position, q in enumerate(picked, 1):
         db.add(models.TestQuestion(test_id=test.id, question_id=q.id, position=position,
-                                  marks_correct=4, marks_wrong=0 if q.type == 'numerical' and not body.assessment else 1, partial_marking=False))
-        if not body.assessment:
+                                  marks_correct=4, marks_wrong=0 if q.type == 'numerical' and not full_paper else 1, partial_marking=False))
+        if not full_paper:
             db.add(models.PracticeRecommendation(test_id=test.id, question_id=q.id, explanation=reasons[q.id]))
     attempt = models.TestAttempt(user_id=user.id, test_id=test.id, attempt_number=1, counts_for_rank=False)
     db.add(attempt)
     db.flush()
     # Serialize before commit expires ORM objects, avoiding per-question reloads.
-    result = schemas.SubjectTestOut(attempt_id=attempt.id, test_id=test.id, title=title,
+    result = schemas.SubjectTestOut(is_mock=full_paper, attempt_id=attempt.id, test_id=test.id, title=title,
         subject_code=subject.code if subject else 'MIX', duration_sec=test.duration_sec,
         questions=[schemas.TestQuestionOut(question_id=q.id, ref=q.ref, type=q.type, stem=q.stem,
+            subject_code=q.subtopic.chapter.subject.code,
             assets=[schemas.QuestionAssetOut(url=a.url, alt_text=a.alt_text)
                     for a in list(q.assets) + (list(q.passage.assets) if q.passage else [])],
             passage=q.passage.content if q.passage else None,
             options=[schemas.TestOptionOut(id=o.id, label=o.label, content=o.content) for o in q.options],
-            marks_correct=4, marks_wrong=0 if q.type == 'numerical' and not body.assessment else 1,
-            recommendation=None if body.assessment else schemas.RecommendationOut(**reasons[q.id])) for q in picked])
+            marks_correct=4, marks_wrong=0 if q.type == 'numerical' and not full_paper else 1,
+            recommendation=None if full_paper else schemas.RecommendationOut(**reasons[q.id])) for q in picked])
     db.commit()
     return result

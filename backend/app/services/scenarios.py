@@ -11,6 +11,7 @@ from sqlalchemy import or_
 from sqlalchemy.orm import joinedload
 
 from app import models
+from app.services.question_catalog import candidate_query
 
 EXAM_MINUTES = 180
 PRESETS = (
@@ -70,13 +71,14 @@ def _bank_snapshot(q, subject):
 
 def choose_questions(db, count):
     """Published JEE Main questions first, authored originals fill sparse subjects."""
+    eligible = candidate_query(db).with_entities(models.Question.id)
     rows = (db.query(models.Question, models.Subject.code)
             .join(models.Subtopic, models.Question.subtopic_id == models.Subtopic.id)
             .join(models.Chapter, models.Subtopic.chapter_id == models.Chapter.id)
             .join(models.Subject, models.Chapter.subject_id == models.Subject.id)
             .options(joinedload(models.Question.options), joinedload(models.Question.assets),
                      joinedload(models.Question.passage).joinedload(models.Passage.assets))
-            .filter(models.Question.status == "published", models.Question.type.in_(("single_correct", "numerical")),
+            .filter(models.Question.id.in_(eligible),
                     or_(models.Question.exam == "jee_main", models.Question.exam.is_(None))).all())
     pools = {subject: [] for subject in _SUBJECTS}
     for q, subject in rows:
@@ -84,7 +86,7 @@ def choose_questions(db, count):
             continue
         if q.type == "numerical" and (q.answer_min is None or q.answer_max is None or
                                       not math.isfinite(q.answer_min) or not math.isfinite(q.answer_max) or
-                                      q.answer_min != q.answer_max or not float(q.answer_min).is_integer()):
+                                      q.answer_min > q.answer_max):
             continue
         pools[subject].append(_bank_snapshot(q, subject))
     for items in pools.values():
@@ -124,6 +126,8 @@ def grade(questions, answers):
                             marks=4 if correct else -1 if attempted else 0,
                             correct_option_ids=q["correct_option_ids"],
                             correct_numeric_answer=q["answer_min"] if q["type"] == "numerical" else None,
+                            answer_min=q["answer_min"] if q["type"] == "numerical" else None,
+                            answer_max=q["answer_max"] if q["type"] == "numerical" else None,
                             solution=q["solution"], time_spent_sec=a.get("time_spent_sec", 0),
                             marked_for_review=a.get("marked_for_review", False)))
     attempted = sum(r["outcome"] != "skipped" for r in results)

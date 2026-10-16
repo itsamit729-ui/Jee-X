@@ -5,6 +5,7 @@ import { dailyQuestionService } from '../lib/dailyQuestion.js'
 import { subjectTestGraderService } from '../lib/subjectTests.js'
 import MathText from '../components/MathText.jsx'
 import QuestionAssets from '../components/QuestionAssets.jsx'
+import { resultAnswer } from '../lib/pyqArchive.js'
 import AppHeader from '../components/AppHeader.jsx'
 import { Loader } from '../components/Brand.jsx'
 import { GOOD, BAD } from '../crackjee/ui.js'
@@ -102,7 +103,8 @@ export default function DailyQuestion() {
                 {r.outcome === 'correct' ? 'Correct!' : 'Not quite'}
               </span>
             </div>
-            <p style={{ marginTop: 10 }}><MathText text={r.solution} /></p>
+            <p style={{ marginTop: 10 }}>Correct answer: {resultAnswer(today.question, r)}</p>
+            <p><MathText text={r.solution || 'Worked solution is not available yet.'} /></p>
 
             {result.coins_earned > 0 && (
               <p className="note" style={{ marginTop: 14, display: 'flex', alignItems: 'center', gap: 8 }}>

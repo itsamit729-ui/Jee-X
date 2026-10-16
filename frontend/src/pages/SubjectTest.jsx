@@ -21,7 +21,7 @@ import './practice.css'
 
 const OUTCOME = { correct: 'correct', wrong: 'wrong' }
 
-export default function SubjectTest({ initialMode = 'recommended' }) {
+export default function SubjectTest({ initialMode = 'recommended', fullMock = false }) {
   const navigate = useNavigate()
   const location = useLocation()
   const [searchParams] = useSearchParams()
@@ -29,7 +29,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
   const requestedChapter = searchParams.get('chapter')
   const pyq = ['jee_main', 'bitsat', 'mht_cet'].includes(searchParams.get('pyq'))
   const pyqReturn = archiveReturn(searchParams)
-  const assessment = searchParams.get('assessment') === '1'
+  const assessment = fullMock || searchParams.get('assessment') === '1'
   const [deadline, setDeadline] = useState(() => location.state?.missionTest?.is_mock ? Date.now() + location.state.missionTest.duration_sec * 1000 : null)
   const [remaining, setRemaining] = useState(10800)
   const timeoutSubmitted = useRef(false)
@@ -120,7 +120,8 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
     setStarting(true)
     try {
       const created = await subjectTestBuilderService.start({
-        assessment,
+        assessment: assessment && !fullMock,
+        fullMock,
         subjectCode: mission ? mission.subjectCode : assessment ? '' : subjectCode,
         topicId: mission?.topicId || null,
         chapterId: mission ? mission.chapterId : chapterId ? Number(chapterId) : null,
@@ -336,8 +337,8 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
 
   if (assessment) return <div className="crackjee-root"><AppHeader /><main className="wrap practice-page">
     <button className="btn btn-quiet" onClick={() => navigate('/plan')}><ArrowLeft size={16}/> My JEE Plan</button>
-    <header className="practice-intro"><div><span className="practice-eyebrow">FIND YOUR STARTING POINT</span><h1>A clear baseline.<br/><em>A better next step.</em></h1><p>75 fresh questions across Physics, Chemistry and Mathematics. Give yourself three uninterrupted hours.</p></div></header>
-    <section id="practice-builder" className="practice-builder"><div className="practice-controls"><h2>One honest checkpoint</h2><p>Each subject has 20 multiple-choice and 5 numerical questions. Correct: +4 · Incorrect: −1 · Unanswered: 0.</p><p>The timer submits at three hours. Keep this page open; leaving or refreshing ends your local session.</p><p>This generated assessment measures your starting point. It is not an official or statistically calibrated JEE paper.</p></div><aside className="practice-start"><strong>180 minutes · 300 marks</strong><button className="btn btn-primary" disabled={starting} onClick={startTest}>{starting ? 'Preparing your assessment…' : 'Begin assessment'}</button><small>Your answers are scored on the server.</small></aside></section>
+    <header className="practice-intro"><div><span className="practice-eyebrow">{fullMock ? 'JEE MAIN · FULL MOCK' : 'FIND YOUR STARTING POINT'}</span><h1>{fullMock ? <>The paper. The clock.<br/><em>Your next attempt.</em></> : <>A clear baseline.<br/><em>A better next step.</em></>}</h1><p>75 {fullMock ? 'bank' : 'fresh'} questions across Physics, Chemistry and Mathematics. Give yourself three uninterrupted hours.</p></div></header>
+    <section id="practice-builder" className="practice-builder"><div className="practice-controls"><h2>{fullMock ? 'A full exam rehearsal' : 'One honest checkpoint'}</h2><p>Each subject has 20 multiple-choice and 5 numerical questions. Correct: +4 · Incorrect: −1 · Unanswered: 0.</p><p>The timer submits at three hours. Keep this page open; leaving or refreshing ends your local session.</p><p>{fullMock ? 'This mock draws from published questions, prioritising ones you have not answered.' : 'This generated assessment measures your starting point.'} It is not an official or statistically calibrated JEE paper.</p></div><aside className="practice-start"><strong>180 minutes · 300 marks</strong><button className="btn btn-primary" disabled={starting} onClick={startTest}>{starting ? 'Preparing your paper…' : fullMock ? 'Begin full mock' : 'Begin assessment'}</button><small>Your answers are scored on the server.</small></aside></section>
     {error && <p className="alert" role="alert">{error}</p>}
   </main></div>
 
@@ -405,7 +406,7 @@ export default function SubjectTest({ initialMode = 'recommended' }) {
           <h2 id="practice-ticket-title">{approach.title}</h2>
           <div className="practice-ticket-quantity" aria-live="polite"><div><span>UP TO</span><strong key={questionLimit}>{questionLimit}<small> questions</small></strong></div><span className="practice-ticket-estimate">About<br/><b>{durationMinutes} minutes</b></span></div>
           <div className="practice-ticket-focus"><span>YOUR FOCUS</span><strong aria-live="polite">{focusLabel}</strong></div>
-          <div className="practice-ticket-outcome"><h3>Finish with more than a score</h3><ul><li><Check size={14}/> Your score and accuracy</li><li><Check size={14}/> Worked solutions to review</li><li><Check size={14}/> Results that inform your next practice</li></ul></div>
+          <div className="practice-ticket-outcome"><h3>Finish with more than a score</h3><ul><li><Check size={14}/> Your score and accuracy</li><li><Check size={14}/> Answer keys and available solutions</li><li><Check size={14}/> Results that inform your next practice</li></ul></div>
           <button type="button" className="btn btn-primary" disabled={starting || chaptersLoading || (mode === 'topic' && !subjectCode)} onClick={startTest}>{starting ? <><span className="spin" aria-hidden="true"/> Preparing your set…</> : <>Start practice <ArrowRight size={18}/></>}</button>
           <p className="practice-ticket-note" role={starting ? 'status' : undefined}>{starting ? 'Selecting available questions for your chosen focus.' : mode === 'topic' && !subjectCode ? 'Select a subject to start chapter practice.' : 'Question count depends on availability. Take the time you need.'}</p>
         </aside>

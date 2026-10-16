@@ -231,7 +231,7 @@ function Session({ runId }) {
       <h3>Question review</h3>{run.questions.map((question, i) => {
         const result = run.result.questions.find(item => item.id === question.id)
         return <div className="scenario-review" key={question.id}><div className="scenario-review-head"><strong>{i + 1}. {SUBJECT[question.subject]}</strong><span className={`scenario-outcome ${result.outcome}`}>{result.outcome} · {result.marks > 0 ? '+' : ''}{result.marks}</span></div>
-          <p><MathText text={question.stem} /></p><QuestionAssets assets={question.assets} /><p><strong>Answer: </strong>{question.type === 'numerical' ? result.correct_numeric_answer : result.correct_option_ids.join(', ')} · <MathText text={result.solution} /></p>
+          <p><MathText text={question.stem} /></p><QuestionAssets assets={question.assets} /><p><strong>Answer: </strong>{question.type === 'numerical' ? (result.answer_min != null && result.answer_max !== result.answer_min ? `${result.answer_min}–${result.answer_max}` : result.correct_numeric_answer) : result.correct_option_ids.join(', ')} · <MathText text={result.solution || 'Worked solution is not available yet.'} /></p>
           <small>{result.time_spent_sec}s recorded on this question{result.marked_for_review ? ' · marked for review' : ''}</small></div>
       })}
     </section> : <div className="scenario-paper"><aside className="scenario-palette"><strong>Question map</strong><p>Select any question to revisit it.</p>
