@@ -9,12 +9,14 @@ ARG VITE_SUPPORT_EMAIL
 RUN npm run build
 
 FROM python:3.12-slim
-ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 FRONTEND_DIST=/app/static
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 FRONTEND_DIST=/app/static PIPELINE_DATA_ROOT=/app/datasets
 WORKDIR /app
 RUN apt-get update && apt-get install -y --no-install-recommends fonts-dejavu-core ffmpeg && rm -rf /var/lib/apt/lists/*
 COPY backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ ./
+COPY datasets/jee-main-2024/ ./datasets/jee-main-2024/
+COPY datasets/jee-main-2025/ ./datasets/jee-main-2025/
 COPY generated/scraped-mht-cet/ ./generated/scraped-mht-cet/
 COPY social/ ./social/
 RUN ffmpeg -hide_banner -filters 2>/dev/null | grep -q flite

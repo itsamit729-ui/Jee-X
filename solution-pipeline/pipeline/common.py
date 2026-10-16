@@ -90,6 +90,8 @@ def figure_file(q: dict) -> Path | None:
     url = q.get("image_url")
     if not url:
         return None
+    if Path(url).is_file():  # a figure already on this machine (e.g. scraped, not yet uploaded)
+        return Path(url)
     suffix = Path(url.split("?")[0]).suffix or ".png"
     local = path("images_dir") / f"{q['ref']}{suffix}"
     if not local.exists():

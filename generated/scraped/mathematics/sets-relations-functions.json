@@ -23,6 +23,2492 @@
   "passages": [],
   "questions": [
     {
+      "ref": "PYQ-MATH-d1d3eb9e8938",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "1 Feb 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $f: \\mathbb{R} \\longrightarrow \\mathbb{R}$ and $g: \\mathbb{R} \\longrightarrow \\mathbb{R}$ be defined as\n$f(x)=\\begin{cases} \\log_e x, & x>0 \\\\ e^{-x}, & x\\le 0 \\end{cases}$\nand\n$g(x)=\\begin{cases} x, & x\\ge 0 \\\\ e^x, & x<0 \\end{cases}$\nThen, gof : $\\mathbb{R} \\longrightarrow \\mathbb{R}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "one-one but not onto",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "neither one-one nor onto",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "onto but not one-one",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "both one-one and onto",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f3928b41fc9f",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "1 Feb 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\{1,2,3,\\dots 20\\}$. Let $R_1$ and $R_2$ two relation on A such that\n$R_1=\\{(a,b): b$ is divisible by $a\\}$\n$R_2=\\{(a,b): a$ is an integral multiple of $b\\}$.\nThen, number of elements in $R_1-R_2$ is equal to_____",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 46.0,
+        "max": 46.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0d33e5e53cc3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "1 Feb 2024, Shift 2",
+      "status": "draft",
+      "stem": "Consider the relations $R_1$ and $R_2$ defined as $a R_1 b$ $\\Leftrightarrow a^2+b^2=1$ for all $a, b, \\in R$ and $(a, b) R_2(c, d)$ $\\Leftrightarrow a+d=b+c$ for all $(a,b),(c,d) \\in N \\times N$. Then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Only $R_1$ is an equivalence relation",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Only $R_2$ is an equivalence relation",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$R_1$ and $R_2$ both are equivalence relations",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Neither $R_1$ nor $R_2$ is an equivalence relation",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-53023f83fdc0",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "1 Feb 2024, Shift 2",
+      "status": "draft",
+      "stem": "If the domain of the function $f(x)=\\;\\frac{\\sqrt{x^2-25}}{4-x^2}$ $+\\log_{10}(x^2+2x-15)$ is $(-\\infty, \\alpha) \\cup [\\beta, \\infty)$, then $\\alpha^2 + \\beta^3$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "140",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "175",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "150",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "125",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2606191f9295",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "27 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $S=\\{1,2,3,\\ldots,10\\}$. Suppose $M$ is the set of all the subsets of $S$, then the relation $R=\\{(A,B): A\\cap B\\neq\\phi; A,B\\in M\\}$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "symmetric and reflexive only",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "reflexive only",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "symmetric and transitive only",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "symmetric only",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9ef6e96df9cc",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "27 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "The function $f: \\mathbb{N} - \\{1\\} \\rightarrow \\mathbb{N}$; defined by $f(n)=$ the highest prime factor of $n$, is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "both one-one and onto",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "one-one only",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "onto only",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "neither one-one nor onto",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8e8f931e22f3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "27 Jan 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $A$ and $B$ be two finite sets with $m$ and $n$ elements respectively. The total number of subsets of the set $A$ is 56 more than the total number of subsets of $B$. Then the distance of the point $P(m,n)$ from the point $Q(-2,-3)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-af88c0d45da7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "27 Jan 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $f: R - \\left\\{ \\frac{-1}{2} \\right\\} \\rightarrow R$ and $g: R - \\left\\{ \\frac{-5}{2} \\right\\} \\rightarrow R$ be defined as $f(x)=\\frac{2x+3}{2x+1}$ and $g(x)=\\frac{|x|+1}{2x+5}$. Then the domain of the function $f \\circ g$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$R - \\left\\{ -\\frac{5}{2} \\right\\}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$R - \\left\\{ -\\frac{7}{4} \\right\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$R - \\left\\{ -\\frac{5}{2}, -\\frac{7}{4} \\right\\}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-332a2896f9da",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "29 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $R$ be a relation on $Z \\times Z$ defined by $(a, b) R(c, d)$ if and only if ad - bc is divisible by 5 . Then $R$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Reflexive and symmetric but not transitive",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Reflexive but neither symmetric not transitive",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Reflexive, symmetric and transitive",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Reflexive and transitive but not symmetric",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e82e0694f9c1",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "29 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\begin{cases} 2+2x, & -1 \\le x < 0 \\\\ 1-\\frac{x}{3}, & 0 \\le x \\le 3 \\end{cases}$\n$g(x)=\\begin{cases} -x, & -3 \\le x \\le 0 \\\\ x, & 0 < x \\le 1 \\end{cases}..$,\nthen range of $(fog)(x)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0,1]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$[0,3)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$[0,1]$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$[0,1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-58f08d24f3b1",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "29 Jan 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $R$ is the smallest equivalence relation on the set $\\{1,2,3,4\\}$ such that $\\{(1,2),(1,3)\\} \\subset R$, then the number of elements in $R$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "15",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5092d2df658c",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "30 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\{1,2,3,\\dots,7\\}$ and let $P(A)$ denote the power set of $A$. If the number of functions $f: A \\rightarrow P(A)$ such that $a \\in f(a), \\forall a \\in A$ is $m^{n}, m$ and $n \\in N$ and $m$ is least, then $m+n$ is equal to______",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 44.0,
+        "max": 44.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d7eae18c606f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "30 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "If the domain of the function $f(x)=\\cos^{-1}\\left(\\frac{2-|x|}{4}\\right)+\\left(\\log_e(3-x)\\right)^{-1}$ is $[-\\alpha, \\beta) \\setminus \\{y\\}$, then $\\alpha + \\beta + \\gamma$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "11",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-791416b6ed81",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "30 Jan 2024, Shift 2",
+      "status": "draft",
+      "stem": "If the domain of the function $f(x)=\\log_{e}$ $\\left(\\;\\frac{2x+3}{4x^2+x-3}\\right) + \\cos^{-1}\\left(\\;\\frac{2x-1}{x+2}\\right)$ is $(\\alpha, \\beta]$, then the value of $5\\beta - 4\\alpha$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "11",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "9",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-947c1c6c39cc",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "30 Jan 2024, Shift 2",
+      "status": "draft",
+      "stem": "The number of symmetric relations defined on the set $\\{1,2,3,4\\}$ which are not reflexive is____",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 960.0,
+        "max": 960.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5697463cbe5e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "31 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\;\\frac{4x+3}{6x-4},\\; x \\neq \\;\\frac{2}{3}$ and (fof) $(x)=g(x)$, where $g: \\mathbb{R} \\setminus \\left\\{\\frac{2}{3}\\right\\} \\rightarrow \\mathbb{R} \\setminus \\left\\{\\frac{2}{3}\\right\\}$, then (gogog) ( 4) is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\;\\frac{19}{20}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{19}{20}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "-4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f593fdb99976",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "31 Jan 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\{1,2,3,4\\}$ and $R=\\{(1,2),(2,3),(1,4)\\}$ be a relation on $A$. Let $S$ be the equivalence relation on $A$ such that $R \\subset S$ and the number of elements in $S$ is $n$. Then, the minimum value of $n$ is____",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 16.0,
+        "max": 16.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6db137461613",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "31 Jan 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{1,2,3,\\ldots,100\\}$. Let $R$ be a relation on A defined by $(x, y) \\in R$ if and only if $2 x=3 y$. Let $R_1$ be a symmetric relation on $A$ such that $R \\subset R_1$ and the number of elements in $R_1$ is $n$. Then, the minimum value of $n$ is",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 66.0,
+        "max": 66.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fed99cf2b933",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "4 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "In a survey of 220 students of a higher secondary school, it was found that at least 125 and at most 130 students studied Mathematics; at least 85 and at most 95 studied Physics; at least 75 and at most 90 studied Chemistry; 30 studied both Physics and Chemistry; 50 studied both Chemistry and Mathematics; 40 studied both Mathematics and Physics and 10 studied none of these subjects. Let $m$ and $n$ respectively be the least and the most number of students who studied all the three subjects. Then $m+n$ is equal to _______",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 45.0,
+        "max": 45.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b8291efa0572",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "4 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Consider the function $f:\\mathbb{R} \\rightarrow \\mathbb{R}$ defined by $f(x)=\\frac{2x}{\\sqrt{1+9x^2}}$.\nIf the composition of $\\underbrace{(f \\circ f \\circ f \\circ \\cdots \\circ f)}_{10\\ \\text{times}}(x)=\\frac{2^{10}x}{\\sqrt{1+9\\alpha x^2}}$,\nthen the value of $\\sqrt{3\\alpha+1}$ is equal to $\\text{\\_\\_\\_\\_}$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 1024.0,
+        "max": 1024.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fa902bd4f6fc",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "4 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let a relation $R$ on $N \\times N$ be defined as : $(x_1, y_1) R (x_2, y_2)$ if and only if $x_1 \\leq x_2$ or $y_1 \\leq y_2$ Consider the two statements :\n(I) $R$ is reflexive but not symmetric.\n(II) $R$ is transitive\nThen which one of the following is true?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Only (II) is correct.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Only (I) is correct.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Both (I) and (II) are correct.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Neither (I) nor (II) is correct.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1ce446416b0a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "5 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\{1,3,7,9,11\\}$ and $B=\\{2,4,5,7,8,10,12\\}$. Then the total number of one-one maps $f\\colon A\\mapsto B$, such that $f(1)+f(3)=14$, is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "180",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "120",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "480",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "240",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c2de184f2b8e",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "5 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $S = \\{ a \\in R : |2a-1| = 3[a] + 2\\{a\\} \\}$, where $[t]$ denotes the greatest integer less than or equal to $t$ and $\\{t\\}$ represents the fractional part of $t$, then $72 \\sum\\limits_{a \\in S} a$ is equal to _______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 18.0,
+        "max": 18.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7bf5f7517951",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "5 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $f, g: \\mathbb{R} \\to \\mathbb{R}$ be defined as $: f(x) = |x-1|$ and $g(x) = \\begin{cases} e^x, & x \\ge 0 \\\\ x+1, & x \\le 0 \\end{cases}.$. Then the function $f(g(x))$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "neither one-one nor onto.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "one-one but not onto.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "both one-one and onto.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "onto but not one-one.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5d9fbacb5e10",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "6 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "The function $f(x)=\\frac{x^2+2x-15}{x^2-4x+9}, x\\in R$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "both one-one and onto.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "onto but not one-one.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "neither one-one nor onto.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "one-one but not onto.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e0f9df3f0759",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "6 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\{n \\in [100,700] \\cap N: n$ is neither a multiple of 3 nor a multiple of 4$\\}$. Then the number of elements in $\\{A\\}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "300",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "280",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "310",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "290",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e2238265e305",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "6 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let the relations $R_1$ and $R_2$ on the set $X=\\{1,2,3,\\ldots ,20\\}$ be given by $R_1=\\{(x,y): 2x-3y=2\\}$ and $R_2=\\{(x,y): -5x+4y=0\\}$. If $M$ and $N$ be the minimum number of elements required to be added in $R_1$ and $R_2$, respectively, in order to make the relations symmetric, then $M+N$ equals",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "16",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "10",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1e878a95138b",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "6 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{1,2,3,4,5\\}$. Let $R$ be a relation on $A$ defined by $x R y$ if and only if $4 x \\le 5 y$. Let $m$ be the number of elements in $R$ and $n$ be the minimum number of elements from $A \\times A$ that are required to be added to $R$ to make it a symmetric relation. Then $m+n$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "24",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "23",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "25",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "26",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5d9d45bea2d3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "6 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=\\frac{1}{7 - \\sin 5x}$ be a function defined on $R$. Then the range of the function $f(x)$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\;\\frac{1}{8},\\;\\frac{1}{5}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[\\;\\frac{1}{7},\\;\\frac{1}{6}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\;\\frac{1}{7},\\;\\frac{1}{5}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\;\\frac{1}{8},\\;\\frac{1}{6}\\right]$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7f7ac67faa7e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "6 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "If the function $f(x)= \\left(\\frac{1}{x}\\right)^{2x} ; x > 0$ attains the maximum value at $x = \\frac{1}{e}$ then :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{\\pi} < \\pi^{e}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e^{2\\pi} < (2\\pi)^{e}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^{\\pi} > \\pi^{e}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(2e)^{\\pi} > \\pi^{(2e)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bf12da9fb6d3",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "8 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "If the range of $f(\\theta)=\\frac{\\sin^4\\theta+3\\cos^2\\theta}{\\sin^4\\theta+\\cos^2\\theta},\\ \\theta\\in\\mathbb{R}$ is $[\\alpha,\\beta]$, then the sum of the infinite G.P., whose first term is 64 and the common ratio is $\\frac{\\alpha}{\\beta}$, is equal to ______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 96.0,
+        "max": 96.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-43767d32a383",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "8 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $f(x)=\\begin{cases} -a, & \\text{if } -a \\leq x \\leq 0 \\\\ x+a, & \\text{if } 0 < x \\leq a \\end{cases}.$\nwhere $a > 0$ and $g(x)=\\frac{(f\\lvert x\\rvert) - \\lvert f(x)\\rvert)}{2}$.\nThen the function $g:[-a,a] \\rightarrow [-a,a]$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "neither one-one nor onto.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "both one-one and onto.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "one-one.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "onto",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e07cf0a8c141",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "8 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{2,3,6,8,9,11\\}$ and $B=\\{1,4,5,10,15\\}$ Let $R$ be a relation on $A \\times B$ define by $(a, b) R(c, d)$ if and only if $3 ad-7 bc$ is an even integer. Then the relation $R$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "reflexive but not symmetric.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "transitive but not symmetric.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "reflexive and symmetric but not transitive.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "an equivalence relation.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-74e0d00f740a",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "9 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "If a function $f$ satisfies $f(m+n)=f(m)+f(n)$ for all $m, n \\in N$ and $f(1)=1$, then the largest natural number $\\lambda$ such that $\\sum\\limits_{k=1}^{2022} f(\\lambda + k) \\leq (2022)^2$ is equal to ______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 1010.0,
+        "max": 1010.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-af1cd504fbfe",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "9 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\{2,3,6,7\\}$ and $B=\\{4,5,6,8\\}$. Let $R$ be a relation defined on $A \\times B$ by $(a_1, b_1) R (a_2, b_2)$ is and only if $a_1+a_2=b_1+b_2$. Then the number of elements in $R$ is ________.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 25.0,
+        "max": 25.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ec7d62b72e4f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "9 Apr 2024, Shift 1",
+      "status": "draft",
+      "stem": "If the domain of the function $f(x)=\\sin^{-1}\\left(\\frac{x-1}{2x+3}\\right)$ is $R-(\\alpha,\\beta)$ then $12\\alpha\\beta$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "36",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "24",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "40",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "32",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bffba77e2a3a",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "9 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{(x, y): 2 x+3 y=23, x, y \\in N\\}$ and $B=\\{x:(x, y) \\in A\\}$. Then the number of one-one functions from $A$ to $B$ is equal to ______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 24.0,
+        "max": 24.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c84b6f364c57",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2024,
+      "shift": "9 Apr 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let the range of the function\n$f(x)=\\; \\frac{1}{2 + \\sin 3x + \\cos 3x}, x \\in \\mathbb{R} \\; \\text{ be }\\; [a, b].$\nIf $\\alpha$ and $\\beta$ are respectively the A.M. and the G.M. of $a$ and $b$, then $\\; \\frac{\\alpha}{\\beta}$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1e1f80afdf17",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "2 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $A$ be the set of all function $f: \\mathbb{Z} \\longrightarrow \\mathbb{Z}$ and $R$ be a relation on $A$ such that $R=\\{(f, g\\}: f(0)=g(1)$ and $f(1)=g(0)$. Then R is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Symmetric and transitive but not reflective",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Reflexive but neither symmetric nor transitive",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Transitive but neither reflexive nor symmetric",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Symmetric but neither reflective nor transitive",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-43c69bfa37c9",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "2 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{1,2,3,\\ldots,100\\}$ and $R$ be a relation on $A$ such that $R=\\{(a, b): a=2b+1\\}$. Let $(a_1, a_2), (a_2.$, $a_3), (a_3, a_4), \\ldots, (a_k, a_k+1)$ be a sequence of $k$ elements of $R$ such that the second entry of an ordered pair is equal to the first entry of the next ordered pair. Then the largest integer $k$, for which such a sequence exists, is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "7",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5757fc63af1a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "2 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If the domain of the function $f(x)=\\frac{1}{\\sqrt{10+3x-x^{2}}}+\\frac{1}{\\sqrt{x+|x|}}$ is $(a,b)$, then $(1+a)^2+b^2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "26",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "30",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "29",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "25",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-351c1f2718af",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "22 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "The number of non-empty equivalence relations on the set $\\{1,2,3\\}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "7",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c093297a9550",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "22 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\{1,2,3,\\dots,10\\}$ and $B=\\{\\;\\frac{m}{n}: m,n\\in A, m < n.$ and $\\gcd(m,n)=1\\}$. Then $n(B)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "36",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "31",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "29",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "37",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5e56bf4c1a0a",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "22 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{1,2,3\\}$. The number of relations on $A$, containing $(1,2)$ and $(2,3)$, which are reflexive and transitive but not symmetric, is _____",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-932223bac5a3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "22 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{1,2,3,4\\}$ and $B=\\{1,4,9,16\\}$. Then the number of many-one functions $f : A \\longrightarrow B$ such that $1 \\in f(A)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "163",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "127",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "151",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "139",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8a99f6f0865e",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "23 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=\\log_e x$ and $g(x)=\\;\\frac{x^4-2x^3+3x^2-2x+2}{2x^2-2x+1}$.\nThen the domain of $f \\circ g$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$[1, \\infty)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(0, \\infty)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathbb{R}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$[0, \\infty)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a8db6b659b28",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "23 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $R=\\{(1,2),(2,3),(3,3)\\}$ be a relation defined on the set $\\{1,2,3,4\\}$. Then the minimum number of elements, needed to be added in $R$ so that $R$ becomes an equivalence relation, is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "10",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b82380a9fb16",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "23 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{(x, y) \\in R \\times R : |x+y| \\geq 3\\}$ and $B=\\{(x, y) \\in R \\times R : |x|+|y| \\leq 3\\}$.\nIf $C=\\{(x, y) \\in A \\cap B: x=0$ or $y=0\\}$, then $\\sum\\limits_{(x, y) \\in C} |x+y|$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "18",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "24",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "15",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ef0f2d7a2bdd",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "23 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $X=R \\times R$. Define a relation $R$ on $X$ as:\n$(a_1, b_1) R (a_2, b_2) \\Leftrightarrow b_1=b_2$\nStatement I: R is an equivalence relation.\nStatement II: For some $(a, b) \\in X$, the set $S=\\{(x, y) \\in$ $X:(x, y) R(a, b)\\}$ represents a line parallel to $y=x$.\nIn the light of the above statements, choose the correct answer from the options given below:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Statement I is true but Statement II is false",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Statement I is false but Statement II is true",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Both Statement I and Statement II are false",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Both Statement I and Statement II are true",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ac7c083fb566",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "24 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=\\;\\frac{2^{x+2}+16}{2^{2x+1}+2^{x+4}+32}$. Then the value of $8\\left(f\\left(\\;\\frac{1}{15}\\right)+f\\left(\\;\\frac{2}{15}\\right)+\\dots+f\\left(\\;\\frac{59}{15}\\right)\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "118",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "92",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "102",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "108",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e3489353e25c",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "24 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $S = \\{p_1, p_2 \\ldots, p_{10}\\}$ be the set of first ten prime numbers. Let $A = S \\cup P$, where $P$ is the set of all possible products of distinct elements of $S$. Then the number of all ordered pairs $(x, y), x \\in S, y \\in A$, such that $x$ divides $y$, is _____.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 5120.0,
+        "max": 5120.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f24f2bf940c6",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "24 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "The function $f:(-\\infty, \\infty) \\longrightarrow (-\\infty, 1)$, defined by $f(x)=\\;\\frac{2^x-2^{-x}}{2^x+2^{-x}}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Onto but not one-one",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Both one-one and onto",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "One-one but not onto",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Neither one-one nor onto",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ff2a9da70dd3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "24 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let\n$A = \\left\\{ x \\in (0, \\pi) - \\left(\\frac{\\pi}{2}\\right) : \\log_{\\frac{2}{\\pi}}|\\sin x| + \\log_{\\frac{2}{\\pi}}|\\cos x| = 2 \\right\\}$\nand $B = \\{x \\ge 0 : \\sqrt{x}(\\sqrt{x} - 4) - 3|\\sqrt{x} - 2| + 6 = 0\\}$. Then $n(A \\cup B)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "8",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-195f1162f16a",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "28 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $f: \\mathbb{R} \\longrightarrow \\mathbb{R}$ be a function defined by $f(x)=(2+3a)x^2+\\frac{a+2}{a-1}x+b, a\\neq 1$. If $f(x+y)=$ $f(x)+f(y)+1-\\frac{2}{7}xy$, then the value of $28 \\sum\\limits_{i=1}^{5} |f(i)|$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "715",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "675",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "735",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "545",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7d3d68e50dc9",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "28 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\;\\frac{2^x}{2^x+\\sqrt{2}}, x \\in \\mathbb{R}$, then $\\sum\\limits_{k=1}^{81} f\\left(\\frac{k}{82}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$81 \\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "82",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{81}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "41",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d7c05ff182ed",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "28 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "The relation $R=\\{(x, y): x, y \\in \\mathbb{Z}$ and $x+y$ is even $\\}$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Reflexive and transitive but not symmetric",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Symmetric and transitive but not reflexive",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Reflexive and symmetric but not transitive",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "An equivalence relation",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ea8fe8cd3653",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "28 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $f:[0,3] \\longrightarrow$ A be defined by $f(x)=2x^3-15x^2+36x$ +7 and $g:[0,\\infty) \\longrightarrow B$ be defined by $g(x)=\\;\\frac{x^{2025}}{x^{2025}+1}$ . If both the functions are onto and $S=\\{x \\in Z: x \\in$ $A$ or $x \\in B\\}$, then $n(S)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "36",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "30",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "29",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "31",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8fe1e2360b93",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "29 Jan 2025, Shift 1",
+      "status": "draft",
+      "stem": "Define a relation $R$ on the interval $[0, \\;\\frac{\\pi}{2})$ by $x R y$ if and only if $\\sec^2 x - \\tan^2 y = 1$. Then $R$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "both reflexive and transitive but not symmetric",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "an equivalence relation",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "reflexive but neither symmetric not transitive",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "both reflexive and symmetric but not transitive",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8c9000b9c5f4",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "29 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $S = N \\cup \\{0\\}$. Define a relation $R$ from $S$ to $R$ by:\n$R = \\{(x, y): \\log_e y = x \\log_e \\left(\\;\\frac{2}{5}\\right), x \\in S, y \\in R\\}$\nThen, the sum of all the elements in the range of $R$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\; \\frac{10}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\; \\frac{5}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\; \\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\; \\frac{5}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d756a19a735f",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "29 Jan 2025, Shift 2",
+      "status": "draft",
+      "stem": "If the domain of the function $\\log_5 (18 x-x^2-77)$ is $(\\alpha, \\beta)$ and the domain of the function $\\log_{(x-1)} \\left(\\; \\frac{2 x^2+3 x-2}{x^2-3 x-4}\\right)$ is $(\\gamma, \\delta)$, then $\\alpha^2+\\beta^2+\\gamma^2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "174",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "195",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "179",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "186",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c588bb5096f8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "3 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If the domain of the function $f(x)=\\log_e \\left( \\frac{2x-3}{5+4x} \\right) + \\sin^{-1} \\left( \\frac{4+3x}{2-x} \\right)$ is $[\\alpha, \\beta)$, then $\\alpha^2+4 \\beta$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ef8a9fcaead8",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "3 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $A = \\{-3, -2, -1, 0, 1, 2, 3\\}$. Let $R$ be a relation on $A$ defined by $x R y$ if and only if $0 \\le x^2 + 2y \\le 4$. Let $I$ be the number of elements in $R$ and $m$ be the minimum number of elements required to be added in R to make it a reflexive relation. Then $I + m$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "18",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "19",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "17",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "20",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0720b149a034",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "3 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{-2,-1,0,1,2,3\\}$. Let $R$ be a relation on $A$ defined by $x R y$ if and only if $y=\\max\\{x, 1\\}$. Let $I$ be the number of elements in $R$. Let $m$ and $n$ be the minimum number of elements required to be added in $R$ to make it reflexive and symmetric relations, respectively. Then $l+m+n$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "12",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "11",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "14",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "13",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d1a7712f3061",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "3 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If the domain of the function $f(x)=\\log_7 (1-\\log_4 (x^2-9x+18)$ ) is $(\\alpha, \\beta) \\cup(\\gamma, \\delta)$, then $\\alpha+\\beta+\\gamma+\\delta$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "17",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "18",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "15",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "16",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fa63cfc08800",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "3 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $f$ be a function such that $f(x)+3 f\\left(\\;\\frac{24}{x}\\right)=4x$, $x \\neq 0$. Then $f(3)+f(8)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "13",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "11",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-334e2cf1e8e5",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "4 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Consider the sets $A = \\{(x, y) \\in \\mathbb{R} \\times \\mathbb{R} : x^2 + y^2 = 25\\}$, $B = \\{(x, y) \\in \\mathbb{R} \\times \\mathbb{R} : x^2 + 9 y^2 = 144\\}, C = \\{(x, y) \\in \\mathbb{Z} \\times \\mathbb{Z} : x^2 + y^2 \\le 4\\}$ and $D = A \\cap B$. The total number of one-one functions from the set $D$ to the set $C$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "18290",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "15120",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "17160",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "19320",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6e1611831cc1",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "4 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $f, g : (1, \\infty) \\to \\mathbb{R}$ be defined as $f(x)=\\;\\frac{2x+3}{5x+2}$ and $g(x)=\\;\\frac{2-3x}{1-x}$. If the range of the function $f \\circ g : [2,4] \\to \\mathbb{R}$ is $[\\alpha, \\beta]$, then $\\;\\frac{1}{\\beta - \\alpha}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "68",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "29",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "56",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3ef632e26ab2",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "4 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{-3,-2,-1,0,1,2,3\\}$ and $R$ be a relation on $A$ defined by $x R y$ if and only if $2 x-y \\in \\{0,1\\}$. Let $I$ be the number of elements in $R$. Let $m$ and $n$ be the minimum number of elements required to be added in $R$ to make it reflexive and symmetric relations, respectively. Then $l+m+n$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "18",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "15",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "17",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "16",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e3fe8947be88",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "4 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let the domains of the functions $f(x)=\\log_4 \\log_3 \\log_7(8 - \\log_2 (x^2+4x+5) )$ and $g(x)=\\sin^{-1}\\left(\\frac{7x+10}{x-2}\\right)$ be $(\\alpha, \\beta)$ and $[\\gamma, \\delta]$, respectively. Then $\\alpha^2+\\beta^2+\\gamma^2+\\delta^2$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "14",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "16",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "13",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "15",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3491339f026b",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "7 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "For $n \\ge 2$, let $S_n$ denote the set of all subsets of $\\{1,2, \\dots, n\\}$ with no two consecutive numbers. For example $\\{1,3,5\\} \\in S_6$ but $\\{1,2,4\\} \\notin S_6$. Then $n (S_5)$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 13.0,
+        "max": 13.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4cf9a136734e",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "7 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The number of relations on the set $A=\\{1,2,3\\}$, containing at most 6 elements including ( 1,2 ), which are reflexive and transitive but not symmetric, is $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 6.0,
+        "max": 6.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b7a7ceee0c44",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "7 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $A = \\{(α, β) \\in \\mathbb{R} \\times \\mathbb{R} : |α-1| \\le 4$ and $|β-5| \\le 6\\}$ and $B = \\{(α, β) \\in \\mathbb{R} \\times \\mathbb{R} : 16(α-2)^2+9(β-6)^2 \\le 144\\}$.\nThen",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$B \\subset A$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$A \\cup B = \\{(x, y) : -4 \\le x \\le 4, -1 \\le y \\le 11\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Neither $A \\subset B$ nor $B \\subset A$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$A \\subset B$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e155a5ca18d7",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "7 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If the range of the function $f(x)=\\;\\frac{5-x}{x^2-3x+2}, x \\neq$ 1,2 , is $(-\\infty, \\alpha] \\cup [\\beta, \\infty)$, then $\\alpha^2+\\beta^2$ is equal to:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "194",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "192",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "188",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "190",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c2262cf809fe",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "8 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let the domain of the function $f(x)=\\cos^{-1}\\left(\\frac{4x+5}{3x-7}\\right)$ be $[\\alpha, \\beta]$ and the domain of $g(x)=\\log_2(2-6\\log_{27}(2x+5))$ ) be ( $\\gamma, \\delta$ ).\nThen $\\left|7(\\alpha+\\beta)+4(\\gamma+\\delta)\\right|$ is equal to $\\_\\_\\_\\_$ .",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 96.0,
+        "max": 96.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f5a7b8e39376",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2025,
+      "shift": "8 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\{0,1,2,3,4,5\\}$. Let $R$ be a relation on $A$ defined by $(x,y) \\in R$ if and only if $\\max\\{x,y\\}\\in\\{3,4\\}$. Then among the statements $(S_1)$ : The number of elements in $R$ is 18 , and $(S_2)$ : The relation $R$ is symmetric but neither reflexive nor transitive.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "only ( $S_2$ ) is true",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "both are false",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "only $(S_1)$ is true",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "both are true",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
       "ref": "PYQ-MATH-6fb7085bafea",
       "subtopic": "general",
       "type": "numerical",

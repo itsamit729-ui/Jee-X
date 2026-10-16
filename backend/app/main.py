@@ -78,6 +78,8 @@ app.include_router(rewards.router)
 app.include_router(ranking.router)
 app.include_router(public_profiles.router)
 app.include_router(admin_dashboard.router)
+from app.routers import pipeline_questions
+app.include_router(pipeline_questions.router)
 app.include_router(scenarios.router)
 app.include_router(roadmap.router)
 app.include_router(college_insights.router)

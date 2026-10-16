@@ -8,6 +8,7 @@ const TeachingSummary=lazy(()=>import('../components/admin/AdminOverview.jsx').t
 const ContentSummary=lazy(()=>import('../components/admin/AdminOverview.jsx').then(m=>({default:m.ContentSummary})))
 const People=lazy(()=>import('../components/admin/AdminResources.jsx').then(m=>({default:m.PeopleDirectory})))
 const Registrations=lazy(()=>import('../components/admin/AdminResources.jsx').then(m=>({default:m.RegistrationDirectory})))
+const PipelineQuestions=lazy(()=>import('../components/admin/AdminPipelineQuestions.jsx'))
 const Questions=lazy(()=>import('../components/admin/AdminResources.jsx').then(m=>({default:m.QuestionDirectory})))
 const Coverage=lazy(()=>import('../components/admin/AdminResources.jsx').then(m=>({default:m.PaperCoverage})))
 const Classrooms=lazy(()=>import('../components/admin/AdminResources.jsx').then(m=>({default:m.ClassroomDirectory})))
@@ -36,7 +37,7 @@ function Dashboard({token,exit}){
  {section==='overview'&&(data?<Overview data={data} onSection={choose}/>:busy?<div className="adm-skeleton" role="status" aria-label="Loading platform overview">{Array.from({length:6},(_,i)=><div key={i}/>)}</div>:<p className="adm-description">Retry the overview above, or open another section.</p>)}
  {section==='people'&&<><div className="adm-subnav" role="group" aria-label="People views"><button aria-pressed={peopleView==='profiles'} onClick={()=>setPeopleView('profiles')}>Profiles</button><button aria-pressed={peopleView==='signups'} onClick={()=>setPeopleView('signups')}>Signup accounts{data?.overview.pending_profiles?` · ${data.overview.pending_profiles} pending`:''}</button></div>{peopleView==='profiles'?<People {...props}/>:<Registrations {...props}/>}<Teachers key={revision} token={token}/></>}
  {section==='teaching'&&<>{data&&<TeachingSummary data={data}/>}<Classrooms {...props}/><Operations key={'scans'+revision} {...props} initialQueue="scans"/></>}
- {section==='content'&&<>{data&&<ContentSummary data={data}/>}<Questions {...props}/><Coverage {...props}/></>}
+ {section==='content'&&<>{data&&<ContentSummary data={data}/>}<PipelineQuestions token={token} onPublished={()=>setRevision(v=>v+1)}/><Questions {...props}/><Coverage {...props}/></>}
  {section==='growth'&&<><Acquisition key={revision} token={token}/><Plans key={'plans'+revision} token={token}/></>}
  {section==='publishing'&&<Social key={revision} token={token}/>}
  {section==='operations'&&<Operations {...props}/>}
