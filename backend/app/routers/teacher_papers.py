@@ -198,16 +198,24 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
     from app.services import teacher_ai
     from app.services.authentication import throttle
     import os
-    if not os.getenv('GROQ_API_KEY', '').strip() or os.getenv('TEACHER_AI_ENABLED', 'true').lower() != 'true':
+    if os.getenv('TEACHER_AI_ENABLED', 'true').lower() != 'true':
         raise HTTPException(503, 'AI paper creation is unavailable. Use Generate questions or Choose from bank.')
     if len(b.prompt.strip()) < 10:
         raise HTTPException(422, 'Describe the paper in at least 10 characters.')
-    throttle(db, 'teacher_ai:minute', str(user.id), 3, 60)
-    throttle(db, 'teacher_ai:day', str(user.id), 30, 86400)
-    throttle(db, 'teacher_ai:global', 'all', 100, 86400)
+    def plan_for(catalog):
+        from app.services.teacher_direct_request import direct_request
+        direct=direct_request(b.prompt.strip(),b.exam,catalog)
+        if direct is not None: return direct
+        if not os.getenv('GROQ_API_KEY','').strip():
+            raise HTTPException(503,'AI interpretation is unavailable. Use a clear request with exam, question count, chapter and duration, or use the manual builder.')
+        throttle(db, 'teacher_ai:minute', str(user.id), 3, 60)
+        throttle(db, 'teacher_ai:day', str(user.id), 30, 86400)
+        throttle(db, 'teacher_ai:global', 'all', 100, 86400)
+        db.rollback()
+        return teacher_ai.interpret(b.prompt.strip(),b.exam,catalog)
     if b.exam is None:
         db.rollback()
-        plan=teacher_ai.interpret(b.prompt.strip(),None,{'papers':[],'chapters':[],'paper_defaults':{'require_details':True}})
+        plan=plan_for({'papers':[],'chapters':[],'paper_defaults':{'require_details':True}})
         teacher_ai.check_plan_details(plan,None,strict=True)
         raise HTTPException(422,'Which exam should I use: JEE Main, JEE Advanced, MHT-CET or BITSAT?')
     # Only metadata from the visible, published bank is shared, never question content or student data.
@@ -218,11 +226,11 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
     papers = [dict(index=i, year=y, shift=s, count=n) for i, (y,s,n) in enumerate(
         refs.with_entities(m.Question.year, m.Question.shift, func.count(m.Question.id))
         .group_by(m.Question.year, m.Question.shift).order_by(m.Question.year, m.Question.shift).all())]
-    chapters = [dict(id=cid, subject=sub, name=name) for cid,sub,name in query.join(m.Subtopic).join(m.Chapter).join(m.Subject)
-                .with_entities(m.Chapter.id, m.Subject.code, m.Chapter.name).distinct().order_by(m.Chapter.id).all()]
+    chapters = [dict(id=cid, subject=sub, name=name, slug=slug) for cid,sub,name,slug in query.join(m.Subtopic).join(m.Chapter).join(m.Subject)
+                .with_entities(m.Chapter.id, m.Subject.code, m.Chapter.name, m.Chapter.slug).distinct().order_by(m.Chapter.id).all()]
     # Return the connection to the pool while waiting on the external provider.
     db.rollback()
-    plan = teacher_ai.interpret(b.prompt.strip(), b.exam, {'papers': papers, 'chapters': chapters, 'paper_defaults': b.defaults})
+    plan = plan_for({'papers': papers, 'chapters': chapters, 'paper_defaults': b.defaults})
     teacher_ai.check_plan_details(plan,b.exam,strict=bool(b.defaults.get('require_details')))
     if not chapters:
         raise HTTPException(422, 'No published questions are available for this exam yet. Choose another exam or use the manual bank.')

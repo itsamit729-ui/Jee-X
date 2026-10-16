@@ -123,7 +123,15 @@ def test_provider_bounded_request_and_errors(monkeypatch):
     def post(url,**kw):calls.append((url,kw));return Response()
     monkeypatch.setattr(ai.requests,'post',post)
     assert ai.interpret('Make six questions','jee_main',{'papers':[],'chapters':[]}).count==6
-    assert len(calls)==1 and calls[0][1]['json']['max_completion_tokens']==1600
+    assert len(calls)==1 and calls[0][1]['json']['max_completion_tokens']==4096
+    output=calls[0][1]['json']['response_format']
+    assert output['type']=='json_schema' and output['json_schema']['strict'] is True
+    schema=output['json_schema']['schema']
+    assert set(schema['properties'])==set(ai.AIPlan.model_fields)
+    for obj in [schema,*schema['$defs'].values()]:
+        assert obj['additionalProperties'] is False
+        assert set(obj['required'])==set(obj['properties'])
+    assert {'type':'null'} in schema['properties']['count']['anyOf']
     assert calls[0][1]['timeout']==(4,20)
     for status, expected in [(429,429),(401,503),(500,503)]:
         Response.status_code=status
@@ -377,13 +385,7 @@ def test_strict_followup_uses_previous_details_and_exam_marks(ai_studio,monkeypa
     with factory() as db:
         for q in db.query(m.Question):q.exam='mht_cet'
         db.commit()
-    def interpret(prompt,exam,catalog):
-        assert exam=='mht_cet'
-        assert catalog['paper_defaults']=={'require_details':True}
-        assert 'teacher: 6' in prompt
-        return ai.AIPlan(intent='paper',scope_specified=True,count=6,duration_minutes=45,
-                         sections=[ai.AISection(subject='PHY',count=6)])
-    monkeypatch.setattr(ai,'interpret',interpret)
+    monkeypatch.setattr(ai,'interpret',lambda *a:pytest.fail('A clear follow-up does not require AI'))
     r=quick(c,strict_details=True,prompt='teacher: Create an MHT-CET Physics paper on full syllabus for 45 minutes.\nassistant: How many questions?\nteacher: 6')
     assert r.status_code==200,r.text
     paper=r.json()['paper'];assert len(paper['questions'])==6
@@ -405,3 +407,54 @@ def test_unrelated_message_redirects_even_when_named_exam_bank_is_empty(ai_studi
     assert r.status_code==200,r.text
     assert r.json()['question']==ai.UNRELATED_MESSAGE
     assert not c.get('/api/teacher/papers').json()['papers']
+
+
+def test_exact_screenshot_request_creates_real_bank_paper_and_both_omrs_without_provider(ai_studio,monkeypatch):
+    from pathlib import Path
+    from scripts.import_scraped_pyqs import fast_import_file
+    c,factory,active,_=ai_studio
+    source=Path(__file__).resolve().parents[2]/'generated/scraped-mht-cet/physics/electrostatics.json'
+    bank=json.loads(source.read_text())
+    for q in bank['questions']:q['status']='published'
+    with factory() as db:
+        assert fast_import_file(db,str(source),bank)['added']==len(bank['questions'])
+    monkeypatch.delenv('GROQ_API_KEY')
+    monkeypatch.setattr(ai,'interpret',lambda *a:pytest.fail('Clear request must not depend on provider formatting'))
+    prompt=('Create an MHT-CET-level Physics paper with 30 questions on Electrostatics, '
+            'balanced difficulty, 60 minutes, and two shuffled sets A and B. Award 1 mark '
+            'per correct answer with no negative marking. Give me the question paper '
+            'and matching OMR PDFs for both sets.')
+    response=quick(c,prompt='teacher: '+prompt,strict_details=True)
+    assert response.status_code==200,response.text
+    data=response.json();assert data['state']=='ready',data
+    paper=data['paper'];questions=paper['questions']
+    assert paper['finalized'] and len({q['question_id'] for q in questions})==30
+    assert {q['ref'] for q in questions}<={q['ref'] for q in bank['questions']}
+    assert paper['settings']['exam']=='mht_cet'
+    assert paper['settings']['duration_minutes']==60
+    assert paper['settings']['marks_correct']==1 and paper['settings']['marks_wrong']==0
+    assert paper['sets_enabled'] and [d['variant'] for d in data['downloads']]==['A','B']
+    assert set(paper['variant_b'])=={q['question_id'] for q in questions}
+    assert paper['variant_b']!=[q['question_id'] for q in questions]
+    for link in data['downloads']:
+        omr=c.get(link['omr']);assert omr.status_code==200,omr.text
+        assert omr.content.startswith(b'%PDF')
+    replay=quick(c,prompt='teacher: '+prompt,strict_details=True)
+    assert replay.json()['paper']['id']==paper['id']
+    with factory() as db:assert db.query(m.TeacherPaper).count()==1
+    active[0]=1
+    assert c.get(data['downloads'][0]['omr']).status_code==403
+
+
+@pytest.mark.parametrize('prompt',[
+    'Create 6 JEE Main Physics questions on an unknown topic for 60 minutes.',
+    'Create 6 JEE Main Physics questions on Electrostatics except capacitance for 60 minutes.',
+    'Create 6 JEE Main Physics questions for 60 minutes in Hindi.',
+    'Create 6 JEE Main Physics questions for 60 minutes. Tell me a joke.',
+    'Create 6 JEE Main Physics questions for 60 minutes, 2 marks, no negative marking.',
+    'Create 6 JEE Main Physics or Chemistry questions for 60 minutes.',
+    'Create 6 JEE Main Physics questions for 60 minutes in 10 sets.',
+])
+def test_direct_requests_never_discard_unknown_constraints(prompt):
+    from app.services.teacher_direct_request import direct_request
+    assert direct_request(prompt,'jee_main',{'chapters':[]}) is None
