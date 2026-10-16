@@ -73,6 +73,7 @@ class Generate(BaseModel):
     restrict_to_reference: bool = False
     strict_exam: bool = False
     published_only: bool = False
+    printable_only: bool = False
 
 @router.post('/papers/generate')
 def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
@@ -105,6 +106,21 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
         m.Chapter.id.label('chapter_id'), m.Subject.code.label('subject')).order_by(m.Question.id).limit(30000).all()
     rows = [dict(r._mapping) for r in meta]
     if len(rows) == 30000: raise HTTPException(422, 'Narrow the syllabus; this selection exceeds 30,000 candidates.')
+    unavailable_diagrams=set()
+    if b.printable_only and rows:
+        from app.services.teacher_paper_assets import local_diagram, diagram_file
+        assets=query.join(m.Asset,or_(m.Asset.question_id==m.Question.id,m.Asset.passage_id==m.Question.passage_id))\
+            .filter(m.Question.id.in_([r['id'] for r in rows]),m.Asset.url.contains('/question-images/',autoescape=True))\
+            .with_entities(m.Question.id,m.Asset.url).all()
+        checked={}
+        for qid,url in assets:
+            if url not in checked: checked[url]=not local_diagram(url) or diagram_file(url) is not None
+            if not checked[url]: unavailable_diagrams.add(qid)
+        if b.mode=='exact' and any(r['id'] in unavailable_diagrams and r['year']==b.year and r['shift']==b.shift and r['source_type']=='pyq' for r in rows):
+            raise HTTPException(422,'This reference paper has missing diagram files. Choose another paper or a topic-based selection; no partial paper was saved.')
+        rows=[r for r in rows if r['id'] not in unavailable_diagrams]
+        if not rows and unavailable_diagrams:
+            raise HTTPException(422,'The matching questions have missing diagram files. Choose another topic or paper while the bank images are repaired.')
     locked = list(dict.fromkeys(b.locked_ids))
     lookup = {r['id']: r for r in rows}
     if any(q not in lookup for q in locked): raise HTTPException(422, 'A locked question is outside these filters or unavailable.')
@@ -181,7 +197,9 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
             index = next((i for i,r in enumerate(pool) if matches(r,req)), None)
             if index is None: shortfalls.append(str(req) if req else 'requested level/syllabus')
             else: selected.append(pool.pop(index)['id'])
-        if shortfalls: raise HTTPException(422, f'Bank shortfall: {len(shortfalls)} questions unavailable. Broaden chapters, difficulty or exclusions; no partial paper was saved.')
+        if shortfalls:
+            images=f' {len(unavailable_diagrams)} matching questions have missing diagram files.' if unavailable_diagrams else ''
+            raise HTTPException(422, f'Bank shortfall: {len(shortfalls)} questions unavailable.{images} Broaden chapters, difficulty or exclusions; no partial paper was saved.')
     if not selected or len(selected)>200: raise HTTPException(422, 'Paper must contain 1–200 questions.')
     qs={q.id:q for q in bank(db,user.id).filter(m.Question.id.in_(selected)).all()}
     if b.mode == 'exact': selected.sort(key=lambda i: qs[i].ref)
@@ -268,7 +286,7 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
                       year=year, shift=ref['shift'] if ref else None, reference_without_shift=bool(ref and ref['shift'] is None),
                       restrict_to_reference=plan.selection == 'from_paper', chapter_ids=plan.chapter_ids,
                       sections=[Section(**s.model_dump()) for s in plan.sections], source=plan.source,
-                      exclude_assigned=False)
+                      exclude_assigned=False,printable_only=True)
     result = generate(config, user, db)
     # No database writes to papers/assignments: this response is only a reviewable candidate.
     counts = Counter(q['subject'] for q in result['questions'])
@@ -523,25 +541,15 @@ def check_omr(p):
 
 @router.get('/papers/{pid}/diagrams/{index}')
 def paper_diagram(pid:int,index:int,user=Depends(t.require_teacher),db=Depends(get_db)):
-    from pathlib import Path
-    from urllib.parse import urlsplit, unquote
-    import os
+    from app.services.teacher_paper_assets import diagram_file
     p=owned(db,pid,user)
     urls=list(dict.fromkeys(a.get('url') for q in p.questions
         for a in list(q.get('assets') or []) + list((q.get('passage') or {}).get('assets') or [])))
     if index<0 or index>=len(urls) or not isinstance(urls[index],str):
         raise HTTPException(404,'Diagram not found in this saved paper.')
-    path=unquote(urlsplit(urls[index]).path)
-    if not path.startswith('/question-images/') or '\\' in path:
-        raise HTTPException(404,'This diagram is not a locally hosted bank asset.')
-    roots=[Path(os.getenv('FRONTEND_DIST','/app/static')),Path(__file__).resolve().parents[3]/'frontend'/'public']
-    for root in roots:
-        base=(root/'question-images').resolve()
-        target=(root/path.lstrip('/')).resolve()
-        if not target.is_relative_to(base): raise HTTPException(404,'Invalid diagram path.')
-        if target.is_file() and target.suffix.lower() in ('.png','.jpg','.jpeg','.gif','.webp','.svg','.avif'):
-            if target.stat().st_size>10000000: raise HTTPException(413,'Diagram exceeds the download limit.')
-            return FileResponse(target,headers={'Cache-Control':'private, max-age=300','X-Content-Type-Options':'nosniff','Content-Security-Policy':'sandbox'})
+    target=diagram_file(urls[index])
+    if target:
+        return FileResponse(target,headers={'Cache-Control':'private, max-age=300','X-Content-Type-Options':'nosniff','Content-Security-Policy':'sandbox'})
     raise HTTPException(404,'Saved question diagram is missing from the deployed image bundle.')
 
 

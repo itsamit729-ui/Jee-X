@@ -458,3 +458,47 @@ def test_exact_screenshot_request_creates_real_bank_paper_and_both_omrs_without_
 def test_direct_requests_never_discard_unknown_constraints(prompt):
     from app.services.teacher_direct_request import direct_request
     assert direct_request(prompt,'jee_main',{'chapters':[]}) is None
+
+
+def test_ai_selection_excludes_missing_question_and_passage_diagrams(ai_studio,monkeypatch,tmp_path):
+    from PIL import Image
+    c,factory,_,_=ai_studio
+    root=tmp_path/'static';target=root/'question-images'/'available.png'
+    target.parent.mkdir(parents=True);Image.new('RGB',(20,20),'white').save(target)
+    monkeypatch.setenv('FRONTEND_DIST',str(root))
+    with factory() as db:
+        db.add(m.Asset(question_id=100,url='/question-images/missing.png',alt_text='Missing diagram'))
+        db.add(m.Asset(question_id=101,url='https://old.example/question-images/available.png',alt_text='Available diagram'))
+        passage=m.Passage(ref='missing-passage',content='Use this diagram.');db.add(passage);db.flush()
+        db.get(m.Question,102).passage_id=passage.id
+        db.add(m.Asset(passage_id=passage.id,url='/question-images/missing-passage.png',alt_text='Missing passage diagram'))
+        db.commit()
+    mock_plan(monkeypatch,count=73,sections=[{'subject':'PHY','count':23},{'subject':'CHEM','count':25},{'subject':'MATH','count':25}])
+    response=request(c);assert response.status_code==200,response.text
+    ids={q['question_id'] for q in response.json()['questions']}
+    assert len(ids)==73 and 101 in ids and not ids.intersection({100,102})
+    mock_plan(monkeypatch,count=25,sections=[{'subject':'PHY','count':25}])
+    response=quick(c);assert response.status_code==200,response.text
+    assert response.json()['state']=='needs_details'
+    assert 'missing diagram files' in response.json()['question']
+    assert not c.get('/api/teacher/papers').json()['papers']
+    # An exact reference must fail as a whole instead of quietly losing questions.
+    mock_plan(monkeypatch,selection='exact',paper_index=0)
+    response=request(c);assert response.status_code==422,response.text
+    assert 'reference paper has missing diagram files' in response.json()['detail']
+
+
+def test_screenshot_missing_diagram_is_bundled_and_served_for_saved_papers(ai_studio):
+    from test_teacher_papers import create
+    from app.services.teacher_paper_assets import diagram_file
+    c,factory,_,_=ai_studio
+    url='/question-images/mht-cet/physics/electrostatics/PYQ-PHY-b30e10f1c0bf.png'
+    target=diagram_file(url)
+    assert target is not None,'The screenshot diagram must be included in the deployment'
+    with factory() as db:
+        db.add(m.Asset(question_id=100,url=url,alt_text='Electrostatics diagram'));db.commit()
+    paper=create(c,[100])
+    response=c.get(f"/api/teacher/papers/{paper['id']}/diagrams/0")
+    assert response.status_code==200,response.text
+    assert response.headers['content-type']=='image/png'
+    assert response.content==target.read_bytes()
