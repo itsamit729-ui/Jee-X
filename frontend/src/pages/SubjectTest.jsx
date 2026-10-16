@@ -17,6 +17,8 @@ import { GOOD, BAD, PEN, SUBJECT_COLOR } from '../crackjee/ui.js'
 
 import { archiveReturn, resultAnswer } from '../lib/pyqArchive.js'
 import { createPracticeTimer } from '../lib/practiceTimer.js'
+import useTestPreparation from '../hooks/useTestPreparation.js'
+import TestInstructions from '../components/TestInstructions.jsx'
 import './practice.css'
 
 const OUTCOME = { correct: 'correct', wrong: 'wrong' }
@@ -30,7 +32,9 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
   const pyq = ['jee_main', 'bitsat', 'mht_cet'].includes(searchParams.get('pyq'))
   const pyqReturn = archiveReturn(searchParams)
   const assessment = fullMock || searchParams.get('assessment') === '1'
-  const [deadline, setDeadline] = useState(() => location.state?.missionTest?.is_mock ? Date.now() + location.state.missionTest.duration_sec * 1000 : null)
+  const handedPaper = location.state?.instructionsComplete ? location.state?.missionTest : null
+  const preparation = useTestPreparation(location.state?.missionTest && !location.state?.instructionsComplete ? { paper: location.state.missionTest, details: { exam: searchParams.get('pyq') || 'jee_main', pyq: Boolean(pyq), mock: location.state.missionTest.is_mock } } : null)
+  const [deadline, setDeadline] = useState(() => handedPaper?.is_mock ? Date.now() + handedPaper.duration_sec * 1000 : null)
   const [remaining, setRemaining] = useState(10800)
   const timeoutSubmitted = useRef(false)
 
@@ -48,7 +52,7 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
   const [loadVersion, setLoadVersion] = useState(0)
   const [showPlanSuggestion, setShowPlanSuggestion] = useState(false)
 
-  const [test, setTest] = useState(() => location.state?.missionTest || null) // { attempt_id, questions, ... }
+  const [test, setTest] = useState(() => handedPaper) // { attempt_id, questions, ... }
   const mhtMock = searchParams.get('pyq') === 'mht_cet' && Boolean(test?.is_mock)
   const timed = assessment || Boolean(test?.is_mock)
   const [index, setIndex] = useState(0)
@@ -115,11 +119,10 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
 
   const startTest = async (options) => {
     const mission = options?.mission === true ? options : null
-    requestFullscreen() // must be called synchronously from this click, before any await
     setError('')
     setStarting(true)
     try {
-      const created = await subjectTestBuilderService.start({
+      return await preparation.open(() => subjectTestBuilderService.start({
         assessment: assessment && !fullMock,
         fullMock,
         subjectCode: mission ? mission.subjectCode : assessment ? '' : subjectCode,
@@ -127,21 +130,25 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
         chapterId: mission ? mission.chapterId : chapterId ? Number(chapterId) : null,
         durationMinutes: mission ? mission.durationMinutes : durationMinutes,
         mode: mission ? mission.mode : mode,
-      })
-      timeoutSubmitted.current = false
-      timer.current.reset()
-      setTest(created)
-      if (assessment) { setDeadline(Date.now() + 10800000); setRemaining(10800) }
-      setIndex(0)
-      setAnswers({})
-      setResult(null)
-      return created
+      }), { exam: 'jee_main', mock: assessment, durationMinutes: mission ? mission.durationMinutes : durationMinutes })
     } catch (e) {
       setError(e.message)
       return null
     } finally {
       setStarting(false)
     }
+  }
+
+  const enterPreparedTest = () => {
+    const created = preparation.enter()
+    if (!created) return
+    requestFullscreen()
+    timeoutSubmitted.current = false
+    timer.current.reset()
+    setTest(created)
+    setDeadline(created.is_mock || assessment ? Date.now() + created.duration_sec * 1000 : null)
+    setRemaining(created.duration_sec)
+    setIndex(0); setAnswers({}); setResult(null); setError('')
   }
 
   useEffect(() => {
@@ -206,9 +213,11 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
   }
   const answeredCount = test ? test.questions.filter(isAnswered).length : 0
 
-  useEffect(() => { if (pyq && !test) navigate(pyqReturn, { replace: true }) }, [pyq, test, navigate, pyqReturn])
+  useEffect(() => { if (pyq && !test && !preparation.session) navigate(pyqReturn, { replace: true }) }, [pyq, test, Boolean(preparation.session), navigate, pyqReturn])
 
   // ---------------------------------------------------------------- RESULTS
+  if (preparation.session) return <TestInstructions session={preparation.session} onEnter={enterPreparedTest} onCancel={() => { preparation.cancel(); setStarting(false) }} onRetry={preparation.retry}/>
+
   if (result) {
     return (
       <div className="crackjee-root">

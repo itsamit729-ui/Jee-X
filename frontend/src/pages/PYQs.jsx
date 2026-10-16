@@ -5,11 +5,14 @@ import { ArrowUpRight, BookOpen, Clock3, Layers3, ChevronDown } from 'lucide-rea
 import AppHeader from '../components/AppHeader.jsx'
 import { request } from '../lib/api.js'
 import { requestFullscreen } from '../lib/fullscreen.js'
+import useTestPreparation from '../hooks/useTestPreparation.js'
+import TestInstructions from '../components/TestInstructions.jsx'
 import './pyqs.css'
 import { PYQ_EXAMS, pyqExam, pyqLabel, paperMarks, practiceOffset } from '../lib/pyqArchive.js'
 
 export default function PYQs() {
   const navigate = useNavigate()
+  const preparation = useTestPreparation()
   useEffect(() => { clearPaperReturn() }, [])
   const [params, setParams] = useSearchParams()
   const exam = pyqExam(params.get('exam'))
@@ -37,18 +40,26 @@ export default function PYQs() {
   const requestedShift = params.get('shift')
   const selectedPaper = requestedShift && year === Number(params.get('year')) ? papers.find(p => p.shift === requestedShift) : null
   async function start(paper = null) {
-    requestFullscreen()
     setBusy(true); setError('')
+    const selection = new URLSearchParams({ pyq: exam, year: String(year), subject, offset: String(offset), count: String(count), view: paper ? 'papers' : 'practice' })
+    if (paper) selection.set('shift', paper.shift)
     try {
-      const test = await request(`/api/pyqs/${exam}/${paper ? 'papers' : 'practice'}`, {
+      await preparation.open(async () => {
+        const [prepared] = await Promise.all([request(`/api/pyqs/${exam}/${paper ? 'papers' : 'practice'}`, {
         method: 'POST', body: paper ? { year, shift: paper.shift, acquisition_source: ['direct','google','youtube','instagram','whatsapp','telegram','teacher','other'].includes(params.get('source')) ? params.get('source') : undefined } : { year, subject_code: subject, count, offset },
-      })
-      const selection = new URLSearchParams({ pyq: exam, year: String(year), subject, offset: String(offset), count: String(count), view: paper ? 'papers' : 'practice' })
-      if (paper) selection.set('shift', paper.shift)
-      navigate(`/subject-test?${selection}`, { state: { missionTest: test } })
+        }), import('./SubjectTest.jsx')])
+        return prepared
+      }, { exam, pyq: true, mock: Boolean(paper), selection: selection.toString() })
     } catch (e) { setError(e.message) }
     finally { setBusy(false) }
   }
+  if (preparation.session) return <TestInstructions session={preparation.session} onRetry={preparation.retry} onCancel={() => { preparation.cancel(); setBusy(false) }} onEnter={() => {
+    const selection = preparation.session.details.selection
+    const test = preparation.enter()
+    if (!test) return
+    requestFullscreen()
+    navigate(`/subject-test?${selection}`, { state: { missionTest: test, instructionsComplete: true } })
+  }}/>
   return <div className="crackjee-root"><AppHeader/><main className="pyq-shell">
     <header className="pyq-heading"><div><span className="pyq-eyebrow">THE QUESTION ARCHIVE</span><h1>The years before.<br/><span>Your next step forward.</span></h1><p>Pick your paper, find your rhythm, and learn from every attempt.</p></div><span className="pyq-heading-icon"><BookOpen size={33} strokeWidth={1.2} aria-hidden="true"/></span></header>
     <div className="pyq-exams" role="group" aria-label="Exam">{PYQ_EXAMS.map(([code, label, detail]) => <button key={code} disabled={busy} aria-pressed={exam === code} onClick={() => { setParams({ exam: code }); setSubject("PHY"); setYear(2026); setOffset(0) }}><Layers3 size={19}/><span><strong>{label}</strong><small>{detail}</small></span><ArrowUpRight size={16}/></button>)}</div>
