@@ -190,7 +190,7 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
 class AIRequest(BaseModel):
     prompt: str = Field(min_length=10, max_length=6000)
     defaults: dict = Field(default_factory=dict)
-    exam: EXAMS = 'jee_main'
+    exam: EXAMS | None = 'jee_main'
 
 
 @router.post('/papers/ai-draft')
@@ -205,6 +205,11 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
     throttle(db, 'teacher_ai:minute', str(user.id), 3, 60)
     throttle(db, 'teacher_ai:day', str(user.id), 30, 86400)
     throttle(db, 'teacher_ai:global', 'all', 100, 86400)
+    if b.exam is None:
+        db.rollback()
+        plan=teacher_ai.interpret(b.prompt.strip(),None,{'papers':[],'chapters':[],'paper_defaults':{'require_details':True}})
+        teacher_ai.check_plan_details(plan,None,strict=True)
+        raise HTTPException(422,'Which exam should I use: JEE Main, JEE Advanced, MHT-CET or BITSAT?')
     # Only metadata from the visible, published bank is shared, never question content or student data.
     query = bank(db, user.id).filter(m.Question.status == 'published', m.Question.exam == b.exam)
     years = {int(y) for y in re.findall(r'\b20\d{2}\b', b.prompt)}
@@ -215,13 +220,12 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
         .group_by(m.Question.year, m.Question.shift).order_by(m.Question.year, m.Question.shift).all())]
     chapters = [dict(id=cid, subject=sub, name=name) for cid,sub,name in query.join(m.Subtopic).join(m.Chapter).join(m.Subject)
                 .with_entities(m.Chapter.id, m.Subject.code, m.Chapter.name).distinct().order_by(m.Chapter.id).all()]
-    if not chapters:
-        raise HTTPException(422, 'No published questions are available for this exam yet. Choose another exam or use the manual bank.')
     # Return the connection to the pool while waiting on the external provider.
     db.rollback()
     plan = teacher_ai.interpret(b.prompt.strip(), b.exam, {'papers': papers, 'chapters': chapters, 'paper_defaults': b.defaults})
-    if plan.clarification:
-        raise HTTPException(422, plan.clarification)
+    teacher_ai.check_plan_details(plan,b.exam,strict=bool(b.defaults.get('require_details')))
+    if not chapters:
+        raise HTTPException(422, 'No published questions are available for this exam yet. Choose another exam or use the manual bank.')
     available = {c['id']: c for c in chapters}
     ids = plan.chapter_ids + [cid for section in plan.sections for cid in section.chapter_ids]
     if any(cid not in available for cid in ids):
@@ -288,7 +292,8 @@ class AIPaperDefaults(BaseModel):
 
 class AICompleteRequest(BaseModel):
     prompt: str = Field(min_length=10, max_length=6000)
-    exam: EXAMS = 'jee_main'
+    exam: EXAMS | None = None
+    strict_details: bool = False
     request_key: str = Field(min_length=36, max_length=36, pattern=r'^[a-fA-F0-9-]{36}$')
     defaults: AIPaperDefaults = Field(default_factory=AIPaperDefaults)
 
@@ -308,10 +313,11 @@ def ai_create(b: AICompleteRequest, user=Depends(t.require_teacher), db=Depends(
     previous=existing()
     if previous: return completed_ai_paper(previous)
     from app.services.teacher_ai import resolve_request
-    requested_exam, question = resolve_request(b.prompt, b.exam)
+    requested_exam, question = resolve_request(b.prompt, None if b.strict_details else b.exam)
     if question: return {'state':'needs_details','question':question}
     b.exam = requested_exam
     settings=b.defaults.model_dump()
+    if b.strict_details: settings={'require_details':True}
     # Missing input and ambiguous constraints are returned as a conversational follow-up.
     try:
         draft=ai_draft(AIRequest(prompt=b.prompt,exam=b.exam,defaults=settings),user,db)
@@ -319,6 +325,12 @@ def ai_create(b: AICompleteRequest, user=Depends(t.require_teacher), db=Depends(
         if error.status_code==422:
             return {'state':'needs_details','question':error.detail}
         raise
+    if b.strict_details:
+        subjects={q['subject'] for q in draft['questions']}
+        if b.exam=='mht_cet' and 'MATH' in subjects and len(subjects)>1 and 'marks_correct' not in draft['settings']:
+            return {'state':'needs_details','question':'This builder uses one correct-answer mark value for the whole paper. For mixed MHT-CET subjects, specify that value or request separate Mathematics and Physics/Chemistry papers.'}
+        correct,wrong=(2 if subjects=={'MATH'} else 1,0) if b.exam=='mht_cet' else (3,1) if b.exam=='bitsat' else (4,1)
+        settings={'marks_correct':correct,'marks_wrong':wrong,'sets_enabled':False,'instructions':''}
     settings.update(draft['settings'])
     title=settings.pop('title', None) or f"{b.exam.replace('_',' ').upper()} - {len(draft['questions'])} questions"
     settings.pop('exam',None)
