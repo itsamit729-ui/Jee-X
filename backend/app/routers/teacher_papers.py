@@ -6,6 +6,7 @@ import io
 import math
 import random
 import secrets
+import re
 from collections import Counter
 from datetime import timedelta
 from typing import Literal
@@ -50,7 +51,7 @@ class Section(BaseModel):
     chapter_ids: list[int] = Field(default_factory=list, max_length=100)
     difficulty_min: int = Field(1, ge=1, le=10)
     difficulty_max: int = Field(10, ge=1, le=10)
-    type: Literal['single_correct','multi_correct','numerical'] = 'single_correct'
+    type: Literal['single_correct','multi_correct','numerical'] | None = 'single_correct'
 
 class Generate(BaseModel):
     exam: EXAMS = 'jee_main'
@@ -69,13 +70,24 @@ class Generate(BaseModel):
     taught_only: bool = False
     exclude_assigned: bool = True
     source: Literal['all','pyq','original'] = 'all'
+    restrict_to_reference: bool = False
+    strict_exam: bool = False
+    published_only: bool = False
 
 @router.post('/papers/generate')
 def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
+    if b.restrict_to_reference and (not b.year or b.mode in ('exact', 'similar')):
+        raise HTTPException(422, 'Choose a year for questions from a paper; use reference matching separately.')
     if b.omr_only and b.mode in ('exact','similar'): raise HTTPException(422, 'Past-paper matching preserves the original question formats. Use Quick mock or Custom blueprint to build an OMR-only paper.')
     student_ids=roster(db, user.id, b.classroom_ids)
     query = bank(db, user.id).join(m.Subtopic).join(m.Chapter).join(m.Subject)
     query = query.filter(or_(m.Question.exam == b.exam, m.Question.exam.is_(None)))
+    if b.strict_exam: query = query.filter(m.Question.exam == b.exam)
+    if b.published_only: query = query.filter(m.Question.status == 'published')
+    if b.restrict_to_reference:
+        query = query.filter(m.Question.exam == b.exam, m.Question.source_type == 'pyq', m.Question.year == b.year)
+        if b.shift is not None or b.reference_without_shift:
+            query = query.filter(m.Question.shift == b.shift)
     if b.omr_only:
         options=db.query(m.QuestionOption.question_id).group_by(m.QuestionOption.question_id).having(func.count(m.QuestionOption.id)==4,func.count(func.distinct(m.QuestionOption.label))==4,func.sum(case((m.QuestionOption.label.in_(['A','B','C','D']),1),else_=0))==4,func.sum(case((m.QuestionOption.is_correct.is_(True),1),else_=0))==1)
         query=query.filter(m.Question.type=='single_correct',m.Question.id.in_(options))
@@ -142,7 +154,7 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
             requirements = [None] * b.count
         # Locks consume matching requirements, rather than silently increasing the paper size.
         def matches(r, req):
-            if isinstance(req, Section): return r['subject'] == req.subject and (not req.chapter_ids or r['chapter_id'] in req.chapter_ids) and r['type'] == req.type and req.difficulty_min <= r['difficulty'] <= req.difficulty_max
+            if isinstance(req, Section): return r['subject'] == req.subject and (not req.chapter_ids or r['chapter_id'] in req.chapter_ids) and (req.type is None or r['type'] == req.type) and req.difficulty_min <= r['difficulty'] <= req.difficulty_max
             if isinstance(req, tuple) and len(req)==2: return r['subject']==req[1]
             if isinstance(req, tuple): return (r['subject'], r['chapter_id'], r['type'], r['difficulty']) == req
             return True
@@ -174,6 +186,80 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
     qs={q.id:q for q in bank(db,user.id).filter(m.Question.id.in_(selected)).all()}
     if b.mode == 'exact': selected.sort(key=lambda i: qs[i].ref)
     return {'questions':[t.freeze(qs[i],qs[i].version) for i in selected], 'warning':warning}
+
+class AIRequest(BaseModel):
+    prompt: str = Field(min_length=10, max_length=1500)
+    exam: EXAMS = 'jee_main'
+
+
+@router.post('/papers/ai-draft')
+def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
+    from app.services import teacher_ai
+    from app.services.authentication import throttle
+    import os
+    if not os.getenv('GROQ_API_KEY', '').strip() or os.getenv('TEACHER_AI_ENABLED', 'true').lower() != 'true':
+        raise HTTPException(503, 'AI paper creation is unavailable. Use Generate questions or Choose from bank.')
+    if len(b.prompt.strip()) < 10:
+        raise HTTPException(422, 'Describe the paper in at least 10 characters.')
+    throttle(db, 'teacher_ai:minute', str(user.id), 3, 60)
+    throttle(db, 'teacher_ai:day', str(user.id), 30, 86400)
+    throttle(db, 'teacher_ai:global', 'all', 100, 86400)
+    # Only metadata from the visible, published bank is shared, never question content or student data.
+    query = bank(db, user.id).filter(m.Question.status == 'published', m.Question.exam == b.exam)
+    years = {int(y) for y in re.findall(r'\b20\d{2}\b', b.prompt)}
+    refs = query.filter(m.Question.source_type == 'pyq', m.Question.year.isnot(None))
+    if years: refs = refs.filter(m.Question.year.in_(years))
+    papers = [dict(index=i, year=y, shift=s, count=n) for i, (y,s,n) in enumerate(
+        refs.with_entities(m.Question.year, m.Question.shift, func.count(m.Question.id))
+        .group_by(m.Question.year, m.Question.shift).order_by(m.Question.year, m.Question.shift).all())]
+    chapters = [dict(id=cid, subject=sub, name=name) for cid,sub,name in query.join(m.Subtopic).join(m.Chapter).join(m.Subject)
+                .with_entities(m.Chapter.id, m.Subject.code, m.Chapter.name).distinct().order_by(m.Chapter.id).all()]
+    if not chapters:
+        raise HTTPException(422, 'No published questions are available for this exam yet. Choose another exam or use the manual bank.')
+    # Return the connection to the pool while waiting on the external provider.
+    db.rollback()
+    plan = teacher_ai.interpret(b.prompt.strip(), b.exam, {'papers': papers, 'chapters': chapters})
+    if plan.clarification:
+        raise HTTPException(422, plan.clarification)
+    available = {c['id']: c for c in chapters}
+    ids = plan.chapter_ids + [cid for section in plan.sections for cid in section.chapter_ids]
+    if any(cid not in available for cid in ids):
+        raise HTTPException(422, 'The requested chapters are unavailable. Please specify chapters from the bank.')
+    subjects = {'PHY', 'CHEM', 'MATH', 'ENG', 'LR'} if b.exam == 'bitsat' else {'PHY', 'CHEM', 'MATH'}
+    for section in plan.sections:
+        if section.subject not in subjects or section.difficulty_min > section.difficulty_max or any(available[cid]['subject'] != section.subject for cid in section.chapter_ids):
+            raise HTTPException(422, 'The requested subject/chapter mix is invalid. Please rephrase it.')
+    if plan.sections and sum(s.count for s in plan.sections) != plan.count:
+        raise HTTPException(422, 'Subject counts do not add up to the requested total. Please specify the counts again.')
+    if plan.paper_index is not None and plan.paper_index >= len(papers):
+        raise HTTPException(422, 'The requested paper is unavailable. Specify its year, date and shift.')
+    ref = papers[plan.paper_index] if plan.paper_index is not None else None
+    if ref and plan.year is not None and plan.year != ref['year']:
+        raise HTTPException(422, 'The year and shift do not match. Please specify them again.')
+    if plan.selection in ('similar', 'exact') and not ref:
+        raise HTTPException(422, 'Specify one available year, date and shift to match.')
+    year = ref['year'] if ref else plan.year
+    if plan.selection == 'bank' and (year or ref):
+        raise HTTPException(422, 'Please clarify whether to use questions from that paper or create a similar paper.')
+    if plan.selection == 'from_paper' and (not year or plan.source == 'original'):
+        raise HTTPException(422, 'Specify an available PYQ year or shift.')
+    if plan.selection in ('similar', 'exact') and (plan.sections or plan.chapter_ids or plan.source == 'original'):
+        raise HTTPException(422, 'Paper matching uses the original mix. Request a subset from the paper to add chapter or subject filters.')
+    config = Generate(exam=b.exam, strict_exam=True, published_only=True, count=plan.count, level=plan.level,
+                      mode=plan.selection if plan.selection in ('exact', 'similar') else 'blueprint' if plan.sections else 'quick',
+                      year=year, shift=ref['shift'] if ref else None, reference_without_shift=bool(ref and ref['shift'] is None),
+                      restrict_to_reference=plan.selection == 'from_paper', chapter_ids=plan.chapter_ids,
+                      sections=[Section(**s.model_dump()) for s in plan.sections], source=plan.source,
+                      exclude_assigned=False)
+    result = generate(config, user, db)
+    # No database writes to papers/assignments: this response is only a reviewable candidate.
+    counts = Counter(q['subject'] for q in result['questions'])
+    return {**result, 'configuration': config.model_dump(),
+            'settings': {k:v for k,v in {'title':plan.title, 'duration_minutes':plan.duration_minutes, 'exam':b.exam}.items() if v is not None},
+            'summary': {'count': len(result['questions']), 'subjects': dict(counts), 'selection': plan.selection,
+                        'year':year, 'shift':ref['shift'] if ref else None,
+                        'chapters':[available[cid]['name'] for cid in dict.fromkeys(ids)], 'level':plan.level}}
+
 
 class PaperIn(BaseModel):
     title: str = Field(min_length=3,max_length=150)
