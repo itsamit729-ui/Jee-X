@@ -2,6 +2,7 @@ import { createRoot } from 'react-dom/client'
 import { flushSync } from 'react-dom'
 import MathText from '../components/MathText.jsx'
 import { optionDisplay } from './questionOptions.js'
+import { paperDiagramUrls, fetchPaperDiagram } from './teacherPaperImages.js'
 
 // Loaded only on download: render the same KaTeX maths in the browser, without
 // installing a browser or running video/PDF rendering on the small web server.
@@ -11,12 +12,10 @@ function Paper({paper,variant,images}) {
   const questions=variant==='B'?paper.variant_b.map(id=>paper.questions.find(q=>q.question_id===id)):paper.questions
   return <><style>{STYLE}</style><header data-pdf-block><span className="pdf-meta">JEE EDGE · {paper.settings.exam.replaceAll('_',' ').toUpperCase()} · {paper.sets_enabled?`SET ${variant}`:'STANDARD PAPER'}</span><h1>{paper.title}</h1><p>{questions.length} questions · {paper.settings.duration_minutes} minutes · +{paper.settings.marks_correct} / −{paper.settings.marks_wrong}</p><MathText text={paper.settings.instructions}/><p className="pdf-meta">Name: ____________________________ &nbsp; OMR ID: __________________</p></header>{questions.map((q,i)=><article data-pdf-block key={q.question_id}><h2>Question {i+1} <span className="pdf-meta">· {q.subject} · {q.type.replaceAll('_',' ')}</span></h2>{q.passage&&<div className="pdf-passage"><MathText text={q.passage.body}/><Assets assets={q.passage.assets} images={images}/></div>}<div><MathText text={q.stem}/></div><Assets assets={q.assets} images={images}/>{q.type==='numerical'?<p className="pdf-meta">Numerical answer: __________________</p>:q.options.map(o=><div className="pdf-option" key={o.label}><b>({o.label})</b><div><MathText text={optionDisplay(q,o).text}/></div></div>)}</article>)}</>
 }
-async function imageData(url) {
-  if(typeof url!=='string'||!(/^(https?:\/\/|\/(?!\/))/i.test(url)))throw Error('A question diagram has an invalid URL. Replace that question before downloading.')
-  const response=await fetch(url,{credentials:'same-origin',signal:AbortSignal.timeout(15000)})
-  if(!response.ok)throw Error('A question diagram could not load. Try the download again after checking your connection.')
-  const blob=await response.blob()
-  if(!blob.type.startsWith('image/')||blob.size>10000000)throw Error('A diagram is unavailable or too large. Replace that question before downloading.')
+async function imageData(paper,index,url) {
+  let blob
+  try {blob=await fetchPaperDiagram(paper.id,index,url)}
+  catch(error){const qi=paper.questions.findIndex(q=>[...(q.assets||[]),...(q.passage?.assets||[])].some(a=>a.url===url));const q=paper.questions[qi];throw Error(`Question ${qi+1}${q?.ref?` (${q.ref})`:''}: ${error.message}`)}
   return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(Error('A diagram could not be read. Please retry.'));reader.readAsDataURL(blob)})
 }
 function blankCut(canvas,start,desired) {
@@ -27,10 +26,10 @@ function blankCut(canvas,start,desired) {
 export async function downloadPaperPdf(paper,variant='A',progress=()=>{}) {
   if(!paper.finalized)throw Error('This paper is not ready to download.')
   const [{jsPDF},{default:html2canvas}]=await Promise.all([import('jspdf'),import('html2canvas')])
-  const urls=[...new Set(paper.questions.flatMap(q=>[...(q.assets||[]),...(q.passage?.assets||[])]).map(a=>a.url))]
+  const urls=paperDiagramUrls(paper)
   const images=new Map()
   // Bound parallel fetches so large papers do not overwhelm mobile browsers.
-  for(let i=0;i<urls.length;i+=4){await Promise.all(urls.slice(i,i+4).map(async url=>images.set(url,await imageData(url))))}
+  for(let i=0;i<urls.length;i+=4){await Promise.all(urls.slice(i,i+4).map(async (url,j)=>images.set(url,await imageData(paper,i+j,url))))}
   const host=document.createElement('div');host.className='tp-pdf-root';host.setAttribute('aria-hidden','true');document.body.append(host)
   const root=createRoot(host)
   try {

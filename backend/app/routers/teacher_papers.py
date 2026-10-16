@@ -501,6 +501,30 @@ def check_omr(p):
         raise HTTPException(422,f'OMR is unavailable for this paper. Check questions {numbers or "and paper length"} in the paper readiness panel. Print or assign online, or duplicate and replace incompatible questions.')
 
 
+@router.get('/papers/{pid}/diagrams/{index}')
+def paper_diagram(pid:int,index:int,user=Depends(t.require_teacher),db=Depends(get_db)):
+    from pathlib import Path
+    from urllib.parse import urlsplit, unquote
+    import os
+    p=owned(db,pid,user)
+    urls=list(dict.fromkeys(a.get('url') for q in p.questions
+        for a in list(q.get('assets') or []) + list((q.get('passage') or {}).get('assets') or [])))
+    if index<0 or index>=len(urls) or not isinstance(urls[index],str):
+        raise HTTPException(404,'Diagram not found in this saved paper.')
+    path=unquote(urlsplit(urls[index]).path)
+    if not path.startswith('/question-images/') or '\\' in path:
+        raise HTTPException(404,'This diagram is not a locally hosted bank asset.')
+    roots=[Path(os.getenv('FRONTEND_DIST','/app/static')),Path(__file__).resolve().parents[3]/'frontend'/'public']
+    for root in roots:
+        base=(root/'question-images').resolve()
+        target=(root/path.lstrip('/')).resolve()
+        if not target.is_relative_to(base): raise HTTPException(404,'Invalid diagram path.')
+        if target.is_file() and target.suffix.lower() in ('.png','.jpg','.jpeg','.gif','.webp','.svg','.avif'):
+            if target.stat().st_size>10000000: raise HTTPException(413,'Diagram exceeds the download limit.')
+            return FileResponse(target,headers={'Cache-Control':'private, max-age=300','X-Content-Type-Options':'nosniff','Content-Security-Policy':'sandbox'})
+    raise HTTPException(404,'Saved question diagram is missing from the deployed image bundle.')
+
+
 @router.get('/papers/{pid}/blank-omr.pdf')
 def blank_sheet_download(pid:int,variant:Literal['A','B']='A',user=Depends(t.require_teacher),db=Depends(get_db)):
     from types import SimpleNamespace

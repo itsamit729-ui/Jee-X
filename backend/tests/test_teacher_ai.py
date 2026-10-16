@@ -300,3 +300,29 @@ def test_model_specific_parameters_and_safe_provider_diagnostics(monkeypatch,mod
     assert error.value.status_code==503
     assert 'HTTP 400' in error.value.detail and 'unsupported_parameter' in error.value.detail
     assert 'sensitive-key' not in error.value.detail and 'prompt content' not in error.value.detail
+
+
+def test_saved_paper_diagrams_resolve_legacy_host_paths_with_ownership(ai_studio,monkeypatch,tmp_path):
+    from test_teacher_papers import create
+    from PIL import Image
+    c,factory,active,_=ai_studio
+    root=tmp_path/'static';target=root/'question-images'/'mht-cet'/'physics'/'diagram.png'
+    target.parent.mkdir(parents=True);Image.new('RGB',(40,40),'white').save(target)
+    (root/'secret.png').write_bytes(b'private')
+    monkeypatch.setenv('FRONTEND_DIST',str(root))
+    with factory() as db:
+        for url in ['https://old-render.example/question-images/mht-cet/physics/diagram.png','/question-images/%2e%2e/secret.png','https://external.example/unrelated.png']:
+            db.add(m.Asset(question_id=100,url=url,alt_text='Saved bank diagram'))
+        db.commit()
+    paper=create(c,[100]);urls=[a['url'] for a in paper['questions'][0]['assets']]
+    good=urls.index('https://old-render.example/question-images/mht-cet/physics/diagram.png')
+    r=c.get(f"/api/teacher/papers/{paper['id']}/diagrams/{good}")
+    assert r.status_code==200 and r.headers['content-type']=='image/png'
+    assert r.content==target.read_bytes()
+    for index in range(len(urls)):
+        if index!=good:assert c.get(f"/api/teacher/papers/{paper['id']}/diagrams/{index}").status_code==404
+    assert c.get(f"/api/teacher/papers/{paper['id']}/diagrams/999").status_code==404
+    assert c.get(f"/api/teacher/papers/{paper['id']}/diagrams/-1").status_code==404
+    from test_teaching import grant
+    grant(c,4);active[0]=4
+    assert c.get(f"/api/teacher/papers/{paper['id']}/diagrams/{good}").status_code==404
