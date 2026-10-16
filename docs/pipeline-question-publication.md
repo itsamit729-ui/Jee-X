@@ -1,39 +1,48 @@
-# JEE Main 2024 / 2025 pipeline publication
+# JEE Main 2019–2025 pipeline publication
 
-Source: `feature/ai_pipeline` at `eb6190d13b1984fd75b26bd2565202bdeefc2c42`.
-The feature branch includes its datasets, chapter files, figures and answer-source
-pipeline tools. Existing application/schema changes on `feature/version-1` are
-preserved by merging the two new pipeline commits, not replacing the feature tree.
+All four remote branches were checked on 2026-10-16: `main`,
+`feature/version-1`, `feature/ai_pipeline` and `jeeedge-social-media`.
+New question data is on `feature/ai_pipeline` at
+`3c7ec3ec7a0a70e0b62cefdace7ac41d7f3b4a04`: the 2019–2023 exports and
+their figures, keyed chapter files and answer-source matching update. The other
+branches contain no additional question data missing from the feature branch.
+The 2024/2025 exports retain their original pinned revision
+`eb6190d13b1984fd75b26bd2565202bdeefc2c42` and unchanged import digests.
 
 ## Readiness audit
 
 | Export | Exported records | Eligible | Held by this import | Source pending |
 | --- | ---: | ---: | ---: | ---: |
+| JEE Main 2019 | 653 | 650 | 3 | 638 |
+| JEE Main 2020 | 642 | 642 | 0 | 473 |
+| JEE Main 2021 | 1,373 | 1,373 | 0 | 744 |
+| JEE Main 2022 | 1,401 | 1,401 | 0 | 457 |
+| JEE Main 2023 | 1,477 | 1,475 | 2 | 472 |
 | JEE Main 2024 | 1,684 | 1,683 | 1 | 98 |
 | JEE Main 2025 | 1,297 | 1,295 | 2 | 118 |
-| Total | 2,981 | 2,978 | 3 | 216 |
+| Total | 8,527 | 8,519 | 8 | 3,000 |
 
-Eligible records include 858 numerical questions, 1,009 source-checked worked
-solutions and 301 bundled figures. The database importer maps them onto the
-existing Question/QuestionOption/Asset/QuestionRevision schema; no new columns or
-question types are required. Answer-only questions have an empty solution string,
-not a fabricated worked solution. The current JEE Main PYQ archive supports these.
+The five new exports contribute 5,541 eligible questions and 88 figures.
+All seven exports together include 2,863 numerical questions, 1,009 source-checked
+worked solutions and 389 bundled figures. New 2019–2023 records have checked
+source keys and no worked solutions; none are invented. They map onto the existing
+Question/QuestionOption/Asset/QuestionRevision schema without new columns or types.
 
-Three source records have a fifth "None of above" option and are held unchanged:
-`PYQ-MATH-b25f43af33c6`, `PYQ-MATH-5e4d39c22d39`, `PYQ-PHY-8991eda79415`.
-Do not remove the extra option and assume the original text/key is correct. In
-particular the first two mathematics texts also need checking against the paper.
-The source pending files are retained for future repair and never auto-published.
+Eight records with extra source choices are held unchanged; their references and
+reasons are in `datasets/jee-main-publication-review.json`. Do not remove extra
+choices or assume the remaining key is valid. Pending source records stay out.
+The existing JEE Main 2026 and MHT-CET 2026 files are not newly reviewed by this
+extension and retain their existing publication paths and status.
 
 Validation checks structure, supported exam/type, date/shift, four nonempty A–D
 choices, exactly one MCQ key, a finite numerical key, solution-verification flags,
-unique references and the presence/readability of bundled images. It normalizes
+unique references and presence/readability of bundled images. It normalizes
 unsupported mathematical font characters for MySQL's three-byte utf8 tables.
-Exports are pinned by SHA-256; a future edit requires a fresh review and digest
-update. The structural audit does not independently prove every answer correct.
-See each source README for answer provenance, incomplete-source limitations and
-figure attribution. Available shifts are reconstructed/partial, not guaranteed
-complete official papers.
+Exports are pinned by SHA-256; a future edit requires fresh review and digest
+updates. Structural validation does not independently prove every answer correct.
+See each source README for provenance, incomplete-source limitations and figure
+attribution. Available shifts are reconstructed/partial, not guaranteed complete
+official papers; historical formats and original ordering can differ.
 
 ## Publish through the deployed Admin page
 
@@ -41,10 +50,10 @@ complete official papers.
    bundles the exports under `/app/datasets`; the frontend serves their figures.
    Raw answer-key datasets are not put in `frontend/public` or exposed publicly.
 2. Open `/admin`, sign in, and choose **Question bank**.
-3. Under **Publish JEE Main questions**, select **Review 2024**. This is read-only
+3. Under **Publish JEE Main questions**, select a year such as **Review 2019**. This is read-only
    and reports new rows, safe updates, conflicts and already-current questions.
-4. Select **Publish eligible 2024 questions**. Keep the page open while it applies
-   25-question transactions and displays progress. Repeat for 2025.
+4. Select **Publish eligible 2019 questions**. Keep the page open while it applies
+   25-question transactions and displays progress. Repeat for the other years you want to publish (2019–2025). Existing 2024/2025 checkpoints remain valid.
 5. Check the PYQ page's JEE Main section and Admin year/shift coverage. The imported
    years and shifts appear from the live database; no frontend year list is needed.
 
@@ -85,7 +94,7 @@ python backend/scripts/import_pipeline_questions.py --year 2024 --apply
 python backend/scripts/import_pipeline_questions.py --year 2025 --apply
 ```
 
-The first command is a read-only database preview. Omit `--year` to handle both
+The first command is a read-only database preview. Omit `--year` to handle all seven
 reviewed years. Keep this CLI separate from the social publishing worker: question
 imports belong to the main website/database, not the Reel/Short renderer.
 
@@ -113,7 +122,7 @@ a query-count measurement, not a claim about production wall-clock speed.
 
 ### Site-wide use after publication
 
-Published JEE Main questions from both datasets join topic practice, recommended
+Published JEE Main questions from the reviewed datasets join topic practice, recommended
 practice, revision, roadmap topic planning, balanced baseline assessments, full mocks from `/test`, daily
 questions, scenario practice and the teacher bank/paper builder automatically.
 Worked solutions are optional; an answer key and supported content remain required.
@@ -121,8 +130,8 @@ Practice subject/chapter counts use the same eligibility rules as session creati
 Other exams retain their own pools, and pending, held and unpublished records do
 not enter the student pool. Existing attempts and teacher paper snapshots stay fixed.
 Numerical scenario questions support decimals and answer ranges; the range is
-shown only after the scenario ends. Complete both year imports in Admin before
-expecting all 2,978 reviewed questions to be available in production.
+shown only after the scenario ends. Complete the required year imports in Admin before
+expecting all 8,519 reviewed questions to be available in production.
 
 The main full mock uses 20 MCQs and 5 numerical questions per subject, 180 minutes
 and +4/−1 scoring, with server-side grading. Unseen questions are preferred,

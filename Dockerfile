@@ -15,8 +15,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends fonts-dejavu-co
 COPY backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ ./
-COPY datasets/jee-main-2024/ ./datasets/jee-main-2024/
-COPY datasets/jee-main-2025/ ./datasets/jee-main-2025/
+COPY datasets/jee-main-2019/questions.jsonl datasets/jee-main-2019/pending.jsonl ./datasets/jee-main-2019/
+COPY datasets/jee-main-2020/questions.jsonl datasets/jee-main-2020/pending.jsonl ./datasets/jee-main-2020/
+COPY datasets/jee-main-2021/questions.jsonl datasets/jee-main-2021/pending.jsonl ./datasets/jee-main-2021/
+COPY datasets/jee-main-2022/questions.jsonl datasets/jee-main-2022/pending.jsonl ./datasets/jee-main-2022/
+COPY datasets/jee-main-2023/questions.jsonl datasets/jee-main-2023/pending.jsonl ./datasets/jee-main-2023/
+COPY datasets/jee-main-2024/questions.jsonl datasets/jee-main-2024/pending.jsonl ./datasets/jee-main-2024/
+COPY datasets/jee-main-2025/questions.jsonl datasets/jee-main-2025/pending.jsonl ./datasets/jee-main-2025/
 COPY generated/scraped-mht-cet/ ./generated/scraped-mht-cet/
 COPY social/ ./social/
 RUN ffmpeg -hide_banner -filters 2>/dev/null | grep -q flite

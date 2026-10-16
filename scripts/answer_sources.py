@@ -56,6 +56,17 @@ def onorm(s):
     return s.replace("{", "").replace("}", "")
 
 
+def onorm_loose(s):
+    """onorm without sub/superscript marks, brackets and arrow spelling: 'CH_3CON(CH_3)_2' = 'CH3CON(CH3)2',
+    'A\\to P' = 'A→P', '{5 \\over 6}' = '\\frac{5}{6}', '\\frac{25}{\\sqrt{3}}' = '25/sqrt3', '–1' = '-1'.
+    Used only when onorm finds no option; a clash between two options makes the map fail."""
+    s = str(s or "").replace("–", "-").replace("—", "-")
+    s = re.sub(r"\\sqrt\s*\{([^{}]*)\}", r"sqrt\1", s)  # so the \frac below sees no nested braces
+    s = re.sub(r"\{([^{}]*)\\over([^{}]*)\}", r"\\frac{\1}{\2}", s)
+    s = onorm(s).replace("→", "to").replace("rightarrow", "to").replace("longto", "to")
+    return re.sub(r"[_^()\[\]]|operatorname|mathbf|mathrm", "", s)
+
+
 def grams(s, n=4):
     s = s.replace(" ", "")
     return {s[i:i + n] for i in range(max(1, len(s) - n + 1))}
@@ -108,21 +119,26 @@ def pw_answer(q, r):
             return None
     if q["type"] == "numerical" or not r.get("correct_options"):
         return None
-    ours = {o["label"]: onorm(o["content"]) for o in q["options"]}
-    labels = []
-    for i in r["correct_options"]:
-        want = onorm(r["options"][i])
-        hit = [label for label, text in ours.items() if text == want]
-        if len(hit) != 1:
+    for fn in (onorm, onorm_loose):
+        ours = {o["label"]: fn(o["content"]) for o in q["options"]}
+        theirs = [fn(o) for o in r["options"]]
+        if len(set(ours.values())) < len(ours):  # two of our options look the same: can't map safely
             return None
-        labels.append(hit[0])
-    exact_set = sorted(onorm(o) for o in r["options"]) == sorted(ours.values())
-    return ("mcq", ",".join(sorted(labels)), exact_set)
+        labels = []
+        for i in r["correct_options"]:
+            hit = [label for label, text in ours.items() if text == theirs[i]]
+            if len(hit) != 1:
+                break
+            labels.append(hit[0])
+        else:
+            exact_set = sorted(theirs) == sorted(ours.values())
+            return ("mcq", ",".join(sorted(labels)), exact_set)
+    return None
 
 
 def grafite_shift(paper_id):
-    """'jee-main-2024-online-1st-february-morning-shift' -> '1 Feb 2024, Shift 1'"""
-    m = re.match(r"jee-main-(\d{4})-online-(\d+)\w*-([a-z]+)-(morning|evening)-shift$", paper_id or "")
+    """'jee-main-2024-online-1st-february-morning-shift' -> '1 Feb 2024, Shift 1' (2019-early 2021 end in '-slot')"""
+    m = re.match(r"jee-main-(\d{4})-online-(\d+)\w*-([a-z]+)-(morning|evening)-(?:shift|slot)$", paper_id or "")
     if not m:
         return None
     return f"{int(m.group(2))} {m.group(3)[:3].title()} {m.group(1)}, Shift {1 if m.group(4) == 'morning' else 2}"
