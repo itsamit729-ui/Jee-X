@@ -1,0 +1,32 @@
+# Deploy this separately from render.yaml. Switch the main web service to
+# external mode only after this service is healthy. See docs/social-worker.md.
+services:
+  - type: web
+    name: jee-edge-social
+    runtime: docker
+    plan: free
+    branch: feature/version-1
+    dockerfilePath: ./Dockerfile.social
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: DB_SSL_CA
+        value: /etc/secrets/ca.pem
+      - key: SOCIAL_RELAY_SECRET
+        sync: false
+      - key: SOCIAL_TRIGGER_SECRET
+        sync: false
+      - key: BUFFER_API_KEY
+        sync: false
+      - key: SOCIAL_DAILY_TARGET
+        value: "12"
+      - key: SOCIAL_REELS_PER_DAY
+        value: "4"
+      - key: SOCIAL_TTS_ENABLED
+        value: "true"
+      - key: SOCIAL_LOCAL_TTS_ENABLED
+        value: "true"
+      - key: GROQ_API_KEY
+        sync: false

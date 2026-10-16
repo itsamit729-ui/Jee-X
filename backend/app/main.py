@@ -35,8 +35,6 @@ from app.routers import (
     teaching_tools,
     teacher_profile,
     plans,
-    social_slots,
-    social_comments,
 )
 
 load_dotenv()
@@ -62,9 +60,8 @@ app.add_middleware(
 
 app.add_middleware(GZipMiddleware, minimum_size=1000, compresslevel=5)
 
-app.include_router(social_slots.router)
-app.include_router(social_slots.admin_router)
-app.include_router(social_comments.router)
+from app.services.social_gateway import install_social_routes
+install_social_routes(app)
 app.include_router(authentication.router)
 app.include_router(google_login.router)
 app.include_router(users.router)
@@ -100,7 +97,7 @@ def import_predictor_reference_data():
 
 @app.get("/health")
 def health():
-    return {"status": "ok"}
+    return {"status": "ok", "social_execution_mode": app.state.social_execution_mode}
 
 
 @app.exception_handler(RequestValidationError)

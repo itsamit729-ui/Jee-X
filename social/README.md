@@ -369,3 +369,11 @@ reason for each new render, including missing key, provider HTTP status, retry
 backoff and timing failures. Voice audio is loudness-normalized, with a quieter
 music bed while speech is present. Already prepared/uploaded MP4s remain
 immutable; new renders get this behavior, and Shorts reuse that same audio.
+
+### Dedicated publishing service
+
+Reels, Shorts, narration, media serving, delivery checks and comment processing can
+run outside the student-facing web service. See [deployment and migration steps](../docs/social-worker.md).
+Use `Dockerfile.social` for the worker and set `SOCIAL_EXECUTION_MODE=external`,
+`SOCIAL_WORKER_URL` and a shared `SOCIAL_RELAY_SECRET` on the main site only after
+that worker is healthy. Existing publishing remains embedded until configured.

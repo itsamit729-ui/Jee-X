@@ -1,0 +1,11 @@
+# Standalone publisher; no OMR, OpenCV, PDF, frontend or predictor runtime.
+# Keep shared dependency versions aligned with requirements.txt.
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+sqlalchemy==2.0.35
+pydantic==2.12.5
+python-dotenv==1.0.1
+requests==2.32.3
+pymysql[rsa]==1.1.1
+tzdata==2026.5
+Pillow==12.3.0
