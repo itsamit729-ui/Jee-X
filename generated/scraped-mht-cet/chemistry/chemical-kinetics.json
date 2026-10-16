@@ -39,10 +39,3456 @@
       "slug": "rate-laws-and-rate-constant",
       "name": "Rate laws and rate constant",
       "position": 5
+    },
+    {
+      "slug": "different-methods-to-determine-order-of-reaction",
+      "name": "Different methods to determine order of reaction",
+      "position": 6
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-CHEM-0fc5eb34970d",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "For a zero order reaction, $\\mathrm{A}\\longrightarrow$ product, concentration of A decreases from $1.2{~\\mathrm{mol}~\\mathrm{dm}}^{-3}$ to $0.4{~\\mathrm{mol}~\\mathrm{dm}}^{-3}$ in 240 second. What is rate constant of the reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.1~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.2~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ minute ${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.3~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.4~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ minute ${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b41d6c081f5f",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Calculate rate constant of first order reaction if concentration of reactant decreases by $90\\%$ in 30 minute?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.16\\times 10^{-2}{~\\min}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.52\\times 10^{-2}{~\\min}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4.81\\times 10^{-2}{~\\min}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7.67\\times 10^{-2}{~\\min}^{-1}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-da43b2153021",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following is NOT true about order of a reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It is sum of power of concentration terms in rate law equation.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "It may be integer, fraction or zero.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "It is theoretical quantity",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "It is experimentally determined quantity.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2a8cc72f8615",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Rate of a first order reaction is $1.5\\times 10^{-2}~\\mathrm{mol}{~\\mathrm{L}}^{-1}$ minute ${}^{-1}$ at 0.5 M concentration of reactant, calculate half life of reaction.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.383 minute",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7.53 minute",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8.73 minute",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "23.1 minute",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4d88e621f15e",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For the reaction $\\mathrm{A}+\\mathrm{B}\\longrightarrow$ product, rate law equation is, rate $=k[A]^2[B]$. If rate of reaction is $0.22~\\mathrm{mol}{~\\mathrm{L}}^{-1}{~\\mathrm{s}}^{-1}$, calculate rate constant. ($[\\mathrm{A}]=1~\\mathrm{mol}{~\\mathrm{L}}^{-1},[~\\mathrm{B}]=0.25~\\mathrm{mol}{~\\mathrm{L}}^{-1})$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.44{~\\mathrm{mol}}^{-2}{~\\mathrm{L}}^2{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.88{~\\mathrm{mol}}^{-2}{~\\mathrm{L}}^2{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.136{~\\mathrm{mol}}^{-2}{~\\mathrm{L}}^2{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3.52{~\\mathrm{mol}}^{-2}{~\\mathrm{L}}^2{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9fd1e300bd64",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which from following decides the rate of multistep reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "rate of slowest step.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "rate of fastest step.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "average rate of various steps.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "instantaneous rate of fast step.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-61149e693bf2",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Rate constant of a reaction, $2\\mathrm{NO}_2\\mathrm{Cl}_{(\\mathrm{g})}\\longrightarrow 2\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{Cl}_{2(~\\mathrm{g})}$\nis 4.7672 minute ${}^{-1}$. Calculate half life of reaction.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.0727 minute",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.1454 minute",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.2181 minute",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.4362 minute",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bef81818fac6",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Initial concentration of reactant in a first order reaction is $0.08~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ What concentration would remain after 40 minute?\n$\\left(\\text{ given }\\frac{[\\mathrm{A}]_0}{[~\\mathrm{A}]_{\\mathrm{t}}}=5.00\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.008~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.08~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.016~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.032~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c07459610871",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following is an elementary reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{C}_2\\mathrm{H}_5\\mathrm{I}_{(\\mathrm{g})}\\longrightarrow\\mathrm{C}_2\\mathrm{H}_{4(~\\mathrm{g})}+\\mathrm{HI}_{(\\mathrm{g})}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\mathrm{NO}_2\\mathrm{Cl}_{(\\mathrm{g})}\\longrightarrow 2\\mathrm{NO}_{2(\\mathrm{g})}+\\mathrm{Cl}_{2(\\mathrm{g})}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{F}_{2(~\\mathrm{g})}\\longrightarrow 2\\mathrm{NO}_2{~\\mathrm{F}}_{(\\mathrm{g})}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\mathrm{NO}_{(\\mathrm{g})}+\\mathrm{Cl}_{2(\\mathrm{g})}\\longrightarrow 2\\mathrm{NOCl}_{(\\mathrm{g})}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-1f3a5d9e6bf4",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which among the following minerals contains radioactive element in it?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Cleveite",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Carnallite",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Chile salt petre",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Baryte",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-31d743761369",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is the time needed to reduce the initial concentration of reactant to $10\\%$ in a first order reaction if its half life time is 10 minutes?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "15 minute",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "20 minute",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "25 minute",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "33 minute",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-3a5588c75552",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Rate law for a reaction is $r=k[A]^2[B]$. If rate constant is $6.25{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6{~\\mathrm{s}}^{-1}$, what is the rate of reaction when $[\\mathrm{A}]=1~\\mathrm{mol}\\mathrm{dm}^{-3}$ and $[\\mathrm{B}]=0.2~\\mathrm{mol}\\mathrm{dm}^{-3}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.250~\\mathrm{mol}{~\\mathrm{dm}}^{-3}\\sec^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2.125~\\mathrm{mol}{~\\mathrm{dm}}^{-3}\\sec^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3.105~\\mathrm{mol}{~\\mathrm{dm}}^{-3}\\sec^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2.0\\times 10^{-2}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}\\sec^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-402c4d52439a",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If instantaneous rate of reaction is given as $-\\frac{1}{\\mathrm{a}}\\frac{~\\mathrm{d}[~\\mathrm{A}]}{\\mathrm{dt}}=-\\frac{1}{~\\mathrm{b}}\\frac{~\\mathrm{d}[~\\mathrm{B}]}{\\mathrm{dt}}=\\frac{1}{\\mathrm{c}}\\frac{~\\mathrm{d}[\\mathrm{C}]}{\\mathrm{dt}}=\\frac{1}{~\\mathrm{d}}\\frac{~\\mathrm{d}[\\mathrm{D}]}{\\mathrm{dt}}$\nthe reaction is represented as",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{A}+\\mathrm{B}\\longrightarrow\\mathrm{C}+\\mathrm{D}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{aA}+\\mathrm{B}\\longrightarrow\\mathrm{cC}+\\mathrm{dD}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{aA}+\\mathrm{bB}\\longrightarrow\\mathrm{cC}+\\mathrm{dD}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{aA}+\\mathrm{bB}\\longrightarrow\\mathrm{C}+\\mathrm{D}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0d940ee4fa07",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "For the reaction\n$\\begin{aligned} & 2\\mathrm{NO}_{(\\mathrm{s})}+2\\mathrm{H}_{2(~\\mathrm{g})}\\longrightarrow\\mathrm{N}_{2(~\\mathrm{g})}+2\\mathrm{H}_2\\mathrm{O}_{(\\mathrm{s})} \\\\ \\\\ & \\text{ rate }=\\mathrm{k}[\\mathrm{NO}]^2\\left[\\mathrm{H}_2\\right]. \\end{aligned}$\nWhat is the order of reaction with respect to $\\mathrm{H}_2$ and overall order of reaction respectively?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0,2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1,3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2,1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3,1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4e99165a58b5",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A first order reaction takes 40 minutes for $20\\%$ decomposition. Calculate its rate constant.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5.6\\times 10^{-3}$ minute ${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4.5\\times 10^{-3}$ minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6.5\\times 10^{-3}$ minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7.2\\times 10^{-3}$ minute ${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d5c75377c14a",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which among the following statements is NOT true about rate constant?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It is independent of concentration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "It varies with temperature.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "For unit concentration it is equal to rate of reaction.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "It is directly proportional to the product of concentrations of reacting species.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-01cb1d7b2206",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For reaction $\\mathrm{A}+\\mathrm{B}\\rightarrow$ product, rate of reaction is $3.6\\times 10^{-2}\\sec^{-1}$. When $[\\mathrm{A}]=0.2\\mathrm{moldm}^{-3}$ and $[B]=0.1\\mathrm{moldm}^{-3}$, calculate rate constant of reaction if reaction is first order in A and second order is B ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.6{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6\\sec^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.8{~\\mathrm{mol}}^{-2}\\mathrm{dm}^{-6}\\sec^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$18{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6\\sec^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$36{~\\mathrm{mol}}^{-2}\\mathrm{dm}^{-6}\\sec^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a92cacfcf1bc",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The reaction given below $2\\mathrm{NH}_{3(\\mathrm{g})}\\xrightarrow{\\mathrm{Pt}}\\mathrm{N}_{2(\\mathrm{g})}+3\\mathrm{H}_{2(\\mathrm{g})}$ has rate of reaction $2.5\\times 10^{-6}~\\mathrm{mol}\\mathrm{dm}^{-3}\\sec^{-1}$ formation of $\\mathrm{H}_{2(~\\mathrm{g})}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.5\\times 10^{-6}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}\\sec^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.75\\times 10^{-6}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}\\sec^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5.0\\times 10^{-6}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}\\sec^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7.5\\times 10^{-6}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}\\sec^{-1}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c1f11758d117",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For a reaction $\\mathrm{r}=\\mathrm{k}[\\mathrm{A}][\\mathrm{B}]^2$, if concentration of $A$ is doubled the rate of reaction",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "increases by 2",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "increases by 4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decrease by $\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "decreases by 2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5cae6595da3b",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A zero order reaction has half life time of 0.2 minute. If initial concentration of reactant is $0.2~\\mathrm{mol}\\mathrm{dm}^{-3}$. Find rate constant.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.2~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\min}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.5~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\min}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1.4~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\min}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6.0~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\min}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-99af723710fe",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Rate of reaction, $\\mathrm{A}+\\mathrm{B}\\rightarrow$ product, is $7.2\\times 10^{-2}\\mathrm{moldm}^{-3}{~\\mathrm{s}}^{-1}$ at $[\\mathrm{A}]=0.4~\\mathrm{mol}\\mathrm{dm}^{-3}$ and $[B]=0.1~\\mathrm{mol}\\mathrm{dm}^{-3}$. The reaction is first order in A and second order in B. Calculate rate constant.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$14{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$18{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$20{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9d2d8164c171",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following is true for a reaction as per coliision theory?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Every collision between reactants leads to chemical reaction.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "It may be expected that rate of reaction is equal to rate of collision.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "For gas phase reactions, the number of collisions is far less compared to observed rate.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "The colliding molecules do not need proper orientation.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4629b1c423af",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For the reaction,\n$\\mathrm{CH}_3\\mathrm{Br}_{(\\mathrm{aq})}+\\mathrm{OH}_{(\\mathrm{aq})}^{-}\\longrightarrow\\mathrm{CH}_3\\mathrm{OH}_{(\\mathrm{aq})}+\\mathrm{Br}_{(\\mathrm{aq})}^{-}$\nrate of consumption of $\\mathrm{OH}_{(\\mathrm{aq})}^{-}$ is $\\mathrm{x}\\mathrm{mol}\\mathrm{dm}{}^{-3}{~\\mathrm{s}}^{-1}$ What is the rate of formation of $\\mathrm{Br}_{(\\mathrm{aq})}^{-}$?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5\\mathrm{x}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{x}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2x~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{2}x~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-78b83e16b07b",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In a first order reaction $60\\%$ of the reactant converts into product in 45 minutes. Calculate rate constant of the reaction.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.0102 minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.0204 minute${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.0306 minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.0408 minute ${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f21dfe7163ba",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For the reaction,\n$\\mathrm{H}_{2(g)}+\\mathrm{Br}_{2(g)}\\longrightarrow 2\\mathrm{HBr}_{(\\mathrm{g})},\\mathrm{r}=\\mathrm{k}\\left[\\mathrm{H}_2\\right]{\\left[\\mathrm{Br}_2\\right]}^{\\frac{1}{2}}$\nWhat is the molecularity and order of reaction respectively?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Monomolecular and $\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Monomolecular and 1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Monomolecular and $\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Bimolecular and $\\frac{3}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-99012a17df98",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is the rate of formation of $\\mathrm{O}_2$ for the reaction stated below?\n$\\begin{aligned} & 2{~\\mathrm{N}}_2\\mathrm{O}_{5(8)}\\longrightarrow 4\\mathrm{NO}_{2(g)}+\\mathrm{O}_{2(~\\mathrm{g})} \\\\ & \\left[\\frac{\\mathrm{d}\\left[{~\\mathrm{N}}_2\\mathrm{O}_5\\right]}{\\mathrm{dt}}=0.02~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}\\right] \\end{aligned}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.01~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.02~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.03~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.04~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c385d17272d2",
+      "subtopic": "arrhenius-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Rate law for the reaction $2\\mathrm{NO}+\\mathrm{Cl}_2\\rightarrow 2\\mathrm{NOCl}$ is rate $=\\mathrm{k}[\\mathrm{NO}]^2\\left[\\mathrm{Cl}_2\\right]$. When will the value of k increase?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "by increasing temperature",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "by increasing [NO]",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "by increasing $\\left[\\mathrm{Cl}_2\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "by increasing both [NO] and $\\left[\\mathrm{Cl}_2\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f75594c2d9b1",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the time required for reactant to decrease the concentration from $100\\%$ to $20\\%$, if rate constant of first order reaction is 0.02303 hours ${}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "28 hour",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "42 hour",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "56 hour",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "70 hour",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-19e3195401a9",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For the reaction, $A+3B\\longrightarrow 2C$\nrate of consumption of A is $1.4~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\sec}^{-1}$. Calculate rate of formation of C ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.07{~\\mathrm{mol}~\\mathrm{dm}}^{-3}{~\\sec}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.4{~\\mathrm{mol}~\\mathrm{dm}}^{-3}{~\\sec}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.8{~\\mathrm{mol}~\\mathrm{dm}}^{-3}{~\\sec}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3.5{~\\mathrm{mol}~\\mathrm{dm}}^{-3}{~\\sec}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-3b97c68e462b",
+      "subtopic": "arrhenius-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is the value of slope, if $\\log_{10}~\\mathrm{K}$ (y-axis) is plotted versus $1/\\mathrm{T}$ ( $x$-axis) for Arrhenius equation?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log_{10}\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\cdot 303R}{E_a}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-\\mathrm{E}_{\\mathrm{a}}}{2\\cdot 303\\mathrm{R}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\log_{10}\\mathrm{A}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-fa9a54191a8a",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In a first order reaction if concentration of reactant drops from $0.8~\\mathrm{mol}{~\\mathrm{L}}^{-1}$ to $0.4~\\mathrm{mol}{~\\mathrm{L}}^{-1}$ in 15 minutes, what is the time required to drop concentration from $0.1~\\mathrm{mol}{~\\mathrm{L}}^{-1}$ to 0.025 mol $\\mathrm{L}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "7.5 minute",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "15 minute",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "30 minute",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "60 minute",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-245396f487ce",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "For a reaction, $2{~\\mathrm{N}}_2\\mathrm{O}_{5(~\\mathrm{g})}\\longrightarrow 4\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{O}_{2(~\\mathrm{g})}$\n$\\mathrm{N}_2\\mathrm{O}_5$ disappears at a rate of $0.06{~\\mathrm{mol}~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$ What is rate of $\\mathrm{NO}_{2(~\\mathrm{g})}$ formation?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.06{~\\mathrm{mol}~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.12{~\\mathrm{mol}~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.18{~\\mathrm{mol}~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.24{~\\mathrm{mol}~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ac4f94b2212b",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What time is required for 100 g of reactant to reduce to 25 g in a first order reaction having half life 5760 year?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4760 year",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "8640.26 year",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2880.15 year",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "11526.48 year",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c31ad32cfafd",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following statements is correct about zero order reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Rate of reaction depends on rate constant.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Rate of reaction is independent of concentration of reactant.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Half life of reaction does not depend on initial concentration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Unit of rate constant is time ${}^{-1}$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7cbf68feec5c",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Half life of a zero order reaction is directly proportional to ___________",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "temperature",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "rate constant",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "amount of product formed",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "initial concentration of reactant",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a54b9ccdcd51",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is rate constant of a first order reaction if $60\\%$ reactant decompose in 45 minute?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.010 minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.015 minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.020 minute ${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "0.025 minute ${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e0692024f27c",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For a zero order reaction $\\mathrm{A}\\longrightarrow$ product. Conc. of $A$ decreases from $0.8~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ to $0.2~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ in 6 minute. What is rate constant of the reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.01~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.0~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.1~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ minute ${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1.66~\\mathrm{mol}{~\\mathrm{dm}}^{-3}$ minute ${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-11565dae1645",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Half life of a first order reaction is 1 hour. What fraction of it will remain after 3 hour?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{64}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-132b625be9da",
+      "subtopic": "arrhenius-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In the Arrhenius plot of logk versus $1/T$ find the value of intercept on $y$ axis",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log_{10}\\mathrm{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-\\mathrm{Ea}}{\\mathrm{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{lnk}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{R}/\\mathrm{E}_{\\mathrm{a}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8c09b50e585b",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "For the reaction,\n$3\\mathrm{I}_{(\\mathrm{aq}.)}^{-}+\\mathrm{S}_2\\mathrm{O}_{8(\\mathrm{aq}.)}^{2-}\\longrightarrow 2\\mathrm{SO}_{4(\\mathrm{aq}.)}^{2-}+\\mathrm{I}_{3(\\mathrm{aq}.)}^{-}$\nrate of formation of $\\mathrm{SO}_{4(\\mathrm{aq}.)}^{2-}$ is $0.044~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$.\nCalculate rate of consumption of $\\mathrm{I}_{(\\mathrm{aq}.)}^{-}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.022~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.044~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.066~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.088~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-155c981c3998",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For the reaction $2{~\\mathrm{N}}_2\\mathrm{O}_{5(~\\mathrm{g})}\\longrightarrow 4\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{O}_{2(~\\mathrm{g})}$ rate and rate constant are $1.02\\times 10^{-4}~\\mathrm{mol}{~\\mathrm{L}}^{-1}{~\\mathrm{s}}^{-1}$ and $3.4\\times 10^{-5}{~\\mathrm{s}}^{-1}$. What is the conc. of $\\mathrm{N}_2\\mathrm{O}_5$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.7~\\mathrm{mol}{~\\mathrm{L}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.0~\\mathrm{mol}{~\\mathrm{L}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3.4~\\mathrm{mol}{~\\mathrm{L}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5.1~\\mathrm{mol}{~\\mathrm{L}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a68817856cb2",
+      "subtopic": "different-methods-to-determine-order-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is the order of following reaction\n$2\\mathrm{H}_2\\mathrm{O}_{2(~\\mathrm{g})}\\longrightarrow 2\\mathrm{H}_2\\mathrm{O}_{(\\mathrm{l})}+\\mathrm{O}_{2(~\\mathrm{g})}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-aeaaec33e7a5",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is the half life of a first order reaction if time required to decrease concentration of reactant from 0.8 M to 0.2 M is 12 hour?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.5 hour",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 hour",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "6 hour",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "12 hour",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-57dc67edf098",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Find the percentage of unreacted reactant for zero order reaction in 90 second having rate constant $1~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5%",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "10%",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "15%",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "20%",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-af2e6909b8da",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Consider the reaction $3\\mathrm{I}^{-}+\\mathrm{S}_2\\mathrm{O}_8^{2-}\\longrightarrow\\mathrm{I}_3^{-}+2\\mathrm{SO}_4^{2-}$, at a particular time t , $\\frac{\\mathrm{d}\\left[\\mathrm{SO}_4^{2-}\\right]}{\\mathrm{dt}}$ is $2.2\\times 10^{-2}~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$. What is the value of $\\frac{\\mathrm{d}\\left[\\mathrm{S}_2\\mathrm{O}_8^{2-}\\right]}{\\mathrm{dt}}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.1\\times 10^{-2}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2.2\\times 10^{-2}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3.3\\times 10^{-2}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6.6\\times 10^{-2}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-edeaaefa2e77",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "For the reaction, $\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{CO}_{(\\mathrm{g})}\\longrightarrow\\mathrm{NO}_{(\\mathrm{g})}+\\mathrm{CO}_{2(~\\mathrm{g})}$ rate of reaction is proportional to square of $\\left[\\mathrm{NO}_2\\right]$ and independent of [CO]. What is the rate law equation?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{r}=\\mathrm{k}\\frac{{\\left[\\mathrm{NO}_2\\right]}^{\\frac{1}{2}}}{\\left[\\mathrm{CO}\\right]}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{r}=\\mathrm{k}{\\left[\\mathrm{NO}_2\\right]}^2[\\mathrm{CO}]^0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{r}=\\frac{1}{2}\\mathrm{k}\\left[\\mathrm{NO}_2\\right][\\mathrm{CO}]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{r}=\\mathrm{k}{\\left[\\mathrm{NO}_2\\right]}^2[\\mathrm{CO}]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4180f40887b1",
+      "subtopic": "different-methods-to-determine-order-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Identify order of following reaction.\n$\\mathrm{H}_2\\mathrm{O}_{2(~\\mathrm{g})}\\longrightarrow 2\\mathrm{H}_2\\mathrm{O}_{(\\mathrm{l})}+\\mathrm{O}_{2(~\\mathrm{g})}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1.5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-726bc920b321",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The reaction $2~\\mathrm{A}+\\mathrm{B}+\\mathrm{C}\\longrightarrow\\mathrm{D}+\\mathrm{E}$ is found to be first order in A , second order in B and zero order in C . What is the effect of increasing concentration of all reactants twice?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Rate of reaction increases 8 times.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Rate of reaction increases 24 times.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Rate of reaction increases 36 times.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Rate of reaction remains unaffected.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-efd3b4d567b9",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For the reaction, $\\mathrm{N}_{2(\\mathrm{g})}+3\\mathrm{H}_{2(\\mathrm{g})}\\longrightarrow 2\\mathrm{NH}_{3(\\mathrm{g})}$ $\\mathrm{NH}_3$ is formed at a rate of $0.088~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$. Calculate consumption rate of $\\mathrm{N}_{2(\\mathrm{g})}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.011~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.022~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.033~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.044~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-147c2f9c3456",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which from following is correct regarding $t_{1/2}$ of reaction if we double the initial concentration of a reactant in first order reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{t}_{1/2}$ will increase by two times",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$t_{1/2}$ will decrease by four times",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$t_{1/2}$ remains the same",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{t}_{1/2}$ will decrease by two times",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7d5e76e55251",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "For the reaction, $\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{CO}_{(\\mathrm{g})}\\longrightarrow\\mathrm{NO}_{(\\mathrm{g})}+\\mathrm{CO}_{2(~\\mathrm{g})}$, rate of formation of $\\mathrm{NO}_{(\\mathrm{g})}$ is $\\mathrm{Y}~\\mathrm{mol}{~\\mathrm{dm}}^{-3}{~\\mathrm{s}}^{-1}$. Find the rate of disappearance of $\\mathrm{CO}_{(\\mathrm{g})}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{Y}~\\mathrm{mol}~\\mathrm{dm}{}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\mathrm{Y}~\\mathrm{mol}~\\mathrm{dm}{}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{Y}}{2}~\\mathrm{mol}~\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{2}\\mathrm{Y}~\\mathrm{mol}~\\mathrm{dm}{}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f0039e0c5134",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a first order reaction concentration of reactant decreases from 20 milli $\\mathrm{mol}\\mathrm{dm}^{-3}$ to 8 milli $\\mathrm{mol}\\mathrm{dm}^{-}$ in 40 minutes, find rate constant of reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.011 minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.023 minute ${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.032 minute ${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.041 minute ${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-07814d083ce8",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Rate law for the reaction,\n$\\mathrm{C}_2\\mathrm{H}_5\\mathrm{I}_{(\\mathrm{g})}\\longrightarrow\\mathrm{C}_2\\mathrm{H}_{4(~\\mathrm{g})}+\\mathrm{HI}_{(\\mathrm{g})}\\text{ is }\\mathrm{r}=\\mathrm{k}\\left[\\mathrm{C}_2\\mathrm{H}_5\\mathrm{I}\\right]$\nWhat is the order and molecularity of this reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "order and molecularity both are 1",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "order is 1 and molecularity is 2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "order and molecularity both are 2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "order is 2 and molecularity is 1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bcbc28adab1d",
+      "subtopic": "arrhenius-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Half life of a first order reaction is 900 minute at 400 K , find its half life at 300 K ?\n$\\left(\\frac{\\mathrm{E}_{\\mathrm{a}}}{2.303\\mathrm{R}}=1.3056\\times 10^3\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5512.5 minute",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "11025.0 minute",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "8314.3 minute",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2303.1 minute",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-fcac14257a6a",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Which from following is a correct representation of reaction rate for reaction stated below?\n$\\mathrm{N}_{2(~\\mathrm{g})}+3\\mathrm{H}_{2(~\\mathrm{g})}\\rightleftharpoons 2\\mathrm{NH}_{3(~\\mathrm{g})}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{d}\\left[\\mathrm{N}_2\\right]}{\\mathrm{dt}}=-3\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}=2\\frac{~\\mathrm{d}\\left[\\mathrm{NH}_3\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{d}\\left[\\mathrm{N}_2\\right]}{\\mathrm{dt}}=-\\frac{1}{3}\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}=\\frac{1}{2}\\frac{~\\mathrm{d}\\left[\\mathrm{NH}_3\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{\\mathrm{d}\\left[\\mathrm{N}_2\\right]}{\\mathrm{dt}}=-\\frac{1}{3}\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}=\\frac{1}{2}\\frac{~\\mathrm{d}\\left[\\mathrm{NH}_3\\right]}{\\mathrm{dt}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{d}\\left[\\mathrm{N}_2\\right]}{\\mathrm{dt}}=\\frac{1}{3}\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}=-\\frac{1}{2}\\frac{~\\mathrm{d}\\left[\\mathrm{NH}_3\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6160ff885638",
+      "subtopic": "different-methods-to-determine-order-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The rate constant for the reaction, $2{~\\mathrm{N}}_2\\mathrm{O}_{5(~\\mathrm{g})}\\rightarrow 2{~\\mathrm{N}}_2\\mathrm{O}_{4(~\\mathrm{g})}+\\mathrm{O}_{2(~\\mathrm{g})}$ is $4.98\\times 10^{-4}{~\\mathrm{s}}^{-1}$. What is the order of reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Zero",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8f041576729d",
+      "subtopic": "arrhenius-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The rate constant for a first order reaction is $0.58{~\\mathrm{s}}^{-1}$ at 300 K and $0.026{~\\mathrm{s}}^{-1}$ at 290 K .\nWhat is the energy of activation?\n$\\left(\\mathrm{R}=8.314~\\mathrm{J}{~\\mathrm{K}}^{-1}{~\\mathrm{mol}}^{-1}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "124.48 kJ",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "224.55 kJ",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "348.18 kJ",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "513.21 kJ",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a65fb2346163",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following equations is correct regarding rate of disappearance of reactant and appearance of product for\n$\\mathrm{N}_{2(~\\mathrm{g})}+3\\mathrm{H}_{2(~\\mathrm{g})}\\longrightarrow 2\\mathrm{NH}_{3(~\\mathrm{g})}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\frac{~\\mathrm{d}\\left[{~\\mathrm{N}}_2\\right]}{\\mathrm{dt}}=\\frac{1}{2}\\frac{~\\mathrm{d}\\left[{~\\mathrm{N}}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\frac{~\\mathrm{d}\\left[{~\\mathrm{N}}_2\\right]}{\\mathrm{dt}}=\\frac{1}{3}\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\frac{~\\mathrm{d}\\left[\\mathrm{NH}_3\\right]}{\\mathrm{dt}}=3\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad 3\\frac{~\\mathrm{d}\\left[\\mathrm{NH}_3\\right]}{\\mathrm{dt}}=-2\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0d401148101e",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Half life of a first order reaction is 3 minute. What is the time required to reduce the concentration of reactant by $90\\%$ of its initial concentration?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4.12 minute",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7.32 minute",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "9.97 minute",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "12.05 minute",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-83a908edc3fe",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "What is order and molecularity of following reaction?\n$\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{NO}_{2(~\\mathrm{g})}\\longrightarrow 2\\mathrm{NO}_{(\\mathrm{g})}+\\mathrm{O}_{2(~\\mathrm{g})}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "order 1 , molecularity 2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "order 2, molecularity 2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "order 2 , molecularity 3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "order zero, molecularity 2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c1f3ee5e7f48",
+      "subtopic": "different-methods-to-determine-order-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If concentration of reactant ' $A$ ' is increased by 10 times, rate of reaction increases 100 times. What is order of reaction if rate law is $r=k[A]^r$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1.5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-912231586522",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "What is the order and molecularity respectively for the elementary reaction given below?\n$\\mathrm{O}_{3(~\\mathrm{g})}+\\mathrm{O}_{(\\mathrm{g})}\\longrightarrow 2\\mathrm{O}_{2(~\\mathrm{g})}\\text{ if }\\mathrm{r}=\\mathrm{k}\\left[\\mathrm{O}_3\\right][\\mathrm{O}]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2^{\\text{nd }}$ and 1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2^{\\text{nd }}$ and 2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1^{\\text{st }}$ and 2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1^{\\text{st }}$ and 1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e7d6830898d6",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Calculate the time in seconds required to reduce the concentration of reactant to half of initial concentration for first order reaction if rate constant is $1.386\\times 10^{-3}{~\\mathrm{s}}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "140 s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "290 s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "390 s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "500 s",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-12710d615ba6",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Nitric oxide reacts with $\\mathrm{H}_2$ according to reaction, $2\\mathrm{NO}_{(\\mathrm{g})}+2\\mathrm{H}_{2(~\\mathrm{g})}\\longrightarrow\\mathrm{N}_{2(~\\mathrm{g})}+2\\mathrm{H}_2\\mathrm{O}_{(\\mathrm{g})}$, identify the correct relationship among the following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{1}{2}\\frac{~\\mathrm{d}[\\mathrm{NO}]}{\\mathrm{dt}}=\\frac{\\mathrm{d}\\left[\\mathrm{H}_2\\mathrm{O}\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{\\mathrm{d}[\\mathrm{NO}]}{\\mathrm{dt}}=\\frac{\\mathrm{d}\\left[\\mathrm{H}_2\\mathrm{O}\\right]}{\\mathrm{dt}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{3}{2}\\frac{~\\mathrm{d}[\\mathrm{NO}]}{\\mathrm{dt}}=\\frac{\\mathrm{d}\\left[\\mathrm{H}_2\\mathrm{O}\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad 2\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}=\\frac{\\mathrm{d}\\left[\\mathrm{N}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b9fd18045bde",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Rate law for the reaction $aA+bB\\rightarrow cC+dD$ is $\\mathrm{r}=\\mathrm{k}[\\mathrm{A}][\\mathrm{B}]$. Which from following conditions does NOT affect the rate of reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Concentration of A is doubled and concentration of $B$ is kept constant.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Concentration of B is doubled and concentration of $A$ is kept constant.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Concentration of B is doubled and concentration of $A$ is halved.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Concentration of A is kept constant and concentration of $B$ is halved.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ecb6fae36ebb",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "For a reaction, $\\mathrm{A}\\longrightarrow\\mathrm{B}$, rate equation is $\\mathrm{r}=\\mathrm{k}[\\mathrm{A}]^0$. If initial concentration of reactant is 'a' mol dm ${}^{-3}$ find half life time of reaction.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{a}}{4\\mathrm{k}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{a}}{\\mathrm{k}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\mathrm{a}}{2\\mathrm{k}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{a}}{2\\mathrm{k}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-0afe3b23b5b9",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Half life of a first order reaction is 20 minutes. The time taken to reduce the initial concentration of reactant to $(1/10)^{\\text{th }}$ is _________",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "46.60 min",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "66.46 min",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "79.68 min",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "88.00 min",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7963cd719858",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Nitric oxide reacts with $\\mathrm{H}_2$ according to reaction. $2\\mathrm{NO}_{(\\mathrm{g})}+2\\mathrm{H}_{2(~\\mathrm{g})}\\rightarrow\\mathrm{N}_{2(~\\mathrm{g})}+2\\mathrm{H}_2\\mathrm{O}_{(\\mathrm{g})}$, identify correct relation for disappearance of reactant and appearance of product.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\frac{~\\mathrm{d}[\\mathrm{NO}]}{\\mathrm{dt}}=-\\frac{\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{d}\\left[\\mathrm{N}_2\\right]}{\\mathrm{dt}}=\\frac{1}{2}\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\mathrm{O}\\right]}{\\mathrm{dt}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{\\mathrm{d}\\left[\\mathrm{N}_2\\right]}{\\mathrm{dt}}=\\frac{1}{2}\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\mathrm{O}\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}=-\\frac{1}{2}\\frac{~\\mathrm{d}\\left[{~\\mathrm{N}}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e91b62cf5f85",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Rate law for the reaction $\\mathrm{aA}+\\mathrm{bB}\\rightarrow\\mathrm{cC}+\\mathrm{dD}$ is $r=k[A][B]$, the rate of reaction doubles if",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Concentration of both A and B are doubled.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Concentration of A is doubled and concentration of B is kept constant.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Concentration of B is doubled and concentration of A is halved.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Concentration of A is kept constant and concentration of B is halved.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2858d5f22b05",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Nitric oxide reacts with $\\mathrm{H}_2$ according to reaction. $2\\mathrm{NO}_{(\\mathrm{g})}+2\\mathrm{H}_{2(~\\mathrm{g})}\\rightarrow\\mathrm{N}_{2(~\\mathrm{g})}+2\\mathrm{H}_2\\mathrm{O}_{(\\mathrm{g})}$.\nIdentify the correct relationship for consumption of reactant and formation of product.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\frac{~\\mathrm{d}[\\mathrm{NO}]}{\\mathrm{dt}}=-\\frac{\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{d}\\left[\\mathrm{N}_2\\right]}{\\mathrm{dt}}=-\\frac{1}{2}\\frac{~\\mathrm{d}\\left[\\mathrm{H}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{d}\\left[\\mathrm{H}_2\\mathrm{O}\\right]}{\\mathrm{dt}}=\\frac{\\mathrm{d}\\left[\\mathrm{N}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{d}\\left[\\mathrm{H}_2\\mathrm{O}\\right]}{\\mathrm{dt}}=\\frac{1}{2}\\frac{~\\mathrm{d}\\left[{~\\mathrm{N}}_2\\right]}{\\mathrm{dt}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-85e5428d7c5e",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The half life values for two different first order reaction A and B are 75 minute and 2.5 hour respectively. What is the $\\frac{r_B}{r_A}$ ratio of rate constants?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2.0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "14.2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "22.0",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d701fe279f05",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "For a reaction,\n$\\mathrm{A}+\\mathrm{B}\\longrightarrow$ product, it is found that rate law is $\\mathrm{r}=\\mathrm{k}[\\mathrm{A}]^{1.5}[~\\mathrm{B}]^{2.5}$. What is the order of reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2.5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "+1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-09f70582b126",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following is an example of first order reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{CH}_3\\mathrm{CHO}_{(\\mathrm{g})}\\longrightarrow\\mathrm{CH}_{4(~\\mathrm{g})}+\\mathrm{CO}_{(\\mathrm{g})}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{F}_{2(~\\mathrm{g})}\\longrightarrow 2\\mathrm{NO}_2{~\\mathrm{F}}_{(\\mathrm{g})}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\mathrm{NO}_{(\\mathrm{g})}+2\\mathrm{H}_{2(~\\mathrm{g})}\\longrightarrow\\mathrm{N}_{2(~\\mathrm{g})}+2\\mathrm{H}_2\\mathrm{O}_{(\\mathrm{g})}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\mathrm{H}_2\\mathrm{O}_{2(l)}\\longrightarrow 2\\mathrm{H}_2\\mathrm{O}_{(l)}+\\mathrm{O}_{2(~\\mathrm{g})}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4e128b6c04ba",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Find the rate of following reaction.\n$2{~\\mathrm{N}}_2\\mathrm{O}_{5(~\\mathrm{g})}\\longrightarrow 4\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{O}_{2(~\\mathrm{g})}$\nif concentration of $\\mathrm{NO}_2$ increases to $5.2\\times 10^{-3}\\mathrm{M}$ in 100 seconds.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.3\\times 10^{-3}~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1.3\\times 10^{-5}~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4.0\\times 10^{-5}~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5.2\\times 10^{-5}~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5c3ea2f72420",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The rate constant of a first order reaction is $1.15\\times 10^{-3}{~\\mathrm{s}}^{-1}$. How long will 5 g of reactant take to reduce to 3 g ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "314 seconds",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "240 seconds",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "404 seconds",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "444 seconds",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-50e003bf0bf9",
+      "subtopic": "different-methods-to-determine-order-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Rate law for the reaction,\n$\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{CO}_{(\\mathrm{g})}\\longrightarrow\\mathrm{NO}_{(\\mathrm{g})}+\\mathrm{CO}_{2(~\\mathrm{g})}$\nis as $\\mathrm{R}=\\mathrm{k}{\\left[\\mathrm{NO}_2\\right]}^2$. What is the order of reaction w.r.t. CO ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Zero",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-da4b9e000d0c",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A first order reaction is $50\\%$ completed in 16 minutes. Find the percentage of reactant reacting in 32 minutes.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$40\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$50\\%$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$75\\%$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-17854fc7611f",
+      "subtopic": "arrhenius-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The rate constant is doubled when temperature increases from $27^{\\circ}\\mathrm{C}$ to $37^{\\circ}\\mathrm{C}$. What is activation energy in kJ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "21.32",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "34.12",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "53.60",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "43.54",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9e3c69fca212",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $r=k[A]^2[B]$ is rate law equation for reaction $\\mathrm{A}+\\mathrm{B}\\rightarrow\\mathrm{C}$, at $[\\mathrm{A}]=1\\mathrm{M}$ and $[\\mathrm{B}]=0.2\\mathrm{M}$, Calculate rate of reaction if rate constant is $6.25\\mathrm{M}^{-2}{~\\mathrm{s}}^{-1}$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.25~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3.40~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5.88~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8.58~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e240102ec489",
+      "subtopic": "different-methods-to-determine-order-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "For a reaction $\\mathrm{A}\\rightarrow$ Product, rate constant is $6.93\\times 10^{-3}$ hour ${}^{-1}$. What is order of reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1.5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2a08228b36b5",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following is an example of second order reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\mathrm{H}_2\\mathrm{O}_{2(~\\mathrm{g})}\\longrightarrow 2\\mathrm{H}_2\\mathrm{P}_{(\\mathcal{l})}+\\mathrm{O}_{2(~\\mathrm{g})}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{H}_{2(~\\mathrm{g})}+\\mathrm{I}_{2(~\\mathrm{g})}\\longrightarrow 2\\mathrm{HI}_{(\\mathrm{g})}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{CH}_3\\mathrm{CHO}_{(\\mathrm{g})}\\longrightarrow\\mathrm{CH}_{4(~\\mathrm{g})}+\\mathrm{CO}_{(\\mathrm{g})}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\mathrm{NO}_{(\\mathrm{g})}+2\\mathrm{H}_{2(~\\mathrm{g})}\\longrightarrow\\mathrm{N}_{2(~\\mathrm{g})}+2\\mathrm{H}_2\\mathrm{O}_{(\\mathrm{g})}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-782539a6930d",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "What is the time required for $99\\%$ completion of a first order reaction if rate constant is $23.03{~\\min}^{-1}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.2 minute",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0.4 minute",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "6.2 minute",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "8.1 minute",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b11b0ad024bb",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If Instantaneous rate of reaction is stated as $-\\frac{1}{2}\\frac{~\\mathrm{d}[x]}{\\mathrm{dt}}=-\\frac{\\mathrm{d}[\\mathrm{y}]}{\\mathrm{dt}}=\\frac{1}{2}\\frac{~\\mathrm{d}[\\mathrm{z}]}{\\mathrm{dt}}$, identify the reaction.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x-2y\\longrightarrow 2z$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2x+y\\longrightarrow 2z$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x+y\\longrightarrow z$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad 2x-2y\\longrightarrow z$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-01e814099732",
+      "subtopic": "different-methods-to-determine-order-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Identify the order of following reaction?\n$2\\mathrm{NO}_{2(~\\mathrm{g})}\\rightarrow 2\\mathrm{NO}_{(\\mathrm{g})}+\\mathrm{O}_{2(~\\mathrm{g})}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1.5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-299c78818026",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Rate of the reaction $\\mathrm{A}+\\mathrm{B}\\longrightarrow$ product is $3.6\\times 10^{-2}~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$ and rate law is $\\mathrm{r}=\\mathrm{k}[\\mathrm{A}][\\mathrm{B}]^2$. What is rate constant of the reaction if $[\\mathrm{A}]=0.2\\mathrm{M}$ and $[\\mathrm{B}]=0.1\\mathrm{M}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$18{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$24{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4.8{~\\mathrm{mol}}^{-2}\\mathrm{dm}^6{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ae952679ea61",
+      "subtopic": "arrhenius-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Calculate rate constant of a first order reaction having pre exponential factor $1.6\\times 10^{13}{~\\mathrm{s}}^{-1}$.\n$\\left(\\mathrm{E}_{\\mathrm{a}}/2.303\\mathrm{RT}=21\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.6\\times 10^{-13}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.2\\times 10^{-13}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3.2\\times 10^{-8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.6\\times 10^{-8}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-024aa074f7a4",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The slope of a graph $\\log[A]_t$ versus ' $t$ ' for first order reaction is $-2.5\\times 10^{-3}{~\\mathrm{s}}^{-1}$. Find rate constant of the reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.263\\times 10^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.471\\times 10^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5.757\\times 10^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8.125\\times 10^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-625af1344920",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "What is the average rate of reaction when change in concentration of product is 0.05 M in 20 seconds?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.0025\\mathrm{M}\\mathrm{s}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.05\\mathrm{M}\\mathrm{s}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1.0\\mathrm{M}\\mathrm{s}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4.0\\mathrm{M}\\mathrm{s}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-86456351db6a",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Identify role of glycerol in following reaction.\n$2\\mathrm{H}_2\\mathrm{O}_{2(\\mathcal{l})}\\xrightarrow{\\text{ glycerol }}2\\mathrm{H}_2\\mathrm{O}_{(\\mathcal{l})}+\\mathrm{O}_{2(g)}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Homogeneous catalyst",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Inhibitor",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Promoter",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Heterogeneous catalyst",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9c07eefefbc2",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A complex reaction takes place in following steps.\n$\\begin{aligned} & \\mathrm{NO}_2\\mathrm{Cl}_{(\\mathrm{g})}\\longrightarrow\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{Cl}_{(\\mathrm{g})}\\text{ (slow) } \\\\ & \\mathrm{NO}_2\\mathrm{Cl}_{(\\mathrm{g})}+\\mathrm{Cl}_{(\\mathrm{g})}\\longrightarrow\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{Cl}_{2(~\\mathrm{g})}\\text{ (fast) } \\end{aligned}$\nIdentify rate law equation for this reaction.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{r}=\\mathrm{k}\\left[\\mathrm{NO}_2\\mathrm{Cl}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{r}=\\mathrm{k}\\left[\\mathrm{NO}_2\\right][\\mathrm{Cl}]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{r}=\\mathrm{k}{\\left[\\mathrm{NO}_2\\right]}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{r}=\\mathrm{k}{\\left[\\mathrm{NO}_2\\mathrm{Cl}\\right]}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8c9fe3b59757",
+      "subtopic": "integrated-rate-law-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "What is half life of a first order reaction if time required to decrease concentration of reactant from 0.4 M to 0.1 M is $x$ hour?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x$ hour",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2x$ hour",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x}{2}$ hour",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3x}{2}$ hour",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b67ebdad0d3f",
+      "subtopic": "rate-laws-and-rate-constant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following statements is NOT correct regarding order of reaction?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It is determined experimentally.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "It is not influenced by stoichiometric coefficient of reactants.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "It is sum of power to the concentration terms of reactants in rate law equation.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "It is always whole number.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-fa3fc021ba6d",
+      "subtopic": "rate-of-reaction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "For the reaction,\n$2{~\\mathrm{N}}_2\\mathrm{O}_{5(~\\mathrm{g})}\\longrightarrow 4\\mathrm{NO}_{2(~\\mathrm{g})}+\\mathrm{O}_{2(~\\mathrm{g})}$\n$\\mathrm{N}_2\\mathrm{O}_5$ disappears at a rate of $x~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$\nFind the rate of formation of $\\mathrm{O}_2$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad x~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2x~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x}{2}~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3x}{2}~\\mathrm{mol}\\mathrm{dm}^{-3}{~\\mathrm{s}}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-CHEM-0326dcfbda4a",
       "subtopic": "integrated-rate-law-equations",

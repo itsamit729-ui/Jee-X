@@ -7,8 +7,12 @@ the scraped image only as a reference for the layout.
 Writes review/figures/<ref>.svg and <ref>.png (white background, 2x for sharp text) and
 review/index.html (scraped figure next to the redrawn one, with the question). The PNGs are rendered
 with headless Chrome or Edge; without either, only the SVGs are written.
-Run from anywhere:  python review/make_figures.py
+Run from anywhere:  python review/make_figures.py [--years 2024 2025] [--refs REF ...] [--install]
+--install copies each rendered PNG over the question's figure in frontend/public (the file the question
+links to), after keeping the scraped original in review/.scraped/ for the comparison page.
 """
+
+import argparse
 
 import html
 import importlib
@@ -21,7 +25,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-DATASET = ROOT / "datasets" / "mht-cet-2026" / "questions.jsonl"
+DATASETS = sorted((ROOT / "datasets").glob("mht-cet-*/questions.jsonl"))
+PUBLIC = ROOT / "frontend" / "public"
+ORIGINALS = HERE / ".scraped"  # the watermarked figures, kept (outside git) for the comparison page
 
 PNG_SCALE = 2
 BROWSERS = ["chrome", "msedge", "chromium", "google-chrome",
@@ -79,8 +85,8 @@ PAGE = """<!doctype html>
   figure img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
   figcaption { font-size: 13px; color: #6b7280; margin-bottom: 6px; }
 </style></head><body>
-<h1>MHT-CET 2026 figures: scraped vs redrawn</h1>
-<p class="note">__COUNT__ of the 149 figures, redrawn as our own figures (PNG and SVG in <code>review/figures/</code>). For each one,
+<h1>MHT-CET figures: scraped vs redrawn</h1>
+<p class="note">__COUNT__ figures, redrawn as our own figures (PNG and SVG in <code>review/figures/</code>). For each one,
 check that every component, value and label the question needs is there and correct.</p>
 __ITEMS__
 </body></html>
@@ -88,12 +94,25 @@ __ITEMS__
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--years", type=int, nargs="*", help="only figures of these exam years")
+    parser.add_argument("--refs", nargs="*", help="only these question refs")
+    parser.add_argument("--install", action="store_true", help="replace the questions' figure files with the PNGs")
+    args = parser.parse_args()
     FIGURES = load_figures()
     questions = {}
-    for line in DATASET.read_text(encoding="utf-8").splitlines():
-        q = json.loads(line)
-        if q["ref"] in FIGURES:
-            questions[q["ref"]] = q
+    for dataset in DATASETS:
+        for line in dataset.read_text(encoding="utf-8").splitlines():
+            q = json.loads(line)
+            if q["ref"] in FIGURES and (not args.years or q["year"] in args.years) and (not args.refs or q["ref"] in args.refs):
+                questions[q["ref"]] = q
+    FIGURES = {ref: draw for ref, draw in FIGURES.items() if ref in questions}
+    ORIGINALS.mkdir(exist_ok=True)
+    for ref, q in questions.items():
+        original, target = ORIGINALS / f"{ref}.png", PUBLIC / q["figure"]["url"].lstrip("/")
+        if not original.exists() and target.exists():
+            shutil.copyfile(target, original)
+    installed = 0
     out = HERE / "figures"
     out.mkdir(exist_ok=True)
     items, exe, pngs = [], browser(), 0
@@ -104,6 +123,11 @@ def main():
         if exe and render_png(exe, out / f"{ref}.svg", out / f"{ref}.png", figure.width, figure.height):
             shown, pngs = f"{ref}.png", pngs + 1
         q = questions[ref]
+        if args.install:
+            if not (out / f"{ref}.png").exists():
+                sys.exit(f"{ref}: no PNG rendered, nothing installed for it")
+            shutil.copyfile(out / f"{ref}.png", PUBLIC / q["figure"]["url"].lstrip("/"))
+            installed += 1
         options = "".join(f'<li class="{"key" if o["is_correct"] else ""}">({o["label"]}) {html.escape(o["content"])}</li>'
                           for o in q["options"])
         items.append(
@@ -111,12 +135,13 @@ def main():
             f'&middot; {html.escape(q["shift"])}</div>'
             f'<div class="stem">{html.escape(q["stem"])}</div><ul class="options">{options}</ul>'
             f'<div class="pair"><figure><figcaption>Scraped (watermarked)</figcaption>'
-            f'<img src="../frontend/public{q["figure"]["url"]}" alt="scraped figure"></figure>'
+            f'<img src=".scraped/{ref}.png" alt="scraped figure"></figure>'
             f'<figure><figcaption>Redrawn: {html.escape(draw.__doc__.strip())}</figcaption>'
             f'<img src="figures/{shown}" alt="redrawn figure"></figure></div></article>')
     (HERE / "index.html").write_text(PAGE.replace("__COUNT__", str(len(items))).replace("__ITEMS__", "\n".join(items)),
                                      encoding="utf-8")
-    print(f"Wrote {len(items)} SVGs and {pngs} PNGs to {out}, and {HERE / 'index.html'}")
+    print(f"Wrote {len(items)} SVGs and {pngs} PNGs to {out}, and {HERE / 'index.html'}"
+          + (f"; installed {installed} figures in frontend/public" if args.install else ""))
     if not exe:
         print("No Chrome or Edge found: PNGs were not rendered.")
 

@@ -54,10 +54,829 @@
       "slug": "inverse-functions",
       "name": "Inverse functions",
       "position": 8
+    },
+    {
+      "slug": "number-of-sets-and-relations",
+      "name": "Number of sets and relations",
+      "position": 9
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-MATH-f23286a382c8",
+      "subtopic": "domain",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The domain of definition of the function $y(x)$ is given by the equation $2^x+2^y=2$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0<x\\le 1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0\\le x\\le 1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\infty<x\\le 0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\infty<x<1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-87beabab717c",
+      "subtopic": "inverse-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\mathrm{f}(x)=\\frac{\\alpha x}{x+1},x\\ne-1$, then for $\\alpha=$ ________, $\\mathrm{f}(\\mathrm{f}(x))=x$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-$1",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b945ffa478d2",
+      "subtopic": "functional-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $[x]^2-5[x]+6=0$, where $[x]$ denotes the greatest integer function, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\in[2,3)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x\\in[2,3]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x\\in[2,4]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x\\in[2,4)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5eecd2ac26cc",
+      "subtopic": "inverse-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{f}:[1,\\infty)\\rightarrow[2,\\infty)$ is given by $\\mathrm{f}(x)=x+\\frac{1}{x}$ then $\\mathrm{f}^{-1}(x)$ equals",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x+\\sqrt{x^2-4}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{1+x^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x-\\sqrt{x^2-4}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1+\\sqrt{x^2-4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-15a4ae1b3d3f",
+      "subtopic": "inverse-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\mathrm{f}(x)=(x+1)^2-1,x\\geqslant-1$, then the set $\\left\\{x:f(x)=f^{-1}(x)\\right\\}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\{0,1,-1\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\{0,-1\\}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left\\{0,-1,\\frac{-3+\\mathrm{i}\\sqrt{3}}{2},\\frac{-3-\\mathrm{i}\\sqrt{3}}{2}\\right.$, where $\\left.\\mathrm{i}=\\sqrt{-1}\\right\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\varphi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fefef095722c",
+      "subtopic": "number-of-sets-and-relations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $n(A)=4,n(B)=2$. Then the number of subsets of the set $\\mathrm{A}\\times\\mathrm{B}$ each having at least 3 elements is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "275",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "510",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "219",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "256",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-509e3558a1ac",
+      "subtopic": "functional-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $[x]^2-5[x]+6=0$, where $[\\cdot]$ denotes the greatest integer function, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\in(2,4]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x\\in[2,4]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x\\in[2,4)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x\\in(2,4)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0ff5eb0ba599",
+      "subtopic": "range",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Range of the function $\\mathrm{f}(x)=\\frac{x^2+x+2}{x^2+x+1},x\\in\\mathbb{R}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(1,\\frac{7}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[1,\\frac{7}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(1,\\frac{7}{3}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left[1,\\frac{7}{3}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1dab17dadc72",
+      "subtopic": "functional-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "For a suitable chosen real constant a, let a function $f:\\mathbb{R}-\\{-\\mathrm{a}\\}\\rightarrow\\mathbb{R}$ be defined by $f(x)=\\frac{a-x}{a+x}$. Further suppose that for any real number $x\\ne-\\mathrm{a}$ and $\\mathrm{f}(x)\\ne-\\mathrm{a}$, (fof) $(x)=x$. Then $f\\left(-\\frac{1}{5}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.5",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "2.0",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.0",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3.0",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8512d8553d2d",
+      "subtopic": "composite-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $g(x)=x^2+x-1$ and (gof) $(x)=4x^2-10x+5$, then $\\mathrm{f}(2)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-$1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-$2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c422739b32cb",
+      "subtopic": "domain",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The domain of definition of $\\mathrm{f}(x)=\\frac{\\log_2(x+3)}{x^2+3x+2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{R}-\\{1,2\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(-2,\\infty)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{R}-\\{-1,-2,-3\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(-3,\\infty)-\\{-1,-2\\}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d4a5939e74dc",
+      "subtopic": "composite-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{f}(x)=\\frac{x}{2-x},~\\mathrm{g}(x)=\\frac{x+1}{x+2}$, then (gogof) $(x)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{6+x}{10-2x}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{6-x}{10+2x}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{6+x}{10+2x}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{6-x}{10-2x}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d4d783279d07",
+      "subtopic": "domain",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The domain of definition of the function $f(x)$ given by the equation $2^x+2^y=2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0<x\\leqslant 1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0\\leqslant x\\leqslant 1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\infty<x\\leqslant 0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\infty<x<1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e039ed945f67",
+      "subtopic": "classification-of-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The function defined by $\\mathrm{f}(x)=\\frac{2x+3}{3x+4},x\\ne-\\frac{4}{3}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "only one one",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "only onto",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "onto for $y\\ne\\frac{2}{3}$ and one-one",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "neither one-one nor onto",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-630438fbe982",
+      "subtopic": "classification-of-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "For a real number $x,[x]$ denotes the greatest integer less than or equal to $x$. Then the value of\n$\\begin{array}{l} \\left[\\frac{1}{2}\\right]+\\left[\\frac{1}{2}+\\frac{1}{100}\\right]+\\left[\\frac{1}{2}+\\frac{2}{100}\\right]+\\left[\\frac{1}{2}+\\frac{3}{100}\\right]+\\ldots+\\left[\\frac{1}{2}+\\frac{99}{100}\\right]= \\end{array}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "49",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "100",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "50",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-298a066f9f74",
+      "subtopic": "functional-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The values of $b$ and $c$ for which the identity $\\mathrm{f}(x+1)-\\mathrm{f}(x)=8x+3$ is satisfied, where $\\mathrm{f}(x)=\\mathrm{b}x^2+\\mathrm{c}x+\\mathrm{d}$, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{b}=2,\\mathrm{c}=1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{b}=4,\\mathrm{c}=-1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{b}=1,\\mathrm{c}=2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{b}=3,\\mathrm{c}=-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-571b2ae6225e",
+      "subtopic": "inverse-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{f}(x)=3x+10,~\\mathrm{g}(x)=x^2-1$, then $(\\mathrm{fog})^{-1}(x)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{x-7}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${\\left(\\frac{x-7}{3}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "${\\left(\\frac{x-7}{3}\\right)}^{\\frac{1}{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\frac{3}{x-7}\\right)}^{\\frac{3}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-14bfd7cfb5de",
+      "subtopic": "range",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "$\\begin{aligned} & f(x)=\\begin{cases} 3-x, & -1\\leqslant x<0 \\\\ 1+\\frac{5x}{3}, & -3\\leqslant x\\leqslant 2 \\end{cases}\\text{ and } \\\\ & g(x)=\\begin{cases} -x, & -2\\leqslant x\\leqslant 3 \\\\ x, & 0\\leqslant x\\leqslant 1 \\end{cases} \\end{aligned}$\nthen range of (fog) $(x)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[1,\\frac{8}{3}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[-4,\\frac{8}{3}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left[-4,\\frac{13}{3}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\frac{8}{3},\\frac{10}{3}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3f99441185d8",
+      "subtopic": "composite-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{f}(x)=\\log\\left(\\frac{1+x}{1-x}\\right)$ and $\\mathrm{g}(x)=\\frac{3x+x^3}{1+3x^2}$, then $(\\mathrm{fog})(x)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\mathrm{f}(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\mathrm{f}(x)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\quad 4\\mathrm{f}(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\mathrm{f}(x)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7bdc72ea75f2",
+      "subtopic": "inverse-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\mathrm{f}:\\mathbb{R}-\\{2\\}\\rightarrow\\mathbb{R}-\\{1\\}$ defined by $\\mathrm{f}(x)=\\frac{x-3}{x-2}$ and $\\mathrm{g}:\\mathbb{R}\\rightarrow\\mathbb{R}$ defined by $\\mathrm{g}(x)=3x-2$, then sum of all values of $x$ for which $\\mathrm{f}^{-1}(x)+\\mathrm{g}^{-1}(x)=\\frac{19}{6}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{11}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0dcdd433635e",
+      "subtopic": "functional-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $[x]^2-5[x]+6=0$, where [.] denotes the greatest integer function, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad x\\in(2,4)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x\\in[2,4]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\quad x\\in[2,4)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x\\in(2,4]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5d1dfce579ba",
+      "subtopic": "even-and-odd-functions",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "The function $\\mathrm{f}(x)=\\sec\\left[\\log\\left(x+\\sqrt{1+x^2}\\right)\\right]$ is________function",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "even",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "odd",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "neither even nor odd",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "square",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-MATH-02304948f650",
       "subtopic": "domain",

@@ -89,10 +89,4613 @@
       "slug": "projection-rule",
       "name": "Projection rule",
       "position": 15
+    },
+    {
+      "slug": "summation-series-problems",
+      "name": "Summation series problems",
+      "position": 16
+    },
+    {
+      "slug": "angle-and-its-units",
+      "name": "Angle and its units",
+      "position": 17
+    },
+    {
+      "slug": "circumcenter-incenter-and-orthocenter",
+      "name": "Circumcenter incenter and orthocenter",
+      "position": 18
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-MATH-6507913d604b",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If for certain $x,3\\cos x\\ne 2\\sin x$, then the general solution of, $\\sin^2x-\\cos 2x=2-\\sin 2x$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(2\\mathrm{n}+1)\\frac{\\pi}{2},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(2\\mathrm{n}+1)\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{\\pi}{3},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{n}\\pi}{2}+1,\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6b112f5a3815",
+      "subtopic": "fundamental-identities",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\left(1+\\cos\\frac{\\pi}{8}\\right)\\left(1+\\cos\\frac{3\\pi}{8}\\right)\\left(1+\\cos\\frac{5\\pi}{8}\\right)\\left(1+\\cos\\frac{7\\pi}{8}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{16}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f7b81561435f",
+      "subtopic": "sine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If the angles $\\mathrm{A},\\mathrm{B}$ and C of a triangle ABC are in the ratio $2:3:7$ respectively, then the sides a, b and c are respectively in the ratio",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:\\sqrt{2}:(\\sqrt{3}+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}:2:(\\sqrt{3}+1)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(\\sqrt{3}+1):\\sqrt{2}:2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2:(\\sqrt{3}+1):\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dc487ad190f8",
+      "subtopic": "sine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle ABC , with usual notations, if $\\mathrm{m}\\angle\\mathrm{A}=45^{\\circ},\\mathrm{m}\\angle B=75^{\\circ}$, then $\\mathrm{a}+\\mathrm{c}\\sqrt{2}$ has the",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$b$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{b}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2b$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3b$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4cba373691c8",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "With usual notations, if the lengths of the sides of a triangle are $7~\\mathrm{cm},4\\sqrt{3}~\\mathrm{cm}$ and $\\sqrt{13}~\\mathrm{cm}$, then the measures of the smallest angle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4d1f88944094",
+      "subtopic": "sine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If in a triangle $ABC$, with usual notations, the angles are in A.P. and $b:c=\\sqrt{3}:\\sqrt{2}$, then angle $\\mathrm{A}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$60^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$75^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$45^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6dc313a29260",
+      "subtopic": "multiple-and-sub-multiple-angle-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "$\\cos^3\\left(\\frac{\\pi}{8}\\right)\\cos\\left(\\frac{3\\pi}{8}\\right)+\\sin^3\\left(\\frac{\\pi}{8}\\right)\\sin\\left(\\frac{3\\pi}{8}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9a7033ae8399",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If angle $\\theta$ in $[0,2\\pi]$ satisfies both the equations $\\cot\\theta=\\sqrt{3}$ and $\\sqrt{3}\\sec\\theta+2=0$, then $\\theta$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{11\\pi}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-475c77c8d640",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In a $\\triangle\\mathrm{PQR},\\mathrm{m}\\angle\\mathrm{R}=\\frac{\\pi}{2}$. If $\\tan\\left(\\frac{\\mathrm{P}}{2}\\right)$ and $\\tan\\left(\\frac{\\mathrm{Q}}{2}\\right)$ are the roots of the equation $ax^2+bx+c=0(a\\ne 0)$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{a}+\\mathrm{b}=\\mathrm{c}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{b}+\\mathrm{c}=\\mathrm{a}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{a}+\\mathrm{c}=\\mathrm{b}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{b}=\\mathrm{c}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-76aff324691e",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If the sides of a triangle $a,b,c$ are in A.P., then with usual notations, a $\\cos^2\\frac{\\mathrm{C}}{2}+\\mathrm{c}\\cos^2\\frac{~\\mathrm{A}}{2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3\\mathrm{a}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\mathrm{c}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3b}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{a}+\\mathrm{c}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-880d08ffc5b4",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The general solution of $\\sin x+\\cos x=1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=2\\mathrm{n}\\pi,\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x=\\mathrm{n}\\pi+\\frac{\\pi}{2},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{\\pi}{4}-\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "not existing",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-96c03f41e632",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The number of solutions of $\\tan x+\\sec x=2\\cos x$ in $[0,2\\pi]$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cf138006c254",
+      "subtopic": "sine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The angles of a triangle are in the ratio $5:1:6$, then ratio of the smallest side to the greatest side is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}+1:2\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\sqrt{2}:\\sqrt{3}+1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{2}:\\sqrt{3}-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}-1:2\\sqrt{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-055b32f268b5",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The number of integral values of k for which the equation $7\\cos x+5\\sin x=2k+1$ has a solution, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "8",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "12",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5d70441c011a",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If the equation $\\cos^4\\theta+\\sin^4\\theta+\\lambda=0$ has real solutions for $\\theta$, then $\\lambda$ lies in the interval",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(-\\frac{5}{4},-1\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[-\\frac{3}{2},-\\frac{5}{4}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(-\\frac{1}{2},-\\frac{1}{4}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[-1,-\\frac{1}{2}\\right]$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-60b45a60a82b",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\begin{array}{l} \\cos\\left(18^{\\circ}-\\mathrm{A}\\right)\\cos\\left(18^{\\circ}+\\mathrm{A}\\right)-\\cos\\left(72^{\\circ}-\\mathrm{A}\\right)\\cos\\left(72^{\\circ}+\\mathrm{A}\\right)\\text{ is equal to } \\end{array}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cos 54^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos 36^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sin 54^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sin 36^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-86b056680ca4",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $a,b,c$ be three non-zero real numbers such that the equation $\\sqrt{3}\\mathrm{a}\\cos x+2b\\sin x=c$, $x\\in\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right]$ has two distinct real roots $\\alpha$ and $\\beta$ with $\\alpha+\\beta=\\frac{\\pi}{3}$. Then the value of $\\frac{b}{a}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-$0.5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3b915bf93526",
+      "subtopic": "projection-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle ABC , with usual notations, $\\frac{\\cos\\mathrm{B}+\\cos\\mathrm{C}}{\\mathrm{b}+\\mathrm{c}}+\\frac{\\cos\\mathrm{A}}{\\mathrm{a}}$ has the value",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{~\\mathrm{b}+\\mathrm{c}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{~\\mathrm{b}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\mathrm{c}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\mathrm{a}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4e0ec741dfbe",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The solution set of the equation $\\tan x+\\sec x=2\\cos x$, in the interval $[0,2\\pi]$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left\\{\\frac{\\pi}{6},\\frac{7\\pi}{6},\\frac{3\\pi}{2}\\right\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left\\{\\frac{5\\pi}{6},\\frac{7\\pi}{6},\\frac{3\\pi}{2}\\right\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left\\{\\frac{\\pi}{6},\\frac{5\\pi}{6},\\frac{3\\pi}{2}\\right\\}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left\\{\\frac{5\\pi}{6},\\frac{11\\pi}{6},\\frac{3\\pi}{2}\\right\\}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4f41ca7d4979",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{A}+\\mathrm{B}=225^{\\circ}$, then $\\frac{\\cot\\mathrm{A}}{1+\\cot\\mathrm{A}}\\cdot\\frac{\\cot\\mathrm{B}}{1+\\cot\\mathrm{B}}$, if it exists, is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-45de0b3eaca7",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The number of values of $x$ in the interval $(0,5\\pi)$ satisfying the equation $3\\sin^2x-7\\sin x+2=0$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "6",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "10",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5f722eaed3aa",
+      "subtopic": "multiple-and-sub-multiple-angle-formula",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The maximum value of $\\left(\\cos\\alpha_1\\right)\\cdot\\left(\\cos\\alpha_2\\right)\\ldots.\\left(\\cos\\alpha_n\\right)$ under the constraints $0\\le\\alpha_1,\\alpha_2,\\ldots.,\\alpha_n\\le\\frac{\\pi}{2}$ and $\\left(\\cot\\alpha_1\\right)\\cdot\\left(\\cot\\alpha_2\\right)\\ldots\\left(\\cot\\alpha_n\\right)=1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2^{\\left(\\frac{n}{2}\\right)}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2^n}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2^n$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2^{\\frac{n}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6b3125af4f7f",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $P=\\{\\theta:\\sin\\theta-\\cos\\theta=\\sqrt{2}\\cos\\theta\\}$ and $Q=\\{\\theta:\\sin\\theta+\\cos\\theta=\\sqrt{2}\\sin\\theta\\}$ be two sets, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{P}\\subset\\mathrm{Q}$ and $\\mathrm{Q}-\\mathrm{P}\\ne\\varphi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{Q}\\subset̸\\mathrm{P}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$P\\subset̸Q$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{P}=\\mathrm{Q}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-71accfca8b87",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle ABC , with usual notations, $2\\mathrm{ac}\\sin\\left(\\frac{\\mathrm{A}-\\mathrm{B}+\\mathrm{C}}{2}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{a}^2+\\mathrm{b}^2-\\mathrm{c}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{c}^2+\\mathrm{a}^2-\\mathrm{b}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{b}^2-\\mathrm{a}^2+\\mathrm{c}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{a}^2-\\mathrm{b}^2-\\mathrm{c}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c8ac6cd0b528",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The general solution of the equation $\\sqrt{3}\\cos\\theta+\\sin\\theta=\\sqrt{2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{\\pi}{2}+\\frac{\\pi}{6},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{\\pi}{2}-\\frac{\\pi}{6},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{\\pi}{4}-\\frac{\\pi}{3},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{\\pi}{4}+\\frac{\\pi}{3},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5f33822fece8",
+      "subtopic": "transformation-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\cos 20^{\\circ}+2\\sin^255^{\\circ}-\\sqrt{2}\\sin 65^{\\circ}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-$1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d26079e716ac",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle $\\mathrm{ABC},l(\\mathrm{AB})=\\sqrt{23}$ units, $l(\\mathrm{BC})=3$ units, $l(\\mathrm{CA})=4$ units, then $\\frac{\\cot A+\\cot C}{\\cot B}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d09baac7b76e",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The principal solutions, of the equation $\\sqrt{3}\\sec x+2=0$, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\pi}{3},\\frac{4\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4\\pi}{3},\\frac{5\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\pi}{6},\\frac{7\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7\\pi}{6},\\frac{11\\pi}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fdbdb6906e8e",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In $\\triangle ABC$, with usual notations, if $\\frac{1}{b+c}+\\frac{1}{c+a}=\\frac{3}{a+b+c}$, then $m\\angle C$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1a4462f9088e",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\alpha+\\beta+\\gamma=\\pi$, then the expression $\\sin^2\\alpha+\\sin^2\\beta-\\sin^2\\gamma$ has the value",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sin\\alpha\\sin\\beta\\sin\\gamma$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\cos\\alpha\\sin\\beta\\sin\\gamma$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\sin\\alpha\\cos\\beta\\sin\\gamma$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sin\\alpha\\sin\\beta\\cos\\gamma$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5788c53262b9",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The general solution of $2\\sqrt{3}\\cos^2\\theta=\\sin\\theta$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{\\pi}{3},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{\\pi}{6},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{n}\\pi\\pm(-1)^{\\mathrm{n}}\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{2\\pi}{3},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ae52e65a4abe",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If the lengths of the sides of triangle are 3,5,7, then the largest angle of the triangle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3\\pi}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-38323a3476f6",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The number of roots of the equation, $(81)^{\\sin^2x}+(81)^{\\cos^2x}=30$ in the interval $[0,\\pi]$, is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-61a9ddec6e9a",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $\\theta$ and $\\alpha$ are not odd multiples of $\\frac{\\pi}{2}$ then $\\tan\\theta=\\tan\\alpha$ implies principal solution is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\theta=\\alpha+\\frac{\\mathrm{n}\\pi}{2},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\theta=\\alpha+\\frac{3\\mathrm{n}\\pi}{2},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\theta=\\mathrm{n}\\pi+\\alpha,\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\quad\\theta=\\frac{\\mathrm{n}\\pi}{4}+\\alpha,\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6ce37c40147a",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $S=\\left\\{x\\in(-\\pi,\\pi)|x\\ne 0,\\pm\\frac{\\pi}{2}\\right\\}$. The sum of all distinct solutions of the equation $\\sqrt{3}\\sec x+\\mathrm{cosec}x+2(\\tan x-\\cot x)=0$ in the set S is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{7\\pi}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{2\\pi}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\pi}{9}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a853b1036958",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $2\\sin^2x+3\\sin x-2>0$ and $x^2-x-2<0$. ( $x$ is measured in radians). The $x$ lies in the interval",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{\\pi}{6},\\frac{5\\pi}{6}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(-1,\\frac{5\\pi}{6}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-1,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{\\pi}{6},2\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ceb11e1bba92",
+      "subtopic": "angle-and-its-units",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The approximate value of $\\cos\\left(30^{\\circ}30'\\right)$, given that $1^{\\circ}=0.0175^c$ and $\\cos 30^{\\circ}=0.8660$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.8778",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.7666",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.7916",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.8616",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cf9e6f1b28f4",
+      "subtopic": "multiple-and-sub-multiple-angle-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $\\tan x=\\frac{3}{4}$ and $\\pi<x<\\frac{3\\pi}{2}$, then $\\cos\\frac{x}{2}=$ ___________",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{10}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{\\sqrt{10}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-38b3a0a1ba1f",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sin(\\theta-\\alpha),\\sin\\theta$ and $\\sin(\\theta+\\alpha)$ are in H.P., then the value of $\\cos^2\\theta$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1-2\\cos^2\\frac{\\alpha}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1+2\\cos^2\\frac{\\alpha}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1-4\\cos^2\\frac{\\alpha}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1+4\\cos^2\\frac{\\alpha}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-adfcd925d4e1",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\alpha$ and $\\beta$ be two real roots of the equation $(k+1)\\tan^2x-\\sqrt{2}\\lambda\\tan x=(1-k)$ where $k(\\ne-1)$ and $\\lambda$ are real numbers. If $\\tan^2(\\alpha+\\beta)=50$, then a value of $\\lambda$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "10",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e5451dd47fd6",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The number of all values of $\\theta$ in the interval $\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$ satisfying the equation $(1-\\tan\\theta)(1+\\tan\\theta)\\sec^2\\theta+2\\tan^2\\theta=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "infinitely many.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0060f7463dd6",
+      "subtopic": "sine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If the angles of a triangle are in the ratio $4:1:1$, then the ratio of the longest side to the perimeter is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}:(2+\\sqrt{3})$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1:(2+\\sqrt{3})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2:3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-12918fbac2ed",
+      "subtopic": "circumcenter-incenter-and-orthocenter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In $\\triangle\\mathrm{ABC}$, with usual notations, if $\\mathrm{b}=3$, $c=8,~\\mathrm{m}\\angle~\\mathrm{A}=60^{\\circ}$, then the circumradius of the triangle is _______ units.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{7}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7\\sqrt{2}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7}{\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3bfe00723f71",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The value of the expression $\\sqrt{3}\\mathrm{cosec}20^{\\circ}-\\sec 20^{\\circ}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\sin 20^{\\circ}}{\\sin 40^{\\circ}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4\\frac{\\sin 20^{\\circ}}{\\sin 40^{\\circ}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3c27dd9f1cfd",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{A}>\\mathrm{B}$ and $\\tan\\mathrm{A}-\\tan\\mathrm{B}=x$ and $\\cot\\mathrm{B}-\\cot\\mathrm{A}=y$, then $\\cot(\\mathrm{A}-\\mathrm{B})=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{y}-\\frac{1}{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{x}-\\frac{1}{y}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{x}+\\frac{1}{y}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{xy}{x-y}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-465f6ab1d629",
+      "subtopic": "projection-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $(a+b)\\cos C+(b+c)\\cos A+(c+a)\\cos B=72$ and if $a=18,b=24$, then area of the triangle $ABC$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "144 sq.units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "216 sq.units",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "256 sq.units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "296 sq. units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4c509445e0da",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The Solution set of the equation $\\sin^2\\theta-\\cos\\theta=\\frac{1}{4}$ in the interval $[0,2\\pi]$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left\\{\\frac{\\pi}{6},\\frac{5\\pi}{6}\\right\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left\\{\\frac{\\pi}{3},\\frac{5\\pi}{3}\\right\\}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left\\{\\frac{\\pi}{3},\\frac{2\\pi}{3}\\right\\}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left\\{\\frac{2\\pi}{3},\\frac{4\\pi}{3}\\right\\}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2706a4f65919",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The sides of a triangle are $\\sin\\theta,\\cos\\theta$ and $\\sqrt{1+\\sin\\theta\\cos\\theta}$ for some $0<\\theta<\\frac{\\pi}{2}$, then the greatest angle of a triangle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\pi}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7ab9228f9877",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $\\alpha+\\beta=\\frac{\\pi}{2}$ and $\\beta+\\gamma=\\alpha$, then $\\tan\\alpha$ equals",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2(\\tan\\beta+\\tan\\gamma)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan\\beta+\\tan\\gamma$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\tan\\beta+2\\tan\\gamma$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\tan\\beta+\\tan\\gamma$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bb3047492fcc",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The general solution of $\\sin x-3\\sin 2x+\\sin 3x=\\cos x-3\\cos 2x+\\cos 3x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=\\mathrm{n}\\pi+\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x=2\\mathrm{n}\\pi+\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=\\mathrm{n}\\pi+(-1)^{\\mathrm{n}}\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x=\\frac{\\mathrm{n}\\pi}{2}+\\frac{\\pi}{8},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f8c8d193f748",
+      "subtopic": "sine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "For the triangle ABC , with usual notations, if the angles $A,B,C$ are in A.P. and $\\mathrm{m}\\angle\\mathrm{A}=30^{\\circ},\\mathrm{c}=3$, then the values of a and b are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{3}}{2},\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2},\\frac{3\\sqrt{3}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\sqrt{3}}{2},\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{2},\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-faf2a2094bd4",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In $(0,2\\pi)$, the number of solutions of $\\tan\\theta+\\sec\\theta=2\\cos\\theta$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4bcf8ec6dde7",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The smallest positive value of $x$ in degrees satisfying the equation $\\tan\\left(x+100^{\\circ}\\right)=\\tan\\left(x+50^{\\circ}\\right)\\tan(x)\\tan\\left(x-50^{\\circ}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$15^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$45^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$60^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a1a757bb6673",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The number of solutions, of $2^{1+|\\cos x|+|\\cos x|^2+\\ldots\\ldots\\cdots\\cdots}=4$ in $(-\\pi,\\pi)$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c34d4f5a4b31",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The number of integral values of $k$, for which the equation $7\\cos x+5\\sin x=2\\mathrm{k}+1$ has a solution, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "8",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d1418698da43",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $2\\sin^2x+3\\sin x-2>0$ and $x^2-x-2<0$ ($x$ is measured in radians). Then $x$ lies in the interval",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{\\pi}{6},\\frac{5\\pi}{6}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(-1,\\frac{5\\pi}{6}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-1,2)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{\\pi}{6},2\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f4e18f8fc0a9",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{A},\\mathrm{B},\\mathrm{C}$ are the angles of a triangle with $\\tan\\frac{A}{2}=\\frac{1}{3},\\tan\\frac{B}{2}=\\frac{2}{3}$ then the value of $\\tan\\frac{C}{2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-7}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7}{9}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-9}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-15562c90bd14",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle $ABC$, with usual notations, if $\\frac{b+c}{11}=\\frac{c+a}{12}=\\frac{a+b}{13}$ Then $\\cos\\mathrm{A}:\\cos\\mathrm{B}:\\cos\\mathrm{C}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7:19:25$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$19:7:25$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12:14:20$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$19:25:20$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-85e37465bb05",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The smallest angle of the triangle whose sides are $6+\\sqrt{12},\\sqrt{48},\\sqrt{24}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a0a88a26e188",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The ratios of sides in a triangle ABC are $5:12:13$ and its area is 270 . Then sides of the triangle are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5,12,13$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10,24,26$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$15,36,39$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$20,48,52$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c1b7bafee647",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $3\\sin\\alpha=5\\sin\\beta$, then $\\frac{\\tan\\left(\\frac{\\alpha+\\beta}{2}\\right)}{\\tan\\left(\\frac{\\alpha-\\beta}{2}\\right)}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1d64cb34ee11",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If triangle ABC is a right angled at A and $\\tan\\frac{\\mathrm{B}}{2}$, $\\tan\\frac{\\mathrm{C}}{2}$ are roots of the equation $ax^2+bx+c=0$, $\\mathrm{a}\\ne 0$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{a}+\\mathrm{c}=\\mathrm{b}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{a}+\\mathrm{b}=\\mathrm{c}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{b}+\\mathrm{c}=\\mathrm{a}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$a+c=2b$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7f9eb8e82a7c",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If two sides of a triangle are $\\sqrt{3}-2$ and $\\sqrt{3}+2$ units and their included angle is $60^{\\circ}$, then the third side of the triangle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "15 units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{15}-2$ units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{15}+2$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{15}$ units",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ddfff6e3c8ba",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\tan\\mathrm{A}=\\frac{1}{\\sqrt{x\\left(x^2+x+1\\right)}},\\tan\\mathrm{B}=\\frac{\\sqrt{x}}{\\sqrt{x^2+x+1}}$ and $\\tan\\mathrm{C}=\\sqrt{x^{-1}+x^{-2}+x^{-3}}$ then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{A}+\\mathrm{B}=\\mathrm{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$A+B=2C$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$A+B=3C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$A+B=4C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-052116c1e79a",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle ABC with usual notations, if $\\mathrm{a},\\mathrm{b},\\mathrm{c}$ are in arithmetic progression, then, $\\tan\\frac{\\mathrm{A}}{2}\\cdot\\tan\\frac{\\mathrm{C}}{2}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "-3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0cf0073035dc",
+      "subtopic": "multiple-and-sub-multiple-angle-formula",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $A+B=\\frac{\\pi}{2}$ then the maximum value of $\\cos\\mathrm{A}\\cdot\\cos\\mathrm{B}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-13be498c293d",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $\\tan 3\\theta=\\cot\\theta$, then $\\theta=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{(2n+1)\\pi}{8},n\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\frac{(2n+1)\\pi}{4},n\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\quad\\frac{(\\mathrm{n}+2)\\pi}{3},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$n\\pi,n\\in\\mathbb{Z}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4519d2bd0099",
+      "subtopic": "transformation-formula",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The value of $\\sqrt{3}\\cot 20^{\\circ}-4\\cos 20^{\\circ}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "-1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7df303b2c32b",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle ABC , with usual notations if $\\frac{2\\cos~\\mathrm{A}}{\\mathrm{a}}+\\frac{\\cos\\mathrm{B}}{\\mathrm{b}}+\\frac{2\\cos\\mathrm{C}}{\\mathrm{c}}=\\frac{\\mathrm{a}}{\\mathrm{bc}}+\\frac{\\mathrm{b}}{\\mathrm{ca}}$ then $\\angle\\mathrm{A}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8fe1956cf37f",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "With usual notations, in a triangle $ABC$, if $\\theta$ is any real number, then $a\\cos(B-\\theta)+b\\cos(A+\\theta)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$a\\cos\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{b}\\cos\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$c\\cos\\theta$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-14f0f91bfe81",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle ABC , the sides $\\mathrm{a},\\mathrm{b},\\mathrm{c}$ are such that they are the roots of the equation $x^3-11x^2+38x-40=0$ Then\n$\\frac{\\cos A}{a}+\\frac{\\cos B}{b}+\\frac{\\cos C}{c}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9}{16}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{16}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1622ef925a5f",
+      "subtopic": "angle-and-its-units",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The approximate value of $\\cos\\left(59^{\\circ}30'\\right)$ is (given $1^{\\circ}=0.0175^{\\mathrm{c}},\\sin 60^{\\circ}=0.8660$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.5076",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0.5176",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.5256",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.5150",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4125f606318b",
+      "subtopic": "area-of-triangle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle ABC with usual notations if $\\mathrm{a}=13$, $b=14,c=15$ Then $\\sin A=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-727c1da22a92",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle $ABC$, with usual notations, $3~\\mathrm{b}=\\mathrm{a}+\\mathrm{c}$, then $\\cot\\frac{\\mathrm{A}}{2}\\cdot\\cot\\frac{\\mathrm{C}}{2}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7567df6dca06",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $3\\sin 2\\theta=2\\sin 3\\theta$ and $0<\\theta<\\pi$, then the value of $\\sin\\theta$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{17}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5\\sqrt{2}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\sqrt{2}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{15}}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f4fde08873d5",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The possible values of $\\theta\\in(0,\\pi)$ such that $\\sin\\theta+\\sin(4\\theta)+\\sin(7\\theta)=0$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4},\\frac{5\\pi}{12},\\frac{\\pi}{2},\\frac{2\\pi}{3},\\frac{3\\pi}{4},\\frac{8\\pi}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\pi}{9},\\frac{\\pi}{4},\\frac{\\pi}{2},\\frac{2\\pi}{3},\\frac{3\\pi}{4},\\frac{35\\pi}{36}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\pi}{9},\\frac{\\pi}{4},\\frac{\\pi}{2},\\frac{2\\pi}{3},\\frac{3\\pi}{4},\\frac{8\\pi}{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\pi}{9},\\frac{\\pi}{4},\\frac{4\\pi}{9},\\frac{\\pi}{2},\\frac{3\\pi}{4},\\frac{8\\pi}{9}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f8bbd0f10fbd",
+      "subtopic": "projection-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle ABC with usual notations if $|\\bar{\\mathrm{BC}}|=8,|\\bar{\\mathrm{CA}}|=7,|\\bar{\\mathrm{AB}}|=10$ then the projection of $\\bar{\\mathrm{AB}}$ on $\\bar{\\mathrm{AC}}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{14}{85}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{85}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{85}{14}$ units",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{85}$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-08cfbc62c70b",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "With usual notation, in triangle ABC , $\\mathrm{m}\\angle\\mathrm{A}=30^{\\circ}$ then the value of $\\left(1+\\frac{\\mathrm{a}}{\\mathrm{c}}+\\frac{\\mathrm{b}}{\\mathrm{c}}\\right)\\left(1+\\frac{\\mathrm{c}}{\\mathrm{b}}-\\frac{\\mathrm{a}}{\\mathrm{b}}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2+\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2+\\sqrt{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1+\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1+\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-107d91215b49",
+      "subtopic": "transformation-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{f}(x)=\\cos(\\log x)$ then $\\mathrm{f}\\left(x^2\\right)\\cdot\\mathrm{f}\\left(y^2\\right)-\\frac{1}{2}\\left[\\mathrm{f}\\left(\\frac{x^2}{y^2}\\right)+\\mathrm{f}\\left(x^2y^2\\right)\\right]$ has the value",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a9f520f29e3c",
+      "subtopic": "multiple-and-sub-multiple-angle-formula",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "$3\\tan^610^{\\circ}-27\\tan^410^{\\circ}+33\\tan^210^{\\circ}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b55ecc753320",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle ABC , with usual notations if $\\mathrm{a}=4,~\\mathrm{b}=8,\\angle\\mathrm{C}=60^{\\circ}$, then the value of $\\angle\\mathrm{B}$ and the ratio $\\cos\\mathrm{A}:\\cos\\mathrm{C}$ respectively are,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4},1:\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2},\\sqrt{3}:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{2},2:\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{6},\\sqrt{3}:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e8e7fa02a933",
+      "subtopic": "area-of-triangle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In $\\triangle ABC$, with usual notations, $a\\cos B=b\\cos A,a\\cos C\\ne c\\cos A$ then $\\mathrm{A}(\\triangle\\mathrm{ABC})$ sq. units.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad\\frac{c}{2}\\sqrt{4a^2-b^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{c}{4}\\sqrt{4a^2-c^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\quad\\frac{b}{2}\\sqrt{4b^2-c^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{b}{4}\\sqrt{4b^2-c^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-06535540e6c3",
+      "subtopic": "sine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "With usual notations, the perimeter of a triangle ABC is 6 times the arithmetic mean of sine of its angles. If $\\mathrm{a}=1$, then $\\angle\\mathrm{A}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5ec0cc31be47",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\tan 20^{\\circ}\\tan 80^{\\circ}\\cot 50^{\\circ}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-657db93c2b39",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sin\\left(\\frac{\\pi}{4}\\cot\\theta\\right)=\\cos\\left(\\frac{\\pi}{4}\\tan\\theta\\right)$, then the general solution of $\\theta$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$n\\pi+\\frac{\\pi}{4},n\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\quad n\\pi+(-1)^n\\frac{\\pi}{6},n\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\mathrm{n}\\pi\\pm\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad 2\\mathrm{n}\\pi\\pm 3\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c6ddb25f2295",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle ABC , with usual notations, $\\tan\\left(\\frac{\\mathrm{A}}{2}\\right)=\\frac{5}{6},\\tan\\left(\\frac{\\mathrm{C}}{2}\\right)=\\frac{2}{5}$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{a},\\mathrm{c},\\mathrm{b}$ are in A.P.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{b},\\mathrm{a},\\mathrm{c}$ are in A.P.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{a},\\mathrm{b},\\mathrm{c}$ are in A.P.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{a},\\mathrm{b},\\mathrm{c}$ are in G.P.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6207335503d8",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In $\\triangle ABC$, with usual notations, if $\\mathrm{a}^4+\\mathrm{b}^4+\\mathrm{c}^4-2\\mathrm{a}^2\\mathrm{c}^2-2\\mathrm{c}^2{~\\mathrm{b}}^2=0$, then $\\angle\\mathrm{C}=\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$135^{\\circ}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$120^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$150^{\\circ}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$125^{\\circ}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-816fbca24c68",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The number of solutions of $16^{\\sin^2x}+16^{\\cos^2x}=10$ in $0\\leqslant x\\leqslant 2\\pi$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "8",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8bec3abd9518",
+      "subtopic": "napiers-analogy",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle ABC with usual notations if, $\\tan\\left(\\frac{\\mathrm{B}-\\mathrm{C}}{2}\\right)=x\\cot\\frac{~\\mathrm{A}}{2}$, then $x=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{c-a}{c+a}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{a-b}{a+b}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{b}-\\mathrm{c}}{\\mathrm{b}+\\mathrm{c}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{a+b}{a-b}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f2c4a94507e4",
+      "subtopic": "summation-series-problems",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The value of\n$\\begin{aligned} \\sin^25^{\\circ}+\\sin^210^{\\circ} & +\\sin^215+\\ldots\\ldots\\ldots\\ldots\\ldots\\ldots+\\sin^285^{\\circ}+\\sin^290^{\\circ}= \\end{aligned}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{19}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{23}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{21}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4bc13929333e",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle ABC with usual notations, if $3\\mathrm{a}=\\mathrm{b}+\\mathrm{c}$, then $\\cot\\frac{\\mathrm{B}}{2}\\cdot\\cot\\frac{\\mathrm{C}}{2}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aa788db3b43f",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle ABC with usual notations if, $\\cot\\frac{A}{2}=\\frac{b+c}{a}$, then the triangle $ABC$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "an isosceles triangle.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "an equilateral triangle.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a right angled triangle.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "an obtuse angled triangle.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c2c4b8f2cddd",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\frac{1}{6}\\sin\\theta,\\cos\\theta,\\tan\\theta$ are in G.P., then the general solution of $\\theta$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\mathrm{n}\\pi\\pm\\frac{\\pi}{3},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$n\\pi+\\frac{\\pi}{3},n\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{n}\\pi+\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad 2\\mathrm{n}\\pi\\pm\\frac{\\pi}{6},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-debfa48c5379",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sin\\mathrm{A}=\\mathrm{n}\\sin(\\mathrm{A}+2~\\mathrm{B})$, then $\\tan(\\mathrm{A}+\\mathrm{B})=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1+n}{2-n}\\cdot\\tan B$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1-n}{1+n}\\cdot\\tan B$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1-n}{2+n}\\cdot\\tan B$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1+n}{1-n}\\cdot\\tan B$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-16f308b900ab",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sin\\mathrm{A}+\\sin\\mathrm{B}=x$ and $\\cos\\mathrm{A}+\\cos\\mathrm{B}=y$, then $\\sin(A+B)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2xy}{x^2+y^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{xy}{x^2+y^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2xy}{y^2-x^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{xy}{y^2-x^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-713986e777a1",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle ABC with usual notations, $\\cot\\frac{\\mathrm{A}}{2}+\\cot\\frac{\\mathrm{B}}{2}+\\cot\\frac{\\mathrm{C}}{2}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{s}^2}{\\Delta}$, where $\\Delta$ is the area of the triangle ABC .",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{s}{\\Delta}$, where $\\Delta$ is the area of the triangle ABC .",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\Delta}{\\mathrm{s}}$, where $\\Delta$ is the area of the triangle ABC .",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\Delta$, where $\\Delta$ is the area of the triangle ABC .",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-af9d98793063",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "With usual notations, in $\\triangle\\mathrm{ABC}$, the lengths of two sides are 10 cm and 9 cm respectively. If angles $\\mathrm{A},\\mathrm{B},\\mathrm{C}$ are in A.P. then perimeter of $\\triangle\\mathrm{ABC}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$24+2\\sqrt{6}~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$24+\\sqrt{6}~\\mathrm{cm}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$24-2\\sqrt{6}~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$22-\\sqrt{6}~\\mathrm{cm}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ec7cb26c0c70",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In $\\triangle\\mathrm{ABC}$, with usual notations, if $\\cos\\frac{B}{2}=\\sqrt{\\frac{c+a}{2a}}$, then $a^2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{b}^2-\\mathrm{c}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{b}+\\mathrm{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{b}^2+\\mathrm{c}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{b}-\\mathrm{c}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f2dcf26eb24a",
+      "subtopic": "napiers-analogy",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle ABC , with usual notations, if $\\mathrm{a}=5,~\\mathrm{b}=4,\\cos(~\\mathrm{A}-\\mathrm{B})=\\frac{31}{32}$, then $\\mathrm{c}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "7",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-36247424ba70",
+      "subtopic": "projection-rule",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle ABC with usual notations if $b\\sin C(b\\cos C+c\\cos B)=42$, then area of triangle $\\mathrm{ABC}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "42 sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "21 sq. units",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "24 sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "12 sq. units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cbb1a0908406",
+      "subtopic": "multiple-and-sub-multiple-angle-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sin\\theta=\\frac{1}{2}\\left(x+\\frac{1}{x}\\right)$, then $\\sin 3\\theta+\\frac{1}{2}\\left(x^3+\\frac{1}{x^3}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e49df981417a",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The number of values of $x$ in the interval $[0,3\\pi]$ satisfying the equation $2\\sin^2x+5\\sin x-3=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f1298d1faa9f",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle with one of the angles $120^{\\circ}$, the lengths of the sides form an A.P. If length of the greatest side is 7 m , then the area of the triangle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{15\\sqrt{3}}{4}{~\\mathrm{m}}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{15\\sqrt{3}}{2}{~\\mathrm{m}}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{15}{2}{~\\mathrm{m}}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{15}{4}{~\\mathrm{m}}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-018b268af619",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The number of values of $x$ in the interval $[0,3\\pi]$ satisfying the equation $2\\sin^2x+5\\sin x-3=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1c0c22b0ac46",
+      "subtopic": "transformation-formula",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The maximum value of the function $a\\sin x+b\\cos x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{a^2+b^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{a^2-b^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{a}^2+\\mathrm{b}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{a}^2-\\mathrm{b}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-445b62a4ba71",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle ABC , with usual notations. $\\frac{2\\cos~\\mathrm{A}}{\\mathrm{a}}+\\frac{\\cos\\mathrm{B}}{\\mathrm{b}}+\\frac{2\\cos\\mathrm{C}}{\\mathrm{c}}=\\frac{\\mathrm{a}}{\\mathrm{bc}}+\\frac{\\mathrm{b}}{\\mathrm{ca}}$. Then $\\angle\\mathrm{A}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6136114c9dc4",
+      "subtopic": "multiple-and-sub-multiple-angle-formula",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $\\sec x+\\tan x=2,0<x<\\frac{\\pi}{2}$ then $\\sin\\frac{x}{4}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{10+3\\sqrt{10}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{2(10+3\\sqrt{10})}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{10-3\\sqrt{10}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2\\sqrt{10-3\\sqrt{10}}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6ab4463e21d4",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The principal solutions of $(5+3\\sin\\theta)(2\\cos\\theta+1)=0$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-\\pi}{3},\\frac{2\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\pi}{3},\\frac{5\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\pi}{3},\\frac{4\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\pi}{3},\\frac{7\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b823618d13a8",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If in triangle ABC , with usual notations $\\sin\\frac{\\mathrm{A}}{2}\\cdot\\sin\\frac{\\mathrm{C}}{2}=\\sin\\frac{\\mathrm{B}}{2}$ and 2 s is the perimeter of the triangle, then the value of $s$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2 b",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "b",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4b$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{b}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b6962850ea33",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "With usual notations in $\\triangle\\mathrm{ABC}$, if $\\angle\\mathrm{B}=\\frac{\\pi}{2}$, and $\\tan\\frac{\\mathrm{A}}{2},\\tan\\frac{\\mathrm{C}}{2}$ are roots of equation $\\mathrm{p}x^2+\\mathrm{qx}+\\mathrm{r}=0$, $\\mathrm{p}\\ne 0$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{p}+\\mathrm{q}=\\mathrm{r}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{r}+\\mathrm{p}=\\mathrm{q}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{r}=\\mathrm{p}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{p}=\\mathrm{q}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e03be7230fd6",
+      "subtopic": "transformation-formula",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "$\\cos^4\\frac{\\pi}{8}+\\cos^4\\frac{3\\pi}{8}+\\cos^4\\frac{5\\pi}{8}+\\cos^4\\frac{7\\pi}{8}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ee44814832a0",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The common principal solution of the equations $\\sin\\theta=-\\frac{1}{2}$ and $\\tan\\theta=\\frac{1}{\\sqrt{3}}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{11\\pi}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fd1a01997bdb",
+      "subtopic": "circumcenter-incenter-and-orthocenter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The circumradius of a triangle whose sides are 10 units, 8 units and 6 units is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4 units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2 units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3 units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5 units",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-29b87a8a17c8",
+      "subtopic": "sine-rule",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle $ABC$, with usual notations, if $a=5$, $\\mathrm{b}=7,\\sin~\\mathrm{A}=\\frac{3}{4}$, then total number of triangles possible are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-38da128c6891",
+      "subtopic": "solving-trigonometric-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $\\tan(\\pi\\cos\\theta)=\\cot(\\pi\\sin\\theta)$, then $\\sin\\left(\\frac{\\pi}{4}+\\theta\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2\\sqrt{2}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-83137afaeab8",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle ABC , with usual notations, $(\\mathrm{a}+\\mathrm{b}+\\mathrm{c})(\\mathrm{a}+\\mathrm{b}-\\mathrm{c})=3\\mathrm{ab}$, then $\\angle\\mathrm{C}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e2257f4f7f47",
+      "subtopic": "napiers-analogy",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In a triangle $ABC$, with usual notations, $\\cot\\left(\\frac{A+B}{2}\\right)\\cdot\\tan\\left(\\frac{A-B}{2}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{a+b}{a-b}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{a-b}{a+b}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{a}{a+b}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{b}{a-b}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-46989186a86a",
+      "subtopic": "fundamental-identities",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $0\\le x\\le\\pi$ and $81^{\\sin^2x}+81^{\\cos^2x}=30$ Then $x$ takes the value",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{6},\\frac{\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{3},\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\pi}{6},\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\pi}{3},\\frac{\\pi}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9c2f984f2b32",
+      "subtopic": "half-angle-formulae",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle PQR with usual notations, $\\angle\\mathrm{R}=\\frac{\\pi}{2}$. If $\\tan\\frac{\\mathrm{P}}{2}$ and $\\tan\\frac{\\mathrm{Q}}{2}$ are the roots of the equation $ax^2+bx+c=0(a\\ne 0)$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{a}+\\mathrm{b}=\\mathrm{c}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{b}+\\mathrm{c}=\\mathrm{a}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{a}+\\mathrm{c}=\\mathrm{b}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{b}=\\mathrm{c}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e3ed19eb7786",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle $ABC$ with usual notations if $\\angle A=30^{\\circ}$, then the value of $\\left(1+\\frac{a}{c}+\\frac{b}{c}\\right)\\left(1+\\frac{c}{b}-\\frac{a}{b}\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}-2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2+\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}+2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2-\\sqrt{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4da11cc3f707",
+      "subtopic": "general-solution-and-principal-solution-of-the-equation",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "The general solutions of the equation $\\tan^2\\theta+\\sec 2\\theta=1$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{n}\\pi,\\mathrm{n}\\pi\\pm\\frac{\\pi}{3},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{n}\\pi,\\mathrm{n}\\pi\\pm\\frac{\\pi}{4},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\quad\\frac{\\mathrm{n}\\pi}{4},\\frac{\\mathrm{n}\\pi}{4}\\pm\\frac{\\pi}{3},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad\\mathrm{n}\\pi,\\mathrm{n}\\pi\\pm\\frac{\\pi}{6},\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6464bf31a094",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "With usual notation, in a triangle ABC $\\frac{b+c}{11}=\\frac{c+a}{12}=\\frac{a+b}{13}$, then the value of $\\cos B$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{17}{35}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{17}{70}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{19}{35}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{19}{70}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b73623760d6e",
+      "subtopic": "addition-and-subtraction-formula",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sin(\\alpha+\\beta)=1,\\sin(\\alpha-\\beta)=\\frac{1}{2},\\alpha,\\beta\\in\\left[0,\\frac{\\pi}{2}\\right]$, then $\\tan(\\alpha+2\\beta)\\cdot\\tan(2\\alpha+\\beta)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "-1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f50b566967da",
+      "subtopic": "cosine-rule",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "In a triangle $ABC$, with usual notations, the sides $\\mathrm{a},\\mathrm{b},\\mathrm{c}$ are such that they are roots of the equation $x^3-11x^2+38x-40=0$ then $\\frac{\\cos\\mathrm{A}}{\\mathrm{a}}+\\frac{\\cos\\mathrm{B}}{\\mathrm{b}}+\\frac{\\cos\\mathrm{C}}{\\mathrm{c}}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{9}{16}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{16}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-MATH-3032ac53c729",
       "subtopic": "sine-rule",

@@ -3,15 +3,22 @@
   "source_chapter": "limits-continuity-and-differentiability",
   "flagged": [],
   "math_check": {
-    "compared": 55,
-    "differ": 1,
+    "compared": 69,
+    "differ": 2,
     "questions": [
       {
-        "ref": "PYQ-MATH-371c7fa72099",
-        "source": "https://questions.examside.com/past-years/jee/question/if-fx--begincases-dfrac1-sin5-x5-cos2-x--mht-cet-mathematics-xginhfffhl66c3uu",
-        "similarity": 0.69,
-        "ours": "If $f(x)=\\begin{cases} \\frac{1-\\sin^5x}{5\\cos^2x} & ,x<\\frac{\\pi}{2} \\\\ a & ,\\text{at }x=\\frac{\\pi}{2} \\\\ \\frac{b(1-\\sin x)}{8(\\pi-2x)^2} & ,x>\\frac{\\pi}{2} \\end{cases}$ is continuous at $x=\\frac{\\pi}{2}$, then ${\\left(\\frac{b}{a}\\right)}^{\\frac{5}{3}}=\\ldots$",
-        "site": "If $f(x) = \\begin{cases} \\dfrac{1 - \\sin^5 x}{5 \\cos^2 x} & , x < \\dfrac{\\pi}{2} \\\\ a & , \\text{at } x = \\dfrac{\\pi}{2} \\\\ \\dfrac{b(1 - \\sin x)}{8(\\pi - 2x)^2} & , x > \\dfrac{\\pi}{2} \\end{cases}$ is continuous at $x = \\dfrac{\\pi}{2}$, then ..."
+        "ref": "PYQ-MATH-22810fe96b25",
+        "source": "https://questions.examside.com/past-years/jee/question/p-lim-x-rightarrow-0-fracmathrmetan-x-mat-mht-cet-mathematics-complex-numbers-au7lnedxwficylcs",
+        "similarity": 0.85,
+        "ours": "$\\lim_{x\\rightarrow 0}\\frac{\\mathrm{e}^{\\tan x}-\\mathrm{e}^x}{\\tan x-x}=$",
+        "site": "$$ \\mathop {\\lim }\\limits_{x \\to 0} \\frac{\\mathrm{e}^{\\tan x}-\\mathrm{e}^x}{\\tan x-x}= $$"
+      },
+      {
+        "ref": "PYQ-MATH-7434ac2aca44",
+        "source": "https://questions.examside.com/past-years/jee/question/p-lim-x-rightarrow-0-fracxxx2-p-mht-cet-mathematics-complex-numbers-mu7e3wqbqey0xjan",
+        "similarity": 0.81,
+        "ours": "$\\lim_{x\\rightarrow 0}\\frac{\\left|x\\right|}{|x|+x^2}=$",
+        "site": "$$ \\mathop {\\lim }\\limits_{x \\to 0} \\frac{|x|}{|x|+x^2}= $$\n\n"
       }
     ]
   },

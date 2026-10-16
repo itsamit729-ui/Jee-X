@@ -64,10 +64,1167 @@
       "slug": "family-of-circle",
       "name": "Family of circle",
       "position": 10
+    },
+    {
+      "slug": "chord-with-a-given-middle-point",
+      "name": "Chord with a given middle point",
+      "position": 11
+    },
+    {
+      "slug": "orthogonality-of-two-circles",
+      "name": "Orthogonality of two circles",
+      "position": 12
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-MATH-59e789ba0284",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The abscissae of the two points A and B are the roots of the equation $x^2+2ax-b^2=0$ and their ordinates are roots of the equation $y^2+2py-q^2=0$. Then the equation of the circle with AB as diameter is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-2\\mathrm{a}x-2\\mathrm{p}y+\\left(\\mathrm{b}^2+\\mathrm{q}^2\\right)=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-2\\mathrm{a}x-2\\mathrm{p}y-\\left(\\mathrm{b}^2+\\mathrm{q}^2\\right)=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2+2\\mathrm{a}x+2\\mathrm{p}y+\\left(\\mathrm{b}^2+\\mathrm{q}^2\\right)=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2+2\\mathrm{a}x+2\\mathrm{p}y-\\left(\\mathrm{b}^2+\\mathrm{q}^2\\right)=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aa22c797e254",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let PQ and RS be tangents at the extremities of the diameter PR of a circle of radius $r$. If PS and RQ intersect at a point X on the circumference of the circle, then 2 r equals",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\mathrm{PQ}\\cdot\\mathrm{RS}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{PQ}+\\mathrm{RS}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\cdot PQ\\cdot RS}{PQ+RS}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{\\mathrm{PQ}^2+\\mathrm{RS}^2}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fed53e179ca0",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the tangent to the circle, given by $x=5\\cos\\theta,y=5\\sin\\theta$ at the point $\\theta=\\frac{\\pi}{3}$ on it , is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x-\\sqrt{3}y=-5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+\\sqrt{3}y=10$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}x+y=5\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}x-y=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6bb56aa94bc6",
+      "subtopic": "parametric-form-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The parametric equations of the circle $x^2+y^2-\\mathrm{a}x-by=0$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=\\frac{\\mathrm{a}}{2}+\\frac{\\sqrt{\\mathrm{a}^2+\\mathrm{b}^2}}{2}\\cos\\theta,y=\\frac{\\mathrm{b}}{2}+\\frac{\\sqrt{\\mathrm{a}^2+\\mathrm{b}^2}}{2}\\sin\\theta$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x=\\frac{-\\mathrm{a}}{2}+\\frac{\\sqrt{\\mathrm{a}^2+\\mathrm{b}^2}}{4}\\sin\\theta,y=\\frac{-\\mathrm{b}}{2}+\\frac{\\sqrt{\\mathrm{a}^2+\\mathrm{b}^2}}{4}\\cos\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=\\frac{\\mathrm{a}}{2}+\\sqrt{\\frac{\\mathrm{a}^2+\\mathrm{b}^2}{2}}\\sin\\theta,y=\\frac{\\mathrm{b}}{2}+\\sqrt{\\frac{\\mathrm{a}^2+\\mathrm{b}^2}{2}}\\cos\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x=\\frac{\\mathrm{a}}{2}+\\frac{\\sqrt{\\mathrm{a}^2+\\mathrm{b}^2}}{4}\\cos\\theta,y=\\frac{\\mathrm{b}}{2}+\\frac{\\sqrt{\\mathrm{a}^2+\\mathrm{b}^2}}{4}\\sin\\theta$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-958e029d7266",
+      "subtopic": "number-of-common-tangents-and-position-of-two-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The number of common tangents to the circles $x^2+y^2-x=0$ and $x^2+y^2+x=0$ is /are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fbb555e62217",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If the sides of a rectangle are given by the equations $x=-2,x=6,y=-2,y=5$, then the equation of the circle, drawn on the diagonal of this rectangle as its diameter, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2+4x+3y+22=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-4x+3y-22=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2-4x-3y-22=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2+4x-3y+22=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-09bb6aa31602",
+      "subtopic": "family-of-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the circle, concentric with the circle $2x^2+2y^2-6x+8y+1=0$ and double of its area is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2x^2+2y^2-6x+8y+11=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2x^2+2y^2-6x+8y-11=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4x^2+4y^2-12x+16y-21=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4x^2+4y^2-12x+16y+21=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1ee30503366d",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "One end of the diameter of the circle $x^2+y^2-6x-5y-1=0$ is $(-1,3)$, then the equation of the tangent at the other end of the diameter is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8x+y-58=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8x-2y-52=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8x-y-54=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8x+2y-60=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9c5d028ae58e",
+      "subtopic": "orthogonality-of-two-circles",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $\\left(m_i,\\frac{1}{m_i}\\right),m_i>0,i=1,2,3,4$ are four distinct points on a circle, then the product $\\mathrm{m}_1{~\\mathrm{m}}_2{~\\mathrm{m}}_3{~\\mathrm{m}}_4$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5b0903996159",
+      "subtopic": "pair-of-tangents",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Two tangents drawn from $\\mathrm{P}(1,7)$ to the circle $x^2+y^2=25$, touch the circle at Q and R respectively. The area of the quadrilateral PQOR is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "16 sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "36 sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "25 sq. units",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "49 sq. units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3fed800bd999",
+      "subtopic": "family-of-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the concentric circle, with the circle $\\mathrm{C}_1$ having equation $x^2+y^2-6x-4y-12=0$ and having double area compared to the area of $\\mathrm{C}_1$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-6x-4y=27$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-6x-4y=13$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2-6x-4y=50$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2-6x-4y=37$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-df955bc36b1a",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The tangent to the circle $x^2+y^2=5$ at $(1,-2)$ also touches the circle $x^2+y^2-8x+6y+20=0$ then the co-ordinates of the corresponding point of contact is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(3,-1)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(-3,-1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(3,1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(-3,1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8515632164e5",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the circle which has its centre at the point $(3,4)$ and touches the line $5x+12y-11=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-6x-8y+9=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-6x-8y+25=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2-6x-8y-9=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2-6x-8y-25=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d4bdf29e76fd",
+      "subtopic": "family-of-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the circle which passes through the centre of the circle $x^2+y^2+8x+10y-7=0$ and concentric with the circle $2x^2+2y^2-8x-12y-9=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-4x-6y+77=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-4x-6y-89=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2-4x-6y+97=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2-4x-6y-87=0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2ceb093a6687",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the circle, the end points of whose diameter are the centres of the circles $x^2+y^2+6x-14y+5=0$ and $x^2+y^2-4x+10y-4=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-x-2y+41=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2+x-2y+41=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2+x-2y-41=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2-x+2y-41=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a03e15c96333",
+      "subtopic": "family-of-circle",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The equation of the circle, concentric with the circle $x^2+y^2-6x-4y-12=0$ and touching the $\\mathrm{X}$-axis is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2-6x-4y+5=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2-6x-4y+17=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2-6x-4y+9=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2-6x-4y+4=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-133b92704cfd",
+      "subtopic": "number-of-common-tangents-and-position-of-two-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The number of common tangents that can be drawn to the circles $x^2+y^2-6x=0$ and $x^2+y^2+6x+2y+1=0$ is __________",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ca772bebd8bc",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If the tangent at $(1,7)$ to the curve $x^2=y-6$ touches the circle $x^2+y^2+16x+12y+\\mathrm{C}=0$, then $\\mathrm{C}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "85",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "95",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "185",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "195",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a70433195a6a",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The equation of the circle passing through the point $(1,1)$ and having two diameters along the pair of lines $x^2-y^2-2x+4y-3=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad(x+2)^2+(y-2)^2=4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad(x-3)^2+(y-1)^2=4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\quad(x-1)^2+(y-2)^2=1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\quad(x+1)^2+(y+2)^2=1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-74e4de5cebb0",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The number of integral values of $k$ for which $x^2+y^2+\\mathrm{k}x+(1-\\mathrm{k})y+5=0$ represents a circle whose radius cannot exceeds 5 , are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "16",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "15",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "14",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "12",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-18febaa5b637",
+      "subtopic": "position-of-a-point-with-respect-to-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The minimum distance and maximum distance of the point $\\mathrm{P}(2,-7)$ from the circle $x^2+y^2-14x-10y-151=0$ are respectively _______units",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2,28",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "5,25",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "6,24",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3,27",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1bf42d0ca3df",
+      "subtopic": "pair-of-tangents",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The locus of point of intersection of the tangents to the circle $x^2+y^2=16$, such that the angle between them is $60^{\\circ}$, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+y^2=4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+y^2=64$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x^2+y^2=32$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x^2+y^2=48$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-898f569af5eb",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If the tangent and the normal at the point $(\\sqrt{3},1)$ to the circle $x^2+y^2=4$, and the X -axis form a triangle, then the area (in sq.units) of this triangle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{\\sqrt{3}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-830b664e8b05",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The equations of the tangents to the circle $x^2+y^2=36$ which are perpendicular to the line $5x+y=2$, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad x+5y\\pm 6\\sqrt{26}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad x-5y\\pm 6\\sqrt{26}=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\quad 5x-y\\pm 6\\sqrt{26}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad 5x+y\\pm 6\\sqrt{26}=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-71cbfea36396",
+      "subtopic": "basic-theorems-of-a-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let the circle with centre at origin pass through the vertices of an equilateral triangle ABC . If $A\\equiv(2,4)$, then the length of the median through A is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sqrt{5}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\sqrt{5}$ units",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4\\sqrt{5}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6\\sqrt{5}$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dcc77c94bdef",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The equations of the tangents to the circle $x^2+y^2=36$ which are perpendicular to the line $5x+y-2=0$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x-5y\\pm 6\\sqrt{26}=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x+5y\\pm 6\\sqrt{26}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\quad x-5y\\pm\\sqrt{26}=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad x+5y\\pm\\sqrt{26}=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4293cb72edb8",
+      "subtopic": "pair-of-tangents",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A pair of tangents are drawn to the circle $x^2+y^2+6x-4y-12=0$ from a point $\\mathrm{P}(-4,-5)$, then the area enclosed between these tangents and the area of the circle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25\\left(\\frac{4+\\pi}{4}\\right)$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad 25\\left(\\frac{4+\\pi}{2}\\right)$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25\\left(\\frac{4-\\pi}{2}\\right)$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad 25\\left(\\frac{4-\\pi}{4}\\right)$ sq. units",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3d3793e16093",
+      "subtopic": "tangent-and-normal",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If a circle with centre at $(-1,1)$ touches the line $x+2y+4=0$ then the co-ordinates of the point of contact are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-2,-1)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(8,-6)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(-10,3)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(-4,0)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5e35d7b21b17",
+      "subtopic": "position-of-a-point-with-respect-to-circle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The least distance of the point $\\mathrm{A}(10,7)$ from the circle $x^2+y^2-4x-2y-20=0$ is length of seg AM . If $\\mathrm{MM}'$ is the diameter of the circle, then the lengths of AM and $\\mathrm{AM}'$ are respectively ___________ , ____________units",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5,10",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5,15",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4,15",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2,10",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5b836e531e27",
+      "subtopic": "pair-of-tangents",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two tangents to the circle $x^2+y^2=4$ at the points A and B meet at $\\mathrm{P}(-4,0)$. Then the area of quadrilateral PAOB, where ' $O$ ' is the origin is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8\\sqrt{3}$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{\\sqrt{3}}$ sq. units",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\sqrt{3}$ sq. units",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}$ sq. units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-89f9f499bad8",
+      "subtopic": "chord-with-a-given-middle-point",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "If one of the diameters of the circle, given by the equation $x^2+y^2-4x+6y-12=0$, is a chord of a circle, ' S ', whose centre is at $(-3,2)$, then the length of radius of ' S ' is _______ units.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\sqrt{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "10",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-MATH-b33e015c66f9",
       "subtopic": "family-of-circle",

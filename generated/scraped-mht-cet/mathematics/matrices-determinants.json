@@ -64,6 +64,1264 @@
   "passages": [],
   "questions": [
     {
+      "ref": "PYQ-MATH-bcc9125f99c1",
+      "subtopic": "symmetric-and-skew-symmetric-matrices",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $A+B=\\left[\\begin{matrix} 1 & \\tan\\frac{\\theta}{2} \\\\ -\\tan\\frac{\\theta}{2} & 1 \\end{matrix}\\right]$ where $A$ is symmetric and $B$ is skew-symmetric matrix, then the matrix $\\left(A^{-1}B+AB^{-1}\\right)$ at $\\theta=\\frac{\\pi}{6}$ is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\begin{matrix} 1 & 2\\sqrt{3} \\\\ 2\\sqrt{3} & 1 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[\\begin{matrix} -1 & -2\\sqrt{3} \\\\ 2\\sqrt{3} & 1 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\begin{matrix} 0 & 2\\sqrt{3} \\\\ 2\\sqrt{3} & 0 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\begin{matrix} 0 & -2\\sqrt{3} \\\\ 2\\sqrt{3} & 0 \\end{matrix}\\right]$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-14468bc114ad",
+      "subtopic": "expansion-of-determinant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{w}=\\frac{-1-\\mathrm{i}\\sqrt{3}}{2}$ where $\\mathrm{i}=\\sqrt{-1}$, then the value of $\\left|\\begin{matrix} 1 & w & w^2 \\\\ w & w^2 & 1 \\\\ w^2 & 1 & w \\end{matrix}\\right|$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-653bd3dd785c",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Inverse of the matrix $\\left[\\begin{matrix} 0.8 & -0.6 \\\\ 0.6 & 0.8 \\end{matrix}\\right]$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\begin{matrix} 0.8 & 0.6 \\\\ -0.6 & 0.8 \\end{matrix}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\left[\\begin{matrix} -0.8 & 0.6 \\\\ -0.6 & 0.8 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\begin{matrix} -0.8 & -0.6 \\\\ 0.6 & 0.8 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\begin{matrix} 8 & -6 \\\\ 6 & 8 \\end{matrix}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8ef76cea781c",
+      "subtopic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\left[\\begin{matrix} 1 & -1 & 1 \\\\ 2 & 1 & -3 \\\\ 1 & 1 & 1 \\end{matrix}\\right]$ and $B=\\left[\\begin{matrix} 4 \\\\ 0 \\\\ 2 \\end{matrix}\\right]$ such that $\\mathrm{AX}=\\mathrm{B}$, then $\\mathrm{X}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\begin{matrix} -1 \\\\ 2 \\\\ 1 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[\\begin{matrix} 2 \\\\ -1 \\\\ 1 \\end{matrix}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\begin{matrix} -1 \\\\ 1 \\\\ 2 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\begin{matrix} -2 \\\\ 1 \\\\ -1 \\end{matrix}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b534d0cd44b1",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 2 & 1 \\\\ 7 & 4 \\end{matrix}\\right]$ then ${\\left(A^2-5A\\right)}^{-1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(-\\frac{1}{4}\\right)\\left[\\begin{matrix} -3 & 1 \\\\ 7 & -1 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{1}{4}\\right)\\left[\\begin{matrix} -3 & 1 \\\\ 7 & -1 \\end{matrix}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{1}{4}\\right)\\left[\\begin{matrix} 3 & 1 \\\\ 7 & 1 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{1}{-4}\\right)\\left[\\begin{matrix} 3 & -1 \\\\ 7 & -1 \\end{matrix}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-27a745dfe61d",
+      "subtopic": "symmetric-and-skew-symmetric-matrices",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let A and B be $3\\times 3$ real matrices such that A is symmetric matrix and B is skew-symmetric matrix. Then the system of linear equations $\\left(A^2B^2-B^2A^2\\right)X=O$. where $X$ is $3\\times 1$ column matrix of unknown variables and $O$ is a $3\\times 1$ null matrix, has",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "a unique solution",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "exactly two solutions",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "no solution",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "infinitely many solutions",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-69179c1181b7",
+      "subtopic": "adjoint-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 5a & -b \\\\ 3 & 2 \\end{matrix}\\right]$ and $A\\cdot\\mathrm{adj}A=AA^T$, then $5a+b$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-$1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "13",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8d29ce217344",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $A=\\left[\\begin{matrix} x & 1 \\\\ 1 & 0 \\end{matrix}\\right],x\\in\\mathbb{R}^{+}$ and $A^4={\\left[a_{ij}\\right]}_2$. If $a_{11}=109$, then ${\\left(A^4\\right)}^{-1}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\begin{matrix} 109 & 33 \\\\ 33 & 10 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[\\begin{matrix} 10 & 33 \\\\ 33 & 10 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\begin{matrix} 10 & 33 \\\\ 33 & 109 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\begin{matrix} 10 & -33 \\\\ -33 & 109 \\end{matrix}\\right]$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b3ef730b0936",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $A=\\left[\\begin{matrix} 1 & 2 \\\\ -1 & 4 \\end{matrix}\\right]$ and $A^{-1}=\\alpha\\mathrm{I}+\\beta\\mathrm{A},\\alpha,\\beta\\in\\mathbb{R}$, I is the identity matrix of order 2 , then $4(\\alpha-\\beta)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b84eedc01bdc",
+      "subtopic": "properties-of-determinants",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\bar{a}=a_1\\hat{i}+a_2\\hat{j}+a_3\\hat{k},\\quad\\bar{b}=b_1\\hat{i}+b_2\\hat{j}+b_3\\hat{k}$, $\\bar{c}=c_1\\hat{i}+c_2\\hat{j}+c_3\\hat{k}$ and $\\left[\\begin{matrix} 3\\bar{a}+\\bar{b} & 3\\bar{b}+\\bar{c} & 3\\bar{c}+\\bar{a} \\end{matrix}\\right]=\\lambda\\left|\\begin{matrix} \\bar{\\mathrm{a}}\\cdot\\hat{\\mathrm{i}} & \\bar{\\mathrm{a}}\\cdot\\hat{\\mathrm{j}} & \\bar{\\mathrm{a}}\\cdot\\hat{\\mathrm{k}} \\\\ \\bar{\\mathrm{b}}\\cdot\\hat{\\mathrm{i}} & \\bar{\\mathrm{b}}\\cdot\\hat{\\mathrm{j}} & \\bar{\\mathrm{b}}\\cdot\\hat{\\mathrm{k}} \\\\ \\bar{\\mathrm{c}}\\cdot\\hat{\\mathrm{i}} & \\bar{\\mathrm{c}}\\cdot\\hat{\\mathrm{j}} & \\bar{\\mathrm{c}}\\cdot\\hat{\\mathrm{k}} \\end{matrix}\\right|,$ then the value of $\\lambda$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "27",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "28",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d3ae8d5535a2",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 3 & -1 \\\\ -4 & 2 \\end{matrix}\\right]$, then $A^{-1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\begin{matrix} 1 & -\\frac{1}{2} \\\\ 2 & \\frac{3}{2} \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[\\begin{matrix} 1 & \\frac{1}{2} \\\\ -2 & \\frac{3}{2} \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\begin{matrix} 1 & -\\frac{1}{2} \\\\ -2 & \\frac{3}{2} \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\begin{matrix} 1 & \\frac{1}{2} \\\\ 2 & \\frac{3}{2} \\end{matrix}\\right]$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-925eb10eeae9",
+      "subtopic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $X=\\left[\\begin{matrix} \\mathrm{a} \\\\ \\mathrm{b} \\\\ \\mathrm{c} \\end{matrix}\\right],\\mathrm{A}=\\left[\\begin{matrix} 1 & -1 & 2 \\\\ 2 & 0 & 1 \\\\ 3 & 2 & 1 \\end{matrix}\\right]$ and $\\mathrm{B}=\\left[\\begin{matrix} 3 \\\\ 1 \\\\ 4 \\end{matrix}\\right]$. If $AX=B$, then the value of $2a-3b+4c$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-$4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2c1c72a33c0c",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 2 & -2 \\\\ 4 & 3 \\end{matrix}\\right]$, then $A^{-1}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{1}{2}\\left[\\begin{matrix} 3 & 2 \\\\ -4 & 2 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{14}\\left[\\begin{matrix} 3 & 2 \\\\ -4 & 2 \\end{matrix}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{14}\\left[\\begin{matrix} -3 & -2 \\\\ 4 & -2 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{1}{14}\\left[\\begin{matrix} 3 & -2 \\\\ 4 & -2 \\end{matrix}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9eb53f97b0f2",
+      "subtopic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For the system $x-y+z=4,2x+y-3z=0$, $x+y+z=2$, the values of $x,y,z$ respectively are given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2,1,1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2,1,-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2,-1,1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-2,1,1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-75c3fa70439a",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Suppose A is any $3\\times 3$ non-singular matrix and $(\\mathrm{A}-3\\mathrm{I})(\\mathrm{A}-5\\mathrm{I})=0$ where $\\mathrm{I}=\\mathrm{I}_3$ and $\\mathrm{O}=\\mathrm{O}_3$. Here $\\mathrm{O}_3$ represent zero matrix of order 3 and $\\mathrm{I}_3$ is an identity matrix of order 3 . If $\\alpha A+\\beta A^{-1}=4I$, then $\\alpha+\\beta$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "13",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "8",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-150c082a66f7",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\mathrm{A}=\\left[\\begin{matrix} 1 & 2 \\\\ -5 & 1 \\end{matrix}\\right]$ and $\\mathrm{A}^{-1}=x~\\mathrm{A}+y\\mathrm{I}_2$, (where $\\mathrm{I}_2$ is unit matrix of order 2), then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=\\frac{-1}{11},y=\\frac{2}{11}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x=\\frac{1}{11},y=\\frac{-2}{11}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=\\frac{-1}{11},y=\\frac{-2}{11}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x=\\frac{1}{11},y=\\frac{2}{11}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bd5ca518b1ee",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 1 & 1 & 1 \\\\ 1 & a & 3 \\\\ 3 & 2 & 2 \\end{matrix}\\right]$ and $B=\\left[\\begin{matrix} -2 & 0 & b \\\\ 7 & -1 & -2 \\\\ c & 1 & 1 \\end{matrix}\\right]$ and if matrix $B$ is the inverse of matrix $A$, then value of $4a+2b-c$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-$14",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "14",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-$6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d7c894868ccc",
+      "subtopic": "adjoint-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For the matrix $A=\\left[\\begin{matrix} 2 & 0 & -1 \\\\ 3 & 1 & 2 \\\\ -1 & 1 & 2 \\end{matrix}\\right]$, the matrix of cofactors is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\begin{matrix} 0 & 8 & -4 \\\\ -1 & 3 & 2 \\\\ 1 & -7 & 2 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[\\begin{matrix} 0 & -8 & 4 \\\\ -1 & 3 & -2 \\\\ 1 & -7 & 2 \\end{matrix}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\begin{matrix} 0 & 8 & -4 \\\\ 1 & -3 & 2 \\\\ -1 & 7 & -2 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\begin{matrix} 0 & -8 & 4 \\\\ -1 & 3 & 2 \\\\ -1 & -7 & 2 \\end{matrix}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b015d80e8ecd",
+      "subtopic": "expansion-of-determinant",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} \\cos\\theta & \\sin\\theta & 0 \\\\ -\\sin\\theta & \\cos\\theta & 0 \\\\ 0 & 0 & 1 \\end{matrix}\\right]$, where $A_{21},A_{22},A_{23}$ are cofactors of $a_{21},a_{22},a_{23}$ respectively, then the value of $\\mathrm{a}_{21}{~\\mathrm{A}}_{21}+\\mathrm{a}_{22}{~\\mathrm{A}}_{22}+\\mathrm{a}_{23}{~\\mathrm{A}}_{23}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b1633a930fc3",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 1 & 2 \\\\ -1 & 4 \\end{matrix}\\right]$ and $A^{-1}=\\alpha I+\\beta A$, $\\alpha,\\beta\\in R$ where I is the identity matrix of order 2 , then $4(\\alpha+\\beta)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{10}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ecbeca3bfce7",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 1 & \\tan x \\\\ -\\tan x & 1 \\end{matrix}\\right]$, then $A^TA^{-1}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\begin{matrix} \\cos 2x & -\\sin 2x \\\\ -\\sin 2x & \\cos 2x \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[\\begin{matrix} \\cos 2x & -\\sin 2x \\\\ \\sin 2x & \\cos 2x \\end{matrix}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\begin{matrix} -\\cos 2x & \\sin 2x \\\\ \\sin 2x & \\cos 2x \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\begin{matrix} -\\cos 2x & \\sin 2x \\\\ -\\sin 2x & \\cos 2x \\end{matrix}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f376d182993a",
+      "subtopic": "solutions-of-system-of-linear-equations-in-two-or-three-variables-using-determinants-and-matrices",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\left[\\begin{matrix} 1 & 3 & 3 \\\\ 1 & 4 & 4 \\\\ 1 & 3 & 4 \\end{matrix}\\right]\\left[\\begin{matrix} x \\\\ y \\\\ z \\end{matrix}\\right]=\\left[\\begin{matrix} 12 \\\\ 15 \\\\ 13 \\end{matrix}\\right]$, then the value of $x^2+y^2+z^2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "14",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b53e98003a18",
+      "subtopic": "adjoint-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The third element in the second row of adjoint of a matrix $A={\\left[a_{ij}\\right]}_{3\\times 3}$ (where $a_{ij}=2i+j$ ) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "-4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-98d1fda3b458",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let A be a non-singular matrix of order n and $|A|=k$, then $(\\mathrm{adj}A)^{-1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{A}}{\\mathrm{k}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\mathrm{k}^{\\mathrm{n}-1}(\\mathrm{adj}~\\mathrm{A})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{k}^{n-2}~\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "kA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1c4c03bd23c3",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 1 & \\cot\\frac{\\theta}{2} \\\\ -\\cot\\frac{\\theta}{2} & 1 \\end{matrix}\\right]$ then $A^{-1}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{cosec}^2\\frac{\\theta}{2}{~\\mathrm{A}}^{\\mathrm{T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-\\sin^2\\theta}{2}A^T$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{1+\\cos\\theta}{2}\\right)A^T$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{1-\\cos\\theta}{2}\\right)A^T$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1c190f1198f7",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If matrix $\\quad A=\\frac{1}{11}\\left[\\begin{matrix} -1 & 7 & -24 \\\\ 2 & a & 4 \\\\ 2 & -3 & 15 \\end{matrix}\\right]$ and $A^{-1}=\\left[\\begin{matrix} 3 & 3 & 4 \\\\ 2 & -3 & 4 \\\\ b & -1 & c \\end{matrix}\\right]$, then the values of $a,b,c$ respectively are ……",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3,1,0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-6}{11},0,\\frac{1}{11}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-3,0,1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-3}{11},0,\\frac{1}{11}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1396359f2071",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If A and B are non-singular matrices of order 2 such that $\\quad(AB)^{-1}=\\frac{1}{6}\\left[\\begin{matrix} -7 & -3 \\\\ 2 & 3 \\end{matrix}\\right]$ and $A^{-1}=\\frac{1}{3}\\left[\\begin{matrix} 4 & 3 \\\\ -1 & 0 \\end{matrix}\\right]$ then $B^{-1}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\left[\\begin{matrix} 2 & 3 \\\\ 1 & -1 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\left[\\begin{matrix} 3 & 1 \\\\ 2 & 4 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\left[\\begin{matrix} -1 & 3 \\\\ 1 & 2 \\end{matrix}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{6}\\left[\\begin{matrix} 1 & 1 \\\\ 2 & 3 \\end{matrix}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4240c1f57949",
+      "subtopic": "adjoint-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 1 & -1 & 1 \\\\ 0 & 2 & -3 \\\\ 2 & 1 & 0 \\end{matrix}\\right],B=\\mathrm{adj}A$ and $C=5A$, then $\\frac{\\left|\\mathrm{adjB}\\right|}{\\left|\\mathrm{C}\\right|}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-89862ce84fa9",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $A={\\left[\\begin{matrix} 3 & -3 & 4 \\\\ 2 & -3 & 4 \\\\ 0 & -1 & 1 \\end{matrix}\\right]}_{3\\times 3}$, then $A^{-1}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{A}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{A}^3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{A}^4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5bd8aef73d84",
+      "subtopic": "adjoint-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{A}=\\left[\\begin{matrix} 5\\mathrm{a} & -\\mathrm{b} \\\\ 3 & 2 \\end{matrix}\\right]$ and A .adj $\\mathrm{A}=\\mathrm{AA}^{\\mathrm{T}}$, then $5\\mathrm{a}+\\mathrm{b}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "7",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "13",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-402a8b059988",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Matrix A is non-singular matrix and $(A-3I)(A-5I)=0$, then $\\frac{15}{8}A^{-1}=\\ldots\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{I}-8~\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\mathrm{I}-\\frac{1}{15}~\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{I}-\\frac{1}{8}~\\mathrm{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8\\mathrm{I}-15~\\mathrm{A}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c94b58dd1b94",
+      "subtopic": "inverse-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $A$ is a matrix of order 2 and $I$ is the identity matrix of order 2 such that $A^2-4A+3I=0$ then $(A+3I)^{-1}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{A}}{24}-\\frac{7}{24}\\mathrm{I}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{A}}{21}-\\frac{7}{21}\\mathrm{I}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7\\mathrm{I}}{24}-\\frac{1}{24}~\\mathrm{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "A-3I",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0eaf12676951",
+      "subtopic": "adjoint-of-a-matrix",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $A=\\left[\\begin{matrix} 1 & -2 & 2 \\\\ 0 & 2 & -3 \\\\ 3 & -2 & 4 \\end{matrix}\\right]$ then $A(I+\\mathrm{adj}A)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left[\\begin{matrix} 9 & -2 & 2 \\\\ 0 & 10 & -3 \\\\ 3 & -2 & 11 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left[\\begin{matrix} 8 & -2 & 2 \\\\ 0 & 9 & -3 \\\\ 3 & -2 & 10 \\end{matrix}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left[\\begin{matrix} 9 & -2 & 2 \\\\ 0 & 10 & -3 \\\\ 3 & -2 & 12 \\end{matrix}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left[\\begin{matrix} 3 & 2 & -2 \\\\ 0 & 10 & 3 \\\\ -3 & 2 & 12 \\end{matrix}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-18bac18afc01",
+      "subtopic": "properties-of-determinants",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "The vectors $\\bar{p}=\\hat{i}+a\\hat{j}+a^2\\hat{k},\\bar{q}=\\hat{i}+b\\hat{j}+b^2\\hat{k}$ and $\\bar{\\mathrm{r}}=\\hat{\\mathrm{i}}+\\mathrm{c}\\hat{\\mathrm{j}}+\\mathrm{c}^2\\hat{\\mathrm{k}}$ are non-coplanar and $\\left|\\begin{matrix} a & a^2 & 1+a^3 \\\\ b & b^2 & 1+b^3 \\\\ c & c^2 & 1+c^3 \\end{matrix}\\right|=0$ then the value of $(abc)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
       "ref": "PYQ-MATH-021e4eccffac",
       "subtopic": "inverse-of-a-matrix",
       "type": "single_correct",

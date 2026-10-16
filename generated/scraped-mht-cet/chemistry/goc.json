@@ -89,10 +89,2681 @@
       "slug": "chain-isomerism",
       "name": "Chain isomerism",
       "position": 15
+    },
+    {
+      "slug": "heterocycles-bridged-systems",
+      "name": "Heterocycles bridged systems",
+      "position": 16
+    },
+    {
+      "slug": "aliphatic-hydrocarbons",
+      "name": "Aliphatic hydrocarbons",
+      "position": 17
+    },
+    {
+      "slug": "geometrical-isomerism",
+      "name": "Geometrical isomerism",
+      "position": 18
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-CHEM-ba489ec209c3",
+      "subtopic": "electron-displacement-effect",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following groups exhibits (+)R effect?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\mathrm{NHR}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\mathrm{CN}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\mathrm{NO}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\mathrm{COOR}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-229e026ff10c",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is the number of chiral carbon atoms in threose?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "One",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Two",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Three",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Four",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-262f84d16cae",
+      "subtopic": "basics-of-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Identify the number of moles of H atoms present in n moles of organic compound represented as",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-262f84d16cae.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "4 n",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6 n",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8 n",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2 n",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d962aeb838ba",
+      "subtopic": "polyfunctional-complex-molecules",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is IUPAC name of the following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-d962aeb838ba.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3-Carboxy-6-methylphenol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5-Carboxy-2-methylphenol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3-Hydroxy-4-methylbenzoic acid",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "4-methyl-5-hydroxybenzoic acid",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-3818907cfbba",
+      "subtopic": "common-vs-systematic-names",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Identify the correct pair of molecule and the heteroatom present in it respectively from following:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Furan-S",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Pyrrole-N",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Thiophene-O",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Piperidine-S",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-73279a7baecd",
+      "subtopic": "polyfunctional-complex-molecules",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is IUPAC name of following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-73279a7baecd.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3-Carboxy-5-ethyl phenol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5-Carboxy-3-ethyl phenol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3-Ethyl-5-hydroxy benzoic acid",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5-Ethyl-3-hydroxy benzoic acid",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e282c38ca5c6",
+      "subtopic": "aromatic-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The common name of Benzene-1, 2, 3-triol is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Phloroglucinol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Pyrogallol",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Quinol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Catechol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4fd806a2f12d",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following isomers of $\\mathrm{C}_4\\mathrm{H}_9\\mathrm{Br}$ is a chiral molecule?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "n-Butyl bromide",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "sec- Butyl bromide",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Isobutyl bromide",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "tert-Butyl bromide",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-8f2a91151611",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is the IUPAC name of the following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-8f2a91151611.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "2,5-Dimethylpentan-1-ol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1,3-Dimethylpentan-2-ol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2,5-Dimethylcyclopentanol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1,3-Dimethylcyclopentan-2-ol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-a54945df54b6",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is the number of chiral carbon atoms present in 2-chloro-3,4-dimethylhexane?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "One",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Two",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Three",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Four",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6fb7dbfba042",
+      "subtopic": "geometrical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following alkenes does NOT exhibit cis-trans isomerism?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "But-1-ene",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "But-2-ene",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3,4-Dimethylhex-3-ene",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Pent-2-ene",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6fcb3e4c2bce",
+      "subtopic": "acid-and-base-strength",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which among the following is the strongest base?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Benzenamine",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Phenylmethanamine",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{N},\\mathrm{N}$-Dimethylbenzenamine",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "N-Methylbenzenamine",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-ba2c91ed25b6",
+      "subtopic": "common-vs-systematic-names",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following compounds contains S atom in its ring?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Nitromethane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Pyran",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Furan",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Thiophene",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-170323fabf44",
+      "subtopic": "aliphatic-hydrocarbons",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is the IUPAC name of following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-170323fabf44.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1-Bromo -1,2-dimethylbut-2-ene",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4-Bromo-3-methylpent-2-ene",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4-Bromo-3, 4-dimethylbut-2-ene",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2-Bromo-3-methylpent-3-ene",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-4abe6ea9f441",
+      "subtopic": "aromatic-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of the following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-4abe6ea9f441.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3-formyl-5-methylphenol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5-formyl-3-methylphenol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3-hydroxy-5-methylbenzaldehyde",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "5-hydroxy-3-methylbenzaldehyde",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-864818ea1a73",
+      "subtopic": "heterocycles-bridged-systems",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-864818ea1a73.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1-Methoxy-3,3-dimethylcyclobutane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3-Methoxy-1,1-dimethylcyclobutane",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3,3-dimethylcyclobutoxymethane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1-Methoxy-3-isopropylbutane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c0bcb5e3c903",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following is NOT optically active compound?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1,2-Diiodobutane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1,3-Diiodobutane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1,4-Diiodobutane",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2,3-Diiodobutane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-53970f74adfe",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is the IUPAC name of the following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-53970f74adfe.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "2-Ethyl-3-methylcyclopentanol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2-Ethyl-5-methylcyclopentanol",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2-Methyl-3-ethylcyclopentanol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1-Methyl-3-ethylcyclopentan-2-ol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-652a47112913",
+      "subtopic": "basics-of-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which from following compounds contains oxygen as a heteroatom?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Furan",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Pyridine",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Thiophene",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Piperidine",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-818b0ecfca23",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Identify the chiral molecule from the following:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2-Bromopropane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2-Bromo-2-methylbutane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2-Bromo-3-methylbutane",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3-Bromopentane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c01923a1f654",
+      "subtopic": "chain-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is the number of moles of carbon atoms present in n mole molecules of an alkane if it exhibits five structural isomers?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4n",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3n",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5n",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "6n",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f0053fc99de0",
+      "subtopic": "polyfunctional-complex-molecules",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which functional group from following is considered as principal functional group if polyfunctional compound is to be named by IUPAC system?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-$CHO",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-$OH",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\mathrm{NH}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\mathrm{C}\\equiv\\mathrm{C}-$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-51be9d650d3d",
+      "subtopic": "aliphatic-hydrocarbons",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is IUPAC name of ${\\left(\\mathrm{CH}_3\\right)}_4\\mathrm{C}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Neopentane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2-Methylbutane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2-Methylpropane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2,2-Dimethylpropane",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-76cb7ede7996",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is IUPAC name of the following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-76cb7ede7996.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3 - Bromo - 4 - ethylbut - 3 - ene",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 - Bromo - 4 - methylhex - 3 - ene",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4 - Bromo - 3 - methylhex - 3 - ene",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4-Bromo - 4 - ethyl - 3 - methylbut - 3 - ene",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-d6f993cfb7ca",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is the IUPAC name of following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-d6f993cfb7ca.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1-Methoxy - 2,2 - dimethylcyclobutane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1 - Methoxy -4, 4-dimethylcyclobutane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2 - Methoxy - 1,1 - dimethylcyclobutane",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2,2 - dimethylcyclobutoxymethane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9f5fa9ba18b1",
+      "subtopic": "polyfunctional-complex-molecules",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which from following groups is selected as principal functional group for nomenclature of a polyfunctional compound according to IUPAC system?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\mathrm{CONH}_2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\mathrm{CN}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\mathrm{OH}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\mathrm{C}\\equiv\\mathrm{C}-$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e1f580eb1a93",
+      "subtopic": "polyfunctional-complex-molecules",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of propylene glycerol?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Propane-1,2-diol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Propane-1,3-diol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Propene-1,2,3-triol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Propane-1,2,3-triol",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e6af22805b63",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which from following properties is NOT identical for Enantiomers?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Melting point",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Density",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Refractive index",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Sign of optical rotation",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-09d0ec4741a0",
+      "subtopic": "stability-of-intermediate",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which from following carbocations is least stable?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(\\mathrm{R})_3-\\mathrm{C}^{+}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\mathrm{R})_2-\\overset{+}{\\mathrm{C}}\\mathrm{H}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{R}-\\overset{+}{\\mathrm{C}}\\mathrm{H}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{H}_3\\overset{+}{\\mathrm{C}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-04a8f02432a5",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Identify the chiral molecule from following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2-Iodopropane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2-Iodo-2-methylbutane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2-Iodo-3-methylbutane",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3-Iodopentane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2e9504cf324c",
+      "subtopic": "metamerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which from following pairs of compounds exhibits metamerism?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "But-2-ene and But-1-ene",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Methoxymethane and Ethanol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Ethoxyethane and Methoxypropane",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Butane and 2-Methylpropane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-35cf967f9c95",
+      "subtopic": "common-vs-systematic-names",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of Acrylic acid?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Propanoic acid",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Prop-2-enoic acid",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2-Methylpropanoic acid",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2-Hydroxypropanoic acid",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-586a8a85aa67",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of Ethylmethylisopropylamine?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "N -Methyl-N-isopropylethanamine",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "N -Ethyl-N-methyl propan-1-amine",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "N-Ethyl-N-methylpropan-2-amine",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "N -Ethyl- N -isopropylmethanamine",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-65ef9262e86a",
+      "subtopic": "geometrical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following alkenes does NOT exhibit cis-trans isomerism?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "But-1-ene",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "But-2-ene",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3,4-Dimethylhex-3-ene",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Pent-2-ene",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-bb1f3e792fce",
+      "subtopic": "metamerism",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "How many isomers of $\\mathrm{C}_4\\mathrm{H}_{11}\\mathrm{N}$ are secondary amines?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "One",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Two",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Three",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Four",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-50f952466815",
+      "subtopic": "aromatic-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following is IUPAC name of hydroquinone?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Benzene-1, 2-diol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Benzene-1, 3-diol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Benzene-1, 4-diol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Benzene-1,3,5-triol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-63714c5fcbbd",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "What is the IUPAC name of following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-63714c5fcbbd.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1-chloro-1,2-dimethylbut-2-ene",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4-chloro-3,4-dimethylbut-2-ene",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4-chloro-3-methylpent-2-ene",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2-chloro-3-methylpent-3-ene",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-f380bfe37f9e",
+      "subtopic": "geometrical-isomerism",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which among the following is NOT a pair of isomers?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Butan-2-ol and 2-Methylpropanol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Butan-1-ol and 1-Methoxypropane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1-Methoxypropane and Ethoxyethane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Methoxyethane and Ethoxyethane",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-5635838c7fd1",
+      "subtopic": "common-vs-systematic-names",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Identify name of from following.",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-5635838c7fd1.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Benzene sulphonic acid",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Sodium benzene sulphonate",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Sodium phenoxide",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Benzene diazonium sulphate",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-eeeef984ca9d",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "IUPAC name of the compound",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-eeeef984ca9d.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1-Methoxy-3, 3-dimethylbutane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1-Methoxy-3, 3-dimethylcyclobutane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3-Methoxy-1,1-dimethylbutane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3-Methoxy-1, 1-dimethylcyclobutane",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7ac5663c7972",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which from following is a correct priority order for selection of principal functional group for nomenclature of polyfunctional compound?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\mathrm{COOH}>-\\mathrm{SO}_3\\mathrm{H}>-\\mathrm{COOR}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\mathrm{COOR}>-\\mathrm{COOH}>-\\mathrm{SO}_3\\mathrm{H}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\mathrm{SO}_3\\mathrm{H}>-\\mathrm{COOR}>-\\mathrm{COOH}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\mathrm{COOR}>-\\mathrm{SO}_3\\mathrm{H}>-\\mathrm{COOH}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b9dd65a5e30d",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which among the following is NOT a true statement regarding enantiomers?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Enantiomers have identical refractive index.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Enantiomers have same chemical properties.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Enantiomers are superimposable mirror images of each other.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Enantiomers have equal but opposite optical rotation.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-669854c01dfd",
+      "subtopic": "aromatic-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Select the correct IUPAC name of pyrogallol.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Benzene-1,3-diol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Benzene-1,4-diol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Benzene-1,3,5-triol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Benzene-1,2,3-triol",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b0bcc046ea5f",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "What is IUPAC name of the following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-b0bcc046ea5f.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1-Methoxy-3,3-dimethylcyclobutane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3-Methoxy-1,1-dimethylcyclobutane",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3,3-dimethylcyclobutoxymethane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1-methoxy-3-isopropyl butane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b476c8ed19f9",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Identify the name of method used for three dimensional representation of molecule as follows.",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-b476c8ed19f9.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Wedge formula",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Fisher projection formula",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Newman projection formula",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Sawhorse formula",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b83c5f7c20f7",
+      "subtopic": "aliphatic-hydrocarbons",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "What is IUPAC name of following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-b83c5f7c20f7.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1-Bromo-1,1-dimethylbut-2-ene",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4-Bromo-4-methylpent-2-ene",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2-Bromo-2-methylpent-3-ene",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4-Bromo-4,4-dimethylbut-2-ene",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e45c7c8030d6",
+      "subtopic": "polyfunctional-complex-molecules",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which from following functional groups has highest priority order for naming the poly functional compound?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-CN",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\mathrm{CONH}_2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\mathrm{C}\\equiv\\mathrm{C}-$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\mathrm{NH}_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-062ef47d7e4b",
+      "subtopic": "stability-of-intermediate",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Which from following is the most stable species?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{NH}_4^{+}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\mathrm{R}-\\overset{+}{\\mathrm{N}}\\mathrm{H}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\quad\\mathrm{R}_2\\overset{+}{\\mathrm{N}}\\mathrm{H}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad\\mathrm{R}_3\\overset{+}{\\mathrm{N}}\\mathrm{H}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b85f21c2adb7",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "What is the IUPAC name of following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-b85f21c2adb7.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "2,5-Dimethylpentan-1-ol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1,3-Dimethylpentan-2-ol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2,5-Dimethylcyclopentanol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1,3-Dimethylcyclopentan-2-ol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-2bc21a986696",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of the following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-2bc21a986696.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1-Ethyl-2-hydroxy-3-methyl cyclobutane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2-Ethyl-1-hydroxy-4-methyl cyclobutane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2-Ethyl-4-methyl cyclobutanol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "4-Ethyl-2-methyl cyclobutanol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-63ad5af06c4f",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "What is the number of chiral carbon atoms present in 3,4-Dibromohexane?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-783304dddc7d",
+      "subtopic": "polyfunctional-complex-molecules",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which from following functional groups has highest priority order for naming the polyfunctional group compounds?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-COCl",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\mathrm{SO}_3\\mathrm{H}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "-CHO",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "-OH",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-6c28a5db348f",
+      "subtopic": "aromatic-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "What is IUPAC name of hydroquinone?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Benzene-1,2-diol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Benzene-1,3-diol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Benzene-1,4-diol",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Benzene-1,3,5-triol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7bcc101724dc",
+      "subtopic": "aliphatic-hydrocarbons",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "$\\text{ What is IUPAC name of following compound? }$",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-7bcc101724dc.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3-Bromo-4-ethylbut-3-ene",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3-Bromo-4-methylhex-3ene",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4-Bromo-3-methylhex-3-ene",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4-Bromo-4-ethyl-3-methylbut-3-ene",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7a9cda2fd9f3",
+      "subtopic": "aromaticity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which from following is a non benzenoid aromatic compound?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Aniline",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Tropone",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Naphthalene",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Phenol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9f80e236c9c0",
+      "subtopic": "polyfunctional-complex-molecules",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "What is IUPAC name of the following compound?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-9f80e236c9c0.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3-Carboxy-4-methylbenzaldehyde",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5-Carboxy-4-methylbenzaldehyde",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3-Formyl-6-methylbenzoic acid",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5-Formyl-2-methylbenzoic acid",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-b51122c9f614",
+      "subtopic": "chain-isomerism",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "What is the number of structural isomers possible for alkene with molecular formula $\\mathrm{C}_5\\mathrm{H}_{10}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-204f01e5ccf4",
+      "subtopic": "aromatic-nomenclature",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following is correct IUPAC name of catechol?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Benzene-1,2-diol",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Benzene-1,3-diol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Benzene-1,4-diol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Benzene-1,3,5-triol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c5cc0fd47922",
+      "subtopic": "geometrical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following alkenes does NOT exhibit cis-trans isomerism?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "But-1-ene",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "But-2-ene",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3,4-Dimethylhex-3-ene",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Pent-2-ene",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-366d359587cb",
+      "subtopic": "acid-and-base-strength",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which from following is a correct increasing order of basic strength of compounds?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\mathrm{CH}_3\\right)}_2\\mathrm{NH}<\\mathrm{CH}_3\\mathrm{NH}_2<{\\left(\\mathrm{CH}_3\\right)}_3~\\mathrm{N}<\\mathrm{NH}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{NH}_3<{\\left(\\mathrm{CH}_3\\right)}_2\\mathrm{NH}<\\mathrm{CH}_3\\mathrm{NH}_2<{\\left(\\mathrm{CH}_3\\right)}_3~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{CH}_3\\mathrm{NH}_2<{\\left(\\mathrm{CH}_3\\right)}_2\\mathrm{NH}<{\\left(\\mathrm{CH}_3\\right)}_3~\\mathrm{N}<\\mathrm{NH}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{NH}_3<{\\left(\\mathrm{CH}_3\\right)}_3~\\mathrm{N}<\\mathrm{CH}_3\\mathrm{NH}_2<{\\left(\\mathrm{CH}_3\\right)}_2\\mathrm{NH}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-aecdeb20cce6",
+      "subtopic": "functional-group-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which among the following is a pair of functional isomers?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Butan-2-ol and 2-Methylpropanol",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Butan-1-ol and 1-Methoxypropane",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1-Methoxypropane and Ethoxyethane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2-Methoxypropane and 1-Methoxypropane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7f516c4c03fb",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "How many chiral carbon atoms are present in 2-chloro-3,4,5-trimethylhexane?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-9554c52059ff",
+      "subtopic": "heterocycles-bridged-systems",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which from following compounds does NOT contain oxygen as heteroatom?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Furan",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "THF",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4H-Pyran",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Pyrrole",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-c90656807d53",
+      "subtopic": "functional-group-nomenclature",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "$\\text{ What is IUPAC name of following compound? }$",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-c90656807d53.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1-Methoxy-2,2-dimethylbutane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2-Methoxy-1,1-dimethylbutane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1-Methoxy-2,2-dimethylcyclobutane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2-Methoxy-1,1-dimethylcyclobutane",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-75c9329268e4",
+      "subtopic": "common-vs-systematic-names",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In carbinol system, sec-Butyl alcohol is named as",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Ethyl methyl carbinol",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "sec-Butylcarbinol",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Isopropyl carbinol",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Diethylcarbinol",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-92ecfc3b829f",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following compounds is an optically inactive compound?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3-chlorohexane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2-chloro-2-methylbutane",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2-chloropentane",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2-chloro-3-methylbutane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-beb5fc4c0d9c",
+      "subtopic": "acid-and-base-strength",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "What is the expected order of basic strength of different compounds from following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{R}_3~\\mathrm{N}<\\mathrm{R}_2\\mathrm{NH}<\\mathrm{R}-\\mathrm{NH}_2<\\mathrm{NH}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{NH}_3<\\mathrm{R}-\\mathrm{NH}_2<\\mathrm{R}_2\\mathrm{NH}<\\mathrm{R}_3~\\mathrm{N}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{R}_2\\mathrm{NH}<\\mathrm{R}_3~\\mathrm{N}<\\mathrm{R}-\\mathrm{NH}_2<\\mathrm{NH}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{NH}_3<\\mathrm{R}_3~\\mathrm{N}<\\mathrm{R}_2\\mathrm{NH}<\\mathrm{R}-\\mathrm{NH}_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-fe422e61a997",
+      "subtopic": "optical-isomerism",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following compounds does not exhibit optical isomerism?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3-Iodohexane",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2-Iodopentane",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2-Iodo-2-methylbutane",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2-Iodo-3-methylbutane",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-e873e162ecd3",
+      "subtopic": "electron-displacement-effect",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Identify least stable species from following.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{NH}_4^{+}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\mathrm{R}-\\overset{+}{\\mathrm{N}}\\mathrm{H}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\quad\\mathrm{R}_2\\overset{+}{\\mathrm{N}}\\mathrm{H}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad\\mathrm{R}_3\\overset{+}{\\mathrm{N}}\\mathrm{H}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-CHEM-7acdabcbada2",
+      "subtopic": "aromaticity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "What is the number of moles of ' C ' and ' H ' atoms respectively present in n mole molecule represented by following structure?",
+      "image": {
+        "url": "/question-images/mht-cet/chemistry/goc/PYQ-CHEM-7acdabcbada2.png",
+        "alt": "Figure for this Some Basic Principles of Organic Chemistry question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$6n$ and $6n$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6n$ and $8n$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8n$ and $8n$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7n$ and $9n$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-CHEM-3ae759f238d5",
       "subtopic": "chain-isomerism",

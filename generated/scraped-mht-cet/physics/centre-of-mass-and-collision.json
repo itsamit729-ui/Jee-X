@@ -29,10 +29,504 @@
       "slug": "center-of-mass-of-discrete-particles",
       "name": "Center of mass of discrete particles",
       "position": 3
+    },
+    {
+      "slug": "impulse-momentum-theorem",
+      "name": "Impulse momentum theorem",
+      "position": 4
+    },
+    {
+      "slug": "motion-of-center-of-mass",
+      "name": "Motion of center of mass",
+      "position": 5
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-PHY-95d2f4469662",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A moving body with mass ' $\\mathrm{m}_1$ ' strikes a stationary mass ' $\\mathrm{m}_2$ '. What should be the ratio $\\frac{m_1}{m_2}$ so as to decrease the velocity of first by (1.5) times the velocity after the collision?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:25$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$25:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c12c19ce2582",
+      "subtopic": "impulse-momentum-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "1000 small balls, each weighing 1 gram, strike one square cm of area per second with a velocity $50~\\mathrm{m}/\\mathrm{s}$ in a normal direction and rebound with the same velocity. The value of pressure on the surface will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^7~\\mathrm{N}/\\mathrm{m}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^6~\\mathrm{N}/\\mathrm{m}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$5\\times 10^6~\\mathrm{N}/\\mathrm{m}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\times 10^6~\\mathrm{N}/\\mathrm{m}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c47105495d22",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A particle of mass m collides with another stationary particle of mass $M$. The particle $m$ stops just after collision. The coefficient of restitution is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{m}{M}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{M-m}{M+m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{m}}{\\mathrm{M}+\\mathrm{m}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e398a30bf92d",
+      "subtopic": "center-of-mass-of-discrete-particles",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In case of system of two-particles of different masses, the centre of mass lies",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "at the mid-point of line joining the two particles.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "on the line joining the two particles.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "at one end of the line joining the two particles.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "on the line perpendicular to the line joining the two particles.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6b976353f019",
+      "subtopic": "center-of-mass-of-discrete-particles",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Three identical metal balls each of radius ' $r$ ' are placed such that an equilateral triangle is formed when centres of three ball are joined. The centre of mass of the system is located at",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "centre of one of the balls.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "point of intersection of medians.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "line joining centres of any two balls.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "on the circumference of any one of the balls.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d22a95e899da",
+      "subtopic": "center-of-mass-of-discrete-particles",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A meter scale is supported on a wedge at its centre of gravity. A body of weight ' $w$ ' is suspended from the 20 cm mark and another weight of 25 gram is suspended from 74 cm mark balances it and the meter scale remains perfectly horizontal. Neglecting the weight of the meter scale, the weight of the body is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "33 gram wt.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "30 gram wt.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "20 gram wt.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "15 gram wt.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9906e9aadeda",
+      "subtopic": "impulse-momentum-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In projectile motion two particles of masses $\\mathrm{m}_1$ and $m_2$ have velocities $\\vec{V}_1$, and $\\vec{V}_2$ respectively at time $t=0$. Their velocities become $\\overline{V'_1}$ and $\\overrightarrow{V'_2}$ at time 2 t while still moving in air. The value of $\\left[\\left(m_1\\overrightarrow{V'_1}+m_2\\overrightarrow{V'_2}\\right)-\\left(m_1\\vec{V}_1+m_2\\vec{V}_2\\right)\\right]$ is ( $\\mathrm{g}=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\left({~\\mathrm{m}}_1+\\mathrm{m}_2\\right)\\mathrm{gt}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(m_1+m_2\\right)gt$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\left(m_1+m_2\\right)gt$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9725f36f6ad8",
+      "subtopic": "motion-of-center-of-mass",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In the system of two particles of masses ' $\\mathrm{m}_1$ ' and ' $\\mathrm{m}_2$ ', the first particle is moved by a distance 'd' towards the centre of mass. To keep the centre of mass unchanged, the second particle will have to be moved by a distance",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{m}_2}{{~\\mathrm{m}}_1}~\\mathrm{d}$, towards the centre of mass.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{m}_1}{{~\\mathrm{m}}_2}~\\mathrm{d}$, away from the centre of mass.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{m}_1}{{~\\mathrm{m}}_2}~\\mathrm{d}$, towards the centre of mass.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{m}_2}{{~\\mathrm{m}}_1}~\\mathrm{d}$, away from the centre of mass.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c4b2cb1cb2bd",
+      "subtopic": "motion-of-center-of-mass",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A metal rod of weight ' $W$ ' is supported by two parallel knife-edges A and B . The rod is in equilibrium in horizontal position. The distance ' between two knife-edges is ' $r$ '. The centre of mass of the rod is at a distance ' $x$ ' from $A$. The normal reaction on A is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{W}\\cdot\\mathrm{r}}{\\mathrm{x}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{W}\\cdot\\mathrm{x}}{\\mathrm{r}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{W}\\cdot(\\mathrm{r}-\\mathrm{x})}{\\mathrm{x}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{W}\\cdot(\\mathrm{r}-\\mathrm{x})}{\\mathrm{r}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-28aa8a21079b",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "There is head-on elastic collision between the two particles moving in the same direction with speeds $5~\\mathrm{m}/\\mathrm{s}$ and $3~\\mathrm{m}/\\mathrm{s}$ respectively. After collision, the velocity of the first particle becomes $4~\\mathrm{m}/\\mathrm{s}$ in the same direction. The velocity of the second particle should be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6~\\mathrm{m}/\\mathrm{s}$ in the same direction.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4~\\mathrm{m}/\\mathrm{s}$ in the same direction.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2~\\mathrm{m}/\\mathrm{s}$ in the opposite direction.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3~\\mathrm{m}/\\mathrm{s}$ in the same direction.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fdbe408f90d1",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "An object of mass ' $m$ ' moving with velocity ' $u$ ' collides with another stationary object of mass ' $M$ ' and stops just after the collision. The coefficient of restitution is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{m}}{\\mathrm{M}+\\mathrm{m}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{M-m}{M+m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{m}}{\\mathrm{M}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cb0fb1a85552",
+      "subtopic": "collision",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A sphere of mass ' $m$ ', moving with velocity ' $3u$ ' collides head-on with another identical sphere at rest. If ' $e$ ' is coefficient of restitution then what will be the ratio of velocity of the second sphere to that of first sphere after collision?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1-\\mathrm{e}}{1+\\mathrm{e}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1+\\mathrm{e}}{1-\\mathrm{e}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{e+1}{e-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{e-1}{e+1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f4c7c503511a",
+      "subtopic": "center-of-mass-of-continuous-mass-distribution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "Three rods of same mass are placed as shown in figure. The co-ordinates of centre of mass of the system are",
+      "image": {
+        "url": "/question-images/mht-cet/physics/centre-of-mass-and-collision/PYQ-PHY-f4c7c503511a.png",
+        "alt": "Figure for this Centre Of Mass And Collision question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{\\mathrm{a}}{3},\\frac{\\mathrm{a}}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(a,\\frac{a}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(2a\\frac{a}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{2a}{3},\\frac{a}{3}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-PHY-b10a0ad65881",
       "subtopic": "collision",

@@ -19,8 +19,51 @@
       "slug": "general",
       "name": "General",
       "position": 99
+    },
+    {
+      "slug": "longitudinal-stress-and-strain-and-youngs-modulus",
+      "name": "Longitudinal stress and strain and youngs modulus",
+      "position": 2
     }
   ],
   "passages": [],
-  "questions": []
+  "questions": [
+    {
+      "ref": "PYQ-PHY-f4365f6a1fda",
+      "subtopic": "longitudinal-stress-and-strain-and-youngs-modulus",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A spring has length L and force constant K . It is cut into two springs of length $L_1$ and $L_2$ such that $\\mathrm{L}_1=\\mathrm{NL}_2$ ( N is an integer). The force constant of spring of length $L_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(\\mathrm{N}+1)\\mathrm{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{K}}{\\mathrm{N}}(1+\\mathrm{N})$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{K}}{\\mathrm{N}+1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
 }

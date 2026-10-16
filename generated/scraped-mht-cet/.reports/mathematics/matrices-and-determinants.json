@@ -3,9 +3,52 @@
   "source_chapter": "matrices-and-determinants",
   "flagged": [],
   "math_check": {
-    "compared": 57,
-    "differ": 0,
-    "questions": []
+    "compared": 34,
+    "differ": 6,
+    "questions": [
+      {
+        "ref": "PYQ-MATH-f376d182993a",
+        "source": "https://questions.examside.com/past-years/jee/question/pif-leftbeginarraylll1--3--3--1--4--4--1--mht-cet-mathematics-complex-numbers-rghxd9aqgicmibce",
+        "similarity": 0.82,
+        "ours": "If $\\left[\\begin{matrix} 1 & 3 & 3 \\\\ 1 & 4 & 4 \\\\ 1 & 3 & 4 \\end{matrix}\\right]\\left[\\begin{matrix} x \\\\ y \\\\ z \\end{matrix}\\right]=\\left[\\begin{matrix} 12 \\\\ 15 \\\\ 13 \\end{matrix}\\right]$, then the value of $x^2+y^2+z^2=$",
+        "site": "If $\\left[\\begin{array}{lll}1 & 3 & 3 \\\\ 1 & 4 & 4 \\\\ 1 & 3 & 4\\end{array}\\right]\\left[\\begin{array}{l}x \\\\ y \\\\ z\\end{array}\\right]=\\left[\\begin{array}{l}12 \\\\ 15 \\\\ 13\\end{array}\\right]$, then the value of $x^2+y^2+z^2=$"
+      },
+      {
+        "ref": "PYQ-MATH-b534d0cd44b1",
+        "source": "https://questions.examside.com/past-years/jee/question/pif-aleftbeginarrayll2--1--7--4endarrayrig-mht-cet-mathematics-complex-numbers-pcqohwxoghl7d2b6",
+        "similarity": 0.85,
+        "ours": "If $A=\\left[\\begin{matrix} 2 & 1 \\\\ 7 & 4 \\end{matrix}\\right]$ then ${\\left(A^2-5A\\right)}^{-1}$ is",
+        "site": "If $A=\\left[\\begin{array}{ll}2 & 1 \\\\ 7 & 4\\end{array}\\right]$ then $\\left(A^2-5 A\\right)^{-1}$ is"
+      },
+      {
+        "ref": "PYQ-MATH-8ef76cea781c",
+        "source": "https://questions.examside.com/past-years/jee/question/plet-aleftbeginarrayccc1--1--1--2--1--3--mht-cet-mathematics-complex-numbers-gvh6arqeye2jghzq",
+        "similarity": 0.84,
+        "ours": "Let $A=\\left[\\begin{matrix} 1 & -1 & 1 \\\\ 2 & 1 & -3 \\\\ 1 & 1 & 1 \\end{matrix}\\right]$ and $B=\\left[\\begin{matrix} 4 \\\\ 0 \\\\ 2 \\end{matrix}\\right]$ such that $\\mathrm{AX}=\\mathrm{B}$, then $\\mathrm{X}=$",
+        "site": "Let $A=\\left[\\begin{array}{ccc}1 & -1 & 1 \\\\ 2 & 1 & -3 \\\\ 1 & 1 & 1\\end{array}\\right]$ and $B=\\left[\\begin{array}{l}4 \\\\ 0 \\\\ 2\\end{array}\\right]$ such that $\\mathrm{AX}=\\mathrm{B}$, then $\\mathrm{X}=$"
+      },
+      {
+        "ref": "PYQ-MATH-2c1c72a33c0c",
+        "source": "https://questions.examside.com/past-years/jee/question/pif-aleftbeginarraycc2--2--4--3endarrayr-mht-cet-mathematics-complex-numbers-kr12grv2akrwu1vk",
+        "similarity": 0.83,
+        "ours": "If $A=\\left[\\begin{matrix} 2 & -2 \\\\ 4 & 3 \\end{matrix}\\right]$, then $A^{-1}=$",
+        "site": "If $A=\\left[\\begin{array}{cc}2 & -2 \\\\ 4 & 3\\end{array}\\right]$, then $A^{-1}=$"
+      },
+      {
+        "ref": "PYQ-MATH-925eb10eeae9",
+        "source": "https://questions.examside.com/past-years/jee/question/plet-xleftbeginarraylmathrma--mathrmb--mht-cet-mathematics-complex-numbers-dj400i5cucyqslpc",
+        "similarity": 0.78,
+        "ours": "Let $X=\\left[\\begin{matrix} \\mathrm{a} \\\\ \\mathrm{b} \\\\ \\mathrm{c} \\end{matrix}\\right],\\mathrm{A}=\\left[\\begin{matrix} 1 & -1 & 2 \\\\ 2 & 0 & 1 \\\\ 3 & 2 & 1 \\end{matrix}\\right]$ and $\\mathrm{B}=\\left[\\begin{matrix} 3 \\\\ 1 \\\\ 4 \\end{matrix}\\right]$. If $AX=B$, t",
+        "site": "Let $X=\\left[\\begin{array}{l}\\mathrm{a} \\\\ \\mathrm{b} \\\\ \\mathrm{c}\\end{array}\\right], \\mathrm{A}=\\left[\\begin{array}{ccc}1 & -1 & 2 \\\\ 2 & 0 & 1 \\\\ 3 & 2 & 1\\end{array}\\right]$ and $\\mathrm{B}=\\left[\\begin{array}{l}3 \\\\ 1 \\\\ 4\\end{array}\\r..."
+      },
+      {
+        "ref": "PYQ-MATH-d3ae8d5535a2",
+        "source": "https://questions.examside.com/past-years/jee/question/pif-aleftbeginarraycc3--1--4--2endarray-mht-cet-mathematics-complex-numbers-u5upcoi7sbx0hj0f",
+        "similarity": 0.83,
+        "ours": "If $A=\\left[\\begin{matrix} 3 & -1 \\\\ -4 & 2 \\end{matrix}\\right]$, then $A^{-1}$ is",
+        "site": "If $A=\\left[\\begin{array}{cc}3 & -1 \\\\ -4 & 2\\end{array}\\right]$, then $A^{-1}$ is"
+      }
+    ]
   },
   "unknown_symbols": {}
 }

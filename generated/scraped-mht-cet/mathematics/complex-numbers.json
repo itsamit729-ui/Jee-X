@@ -54,10 +54,1125 @@
       "slug": "argument-of-complex-numbers",
       "name": "Argument of complex numbers",
       "position": 8
+    },
+    {
+      "slug": "conjugate-of-complex-numbers",
+      "name": "Conjugate of complex numbers",
+      "position": 9
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-MATH-2450bd88ed17",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{w}=\\frac{-1+i\\sqrt{3}}{2}$, where $\\mathrm{i}=\\sqrt{-1}$, then the value of ${\\left(3+w+3w^2\\right)}^4$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "16",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-16$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "16w",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "16w${}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aa50eb140e8b",
+      "subtopic": "modulus-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $Z$ be a complex number such that $|Z|+Z=2+i$ (where $i=\\sqrt{-1})$, then $|Z|$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{41}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ae79918b3d87",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\omega=-\\frac{1}{2}+\\mathrm{i}\\frac{\\sqrt{3}}{2},\\mathrm{i}=\\sqrt{-1}$, then the value of $\\left|\\begin{matrix} 1 & 1 & 1 \\\\ 1 & -1-\\omega^2 & \\omega^2 \\\\ 1 & \\omega^2 & \\omega^4 \\end{matrix}\\right|$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3\\omega(\\omega-1)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3\\omega^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\omega(1-\\omega)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aeb343fcd31c",
+      "subtopic": "modulus-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $z$ be a complex number such that $|z|+z=2+i$, where $i=\\sqrt{-1}$, then $|z|$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{41}}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d9bf49f91765",
+      "subtopic": "applications-of-complex-numbers-in-coordinate-geometry",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If the complex number $z=x+iy$, where $i=\\sqrt{-1}$, satisfies the condition $|z+1|=1$, then $z$ lies on",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "X -axis.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "circle with centre ( 1,0 ) and radius 1 unit.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "circle with centre $(-1,0)$ and radius 1 unit.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Y-axis.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7db7715d380b",
+      "subtopic": "conjugate-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\mathrm{z}=x+\\mathrm{i}y$ be a complex number, where $x$ and $y$ are integers and $i=\\sqrt{-1}$. Then the area of the rectangle whose vertices are the roots of the equation $z(\\bar{z})^3+\\bar{z}z^3=350$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "48",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "32",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "40",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "80",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5754c9dec222",
+      "subtopic": "argument-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $z_1=5-2i$ and $z_2=3+i$, where $i=\\sqrt{-1}$, then $\\arg\\left(\\frac{z_1+z_2}{z_1-z_2}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan^{-1}\\left(\\frac{22}{19}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\tan^{-1}\\left(\\frac{22}{13}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\tan^{-1}\\left(\\frac{21}{19}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\tan^{-1}\\left(\\frac{19}{22}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9376f3bba5fd",
+      "subtopic": "conjugate-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{a}>0$ and $\\mathrm{z}=\\frac{(1+\\mathrm{i})^2}{\\mathrm{a}-\\mathrm{i}},\\mathrm{i}=\\sqrt{-1}$, has magnitude $\\sqrt{\\frac{2}{5}}$ then $\\bar{z}$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{5}-\\frac{3}{5}\\mathrm{i}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{1}{5}-\\frac{3}{5}\\mathrm{i}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{1}{5}+\\frac{3}{5}\\mathrm{i}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{3}{5}-\\frac{1}{5}\\mathrm{i}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5948e222ba1d",
+      "subtopic": "applications-of-complex-numbers-in-coordinate-geometry",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{P}(x,y)$ denotes $\\mathrm{z}=x+\\mathrm{i}y,x,y\\in\\mathbb{R}$ and $\\mathrm{i}=\\sqrt{-1}$ in Argand's plane and $\\left|\\frac{z-1}{z+2i}\\right|=1$, then the locus of P is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "parabola",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "hyperbola",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "circle",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "straight line",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cb320138d5bf",
+      "subtopic": "conjugate-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $|z|=1$ and $w=\\frac{z-1}{z+1}$ (where $\\left.z\\ne-1\\right)$, then $\\mathrm{Re}(w)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{1}{|z+1|^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left|\\frac{z}{z+1}\\right|\\cdot\\frac{1}{|z+1|^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{2}}{|z+1|^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2fb8fa3038ca",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $z^2+z+1=0$ then ${\\left(z^3+\\frac{1}{z^3}\\right)}^2+{\\left(z^4+\\frac{1}{z^4}\\right)}^2=$ where $z=w=$ complex cube root of unity",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0c29d39fa010",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let ${\\left(-2-\\frac{1}{3}\\mathrm{i}\\right)}^3=\\frac{x+\\mathrm{i}y}{27},\\mathrm{i}=\\sqrt{-1}$, where $x$ and $y$ are real numbers, then $(y-x)$ has the value",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-91$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-85$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$85$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$91$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5674f2f2df02",
+      "subtopic": "modulus-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "If $\\left|\\frac{\\mathrm{z}}{1+\\mathrm{i}}\\right|=2$, where $\\mathrm{z}=x+\\mathrm{i}y,\\mathrm{i}=\\sqrt{-1}$ represents a circle, then centre ' $C$ ' and radius ' $r$ ' of the circle are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{C}\\equiv(3,0),\\mathrm{r}=4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{C}\\equiv(6,0),\\mathrm{r}=2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{C}\\equiv(0,3),\\mathrm{r}=8$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{C}\\equiv(0,0),\\mathrm{r}=2\\sqrt{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-94aee8d5d008",
+      "subtopic": "argument-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $Z=\\frac{-2}{1+\\sqrt{3}i},i=\\sqrt{-1}$, then the value of $\\arg Z$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4cca7ce80e83",
+      "subtopic": "square-root-of-a-complex-number",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The modulus of the square root of the conjugate of $-7+24\\sqrt{-1}$ is __________",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "16",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ea48f1782455",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "$\\begin{aligned} & \\mathrm{f}(x)=(\\cos x+\\mathrm{i}\\sin x)\\cdot(\\cos 3x+\\mathrm{i}\\sin 3x)\\cdots[\\cos(2\\mathrm{n}-1)x+\\mathrm{i}\\sin(2\\mathrm{n}-1)x]\\mathrm{n}\\in\\mathbb{N} \\end{aligned}$\nThen $\\mathrm{f}''(x)=$ _______ , (Where $\\mathrm{i}=\\sqrt{-1}$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad\\mathrm{n}^2\\mathrm{f}(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad-\\mathrm{n}^4\\mathrm{f}(x)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\quad-\\mathrm{n}^2\\mathrm{f}(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n}^4\\mathrm{f}(x)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2e5393d0effd",
+      "subtopic": "applications-of-complex-numbers-in-coordinate-geometry",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\frac{z-1}{2z+1}$ is an imaginary number and if it represents a circle then its radius is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{9}{16}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{4}$ units",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}$ units",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$ units",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8f340e67be4a",
+      "subtopic": "applications-of-complex-numbers-in-coordinate-geometry",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The equation $|z+1-i|=|z-1+i|$ represents a (where z is a complex number)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Straight line passing through the origin and the first and third quadrant.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Straight line passing through the origin and the second and fourth quadrant.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Straight line passing through the point $(1,-1)$ and having slope -1 .",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Straight line passing through the point $(2,1)$ and having slope $\\frac{1}{2}$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1185449b19f6",
+      "subtopic": "de-moivres-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\frac{(\\cos\\theta+i\\sin\\theta)^4}{(\\sin\\theta+i\\cos\\theta)^5}=$ where $\\mathrm{i}=\\sqrt{-1}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad\\cos\\theta-i\\sin\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\cos 9\\theta-\\mathrm{i}\\sin 9\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sin\\theta-i\\cos\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad\\sin 9\\theta-\\mathrm{i}\\cos 9\\theta$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9bd7eb266db0",
+      "subtopic": "conjugate-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The complex numbers $\\sin x+i\\cos 2x$ and $\\cos x$ - $\\mathrm{i}\\sin 2x,(\\mathrm{i}=\\sqrt{-1})$ are conjugate to each other for,",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad x=\\mathrm{n}\\pi,\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x=\\left(\\mathrm{n}+\\frac{1}{2}\\right)\\pi,\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x=(3\\mathrm{n}-1)\\pi,\\mathrm{n}\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "No value of $x$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b553f4b7198e",
+      "subtopic": "applications-of-complex-numbers-in-coordinate-geometry",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The locus of the points represented by $|z+3|-|z-3|=6$, where $z$ is a complex number, is ….",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Circle with radius 1 unit",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Straight line with slope 1.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Parabola with focus $(1,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "X -axis",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-92f46b3ad18f",
+      "subtopic": "applications-of-complex-numbers-in-coordinate-geometry",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{z}=x+\\mathrm{i}y$ is a complex number, then the equation $\\left|\\frac{z+i}{z-i}\\right|=\\sqrt{3}$ represents the",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "circle with centre $(2,0)$ and radius $\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "circle with centre $(0,2)$ and radius $\\sqrt{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "circle with centre $(0,0)$ and radius $\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "circle with centre $(0,-2)$ and radius $\\sqrt{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8a28e111c2a7",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "$\\mathrm{z}=\\frac{3+2\\mathrm{i}\\sin\\theta}{1-2\\mathrm{i}\\sin\\theta},(\\mathrm{i}=\\sqrt{-1})$ will be purely imaginary if $\\theta=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2n\\pi\\pm\\frac{\\pi}{8}$, where $n\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$n\\pi+\\frac{\\pi}{8}$, where $n\\in\\mathbb{Z}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$n\\pi\\pm\\frac{\\pi}{3}$, where $n\\in\\mathbb{Z}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$n\\pi$, where $n\\in\\mathbb{Z}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-955b9454527a",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $x=-2+\\sqrt{-3}$, then the value of $2x^4+5x^3+7x^2-x+38$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ab1f3d2f3deb",
+      "subtopic": "argument-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Argument of the complex number $z=\\frac{13-5i}{4-9i},i=\\sqrt{-1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3\\pi}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-34351291c5ef",
+      "subtopic": "algebra-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let $z$ be the complex number with $\\mathrm{Im}(z)=10$ and satisfying $\\frac{2\\mathrm{z}-\\mathrm{n}}{2\\mathrm{z}+\\mathrm{n}}=2\\mathrm{i}-1$, where $\\mathrm{i}=\\sqrt{-1}$, for some natural number ' $n$ ' then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{n}=20$ and $\\mathrm{Re}(\\mathrm{z})=10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{n}=20$ and $\\mathrm{Re}(\\mathrm{z})=-10$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{n}=40$ and $\\mathrm{Re}(\\mathrm{z})=10$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n}=40$ and $\\mathrm{Re}(\\mathrm{z})=-10$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4b600e91d7d1",
+      "subtopic": "argument-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A particle P starts from the point $\\mathrm{Z}_0=1+2\\mathrm{i}$ where $\\mathrm{i}=\\sqrt{-1}$. It moves first horizontally away from the origin by 5 units and then vertically upwards parallel to positive Y -axis by 3 units to reach a point $Z_1$. From $Z_1$ the particle moves $\\sqrt{2}$ units in the direction of vector $\\hat{\\mathrm{i}}+\\hat{\\mathrm{j}}$ and then it moves through an angle $\\frac{\\pi}{2}$ in anticlockwise direction on a circle with centre at origin to reach at point $Z_2$, then $Z_2=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6+7\\mathrm{i}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-7+6\\mathrm{i}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-6+7\\mathrm{i}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$7-6\\mathrm{i}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-87a0b549d184",
+      "subtopic": "square-root-of-a-complex-number",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The modulus of the square root of the complex number $6+8\\mathrm{i}$ (where $\\mathrm{i}=\\sqrt{-1}$ ) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}\\cdot\\sqrt{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{10}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b70a51e8906d",
+      "subtopic": "modulus-of-complex-numbers",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Let z be the complex number such that $|z|+z=3+i$ where $i=\\sqrt{-1}$, then $|z|=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{34}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{41}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e582ac0d075f",
+      "subtopic": "cube-roots-of-unity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "The area of the triangle whose vertices are $i,\\omega$ and $\\omega^2$ is (Where $\\omega$ is a complex cube root of unity other than $1,i$ is an imaginary number)__________ sq.units",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3\\sqrt{3}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\sqrt{3}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-MATH-9b792077c6f1",
       "subtopic": "argument-of-complex-numbers",
