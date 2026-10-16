@@ -401,6 +401,20 @@ def test_reel(tasks: BackgroundTasks, require_voice:bool=False):
     return dispatch(tasks, manual_reel=True, require_voice=require_voice)
 
 
+def legacy_render_wait():
+    """Old versions counted a local capacity rejection as a failed attempt.
+
+    Only confirmed pre-submission failures qualify; preserve their attempt audit.
+    """
+    return ((SocialJob.state == 'failed') & SocialJob.post_id.is_(None) &
+            SocialJob.error.startswith('render local free-tier budget reached ('))
+
+
+def is_legacy_render_wait(job):
+    return bool(job and job.state == 'failed' and not job.post_id and
+                (job.error or '').startswith('render local free-tier budget reached ('))
+
+
 def dispatch(tasks, manual_reel=False, require_voice=False):
     with SessionLocal() as db:
         pipeline.write(db,'last-publish-trigger',{'at':pipeline.stamp(datetime.utcnow()),'mode':'manual_reel' if manual_reel else 'scheduled'})
@@ -440,7 +454,7 @@ def dispatch(tasks, manual_reel=False, require_voice=False):
         if not manual_reel:
             current_index=int(slot[1:])
             candidates=db.query(SocialJob).filter(SocialJob.day.startswith(today()+':'),SocialJob.day!=today()+':'+MANUAL_REEL_SLOT,
-                SocialJob.attempts<3,or_((SocialJob.state=='failed') & (SocialJob.updated_at<now-RETRY_DELAY),
+                or_(SocialJob.attempts<3,legacy_render_wait()),or_((SocialJob.state=='failed') & (SocialJob.updated_at<now-RETRY_DELAY),
                                        (SocialJob.state=='running') & (SocialJob.updated_at<now-LEASE))).order_by(SocialJob.day).all()
             for candidate in candidates:
                 if not re.fullmatch(r'\d{4}-\d{2}-\d{2}:s\d{2}',candidate.day):continue
@@ -457,7 +471,7 @@ def dispatch(tasks, manual_reel=False, require_voice=False):
             if used >= daily_target():
                 return {'state': 'daily_limit', 'day': today(), 'limit': daily_target()}
         job = db.get(SocialJob, day)
-        reclaimable = job is None or (job.attempts < 3 and (job.state == 'failed' or (job.state == 'running' and job.updated_at < now-LEASE)))
+        reclaimable = job is None or ((job.attempts < 3 or is_legacy_render_wait(job)) and (job.state == 'failed' or (job.state == 'running' and job.updated_at < now-LEASE)))
         # Capacity waits are not generation failures. Check before claiming an
         # attempt, but let already-rendered checkpoints proceed to submission.
         if reclaimable and not pipeline.read(db,pipeline.key('prepared',day)):
@@ -487,7 +501,7 @@ def dispatch(tasks, manual_reel=False, require_voice=False):
             if job.state=='failed' and job.updated_at>now-(timedelta(minutes=30) if manual_reel else RETRY_DELAY):
                 return {**status_data(job),'retry_after':pipeline.stamp(job.updated_at+(timedelta(minutes=30) if manual_reel else RETRY_DELAY))}
             eligible = job.state == 'failed' or (job.state == 'running' and job.updated_at < now - LEASE)
-            if not eligible or job.attempts >= 3:
+            if not eligible or (job.attempts >= 3 and not is_legacy_render_wait(job)):
                 return status_data(job)
             count = db.query(SocialJob).filter_by(day=day, owner=job.owner, state=job.state,
                                                  updated_at=job.updated_at).update({

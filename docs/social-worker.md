@@ -151,3 +151,8 @@ the claimed attempt. Prepared media can still publish without another rendering
 reservation. Keep the cron running; polling rechecks capacity, without resetting
 the ledger or increasing the resource limit. A retry time permits another attempt;
 it does not guarantee a publishing time.
+
+Legacy slots already at the retry cap from an explicit local render-budget denial
+are eligible to wait and resume too, including recent earlier slots. Their old
+attempt counts are preserved. Actual rendering failures, ambiguous submissions and
+slots with remote post IDs are not reopened by this compatibility rule.

@@ -124,3 +124,51 @@ def test_prepared_media_can_publish_while_new_rendering_is_waiting(setup,monkeyp
     monkeypatch.setattr(social.worker,'render',no_render)
     client.post('/api/social/trigger',headers=AUTH)
     assert len(submitted)==1
+
+
+def test_legacy_exhausted_render_wait_recovers_without_resetting_attempt_audit(setup):
+    from app.models.social_job import SocialSlot
+    from test_social_slots import AUTH
+    client,factory,clock,submitted=setup
+    # s00 is now an earlier slot, so this exercises candidate recovery as well
+    # as recovery of the currently selected slot.
+    clock[0]=datetime(2026,10,6,8,30)
+    with factory() as db:
+        db.add(SocialUsage(id='old-render',service='render',created_at=datetime.utcnow(),units=1630,tokens=0))
+        db.add(SocialSlot(day='2026-10-06:s00',owner='old',state='failed',attempts=3,
+                          error='render local free-tier budget reached (24-hour 1630/1800; 180 units needed).',
+                          updated_at=datetime.utcnow()-timedelta(minutes=20)))
+        db.commit()
+    for _ in range(2):
+        wait=client.post('/api/social/trigger',headers=AUTH).json()
+        assert wait['state']=='budget_wait' and wait['slot']=='s00'
+        assert wait['attempts']==3 and wait['retry_after']
+    with factory() as db:
+        assert db.get(SocialSlot,'2026-10-06:s00').attempts==3
+        db.get(SocialUsage,'old-render').created_at=datetime.utcnow()-timedelta(days=2)
+        db.commit()
+    response=client.post('/api/social/trigger',headers=AUTH).json()
+    assert response['slot']=='s00' and response['state']=='running'
+    assert len(submitted)==1
+    with factory() as db:
+        assert db.get(SocialSlot,'2026-10-06:s00').attempts==4
+
+
+def test_real_exhausted_failures_and_remote_posts_are_not_reopened(setup):
+    from app.routers import social_slots as social
+    from app.models.social_job import SocialSlot
+    from test_social_slots import AUTH
+    client,factory,clock,submitted=setup
+    with factory() as db:
+        db.add(SocialSlot(day='2026-10-06:s00',owner='old',state='failed',attempts=3,
+                          error='Animation exceeded the rendering time budget.',
+                          updated_at=datetime.utcnow()-timedelta(minutes=20)))
+        db.commit()
+    response=client.post('/api/social/trigger',headers=AUTH).json()
+    assert response['state']=='failed' and response['attempts']==3 and not submitted
+    with factory() as db:
+        job=db.get(SocialSlot,'2026-10-06:s00')
+        job.error='render local free-tier budget reached (24-hour 1630/1800; 180 units needed).'
+        job.post_id='existing-remote-post'
+        db.commit()
+        assert not social.is_legacy_render_wait(job)
