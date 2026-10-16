@@ -12,7 +12,7 @@ Deploy frontend and backend together. Five new tables (`revision_cards`, `revisi
 
 ### Optional AI paper creation
 
-In **Create a paper → Add questions → Describe with AI**, teachers describe a question count, subject mix, chapters, difficulty target, or available PYQ year/shift. The existing manual methods remain available. Complete requests automatically create a finalized, teacher-owned paper and show **Download paper PDF** and **Download OMR PDF**, including matching A/B downloads when sets are requested. Nothing is assigned to students. The saved paper remains available in the library; duplicate it to edit.
+Clicking **Create a paper** opens **Describe with AI** directly, with no setup wizard. **Create manually** opens the existing builder. In the AI chat, teachers describe a question count, subject mix, chapters, difficulty target, or available PYQ year/shift. The existing manual methods remain available. Complete requests automatically create a finalized, teacher-owned paper and show **Download paper PDF** and **Download OMR PDF**, including matching A/B downloads when sets are requested. Nothing is assigned to students. The saved paper remains available in the library; duplicate it to edit.
 
 Missing counts, ambiguous shifts, unavailable topics and bank shortfalls return a follow-up in the same conversation. The initial timing, marking and set settings are shown above the chat and supplied as defaults. Teachers can override them in the request. No mandatory review, saving or finalising clicks follow a successful request. AI interpretation is approximate; the saved paper can still be inspected or duplicated.
 

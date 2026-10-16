@@ -307,6 +307,10 @@ def ai_create(b: AICompleteRequest, user=Depends(t.require_teacher), db=Depends(
         return (query.with_for_update() if lock else query).order_by(m.TeacherPaper.id).first()
     previous=existing()
     if previous: return completed_ai_paper(previous)
+    from app.services.teacher_ai import resolve_request
+    requested_exam, question = resolve_request(b.prompt, b.exam)
+    if question: return {'state':'needs_details','question':question}
+    b.exam = requested_exam
     settings=b.defaults.model_dump()
     # Missing input and ambiguous constraints are returned as a conversational follow-up.
     try:

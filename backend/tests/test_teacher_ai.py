@@ -257,3 +257,46 @@ def test_quick_inferred_section_count_cannot_exceed_limit(ai_studio,monkeypatch)
     mock_plan(monkeypatch,sections=[{'subject':'PHY','count':200},{'subject':'MATH','count':200}])
     assert quick(c).json()['state']=='needs_details'
     assert not c.get('/api/teacher/papers').json()['papers']
+
+
+def test_screenshot_conflicting_duration_asks_before_provider(ai_studio,monkeypatch):
+    c,*_=ai_studio
+    monkeypatch.setattr(ai,'interpret',lambda *a:pytest.fail('No provider call needed for conflicting times'))
+    response=quick(c,prompt='teacher: create 30 min test of mhtcet level for electrostatic 60 min two sets')
+    assert response.status_code==200,response.text
+    assert response.json()['state']=='needs_details'
+    assert '30 and 60 minutes' in response.json()['question']
+    assert 'How many questions' in response.json()['question']
+    assert not c.get('/api/teacher/papers').json()['papers']
+
+
+def test_explicit_exam_overrides_page_default_and_survives_followup(ai_studio,monkeypatch):
+    c,factory,_,_=ai_studio
+    with factory() as db:
+        for q in db.query(m.Question):q.exam='mht_cet'
+        db.commit()
+    def interpret(prompt,exam,catalog):
+        assert exam=='mht_cet'
+        return ai.AIPlan(count=3,sets_enabled=True,duration_minutes=60)
+    monkeypatch.setattr(ai,'interpret',interpret)
+    response=quick(c,prompt='teacher: create 30 min test of mhtcet for electrostatic 60 min two sets\nassistant: Which duration and how many questions?\nteacher: 3 questions, 60 minutes, two sets')
+    assert response.status_code==200,response.text
+    assert response.json()['paper']['settings']['exam']=='mht_cet'
+    assert response.json()['paper']['sets_enabled'] is True
+
+
+@pytest.mark.parametrize('model,reasoning',[('openai/gpt-oss-20b',True),('llama-3.3-70b-versatile',False)])
+def test_model_specific_parameters_and_safe_provider_diagnostics(monkeypatch,model,reasoning):
+    monkeypatch.setenv('GROQ_API_KEY','sensitive-key')
+    monkeypatch.setenv('TEACHER_AI_MODEL',model)
+    class Response:
+        status_code=400
+        def json(self):return {'error':{'code':'unsupported_parameter','message':'sensitive-key prompt content'}}
+    def post(url,**kw):
+        assert ('reasoning_effort' in kw['json']) is reasoning
+        return Response()
+    monkeypatch.setattr(ai.requests,'post',post)
+    with pytest.raises(Exception) as error:ai.interpret('Create 3 physics questions','jee_main',{})
+    assert error.value.status_code==503
+    assert 'HTTP 400' in error.value.detail and 'unsupported_parameter' in error.value.detail
+    assert 'sensitive-key' not in error.value.detail and 'prompt content' not in error.value.detail
