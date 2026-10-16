@@ -17,16 +17,22 @@ def load(year):
 
 
 @router.get('')
-def index(response:Response):
+def index(response:Response,db:Session=Depends(get_db)):
     response.headers['Cache-Control']='no-store'
-    return {'years':[source.summary(load(year)) for year in source.YEARS]}
+    return {'years':[{**source.summary(load(year)),'progress':importer.progress(db,load(year))} for year in source.YEARS]}
 
 
 @router.get('/{year}')
 def preview(year:int,response:Response,db:Session=Depends(get_db)):
     response.headers['Cache-Control']='no-store'
     data=load(year)
-    return {**source.summary(data),'database':importer.plan(db,data)}
+    return {**source.summary(data),'database':importer.plan(db,data),'progress':importer.progress(db,data)}
+
+
+@router.get('/{year}/progress')
+def progress(year:int,response:Response,db:Session=Depends(get_db)):
+    response.headers['Cache-Control']='no-store'
+    return importer.progress(db,load(year))
 
 
 class Publish(BaseModel):
@@ -41,5 +47,6 @@ def publish(year:int,body:Publish,response:Response,db:Session=Depends(get_db)):
     data=load(year)
     if body.expected_digest!=data['digest']:raise HTTPException(409,'Export changed. Review the current dataset before publishing.')
     if body.offset>len(data['questions']):raise HTTPException(422,'Offset exceeds the eligible question count')
-    try:return importer.publish_batch(db,data,body.offset,body.limit)
+    try:return importer.publish_next(db,data,body.offset,body.limit)
+    except ValueError as error:raise HTTPException(409,str(error)) from None
     except IntegrityError:raise HTTPException(409,'Concurrent import or content conflict. Refresh the preview; no changes from this batch were committed.') from None

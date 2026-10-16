@@ -66,7 +66,8 @@ def test_preview_is_read_only_and_api_publication_is_bounded_and_repeatable(setu
     assert result.status_code==200,result.text
     assert result.json()['added']==25 and result.json()['next_offset']==25
     repeated=client.post('/api/admin/pipeline-questions/2024/publish',json=body)
-    assert repeated.status_code==200 and repeated.json()['unchanged']==25
+    assert repeated.status_code==200 and repeated.json()['already_processed'] is True
+    assert repeated.json()['progress']['offset']==25 and repeated.json()['progress']['added']==25
     with factory() as db:
         assert db.query(models.Question).count()==25
         assert db.query(models.QuestionRevision).count()==25
@@ -154,16 +155,58 @@ def test_bad_numeric_missing_figure_and_unverified_solution_are_rejected(tmp_pat
 
 
 def test_batch_failure_rolls_back_questions_taxonomy_and_history(setup,monkeypatch):
-    _,_,factory=setup;data=sample_data(2);calls=[]
-    original=importer._upsert_question_assets
-    def fail_second(*args):
-        calls.append(1)
-        if len(calls)==2:raise RuntimeError('Interrupted batch')
-        return original(*args)
-    monkeypatch.setattr(importer,'_upsert_question_assets',fail_second)
+    _,_,factory=setup;data=sample_data(2)
     with factory() as db:
-        with pytest.raises(RuntimeError,match='Interrupted batch'):importer.publish_batch(db,data)
+        original=db.execute
+        def fail_revisions(statement,*args,**kwargs):
+            if getattr(getattr(statement,'table',None),'name',None)=='question_revisions':raise RuntimeError('Interrupted batch')
+            return original(statement,*args,**kwargs)
+        monkeypatch.setattr(db,'execute',fail_revisions)
+        with pytest.raises(RuntimeError,match='Interrupted batch'):importer.publish_next(db,data)
         assert db.query(models.Question).count()==0
         assert db.query(models.ImportRun).count()==0
         assert db.query(models.QuestionRevision).count()==0
         assert db.query(models.Chapter).count()==0
+        assert db.query(models.QuestionImportProgress).count()==0
+        monkeypatch.setattr(db,'execute',original)
+        assert importer.publish_next(db,data)['progress']['offset']==2
+
+
+def test_resume_reads_committed_cursor_after_response_loss_and_prevents_skipping(setup):
+    client,app,factory=setup;app.dependency_overrides[_require_admin]=lambda:'verified-admin'
+    data=source.dataset(2024);path='/api/admin/pipeline-questions/2024'
+    body={'expected_digest':data['digest'],'offset':0,'limit':25}
+    assert client.post(path+'/publish',json={**body,'offset':25}).status_code==409
+    assert client.post(path+'/publish',json=body).status_code==200
+    # Simulate a new browser instance after losing the response.
+    reloaded=TestClient(app)
+    saved=reloaded.get(path+'/progress').json()
+    assert saved['offset']==25 and saved['added']==25
+    assert reloaded.post(path+'/publish',json={**body,'offset':50}).status_code==409
+    result=reloaded.post(path+'/publish',json={**body,'offset':saved['offset']})
+    assert result.status_code==200 and result.json()['progress']['offset']==50
+    assert result.json()['progress']['added']==50
+    with factory() as db:
+        assert db.query(models.Question).count()==50
+        assert db.query(models.QuestionRevision).count()==50
+
+
+def test_bulk_import_limits_database_round_trips_and_completed_replay_does_not_rescan(setup):
+    from sqlalchemy import event
+    _,_,factory=setup;data=sample_data(25)
+    with factory() as db:
+        statements=[];engine=db.get_bind()
+        def record(conn,cursor,statement,params,context,executemany):statements.append(statement)
+        event.listen(engine,'before_cursor_execute',record)
+        try:
+            result=importer.publish_next(db,data)
+            assert result['added']==25
+            assert len(statements)<=30,len(statements)
+            statements.clear()
+            replay=importer.publish_next(db,data)
+            assert replay['already_processed'] and replay['progress']['offset']==25
+            assert not any('FROM questions' in sql or 'INTO questions' in sql for sql in statements)
+            statements.clear()
+            assert importer.plan(db,data)['counts']['unchanged']==25
+            assert len(statements)<=4,len(statements)
+        finally:event.remove(engine,'before_cursor_execute',record)

@@ -88,3 +88,25 @@ python backend/scripts/import_pipeline_questions.py --year 2025 --apply
 The first command is a read-only database preview. Omit `--year` to handle both
 reviewed years. Keep this CLI separate from the social publishing worker: question
 imports belong to the main website/database, not the Reel/Short renderer.
+
+## Resumable imports and fewer database round trips
+
+The main app initializes a `question_import_progress` table on deployment. Each
+export digest has one saved cursor and cumulative counts. The cursor, revisions
+and question changes commit together. Replaying an older batch returns the saved
+cursor without scanning or writing that batch again; an offset ahead of the
+saved cursor is rejected. `/api/admin/pipeline-questions/{year}/progress` is an
+Admin-only lightweight read used after refreshes and lost responses.
+
+The Admin control resumes from this server cursor and checks it before retrying
+an interrupted POST. It retries transient failures up to three times; expired
+Admin sessions and changed exports require signing in/reviewing again. Use **Pause import** to stop after the current batch is confirmed. Progress
+survives browser refreshes and service restarts. An import completed using the
+older code has no cursor yet; its existing questions are safely detected during
+the first pass, without duplication.
+
+New questions, options, assets and revisions use bulk inserts. Taxonomy is
+resolved once per chapter per batch, and preview avoids per-chunk relationship
+queries and duplicate checks for already-known references. In the local SQL
+statement test, a fresh 25-question batch went from 283 statements to 24. This is
+a query-count measurement, not a claim about production wall-clock speed.
