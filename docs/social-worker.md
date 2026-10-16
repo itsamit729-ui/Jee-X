@@ -139,3 +139,15 @@ Official documentation (checked 2026-10-16):
 - https://developers.facebook.com/documentation/instagram-platform/instagram-api-with-instagram-login
 - https://developers.google.com/youtube/v3/docs/videos/insert
 - https://support.google.com/youtube/answer/1270709
+
+### Rendering capacity waits
+
+The `render` ledger is this application's resource guard: 1,800 measured rendering
+seconds per rolling 24 hours, with a 180-second reservation per new render. It is
+not a Render hosting quota or provider billing report. Dispatch returns
+`budget_wait` with `retry_after` calculated from expiring usage and does not use
+an attempt while capacity is unavailable. Concurrent budget failures also restore
+the claimed attempt. Prepared media can still publish without another rendering
+reservation. Keep the cron running; polling rechecks capacity, without resetting
+the ledger or increasing the resource limit. A retry time permits another attempt;
+it does not guarantee a publishing time.

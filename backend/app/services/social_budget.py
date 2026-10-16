@@ -151,10 +151,12 @@ def tracked():
         worker.REQUEST_HOOKS.reset(token)
 
 
-def admission():
-    with SessionLocal() as db:
-        for service, units in [('buffer', 3), ('render', 180), ('egress', 8*1024*1024)]:
-            check(db, service, units=units)
+def admission(db=None):
+    if db is None:
+        with SessionLocal() as session:
+            return admission(session)
+    for service, units in [('buffer', 3), ('render', 180), ('egress', 8*1024*1024)]:
+        check(db, service, units=units)
 
 
 def record_egress(size):

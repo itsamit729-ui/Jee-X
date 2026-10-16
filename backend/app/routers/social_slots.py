@@ -159,7 +159,7 @@ def status_report():
             progress=cache.get(pipeline.key('progress',row.day)) or {}
             manifest=cache.get(pipeline.key('prepared',row.day)) or {}
             jobs.append({**status_data(row),'updated_at':pipeline.stamp(row.updated_at),'kind':kinds.get(row.day) or manifest.get('kind') or progress.get('kind') or ('reel' if row.day.endswith(':s99') else 'unknown'),
-                'stage':progress.get('stage'),'prepared':bool(manifest),'creative':manifest.get('creative'),'due_at':(delivery or {}).get('due_at'),
+                'stage':progress.get('stage'),'retry_after':progress.get('retry_after'),'budget':progress.get('budget'),'prepared':bool(manifest),'creative':manifest.get('creative'),'due_at':(delivery or {}).get('due_at'),
                 'delivery_checked_at':(delivery or {}).get('checked_at'),'operator_confirmed_at':(delivery or {}).get('operator_confirmed_at'),'published_url':(delivery or {}).get('external_link')})
         heartbeat=cache.get('last-publish-trigger')
         hold=cache.get('publishing-hold')
@@ -457,6 +457,21 @@ def dispatch(tasks, manual_reel=False, require_voice=False):
             if used >= daily_target():
                 return {'state': 'daily_limit', 'day': today(), 'limit': daily_target()}
         job = db.get(SocialJob, day)
+        reclaimable = job is None or (job.attempts < 3 and (job.state == 'failed' or (job.state == 'running' and job.updated_at < now-LEASE)))
+        # Capacity waits are not generation failures. Check before claiming an
+        # attempt, but let already-rendered checkpoints proceed to submission.
+        if reclaimable and not pipeline.read(db,pipeline.key('prepared',day)):
+            try:
+                budget.admission(db)
+            except budget.BudgetExceeded as error:
+                waiting = {'state':'budget_wait','day':today(),'slot':slot,
+                           'attempts':job.attempts if job else 0,
+                           'reason':safe_error(error),'retry_after':error.retry_at,
+                           'budget':error.details}
+                pipeline.write(db,pipeline.key('progress',day),
+                               {**waiting,'stage':'budget_wait','at':pipeline.stamp(now)})
+                db.commit()
+                return waiting
         if job is None:
             job = SocialJob(day=day, owner=owner, state='running', updated_at=now, attempts=1)
             db.add(job)
@@ -786,7 +801,16 @@ def run_job(day, owner):
             pipeline.write(db,pipeline.key('progress',day),{'stage':'accepted_by_buffer','at':pipeline.stamp(datetime.utcnow())});db.commit()
     except Exception as error:
         message=safe_error(error)
-        transition(day,owner,'submitting' if submitting else 'running','needs_review' if submitting else 'failed',error=message)
+        capacity_wait = isinstance(error,budget.BudgetExceeded) and not submitting
+        values = {'error':message}
+        if capacity_wait:
+            # A concurrent reservation can fill capacity after dispatch preflight.
+            values['attempts'] = SocialJob.attempts-1
+        transition(day,owner,'submitting' if submitting else 'running','needs_review' if submitting else 'failed',**values)
         with SessionLocal() as db:
-            pipeline.write(db,pipeline.key('progress',day),{'stage':phase,'kind':'reel' if is_reel(day.split(':')[-1]) else 'carousel','error':message,'at':pipeline.stamp(datetime.utcnow())});db.commit()
+            progress={'stage':'budget_wait' if capacity_wait else phase,
+                      'kind':'reel' if is_reel(day.split(':')[-1]) else 'carousel',
+                      'error':message,'at':pipeline.stamp(datetime.utcnow())}
+            if capacity_wait:progress.update(retry_after=error.retry_at,budget=error.details)
+            pipeline.write(db,pipeline.key('progress',day),progress);db.commit()
         logging.getLogger('uvicorn.error').warning('JeeEdge social slot=%s stage=%s: %s',day,phase,message)
