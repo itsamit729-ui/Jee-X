@@ -3,22 +3,36 @@
   "source_chapter": "limits-continuity-and-differentiability",
   "flagged": [],
   "math_check": {
-    "compared": 69,
-    "differ": 2,
+    "compared": 51,
+    "differ": 4,
     "questions": [
       {
-        "ref": "PYQ-MATH-22810fe96b25",
-        "source": "https://questions.examside.com/past-years/jee/question/p-lim-x-rightarrow-0-fracmathrmetan-x-mat-mht-cet-mathematics-complex-numbers-au7lnedxwficylcs",
+        "ref": "PYQ-MATH-8ce4b76f5efd",
+        "source": "https://questions.examside.com/past-years/jee/question/pgiven-mathrmfxleftbeginarrayccfrac1-co-mht-cet-mathematics-complex-numbers-eef6h0h4c3ldrrw2",
         "similarity": 0.85,
-        "ours": "$\\lim_{x\\rightarrow 0}\\frac{\\mathrm{e}^{\\tan x}-\\mathrm{e}^x}{\\tan x-x}=$",
-        "site": "$$ \\mathop {\\lim }\\limits_{x \\to 0} \\frac{\\mathrm{e}^{\\tan x}-\\mathrm{e}^x}{\\tan x-x}= $$"
+        "ours": "Given $\\mathrm{f}(x)=\\begin{cases} \\frac{1-\\cos 4x}{x^2} & ,\\text{ if }x<0 \\\\ \\mathrm{a} & ,\\text{ if }x=0 \\\\ \\frac{\\sqrt{x}}{\\sqrt{16-\\sqrt{x}-4}}, & \\text{ if }x>0 \\end{cases}$\nIf $\\mathrm{f}(x)$ is continuous at $x=0$, then value of a is",
+        "site": "Given $$\\mathrm{f}(x)=\\left\\{\\begin{array}{cc}\\frac{1-\\cos 4 x}{x^2} & , \\text { if } x<0 \\\\ \\mathrm{a} & , \\text { if } x=0 \\\\ \\frac{\\sqrt{x}}{\\sqrt{16-\\sqrt{x}-4}}, & \\text { if } x>0\\end{array}\\right.$$\nIf $$\\mathrm{f}(x)$$ is continuous..."
       },
       {
-        "ref": "PYQ-MATH-7434ac2aca44",
-        "source": "https://questions.examside.com/past-years/jee/question/p-lim-x-rightarrow-0-fracxxx2-p-mht-cet-mathematics-complex-numbers-mu7e3wqbqey0xjan",
+        "ref": "PYQ-MATH-f5ffad092237",
+        "source": "https://questions.examside.com/past-years/jee/question/pmatrix-fx--ax2--bx--1--if--left-mht-cet-mathematics-complex-numbers-uni0a3h7kzgdxeqg",
+        "similarity": 0.74,
+        "ours": "$\\begin{aligned} f(x)=ax^2+bx+1, & if & \\left|2x-3\\right|\\ge 2 \\\\ =3x+2, & if & \\frac{1}{2}<x<\\frac{5}{2} \\end{aligned}$\nis continuous on its domain, then $a+b$ has the value",
+        "site": "$$\\matrix{\n   {f(x) = a{x^2} + bx + 1,} & {if} & {\\left| {2x - 3} \\right| \\ge 2}  \\cr \n   { = 3x + 2,} & {if} & {{1 \\over 2} < x < {5 \\over 2}}  \\cr \n\n } $$\nis continuous on its domain, then $$a+b$$ has the value"
+      },
+      {
+        "ref": "PYQ-MATH-4e2925e034ae",
+        "source": "https://questions.examside.com/past-years/jee/question/pletp-pfxmatrix---x--3--ifx-le-mht-cet-mathematics-complex-numbers-gxmceuaua5dwbajs",
         "similarity": 0.81,
-        "ours": "$\\lim_{x\\rightarrow 0}\\frac{\\left|x\\right|}{|x|+x^2}=$",
-        "site": "$$ \\mathop {\\lim }\\limits_{x \\to 0} \\frac{|x|}{|x|+x^2}= $$\n\n"
+        "ours": "Let\n$f(x)\\begin{aligned} =|x|+3, & if\\,x\\le-3 \\\\ =-2x, & if\\;-3<x<3 \\\\ =6x-2, & if\\,x\\ge 3 \\end{aligned}$, then",
+        "site": "Let\n$$f(x)\\matrix{\n   { = |x| + 3,} & {if\\,x \\le  - 3}  \\cr \n   { =  - 2x,} & {if\\, - 3 < x < 3}  \\cr \n   { = 6x - 2,} & {if\\,x \\ge 3}  \\cr \n\n } $$, then"
+      },
+      {
+        "ref": "PYQ-MATH-8948ef9fbf47",
+        "source": "https://questions.examside.com/past-years/jee/question/pmathop-lim-limitsx-to-infty--left-sqrt--mht-cet-mathematics-complex-numbers-5pt9lrbrpi7rsrwp",
+        "similarity": 0.84,
+        "ours": "$\\lim_{x\\rightarrow\\infty}\\left(\\sqrt{x^2+5x-7}-x\\right)=$",
+        "site": "$$\\mathop {\\lim }\\limits_{x \\to \\infty } \\left( {\\sqrt {{x^2} + 5x - 7}  - x} \\right) = $$"
       }
     ]
   },

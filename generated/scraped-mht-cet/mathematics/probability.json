@@ -64,6 +64,2858 @@
   "passages": [],
   "questions": [
     {
+      "ref": "PYQ-MATH-57de9ae1a6d1",
+      "subtopic": "permutation-and-combination-based-problem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "The letters of the word 'LOGARITHM' are arranged at random. The probability that arrangement starts with vowel and end with consonant is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7!}{9!}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{18}{9!}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a6c9623f4ead",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "The p.d.f of c.r.v $X$ is given by $f(x)=\\frac{x+2}{18}$, if $-2<x<4$, $=0$, otherwise, then $\\mathrm{P}[|x|<1]=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{9}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{18}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e9733ac5974d",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "The probability that bomb will miss the target is 0.2. Then, the probability that out of 10 bombs dropped exactly 2 will hit the target is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{288}{5^9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{144}{5^{10}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{288}{5^{10}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{144}{5^9}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ee17fafb28eb",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "If the p.m.f of a. r.v. $X$ is given by\n$P(X=x)=\\frac{{}^5C_x}{2^5}$\nif $x=0,1,2,\\ldots\\ldots..5=0$,\n0 , otherwise,\nthen which of the following is not true?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$P(X\\le 2)=P(X\\ge 3)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$P(X\\le 1)=P(X\\ge 4)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$P(X\\le 2)\\ge P(X\\ge 4)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$P(X\\le 3)\\le P(X\\ge 3)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0d11d5da4390",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The pdf of a continuous r.v. $X$ is given by $f(x)=\\frac{x}{8},0<x<4=0$, otherwise, then $P(X\\le 2)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{16}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6fe772776654",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The odds in favour of drawing a king from a pack of 52 playing cards is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:12$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b29255689969",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "Out of 100 people selected at random, 10 have common cold. If five persons selected at random from the group, then the probability that at most one person will have common cold is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.9851",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.9185",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.9245",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.9254",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c95878bd13be",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "If a die is thrown at random, then the expectation of the number on it is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2.4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3.3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2.1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3.5",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-88bcbdbcfceb",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The odds in favour of getting sum multiple of 3 , when pair of dice are thrown is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-41a914d4e852",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $X\\sim B(4,p)$ and $P(X=0)=\\frac{16}{81}$, then $P(X=4)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{81}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{27}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-79de3774ec56",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Two dice are rolled simultaneously. The probability that the sum of the two numbers on the dice is a prime number, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{11}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{12}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7}{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{11}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6e673d4f5534",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "If the sum of mean and variance of a binomial distribution for 5 trials is 1.8, then probability of a success is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.2",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0.6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9d60868c462f",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The variance of the following probability distribution is,",
+      "image": {
+        "url": "/question-images/mht-cet/mathematics/probability/PYQ-MATH-9d60868c462f.png",
+        "alt": "Figure for this Probability question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{8}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a97fce78b6ec",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Two unbiased dice are thrown. Then the probability that neither a doublet nor a total of 10 will appear is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{36}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{9}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ed2614c7f866",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The p.m.f. of a random variable X is $\\mathrm{P}(\\mathrm{X}=\\mathrm{x})=\\frac{1}{2^5}\\left({}_{\\mathrm{x}}^5\\right),\\mathrm{x}=0,1,2,3,4,5=0$ then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{P}(\\mathrm{X}\\le 2)<\\mathrm{P}(\\mathrm{X}\\ge 3)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{P}(\\mathrm{X}\\le 2)>\\mathrm{P}(\\mathrm{X}\\ge 3)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{P}(\\mathrm{X}\\le 2)=2\\mathrm{P}(\\mathrm{X}\\ge 3)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{P}(\\mathrm{X}\\le 2)=\\mathrm{P}(\\mathrm{X}\\ge 3)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-176ffda60f50",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A lot of 100 bulbs contains 10 defective bulbs. Five bulbs selected at random from the lot and sent to retain store, then the probability that the store will receive at most one defective bulb is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.59049",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.91854",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.6561",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.32805",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-28ba058a3978",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{X}$ is a random variable with p.m.f. as follows.\n$\\begin{aligned} \\mathrm{P}(\\mathrm{X}=\\mathrm{x}) & =\\frac{5}{16},\\mathrm{x}=0,1 \\\\ & =\\frac{\\mathrm{kx}}{48},\\mathrm{x}=2,\\quad\\text{ then }\\mathrm{E}(\\mathrm{x})= \\\\ & =\\frac{1}{4},\\mathrm{x}=3 \\end{aligned}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.1875",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1.3125",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1.5625",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.5625",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b11c83977f25",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "In a meeting $60\\%$ of the members favour and $40\\%$ oppose a certain proposal. A member is selected at random and we take $\\mathrm{X}=0$ if he opposed and $\\mathrm{X}=1$ if he is in favour, then $\\mathrm{Var}\\mathrm{X}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.36",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.24",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.6",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.06",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cdbe468ffea1",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A coin is tossed and a die is thrown. The probability that the outcome will be head or a number greater than 4 or both, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-36816e0ebf64",
+      "subtopic": "permutation-and-combination-based-problem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "an urn contains 9 balls of which 3 are red, 4 are blue and 2 are green. Three balls are drawn at random from the urn. The probability that the three balls have difference colours is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{14}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{14}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{7}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6f5046624907",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "It is observed that $25\\%$ of the cases related to child labour reported to the police station are solved. If 6 new cases are reported, then the probability that at least 5 of them will be solved is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{19}{1024}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{19}{4096}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "${\\left(\\frac{1}{4}\\right)}^6$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{19}{2048}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-805495e2a943",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A coin is tossed three times. If X denotes the absolute difference between the number of heads and the number of tails, then P (X = 1) =",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ae9aa79794d5",
+      "subtopic": "venn-diagram-and-set-theory",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "For two events $\\mathrm{A}$ and $\\mathrm{B},\\mathrm{P}(\\mathrm{A}\\cup\\mathrm{B})=\\frac{5}{6},\\mathrm{P}(\\mathrm{A})=\\frac{1}{6},\\mathrm{P}(\\mathrm{B})=\\frac{2}{3}$, then $\\mathrm{A}$ and $\\mathrm{B}$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "independent",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "mutually exhaustive",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "mutually exclusive",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "complementary",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e5d45d4c5ee6",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A random variable X $\\sim$ B (n, p), if values of mean and variance of X are 18 and 12 respectively, then n =",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "54",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "18",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "55",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-756e38919ed4",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A fair coin is tossed 4 times. If $X$ is a random variable which indicates number of heads, then $\\mathrm{P}[\\mathrm{X}<3]=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{10}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{12}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{11}{16}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-aecc18878bd5",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "If the mean and variance of a binomial distribution are 4 and 2 respectively, then probability of getting 2 heads is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{28}{256}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{37}{256}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{128}{256}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{219}{256}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b1c4b9c9a2cb",
+      "subtopic": "conditional-probability-and-multiplication-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "First bag contains 3 red and 5 black balls and second bag contains 6 red and 4 black balls. A ball is drawn from each bag. The probability that one ball is red and the other is black, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{41}{80}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{21}{40}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{20}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2e828028adbf",
+      "subtopic": "conditional-probability-and-multiplication-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Rooms in a hotel are numbered from 1 to 19. Rooms are allocated at random as guests arrive. The first guest to arrive is given a room which is a prime number. The probability that the second guest to arrive is given a room which is a prime number is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{19}\\times\\frac{7}{18}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{8}{19}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{8}{19}\\times\\frac{7}{19}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7}{18}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3e55d8497236",
+      "subtopic": "bayes-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A man is known to speck truth 3 out of 4 times. He throws a die and reports that it is 6. Then the probability that it is actually 6 is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{8}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a6c3371647d5",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The mean of the numbers obtained on throwing a die having written 1 on three faces, 2 on two faces and 5 on one face is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{8}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c0a6ce4bdbfb",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "If the function defined by $f(x)=K(x-x^2)$ if $0<x<1=0$, otherwise is the p.d.f. of a r.v.X, then the value of $P\\left(X<\\frac{1}{2}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cf33c3b6f7e4",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Let two cards are drawn at random from a pack of 52 playing cards. Let X be the number of aces obtained. Then the value of E(X) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{13}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{37}{221}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e4f5d5f032be",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A fair coin is tossed 100 times. The probability of getting a head for even number of times is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ba063df0b69e",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A die is thrown four times. The probability of getting perfect square in at least one throw is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{58}{61}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{16}{81}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{65}{81}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{23}{81}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e826330f31ca",
+      "subtopic": "conditional-probability-and-multiplication-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{P}(\\mathrm{A})=\\frac{3}{10},\\mathrm{P}(\\mathrm{B})=\\frac{2}{5},\\mathrm{P}(\\mathrm{A}\\cup\\mathrm{B})=\\frac{3}{5}$, then $\\mathrm{P}(\\mathrm{A}/\\mathrm{B})\\times\\mathrm{P}(\\mathrm{B}/\\mathrm{A})=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{12}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-664c48fcbbe9",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A fair coin is tossed for a fixed number of times. If probability of getting 7 heads is equal to probability of getting 9 heads, then probability of getting 2 heads is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{15}{2^{13}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{15}{2^8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{15}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e857f27b8f6e",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Two dice are thrown simultaneously. If X denotes the number of sixes, then the expectation of X is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fce3602f712c",
+      "subtopic": "venn-diagram-and-set-theory",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The probability that at least one of the events $E_1$ and $E_2$ occurs is 0.6. If the simultaneous occurrence of $\\mathrm{E}_1$ and $\\mathrm{E}_2$ is $0.2,\\mathrm{P}\\left(\\mathrm{E}'_1\\right)+\\mathrm{P}\\left(\\mathrm{E}'_2\\right)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1.6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.2",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "0.8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1e93a6ca4637",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "Two cards are drawn successively with replacement from a well shuffled pack of 52 cards. Then mean of number of kings is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{169}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{169}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{13}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-401ddbfce6da",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "The incidence of occupational disease in an industry is such that the workmen have a $10\\%$ chance of suffering from it. The probability that out of 5 workmen, 3 or more will contract the disease is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.000856",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.856",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.0000856",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.00856",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-41764a151d02",
+      "subtopic": "venn-diagram-and-set-theory",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "If $P(A\\cup B)=0.7,P(A\\cap B)=0.2$, then $P\\left(A'\\right)+P\\left(B'\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.1",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "1.6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.8",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4b7c34bb190a",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A player tosses 2 fair coins. He wins ₹5 if 2 heads appear, ₹ 2 if one head appears and ₹ 1 if no head appears. Then the variance of his winning amount in ₹ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{17}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e020c1888a7f",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The p.d.f. of a discrete random variable is defined as $\\mathrm{f}(x)=\\begin{cases} \\mathrm{k}x^2,0\\le x\\le 6 \\\\ 0,\\text{ otherwise } \\end{cases}$\nThen the value of $F(4)$ (c.d.f) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{30}{91}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{30}{97}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{15}{47}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{15}{97}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fdb64645fbf4",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Three critics review a book. For the three critics the odds in favor of the book are $2:5,3:4$ and $4:3$ respectively. The probability that the majority is in favor of the book, is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{183}{343}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{160}{343}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{209}{343}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{134}{343}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-febed2fb89c0",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "For a binomial variate $\\mathrm{X}$ with $\\mathrm{n}=6$ if $P(X=4)=\\frac{135}{2^{12}}$, then its variance is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{8}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9}{8}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b959378fb4a5",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If the sum of mean and variance of a Binomial Distribution is $\\frac{15}{2}$ for 10 trials, then the variance is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2.5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4.5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3.5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bfea6aec9b44",
+      "subtopic": "conditional-probability-and-multiplication-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The three ships namely A, B and C sail from India to Africa. If the odds in favour of the ships reaching safely are $2:5,3:7$ and $6:11$ respectively, then probability of all of them arriving safely is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{18}{595}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{11}{34}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{196}{217}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{595}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c14a06304e63",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "In a game, 3 coins are tossed. A person is paid ₹ 7 /-, if he gets all heads or all tails; and he is supposed to pay ₹ 3 /-, if he gets one head or two heads. The amount he can expect to win on an average per game is ₹",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-$0.5",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0.5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-$1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-39778b076ca6",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A binomial random variable $\\mathrm{X}$ satisfies $9.p(X=4)=p(X=2)$ when $n=6$. Then $p$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6737ea7bd429",
+      "subtopic": "permutation-and-combination-based-problem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Three of six vertices of a regular hexagon are chosen at random. The probability that the triangle with these three vertices is equilateral, equals ___________.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{10}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{20}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d3c80d444b0f",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "From a lot of 20 baskets, which includes 6 defective baskets, a sample of 2 baskets is drawn at random one by one without replacement. The expected value of number of defective basket is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.6",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0.06",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.006",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1.07",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-187fb0414aad",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two cards are drawn successively with replacement from a well-shuffled pack of 52 cards. Then mean of number of tens is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{169}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{13}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{169}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2ef0324afd80",
+      "subtopic": "conditional-probability-and-multiplication-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{A}$ and $\\mathrm{B}$ are two events such that $\\mathrm{P}(\\mathrm{A})=\\frac{1}{3},\\mathrm{P}(\\mathrm{B})=\\frac{1}{5},\\mathrm{P}(\\mathrm{A}\\cup\\mathrm{B})=\\frac{1}{3}$, then the value of $\\mathrm{P}\\left(\\mathrm{A}'/\\mathrm{B}'\\right)+\\mathrm{P}\\left(\\mathrm{B}'/\\mathrm{A}'\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{11}{6}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7488a9255b1b",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Let a random variable $\\mathrm{X}$ have a Binomial distribution with mean 8 and variance 4. If $\\mathrm{P}(\\mathrm{X}\\le 2)=\\frac{\\mathrm{K}}{2^{16}}$, then $\\mathrm{K}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "17",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "121",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "136",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "137",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-17d9c9ab0307",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "An experiment succeeds twice as often as it fails. Then the probability, that in the next 6 trials there will be at least 4 successes, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{729}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{496}{729}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{233}{729}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{491}{729}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-28816b4646ae",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The p.m.f of random variate $\\mathrm{X}$ is $P(X)=\\begin{cases} \\frac{2x}{\\mathrm{n}(\\mathrm{n}+1)}, & x=1,2,3,\\ldots\\ldots,\\mathrm{n} \\\\ 0, & \\text{ otherwise } \\end{cases}$\nThen $\\mathrm{E}(\\mathrm{X})=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{n}+1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\mathrm{n}+1}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{n}+2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2n-1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-84bb6d1fe3e8",
+      "subtopic": "conditional-probability-and-multiplication-theorem",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\mathrm{A}$ and $\\mathrm{B}$ are independent events with $\\mathrm{P}(\\mathrm{A})=\\frac{1}{4}$ and $\\mathrm{P}(\\mathrm{A}\\cup\\mathrm{B})=2\\mathrm{P}(\\mathrm{B})-\\mathrm{P}(\\mathrm{A})$, then $\\mathrm{P}(\\mathrm{B})$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{5}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-03a8ba151faf",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Three fair coins with faces numbered 1 and 0 are tossed simultaneously. Then variance (X) of the probability distribution of random variable $\\mathrm{X}$, where $\\mathrm{X}$ is the sum of numbers on the upper most faces, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.7",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.75",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.65",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-163595b30bf9",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A box contains 100 tickets numbered 1 to 100 . A ticket is drawn at random from the box. Then the probability, that number on the ticket is a perfect square, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{10}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{10}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7}{100}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9}{100}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-898965218534",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "An irregular six faced die is thrown and the probability that, in 5 throws it will give 3 even numbers is twice the probability that it will give 2 even numbers. The number of times, in 6804 sets of 5 throws, you expect to give no even number is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "18",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "28",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "27",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "19",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2e187c83b352",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A card is drawn at random from a well shuffled pack of 52 cards. The probability that it is black card or face card is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{6}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{8}{13}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3f02607337e0",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Let $\\mathrm{X}$ be random variable having Binomial distribution $B(7,p)$. If $P[X=3]=5P[X=4]$, then variance of $\\mathrm{X}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{7}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{35}{36}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{77}{36}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{36}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e959d28e95e4",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If a continuous random variable $\\mathrm{X}$ has probability density function $\\mathrm{f}(x)$ given by\n$f(x)=\\begin{cases} ax & ,\\text{ if }0\\le x<1 \\\\ a & ,\\text{ if }1\\le x<2 \\\\ 3a-ax & ,\\text{ if }2\\le x\\le 3 \\\\ 0 & ,\\text{ otherwise } \\end{cases}$,\nthen a has the value",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8bb908b524e8",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two dice are rolled. If both dice have six faces numbered $1,2,3,5,7,11$, then the probability that the sum of the numbers on upper most face is prime, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1/4$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3/4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1/9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2/7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-287f5059a22f",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Three critics review a book. For the three critics the odds in favour of the book are $2:5,3:4$ and $4:3$ respectively. The probability that the majority is in favour of the book, is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{183}{343}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{160}{343}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{209}{343}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{134}{343}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9035470c2d44",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\text{ If }f(x)=\\begin{cases} 3\\left(1-2x^2\\right) & ;0<x<1 \\\\ 0 & ;\\text{ otherwise } \\end{cases}$ is a probability density function of $\\mathrm{X}$, then $\\mathrm{P}\\left(\\frac{1}{4}<x<\\frac{1}{3}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{75}{243}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{23}{96}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{179}{864}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{52}{243}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c936784be453",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "For an initial screening of an entrance exam, a candidate is given fifty problems to solve. If the probability that the candidate can solve any problem is $\\frac{4}{5}$, then the probability, that he is unable to solve less than two problems, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{201}{5}{\\left(\\frac{1}{5}\\right)}^{49}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{316}{25}{\\left(\\frac{4}{5}\\right)}^{48}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{54}{5}{\\left(\\frac{4}{5}\\right)}^{49}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{164}{25}{\\left(\\frac{1}{5}\\right)}^{48}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-522fb03a5b70",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The p.m.f. of a random variable $\\mathrm{X}$ is $\\mathrm{P}(x)=\\begin{cases} \\frac{2x}{\\mathrm{n}(\\mathrm{n}+1)}, & x=1,2,3,\\ldots\\mathrm{n} \\\\ 0, & \\text{ otherwise } \\end{cases}$, then $\\mathrm{E}(\\mathrm{X})$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{n}+1}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\mathrm{n}+1}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{n}+1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2n+1}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-68cd9e4cf9e3",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A lot of 100 bulbs contains 10 defective bulbs. Five bulbs are selected at random from the lot and are sent to retail store. Then the probability that the store will receive at most one defective bulb is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{7}{5}{\\left(\\frac{9}{10}\\right)}^4$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{7}{5}{\\left(\\frac{9}{10}\\right)}^5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{6}{5}{\\left(\\frac{9}{10}\\right)}^4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{6}{5}{\\left(\\frac{9}{10}\\right)}^5$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-800a50f7ce9c",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "There are 6 positive and 8 negative numbers. From these four numbers are chosen at random and multiplied. Then the probability, that the product is a negative number, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{496}{1001}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{505}{1001}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{490}{1001}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{504}{1001}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4134a5b483a3",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Three fair coins numbered 1 and 0 are tossed simultaneously. Then variance Var (X) of the probability distribution of random variable $\\mathrm{X}$, where $\\mathrm{X}$ is the sum of numbers on the uppermost faces, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.7",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.75",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.65",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.62",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bb047c6d3399",
+      "subtopic": "classical-defininition-of-probability",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\mathrm{A},\\mathrm{B},\\mathrm{C}$ are three events, one of which must and only one can happen. The odds in favor of $\\mathrm{A}$ are $4:6$, the odds against $B$ are $7:3$. Thus, odds against $\\mathrm{C}$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7:3$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4:6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6:4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bd84e48dd50d",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "In a Binomial distribution with $\\mathrm{n}=4$, if $2\\mathrm{P}(\\mathrm{X}=3)=3\\mathrm{P}(\\mathrm{X}=2)$, then the variance is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{36}{169}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{144}{169}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9}{169}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{16}{169}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f79d04d76591",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The probability mass function of random variable X is given by\n$P[X=r]=\\left\\{\\begin{aligned} \\frac{{}^nC_r}{32}, & n,r\\in\\mathbb{N} \\\\ 0, & \\text{ otherwise } \\end{aligned}\\text{, then }P[X\\le 2]=\\right.$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-11978c3b8153",
+      "subtopic": "binomial-distribution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A man takes a step forward with probability 0.4 and backwards with probability 0.6 . The probability that at the end of eleven steps, he is one step away from the starting point is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${}^{11}\\mathrm{C}_6(0.24)^6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${}^{11}\\mathrm{C}_6(0.24)^5$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "${}^{11}\\mathrm{C}_6(0.4)^6(0.6)^5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${}^{11}\\mathrm{C}_6(0.4)^5(0.6)^6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-54a423b961e1",
+      "subtopic": "total-probability-theorem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A problem in statistics is given to three students A, B and C. Their probabilities of solving the problem are $\\frac{1}{2},\\frac{1}{3}$ and $\\frac{1}{4}$ respectively. If all of them try independently, then the probability, that problem is solved, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8feeebb236d2",
+      "subtopic": "probability-distribution-of-a-random-variable",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two cards are drawn successively with replacement from a well shuffled pack of 52 cards, then mean of number of queens is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{13}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{169}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{13}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{169}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
       "ref": "PYQ-MATH-6ccc82954e7a",
       "subtopic": "binomial-distribution",
       "type": "single_correct",

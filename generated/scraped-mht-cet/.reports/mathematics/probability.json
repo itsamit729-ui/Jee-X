@@ -3,134 +3,92 @@
   "source_chapter": "probability",
   "flagged": [],
   "math_check": {
-    "compared": 115,
-    "differ": 18,
+    "compared": 95,
+    "differ": 12,
     "questions": [
       {
-        "ref": "PYQ-MATH-84fb679743b1",
-        "source": "https://questions.examside.com/past-years/jee/question/pthe-cumulative-distribution-function-of-a-discrete-random-mht-cet-mathematics-complex-numbers-njxhvicdrpjdcxgh",
-        "similarity": 0.8,
-        "ours": "The cumulative distribution function of a discrete random variable X is\n$\\begin{aligned} \\mathrm{X}=x & -4 & -2 & 0 & 2 & 4 & 6 & 8 & 10 \\\\ ~\\mathrm{F}(\\mathrm{X}=x) & 0.1 & 0.3 & 0.5 & 0.65 & 0.75 & 0.85 & 0.90 & 1 \\end{aligned}$\nthen $\\frac{P(X\\leqslant 0)}{",
-        "site": "The cumulative distribution function of a discrete random variable X is\n$$ \\begin{array}{|c|c|c|c|c|c|c|c|c|} \\hline \\mathrm{X}=x & -4 & -2 & 0 & 2 & 4 & 6 & 8 & 10 \\\\ \\hline \\mathrm{~F}(\\mathrm{X}=x) & 0.1 & 0.3 & 0.5 & 0.65 & 0.75 & 0.85 ..."
+        "ref": "PYQ-MATH-6908aaf81f2a",
+        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-probability-distribution-mht-cet-mathematics-complex-numbers-rxheep5ujrqgftpd",
+        "similarity": 0.31,
+        "ours": "A random variable $X$ has the probability distribution\n$X=x$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8\n$P(X=x)$ | 0.15 | 0.23 | 0.12 | 0.20 | 0.08 | 0.10 | 0.05 | 0.07\nFor the events $E=\\{X$ is a prime number $\\}$ and $F=\\{x<5\\},P(E\\cup F)$ is",
+        "site": "A random variable $$X$$ has the probability distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;paddin..."
       },
       {
-        "ref": "PYQ-MATH-3370c1c0188a",
-        "source": "https://questions.examside.com/past-years/jee/question/pconsider-the-probability-distributionp-p-beginar-mht-cet-mathematics-complex-numbers-szzlonolynefelen",
-        "similarity": 0.74,
-        "ours": "Consider the probability distribution\n$\\begin{aligned} \\mathrm{X}=x & 1 & 2 & 3 & 4 & 5 \\\\ \\mathrm{P}(\\mathrm{X}=x) & \\mathrm{K} & 2~\\mathrm{K} & {~\\mathrm{K}}^2 & 2~\\mathrm{K} & 5{~\\mathrm{K}}^2 \\end{aligned}$\nThen the value of $\\mathrm{P}(\\mathrm{X}>2)$ is",
-        "site": "Consider the probability distribution\n$$ \\begin{array}{|l|l|l|l|l|l|} \\hline \\mathrm{X}=x & 1 & 2 & 3 & 4 & 5 \\\\ \\hline \\mathrm{P}(\\mathrm{X}=x) & \\mathrm{K} & 2 \\mathrm{~K} & \\mathrm{~K}^2 & 2 \\mathrm{~K} & 5 \\mathrm{~K}^2 \\\\ \\hline \\end{a..."
+        "ref": "PYQ-MATH-9ffcc6ea6655",
+        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-following-probability-dis-mht-cet-mathematics-complex-numbers-of1qptynai4hfwd5",
+        "similarity": 0.4,
+        "ours": "A random variable $X$ has the following probability distribution\n$\\mathrm{X}=x$ | 0 | 1 | 2\n$\\mathrm{P}(\\mathrm{X}=x)$ | $4\\mathrm{k}-10\\mathrm{k}^2$ | $5\\mathrm{k}-1$ | $3\\mathrm{k}^3$\nthen P(X < 2) is",
+        "site": "A random variable $$X$$ has the following probability distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hid..."
       },
       {
-        "ref": "PYQ-MATH-fd738d5f46bd",
-        "source": "https://questions.examside.com/past-years/jee/question/pif-a-random-variable-x-has-the-following-probability-dist-mht-cet-mathematics-complex-numbers-vyllhibdra7wgbup",
-        "similarity": 0.77,
-        "ours": "If a random variable X has the following probability distribution of X\n$\\begin{aligned} \\mathrm{X}=x & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\\\ \\mathrm{P}(\\mathrm{X}=x) & 0 & \\mathrm{k} & 2\\mathrm{k} & 2\\mathrm{k} & 3\\mathrm{k} & \\mathrm{k}^2 & 2\\mathrm{k}^2 & 7\\mathr",
-        "site": "If a random variable X has the following probability distribution of X\n$$ \\begin{array}{|l|c|c|c|c|c|c|c|c|} \\hline \\mathrm{X}=x & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\\\ \\hline \\mathrm{P}(\\mathrm{X}=x) & 0 & \\mathrm{k} & 2 \\mathrm{k} & 2 \\mathrm{..."
+        "ref": "PYQ-MATH-41764a151d02",
+        "source": "https://questions.examside.com/past-years/jee/question/pif-pa-cup-b07-pa-cap-b02-then-plefta-mht-cet-mathematics-complex-numbers-svwrraxjsyjxno3v",
+        "similarity": 0.84,
+        "ours": "If $P(A\\cup B)=0.7,P(A\\cap B)=0.2$, then $P\\left(A'\\right)+P\\left(B'\\right)$ is",
+        "site": "If $$P(A \\cup B)=0.7, P(A \\cap B)=0.2$$, then $$P\\left(A^{\\prime}\\right)+P\\left(B^{\\prime}\\right)$$ is"
       },
       {
-        "ref": "PYQ-MATH-16d85e88b402",
-        "source": "https://questions.examside.com/past-years/jee/question/p-text--the-cdf-of-a-discrete-random-variable--ma-mht-cet-mathematics-complex-numbers-f51twzf4os2zc2bn",
-        "similarity": 0.75,
-        "ours": "The c.d.f. of a discrete random variable X is\n$\\begin{aligned} \\mathrm{X} & -3 & -1 & 0 & 1 & 3 & 5 & 7 & 9 \\\\ ~\\mathrm{F}(\\mathrm{X}=x) & 0.1 & 0.3 & 0.5 & 0.65 & 0.75 & 0.85 & 0.90 & 1 \\end{aligned}$\nThen $\\frac{P[X=-3]}{P[X<0]}=$",
-        "site": "The c.d.f. of a discrete random variable X is\n$$ \\begin{array}{|c|c|c|c|c|c|c|c|c|} \\hline \\mathrm{X} & -3 & -1 & 0 & 1 & 3 & 5 & 7 & 9 \\\\ \\hline \\mathrm{~F}(\\mathrm{X}=x) & 0.1 & 0.3 & 0.5 & 0.65 & 0.75 & 0.85 & 0.90 & 1 \\\\ \\hline \\end{arr..."
+        "ref": "PYQ-MATH-d812858c4f06",
+        "source": "https://questions.examside.com/past-years/jee/question/pthe-probability-distribution-of-a-random-variable-x-isp-mht-cet-mathematics-complex-numbers-pwjicagnrm5hfpf0",
+        "similarity": 0.38,
+        "ours": "The probability distribution of a random variable X is\n$\\mathrm{X}=\\mathrm{x}$ | 1 | 2 | 3 | ......... | $\\mathrm{n}$\n$\\mathrm{P}(\\mathrm{X}=\\mathrm{x})$ | $\\frac{1}{\\mathrm{n}}$ | $\\frac{1}{\\mathrm{n}}$ | $\\frac{1}{\\mathrm{n}}$ | ......... | $\\frac{1}{\\mathrm",
+        "site": "The probability distribution of a random variable X is\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:..."
       },
       {
-        "ref": "PYQ-MATH-9ca0c2a89b89",
-        "source": "https://questions.examside.com/past-years/jee/question/pthe-following-is-the-probability-distribution-of-xp-p-mht-cet-mathematics-complex-numbers-bgfvyyrbse6dfj7w",
-        "similarity": 0.82,
-        "ours": "The following is the probability distribution of X\n$\\begin{aligned} \\mathrm{X} & 0 & 1 & 2 & 3 \\\\ \\mathrm{P}(\\mathrm{X}=x) & \\frac{1+\\mathrm{p}}{5} & \\frac{2-2\\mathrm{p}}{5} & \\frac{2-\\mathrm{p}}{5} & \\frac{2\\mathrm{p}}{5} \\end{aligned}$\n$\\text{ For a minimum ",
-        "site": "The following is the probability distribution of X\n$$ \\begin{array}{|c|c|c|c|c|} \\hline \\mathrm{X} & 0 & 1 & 2 & 3 \\\\ \\hline \\mathrm{P}(\\mathrm{X}=x) & \\frac{1+\\mathrm{p}}{5} & \\frac{2-2 \\mathrm{p}}{5} & \\frac{2-\\mathrm{p}}{5} & \\frac{2 \\ma..."
+        "ref": "PYQ-MATH-c69e1e535262",
+        "source": "https://questions.examside.com/past-years/jee/question/pif-the-probability-distribution-function-of-a-random-vari-mht-cet-mathematics-complex-numbers-2hodej0oqhaj68ou",
+        "similarity": 0.42,
+        "ours": "If the probability distribution function of a random variable X is given as\n$\\mathrm{X}=\\mathrm{x}_{\\mathrm{i}}$ | $-2$ | $-1$ | 0 | 1 | 2\n$\\mathrm{P}(\\mathrm{X}=\\mathrm{x}_{\\mathrm{i}})$ | 0.2 | 0.3 | 0.15 | 0.25 | 0.1\nThen F(0) is equal to",
+        "site": "If the probability distribution function of a random variable X is given as\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  ove..."
       },
       {
-        "ref": "PYQ-MATH-b59bbe180517",
-        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-following-probability-distr-mht-cet-mathematics-complex-numbers-akon4o74ms8uoiu0",
-        "similarity": 0.79,
-        "ours": "A random variable $X$ has the following probability distribution\n$\\begin{aligned} \\mathrm{X}: & 0 & 1 & 2 & 3 & 4 \\\\ \\mathrm{P}(\\mathrm{X}): & \\mathrm{k} & 2\\mathrm{k} & 4\\mathrm{k} & 2\\mathrm{k} & \\mathrm{k} \\end{aligned}$\nthen the value of $\\mathrm{P}(1\\leqs",
-        "site": "A random variable $X$ has the following probability distribution\n$$ \\begin{array}{|l|c|c|c|c|c|} \\hline \\mathrm{X}: & 0 & 1 & 2 & 3 & 4 \\\\ \\hline \\mathrm{P}(\\mathrm{X}): & \\mathrm{k} & 2 \\mathrm{k} & 4 \\mathrm{k} & 2 \\mathrm{k} & \\mathrm{k}..."
-      },
-      {
-        "ref": "PYQ-MATH-34a79497036b",
-        "source": "https://questions.examside.com/past-years/jee/question/plet-x-be-a-discrete-random-variable-the-probability-dist-mht-cet-mathematics-complex-numbers-6lb3sdfmwr3sj1na",
-        "similarity": 0.8,
-        "ours": "Let X be a discrete random variable. The probability distribution of X is given below\n$\\begin{aligned} \\mathrm{X} & 30 & 10 & -10 \\\\ \\mathrm{P}(\\mathrm{X}) & \\frac{1}{5} & ~\\mathrm{A} & ~\\mathrm{B} \\end{aligned}$\nand $\\mathrm{E}(\\mathrm{X})=4$, then the value ",
-        "site": "Let X be a discrete random variable. The probability distribution of X is given below\n$$ \\begin{array}{|c|c|c|c|} \\hline \\mathrm{X} & 30 & 10 & -10 \\\\ \\hline \\mathrm{P}(\\mathrm{X}) & \\frac{1}{5} & \\mathrm{~A} & \\mathrm{~B} \\\\ \\hline \\end{ar..."
-      },
-      {
-        "ref": "PYQ-MATH-ff491dda821b",
-        "source": "https://questions.examside.com/past-years/jee/question/pthe-probability-distribution-of-a-discrete-random-variabl-mht-cet-mathematics-complex-numbers-xgb3lz0if5zzhibb",
+        "ref": "PYQ-MATH-a5fb2fc91981",
+        "source": "https://questions.examside.com/past-years/jee/question/pthe-probability-distribution-of-a-discrete-random-variabl-mht-cet-mathematics-complex-numbers-dgqwxvl7er3161gc",
         "similarity": 0.39,
-        "ours": "The probability distribution of a discrete random variable X is\n$\\mathrm{X}$ | 0 | 1 | 2 | 3 | 4\n$\\mathrm{P}(\\mathrm{X}=x)$ | $2\\mathrm{k}$ | $\\mathrm{k}$ | $2\\mathrm{k}$ | $4\\mathrm{k}$ | $\\mathrm{k}$\nIf $\\mathrm{a}=\\mathrm{P}(x<3)$ and $\\mathrm{b}=\\mathrm{P}",
+        "ours": "The probability distribution of a discrete random variable X is\n$\\mathrm{X}$ | 1 | 2 | 3 | 4 | 5 | 6\n$\\mathrm{P}(\\mathrm{X})$ | K | 2K | 3K | 4K | 5K | 6K\nFind the value of $\\mathrm{P}(2<\\mathrm{X}<6)$",
         "site": "The probability distribution of a discrete random variable X is\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden..."
       },
       {
-        "ref": "PYQ-MATH-5004aeb4ea8d",
-        "source": "https://questions.examside.com/past-years/jee/question/pif-a-random-variable-x-has-the-following-probability-dist-mht-cet-chemistry-some-basic-concepts-of-chemistry-qbtdsrwzvrldw3n9",
-        "similarity": 0.41,
-        "ours": "If a random variable X has the following probability distribution values\n$\\mathrm{X}$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7\n$\\mathrm{P}(\\mathrm{X}):$ | 0 | $\\mathrm{k}$ | $2\\mathrm{k}$ | $2\\mathrm{k}$ | $3\\mathrm{k}$ | $\\mathrm{k}^2$ | $2\\mathrm{k}^2$ | $7\\mathrm{k}",
-        "site": "If a random variable X has the following probability distribution values\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overfl..."
+        "ref": "PYQ-MATH-4640e9e82467",
+        "source": "https://questions.examside.com/past-years/jee/question/pfor-the-probability-distribution-given-by-followingp--mht-cet-mathematics-complex-numbers-bf7xxjlhdmon0gl0",
+        "similarity": 0.3,
+        "ours": "For the probability distribution given by following\n$\\mathrm{x}$ | 5 | 6 | 7 | 8 | 9 | 10 | 11\n$\\mathrm{P}(\\mathrm{X}=\\mathrm{x})$ | 0.07 | 0.2 | 0.3 | $\\mathrm{k}$ | 0.07 | 0.04 | 0.02\nVar(X) =",
+        "site": "For the probability distribution given by following\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10p..."
       },
       {
-        "ref": "PYQ-MATH-79986ca339f0",
-        "source": "https://questions.examside.com/past-years/jee/question/pfor-the-probability-distributionp-pstyle-typetext-mht-cet-mathematics-complex-numbers-1spndcgggdmavyy6",
-        "similarity": 0.24,
-        "ours": "For the probability distribution\n$x:$ | 0 | 1 | 2 | 3 | 4 | 5\n$p(x):$ | $\\mathrm{k}$ | 0.3 | 0.15 | 0.15 | 0.1 | 2$\\mathrm{k}$\nThe expected value of X is",
-        "site": "For the probability distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:no..."
-      },
-      {
-        "ref": "PYQ-MATH-2e26fbea25dc",
-        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-following-probability-distrib-mht-cet-mathematics-complex-numbers-nndf0f0j9m9yay3u",
-        "similarity": 0.38,
-        "ours": "A random variable X has the following probability distribution\n$X$ | 1 | 2 | 3 | 4 | 5\n$p(x)$ | $\\mathrm{k}^2$ | $2\\mathrm{k}$ | $\\mathrm{k}$ | $2\\mathrm{k}$ | $5\\mathrm{k}^2$\nThen $\\mathrm{p}(x\\ge 2)$ is equal to",
+        "ref": "PYQ-MATH-6bd5a122f8f1",
+        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-following-probability-distrib-mht-cet-mathematics-complex-numbers-knbh49rkv6rexhhn",
+        "similarity": 0.36,
+        "ours": "A random variable X has the following probability distribution\n$x$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8\n$P(X=x)$ | K | 2K | 3K | 4K | 4K | 3K | 2K | K | K\nThen $\\mathrm{P}(3<\\mathrm{x}\\le 6)=$",
         "site": "A random variable X has the following probability distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;..."
       },
       {
-        "ref": "PYQ-MATH-251d8d9d877f",
-        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-following-probability-distr-mht-cet-mathematics-complex-numbers-t396ytjgw8pgy0nc",
-        "similarity": 0.34,
-        "ours": "A random variable $X$ has the following probability distribution\n$X=x$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8\n$P(X=x)$ | 0.15 | 0.23 | 0.10 | 0.12 | 0.20 | 0.08 | 0.07 | 0.05\nFor the event $E=\\{X$ is a prime number $\\}$, $F=\\{X<4\\}$, then $P(E\\cup F)$ is",
-        "site": "A random variable $X$ has the following probability distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidde..."
+        "ref": "PYQ-MATH-9b2d6fb0b5cf",
+        "source": "https://questions.examside.com/past-years/jee/question/pthe-distribution-function-fx-of-discrete-random-var-mht-cet-mathematics-complex-numbers-1frd7b1jmkkdllvs",
+        "similarity": 0.39,
+        "ours": "The distribution function $F(X)$ of discrete random variable $X$ is given by\n$\\mathrm{X}$ | 1 | 2 | 3 | 4 | 5 | 6\n$\\mathrm{F}(\\mathrm{X}=\\mathrm{x})$ | 0.2 | 0.37 | 0.48 | 0.62 | 0.85 | 1\nThen $\\mathrm{P}[\\mathrm{X}=4]+\\mathrm{P}[\\mathrm{x}=5]=$",
+        "site": "The distribution function $$F(X)$$ of discrete random variable $$X$$ is given by\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n..."
       },
       {
-        "ref": "PYQ-MATH-ac8533847894",
-        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-following-probability-distrib-mht-cet-mathematics-complex-numbers-phzvpnexlffekupm",
-        "similarity": 0.34,
-        "ours": "A random variable X has the following probability distribution\n$\\mathrm{X}$ | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8\n$\\mathrm{P}(\\mathrm{X}=x)$ | 0.15 | 0.23 | 0.12 | 0.10 | 0.20 | 0.08 | 0.07 | 0.05\nFor the events $\\mathrm{E}=\\{\\mathrm{X}$ is prime number $\\}$\n$\\mathr",
+        "ref": "PYQ-MATH-52cce9890bbb",
+        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-following-distributionp-pst-mht-cet-mathematics-complex-numbers-aibn0ckdf4lnzgtc",
+        "similarity": 0.32,
+        "ours": "A random variable X has following distribution\n$\\mathrm{X}=\\mathrm{x}$ | 1 | 2 | 3 | 4 | 5 | 6\n$\\mathrm{P}(\\mathrm{X}=\\mathrm{x})$ | k | 3k | 5k | 7k | 8k | k\nThen P (2 $\\le$ x < 5) =",
+        "site": "A random variable X has following distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px..."
+      },
+      {
+        "ref": "PYQ-MATH-e699e38e2d89",
+        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-following-probability-distrib-mht-cet-mathematics-complex-numbers-e0kalueo8zayceuj",
+        "similarity": 0.36,
+        "ours": "A random variable X has the following probability distribution\n$\\mathrm{X}=\\mathrm{x}$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7\n$\\mathrm{P}[\\mathrm{X}=\\mathrm{x}]$ | 0 | $\\mathrm{k}$ | $2\\mathrm{k}$ | $2\\mathrm{k}$ | $3\\mathrm{k}$ | $\\mathrm{k}^2$ | $2\\mathrm{k}^2$ | $",
         "site": "A random variable X has the following probability distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;..."
       },
       {
-        "ref": "PYQ-MATH-2eb70c0ccc19",
-        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-has-the-following-probability-distribut-mht-cet-mathematics-complex-numbers-4mfipgk16xaouox7",
-        "similarity": 0.37,
-        "ours": "A random variable has the following probability distribution\n$\\mathrm{X}:$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7\n$\\mathrm{P}(x):$ | 0 | $2\\mathrm{p}$ | $2\\mathrm{p}$ | $3\\mathrm{p}$ | $\\mathrm{p}^2$ | $2\\mathrm{p}^2$ | $7\\mathrm{p}^2$ | $2\\mathrm{p}$\nThen the value ",
-        "site": "A random variable has the following probability distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;pa..."
-      },
-      {
-        "ref": "PYQ-MATH-c6c7b2b9d705",
-        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-following-probability-distr-mht-cet-mathematics-complex-numbers-rsxxbrpohiypcxfx",
-        "similarity": 0.38,
-        "ours": "A random variable $X$ has the following probability distribution\n$\\mathrm{X}:$ | 1 | 2 | 3 | 4 | 5\n$\\mathrm{P}(\\mathrm{X}):$ | $\\mathrm{k}^2$ | $2\\mathrm{k}$ | $\\mathrm{k}$ | $2\\mathrm{k}$ | $5\\mathrm{k}^2$\nThen $\\mathrm{P}(\\mathrm{X}>2)$ is equal to",
-        "site": "A random variable $X$ has the following probability distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidde..."
-      },
-      {
-        "ref": "PYQ-MATH-c0795d5049b3",
-        "source": "https://questions.examside.com/past-years/jee/question/pfor-the-probability-distributionp-pstyle-typetext-mht-cet-mathematics-complex-numbers-u3ax8egp7nvmq5h8",
-        "similarity": 0.24,
-        "ours": "For the probability distribution\n$\\mathrm{X}:$ | $-2$ | $-1$ | $0$ | $1$ | $2$ | $3$\n$\\mathrm{p}(x):$ | 0.1 | 0.2 | 0.2 | 0.3 | 0.15 | 0.05\nThen the $\\mathrm{Var}(\\mathrm{X})$ is\n(Given : $\\left.(0.25)^2=0.0625,(0.35)^2=0.1225,(0.45)^2=0.2025\\right)$",
-        "site": "For the probability distribution\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden;padding:10px 5px;word-break:no..."
-      },
-      {
-        "ref": "PYQ-MATH-be9e077db656",
-        "source": "https://questions.examside.com/past-years/jee/question/pa-random-variable-x-has-the-following-probability-distrib-mht-cet-mathematics-complex-numbers-bjc9yjdujwiwjyvg",
-        "similarity": 0.6,
-        "ours": "A random variable x has the following probability distribution. Then value of $k$ is _________ and $\\mathrm{P}(3<x\\le 6)$ has the value\n$\\mathrm{X}=x$ | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8\n$\\mathrm{P}(x)$ | $\\mathrm{k}$ | $2\\mathrm{k}$ | $3\\mathrm{k}$ | $4\\mathr",
-        "site": "A random variable x has the following probability distribution. Then value of $k$ is\n_________ and $\\mathrm{P}(3< x \\leq 6)$ has the value\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;borde..."
-      },
-      {
-        "ref": "PYQ-MATH-ebc9ea5f3513",
-        "source": "https://questions.examside.com/past-years/jee/question/pthe-probability-distribution-of-a-random-variable-x-is-gi-mht-cet-mathematics-complex-numbers-eityff5ij5oehfqb",
+        "ref": "PYQ-MATH-a0d7c4e3442b",
+        "source": "https://questions.examside.com/past-years/jee/question/pif-x-is-arv-with-cdf-fx-and-its-probability-di-mht-cet-mathematics-complex-numbers-sdupbn8mi5v87plc",
         "similarity": 0.4,
-        "ours": "The probability distribution of a random variable X is given by\n$\\mathrm{X}=x_i$: | 0 | 1 | 2 | 3 | 4\n$\\mathrm{P}(\\mathrm{X}=x_i)$ : | 0.4 | 0.3 | 0.1 | 0.1 | 0.1\nThen the variance of X is",
-        "site": "The probability distribution of a random variable X is given by\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n  overflow:hidden..."
+        "ours": "If $X$ is a.r.v. with c.d.f $F(x)$ and its probability distribution is given by\n$X=x$ | $-1.5$ | $-0.5$ | 0.5 | 1.5 | 2.5\n$P(X=x)$ | 0.05 | 0.2 | 0.15 | 0.25 | 0.35\nthen, $F(1.5)-F(-0.5)=$",
+        "site": "If $X$ is a.r.v. with c.d.f $F(x)$ and its probability distribution is given by\n\n.tg  {border-collapse:collapse;border-spacing:0;}\n.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;\n ..."
       }
     ]
   },

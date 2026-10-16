@@ -34,6 +34,1896 @@
   "passages": [],
   "questions": [
     {
+      "ref": "PYQ-MATH-0008872b92c9",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "The symbolic form of the following circuit is (where $p,q$ represents switches $S_1$ and $s_2$ closed respectively)",
+      "image": {
+        "url": "/question-images/mht-cet/mathematics/mathematical-reasoning/PYQ-MATH-0008872b92c9.png",
+        "alt": "Figure for this Mathematical Reasoning question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$(p\\wedge q)\\wedge(\\sim p\\wedge\\sim q)\\equiv I$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$p\\wedge[q\\wedge(\\sim p\\wedge\\sim q)\\equiv I$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(p\\vee q)\\vee(\\sim p\\wedge\\sim q)\\equiv I$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$p\\vee[q\\wedge(\\sim p\\wedge\\sim q)\\equiv I$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2b161aa74cc5",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "If $p\\rightarrow(\\sim p\\vee q)$ is false, then the truth values of $p$ and $q$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "F, F",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "F, T",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "T, F",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "T, T",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-456ca801fbc0",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "If $p,q$ are true statement and $r$ is false statement, then which of the following statements is a true statement.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(p\\rightarrow r)\\rightarrow q$ is false",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(p\\leftrightarrow q)\\rightarrow r$ is false",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(p\\wedge q)\\rightarrow r$ is true",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(p\\vee q)\\vee r$ is false",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cfd62e4f63cf",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The negation of the statement ' He is poor but happy' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "He is poor but not happy",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "He is neither poor nor happy",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "He is not poor and not happy",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "He is not poor or not happy",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7889c2535c4c",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The statement pattern $p\\wedge(q\\vee\\sim p)$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p\\wedge q$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$q\\wedge\\sim p$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$p\\vee q$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p\\rightarrow q$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f0a9cad2a223",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The negation of the statement pattern $\\sim p\\vee(qr)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p\\wedge(q\\wedge r)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sim p\\wedge(q\\wedge r)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$p\\vee(q\\wedge r)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p\\rightarrow(q\\wedge\\sim r)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cc86231b175b",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The logical expression $\\mathrm{p}\\wedge(\\sim\\mathrm{p}\\vee\\sim\\mathrm{q})\\wedge\\mathrm{q}\\equiv$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p\\vee q$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$p\\wedge q$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "F",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "T",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f6fb006d3061",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The negation of a statement 'x $\\in$ A $\\cap$ B $\\rightarrow$ (x $\\in$ A and x $\\in$ B)' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "x $\\in$ A $\\cap$ B $\\rightarrow$ (x $\\in$ A or x $\\in$ B)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "x $\\in$ A $\\cap$ B and (x $\\notin$ A or x $\\notin$ B)",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "x $\\in$ A $\\cap$ B or (x $\\in$ A or x $\\in$ B)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "x $\\notin$ A $\\cap$ B and (x $\\in$ A and x $\\in$ B)",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-294547f42cf1",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Negation of $(p\\wedge q)\\rightarrow(\\sim p\\vee r)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p\\vee q\\vee(\\sim r)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$p\\wedge q\\wedge r$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sim p\\wedge q\\wedge r$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p\\wedge q\\wedge(\\sim r)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8b8e7a530cce",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "p : It rains today\nq : I am going to school\nr : I will meet my friend\ns : I will go to watch a movie.\nThen symbolic form of the statement \"If it does not rain today or I won't go to school, then I will meet my friend and I will go to watch a movie\" is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sim(\\mathrm{p}\\vee\\mathrm{q})\\rightarrow(\\mathrm{r}\\vee\\mathrm{s})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\mathrm{p}\\wedge\\mathrm{q})\\rightarrow(\\mathrm{r}\\vee\\mathrm{s})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sim(\\mathrm{p}\\wedge\\mathrm{q})\\rightarrow(\\mathrm{r}\\wedge\\mathrm{s})$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(\\sim\\mathrm{p}\\wedge\\mathrm{q})\\rightarrow(\\mathrm{r}\\wedge\\mathrm{s})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2cf0ce170f81",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $p,q$ are true statements and $r$ is false statement, then which of the following is correct.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(p\\vee q)\\vee r$ has truth value $F$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\mathrm{p}\\rightarrow\\mathrm{r})\\rightarrow\\mathrm{q}$ has truth value $\\mathrm{F}$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(p\\wedge q)\\rightarrow r$ has truth value $T$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\mathrm{p}\\leftrightarrow\\mathrm{q})\\rightarrow\\mathrm{r}$ has truth value $\\mathrm{F}$.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-87bff83268f8",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Negation of the statement $\\forall x\\in R,x^2+1=0$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\exists x\\in R$ such that $x^2+1<0$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\exists x\\in R$ such that $x^2+1\\ne 0$.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\exists x\\in R$ such that $x^2+1\\le 0$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\exists\\mathrm{x}\\in\\mathrm{R}$ such that $\\mathrm{x}^2+1=0$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3e23eeff343f",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "If p $\\rightarrow$ (~p $\\vee$ q) is false, then the truth values of p and q are, respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "T, F",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "F, F",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "F, T",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "T, T",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dc26d5744640",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The logical statement (p $\\rightarrow$ q) $\\wedge$ (q $\\rightarrow$ ~p) is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "~p",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "p",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "q",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "~q",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9347b5c8a7c5",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If statements $\\mathrm{p}$ and $\\mathrm{q}$ are true and $\\mathrm{r}$ and $\\mathrm{s}$ are false, then truth values of $\\sim(\\mathrm{p}\\rightarrow\\mathrm{q})\\leftrightarrow(\\mathrm{r}\\wedge\\mathrm{s})$ and $(\\sim\\mathrm{p}\\rightarrow\\mathrm{q})\\wedge(\\mathrm{r}\\leftrightarrow\\mathrm{s})$ are respectively.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{F},\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "T, T",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "T, F",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "F, T",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a7fa1628cc86",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The expression $[(p\\wedge\\sim q)\\vee q]\\vee(\\sim p\\wedge q)$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p\\vee q$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$p\\wedge q$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$p\\rightarrow q$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p\\leftrightarrow q$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8f208f1eff4f",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Given $\\mathrm{p}$ : A man is a judge, $\\mathrm{q}$ : A man is honest\nIf $\\mathrm{S}1$ : If a man is a judge, then he is honest\nS2 : If a man is a judge, then he is not honest\nS3 : A man is not a judge or he is honest\nS4 : A man is a judge and he is honest, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{S}_2\\equiv\\mathrm{S}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{S}_1\\equiv\\mathrm{S}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{S}_2\\equiv\\mathrm{S}_4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{S}_1\\equiv\\mathrm{S}_3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b657bb30c115",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The statement pattern $(p\\wedge q)\\wedge[(p\\wedge q)\\vee(\\sim p\\wedge q)]$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$q$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$p\\wedge q$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{p}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p\\vee q$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d743d8759bbc",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Let $a(p\\wedge\\sim r)\\vee(\\sim q\\vee s)$ and $b:(p\\vee s)\\leftrightarrow(q\\wedge r)$.\nIf the truth values of $p$ and $q$ are true and that of $r$ and $s$ are false, then the truth values of $a$ and $b$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "T, F",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "T, T",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "F, F",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "F, T",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7f9efb41d2d3",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "S1 : If $-$7 is an integer, then $\\sqrt{-7}$ is a complex number\n$\\mathrm{S}2$ : $-$7 is not an integer or $\\sqrt{-7}$ is a complex number",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "S1 and S2 are converse statements of each other",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "S1 and S2 are negations of each other",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "S1 and S2 are equivalent statements",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "S1 and S2 are contrapositive of each other",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f164f9152402",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Negation of the statement : $3+6>8$ and $2+3<6$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3+6\\le 8$ or $2+3<6$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3+6<8$ or $2+3<6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3+6\\le 8$ or $2+3\\ge 6$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3+6>8$ or $2+3\\ge 6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-36147480d201",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "\"If two triangles are congruent, then their areas are equal.\" is the given statement, then the contrapositive of the inverse of the given statement is\n(Where $\\mathrm{p}$ : Two triangles are congruent, $\\mathrm{q}$ : Their areas are equal)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "If two triangles are not congruent. then their areas are equal.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "If two triangles are not congruent, then their areas are not equal.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "If areas of two triangles are equal, then they are congruent.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "If areas of two triangles are not equal, then they arc congruent.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c1fa166796b1",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The negation of inverse of $\\sim\\mathrm{p}\\rightarrow\\mathrm{q}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sim\\mathrm{p}\\wedge\\mathrm{q}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sim\\mathrm{q}\\rightarrow\\mathrm{p}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$p\\wedge(\\sim q)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{p}\\wedge\\mathrm{q}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-88851001d5dc",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The negation of $p\\wedge(q\\rightarrow r)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sim p\\wedge(\\sim qr)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sim\\mathrm{p}\\vee(\\mathrm{q}\\wedge\\sim\\mathrm{r})$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sim\\mathrm{p}\\vee(\\sim\\mathrm{q}\\mathrm{r})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{p}\\vee(\\sim\\mathrm{p}\\vee\\mathrm{r})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a43f338f3406",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{p}$ : It is raining and $\\mathrm{q}$ : It is pleasant, then the symbolic form of \"It is neither raining nor pleasant\" is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sim\\mathrm{p}\\wedge\\mathrm{q}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sim\\mathrm{p}\\vee\\mathrm{q}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(\\sim p)\\wedge(\\sim q)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\sim p)\\vee(\\sim q)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b184600523ec",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{p}$ : It is raining.\n$\\mathrm{q}$ : Weather is pleasant\nthen simplified form of the statement \"It is not true, if it is raining then weather is not pleasant\" is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "It is not raining or weather is pleasant.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "It is raining or weather is not pleasant.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "It is raining or weather is pleasant.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "It is raining and the weather is pleasant.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d80b0b8a073a",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The negation of '$\\forall x\\in N,x^2+x$ is even number' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\forall x\\in N,x^2+x$ is not an even number.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\forall x\\in N,x^2+x$ is not an odd number.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\exists x\\in N$ such that $x^2+x$ is an even number.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\exists x\\in N$ such that $x^2+x$ is not an even number.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-39c9d1464329",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "The negation of the statement, \"The payment will be made if and only if the work is finished in time\" is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "The work is finished in time and the payment is not made or the payment is made and the work is finished in time.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "The work is finished in time and the payment is not made.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The payment is made and the work is not finished in time.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Either the work is finished in time and the payment is not made or the payment is made and the work is not finished in time.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6de5430a7bd8",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "If $p:\\forall n\\in IN,n^2+n$ is an even number $q:\\forall n\\in IN,n^2-n$ is an odd numer, then the truth values of $p\\wedge q,p\\vee q$ and $p\\rightarrow q$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$F,T,F$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$F,F,T$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$T,T,F$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$F,T,T$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e6e14e1f4ced",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "The negation of the statement pattern $p\\vee(qr)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sim p\\wedge(q\\wedge\\sim r)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sim p\\wedge(q\\wedge r)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sim p\\wedge(\\sim q\\wedge r)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sim p\\wedge(\\sim q\\wedge\\sim r)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d30a17d33fa8",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The logical statement $[\\sim(\\sim p\\vee q)\\vee(p\\wedge r)]\\wedge(\\sim q\\wedge r)$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(p\\wedge r)\\wedge\\sim q$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(p\\wedge\\sim q)\\vee r$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\quad\\sim\\mathrm{p}\\vee\\mathrm{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sim p\\wedge r$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-616dc07965c2",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The negation of the statement pattern $\\sim s\\vee(\\sim r\\wedge s)$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$s\\wedge r$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$s\\wedge(r\\wedge\\sim s)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$s\\wedge\\sim r$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$s\\vee(r\\vee\\sim s)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6ea9fab221dd",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{p}$ and $\\mathrm{q}$ are true statements and $\\mathrm{r}$ and $\\mathrm{s}$ are false statements, then the truth values of the statement patterns $(p\\wedge q)\\vee r$ and $(\\mathrm{p}\\vee\\mathrm{s})\\leftrightarrow(\\mathrm{q}\\wedge\\mathrm{r})$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "F, T",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{T},\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "F, F",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{T},\\mathrm{F}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-60fe7ff5cf15",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The statement pattern $\\mathrm{p}(\\mathrm{p}\\wedge\\sim\\mathrm{q})$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{q}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\sim p)\\vee q$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(\\sim p)\\wedge q$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\sim p)\\vee(\\sim q)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c786a950a048",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The logical statement $(\\sim(\\sim\\mathrm{p}\\vee\\mathrm{q})\\vee(\\mathrm{p}\\wedge\\mathrm{r}))\\wedge(\\sim\\mathrm{q}\\wedge\\mathrm{r})$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sim p\\vee r$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(p\\wedge\\sim q)\\vee r$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(\\mathrm{p}\\wedge\\mathrm{r})\\wedge\\sim\\mathrm{q}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(\\sim p\\wedge\\sim q)\\wedge r$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d5f22d41ffeb",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If truth value of logical statement $(pq)\\rightarrow(\\sim p\\wedge q)$ is false, then the truth values of $p$ and $q$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{F},\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{T},\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{T},\\mathrm{F}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{F},\\mathrm{F}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-307a65f5e4a5",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The contrapositive of \"If $x$ and $y$ are integers such that $xy$ is odd, then both $x$ and $y$ are odd\" is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "If both $x$ and $y$ are odd integers, then $xy$ is odd.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "If both $x$ and $y$ are even integers, then $xy$ is even.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "If $x$ or $y$ is an odd integer, then $xy$ is odd.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "If both $x$ and $y$ are not odd integers, then the product $xy$ is not odd.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cc160ad269ba",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The inverse of the statement \"If the surface area increase, then the pressure decreases.\", is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "If the surface area does not increase, then the pressure does not decrease.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "If the pressure decreases, then the surface area increases.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "If the pressure does not decreases, then the surface area does not increase.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "If the surface area does not increase, then the pressure decreases.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-067876900331",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Let\nStatement 1 : If a quadrilateral is a square, then all of its sides are equal.\nStatement 2: All the sides of a quadrilateral are equal, then it is a square.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Statement 2 is contrapositive of statement 1.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Statement 2 is negation of statement 1.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Statement 2 is inverse of statement 1.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Statement 2 is the converse of statement 1.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-20f1baf8a0a8",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Negation of inverse of the following statement pattern $(p\\wedge q)\\rightarrow(p\\vee\\sim q)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{p}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sim q$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sim p$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{q}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-defe7139938f",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The expression $(p\\wedge\\sim q)\\vee q\\vee(\\sim p\\wedge q)$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sim\\mathrm{p}\\vee\\mathrm{q}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$p\\wedge q$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{p}\\vee\\mathrm{q}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$p\\vee\\sim q$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0ba6a72d2cf3",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Negation of contrapositive of statement pattern $(p\\vee\\sim q)\\rightarrow(p\\wedge\\sim q)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(\\sim p\\wedge q)\\vee(p\\wedge\\sim q)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(\\sim p\\vee q)\\wedge(p\\vee\\sim q)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(p\\wedge\\sim q)\\vee(\\sim p\\wedge\\sim q)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\sim p\\vee\\sim q)\\wedge(p\\vee q)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cda882500c4d",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $q$ is false and $p\\wedge q\\leftrightarrow r$ is true, then ............ is a tautology.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p\\vee r$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(p\\wedge r)\\rightarrow p\\vee r$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$(p\\vee r)\\rightarrow p\\wedge r$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$p\\wedge r$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-09174a5977b6",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The negation of the statement\n\"The number is an odd number if and only if it is divisible by 3.\"",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "The number is an odd number but not divisible by 3 or the number is divisible by 3 but not odd.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "The number is not an odd number iff it is not divisible by 3.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The number is not an odd number but it is divisible by 3.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "The number is not an odd number or is not divisible by 3 but the number is divisible by 3 or odd.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2eee59ee6f44",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The statement $[(p\\rightarrow q)\\wedge\\sim q]\\rightarrow r$ is tautology, when $r$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{p}\\wedge\\sim\\mathrm{q}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$q\\vee p$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{p}\\wedge\\mathrm{q}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sim q$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-162e6e0d8ac8",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The statement $[\\mathrm{p}\\wedge(\\mathrm{q}\\vee\\mathrm{r})]\\vee[\\sim\\mathrm{r}\\wedge\\sim\\mathrm{q}\\wedge\\mathrm{p}]$ is equivalent to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sim\\mathrm{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{p}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sim\\mathrm{q}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{q}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dceaf074d252",
+      "subtopic": "logical-statement",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If the statement $\\mathrm{p}\\leftrightarrow(\\mathrm{q}\\rightarrow\\mathrm{p})$ is false, then true statement/statement pattern is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{p}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{p}\\rightarrow(\\mathrm{p}\\vee\\sim\\mathrm{q})$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{p}\\wedge(\\sim\\mathrm{p}\\wedge\\mathrm{q})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(p\\vee\\sim q)\\rightarrow p$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5baa1064cb6c",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If truth values of statements $\\mathrm{p},\\mathrm{q}$ are true, and $\\mathrm{r}$, $s$ are false, then the truth values of the following statement patterns are respectively\n$\\begin{aligned} & \\mathrm{a}(\\mathrm{p}\\wedge\\sim\\mathrm{r})\\vee(\\sim\\mathrm{q}\\vee\\mathrm{s}) \\\\ & \\mathrm{b}:(\\sim\\mathrm{q}\\wedge\\sim\\mathrm{r})\\leftrightarrow(\\mathrm{p}\\vee\\mathrm{s}) \\\\ & \\mathrm{c}:(\\sim\\mathrm{p}\\vee\\mathrm{q})\\rightarrow(\\mathrm{r}\\wedge\\sim\\mathrm{s}) \\end{aligned}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{T},\\mathrm{F},\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "F, F, F",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "F, T, T",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{T},\\mathrm{F},\\mathrm{T}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-baba4c6c5fa3",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The negation of the statement $(p\\wedge q)\\rightarrow(\\sim p\\vee r)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$p\\vee q\\vee\\sim r$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{p}\\wedge\\mathrm{q}\\wedge\\sim\\mathrm{r}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sim p\\vee q\\wedge r$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sim p\\vee\\sim q\\vee\\sim r$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6ee6a3ca153d",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\mathrm{p},\\mathrm{q},\\mathrm{r}$ be three statements, then $[p\\rightarrow(q\\rightarrow r)]\\leftrightarrow[(p\\wedge q)\\rightarrow r]$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "equivalent to $\\mathrm{p}\\leftrightarrow\\mathrm{q}$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "contingency.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "tautology.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "contradiction.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e070d9f149bd",
+      "subtopic": "logical-connectives",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Negation of the statement\n\"The payment will be made if and only if the work is finished in time.\" Is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "The work is finished in time and the payment is not made.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "The payment is made and the work is not finished in time.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "The work is finished in time and the payment is not made, or the payment is made and the work is finished in time.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Either the work is finished in time and the payment is not made, or the payment is made and the work is not finished in time.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
       "ref": "PYQ-MATH-3655c5203e18",
       "subtopic": "logical-connectives",
       "type": "single_correct",

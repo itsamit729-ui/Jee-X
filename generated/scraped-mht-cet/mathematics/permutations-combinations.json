@@ -64,10 +64,755 @@
       "slug": "sum-of-numbers",
       "name": "Sum of numbers",
       "position": 10
+    },
+    {
+      "slug": "dearrangement",
+      "name": "Dearrangement",
+      "position": 11
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-MATH-d773e0e5eed9",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "All the letters of the word 'ABRACADABRA' are arranged in different possible ways. Then the number of such arrangements in which the vowels are together is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1200",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1240",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1220",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1260",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d8214877856f",
+      "subtopic": "factorial",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "If $\\frac{n!}{2!(n-2)!}$ and $\\frac{n!}{4!(n-4)!}$ are in the ratio $2:1$, then $n=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6c24674216bf",
+      "subtopic": "circular-permutations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The number of ways in which 8 different pearls can be arranged to form a necklace is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "40320",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5040",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2520",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1260",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0f728e5d837b",
+      "subtopic": "dearrangement",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "For a set of five true or false questions, no student has written the all correct answers and no two students have given the same sequence of answers. The maximum number of students in the class for this to be possible is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "30",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "31",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "32",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "16",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f73b77cb94ea",
+      "subtopic": "application-of-permutations-and-combination-in-geometry",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A polygon has 44 diagonals. Then the number of sides of the polygon are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "11",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "13",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1ad93a34560b",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The numbers can be formed using the digits $1,2,3,4,3,2,1$ so that odd digits always occupy odd places in __________ ways.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "18",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a8b3c17134e9",
+      "subtopic": "number-of-combinations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Out of 7 consonants and 4 vowels, the number of words consisting of 3 consonants and 2 vowels are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3300",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "210",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "120",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "25200",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f044df4b19ef",
+      "subtopic": "conditional-combinations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A committee of 5 is to be formed out of 6 men and 4 ladies. The number of ways this can be done, when at most 2 ladies are included, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "240",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "186",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "60",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "120",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-38b6514dfca3",
+      "subtopic": "conditional-combinations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "If a question paper consists of 11 questions divided into two sections I and II. Section I consists of 6 questions and section II consists of 5 questions, then the number of different ways can student select 6 questions, taking at least 2 questions from each section, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "425",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "275",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "350",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "225",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2781726f356e",
+      "subtopic": "conditional-combinations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A group consists of 8 boys and 5 girls, then the number of committees of 5 persons that can be formed, if committee consists of at least 2 girls and at most 2 boys, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "300",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "320",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "321",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "322",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-99a18d899df8",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Five students are to be arranged on a platform such that the boy $B_1$ occupies the second position and such that the girl $G_1$ is always adjacent to the girl $G_2$. Then, the number of such possible arrangements is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-afa41b6a0c22",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The teacher wants to arrange 5 students on the platform such that the boy $B_1$ occupies second position and the girls $G_1$ and $G_2$ are always adjacent to each other, then the number of such arrangements is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "24",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "16",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3835f2b49ba0",
+      "subtopic": "application-of-permutations-and-combination-in-geometry",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{T}_{\\mathrm{n}}$ denotes the number of triangles which can be formed using the vertices of regular polygon of $\\mathrm{n}$ sides and $T_{n+1}-T_n=21$, then $\\mathrm{n}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dcc6a2c3ff01",
+      "subtopic": "conditional-permutations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The number of words that can be formed by using the letters of the word CALCULATE such that each word starts and ends with a consonant, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\times 7!$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{9!}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\times 7!}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$20\\times 7!$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a3dbb7ad5cd0",
+      "subtopic": "circular-permutations",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Five persons $\\mathrm{A},\\mathrm{B},\\mathrm{C},\\mathrm{D}$ and $\\mathrm{E}$ are seated in a circular arrangement. If each of them is given a cap of one of the three colours red, blue and green, then the number of ways of distributing the caps such that the persons seated in adjacent seats get different coloured caps, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "30",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "15",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "60",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "40",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cc429dc9748f",
+      "subtopic": "conditional-combinations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Five students are selected from $n$ students such that the ratio of number of ways in which 2 particular students are selected to the number of ways 2 particular students not selected is $2:3$. Then, the value of $n$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "11",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "not possible",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-47bf156db00c",
+      "subtopic": "conditional-combinations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A linguistic club consists of 6 girls and 4 boys. A team of 4 members is to be selected from this group including the selection of a leader (from among these 4 members) for the team. If the team has to include at most one boy, the number of ways of selecting the team is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "140",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "320",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "76",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "380",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1866b1a10bb3",
+      "subtopic": "application-of-permutations-and-combination-in-geometry",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If in a regular polygon, the number of diagonals are 54, then the number of sides of the polygon are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-248e0b1bec46",
+      "subtopic": "number-of-combinations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If at the end of certain meeting, everyone had shaken hands with everyone else, it was found that 45 handshakes were exchanged, then the number of members present at the meeting, are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "15",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "20",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "21",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bd6fc3edfcb4",
+      "subtopic": "conditional-combinations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A linguistic club of a certain Institute consists of 6 girls and 4 boys. A team of 4 members to be selected from this group including the selection of a Captain (from among these 4 members) for the team. If the team has to include atmost one boy, the number of ways of selecting the team is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "95",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "260",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "320",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "380",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-MATH-5e181ef7c8c7",
       "subtopic": "conditional-permutations",

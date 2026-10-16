@@ -39,6 +39,3336 @@
   "passages": [],
   "questions": [
     {
+      "ref": "PYQ-MATH-2fc464874b55",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\sin\\theta}{\\sin 3\\theta}d\\theta=\\frac{1}{2k}\\log\\left|\\frac{k+\\tan\\theta}{k-\\tan\\theta}\\right|+c$, then $k=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-95ad344dc197",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\cot x\\cdot\\log[\\log(\\sin x)]dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log(\\sin x)[\\log(\\log(\\sin x))-1]+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\log(\\sin x)[\\log(\\log(\\sin x))+1]+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log(\\sin x)[\\log(\\sin x))+1]+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log(\\sin x)[\\log(\\sin x)-1]+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-faca9b9c1d00",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\sqrt{x-\\frac{1}{x}}\\left(\\frac{x^2+1}{x^2}\\right)dx=\\frac{2}{3}{\\left(x-\\frac{1}{x}\\right)}^k+c$, then value of $k$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-015ef9e167c7",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{dx}{\\cos 2x-\\cos^2x}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\tan x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cot x+c$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\tan x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\cot x+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-23cafb171800",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "$\\int{\\left[-\\frac{\\log x-1}{1+(\\log x)^2}\\right]}^2dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x}{1+(\\log x)^2}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x}{\\left(1+\\log x\\right)}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x^2}{1+(\\log x)^2}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{1+(\\log x)^2}+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6f2ff0b4a636",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{1+2e^{-x}}{1-2e^{-x}}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+\\log\\left(1-2e^{-x}\\right)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+2\\log\\left(1-2e^{-x}\\right)+c$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\log\\left(1-2e^{-x}\\right)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x-\\log\\left(1-2e^{-x}\\right)+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5b6a32dec5b2",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\sin^{-1}xdx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\sin^{-1}x-\\sqrt{1+x^2}+C$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x\\sin^{-1}x-\\sqrt{1-x^2}+C$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x\\sin^{-1}x+\\sqrt{1-x^2}+C$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x\\sin^{-1}x+\\sqrt{1+x^2}+C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-975f693479d1",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\log x\\cdot(\\log x+2)dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x(\\log x)^2+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$x\\log x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^x(\\log x)^2+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(\\log x)^2+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b946d8fa6700",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{dx}{x^2+4x+13}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}\\tan^{-1}\\left(\\frac{x+2}{3}\\right)+C$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{6}\\log\\left(\\frac{x-1}{x+5}\\right)+C$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\tan^{-1}\\left(\\frac{x+2}{3}\\right)+C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{6}\\tan^{-1}\\left(\\frac{x+2}{3}\\right)+C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2374a2076b41",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{x+\\sin x}{1+\\cos x}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\tan\\left(\\frac{x}{2}\\right)+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\log(x+\\sin x)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cot\\left(\\frac{x}{2}\\right)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log(1+\\cos x)+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-64154cc27a82",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\tan^{-1}(\\sec x+\\tan x)dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi x}{4}+\\frac{x^2}{4}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sin x\\cos x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi x}{2}+\\frac{x^2}{2}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sin x+\\cos x+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cd5a897734b5",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\frac{1+x^2}{1+x^4}dx=\\frac{1}{\\sqrt{2}}\\tan^{-1}\\left[\\frac{f(x)}{\\sqrt{2}}\\right]+c$, then $f(x)=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+\\frac{1}{x^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x-\\frac{1}{x^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x+\\frac{2}{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x-\\frac{1}{x}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3c9594b63a43",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\mathrm{cosec}(x-a)\\mathrm{cosec}xdx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{cosec}a\\cdot\\log[\\sin(x-a)\\mathrm{cosec}x]+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{cosec}a\\log[\\sin(x-a)\\sin x]+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sin a\\cdot\\log[\\sin(x-a)\\sin x]+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{cosec}a\\cdot\\log[\\mathrm{cosec}(x-a)\\sin x]+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7096d7402ad7",
+      "subtopic": "integration-by-partial-fraction",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{2x^2-1}{x^4-x^2-20}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{5}}\\log\\left|\\frac{x+\\sqrt{5}}{x-\\sqrt{5}}\\right|+\\tan^{-1}\\left(\\frac{x}{2}\\right)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2\\sqrt{5}}\\log\\left|\\frac{x+\\sqrt{5}}{x-\\sqrt{5}}\\right|+\\tan^{-1}\\left(\\frac{x}{2}\\right)+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2\\sqrt{5}}\\log\\left|\\frac{x-\\sqrt{5}}{x+\\sqrt{5}}\\right|+\\frac{1}{2}\\tan^{-1}\\left(\\frac{x}{2}\\right)+c$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}\\log\\left|\\frac{x-\\sqrt{5}}{x+\\sqrt{5}}\\right|+\\frac{1}{2}\\tan^{-1}\\left(\\frac{x}{2}\\right)+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c494d6907f1f",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\sec^4x\\cdot\\tan^4xdx=\\frac{\\tan^mx}{m}+\\frac{\\tan^nx}{n}+c$ (where c is constant of integration), then m + n =",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "16",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2ff9167aad27",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\frac{x^3}{\\sqrt{1+x^2}}dx=a{\\left(1+x^2\\right)}^{\\frac{3}{2}}+b\\sqrt{1+x^2}+c$, then $a+b=$, (where $c$ is constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-2}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-97af7b844f7c",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int e^{\\tan x}\\left(\\sec^2x+\\sec^3x\\sin x\\right)dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan x\\cdot e^{\\tan x}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(1+\\tan\\mathrm{x})\\mathrm{e}^{\\tan\\mathrm{x}}+\\mathrm{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sec\\mathrm{x}\\cdot\\mathrm{e}^{\\tan\\mathrm{x}}+\\mathrm{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{e}^{\\tan x}+\\tan\\mathrm{x}+\\mathrm{c}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a92d63ac1756",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int[1+2\\tan x(\\tan x+\\sec x)]^{\\frac{1}{2}}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log[\\sec x(\\sec x-\\tan x)]+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log[\\mathrm{cosec}x(\\sec x+\\tan x)]+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log[\\sec x(\\sec x+\\tan x)]+c$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\log[\\sec\\mathrm{x}+\\tan\\mathrm{x}]+\\mathrm{c}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-33a3c06a203a",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{1}{x^{\\frac{1}{2}}+x^{\\frac{1}{3}}}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\mathrm{x}}-\\sqrt[\\mathrm{x}]{3}+\\sqrt[\\mathrm{x}]{6}-\\log|\\sqrt[\\mathrm{x}]{6}+1|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\sqrt{\\mathrm{x}}-3\\sqrt[\\mathrm{x}]{3}+6\\sqrt[\\mathrm{x}]{6}-6\\log|\\sqrt[\\mathrm{x}]{6}+1|+\\mathrm{c}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{\\mathrm{x}}+3\\sqrt[\\mathrm{x}]{3}+6\\sqrt[\\mathrm{x}]{6}+6\\log|\\sqrt[\\mathrm{x}]{6}+1|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\mathrm{x}}+\\sqrt[\\mathrm{x}]{3}+\\sqrt[\\mathrm{x}]{6}+\\log|\\sqrt[\\mathrm{x}]{6}+1|+\\mathrm{c}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d273920cb6c9",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int[\\sin|\\log x|+\\cos|\\log x|]dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin|\\log x|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x\\cos|\\log x|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos|\\log x|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x\\sin|\\log x|+c$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d8720af65415",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\frac{5\\tan x}{\\tan x-2}dx=x+a\\log|\\sin x-2\\cos x|+c$, then a = (Where c is constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-$2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-$1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-09f3490bb9fd",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int e^x\\left(\\frac{x-1}{x^2}\\right)dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-e^x}{x^2}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-e^x}{x}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{e^x}{x^2}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{e^x}{x}+c$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2f19751d4220",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\sin^{-1}\\left(\\frac{2x}{1+x^2}\\right)dx=\\quad(\\text{ where }|x|<1)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\tan^{-1}x-\\log\\left|1+x^2\\right|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x\\tan^{-1}\\mathrm{x}+\\log\\left|1+\\mathrm{x}^2\\right|+\\mathrm{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\tan^{-1}\\mathrm{x}+\\log\\left|1+\\mathrm{x}^2\\right|+\\mathrm{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2x\\tan^{-1}x-\\log\\left|1+x^2\\right|+c$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6ddf0d89a0ad",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\sec^8x}{\\mathrm{cosec}x}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sec^8x}{8}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sec^6x}{6}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sec^7x}{7}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sec^9x}{9}+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2bd025571dba",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\cos^{-1}xdx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\cos^{-1}x+\\sqrt{1-x^2}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-x\\cos^{-1}x+\\sqrt{1+x^2}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x\\cos^{-1}x-\\sqrt{1+x^2}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x\\cos^{-1}x-\\sqrt{1-x^2}+c$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4b9197356759",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{1}{\\cos x+\\sqrt{3}\\sin x}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\log\\left[\\tan\\left(\\frac{\\mathrm{x}}{2}+\\frac{\\pi}{12}\\right)\\right]+\\mathrm{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\log\\left[\\tan\\left(\\frac{\\mathrm{x}}{2}-\\frac{\\pi}{12}\\right)\\right]+\\mathrm{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\log\\left[\\tan\\left(\\frac{\\mathrm{x}}{2}+\\frac{\\pi}{12}\\right)\\right]+\\mathrm{c}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\log\\left[\\tan\\left(\\frac{\\mathrm{x}}{2}-\\frac{\\pi}{12}\\right)\\right]+\\mathrm{c}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e35aa0d71583",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\tan^4\\sqrt{x}\\cdot\\sec^2\\sqrt{x}}{\\sqrt{x}}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-5}{2}[\\tan\\sqrt{x}]^5+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$[\\tan\\sqrt{\\mathrm{x}}]^5+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{5}[\\tan\\sqrt{x}]^5+c$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5}{2}[\\tan\\sqrt{x}]^5+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-0b2d5bc7ad8b",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int e^{\\left(e^x+x\\right)}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^x+x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$e^{\\left(e^x\\right)}\\cdot x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^{\\left(e^x\\right)}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$e^{\\left(e^x\\right)}\\left(e^x-1\\right)+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-175b0bd01aa9",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{10^{\\frac{x}{2}}}{\\sqrt{10^{-x}-10^x}}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sqrt{10^{-x}+10^x}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{2\\sqrt{10^{-x}+10^x}}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\log 10}\\sin^{-1}\\left(10^{\\mathrm{x}}\\right)+\\mathrm{c}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\log 10}\\cos^{-1}\\left(10^x\\right)+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-52e1f4c02f4c",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\sin x}{\\sin(x-\\alpha)}dx=Ax+B\\log\\sin(x-\\alpha)+c$, then the value of A and B are respectively (where $\\mathrm{c}$ is a constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cos\\alpha,\\sin\\alpha$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sin\\alpha,\\cos\\alpha$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\cos\\alpha,\\sin\\alpha$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\sin\\alpha,\\cos\\alpha$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-12557f61b9eb",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\sqrt{x}}{x(x+1)}dx=k\\tan^{-1}m+c$, (where c is constant of integration), then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$k=1,m=\\sqrt{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$k=2,m=\\sqrt{x}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{k}=1,~\\mathrm{m}=\\mathrm{x}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{k}=2,~\\mathrm{m}=\\mathrm{x}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-44ee56bb28f5",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\sec^{-1}xdx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x\\sec^{-1}x+\\log\\left|x+\\sqrt{x^2-1}\\right|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x\\sec^{-1}x-\\log\\left|x+\\sqrt{x^2-1}\\right|+c$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x\\sec^{-1}x-\\log\\left|x+\\sqrt{x^2+1}\\right|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x\\sec^{-1}x+\\log\\left|x+\\sqrt{x^2+1}\\right|+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e9e55524cd24",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{dx}{\\cos x\\sqrt{\\cos 2x}}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin^{-1}(\\tan x)+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\log\\left|\\tan\\left(\\frac{\\pi}{4}+x\\right)\\right|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\log\\left|\\frac{1+\\tan x}{1-\\tan x}\\right|+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}\\log\\left|\\frac{1-\\tan x}{1+\\tan x}\\right|+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-327799efc777",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\left(\\cos x-\\sin x\\right)}{8-\\sin 2x}dx=\\frac{1}{p}\\log\\left[\\frac{3+\\sin x+\\cos x}{3-\\sin x-\\cos x}\\right]+c$, then $p=$ (where $\\mathrm{c}$ is a constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "6",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b59a41a87bb0",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\cos^3x\\cdot e^{\\log(\\sin x)}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-e^{\\sin x}}{4}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-\\cos^4x}{4}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-\\sin^4x}{4}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{e^{\\sin x}}{4}+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cce546481586",
+      "subtopic": "integration-by-partial-fraction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\mathrm{dx}}{32-2\\mathrm{x}^2}=\\mathrm{A}\\log(4-\\mathrm{x})+\\mathrm{B}\\log(4+\\mathrm{x})+\\mathrm{c}$, then the values of $\\mathrm{A}$ and $\\mathrm{B}$ are respectively (where c is a constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-1}{8},\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{8},\\frac{-1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-1}{16},\\frac{1}{16}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{8},\\frac{1}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-4c8a21ac6de2",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int e^x\\left(\\frac{1+\\sin x}{1+\\cos x}\\right)dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^x\\tan\\frac{x}{2}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$e^x\\cot\\frac{x}{2}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^x\\cos\\frac{x}{2}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$e^x\\sin\\frac{x}{2}+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-74cbf7a5480a",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\cos^3xe^{\\log(\\sin x)^2}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sin^3x}{3}-\\sin^5x+c$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sin^3x}{3}-\\frac{\\sin^5x}{5}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sin^3x}{3}+\\frac{\\sin^5x}{5}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sin^3x+\\sin^5x+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ceeb83b8cb00",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{dx}{e^x+e^{-x}+2}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\mathrm{e}^{2\\mathrm{x}}+1}+\\mathrm{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-1}{\\mathrm{e}^{\\mathrm{x}}+1}+\\mathrm{c}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{e^x}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{e^x}+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-64512f694575",
+      "subtopic": "integration-by-partial-fraction",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{3x-2}{(x+1)(x-2)^2}~\\mathrm{d}x=$\n(where $C$ is a constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-5}{9}\\log(x+1)+\\frac{5}{9}\\log(x-2)-\\frac{4}{3}\\times\\frac{1}{\\left(x-2\\right)}+C$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-5}{9}\\log(x+1)+\\frac{5}{9}\\log(x-2)-\\frac{1}{x-2}+C$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{9}\\log(x+1)+\\frac{5}{9}\\log(x-2)-\\frac{4}{3}\\times\\frac{1}{\\left(x-2\\right)}+C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-5}{9}\\log(x+1)+\\frac{1}{9}\\log(x-2)-\\frac{1}{x-2}+C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9f35bbf55c2b",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\sin\\frac{5x}{2}}{\\sin\\frac{x}{2}}dx=$\n(where $C$ is a constant of integration.)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+\\sin x+\\sin 2x+C$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x+\\sin x+\\sin 2x-C$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x+2\\sin x+2\\sin 2x+C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "None of these",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ba1339401ee3",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "If $f(x)=\\sqrt{\\tan x}$ and $g(x)=\\sin x\\cdot\\cos x$ then $\\int\\frac{f(x)}{g(x)}\\mathrm{d}x$ is equal to (where $C$ is a constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sqrt{\\tan x}+C$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\sqrt{\\tan x}+C$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\tan x}+C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{2}\\sqrt{\\tan x}+C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-eba86d89a858",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "$\\text{ If }\\int e^{x^2}\\cdot x^3~\\mathrm{d}x=e^{x^2}\\cdot[f(x)+C]$ (where $C$ is a constant of integration.) and $f(1)=0$, then value of $f(2)$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-59f999f66479",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{dx}{\\sin x+\\cos x}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}\\log\\tan\\left(x+\\frac{\\pi}{4}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{2}}\\log\\tan\\left(\\frac{x}{2}+\\frac{\\pi}{8}\\right)+c$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{2}}\\log\\left(\\frac{\\tan\\frac{x}{2}-\\sqrt{2}+1}{\\tan\\frac{x}{2}+\\sqrt{2}+1}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{1}{\\sqrt{2}}\\log\\left(\\frac{\\tan\\frac{x}{2}-(\\sqrt{2}+1)}{\\tan\\frac{x}{2}+\\sqrt{2}-1}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-78f8aba15860",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{1}{7-6x-x^2}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}\\log\\left(\\frac{7+x}{1-x}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{8}\\log\\left(\\frac{7+x}{1-x}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{16}\\log\\left(\\frac{7+x}{1-x}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{32}\\log\\left(\\frac{7+x}{1-x}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7ef9ff018f69",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\sqrt{\\frac{x-7}{x-9}}dx=A\\sqrt{x^2-16x+63}+\\log\\left|(x-8)+\\sqrt{x^2-16x+63}\\right|+c,$\n(where $\\mathrm{c}$ is a constant of integration) then $\\mathrm{A}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fdede881cae4",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{I}=\\int\\frac{\\mathrm{d}x}{x^2{\\left(x^4+1\\right)}^{\\frac{3}{4}}}$, then $\\mathrm{I}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{x^4+1}{x}\\right)}^{\\frac{1}{4}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{{\\left(x^4-1\\right)}^{\\frac{1}{4}}}{x}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{{\\left(x^4+1\\right)}^{\\frac{1}{4}}}{x}+c$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-{\\left(\\frac{x^4+1}{x}\\right)}^{\\frac{1}{4}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-50699c83e546",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{5\\tan x}{\\tan x-2}~\\mathrm{d}x=x+\\mathrm{a}\\log|\\sin x-2\\cos x|+\\mathrm{c},$ (where $c$ is a constant of integration), then the value of $a$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bcf7f01da879",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\int\\frac{\\mathrm{d}x}{x^2{\\left(x^4+1\\right)}^{\\frac{3}{4}}}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{x^4+1}{x^4}\\right)}^{\\frac{1}{4}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${\\left(x^4+1\\right)}^{\\frac{1}{4}}+c$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-{\\left(x^4+1\\right)}^{\\frac{1}{4}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-{\\left(\\frac{x^4+1}{x^4}\\right)}^{\\frac{1}{4}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d5a52473704f",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\mathrm{e}^x\\left(1-\\cot x+\\cot^2x\\right)\\mathrm{d}x=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{e}^x\\cdot\\cot x+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{e}^x\\cdot\\mathrm{cosec}x+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\mathrm{e}^x\\cdot\\cot x+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\mathrm{e}^x\\cdot\\mathrm{cosec}x+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dbf457265a7e",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\int\\frac{\\left(x^2-1\\right)dx}{x^3\\sqrt{2x^4-2x^2+1}}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\sqrt{2-\\frac{2}{x^2}+\\frac{1}{x^4}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\sqrt{2+\\frac{2}{x^2}+\\frac{1}{x^4}}+c$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\sqrt{2-\\frac{2}{x^2}+\\frac{1}{x^4}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{2-\\frac{2}{x^2}-\\frac{1}{x^4}}+c$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-33bfccfaaef2",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\mathrm{e}^x(1+x)}{\\cos^2\\left(\\mathrm{e}^x\\cdot x\\right)}\\mathrm{d}x=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\cot\\left(\\mathrm{e}^x\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan\\left(x\\cdot\\mathrm{e}^x\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\tan\\left(\\mathrm{e}^x\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\cot\\left(x\\cdot\\mathrm{e}^x\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d55917451f58",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\mathrm{d}x}{x\\sqrt{1-x^3}}=\\mathrm{k}\\log\\left(\\frac{\\sqrt{1-x^3}-1}{\\sqrt{1-x^3}+1}\\right)+\\mathrm{c}$, (where $\\mathrm{c}$ is a constant of integration), then value of $\\mathrm{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{2}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f069d582a437",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\log(\\cot x)}{\\sin 2x}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\log(\\cot x)^2+c$, where c is constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2(\\log(\\cot x))^2+c$, where c is constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-1}{4}(\\log(\\sin x))^2+c$, where c is constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{4}(\\log(\\cot x))^2+\\mathrm{c}$, where c is constant of integration.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-672a30a4a15d",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\cos 8x+1}{\\cot 2x-\\tan 2x}~\\mathrm{d}x=\\mathrm{A}\\cos 8x+\\mathrm{c}$, where $\\mathrm{c}$ is an arbitrary constant, then the value of $\\mathrm{A}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-1}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{16}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-756eccef4b35",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{I}=\\int\\sin(\\log(x))\\mathrm{d}x$, then $\\mathrm{I}$ is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{x}{2}(\\sin(\\log x)-\\cos(\\log x))+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x}{2}(\\sin(\\log x)-\\cos(\\log x))+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{x}{2}(\\sin(\\log x)+\\cos(\\log x))+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{x}{2}(\\sin(\\log x)+\\cos(\\log x))+c$, where c is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9ad43532dc4e",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\int(1-\\cos x)\\cdot\\mathrm{cosec}^2xdx$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\tan\\frac{x}{2}+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan\\frac{x}{2}+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\cot\\frac{x}{2}+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\cot\\frac{x}{2}+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b2a901520ee3",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int x\\sqrt{\\frac{2\\sin\\left(x^2+1\\right)-\\sin 2\\left(x^2+1\\right)}{2\\sin\\left(x^2+1\\right)+\\sin 2\\left(x^2+1\\right)}}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log\\left(\\sec\\left(\\frac{x^2+1}{2}\\right)\\right)+$ c, where c is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\log\\left(\\frac{x^2+1}{2}\\right)+c$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log\\left(\\sin\\left(\\frac{x^2+1}{2}\\right)\\right)+$ c, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\log\\left(x^2+1\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2c792d877bd9",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\cos^{\\frac{3}{5}}x\\cdot\\sin^3xdx=\\frac{-1}{m}\\cos^mx+\\frac{1}{n}\\cos^nx+c$, (where $\\mathrm{c}$ is the constant of integration), then $(\\mathrm{m},\\mathrm{n})=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{18}{5},\\frac{8}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{-8}{5},\\frac{18}{5}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{8}{5},\\frac{18}{5}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{-18}{5},\\frac{-8}{5}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3e3d5800e188",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{x^2+1}{x\\left(x^2-1\\right)}\\mathrm{d}x=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log x\\left(x^2-1\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log\\left(\\frac{x^2-1}{x}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\log\\left(x^2-1\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log\\left(\\frac{x^2+1}{x}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c28c2b15b48f",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\mathrm{cosec}xdx}{\\cos^2\\left(1+\\log\\tan\\frac{x}{2}\\right)}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan\\left(1+\\log\\left(\\tan\\frac{x}{2}\\right)\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is constant of integration",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\tan(1+\\log(\\tan x))+c$, where $\\mathrm{c}$ is constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\tan\\left(\\log\\left(\\tan\\frac{x}{2}\\right)\\right)+c$, where c is constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\tan\\left(\\tan\\frac{x}{2}\\right)+c$, where c is constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-e4a84e5513e7",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The integral $\\int\\frac{\\sin^2x\\cos^2x}{{\\left(\\sin^5x+\\cos^3x\\sin^2x+\\sin^3x\\cos^2x+\\cos^5x\\right)}^2}~\\mathrm{d}x$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3\\left(1+\\tan^3x\\right)}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-1}{3\\left(1+\\tan^3x\\right)}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{1+\\cot^3x}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-1}{1+\\cos^3x}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3a99f2ce5f11",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int{\\left(\\frac{\\tan\\left(\\frac{1}{x}\\right)}{x}\\right)}^2dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x-\\tan x+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{x}-\\tan\\left(\\frac{1}{x}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{x}+\\tan\\left(\\frac{1}{x}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x+\\tan x+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8e2990112cc6",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\sqrt{1-x^2}}{x^4}~\\mathrm{d}x=\\mathrm{A}(x){\\left(\\sqrt{1-x^2}\\right)}^{\\mathrm{m}}+\\mathrm{c}$ for a suitable chosen integer $\\mathrm{m}$ and a function $\\mathrm{A}(x)$, where $\\mathrm{c}$ is a constant of integration, then $(\\mathrm{A}(x))^{\\mathrm{m}}$ equals",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{9x^4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-1}{3x^3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-1}{27x^9}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{27x^6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d2a9757e1498",
+      "subtopic": "integration-by-partial-fraction",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{1}{(x+2)(1+x)^2}dx$ has the value",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\log\\left(\\frac{x+2}{x^2+1}\\right)+4\\tan^{-1}x+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log\\frac{x+2}{x^2+1}-4\\tan^{-1}x+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log\\frac{(x+2)^2}{\\left(x^2+1\\right)}+4\\tan^{-1}x+c$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "None",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fd44dc7f1c1c",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{1}{\\cos^3x\\sqrt{\\sin 2x}}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}\\left(\\sqrt{\\tan x}+\\frac{1}{5}(\\tan x)^{\\frac{5}{2}}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\sqrt{\\tan x}+\\frac{2}{5}(\\tan x)^{\\frac{5}{2}}\\right)+c$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{2}}\\left(\\sqrt{\\tan x}+\\frac{2}{5}(\\tan x)^{\\frac{5}{2}}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\left(\\sqrt{\\tan x}+\\frac{1}{5}(\\tan x)^{\\frac{5}{2}}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3b5ac1dc37b0",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{f}(x)=\\int\\frac{x^2~\\mathrm{d}x}{\\left(1+x^2\\right)\\left(1+\\sqrt{1+x^2}\\right)}$ and $\\mathrm{f}(0)=0$, then $\\mathrm{f}(1)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log(1+\\sqrt{2})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log(1+\\sqrt{2})-\\frac{\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\log(1+\\sqrt{2})+\\frac{\\pi}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log(1-\\sqrt{2})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-59622a31342f",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int x^5e^{-4x^3}~\\mathrm{d}x=\\frac{1}{48}\\mathrm{e}^{-4x^3}\\mathrm{f}(x)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration, then $\\mathrm{f}(x)$ is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4x^3+1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-4x^3-1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-2x^3-1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-2x^3+1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b6a42c2b9b5a",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\mathrm{I}=\\int\\frac{2x-7}{\\sqrt{3x-2}}~\\mathrm{d}x$, then $\\mathrm{I}$ is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{106}{27}(3x-2)^{\\frac{3}{2}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{98}{27}(3x-2)^{\\frac{3}{2}}+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{27}(3x-2)^{\\frac{3}{2}}-\\frac{34}{9}(3x-2)^{\\frac{1}{2}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{27}(3x-2)^{\\frac{3}{2}}+\\frac{34}{9}(3x-2)^{\\frac{1}{2}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f7692d49a6fe",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\log\\left(x^2+a^2\\right)}{x^2}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-\\log\\left(x^2+\\mathrm{a}^2\\right)}{x}+\\frac{1}{\\mathrm{a}}\\tan^{-1}\\frac{x}{\\mathrm{a}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-\\log\\left(x^2+\\mathrm{a}^2\\right)}{x}+\\frac{2}{\\mathrm{a}}\\tan^{-1}\\frac{x}{\\mathrm{a}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\log\\left(x^2+\\mathrm{a}^2\\right)}{x^2}-\\frac{1}{\\mathrm{a}}\\tan^{-1}\\frac{x}{\\mathrm{a}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\log\\left(x^2+\\mathrm{a}^2\\right)}{x^2}-\\frac{2}{\\mathrm{a}}\\tan^{-1}\\frac{x}{\\mathrm{a}}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-08bde847ad85",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{x-3}{(x-1)^3}e^xdx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^x\\left(\\frac{1}{(x-1)^2}\\right)+c$, where $c$ is constant of integration",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$e^x\\left(\\frac{1}{x+1}\\right)+c$, where $c$ is constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$e^x\\left((x-1)^2\\right)+c$, where $c$ is constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$e^x\\left((x-1)^3\\right)+c$, where $c$ is constant of integration",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-25e2b7c1c5e0",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{2+\\cos\\frac{x}{2}}{x+\\sin\\frac{x}{2}}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\log\\left(x+\\sin\\frac{x}{2}\\right)+c$, where $c$ is constant of integration",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\log\\left(x+\\sin\\frac{x}{2}\\right)+c$, where $c$ is constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\log\\left(x+\\sin\\frac{x}{2}\\right)+c$, where $c$ is constant of integration",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log\\left(x+\\sin\\frac{x}{2}\\right)+c$, where $c$ is constant of integration",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-bee314110358",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $I=\\int\\frac{e^x}{e^{4x}+e^{2x}+1}dx$ and $J=\\int\\frac{e^{-x}}{e^{-4x}+e^{-2x}+1}dx$, then for any arbitrary constant $C$, the value of $J-I$ equals",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\log\\left|\\left(\\frac{e^{4x}-e^{2x}+1}{e^{4x}+e^{2x}+1}\\right)\\right|+C$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\log\\left|\\left(\\frac{e^{2x}+e^x+1}{e^{2x}-e^x+1}\\right)\\right|+C$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\log\\left|\\left(\\frac{e^{2x}-e^x+1}{e^{2x}+e^x+1}\\right)\\right|+C$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}\\log\\left|\\left(\\frac{e^{4x}+e^{2x}+1}{e^{4x}-e^{2x}+1}\\right)\\right|+C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d0a4dfbe3d01",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\log\\left(t+\\sqrt{1+t^2}\\right)}{\\sqrt{1+t^2}}dt=\\frac{1}{2}[g(t)]^2+c$, (where $c$ is a constant of integration), then $g(2)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sqrt{5}}\\log(2+\\sqrt{5})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\log(2+\\sqrt{5})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\log(2+\\sqrt{5})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log(2+\\sqrt{5})$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-046f14465c34",
+      "subtopic": "integration-by-partial-fraction",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=\\int\\frac{x^2-3x+2}{x^4+1}~\\mathrm{d}x$, then function decreases in the interval",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(-\\infty,-2)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(-2,-1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(1,2)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(2,\\infty)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-35a369ae9598",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\sin 2x\\left(1-\\frac{3}{2}\\cos x\\right)}{e^{\\sin^2x+\\cos^3x}}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{e}^{\\sin^2x+\\cos^3x}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${-\\mathrm{e}}^{-(\\sin^2x+\\cos^3x)}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{e}^{-(\\sin^2x+\\cos^3x)^2}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{e}^{\\sin^2x+\\cos x}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5a945d280531",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\sin x+\\sin^3x}{\\cos 2x}dx=A\\cos x+B\\log\\mathrm{f}(x)+c$ (where $\\mathrm{c}$ is a constant of integration). Then values of $\\mathrm{A},\\mathrm{B}$ and $\\mathrm{f}(x)$ are",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{A}=\\frac{1}{2},~\\mathrm{B}=\\frac{-3}{4\\sqrt{2}},\\mathrm{f}(x)=\\frac{\\sqrt{2}\\cos x-1}{\\sqrt{2}\\cos x+1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$A=-\\frac{1}{2},B=\\frac{-3}{4\\sqrt{2}},\\mathrm{f}(x)=\\frac{\\sqrt{2}\\cos x+1}{\\sqrt{2}\\cos x-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{A}=\\frac{1}{2},~\\mathrm{B}=\\frac{-3}{4\\sqrt{2}},\\mathrm{f}(x)=\\frac{\\sqrt{2}\\cos x+1}{\\sqrt{2}\\cos x-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{A}=\\frac{3}{2},~\\mathrm{B}=\\frac{1}{2},\\mathrm{f}(x)=\\frac{\\sqrt{2}\\cos x-1}{\\sqrt{2}\\cos x+1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6df55eab14e7",
+      "subtopic": "integration-by-partial-fraction",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\cos\\theta}{5+7\\sin\\theta-2\\cos^2\\theta}d\\theta=A\\log_e|f(\\theta)|+c$ (where $c$ is a constant of integration), then $\\frac{f(\\theta)}{A}$ can be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\sin\\theta+1}{\\sin\\theta+3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\sin\\theta+1}{5(\\sin\\theta+3)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5(\\sin\\theta+3)}{2\\sin\\theta+1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5(2\\sin\\theta+1)}{\\sin\\theta+3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f5c38f12d1f9",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\frac{x^3~\\mathrm{d}x}{\\sqrt{1+x^2}}=\\mathrm{a}\\left(1+x^2\\right)\\sqrt{1+x^2}+\\mathrm{b}\\sqrt{1+x^2}+\\mathrm{c}$ (where $\\mathrm{c}$ is a constant of integration), then the value of $3\\mathrm{ab}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-$3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-$1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-32eae64254bd",
+      "subtopic": "integration-by-parts",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The value of $\\int\\mathrm{e}^x\\left(\\frac{x^2+4x+4}{(x+4)^2}\\right)\\mathrm{d}x$ is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{e}^x\\left(\\frac{x}{x+4}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{e}^x\\left(\\frac{4}{x+4}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{e}^x\\left(\\frac{x}{(x+4)^2}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{e}^x\\left(\\frac{4}{(x+4)^2}\\right)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-66cb6b9e4473",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $I=\\int\\frac{dx}{\\sin(x-a)\\sin(x-b)}$, then I is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\sin(b-a)}\\log|\\sin(x-a)\\sin(x-b)|+c$, where $c$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log\\left|\\frac{\\sin(x-a)}{\\sin(x-b)}\\right|+c$, where $c$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sin(b-a)}\\log\\left|\\frac{\\sin(x-a)}{\\sin(x-b)}\\right|+c$, where $c$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sin(b-a)}\\log\\left|\\frac{\\sin(x-b)}{\\sin(x-a)}\\right|+c$, where $c$ is a constant of integration.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8662a90bc67b",
+      "subtopic": "standard-integral",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\mathrm{d}x}{\\cot^2x-1}=\\frac{1}{~\\mathrm{A}}\\log|\\sec 2x+\\tan 2x|-\\frac{x}{~\\mathrm{B}}+\\mathrm{c}$, (where $\\mathrm{c}$ is constant of integration), then $\\mathrm{A}+\\mathrm{B}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-$6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-$5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ec4b1794a3ab",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\frac{x^2}{\\sqrt{1-x}}~\\mathrm{d}x=\\mathrm{p}\\sqrt{1-x}\\left(3x^2+4x+8\\right)+\\mathrm{c}$ where $\\mathrm{c}$ is a constant of integration, then the value of $p$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{-2}{15}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-4}{15}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-51db3c044c31",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{1}{\\sin(x-a)\\sin x}dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sin\\mathrm{a}(\\log(\\sin(x-\\mathrm{a})\\cdot\\mathrm{cosec}x))+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{cosec}a(\\log(\\sin(x-a)\\cdot\\mathrm{cosec}x))+c$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\sin\\mathrm{a}(\\log(\\sin(x-\\mathrm{a})\\cdot\\sin x))+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\mathrm{cosec}\\mathrm{a}(\\log(\\sin(x-\\mathrm{a})\\cdot\\sin x))+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6b928b3dcfbb",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $I=\\int\\frac{\\sin x+\\sin^3x}{\\cos 2x}dx=P\\cos x+Q\\log\\left|\\frac{\\sqrt{2}\\cos x-1}{\\sqrt{2}\\cos x+1}\\right|$ (where $c$ is a constant of integration), then values of $\\mathrm{P}$ and $\\mathrm{Q}$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2},\\frac{3}{4\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2},\\frac{-3}{4\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2},\\frac{3}{2\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2},\\frac{-3}{2\\sqrt{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-83b4cd279810",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{x+1}{x{\\left(1+x\\mathrm{e}^x\\right)}^2}~\\mathrm{d}x=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\log\\left|\\frac{x\\mathrm{e}^x}{1+x\\mathrm{e}^x}\\right|+c$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\log\\left|\\frac{x\\mathrm{e}^x}{1+x\\mathrm{e}^x}\\right|-\\frac{1}{1+x\\mathrm{e}^x}+\\mathrm{c}$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log\\left|1+x\\mathrm{e}^x\\right|+\\frac{1}{1+x\\mathrm{e}^x}+\\mathrm{c}$, where $\\mathrm{c}$ is constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log\\left|\\frac{x\\mathrm{e}^x}{1+x\\mathrm{e}^x}\\right|+\\frac{1}{1+x\\mathrm{e}^x}+\\mathrm{c}$, where $\\mathrm{c}$ is constant of integration.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9884260ac808",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\int\\frac{\\mathrm{e}^{\\tan^{-1}x}}{1+x^2}\\left[{\\left(\\sec^{-1}\\sqrt{1+x^2}\\right)}^2+\\cos^{-1}\\left(\\frac{1-x^2}{1+x^2}\\right)\\right]\\mathrm{d}x,x>0=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\tan^{-1}x\\right)}^2\\mathrm{e}^{\\tan^{-1}x}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\tan^{-1}x\\right)\\mathrm{e}^{\\tan^{-1}x}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\tan^{-1}x\\right)\\mathrm{e}^{2\\tan^{-1}x}+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\tan^{-1}x\\right)}^2\\mathrm{e}^{2\\tan^{-1}x}+c$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3ed06cc05f42",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\alpha\\in\\left(0,\\frac{\\pi}{2}\\right)$ be fixed. If the integral $\\int\\frac{\\tan x+\\tan\\alpha}{\\tan x-\\tan\\alpha}\\mathrm{d}x=\\mathrm{A}(x)\\cos 2\\alpha+\\mathrm{B}(x)\\sin 2\\alpha+\\mathrm{c},$ (where $\\mathrm{c}$ is a constant of integration), then functions $\\mathrm{A}(x)$ and $\\mathrm{B}(x)$ are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x+\\alpha$ and $\\log|\\sin(x+\\alpha)|$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x-\\alpha$ and $\\log|\\sin(x-\\alpha)|$.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x-\\alpha$ and $\\log|\\cos(x-\\alpha)|$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x+\\alpha$ and $\\log|\\sin(x-\\alpha)|$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-85a9346ff00a",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int\\frac{\\sin x}{3+4\\cos^2x}~\\mathrm{d}x=\\mathrm{A}\\tan^{-1}(~\\mathrm{B}\\cos x)+\\mathrm{c}$, (where $\\mathrm{c}$ is a constant of integration), then the value of $\\mathrm{A}+\\mathrm{B}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{2\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{-1}{2\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-2}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f2a6e272f9dc",
+      "subtopic": "integration-by-substitution",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "$\\int(\\sqrt{\\tan x}+\\sqrt{\\cot x})dx=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2}\\sin^{-1}(\\sin x-\\cos x)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\sqrt{2}}\\sin^{-1}(\\sin x-\\cos x)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sin^{-1}(\\sin x-\\cos x)+c$, where c is a constant of integration.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sin^{-1}(\\sin x-\\cos x)+\\mathrm{c}$, where $\\mathrm{c}$ is a constant of integration.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
       "ref": "PYQ-MATH-1b19657a66aa",
       "subtopic": "integration-by-substitution",
       "type": "single_correct",
