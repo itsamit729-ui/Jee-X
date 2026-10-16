@@ -137,3 +137,14 @@ The main full mock uses 20 MCQs and 5 numerical questions per subject, 180 minut
 and +4/−1 scoring, with server-side grading. Unseen questions are preferred,
 with repeats allowed when a subject/format pool runs out. Baseline assessments
 continue to require fresh questions. The free warm-up remains a fixed demo.
+
+### Reaching newly published questions
+
+Publication automatically adds rows to the shared eligible pool; there is no
+second site-wide import step. Recommended/topic/revision practice breaks otherwise
+equal candidates randomly rather than always taking the oldest database ID.
+Daily questions sample eligible unseen IDs while preserving weak-topic targeting.
+Teacher manual selection supports exact exam and PYQ year filters populated from
+live paper references, and browsing is no longer capped at 10,000 rows. These
+changes preserve draft/private-question ownership, exam separation, scoring,
+existing attempt/paper snapshots and the answer-only eligibility rules.

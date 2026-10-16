@@ -4,6 +4,7 @@ import secrets
 import string
 from datetime import datetime, timedelta, timezone
 from types import SimpleNamespace
+from typing import Literal
 
 from fastapi import APIRouter, Depends, HTTPException, Query
 from pydantic import BaseModel, Field, ConfigDict, field_validator
@@ -233,7 +234,9 @@ def safe_question(q):
 
 @router.get('/teacher/questions')
 def question_bank(q: str = Query('', max_length=150), subject: str = Query('', max_length=12), chapter_id: int | None = None,
-                  difficulty: int | None = Query(None, ge=1, le=10), offset: int = Query(0, ge=0, le=10000),
+                  difficulty: int | None = Query(None, ge=1, le=10), offset: int = Query(0, ge=0, le=2_000_000),
+                  exam: Literal['jee_main','jee_advanced','mht_cet','bitsat'] | None = None,
+                  year: int | None = Query(None, ge=1900, le=2100),
                   user=Depends(require_teacher), db: Session = Depends(get_db)):
     query = question_query(db, user.id).join(m.Subtopic).join(m.Chapter).join(m.Subject)
     if subject:
@@ -242,6 +245,10 @@ def question_bank(q: str = Query('', max_length=150), subject: str = Query('', m
         query = query.filter(m.Chapter.id == chapter_id)
     if difficulty:
         query = query.filter(m.Question.difficulty == difficulty)
+    if exam:
+        query = query.filter(m.Question.exam == exam)
+    if year is not None:
+        query = query.filter(m.Question.year == year, m.Question.source_type == 'pyq')
     if q.strip():
         query = query.filter(or_(m.Question.ref.contains(q.strip(), autoescape=True), m.Question.stem.contains(q.strip(), autoescape=True)))
     rows = query.order_by(m.Question.id).offset(offset).limit(21).all()
