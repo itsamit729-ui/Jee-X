@@ -23,6 +23,943 @@
   "passages": [],
   "questions": [
     {
+      "ref": "PYQ-MATH-5563ac0f9f7c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2019,
+      "shift": "10 Apr 2019, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int x^{5} e^{-x^{2}} dx = g(x) e^{-2} + c$ , where c is a constant of integration then $g(-1)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{5}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-027973c42a48",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2019,
+      "shift": "10 Jan 2019, Shift 2",
+      "status": "draft",
+      "stem": "If ∫ $x^5e^{-x^3}$ dx = $\\frac{1}{48} e^{-4x^3}$ f (x) + C , where C is aconstant of integration, then f(x) is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "- $4x^3$ - 1",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4x^3$ + 1",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "- $2x^3$ - 1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "- $2x^3$ + 1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-66d11290d39c",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2019,
+      "shift": "11 Jan 2019, Shift 2",
+      "status": "draft",
+      "stem": "If ∫ $\\frac{x+1}{\\sqrt{2x-1}}$ dx = f (x) $\\sqrt{2x-1}$ + C , where C is a constant of integration, then f(x) is equal to :-",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}$ (x + 4)",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3}$ (x + 1)",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3}$ (x + 2)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{3}$ (x - 4)",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-87fc39d9e9f3",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2019,
+      "shift": "12 Apr 2019, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\alpha \\in \\left(0, \\frac{\\pi}{2}\\right)$ be fixed. If the integral $\\int \\frac{\\tan x + \\tan \\alpha}{\\tan x - \\tan \\alpha} \\, dx = A(x) \\cos 2\\alpha + B(x) \\sin 2\\alpha + C$ where c is a constant of integration, then the functions A(x) and B(x) are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x - \\alpha$ and $\\log_e |\\cos(x-\\alpha)|$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x - \\alpha$ and $\\log_e |\\sin(x-\\alpha)|$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x + \\alpha$ and $\\log_e |\\sin(x+\\alpha)|$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x + \\alpha$ and $\\log_e |\\sin(x-\\alpha)|$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c9f88e9b56b4",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2019,
+      "shift": "12 Jan 2019, Shift 1",
+      "status": "draft",
+      "stem": "The integral ∫ cos $(\\log_e x)$ dx is equal to :\n(where C is a constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{x}{2}$ [sin ($\\log_e$ x) - cos ($\\log_e$ x)] + C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{x}{2}$ [cos ($\\log_e$ x) + sin ($\\log_e$ x)] + C",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$x$ [cos ($\\log_e$ x) + sin ($\\log_e$ x)] + C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$x$ [cos ($\\log_e$ x) - sin ($\\log_e$ x)] + C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2d503cc8d103",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2019,
+      "shift": "8 Apr 2019, Shift 1",
+      "status": "draft",
+      "stem": "$\\int \\frac{\\sin\\frac{5x}{2}}{\\sin\\frac{x}{2}} dx$is equal to:\n(Where c is a constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "x + 2 sinx + 2 sin2x + c",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2x + sinx + sin2x + c",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2x + sinx + 2 sin2x + c",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "x + 2 sinx + sin2x + c",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-d9d82625b6fa",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2019,
+      "shift": "9 Apr 2019, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int e^{\\sec x} \\left( \\sec x \\tan x f(x) + \\left( \\sec x \\tan x + \\sec^2 x \\right) \\right) dx = e^{\\sec x} f(x) + C$ then a possible choice of $f(x)$ is:",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x \\sec x + \\tan x + \\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sec x + \\tan x - \\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sec x + \\tan x + \\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sec x - \\tan x - \\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-b7daf149a835",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2019,
+      "shift": "9 Jan 2019, Shift 2",
+      "status": "draft",
+      "stem": "If f (x) = ∫ $\\frac{5x^8+7x^6}{(x^2+1+2x^7)^2}$ dx , (x ≥ 0) and f (0) = 0 , then the value of f (1) is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "- $\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "- $\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-a701b7232344",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2020,
+      "shift": "3 Sep 2020, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int \\sin^{-1} \\left( \\sqrt{\\frac{x}{1+x}} \\right) dx$ $= A(x) \\tan^{-1}(\\sqrt{x}) + B(x) + C$ where $C$ is a constant of integration, then the ordered pair $(A(x), B(x))$ can be :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(x-1, \\sqrt{x})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(x+1, \\sqrt{x})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(x+1, -\\sqrt{x})$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$(x-1, -\\sqrt{x})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-940a4020f850",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2020,
+      "shift": "5 Sep 2020, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int (e^{2x}+2e^{x}-e^{-x}-1) e^{(e^{x}+e^{-x})} dx$ $=g(x)e^{e^{x}+e^{-x}}+c,$ where $c$ is a constant of integration, then $g(0)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$e^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "e",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-940cd8eda5d9",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2020,
+      "shift": "8 Jan 2020, Shift 1",
+      "status": "draft",
+      "stem": "If $\\frac{\\int \\cos x \\, dx}{\\sin^3 x (1+\\sin^6 x)^{2/3}}$ $= f(x) (1+\\sin^6 x)^{1/\\lambda} + c$ where c is a constant o f integration, then $\\lambda f(\\pi/3)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "-2",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{9}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-be1c6847c40f",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2021,
+      "shift": "16 Mar 2021, Shift 2",
+      "status": "draft",
+      "stem": "For real numbers $\\alpha, \\beta, \\gamma$ and $\\delta$, if $\\;\\int\\; \\frac{(x^{2}-1)+\\tan^{-1}\\left(\\frac{x^{2}+1}{x}\\right)}{(x^{4}+3 x^{2}+1)\\tan^{-1}\\left(\\;\\frac{x^{2}+1}{x}\\right)} d x$\n$= \\;\\; \\alpha \\log_{e}\\left[\\tan^{-1}\\left(\\;\\frac{x^{2}+1}{x}\\right)\\right] + \\beta \\tan^{-1}\\left(\\;\\frac{\\gamma(x^{2}-1)}{x}\\right) + \\delta \\tan^{-1}\\left(\\;\\frac{x^{2}+1}{x}\\right) + C$ where $C$ is an arbitrary constant, then the value of $10(\\alpha+\\beta \\gamma+\\delta)$ is equal to..........",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 6.0,
+        "max": 6.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-05fa3c0b15fe",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2021,
+      "shift": "18 Mar 2021, Shift 1",
+      "status": "draft",
+      "stem": "The integral $\\int \\frac{(2x-1)\\cos\\sqrt{(2x-1)^2+5}}{\\sqrt{4x^2-4x+6}} dx$ is equal to (where, $c$ is a constant of integration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\sin\\sqrt{(2x-1)^2+5}+c$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\cos\\sqrt{(2x+1)^2+5}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}\\cos\\sqrt{(2x-1)^2+5}+c$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}\\sin\\sqrt{(2x+1)^2+5}+c$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-6b59c3c5497b",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2021,
+      "shift": "18 Mar 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\int \\frac{5 x^{8}+7 x^{6}}{(x^{2}+1+2 x^{7})^{2}} \\, dx, (x \\geq 0), f(0)=0$ and $f(1)=\\frac{1}{K'}$ then the value of $K$ is",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c12ce36367fd",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2021,
+      "shift": "24 Feb 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int\\; \\frac{\\cos x - \\sin x}{\\sqrt{8 - \\sin 2x}} \\, dx = a \\sin^{-1}\\left( \\frac{\\sin x + \\cos x}{b} \\right) + c$,\nwhere $c$ is a constant of integration, then the ordered pair $(a, b)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "(3, 1)",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "(1, 3)",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "(-1, 3)",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "(1, -3)",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cec44242052c",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2021,
+      "shift": "27 Aug 2021, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int \\frac{dx}{(x^{2}+x+1)^{2}}$ $= a\\; \\tan^{-1}\\left(\\frac{2x+1}{\\sqrt{3}}\\right)$ $+ b\\frac{2x+1}{x^{2}+x+1}+C, \\quad x > 0$ where C is the constant of integration, then the value of $9(\\sqrt{3} a+b)$ is equal to",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-419f68805480",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2021,
+      "shift": "27 Aug 2021, Shift 2",
+      "status": "draft",
+      "stem": "$\\text{If}\\ \\int \\frac{2 e^{x}+3 e^{-x}}{4 e^{x}+7 e^{-x}} dx = \\frac{1}{14}(u x+v \\log_e$$(4 e^{x}+7 e^{-x}))+C,$ where C is a constant of integration, then u + v is equal to",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 7.0,
+        "max": 7.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-56467fd58b11",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2021,
+      "shift": "31 Aug 2021, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int \\frac{\\sin x}{\\sin^{3} x + \\cos^{3} x} \\, dx = \\alpha \\; \\log_e \\left|1+\\tan x\\right| + \\beta \\; \\log_e \\left|1-\\tan x + \\tan^{2} x\\right| + \\gamma \\; \\tan^{-1}\\left(\\frac{2\\tan x - 1}{\\sqrt{3}}\\right) + C,$ when C is constant of integration, then the value of $18(\\alpha + \\beta + \\gamma^{2})$ is",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 3.0,
+        "max": 3.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c7bdbce1a654",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2022,
+      "shift": "26 Jul 2022, Shift 2",
+      "status": "draft",
+      "stem": "The integral $\\int\\;\\frac{\\left(1-\\frac{1}{\\sqrt{3}}\\right)(\\cos x-\\sin x)}{\\left(1+\\frac{2}{\\sqrt{3}}\\sin 2x\\right)} \\,dx$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{1}{2} \\log_e \\left|\\;\\frac{\\tan\\left(\\frac{x}{2}+\\frac{\\pi}{12}\\right)}{\\tan\\left(\\;\\frac{x}{2}+\\;\\frac{\\pi}{6}\\right)}\\right| + C$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{1}{2} \\log_e \\left|\\;\\frac{\\tan\\left(\\frac{x}{2}+\\frac{\\pi}{6}\\right)}{\\tan\\left(\\;\\frac{x}{2}+\\;\\frac{\\pi}{3}\\right)}\\right| + C$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\log_e \\left|\\;\\frac{\\tan\\left(\\frac{x}{2}+\\frac{\\pi}{6}\\right)}{\\tan\\left(\\;\\frac{x}{2}+\\;\\frac{\\pi}{12}\\right)}\\right| + C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{1}{2} \\log_e \\left|\\;\\frac{\\tan\\left(\\frac{x}{2}-\\frac{\\pi}{12}\\right)}{\\tan\\left(\\;\\frac{x}{2}-\\;\\frac{\\pi}{6}\\right)}\\right| + C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dded9bc44f35",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2022,
+      "shift": "27 Jun 2022, Shift 1",
+      "status": "draft",
+      "stem": "If $\\int \\frac{(x^2+1) e^x}{(x+1)^2} dx = f(x) e^x + C$, where $C$ is a constant, then $\\;\\frac{d^3 f}{d x^3}$ at $x=1$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{3}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-2062fd62e399",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2022,
+      "shift": "29 Jul 2022, Shift 2",
+      "status": "draft",
+      "stem": "For $I(x)-\\int\\frac{\\sec^2 x-2022}{\\sin^{2022} x}dx$, if $I\\left(\\frac{\\pi}{4}\\right)-2^{1011}$, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3^{1010} I\\left(\\frac{\\pi}{3}\\right)-I\\left(\\frac{\\pi}{6}\\right)=0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3^{1010} I\\left(\\frac{\\pi}{6}\\right)-I\\left(\\frac{\\pi}{3}\\right)=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3^{1011} I\\left(\\frac{\\pi}{3}\\right)-I\\left(\\frac{\\pi}{6}\\right)=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3^{1011} I\\left(\\frac{\\pi}{6}\\right)-I\\left(\\frac{\\pi}{3}\\right)=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-49e7a7ab39e4",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2023,
+      "shift": "10 Apr 2023, Shift 1",
+      "status": "draft",
+      "stem": "If $I(x)=\\int e^{\\sin^2 x}(\\cos x \\sin 2x - \\sin x)\\,dx$ and $I(0)=1$, then $I\\left(\\frac{\\pi}{3}\\right)$ is equal to :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$e^{3/4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-e^{3/4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2} e^{3/4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{1}{2} e^{3/4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-594e2c58b368",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2023,
+      "shift": "10 Apr 2023, Shift 2",
+      "status": "draft",
+      "stem": "For $\\alpha, \\beta, \\gamma, \\delta \\in N$, if $\\int \\left( \\left( \\frac{x}{e} \\right)^{2x} + \\left( \\frac{e}{x} \\right)^{2x} \\right) \\log_e x \\, dx = \\frac{1}{\\alpha} \\left( \\frac{x}{e} \\right)^{\\beta x} - \\frac{1}{\\gamma} \\left( \\frac{e}{x} \\right)^{\\delta x} + C$, where $e = \\sum\\limits_{n=0}^{\\infty} \\frac{1}{n!}$ and $C$ is constant of integration, then $\\alpha + 2\\beta + 3\\gamma - 4\\delta$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "-4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "-8",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3d48dfe5d684",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2023,
+      "shift": "12 Apr 2023, Shift 1",
+      "status": "draft",
+      "stem": "Let $I(x)=\\int \\sqrt{\\; \\frac{x+7}{x}} dx$ and $I(9)=12+7 \\log_e 7$. If $I(1)=\\alpha+7 \\log_e(1+2\\sqrt{2})$, then $\\alpha^4$ is equal to ________.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 64.0,
+        "max": 64.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-545698e42210",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2023,
+      "shift": "15 Apr 2023, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=\\int\\;\\frac{dx}{(3+4x^2)\\sqrt{4-3x^2}},\\;|x| < \\frac{2}{\\sqrt{3}}$. If $f(0)=0$ and $f(1)=\\;\\frac{1}{\\alpha\\beta}\\tan^{-1}\\left(\\frac{\\alpha}{\\beta}\\right) \\alpha,\\beta>0$, then $\\alpha^2+\\beta^2$ is equal to",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 28.0,
+        "max": 28.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-36fb191b9dcc",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2023,
+      "shift": "25 Jan 2023, Shift 1",
+      "status": "draft",
+      "stem": "Let $f(x)=\\int\\;\\frac{2x}{(x^2+1)(x^2+3)}dx$.\nIf $f(3)=\\;\\frac{1}{2}(\\log_e 5-\\log_e 6)$, then $f(4)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{1}{2}(\\log_e 17-\\log_e 19)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\log_e 17-\\log_e 18$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{1}{2}(\\log_e 19-\\log_e 17)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\log_e 19-\\log_e 20$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-577040c6345c",
+      "subtopic": "general",
+      "type": "numerical",
+      "difficulty": 5,
+      "expected_time_sec": 180,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2023,
+      "shift": "30 Jan 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\int \\sqrt{\\sec 2x -1} \\, dx = \\alpha \\log_e \\left| \\cos 2x + \\beta + \\sqrt{\\cos 2x \\left(1+\\cos \\frac{1}{\\beta} x\\right)} \\right|$\n$+$ constant, then $\\beta - \\alpha$ is equal to _______.",
+      "image": null,
+      "options": [],
+      "answer": {
+        "min": 1.0,
+        "max": 1.0
+      },
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fdcb232111a5",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2023,
+      "shift": "8 Apr 2023, Shift 1",
+      "status": "draft",
+      "stem": "Let $I(x)=\\int\\;\\frac{x+1}{x(1+x e^x)^2}\\,dx,\\ x>0$. If $\\lim\\limits_{x\\to\\infty}I(x)=0$, then $I(1)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\;\\frac{e+1}{e+2}-\\log_{e}(e+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\;\\frac{e+2}{e+1}+\\log_{e}(e+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\;\\frac{e+2}{e+1}-\\log_{e}(e+1)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\;\\frac{e+1}{e+2}+\\log_{e}(e+1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-8377a1a87b11",
+      "subtopic": "general",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "jee_main",
+      "year": 2023,
+      "shift": "8 Apr 2023, Shift 2",
+      "status": "draft",
+      "stem": "The integral $\\int\\left(\\left(\\frac{x}{2}\\right)^x + \\left(\\frac{2}{x}\\right)^x \\right) \\log_2 x \\, dx$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{x}{2}\\right)^x \\log_2 \\left(\\frac{2}{x}\\right) + C$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{x}{2}\\right)^x - \\left(\\frac{2}{x}\\right)^x + C$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{x}{2}\\right)^x \\log_2 \\left(\\frac{x}{2}\\right) + C$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\frac{x}{2}\\right)^x + \\left(\\frac{2}{x}\\right)^x + C$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
       "ref": "PYQ-MATH-c8f5fbdc873b",
       "subtopic": "general",
       "type": "single_correct",
