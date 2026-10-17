@@ -1,0 +1,32 @@
+.attempt-report .seg.tabs { margin: 22px 0 16px; }
+.attempt-report-filters { flex-wrap: wrap; }
+.attempt-report-filters .faint { margin-left: 4px; font-variant-numeric: tabular-nums; }
+.attempt-report-questions { padding: 4px 16px; }
+.attempt-report-question > summary { cursor: pointer; list-style: none; }
+.attempt-report-question > summary::-webkit-details-marker { display: none; }
+.attempt-report-question .solution-head { flex-wrap: wrap; row-gap: 4px; }
+.attempt-report-chapter { font-weight: 500; }
+.attempt-report-time { font-size: 13px; }
+.attempt-report-options { list-style: none; margin: 12px 0; padding: 0; display: grid; gap: 8px; }
+.attempt-report-options li {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 10px 12px; border: 1px solid var(--line); border-radius: var(--r);
+}
+.attempt-report-options li.is-correct { border-color: var(--good); background: var(--good-soft); }
+.attempt-report-options li.is-wrong { border-color: var(--bad); background: var(--bad-soft); }
+.attempt-report-tag { margin-left: auto; font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
+.attempt-summary-note { max-width: 640px; }
+.edge-history-table > a.attempt-history-link {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 16px; padding: 13px 0;
+  border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-2); text-decoration: none;
+}
+.edge-history-table > a.attempt-history-link > span:last-child { text-align: right; }
+.edge-history-table > a.attempt-history-link small { color: var(--ink-3); }
+.attempt-history-link:hover > span:first-child strong, .attempt-history-link:focus-visible > span:first-child strong { color: var(--pen); text-decoration: underline; }
+@media (max-width: 560px) {
+  .attempt-report-questions { padding: 4px 10px; }
+  .attempt-report-tag { margin-left: 0; width: 100%; }
+  .edge-history-table > a.attempt-history-link { font-size: 11px; gap: 12px; }
+}
+.attempt-report-note{font-size:13.5px;margin:0 0 8px}
+.attempt-report-practice{display:inline-block;margin-left:10px;font-size:13px;font-weight:600;text-underline-offset:3px}

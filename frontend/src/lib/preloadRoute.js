@@ -4,6 +4,7 @@ const routes = {
   '/login': () => import('../auth/AuthPage.jsx'),
   '/signup': () => import('../auth/AuthPage.jsx'),
   '/test': () => import('../pages/MockTest.jsx'),
+  '/results': () => import('../pages/AttemptAnalysis.jsx'),
   '/scenarios': () => import('../pages/Scenarios.jsx'),
   '/daily': () => import('../pages/DailyQuestion.jsx'),
   '/pyq': () => import('../pages/PYQs.jsx'),
@@ -30,7 +31,8 @@ export function preloadRoute(event) {
   const link = event.target.closest?.('a[href]')
   if (!link) return
   const url = new URL(link.href, location.href)
-  const load = url.origin === location.origin && routes[url.pathname]
-  if (!load || pending.has(url.pathname)) return
-  pending.set(url.pathname, load().catch(() => pending.delete(url.pathname)))
+  const key = url.pathname.startsWith('/results/') ? '/results' : url.pathname
+  const load = url.origin === location.origin && routes[key]
+  if (!load || pending.has(key)) return
+  pending.set(key, load().catch(() => pending.delete(key)))
 }

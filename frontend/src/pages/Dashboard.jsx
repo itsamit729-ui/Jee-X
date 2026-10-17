@@ -13,6 +13,8 @@ import '../studio-ui.css'
 import { PHYSICS, CHEM, MATHS, AMBER, SLATE } from '../crackjee/ui.js'
 import AppHeader from '../components/AppHeader.jsx'
 import { Loader } from '../components/Brand.jsx'
+import { attemptKind } from '../lib/attemptAnalysis.js'
+import '../components/attempt-report.css'
 
 const ProgressTrends = lazy(() => import('../components/ProgressTrends.jsx'))
 
@@ -67,6 +69,7 @@ export default function Dashboard() {
   const [category, setCategory] = useState('All tools')
   const [profile, setProfile] = useState(null)
   const [attempts, setAttempts] = useState([])
+  const [recentResults, setRecentResults] = useState([])
   const [rating, setRating] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
@@ -84,6 +87,7 @@ export default function Dashboard() {
         if (!desk.onboarded) { const access = await request('/api/classrooms/access', { cache: false }); if (active) navigate(access.teacher ? '/teacher' : '/onboarding', { replace: true }); return }
         setProfile(desk.profile)
         setAttempts(desk.attempts)
+        setRecentResults(desk.recent_results || [])
         setRating(desk.rating)
       } catch (e) {
         if (active) setError(e.message || 'Your study desk couldn’t load. Please try again.')
@@ -121,7 +125,7 @@ export default function Dashboard() {
       <aside className="edge-desk-side"><div className="edge-side-heading"><span>YOUR MOMENTUM</span><ArrowUpRight size={16}/></div><RatingSummary initialRating={rating}/><Link className="edge-daily-link" to="/daily"><span className="edge-daily-icon"><CalendarCheck size={21}/></span><div><strong>A small win for today</strong><p>Open your daily question</p></div><ArrowRight size={16}/></Link><div className="edge-last-session"><span>{latest ? 'LAST SESSION' : 'A FRESH START'}</span><p>{latest ? <><strong>{latest.score ?? '—'} marks</strong> · {Math.round(latest.accuracy || 0)}% accuracy</> : 'Your first session starts your progress story.'}</p>{latest && <small>{new Date(latest.created_at).toLocaleDateString('en-IN', {day:'numeric',month:'short'})}</small>}</div></aside></div>
       <AssignedTestsPreview/>
       <section className="edge-desk-tools" aria-labelledby="tools-title"><div className="edge-tools-heading"><div><span className="edge-desk-label">MAKE IT YOUR KIND OF SESSION</span><h2 id="tools-title">What would you like to work on?</h2></div><div role="group" aria-label="Filter study tools">{['All tools','Practice','Discover','Together'].map(value => <button key={value} aria-pressed={value === category} onClick={() => setCategory(value)}>{value}</button>)}</div></div><div className="edge-tool-grid" key={category}>{shownTools.map(({title,description,tag,Icon,to},i) => <Link className="edge-tool-card" key={to+title} to={to} style={{ '--card-index': i }}><span className="edge-tool-icon"><Icon size={21} strokeWidth={1.5}/></span><div><small>{tag}</small><h3>{title}</h3><p>{description}</p></div><ArrowUpRight size={17}/></Link>)}</div><p className="edge-tools-note">MHT-CET college comparisons appear after a mock, using a percentile you enter. <Link to="/advanced">Explore IIT & Advanced<ArrowUpRight size={12}/></Link></p></section>
-      <details className="edge-desk-history" onToggle={e => setShowTrends(e.currentTarget.open)}><summary><span>Look back. Move forward.<small>{attempts.length} recorded {attempts.length === 1 ? 'session' : 'sessions'}</small></span><span>Results & trends<ChevronDown size={17}/></span></summary>{attempts.length ? <div className="edge-history-table"><div className="edge-history-labels"><span>SESSION DATE</span><span>SCORE</span><span>ACCURACY</span></div>{[...attempts].sort((a,b) => new Date(b.created_at)-new Date(a.created_at)).slice(0,10).map((attempt,i) => <div key={attempt.id || i}><span>{new Date(attempt.created_at).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}</span><strong>{attempt.score ?? '—'} marks</strong><span>{Math.round(attempt.accuracy || 0)}%</span></div>)}</div> : <p className="edge-history-empty">Your completed sessions will appear here. Start with a subject you want to work on.</p>}{showTrends && history?.length > 0 && <Suspense fallback={<p className="edge-history-empty">Loading trends…</p>}><ProgressTrends history={history} subjectTrends={subjectTrends}/></Suspense>}</details>
+      <details className="edge-desk-history" onToggle={e => setShowTrends(e.currentTarget.open)}><summary><span>Look back. Move forward.<small>{recentResults.length ? `Your last ${recentResults.length === 1 ? 'session' : `${recentResults.length} sessions`}` : 'No sessions yet'}</small></span><span>Results & trends<ChevronDown size={17}/></span></summary>{recentResults.length ? <div className="edge-history-table"><div className="edge-history-labels"><span>SESSION</span><span>SCORE</span><span>ACCURACY</span></div>{recentResults.map(row => <Link key={row.id} className="attempt-history-link" to={`/results/${row.id}`}><span><strong>{row.title}</strong><small> · {attemptKind(row)} · {new Date(row.submitted_at).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}</small></span><strong>{row.score ?? '—'} marks</strong><span>{Math.round(row.accuracy || 0)}%</span></Link>)}</div> : <p className="edge-history-empty">Your completed sessions will appear here. Start with a subject you want to work on.</p>}{showTrends && history?.length > 0 && <Suspense fallback={<p className="edge-history-empty">Loading trends…</p>}><ProgressTrends history={history} subjectTrends={subjectTrends}/></Suspense>}</details>
       <footer className="edge-desk-footer"><span>Good progress starts with showing up.</span><Link to="/syllabus">Browse the syllabus<ArrowUpRight size={13}/></Link></footer>
       </>}
     </main></div>

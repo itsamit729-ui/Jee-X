@@ -27,3 +27,10 @@ export const subjectTestGraderService = {
       body: { answers },
     }),
 }
+
+// Reopen a submitted attempt: full analysis, and the list of past attempts.
+export const attemptAnalysisService = {
+  get: (attemptId) => request(`/api/test-attempts/${encodeURIComponent(attemptId)}/analysis`),
+  history: ({ limit = 20, before } = {}) =>
+    request(`/api/test-attempts/history?limit=${limit}${before ? `&before=${before}` : ''}`),
+}

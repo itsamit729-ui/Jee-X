@@ -1,12 +1,13 @@
 from datetime import datetime, timezone
 
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session, joinedload
 
 from app import models, schemas
 from app.deps import get_current_db_user
 from app.database import get_db
 from app.auth import get_auth_account
+from app.services import attempt_analysis
 
 router = APIRouter(prefix="/api/test-attempts", tags=["test-attempts"])
 
@@ -117,4 +118,19 @@ def dashboard(account: models.AuthAccount = Depends(get_auth_account), db: Sessi
         'profile': _user_out(user),
         'attempts': list_test_attempts(user, db),
         'rating': _build_me(db, user.id, profile.target_exam, profile.target_year, profile.leaderboard_visibility),
+        'recent_results': attempt_analysis.history(db, user.id, limit=10),
     }
+
+
+@router.get('/history')
+def attempt_history(limit: int = Query(20, ge=1, le=50), before: int | None = Query(None, ge=1),
+                    user: models.User = Depends(get_current_db_user), db: Session = Depends(get_db)):
+    """Every submitted attempt except classroom assignments, newest first."""
+    return attempt_analysis.history(db, user.id, limit, before)
+
+
+@router.get('/{attempt_id}/analysis')
+def attempt_analysis_detail(attempt_id: int, user: models.User = Depends(get_current_db_user),
+                            db: Session = Depends(get_db)):
+    """Reopenable analysis rebuilt from stored responses."""
+    return attempt_analysis.build_analysis(db, user.id, attempt_id)

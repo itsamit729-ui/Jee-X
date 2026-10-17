@@ -20,6 +20,7 @@ const Pricing = lazy(() => import('./pages/Pricing.jsx'))
 const Home = lazy(() => import('./pages/Home.jsx'))
 const MockTest = lazy(() => import('./pages/MockTest.jsx'))
 const Analysis = lazy(() => import('./pages/Analysis.jsx'))
+const AttemptAnalysis = lazy(() => import('./pages/AttemptAnalysis.jsx'))
 const Buddy = lazy(() => import('./pages/Buddy.jsx'))
 const FreeTest = lazy(() => import('./pages/FreeTest.jsx'))
 const Onboarding = lazy(() => import('./pages/Onboarding.jsx'))
@@ -139,6 +140,7 @@ export default function App() {
           </ProtectedRoute>
         }
       />
+      <Route path="/results/:attemptId" element={<ProtectedRoute><AttemptAnalysis /></ProtectedRoute>} />
       <Route
         path="/buddy"
         element={

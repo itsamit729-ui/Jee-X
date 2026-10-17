@@ -260,7 +260,8 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
           </div>
 
           <div className="hero-actions">
-            <button type="button" className="btn btn-primary" onClick={restart}>Start another test</button>
+            <Link className="btn btn-primary" to={`/results/${result.attempt_id}`}>See full analysis</Link>
+            <button type="button" className="btn btn-secondary" onClick={restart}>Start another test</button>
             <button type="button" className="btn btn-secondary" onClick={() => navigate('/dashboard')}>Back to dashboard</button>
           </div>
         </main>

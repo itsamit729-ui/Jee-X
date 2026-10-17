@@ -303,6 +303,7 @@ def test_combined_dashboard_onboarding_and_account_isolation(env):
     Base.metadata.create_all(sessions.kw['bind'], tables=[
         models.Test.__table__, models.TestAttempt.__table__, models.JeeXRating.__table__,
         models.RatedContest.__table__, models.ContestEntry.__table__,
+        models.QuestionResponse.__table__, models.TeachingAssignment.__table__,
     ])
     assert client.get('/api/test-attempts/dashboard').status_code == 401
     login(env)
@@ -313,6 +314,7 @@ def test_combined_dashboard_onboarding_and_account_isolation(env):
     result = client.get('/api/test-attempts/dashboard')
     assert result.status_code == 200, result.text
     assert result.json()['profile']['username'] == 'speedstudent'
+    assert result.json()['recent_results'] == []
     assert result.json()['attempts'] == []
     assert result.json()['rating']['title'] == 'Unrated'
     # A request without this student's cookie cannot reuse their data.
