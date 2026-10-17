@@ -1,7 +1,7 @@
 # MHT CET 2021 — question dataset
 
 1476 questions from 10 shifts of MHT CET 2021, scraped from ExamSIDE's chapter-wise pages
-(499 physics, 489 chemistry, 488 mathematics; 51 with a figure).
+(499 physics, 489 chemistry, 488 mathematics; 50 with a figure).
 None has a solution yet. Rebuild this folder with `python scripts/scrape_mhtcet.py --dataset 2021`.
 
 | File | Contents |
