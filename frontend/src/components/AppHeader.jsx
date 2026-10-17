@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext.jsx'
 import { LayoutDashboard, BookOpen, Target, Trophy, Users, CalendarCheck, GraduationCap, Shapes, Library, MessageCircle, Coins, UserRound, LogOut, Grid2X2, X, Search, ArrowUpRight, ChevronRight, Menu } from 'lucide-react'
+import { matchesSearch } from '../lib/search.js'
 import { Logo } from './Brand.jsx'
 import InboxBell from './classroom/InboxBell.jsx'
 import { preloadRoute } from '../lib/preloadRoute.js'
@@ -72,7 +73,7 @@ function StudentHeader() {
   }, [open])
   const links = teacher ? [['/teacher', 'Teacher studio', GraduationCap], ...main.slice(1)] : main
   const activeIndex = links.findIndex(([path]) => pathname === path || pathname.startsWith(`${path}/`))
-  const filtered = groups.map(group => ({ ...group, items: group.items.filter(item => `${item[1]} ${item[3]}`.toLowerCase().includes(query.toLowerCase().trim())) })).filter(group => group.items.length)
+  const filtered = groups.map(group => ({ ...group, items: group.items.filter(item => matchesSearch(`${item[1]} ${item[3]} ${item[0]}`,query)) })).filter(group => group.items.length)
 
   return <div ref={ref} className={`studio-navigation${isAuthenticated ? ' is-member' : ''}`} onPointerOver={preloadRoute} onFocus={preloadRoute} onBlur={event => { if (event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) close() }}>
     <a className="skip-link" href="#studio-main">Skip to workspace</a>

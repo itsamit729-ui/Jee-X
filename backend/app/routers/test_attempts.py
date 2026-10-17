@@ -1,6 +1,7 @@
 from datetime import datetime, timezone
 
 from fastapi import APIRouter, Depends, Query
+from sqlalchemy import select
 from sqlalchemy.orm import Session, joinedload
 
 from app import models, schemas
@@ -104,6 +105,19 @@ def list_test_attempts(
     return [_to_out(a) for a in attempts]
 
 
+def dashboard_attempts(user_id: int, db: Session):
+    """Include server-graded practice/mocks, not just legacy client summaries."""
+    assignments=select(models.TeachingAssignment.test_id).where(models.TeachingAssignment.test_id.isnot(None))
+    rows=(db.query(models.TestAttempt).join(models.Test).options(joinedload(models.TestAttempt.test))
+          .filter(models.TestAttempt.user_id==user_id,models.TestAttempt.submitted_at.isnot(None),
+                  models.Test.kind.in_(['free_diagnostic','mock','chapter']),
+                  models.TestAttempt.test_id.notin_(assignments))
+          .order_by(models.TestAttempt.submitted_at.desc(),models.TestAttempt.id.desc()).all())
+    return [dict(id=a.id,test_type=a.test.kind,score=a.score,total_questions=a.total_questions,
+                 accuracy=a.accuracy,avg_time_seconds=a.avg_time_seconds,
+                 subject_breakdown=a.subject_breakdown or {},created_at=a.submitted_at) for a in rows]
+
+
 @router.get('/dashboard')
 def dashboard(account: models.AuthAccount = Depends(get_auth_account), db: Session = Depends(get_db)):
     """One authenticated read for the study desk, history and rating summary."""
@@ -116,7 +130,7 @@ def dashboard(account: models.AuthAccount = Depends(get_auth_account), db: Sessi
     return {
         'onboarded': True,
         'profile': _user_out(user),
-        'attempts': list_test_attempts(user, db),
+        'attempts': dashboard_attempts(user.id, db),
         'rating': _build_me(db, user.id, profile.target_exam, profile.target_year, profile.leaderboard_visibility),
         'recent_results': attempt_analysis.history(db, user.id, limit=10),
     }

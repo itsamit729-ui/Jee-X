@@ -176,3 +176,20 @@ def test_analysis_compares_with_previous_attempt_of_the_same_paper_and_counts_ma
     previous = client.get(f"/api/test-attempts/{second['attempt_id']}/analysis").json()['meta']['previous']
     assert previous['attempt_id'] == first['attempt_id']
     assert previous['score'] == first_data['summary']['score']
+
+
+def test_dashboard_totals_include_new_server_scored_practice_and_mocks_only_for_owner(env):
+    from app.routers.test_attempts import dashboard_attempts
+    client,factory,active=env
+    mock=client.post('/api/subject-tests',json={'full_mock':True}).json()
+    client.post(f"/api/subject-tests/attempts/{mock['attempt_id']}/submit",json={'answers':answer_all(mock)})
+    practice=client.post('/api/subject-tests',json={'subject_code':'PHY','mode':'topic','count':3}).json()
+    assert 'attempt_id' in practice,practice
+    client.post(f"/api/subject-tests/attempts/{practice['attempt_id']}/submit",json={'answers':answer_all(practice)})
+    pending=client.post('/api/subject-tests',json={'full_mock':True}).json()
+    with factory() as db:
+        rows=dashboard_attempts(1,db)
+        assert {r['id'] for r in rows}=={500,mock['attempt_id'],practice['attempt_id']}
+        assert pending['attempt_id'] not in {r['id'] for r in rows}
+        assert next(r for r in rows if r['id']==practice['attempt_id'])['test_type']=='chapter'
+        assert dashboard_attempts(2,db)==[]

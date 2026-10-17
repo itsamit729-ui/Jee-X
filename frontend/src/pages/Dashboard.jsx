@@ -75,6 +75,13 @@ export default function Dashboard() {
   const [error, setError] = useState('')
   const [loadVersion, setLoadVersion] = useState(0)
 
+  useEffect(()=>{
+    const refresh=()=>setLoadVersion(value=>value+1)
+    window.addEventListener('jee-attempt-submitted',refresh)
+    window.addEventListener('focus',refresh)
+    return()=>{window.removeEventListener('jee-attempt-submitted',refresh);window.removeEventListener('focus',refresh)}
+  },[])
+
   useEffect(() => {
     let active = true
     setLoading(true)
@@ -82,7 +89,7 @@ export default function Dashboard() {
     ;(async () => {
       try {
         await syncPendingFreeTest()
-        const desk = await api.dashboard()
+        const desk = await request('/api/test-attempts/dashboard',{cache:false})
         if (!active) return
         if (!desk.onboarded) { const access = await request('/api/classrooms/access', { cache: false }); if (active) navigate(access.teacher ? '/teacher' : '/onboarding', { replace: true }); return }
         setProfile(desk.profile)

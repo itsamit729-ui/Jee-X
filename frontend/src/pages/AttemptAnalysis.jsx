@@ -72,6 +72,7 @@ export default function AttemptAnalysis() {
         <p className="page-sub">Submitted {formatDate(meta.submitted_at)}</p>
       </div>
       <div className="page-actions">
+        {data.detail_available && <Link className="btn btn-secondary" to={`/results/${meta.attempt_id}?tab=questions`}>Review all questions & solutions</Link>}
         {data.detail_available && <Link className="btn btn-secondary" to="/buddy" state={{ result: buddyResult(data) }}>Ask Buddy about this result</Link>}
         <Link className="btn btn-primary" to={nextTestPath(meta)}>Start another</Link>
       </div>

@@ -124,3 +124,16 @@ test('plan revisits reuse memory but submission and account changes require fres
   setCacheIdentity('another-student')
   assert.equal((await request('/api/roadmap/journey')).version, 5)
 })
+
+test('percentile and college estimates reuse one request per attempt and clear on account or result changes',async()=>{
+ let calls=0
+ globalThis.fetch=async()=>json({version:++calls})
+ const path='/api/test-attempts/9/prediction'
+ assert.equal((await request(path)).version,1)
+ assert.equal((await request(path)).version,1)
+ assert.equal(stored.size,0,'predictions never persist in browser storage')
+ setCacheIdentity('next-prediction-owner')
+ assert.equal((await request(path)).version,2)
+ await request('/api/subject-tests/attempts/10/submit',{method:'POST',body:{answers:[]}})
+ assert.equal((await request(path)).version,4)
+})

@@ -21,6 +21,7 @@ export default function AttemptReport({ data }) {
   const tab = TABS.some(([key]) => key === searchParams.get('tab')) ? searchParams.get('tab') : 'overview'
   const setTab = (key) => setSearchParams((params) => { const next = new URLSearchParams(params); if (key === 'overview') next.delete('tab'); else next.set('tab', key); return next }, { replace: true })
   const [filter, setFilter] = useState('all')
+  const [expandAll,setExpandAll]=useState(false)
   const { summary, subjects, chapters, questions, meta } = data
   const pieData = [
     { name: 'Correct', value: summary.correct, color: GOOD },
@@ -145,13 +146,14 @@ export default function AttemptReport({ data }) {
     </div>}
 
     {tab === 'questions' && <div className="stack">
+      <div className="attempt-review-heading"><div><h2>Question-wise analysis</h2><p className="muted">Every question, your answer, the correct answer and worked solutions where available.</p></div><button type="button" className="btn btn-secondary" onClick={()=>setExpandAll(v=>!v)}>{expandAll?'Collapse solutions':'Show all questions & solutions'}</button></div>
       <div className="seg attempt-report-filters" role="group" aria-label="Show questions">
         {QUESTION_FILTERS.map(([key, text]) => <button key={key} type="button" aria-pressed={filter === key} onClick={() => setFilter(key)}>
           {text} <span className="faint">{filterQuestions(questions, key).length}</span>
         </button>)}
       </div>
       {shown.length === 0 ? <p className="muted">No questions match this filter.</p> : <div className="panel attempt-report-questions">
-        {shown.map((q) => <DeferredDetails key={q.question_id} className="solution attempt-report-question" summary={<span className="solution-head">
+        {shown.map((q) => <DeferredDetails key={`${q.question_id}-${expandAll}`} initialOpen={expandAll} className="solution attempt-report-question" summary={<span className="solution-head">
           <span className="sq" data-s={OUTCOME_SQUARE[q.outcome] || 'skipped'} />
           Question {q.position}
           <span className="faint attempt-report-chapter">{q.chapter}</span>

@@ -1,4 +1,4 @@
-import { memo, useMemo } from 'react'
+import { memo, useMemo, useEffect, useRef } from 'react'
 import katex from 'katex'
 import 'katex/dist/katex.min.css'
 
@@ -26,6 +26,7 @@ function textWithLineBreaks(text, keyPrefix) {
 }
 
 function MathText({ text, style }) {
+  const host=useRef(null)
   // Timers and form edits must not typeset an unchanged question again.
   const content = useMemo(() => {
     if (!text) return null
@@ -50,7 +51,27 @@ function MathText({ text, style }) {
       )
     )
   }, [text])
-  return content ? <span className="math-text" style={style}>{content}</span> : null
+  useEffect(()=>{
+    const element=host.current
+    if(!element)return
+    const parent=element.parentElement
+    function fit(){
+      if(!parent?.clientWidth)return
+      for(const fragment of element.querySelectorAll('.math-fragment')){
+        fragment.style.fontSize=''
+        const available=Math.min(parent.clientWidth,element.clientWidth||parent.clientWidth)
+        const html=fragment.querySelector('.katex-html')
+        const width=Math.max(html?.scrollWidth||0,html?.getBoundingClientRect().width||0,fragment.scrollWidth)
+        if(width>available)fragment.style.fontSize=`${available/width*.98}em`
+      }
+    }
+    fit()
+    const observer=typeof ResizeObserver==='undefined'?null:new ResizeObserver(fit)
+    if(parent)observer?.observe(parent)
+    document.fonts?.ready.then(()=>{if(element.isConnected)fit()})
+    return()=>observer?.disconnect()
+  },[content])
+  return content ? <span ref={host} className="math-text" style={style}>{content}</span> : null
 }
 
 export default memo(MathText)

@@ -6,6 +6,7 @@ let generation = 0
 let identity = null
 
 export function cachePolicy(path) {
+  if (/^\/api\/test-attempts\/\d+\/prediction$/.test(path)) return { ttl: 300_000 }
   if (path === '/api/roadmap/journey') return { ttl: 30_000 }
   if (path.startsWith('/api/colleges/insight?')) return { ttl: 600_000 }
   if (/^\/api\/subjects(?:\/[^/]+\/chapters)?$/.test(path)) return { ttl: 300_000, persist: true }

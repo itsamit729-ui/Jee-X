@@ -5,6 +5,8 @@ import CollegeHorizon from './CollegeHorizon.jsx'
 import { subjectTestBuilderService } from '../lib/subjectTests.js'
 import { requestFullscreen } from '../lib/fullscreen.js'
 import { evidenceLabel, planSubjects, planTopics, topicPracticeOptions } from '../lib/planPresentation.js'
+import SearchField from './SearchField.jsx'
+import { matchesSearch } from '../lib/search.js'
 import './topic-study-plan.css'
 
 const tabs = [
@@ -25,18 +27,22 @@ function TopicRow({ topic, index, onChoose }) {
   </button></li>
 }
 
-function WeekPlan({ plan, topics, onChoose }) {
+export function WeekPlan({ plan, topics, onChoose }) {
   const [subject, setSubject] = useState('')
-  const visible = topics.filter(topic => !subject || topic.subject === subject)
-  const week = visible.filter(topic => topic.week === 1)
-  const laterWeeks = [...new Set(visible.map(topic => topic.week))].filter(value => value > 1)
+  const [query,setQuery]=useState('')
+  const [selectedWeek,setSelectedWeek]=useState(1)
+  const visible=topics.filter(topic=>(!subject||topic.subject===subject)&&matchesSearch(`${topic.topic} ${topic.chapter} ${planSubjects[topic.subject]}`,query))
+  const weeks=[...new Set(visible.map(topic=>topic.week))].sort((a,b)=>a-b)
+  const activeWeek=weeks.includes(selectedWeek)?selectedWeek:weeks[0]||1
+  const week=visible.filter(topic=>topic.week===activeWeek)
+  const position=weeks.indexOf(activeWeek)
   return <div className="mp-week">
-    <div className="mp-view-heading"><div><span className="mp-eyebrow">A WEEK YOU CAN WORK WITH</span><h2>A little structure. Room to revise.</h2><p>Work down the list at your own pace. Your answers can change what comes next.</p></div><span className="mp-time-badge"><Clock3 size={16}/>{plan.weekly_hours} hours / week</span></div>
-    <div className="mp-week-budget"><div><BookOpen size={20}/><span><strong>{plan.topic_minutes} min</strong>Focused topic sessions</span></div><span className="mp-budget-plus">+</span><div><CalendarCheck size={20}/><span><strong>{plan.reserved_minutes} min</strong>Revisits, mistakes & checkpoints</span></div><p>Each topic block includes review, practice and time to learn from mistakes.</p></div>
-    <div className="mp-list-heading"><h3>This week’s topics</h3><div className="mp-subject-filter" role="group" aria-label="Filter scheduled topics by subject">{[['', 'All subjects'], ...Object.entries(planSubjects)].map(([code, label]) => <button type="button" key={code} aria-pressed={subject === code} onClick={() => setSubject(code)}>{label}</button>)}</div></div>
-    <ol className="mp-topic-list" key={subject}>{week.map((topic, index) => <TopicRow key={topic.topic_id} topic={topic} index={index} onChoose={onChoose}/>)}</ol>
-    {!week.length && <div className="mp-empty"><p>No topics from this selection are scheduled for week one.</p><Link to="/subject-test">Choose a practice topic <ArrowRight size={15}/></Link></div>}
-    {laterWeeks.length > 0 && <details className="mp-disclosure"><summary>Look ahead · your later weeks<ChevronDown size={17}/></summary><p>{plan.timeline_note} {plan.capacity_note}</p>{laterWeeks.map(number => <details className="mp-later-week" key={number}><summary>Week {number}<span>{visible.filter(topic => topic.week === number).length} topics{visible.find(topic => topic.week === number)?.within_horizon ? '' : ' · beyond current planning horizon'}</span><ChevronDown size={15}/></summary><ol className="mp-topic-list">{visible.filter(topic => topic.week === number).map((topic, index) => <TopicRow key={topic.topic_id} topic={topic} index={index} onChoose={onChoose}/>)}</ol></details>)}</details>}
+    <div className="mp-view-heading"><div><span className="mp-eyebrow">YOUR WEEKLY SCHEDULE</span><h2>{activeWeek===1?'This week':activeWeek===2?'Next week':`Week ${activeWeek}`} · a clear next step</h2><p>Choose a week, find a topic and start a focused session.</p></div><span className="mp-time-badge"><Clock3 size={16}/>{plan.weekly_hours} hours / week</span></div>
+    <div className="mp-week-controls"><SearchField label="Search scheduled topics" placeholder="Search topic, chapter or subject…" value={query} onChange={event=>setQuery(event.target.value)}/><div className="mp-subject-filter" role="group" aria-label="Filter scheduled topics by subject">{[['','All subjects'],...Object.entries(planSubjects)].map(([code,label])=><button type="button" key={code} aria-pressed={subject===code} onClick={()=>setSubject(code)}>{label}</button>)}</div></div>
+    <nav className="mp-week-switch" aria-label="Choose a planned week"><button type="button" disabled={position<=0} onClick={()=>setSelectedWeek(weeks[position-1])}>← Previous week</button><div aria-live="polite"><strong>{activeWeek===1?'This week':activeWeek===2?'Next week':`Week ${activeWeek}`}</strong><span>{week.length} topics · {week.reduce((sum,topic)=>sum+(topic.minutes||30),0)} minutes scheduled</span></div><button type="button" disabled={position<0||position>=weeks.length-1} onClick={()=>setSelectedWeek(weeks[position+1])}>Next week →</button></nav>
+    <ol className="mp-topic-list">{week.map((topic,index)=><TopicRow key={topic.topic_id} topic={topic} index={index} onChoose={onChoose}/>)}</ol>
+    {!week.length&&<div className="mp-empty"><p>No scheduled topics match these filters.</p><button type="button" className="btn btn-secondary" onClick={()=>{setQuery('');setSubject('')}}>Clear filters</button></div>}
+    <p className="mp-week-note">{plan.timeline_note} {plan.capacity_note} {week.some(topic=>!topic.within_horizon)?'This week extends beyond your current planning horizon.':''}</p>
   </div>
 }
 

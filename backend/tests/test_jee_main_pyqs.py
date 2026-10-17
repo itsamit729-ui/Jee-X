@@ -97,3 +97,12 @@ def test_full_shift_scoring_and_numeric_keys_are_only_returned_after_owned_submi
     numeric=next(q for q in result['questions'] if q['question_id']==4)
     assert numeric['answer_min']==5 and numeric['answer_max']==5
     assert c.post(url,json={'answers':answers}).status_code==409
+
+
+def test_shift_keeps_each_subject_mcqs_before_numericals(archive):
+    c,_=archive
+    paper=c.post('/api/pyqs/jee_main/papers',json={'year':2026,'shift':'21 Jan 2026, Shift 1'}).json()
+    order={'PHY':0,'CHEM':1,'MATH':2}
+    keys=[(order[q['subject_code']],int(q['type']=='numerical')) for q in paper['questions']]
+    assert keys==sorted(keys)
+    assert len({q['question_id'] for q in paper['questions']})==42

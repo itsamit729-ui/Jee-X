@@ -86,9 +86,9 @@ def start_paper(body: PaperStart, exam: Exam,
     rows = (eligible(db, exam).join(models.Subject, models.Subject.id == models.Chapter.subject_id)
             .filter(models.Question.year == body.year, models.Question.shift == body.shift,
                     models.Subject.code.in_(list(SUBJECTS) if exam == 'bitsat' else ['PHY', 'CHEM', 'MATH']))
-            .with_entities(models.Question.id, models.Question.ref, models.Subject.code).all())
+            .with_entities(models.Question.id, models.Question.ref, models.Subject.code, models.Question.type).all())
     order = {code: i for i, code in enumerate(SUBJECTS)}
-    ids = [row.id for row in sorted(rows, key=lambda row: (order[row.code], row.ref))]
+    ids = [row.id for row in sorted(rows, key=lambda row: (order[row.code], 1 if row.type=='numerical' else 0, row.ref))]
     if not ids:
         raise HTTPException(404, 'No published questions are available for this paper.')
     title = f'{EXAM_LABELS[exam]} {body.year} · {body.shift} · Shift mock'

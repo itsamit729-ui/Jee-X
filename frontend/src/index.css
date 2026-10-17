@@ -58,7 +58,7 @@ fieldset { min-inline-size: 0; }
 /* Let grid and flex content shrink instead of moving the whole page sideways. */
 :is(.grid-2,.stats,.cl-form-grid,.cl-columns,.studio-desk-grid,.studio-trends)>* { min-width: 0; }
 .math-text { overflow-wrap: anywhere; }
-.math-fragment { max-width: 100%; overflow-x: auto; overflow-y: hidden; padding-block: 2px; }
+.math-fragment { max-width: 100%; overflow: visible; padding-block: 3px; }
 .math-inline { display: inline-block; vertical-align: middle; }
 .math-block { display: block; margin: 8px 0; }
 .math-fragment .katex-display { margin: .35em 0; }

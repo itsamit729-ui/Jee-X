@@ -12,21 +12,25 @@ import MhtExam from '../components/MhtExam.jsx'
 import MhtCollegePredictor from '../components/MhtCollegePredictor.jsx'
 import { cetCanAnswer } from '../lib/mhtExam.js'
 import FullscreenGuard from '../components/FullscreenGuard.jsx'
-import { requestFullscreen, useFullscreenLock } from '../lib/fullscreen.js'
+import { requestFullscreen, exitFullscreen, useFullscreenLock } from '../lib/fullscreen.js'
 import { GOOD, BAD, PEN, SUBJECT_COLOR } from '../crackjee/ui.js'
 
 import { archiveReturn, resultAnswer } from '../lib/pyqArchive.js'
 import { createPracticeTimer } from '../lib/practiceTimer.js'
 import useTestPreparation from '../hooks/useTestPreparation.js'
 import TestInstructions from '../components/TestInstructions.jsx'
+import TestSession from '../components/TestSession.jsx'
+import ChapterPicker from '../components/ChapterPicker.jsx'
+import { invalidateCache } from '../lib/requestCache.js'
 import './practice.css'
 
 const OUTCOME = { correct: 'correct', wrong: 'wrong' }
 
-export default function SubjectTest({ initialMode = 'recommended', fullMock = false }) {
+export default function SubjectTest({ initialMode = 'recommended', fullMock: forceFullMock = false }) {
   const navigate = useNavigate()
   const location = useLocation()
   const [searchParams] = useSearchParams()
+  const fullMock=forceFullMock||searchParams.get('mock')==='1'
   const requestedSubject = searchParams.get('subject')
   const requestedChapter = searchParams.get('chapter')
   const pyq = ['jee_main', 'bitsat', 'mht_cet'].includes(searchParams.get('pyq'))
@@ -36,6 +40,9 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
   const preparation = useTestPreparation(location.state?.missionTest && !location.state?.instructionsComplete ? { paper: location.state.missionTest, details: { exam: searchParams.get('pyq') || 'jee_main', pyq: Boolean(pyq), mock: location.state.missionTest.is_mock } } : null)
   const [deadline, setDeadline] = useState(() => handedPaper?.is_mock ? Date.now() + handedPaper.duration_sec * 1000 : null)
   const [remaining, setRemaining] = useState(10800)
+  const [startedAt,setStartedAt]=useState(Date.now)
+  const [elapsed,setElapsed]=useState(0)
+  const [questionSeconds,setQuestionSeconds]=useState(0)
   const timeoutSubmitted = useRef(false)
 
 
@@ -146,11 +153,18 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
     requestFullscreen()
     timeoutSubmitted.current = false
     timer.current.reset()
+    setStartedAt(Date.now());setElapsed(0)
     setTest(created)
     setDeadline(created.is_mock || assessment ? Date.now() + created.duration_sec * 1000 : null)
     setRemaining(created.duration_sec)
     setIndex(0); setAnswers({}); setResult(null); setError('')
   }
+
+  useEffect(() => {
+    if (!test || result) return
+    const tick=()=>{setElapsed(Math.floor((Date.now()-startedAt)/1000));setQuestionSeconds(timer.current.seconds(test.questions[index]?.question_id))}
+    tick();const id=setInterval(tick,1000);return()=>clearInterval(id)
+  },[test,result,index,startedAt])
 
   useEffect(() => {
     if (!timed || !test || result || !deadline) return
@@ -179,7 +193,7 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
     if (fullscreen.limitReached || submissionInFlight.current || result) return
     if (timed && remaining <= 0) return
     if (mhtMock && !cetCanAnswer(test.questions.find(q => q.question_id === questionId)?.subject_code, Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))) return
-    setAnswers((a) => ({ ...a, [questionId]: { option_ids: [optionId] } }))
+    setAnswers(a=>{const multiple=test.questions.find(q=>q.question_id===questionId)?.type==='multi_correct';const old=a[questionId]?.option_ids||[];return {...a,[questionId]:{option_ids:multiple?(old.includes(optionId)?old.filter(id=>id!==optionId):[...old,optionId]):[optionId]}}})
   }
 
   const setNumeric = (questionId, value) => {
@@ -204,6 +218,10 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
       }))
       const res = await subjectTestGraderService.submit(test.attempt_id, payload)
       setResult(res)
+      invalidateCache()
+      window.dispatchEvent(new Event('jee-attempt-submitted'))
+      exitFullscreen()
+      navigate(`/results/${res.attempt_id}?tab=questions`,{replace:true,state:{submitted:res}})
     } catch (e) {
       setError(e.message)
     } finally {
@@ -277,80 +295,12 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
       setAnswers(a => { const next = { ...a }; delete next[questionId]; return next })
     }} onSubmit={submitTest} onExit={exitTest} submitting={submitting} error={error}/></>
 
-  // ---------------------------------------------------------------- QUESTION PHASE
-  if (test) {
-    const q = test.questions[index]
-    const isLast = index === test.questions.length - 1
-    return (
-      <div className="crackjee-root">
-        <AppHeader />
-        <FullscreenGuard {...fullscreen} onResume={fullscreen.resume} onSubmit={submitTest} submitting={submitting} error={error} />
-        <main className="test-shell">
-          <button type="button" className="btn btn-quiet btn-sm back" onClick={exitTest}>
-            <ArrowLeft size={16} aria-hidden="true" />Exit test
-          </button>
-
-          <div className="practice-session-bar"><div><span className="practice-eyebrow">{test.title}</span><strong>Question {index + 1} <span>of {test.questions.length}</span></strong></div><span className="faint num">{timed ? `${Math.floor(remaining / 3600)}:${String(Math.floor(remaining % 3600 / 60)).padStart(2, '0')}:${String(remaining % 60).padStart(2, '0')} remaining` : `${answeredCount} answered`}</span><progress max={test.questions.length} value={answeredCount} aria-label="Questions answered"/></div>
-          {test.is_mock && <div className="hero-actions" style={{ marginBottom: 14 }}>
-            {[...new Set(test.questions.map(item => item.subject_code).filter(Boolean))].map(code => <button type="button" className="btn btn-secondary btn-sm" key={code} aria-pressed={q.subject_code === code} onClick={() => setIndex(test.questions.findIndex(item => item.subject_code === code))}>{({PHY:'Physics', CHEM:'Chemistry', MATH:'Mathematics', ENG:'English', LR:'Reasoning'})[code] || code}</button>)}
-            <button type="button" className="btn btn-primary btn-sm" disabled={submitting} onClick={() => { if (window.confirm(`Submit mock? ${answeredCount} of ${test.questions.length} questions answered.`)) submitTest() }}>{submitting ? 'Submitting…' : 'Submit mock'}</button>
-          </div>}
-          <nav className="practice-question-nav" aria-label="Jump to question">{test.questions.map((item,i) => <button key={item.question_id} type="button" aria-label={`Question ${i+1}${isAnswered(item) ? ', answered' : ', unanswered'}`} aria-current={index===i ? 'step' : undefined} className={isAnswered(item) ? 'answered' : ''} onClick={() => setIndex(i)}>{String(i+1).padStart(2,'0')}</button>)}</nav>
-
-          {error && <p className="alert" role="alert">{error}</p>}
-
-          <div key={q.question_id} className="qcard q-enter">
-            <div className="qmeta">
-              <span className="tag"><span className="dot" style={{ background: SUBJECT_COLOR[test.subject_code] || PEN }} />Question {index + 1} of {test.questions.length}</span>
-              <span className="tag">{q.ref}</span>
-            </div>
-            {q.recommendation && <aside className="practice-why" aria-label="Why this question">
-              <span className="practice-eyebrow"><Target size={14} aria-hidden="true"/> WHY THIS QUESTION</span>
-              <p>{q.recommendation.reason}</p>
-              {q.recommendation.milestone_title && <p><strong>Path connection: {q.recommendation.milestone_title}</strong><br/>{q.recommendation.path_role}</p>}
-              <details><summary>Your learning goal</summary><p>{q.recommendation.learning_goal}</p></details>
-            </aside>}
-            {q.passage && <div className="passage"><MathText text={q.passage} /></div>}
-            <div className="qtext"><MathText text={q.stem} /></div>
-            <QuestionAssets assets={q.assets} />
-
-            {q.type === 'numerical' ? (
-              <div className="field" style={{ maxWidth: 280, marginBottom: 0 }}>
-                <label className="field-label" htmlFor="numeric">Your answer</label>
-                <input id="numeric" type="number" className="input num" placeholder="Type a number"
-                  value={answers[q.question_id]?.numeric_answer ?? ''}
-                  onChange={(e) => setNumeric(q.question_id, e.target.value)} />
-              </div>
-            ) : (
-              <div className="options" role="radiogroup" aria-label="Options">
-                {q.options.map((o) => {
-                  const selected = answers[q.question_id]?.option_ids?.[0] === o.id
-                  return (
-                    <button key={o.id} type="button" role="radio" aria-checked={selected}
-                      className={`option ${selected ? 'is-selected' : ''}`} onClick={() => selectOption(q.question_id, o.id)}>
-                      <span className="option-key">{o.label}</span>
-                      <span className="option-body"><MathText text={o.content} /></span>
-                    </button>
-                  )
-                })}
-              </div>
-            )}
-          </div>
-
-          <div className="hero-actions" style={{ justifyContent: 'space-between', marginTop: 20 }}>
-            <button type="button" className="btn btn-secondary" disabled={index === 0} onClick={() => setIndex((i) => i - 1)}>Previous</button>
-            {(isLast || (timed && remaining === 0)) ? (
-              <button type="button" className="btn btn-primary" disabled={submitting} onClick={submitTest}>
-                {submitting ? <><span className="spin" aria-hidden="true" />Submitting</> : 'Submit test'}
-              </button>
-            ) : (
-              <button type="button" className="btn btn-primary" onClick={() => setIndex((i) => i + 1)}>Next question</button>
-            )}
-          </div>
-        </main>
-      </div>
-    )
-  }
+  // One viewport, one question-content scroll area; controls stay visible.
+  if (test) return <><FullscreenGuard {...fullscreen} onResume={fullscreen.resume} onSubmit={submitTest} submitting={submitting} error={error}/><TestSession
+    test={test} index={index} answers={answers} onIndex={setIndex} onOption={selectOption} onNumeric={setNumeric}
+    onClear={id=>{if(submissionInFlight.current||fullscreen.limitReached)return;setAnswers(a=>{const next={...a};delete next[id];return next})}}
+    onSubmit={submitTest} onExit={exitTest} submitting={submitting} error={error} timed={timed}
+    remaining={remaining} elapsed={elapsed} questionSeconds={questionSeconds}/></>
 
   if (assessment) return <div className="crackjee-root"><AppHeader /><main className="wrap practice-page">
     <button className="btn btn-quiet" onClick={() => navigate('/plan')}><ArrowLeft size={16}/> My JEE Plan</button>
@@ -405,8 +355,8 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
               {mode !== 'topic' && <button type="button" aria-pressed={!subjectCode} onClick={() => setSubjectCode('')}>All subjects</button>}
               {subjects === null ? <span role="status" className="practice-loading-subjects">Loading subjects…</span> : subjects.map(s => <button key={s.code} type="button" aria-pressed={subjectCode === s.code} onClick={() => setSubjectCode(s.code)}>{s.name}</button>)}
             </div>
-            {subjectCode && <div className="practice-chapter-field"><label htmlFor="chapter">Chapter</label>
-              <select id="chapter" className="input" value={chapterId} disabled={chaptersLoading} onChange={e => setChapterId(e.target.value)}><option value="">All available chapters</option>{chapters.map(c => <option key={c.id} value={c.id}>{c.name}</option>)}</select>
+            {subjectCode && <div className="practice-chapter-field"><span className="practice-chapter-label">Chapter</span>
+              <ChapterPicker key={subjectCode} chapters={chapters} value={chapterId} loading={chaptersLoading} onChange={setChapterId}/>
               {chaptersLoading && <span role="status">Loading chapters…</span>}
             </div>}
           </fieldset>
