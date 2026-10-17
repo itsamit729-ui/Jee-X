@@ -12,7 +12,8 @@ from datetime import timedelta
 from typing import Literal
 from fastapi import APIRouter, Depends, HTTPException, BackgroundTasks
 from fastapi.responses import Response, FileResponse
-from pydantic import BaseModel, Field, ValidationError
+from pydantic import BaseModel, ConfigDict, Field, ValidationError
+from uuid import UUID
 from sqlalchemy import or_, func, case
 from app import models as m
 from app.database import get_db, SessionLocal
@@ -20,7 +21,6 @@ from app.auth import utcnow
 from app.routers import teaching as t
 from app.services import mixed_omr, paper_answers
 from app.services.teacher_question_content import presentation
-from app.services.teacher_paper_conversation import PaperConversation
 
 router = APIRouter(prefix='/api/teacher', tags=['teacher papers'])
 EXAMS = Literal['jee_main', 'jee_advanced', 'mht_cet', 'bitsat']
@@ -206,106 +206,6 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
     if b.mode == 'exact': selected.sort(key=lambda i: qs[i].ref)
     return {'questions':[t.freeze(qs[i],qs[i].version) for i in selected], 'warning':warning}
 
-class AIRequest(BaseModel):
-    prompt: str = Field(min_length=1, max_length=6000)
-    defaults: dict = Field(default_factory=dict)
-    exam: EXAMS | None = 'jee_main'
-
-
-@router.post('/papers/ai-draft')
-def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
-    from app.services import teacher_ai
-    from app.services.authentication import throttle
-    import os
-    if os.getenv('TEACHER_AI_ENABLED', 'true').lower() != 'true':
-        raise HTTPException(503, 'AI paper creation is unavailable. Use Generate questions or Choose from bank.')
-    if not b.prompt.strip():
-        raise HTTPException(422, 'Describe the paper or reply with the missing detail.')
-    def plan_for(catalog):
-        from app.services.teacher_direct_request import direct_request
-        direct=direct_request(b.prompt.strip(),b.exam,catalog)
-        if direct is not None: return direct
-        if not os.getenv('GROQ_API_KEY','').strip():
-            raise HTTPException(503,'AI interpretation is unavailable. Use a clear request with exam, question count, chapter and duration, or use the manual builder.')
-        try:
-            throttle(db, 'teacher_ai:minute', str(user.id), 3, 60)
-            throttle(db, 'teacher_ai:day', str(user.id), 30, 86400)
-            throttle(db, 'teacher_ai:global', 'all', 100, 86400)
-        except HTTPException as error:
-            if error.status_code==429:
-                raise HTTPException(429,'The language interpretation limit has been reached. This is unrelated to your question count. Standard requests with exam, subjects or chapters, question count and duration still work here without AI quota. Your conversation is kept; no paper was created.',headers=error.headers) from None
-            raise
-        db.rollback()
-        return teacher_ai.interpret(b.prompt.strip(),b.exam,catalog)
-    # Only metadata from the visible, published bank is shared, never question content or student data.
-    query = bank(db, user.id).filter(m.Question.status == 'published')
-    if b.exam is not None: query=query.filter(m.Question.exam == b.exam)
-    years = {int(y) for y in re.findall(r'\b20\d{2}\b', b.prompt)}
-    refs = query.filter(m.Question.source_type == 'pyq', m.Question.year.isnot(None))
-    if years: refs = refs.filter(m.Question.year.in_(years))
-    papers = [dict(index=i, year=y, shift=s, count=n) for i, (y,s,n) in enumerate(
-        refs.with_entities(m.Question.year, m.Question.shift, func.count(m.Question.id))
-        .group_by(m.Question.year, m.Question.shift).order_by(m.Question.year, m.Question.shift).all())] if b.exam is not None else []
-    chapters = [dict(id=cid, subject=sub, name=name, slug=slug) for cid,sub,name,slug in query.join(m.Subtopic).join(m.Chapter).join(m.Subject)
-                .with_entities(m.Chapter.id, m.Subject.code, m.Chapter.name, m.Chapter.slug).distinct().order_by(m.Chapter.id).all()]
-    if b.exam is None:
-        from app.services.teacher_direct_request import direct_request
-        # Recognise supplied topics before asking for an exam; no provider call is
-        # needed just to collect required fields, even for a complex request.
-        plan=direct_request(b.prompt.strip(),None,{'papers':[],'chapters':chapters,'paper_defaults':{'require_details':True}})
-        teacher_ai.check_plan_details(plan or teacher_ai.AIPlan(intent='needs_details'),None,strict=True)
-        raise HTTPException(422,'Which exam should I use: JEE Main, JEE Advanced, MHT-CET or BITSAT?')
-    # Return the connection to the pool while waiting on the external provider.
-    db.rollback()
-    plan = plan_for({'papers': papers, 'chapters': chapters, 'paper_defaults': b.defaults})
-    teacher_ai.check_plan_details(plan,b.exam,strict=bool(b.defaults.get('require_details')))
-    if not chapters:
-        raise HTTPException(422, 'No published questions are available for this exam yet. Choose another exam or use the manual bank.')
-    available = {c['id']: c for c in chapters}
-    ids = plan.chapter_ids + [cid for section in plan.sections for cid in section.chapter_ids]
-    if any(cid not in available for cid in ids):
-        raise HTTPException(422, 'The requested chapters are unavailable. Please specify chapters from the bank.')
-    subjects = {'PHY', 'CHEM', 'MATH', 'ENG', 'LR'} if b.exam == 'bitsat' else {'PHY', 'CHEM', 'MATH'}
-    for section in plan.sections:
-        if section.subject not in subjects or section.difficulty_min > section.difficulty_max or any(available[cid]['subject'] != section.subject for cid in section.chapter_ids):
-            raise HTTPException(422, 'The requested subject/chapter mix is invalid. Please rephrase it.')
-    if plan.count is None:
-        if plan.sections: plan.count = sum(s.count for s in plan.sections)
-        elif plan.selection != 'exact': raise HTTPException(422, 'How many questions should the paper contain?')
-    if plan.count is not None and not 1 <= plan.count <= 200:
-        raise HTTPException(422, 'Choose between 1 and 200 questions.')
-    if plan.sections and sum(s.count for s in plan.sections) != plan.count:
-        raise HTTPException(422, 'Subject counts do not add up to the requested total. Please specify the counts again.')
-    if plan.paper_index is not None and plan.paper_index >= len(papers):
-        raise HTTPException(422, 'The requested paper is unavailable. Specify its year, date and shift.')
-    ref = papers[plan.paper_index] if plan.paper_index is not None else None
-    if ref and plan.year is not None and plan.year != ref['year']:
-        raise HTTPException(422, 'The year and shift do not match. Please specify them again.')
-    if plan.selection in ('similar', 'exact') and not ref:
-        raise HTTPException(422, 'Specify one available year, date and shift to match.')
-    year = ref['year'] if ref else plan.year
-    if plan.selection == 'bank' and (year or ref):
-        raise HTTPException(422, 'Please clarify whether to use questions from that paper or create a similar paper.')
-    if plan.selection == 'from_paper' and (not year or plan.source == 'original'):
-        raise HTTPException(422, 'Specify an available PYQ year or shift.')
-    if plan.selection in ('similar', 'exact') and (plan.sections or plan.chapter_ids or plan.source == 'original'):
-        raise HTTPException(422, 'Paper matching uses the original mix. Request a subset from the paper to add chapter or subject filters.')
-    config = Generate(exam=b.exam, strict_exam=True, published_only=True, count=plan.count or 30, level=plan.level,
-                      mode=plan.selection if plan.selection in ('exact', 'similar') else 'blueprint' if plan.sections else 'quick',
-                      year=year, shift=ref['shift'] if ref else None, reference_without_shift=bool(ref and ref['shift'] is None),
-                      restrict_to_reference=plan.selection == 'from_paper', chapter_ids=plan.chapter_ids,
-                      sections=[Section(**s.model_dump()) for s in plan.sections], source=plan.source,
-                      exclude_assigned=False,printable_only=True)
-    result = generate(config, user, db)
-    # No database writes to papers/assignments: this response is only a reviewable candidate.
-    counts = Counter(q['subject'] for q in result['questions'])
-    return {**result, 'configuration': config.model_dump(),
-            'settings': {k:v for k,v in {'title':plan.title, 'duration_minutes':plan.duration_minutes, 'marks_correct':plan.marks_correct, 'marks_wrong':plan.marks_wrong, 'sets_enabled':plan.sets_enabled, 'exam':b.exam}.items() if v is not None},
-            'summary': {'count': len(result['questions']), 'subjects': dict(counts), 'selection': plan.selection,
-                        'year':year, 'shift':ref['shift'] if ref else None,
-                        'chapters':[available[cid]['name'] for cid in dict.fromkeys(ids)], 'level':plan.level}}
-
-
 class PaperIn(BaseModel):
     title: str = Field(min_length=3,max_length=150)
     question_ids: list[int] = Field(min_length=1,max_length=200)
@@ -317,98 +217,119 @@ class PaperIn(BaseModel):
     version: int = Field(1,ge=1)
     sets_enabled: bool = True  # Legacy API clients retain A/B; new UI explicitly opts out.
 
-class AIPaperDefaults(BaseModel):
+@router.get('/papers/catalog')
+def paper_catalog(exam: EXAMS = 'jee_main', user=Depends(t.require_teacher), db=Depends(get_db)):
+    rows = bank(db,user.id).filter(m.Question.status=='published',m.Question.exam==exam)\
+        .join(m.Subtopic).join(m.Chapter).join(m.Subject)\
+        .with_entities(m.Chapter.id,m.Chapter.name,m.Subject.code,func.count(m.Question.id))\
+        .group_by(m.Chapter.id,m.Chapter.name,m.Subject.code).order_by(m.Subject.code,m.Chapter.name).all()
+    return {'chapters':[dict(id=cid,name=name,subject=subject,count=count) for cid,name,subject,count in rows]}
+
+
+@router.post('/papers/ai-create',status_code=410)
+@router.post('/papers/ai-draft',status_code=410)
+def retired_ai_papers(user=Depends(t.require_teacher)):
+    raise HTTPException(410,'AI paper creation has been removed. Refresh this page and use Create a paper.')
+
+
+class QuickPaperRequest(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    request_key: UUID
+    exam: EXAMS = 'jee_main'
+    count: int = Field(30,ge=1,le=200)
     duration_minutes: int = Field(60,ge=1,le=240)
-    marks_correct: int = Field(4,ge=1,le=10)
-    marks_wrong: int = Field(1,ge=0,le=10)
+    subjects: list[Literal['PHY','CHEM','MATH','ENG','LR']] | None = Field(None,min_length=1,max_length=5)
+    chapter_ids: list[int] = Field(default_factory=list,max_length=100)
+    selection: Literal['topics','from_paper','exact'] = 'topics'
+    year: int | None = Field(None,ge=2000,le=2100)
+    shift: str | None = Field(None,max_length=50)
+    level: Literal['easy','balanced','hard'] = 'balanced'
+    source: Literal['all','pyq','original'] = 'all'
+    question_type: Literal['single_correct','multi_correct','numerical'] | None = None
     sets_enabled: bool = False
+    marks_correct: int | None = Field(None,ge=1,le=10)
+    marks_wrong: int | None = Field(None,ge=0,le=10)
+    title: str | None = Field(None,min_length=3,max_length=150)
     instructions: str = Field('',max_length=2000)
 
 
-class AICompleteRequest(BaseModel):
-    prompt: str = Field(min_length=1, max_length=6000)
-    exam: EXAMS | None = None
-    strict_details: bool = False
-    request_key: str = Field(min_length=36, max_length=36, pattern=r'^[a-fA-F0-9-]{36}$')
-    defaults: AIPaperDefaults = Field(default_factory=AIPaperDefaults)
-    conversation: PaperConversation | None = None
-
-
-def completed_ai_paper(p):
-    return {'state':'ready', 'paper':payload(p), 'downloads':[
-        {'variant':v, 'omr':f'/api/teacher/papers/{p.id}/blank-omr.pdf?variant={v}'}
+def completed_paper(p):
+    return {'state':'ready','paper':payload(p),'downloads':[
+        {'variant':v,'omr':f'/api/teacher/papers/{p.id}/blank-omr.pdf?variant={v}'}
         for v in (['A','B'] if sets_enabled(p) else ['A'])]}
 
 
-@router.post('/papers/ai-create')
-def ai_create(b: AICompleteRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
+@router.post('/papers/quick-create')
+def quick_create(b: QuickPaperRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
+    key = str(b.request_key)
     def existing(lock=False):
-        query=db.query(m.TeacherPaper).filter(m.TeacherPaper.teacher_id==user.id,
-            m.TeacherPaper.settings['ai_request_key'].as_string()==b.request_key)
+        query = db.query(m.TeacherPaper).filter(m.TeacherPaper.teacher_id==user.id,
+            m.TeacherPaper.settings['creation_request_key'].as_string()==key)
         return (query.with_for_update() if lock else query).order_by(m.TeacherPaper.id).first()
-    previous=existing()
-    if previous: return completed_ai_paper(previous)
-    conversation = None
-    def followup(question):
-        result = {'state':'needs_details', 'question':question}
-        if conversation is not None:
-            from app.services.teacher_ai import UNRELATED_MESSAGE
-            if b.strict_details and question != UNRELATED_MESSAGE and 'Please specify:' not in str(question):
-                fields = [('exam','exam'), ('count','number of questions'), ('scope','subjects or chapters'), ('duration','duration in minutes')]
-                missing = [name for key,name in fields if not conversation.slots.get(key) and
-                    not (key=='count' and conversation.slots.get('quotas')) and name not in str(question)]
-                if missing: result['question'] = str(question) + ' Also specify: ' + '; '.join(missing) + '.'
-            conversation.question = str(result['question'])[:2000]
-            result['conversation'] = conversation.model_dump()
-        return result
-    if b.conversation is not None:
-        from app.services.teacher_paper_conversation import advance
-        # Textual state carries no permissions or IDs. Re-resolve every scope
-        # against the authenticated teacher's currently visible published bank.
-        chapters = [dict(id=cid, subject=sub, name=name, slug=slug) for cid,sub,name,slug in
-            bank(db,user.id).filter(m.Question.status=='published').join(m.Subtopic).join(m.Chapter).join(m.Subject)
-            .with_entities(m.Chapter.id,m.Subject.code,m.Chapter.name,m.Chapter.slug).distinct().all()]
-        try:
-            conversation, prompt = advance(b.conversation, b.prompt, chapters)
-        except HTTPException as error:
-            if error.status_code != 422: raise
-            conversation = b.conversation
-            return followup(error.detail)
-        if prompt is None: return followup(conversation.question)
-        b.prompt = prompt
-    from app.services.teacher_ai import resolve_request
-    requested_exam, question = resolve_request(b.prompt, None if b.strict_details else b.exam)
-    if question: return followup(question)
-    b.exam = requested_exam
-    settings=b.defaults.model_dump()
-    if b.strict_details: settings={'require_details':True}
-    # Missing input and ambiguous constraints are returned as a conversational follow-up.
-    try:
-        draft=ai_draft(AIRequest(prompt=b.prompt,exam=b.exam,defaults=settings),user,db)
-    except HTTPException as error:
-        if error.status_code==422:
-            return followup(error.detail)
-        raise
-    if b.strict_details:
-        subjects={q['subject'] for q in draft['questions']}
-        if b.exam=='mht_cet' and 'MATH' in subjects and len(subjects)>1 and 'marks_correct' not in draft['settings']:
-            return followup('This builder uses one correct-answer mark value for the whole paper. For mixed MHT-CET subjects, specify that value or request separate Mathematics and Physics/Chemistry papers.')
-        correct,wrong=(2 if subjects=={'MATH'} else 1,0) if b.exam=='mht_cet' else (3,1) if b.exam=='bitsat' else (4,1)
-        settings={'marks_correct':correct,'marks_wrong':wrong,'sets_enabled':False,'instructions':''}
-    settings.update(draft['settings'])
-    title=settings.pop('title', None) or f"{b.exam.replace('_',' ').upper()} - {len(draft['questions'])} questions"
-    settings.pop('exam',None)
-    if not omr_report(draft['questions'])['eligible']:
-        return followup('Some matching questions cannot be used on an OMR sheet. Should we use a different topic or paper? Please describe the revised selection.')
-    # Serialize only persistence, not the provider call. Replays return the same saved paper.
+    previous = existing()
+    if previous: return completed_paper(previous)
+    allowed = {'PHY','CHEM','MATH','ENG','LR'} if b.exam=='bitsat' else {'PHY','CHEM','MATH'}
+    requested = list(dict.fromkeys(b.subjects or []))
+    if any(subject not in allowed for subject in requested):
+        raise HTTPException(422,'Choose a subject available for this exam.')
+    if b.selection=='topics' and (b.year is not None or b.shift is not None):
+        raise HTTPException(422,'Choose Past paper to select a year or shift.')
+    if b.selection!='topics' and (b.year is None or b.source=='original'):
+        raise HTTPException(422,'Choose an available previous-year paper.')
+    if b.selection=='exact' and (requested or b.chapter_ids or b.question_type is not None):
+        raise HTTPException(422,'The full paper keeps its original subjects, chapters and question formats. Choose a subset to filter it.')
+    if b.title is not None and len(b.title.strip())<3:
+        raise HTTPException(422,'Use a title of at least three characters, or leave it blank.')
+    query = bank(db,user.id).filter(m.Question.status=='published',m.Question.exam==b.exam)\
+        .join(m.Subtopic).join(m.Chapter).join(m.Subject)
+    catalog = {cid:subject for cid,subject in query.with_entities(m.Chapter.id,m.Subject.code).distinct().all()}
+    if any(cid not in catalog or (requested and catalog[cid] not in requested) for cid in b.chapter_ids):
+        raise HTTPException(422,'Choose chapters available for the selected exam and subject.')
+    if b.chapter_ids and requested:
+        requested=[subject for subject in requested if subject in {catalog[cid] for cid in b.chapter_ids}]
+    if b.selection!='topics':
+        query=query.filter(m.Question.source_type=='pyq',m.Question.year==b.year,m.Question.shift==b.shift)
+        if not query.with_entities(m.Question.id).first():
+            raise HTTPException(422,'This year and shift are not available. Choose a listed paper.')
+    elif b.source!='all': query=query.filter(m.Question.source_type==b.source)
+    if b.chapter_ids: query=query.filter(m.Chapter.id.in_(b.chapter_ids))
+    if b.question_type is not None: query=query.filter(m.Question.type==b.question_type)
+    subjects=requested or sorted({subject for subject, in query.with_entities(m.Subject.code).distinct().all() if subject in allowed})
+    if not subjects: raise HTTPException(422,'No published questions match. Choose another exam, subject or source.')
+    if requested and len(subjects)>b.count and b.selection!='exact':
+        raise HTTPException(422,'Use at least one question per selected subject, or choose fewer subjects.')
+    sections = [] if b.selection=='exact' else [Section(subject=subject,
+        count=b.count//len(subjects)+(i<b.count%len(subjects)),type=b.question_type)
+        for i,subject in enumerate(subjects) if b.count//len(subjects)+(i<b.count%len(subjects))>0]
+    result=generate(Generate(exam=b.exam,mode='exact' if b.selection=='exact' else 'blueprint',count=b.count,
+        level=b.level,chapter_ids=b.chapter_ids,sections=sections,source=b.source,
+        year=b.year,shift=b.shift,reference_without_shift=b.selection!='topics' and b.shift is None,
+        restrict_to_reference=b.selection=='from_paper',exclude_assigned=False,
+        strict_exam=True,published_only=True,printable_only=True),user,db)
+    questions=result['questions']
+    if not omr_report(questions)['eligible']:
+        raise HTTPException(422,'Some matching questions have incomplete OMR answer data. Choose another format or use the question editor to replace them. No paper was saved.')
+    used={q['subject'] for q in questions}
+    if b.exam=='mht_cet' and 'MATH' in used and len(used)>1 and b.marks_correct is None:
+        raise HTTPException(422,'For a mixed MHT-CET paper, set one correct-answer mark value under More options, or create Mathematics separately.')
+    correct,wrong=(2 if used=={'MATH'} else 1,0) if b.exam=='mht_cet' else (3,1) if b.exam=='bitsat' else (4,1)
+    exam_name={'jee_main':'JEE Main','jee_advanced':'JEE Advanced','mht_cet':'MHT-CET','bitsat':'BITSAT'}[b.exam]
+    names={'PHY':'Physics','CHEM':'Chemistry','MATH':'Mathematics','ENG':'English','LR':'Logical reasoning'}
+    chapter_names=list(dict.fromkeys(q['chapter'] for q in questions))
+    scope_name=(' + '.join(chapter_names) if b.chapter_ids and len(chapter_names)<=2 else names[next(iter(used))] if len(used)==1 else '')
+    reference_name=(b.shift or str(b.year)) if b.selection!='topics' else ''
+    title=b.title.strip() if b.title else ' · '.join(filter(None,[exam_name,reference_name,scope_name,f'{len(questions)} questions']))[:150]
+    settings=dict(exam=b.exam,duration_minutes=b.duration_minutes,
+        marks_correct=b.marks_correct if b.marks_correct is not None else correct,
+        marks_wrong=b.marks_wrong if b.marks_wrong is not None else wrong,
+        sets_enabled=b.sets_enabled,instructions=b.instructions,creation_request_key=key,distinct_sets=True)
     db.query(m.User).filter_by(id=user.id).with_for_update().one()
     previous=existing(lock=True)
-    if previous: return completed_ai_paper(previous)
-    settings.update(exam=b.exam,ai_request_key=b.request_key,ai_distinct_sets=True)
-    p=m.TeacherPaper(teacher_id=user.id,title=title,questions=draft['questions'],settings=settings,
-                     finalized=True,version=1,created_at=utcnow(),updated_at=utcnow())
-    db.add(p);db.commit()
-    return completed_ai_paper(p)
+    if previous: return completed_paper(previous)
+    paper=m.TeacherPaper(teacher_id=user.id,title=title,questions=questions,settings=settings,
+        finalized=True,version=1,created_at=utcnow(),updated_at=utcnow())
+    db.add(paper);db.commit()
+    return completed_paper(paper)
 
 
 def save_data(b, db, uid):
@@ -441,7 +362,7 @@ def update(pid:int,b:PaperIn,user=Depends(t.require_teacher),db=Depends(get_db))
 @router.post('/papers/{pid}/duplicate',status_code=201)
 def duplicate(pid:int,user=Depends(t.require_teacher),db=Depends(get_db)):
     old=owned(db,pid,user)
-    p=m.TeacherPaper(teacher_id=user.id,title=(old.title+' (copy)')[:150],settings={k:v for k,v in old.settings.items() if k!='ai_request_key'},questions=old.questions,created_at=utcnow(),updated_at=utcnow())
+    p=m.TeacherPaper(teacher_id=user.id,title=(old.title+' (copy)')[:150],settings={k:v for k,v in old.settings.items() if k not in {'ai_request_key','creation_request_key'}},questions=old.questions,created_at=utcnow(),updated_at=utcnow())
     db.add(p); db.commit(); return payload(p)
 
 class VersionIn(BaseModel):
@@ -494,7 +415,7 @@ class PrivateQuestion(BaseModel):
 
 @router.get('/topics')
 def topics(user=Depends(t.require_teacher),db=Depends(get_db)):
-    return {'topics':[dict(id=s.id,name=s.name,chapter=c.name,subject=sub.code) for s,c,sub in db.query(m.Subtopic,m.Chapter,m.Subject).join(m.Chapter,m.Chapter.id==m.Subtopic.chapter_id).join(m.Subject,m.Subject.id==m.Chapter.subject_id).all()]}
+    return {'topics':[dict(id=s.id,name=s.name,chapter_id=c.id,chapter=c.name,subject=sub.code) for s,c,sub in db.query(m.Subtopic,m.Chapter,m.Subject).join(m.Chapter,m.Chapter.id==m.Subtopic.chapter_id).join(m.Subject,m.Subject.id==m.Chapter.subject_id).all()]}
 
 @router.post('/questions/private',status_code=201)
 def private(b:PrivateQuestion,user=Depends(t.require_teacher),db=Depends(get_db)):
@@ -564,9 +485,8 @@ def order_for(p,variant):
     if variant=='B':
         original=ids[:]
         random.Random(f'paper-{p.id}').shuffle(ids)
-        # New AI papers promise a different order. Preserve existing printed
-        # orders by applying this only to snapshots created with this setting.
-        if p.settings.get('ai_distinct_sets') and len(ids)>1 and ids==original: ids=ids[1:]+ids[:1]
+        # Preserve previously printed orders; new quick papers opt into distinct sets.
+        if (p.settings.get('distinct_sets') or p.settings.get('ai_distinct_sets')) and len(ids)>1 and ids==original: ids=ids[1:]+ids[:1]
     return ids
 
 def generic_sheet_id(p,variant,layout=2):
