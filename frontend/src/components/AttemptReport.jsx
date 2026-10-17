@@ -134,7 +134,7 @@ export default function AttemptReport({ data }) {
             {list.length === 0 ? <p className="muted">{empty}</p> : <div className="rows">
               {list.map((c) => <div key={c.chapter_id} className="row">
                 <span className="row-main">{c.name}<small className="faint attempt-report-time"> · {minutes(c.time_sec)} min</small>
-                  {color === BAD && <Link className="attempt-report-practice" to={practiceChapterPath(c)}>Practice this chapter</Link>}</span>
+                  {color === BAD && <Link className="attempt-report-practice" to={practiceChapterPath(c,meta)}>{['mht_cet','bitsat'].includes(meta.pattern)?'Practice this subject’s PYQs':'Practice this chapter'}</Link>}</span>
                 <span className="row-value" style={{ color }}>{c.correct}/{c.total}</span>
               </div>)}
             </div>}

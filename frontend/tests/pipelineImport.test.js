@@ -83,3 +83,14 @@ test('pausing finishes the current batch and stops before submitting another',as
   }})
   assert.equal(posts,1);assert.equal(result.offset,25);assert.equal(result.finished,false)
 })
+
+
+test('MHT-CET imports keep the selected exam on both cursor reads and publication',async()=>{
+  const paths=[]
+  await runPipelineImport({preview:{...preview,exam:'mht_cet'},request:async(path,options)=>{
+    paths.push(path)
+    assert.ok(path.endsWith('?exam=mht_cet'))
+    return path.includes('/progress?')?state(50):{progress:state(75)}
+  }})
+  assert.deepEqual(paths,['/api/admin/pipeline-questions/2024/progress?exam=mht_cet','/api/admin/pipeline-questions/2024/publish?exam=mht_cet'])
+})

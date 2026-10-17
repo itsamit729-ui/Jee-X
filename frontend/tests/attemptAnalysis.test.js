@@ -112,8 +112,9 @@ test('report renders score, tabs and the question review with filters', () => {
 })
 
 test('legacy attempts show their totals only', () => {
-  const html = summary({ summary: { score: 40, total_questions: 75, accuracy: 50 }, subject_breakdown: { Physics: { correct: 10, total: 25 } } })
-  assert.match(html, /40<small>\/ 75 correct<\/small>/)
+  const html = summary({ meta:{kind:'mock'}, summary: { score: 40, total_questions: 75, accuracy: 50 }, subject_breakdown: { Physics: { correct: 10, total: 25 } } })
+  assert.match(html, /40<small> marks<\/small>/)
+  assert.doesNotMatch(html,/75 correct/)
   assert.match(html, /Physics[\s\S]*10\/25/)
   assert.match(html, /only its totals are available/)
 })
@@ -126,4 +127,19 @@ test('results open from the dashboard and the result screen without replacing ex
   assert.match(test, /to=\{`\/results\/\$\{result\.attempt_id\}`\}>See full analysis/)
   const dashboard = fs.readFileSync(path.join(root, 'src/pages/Dashboard.jsx'), 'utf8')
   assert.match(dashboard, /to=\{`\/results\/\$\{row\.id\}`\}/)
+})
+
+
+test('exam-specific result practice links stay within the original question bank',()=>{
+  assert.equal(practiceChapterPath({subject_code:'PHY',chapter_id:12},{pattern:'mht_cet'}),'/pyq?exam=mht_cet&view=practice&subject=PHY')
+  assert.equal(practiceChapterPath({subject_code:'MATH',chapter_id:12},{pattern:'bitsat'}),'/pyq?exam=bitsat&view=practice&subject=MATH')
+  const html=report({...data,meta:{...data.meta,pattern:'mht_cet'}},'chapters')
+  assert.match(html,/Practice this subject’s PYQs/)
+  assert.doesNotMatch(html,/href="\/practice\?subject=/)
+})
+
+
+test('legacy free diagnostic keeps a correct-answer count instead of marks',()=>{
+  const html=summary({meta:{kind:'free_diagnostic'},summary:{score:6,total_questions:10,accuracy:60},subject_breakdown:{}})
+  assert.match(html,/6<small>\/ 10 correct<\/small>/)
 })

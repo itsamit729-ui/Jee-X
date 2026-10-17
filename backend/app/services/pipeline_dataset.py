@@ -36,8 +36,8 @@ def narrow(value):
     return value
 
 
-def validate(q,year,public):
-    if q.get('exam')!='jee_main' or q.get('year')!=year:raise ValueError('Exam/year mismatch')
+def validate(q,year,public,*,exam='jee_main',answer_sources=None,image_prefix='/question-images/pyq/'):
+    if q.get('exam')!=exam or q.get('year')!=year:raise ValueError('Exam/year mismatch')
     subject=SUBJECTS.get(q.get('subject'))
     if not subject or not re.fullmatch(r'PYQ-'+subject+r'-[0-9a-f]{12}',q.get('ref','')):raise ValueError('Invalid subject/reference')
     if not q.get('stem','').strip():raise ValueError('Missing question text')
@@ -45,7 +45,7 @@ def validate(q,year,public):
     if q.get('class_level') not in ('11','12'):raise ValueError('Invalid class level')
     match=re.fullmatch(r'(\d{1,2} [A-Z][a-z]{2} \d{4}), Shift ([12])',q.get('shift',''))
     if not match or datetime.strptime(match[1],'%d %b %Y').year!=year:raise ValueError('Invalid year/shift')
-    if q.get('answer_source') not in SOURCES:raise ValueError('Answer source not reviewed')
+    if q.get('answer_source') not in (answer_sources or SOURCES):raise ValueError('Answer source not reviewed')
     if type(q.get('difficulty')) is not int or not 1<=q['difficulty']<=10:raise ValueError('Invalid difficulty')
     if type(q.get('expected_time_sec')) is not int or not 1<=q['expected_time_sec']<=3600:raise ValueError('Invalid question duration')
     if type(q.get('solution_verified')) is not bool or q['solution_verified']!=bool(q.get('solution')):raise ValueError('Solution verification flag mismatch')
@@ -64,14 +64,14 @@ def validate(q,year,public):
     image=q.get('figure')
     if image:
         url=image.get('url','')
-        if not url.startswith('/question-images/pyq/'):raise ValueError('Figure must use a bundled question image')
+        if not url.startswith(image_prefix):raise ValueError('Figure must use a bundled question image')
         file=(public/url.lstrip('/')).resolve()
         if not file.is_relative_to(public.resolve()) or not file.is_file():raise ValueError('Figure file missing')
         with Image.open(file) as im:im.verify()
     return narrow({'ref':q['ref'],'subtopic':'general','type':q['type'],'stem':q['stem'],
         'options':q['options'],'answer':answer,'solution':q.get('solution') or '',
         'difficulty':q['difficulty'],'expected_time_sec':q['expected_time_sec'],'source_type':'pyq',
-        'exam':'jee_main','year':year,'shift':q['shift'],'status':'published','image':image,
+        'exam':exam,'year':year,'shift':q['shift'],'status':'published','image':image,
         'subject':subject,'chapter_slug':q['chapter_slug'],'chapter_name':q['chapter'],'class_level':q['class_level'],
         'answer_source':q['answer_source'],'solution_verified':q['solution_verified']})
 

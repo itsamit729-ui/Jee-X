@@ -51,7 +51,7 @@ def other_stems(db,questions):
     # A possible duplicate under another reference is held, never auto-inserted.
     refs=[q['ref'] for q in questions];stems=[q['stem'] for q in questions]
     rows=db.query(models.Question.ref,models.Question.stem,models.Question.shift).filter(
-        models.Question.exam=='jee_main',models.Question.year==questions[0]['year'],
+        models.Question.exam==questions[0]['exam'],models.Question.year==questions[0]['year'],
         models.Question.stem.in_(stems),~models.Question.ref.in_(refs)).all()
     return {(norm(stem),shift):ref for ref,stem,shift in rows}
 
@@ -85,8 +85,11 @@ def taxonomy(db,data):
     if not chapter:
         position=db.query(func.max(models.Chapter.position)).filter_by(subject_id=subject.id).scalar() or 0
         chapter=models.Chapter(subject_id=subject.id,slug=data['chapter_slug'],name=data['chapter_name'],
-            class_level=data['class_level'],in_main=True,in_advanced=True,position=position+1)
+            class_level=data['class_level'],in_main=data['exam']=='jee_main',in_advanced=data['exam']=='jee_main',
+            in_mht_cet=data['exam']=='mht_cet',position=position+1)
         db.add(chapter);db.flush()
+    if data['exam']=='mht_cet':chapter.in_mht_cet=True
+    elif data['exam']=='jee_main' and chapter.in_mht_cet:chapter.in_main=True
     subtopic=db.query(models.Subtopic).filter_by(chapter_id=chapter.id,slug='general').first()
     if not subtopic:
         position=db.query(func.max(models.Subtopic.position)).filter_by(chapter_id=chapter.id).scalar() or 0
@@ -115,7 +118,8 @@ def publish_batch(db,data,offset=0,limit=25,commit=True):
             counts[{'unchanged':'unchanged','skip':'skipped','conflict':'conflicts'}[action]]+=1
             if reason:issues.append({'ref':source['ref'],'reason':reason})
         if changed:
-            run=models.ImportRun(file_path=f'datasets/jee-main-{data["year"]}/questions.jsonl',file_hash=data['digest'])
+            folder='mht-cet' if data.get('exam')=='mht_cet' else 'jee-main'
+            run=models.ImportRun(file_path=f'datasets/{folder}-{data["year"]}/questions.jsonl',file_hash=data['digest'])
             db.add(run);db.flush()
             additions=[q for q,row,action,reason in changed if action=='add']
             topics=taxonomy_for(db,additions)
@@ -144,7 +148,7 @@ def publish_batch(db,data,offset=0,limit=25,commit=True):
                     answer=prepared['answer'] or {}
                     new_rows.append(dict(ref=prepared['ref'],subtopic_id=topics[(prepared['subject'],prepared['chapter_slug'])].id,
                         type=prepared['type'],stem=prepared['stem'],solution=prepared['solution'],difficulty=prepared['difficulty'],
-                        expected_time_sec=prepared['expected_time_sec'],source_type='pyq',exam='jee_main',year=prepared['year'],
+                        expected_time_sec=prepared['expected_time_sec'],source_type='pyq',exam=prepared['exam'],year=prepared['year'],
                         shift=prepared['shift'],status='published',version=1,content_hash=_content_hash(prepared),
                         answer_min=answer.get('min'),answer_max=answer.get('max')))
                     counts['added']+=1
@@ -162,7 +166,7 @@ def publish_batch(db,data,offset=0,limit=25,commit=True):
                     if prepared['image']:
                         assets.append(dict(question_id=identity,url=prepared['image']['url'],alt_text=prepared['image'].get('alt','')))
                 revisions.append(dict(question_id=identity,version=version,content=prepared,import_run_id=run.id,
-                    change_note='pipeline-question-import: checked key; '+('source solution checked' if prepared['solution_verified'] else 'answer key only')))
+                    change_note=('pipeline-question-import: reconstructed source key; ' if prepared['exam']=='mht_cet' else 'pipeline-question-import: checked key; ')+('source solution checked' if prepared['solution_verified'] else 'answer key only')))
             if options:db.execute(insert(models.QuestionOption.__table__),options)
             if assets:db.execute(insert(models.Asset.__table__),assets)
             db.execute(insert(models.QuestionRevision.__table__),revisions)

@@ -4,17 +4,21 @@ import { runPipelineImport } from '../../lib/pipelineImport.js'
 import { Notice, number } from './AdminShared.jsx'
 
 export default function PipelineQuestions({token,onPublished}) {
+  const [exam,setExam]=useState('jee_main')
+  const examName=exam==='mht_cet'?'MHT-CET':'JEE Main'
   const [years,setYears]=useState([]),[error,setError]=useState(''),[busy,setBusy]=useState(false)
   const [preview,setPreview]=useState(null),[progress,setProgress]=useState(null),[retry,setRetry]=useState('')
   const alive=useRef(true),running=useRef(false)
   useEffect(()=>{
     alive.current=true
-    request('/api/admin/pipeline-questions',{token,cache:false,timeoutMs:60_000}).then(data=>{if(alive.current)setYears(data.years)}).catch(e=>{if(alive.current)setError(e.message)})
-    return()=>{alive.current=false;running.current=false}
-  },[token])
+    let current=true
+    setYears([]);setPreview(null);setProgress(null);setError('')
+    request(`/api/admin/pipeline-questions?exam=${exam}`,{token,cache:false,timeoutMs:60_000}).then(data=>{if(current)setYears(data.years)}).catch(e=>{if(current)setError(e.message)})
+    return()=>{current=false;alive.current=false;running.current=false}
+  },[token,exam])
   async function review(year) {
     setBusy(true);setError('');setProgress(null);setPreview(null)
-    try {const data=await request(`/api/admin/pipeline-questions/${year}`,{token,cache:false,timeoutMs:60_000});if(alive.current){setPreview(data);setProgress(data.progress)}}
+    try {const data=await request(`/api/admin/pipeline-questions/${year}?exam=${exam}`,{token,cache:false,timeoutMs:60_000});if(alive.current){setPreview(data);setProgress(data.progress)}}
     catch(e){if(alive.current)setError(e.message)}
     finally{if(alive.current)setBusy(false)}
   }
@@ -27,7 +31,7 @@ export default function PipelineQuestions({token,onPublished}) {
         onProgress:state=>{if(alive.current)setProgress(state)},onRetry:message=>{if(alive.current)setRetry(message)}})
       if(alive.current){
         onPublished?.()
-        const current=await request(`/api/admin/pipeline-questions/${preview.year}`,{token,cache:false,timeoutMs:60_000})
+        const current=await request(`/api/admin/pipeline-questions/${preview.year}?exam=${exam}`,{token,cache:false,timeoutMs:60_000})
         if(alive.current){
           setPreview(current);setProgress(current.progress)
           setYears(rows=>rows.map(row=>row.year===current.year?{...row,progress:current.progress}:row))
@@ -37,12 +41,14 @@ export default function PipelineQuestions({token,onPublished}) {
     finally{running.current=false;if(alive.current){setBusy(false);setRetry('')}}
   }
   return <section className="adm-panel" aria-labelledby="pipeline-import-title">
-    <div className="adm-head"><div><p className="adm-kicker">Reviewed AI pipeline exports</p><h2 id="pipeline-import-title">Publish JEE Main questions</h2></div></div>
-    <p className="adm-description">Bring the reviewed 2019–2025 exports into the question bank. Preview checks the live database first. Publication runs in small batches and preserves existing solutions, figures and question IDs. Pending and malformed questions stay out.</p>
+    <div className="adm-head"><div><p className="adm-kicker">Pinned question exports</p><h2 id="pipeline-import-title">Publish {examName} questions</h2></div></div>
+    <p className="adm-description">Bring the pinned exports into the question bank. Preview checks the live database first. Publication runs in small batches and preserves existing solutions, figures and question IDs. Pending and malformed questions stay out.</p>
+    <label className="adm-select">Exam<select value={exam} disabled={busy} onChange={event=>setExam(event.target.value)}><option value="jee_main">JEE Main · 2019–2025</option><option value="mht_cet">MHT-CET · 2020–2025</option></select></label>
+    {exam==='mht_cet'&&<p className="adm-description">Reconstructed papers with source answer keys, not official keys. Worked solutions are not verified. Preview and publish each year explicitly.</p>}
     {error&&<Notice error={error}/>}
     <div className="adm-subnav" role="group" aria-label="Review a question dataset">{years.map(year=><button key={year.year} disabled={busy} onClick={()=>review(year.year)}>Review {year.year} · {number(year.eligible)} eligible{year.progress?.offset>0?` · ${number(year.progress.offset)} saved`:''}</button>)}</div>
     {preview&&<div>
-      <p><strong>JEE Main {preview.year}</strong> · {number(preview.eligible)} eligible · {number(preview.verified_solutions)} with checked solutions · {number(preview.figures)} figures</p>
+      <p><strong>{examName} {preview.year}</strong> · {number(preview.eligible)} eligible · {number(preview.verified_solutions)} with checked solutions · {number(preview.figures)} figures</p>
       <p className="adm-description">{number(preview.database.counts.add)} new · {number(preview.database.counts.update)} safe updates · {number(preview.database.counts.unchanged)} already current · {number(preview.database.counts.conflict+preview.database.counts.skip)} held in the database</p>
       <p className="adm-description">{number(preview.blocked.length)} malformed source records and {number(preview.source_pending)} pending source questions will not be published. The archive may contain partial shifts. Checked keys do not mean every worked solution has been independently verified.</p>
       {(preview.blocked.length>0||preview.database.issues.length>0)&&<details><summary>View records held for review</summary><ul>{[...preview.blocked,...preview.database.issues].map((issue,i)=><li key={`${issue.ref}-${i}`}><strong>{issue.ref}</strong>: {issue.reason}</li>)}</ul></details>}

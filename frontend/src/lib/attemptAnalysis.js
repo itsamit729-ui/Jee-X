@@ -63,8 +63,10 @@ export function chartChapters(chapters, limit = 8) {
 }
 
 // Practice page deep link for one chapter (the practice builder reads ?subject= and ?chapter=).
-export const practiceChapterPath = (chapter) =>
-  `/practice?subject=${encodeURIComponent(chapter.subject_code)}&chapter=${encodeURIComponent(chapter.chapter_id)}`
+export const practiceChapterPath = (chapter, meta = {}) =>
+  ['mht_cet','bitsat'].includes(meta.pattern)
+    ? `/pyq?exam=${meta.pattern}&view=practice&subject=${encodeURIComponent(chapter.subject_code)}`
+    : `/practice?subject=${encodeURIComponent(chapter.subject_code)}&chapter=${encodeURIComponent(chapter.chapter_id)}`
 
 // The result shape the AI Buddy (/buddy) answers "how did I do?" and "weak chapters" from.
 export function buddyResult(data) {

@@ -15,8 +15,9 @@ const formatDate = (value) => new Date(value).toLocaleString('en-IN', { day: 'nu
 // Older full mocks were scored in the browser and only their totals were kept.
 export function SummaryOnly({ data }) {
   const { summary, subject_breakdown: breakdown } = data
+  const diagnostic=data.meta?.kind==='free_diagnostic'
   return <section className="panel attempt-summary-note">
-    <div className="score-big">{summary.score ?? '—'}<small>/ {summary.total_questions} correct</small></div>
+    <div className="score-big">{summary.score ?? '—'}<small>{diagnostic ? `/ ${summary.total_questions} correct` : ' marks'}</small></div>
     <p className="result-line" style={{ marginTop: 12 }}><strong>{Math.round(summary.accuracy || 0)}%</strong> accuracy</p>
     {Object.keys(breakdown).length > 0 && <div className="rows" style={{ marginTop: 12 }}>
       {Object.entries(breakdown).map(([subject, d]) => <div key={subject} className="row"><span className="row-main">{subject}</span><span className="row-value">{d.correct}/{d.total}</span></div>)}

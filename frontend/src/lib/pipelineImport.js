@@ -12,12 +12,13 @@ function checked(state,preview) {
 
 export async function runPipelineImport({request,token,preview,onProgress=()=>{},onRetry=()=>{},isActive=()=>true,wait=pause}) {
   const path=`/api/admin/pipeline-questions/${preview.year}`
-  const read=async()=>checked(await request(`${path}/progress`,{token,cache:false,timeoutMs:30_000}),preview)
+  const query=preview.exam==='mht_cet'?'?exam=mht_cet':''
+  const read=async()=>checked(await request(`${path}/progress${query}`,{token,cache:false,timeoutMs:30_000}),preview)
   let state=await read(),failures=0
   onProgress(state)
   while(isActive()&&!state.finished) {
     try {
-      const result=await request(`${path}/publish`,{token,method:'POST',timeoutMs:45_000,
+      const result=await request(`${path}/publish${query}`,{token,method:'POST',timeoutMs:45_000,
         body:{expected_digest:preview.digest,offset:state.offset,limit:25}})
       const next=checked(result.progress,preview)
       if(next.offset<=state.offset&&!next.finished)throw Object.assign(new Error('The server did not confirm import progress.'),{retryable:false})

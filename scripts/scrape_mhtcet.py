@@ -1064,7 +1064,7 @@ python pipeline/run_batch.py --limit 3
 ## Notes
 - Source: questions and keys as transcribed by ExamSIDE; MHT-CET is computer based and its papers are not published, so these are the source's reconstruction and its keys are not official. The solution pipeline flags disagreements (`key_mismatch`).
 - Formulas were rebuilt from the site's rendered MathJax, not copied as LaTeX. `generated/scraped-mht-cet/.reports/` lists the questions whose rebuilt text differs from the site's raw excerpt.
-- These questions are not in the database: `exam` is `mht_cet`, which the backend does not accept yet.
+- These files do not publish themselves. Use Admin → Question bank → MHT-CET to preview and publish eligible records after deployment. Pending and unsupported rows stay out.
 - Contains answer keys: keep the repository private before sharing it widely.
 """, encoding="utf-8")
     print(f"Wrote {out}: {len(full)} questions, {len(pack)} in the pipeline pack, {len(pending)} pending")
