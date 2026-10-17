@@ -28,6 +28,7 @@ COPY datasets/mht-cet-2022/questions.jsonl datasets/mht-cet-2022/pending.jsonl .
 COPY datasets/mht-cet-2023/questions.jsonl datasets/mht-cet-2023/pending.jsonl ./datasets/mht-cet-2023/
 COPY datasets/mht-cet-2024/questions.jsonl datasets/mht-cet-2024/pending.jsonl ./datasets/mht-cet-2024/
 COPY datasets/mht-cet-2025/questions.jsonl datasets/mht-cet-2025/pending.jsonl ./datasets/mht-cet-2025/
+COPY datasets/mht-cet-2026/questions.jsonl datasets/mht-cet-2026/pending.jsonl ./datasets/mht-cet-2026/
 COPY generated/scraped-mht-cet/ ./generated/scraped-mht-cet/
 COPY social/ ./social/
 RUN ffmpeg -hide_banner -filters 2>/dev/null | grep -q flite

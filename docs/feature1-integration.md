@@ -48,3 +48,18 @@ The full fixture import confirms 8,379 published rows, 382 assets and 8,379
 first revisions in an empty test database; replaying the first batch creates
 no new rows or revisions. Existing live conflicts can reduce the actual number
 added, which is why the admin preview reports new/current/held counts.
+
+## Publication state and 2026 follow-up
+
+The public MHT-CET catalog was checked on 17 October 2026 and already exposed
+questions for every year 2020–2026, including all 443 questions for 2020 and
+4,003 for 2026. An empty `add + update` preview does not mean an import failed:
+questions can already be published without an admin import cursor. The panel
+now says Already published and links to the selected archive year. If records
+are held, it explains that state and provides a working Review held questions
+action, rather than an unexplained disabled Publish button.
+
+The pinned publisher and Docker bundle now include 2026. Across 2020–2026,
+12,382 source entries pass validation, with 531 figures and 207 pending rows
+excluded. The three previously held 2023/2025 records stay held. Existing
+published content is not deleted to match these export counts.

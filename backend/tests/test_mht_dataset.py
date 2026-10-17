@@ -11,10 +11,10 @@ from test_pipeline_questions import setup
 
 def test_all_pinned_mht_exports_validate_assets_and_hold_unsupported_questions():
     datasets=[mht_dataset.dataset(year) for year in mht_dataset.YEARS]
-    assert sum(d['total'] for d in datasets)==8382
-    assert sum(d['eligible'] for d in datasets)==8379
-    assert sum(d['figures'] for d in datasets)==382
-    assert sum(d['source_pending'] for d in datasets)==160
+    assert sum(d['total'] for d in datasets)==12385
+    assert sum(d['eligible'] for d in datasets)==12382
+    assert sum(d['figures'] for d in datasets)==531
+    assert sum(d['source_pending'] for d in datasets)==207
     assert sum(d['verified_solutions'] for d in datasets)==0
     assert {q['ref'] for d in datasets for q in d['blocked']}=={'PYQ-CHEM-1c08a21e4758','PYQ-MATH-91cb79f0788c','PYQ-PHY-41cb568a9c48'}
     assert all(q['exam']=='mht_cet' and q['answer_source']=='examside' for d in datasets for q in d['questions'])
@@ -80,14 +80,14 @@ def test_all_eligible_mht_questions_round_trip_without_inflating_repeat_imports(
                 result=importer.publish_batch(db,data,offset,50)
                 assert result['conflicts']==0 and result['skipped']==0
                 added+=result['added']
-        assert added==8379
-        assert db.query(models.Question).filter_by(exam='mht_cet',status='published').count()==8379
+        assert added==12382
+        assert db.query(models.Question).filter_by(exam='mht_cet',status='published').count()==12382
         assert db.query(models.Question).filter(models.Question.solution!='').count()==0
-        assert db.query(models.Asset).count()==382
-        assert db.query(models.QuestionRevision).count()==8379
+        assert db.query(models.Asset).count()==531
+        assert db.query(models.QuestionRevision).count()==12382
         rerun=importer.publish_batch(db,mht_dataset.dataset(2020),limit=50)
         assert rerun['unchanged']==50 and rerun['added']==0
-        assert db.query(models.QuestionRevision).count()==8379
+        assert db.query(models.QuestionRevision).count()==12382
 
 
 def test_importing_jee_after_mht_enables_shared_chapter_without_removing_cet_flag(setup):
@@ -100,3 +100,17 @@ def test_importing_jee_after_mht_enables_shared_chapter_without_removing_cet_fla
         q=deepcopy(data['questions'][0]);q.update(exam='jee_main',ref='PYQ-'+q['subject']+'-000000000001')
         importer.taxonomy(db,q);db.flush()
         assert chapter.in_main and chapter.in_mht_cet
+
+
+def test_existing_publication_without_an_admin_cursor_is_reported_as_current(setup):
+    client,app,factory=setup
+    data=mht_dataset.dataset(2020)
+    with factory() as db:
+        for offset in range(0,len(data['questions']),50):
+            importer.publish_batch(db,data,offset,50)
+        assert db.query(models.QuestionImportProgress).count()==0
+    app.dependency_overrides[_require_admin]=lambda:'verified-admin'
+    preview=client.get('/api/admin/pipeline-questions/2020?exam=mht_cet').json()
+    assert preview['database']['counts']=={'add':0,'update':0,'unchanged':443,'skip':0,'conflict':0}
+    assert preview['progress']['offset']==0 and not preview['progress']['finished']
+    assert client.get('/api/admin/pipeline-questions/2026?exam=mht_cet').json()['eligible']==4003

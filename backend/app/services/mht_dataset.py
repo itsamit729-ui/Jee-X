@@ -12,9 +12,9 @@ from pathlib import Path
 from app.services import pipeline_dataset as common
 from app.services.pipeline_question_import import norm
 
-YEARS=tuple(range(2020,2026))
+YEARS=tuple(range(2020,2027))
 SOURCE_COMMIT='25d6976a77141b6d18887b3d330502766a852a74'
-DIGESTS={2020: 'f5902a8eb35cb77c1b7bf66935b1e9a70883d3fc62f364586bdae391873b2028', 2021: '8b81cd957d7714dec8730f15ad12019814b7fa3b1632e56d431f2d5e26007e34', 2022: 'd90c4d6fb4c5ef44083ca3a98610f210083b7d92b21ca78c4436a9a4fe6120dd', 2023: '7ce35107bce20a5a5228a6a674bd96f510f735c8acaa2d518ee8d32585fdf131', 2024: '110f338abb6595d10e1876afe6a68d81f2f836729a7ad816ea68ff3fe42a5910', 2025: 'd048ce90927906fd2d7160a12768b370d0a5abc7cb81e437c4f3936729f3854f'}
+DIGESTS={2020: 'f5902a8eb35cb77c1b7bf66935b1e9a70883d3fc62f364586bdae391873b2028', 2021: '8b81cd957d7714dec8730f15ad12019814b7fa3b1632e56d431f2d5e26007e34', 2022: 'd90c4d6fb4c5ef44083ca3a98610f210083b7d92b21ca78c4436a9a4fe6120dd', 2023: '7ce35107bce20a5a5228a6a674bd96f510f735c8acaa2d518ee8d32585fdf131', 2024: '110f338abb6595d10e1876afe6a68d81f2f836729a7ad816ea68ff3fe42a5910', 2025: 'd048ce90927906fd2d7160a12768b370d0a5abc7cb81e437c4f3936729f3854f', 2026: 'c5f8c0b2622bbd360638c559d89c22e7838ff36c4dece00da781a8bb9c7dc25e'}
 
 
 def load_dataset(year,root=None,public=None):
@@ -50,5 +50,5 @@ def load_dataset(year,root=None,public=None):
         'subjects':dict(Counter(q['subject'] for q in eligible)),'questions':eligible}
 
 
-@lru_cache(maxsize=6)
+@lru_cache(maxsize=7)
 def dataset(year):return load_dataset(year)
