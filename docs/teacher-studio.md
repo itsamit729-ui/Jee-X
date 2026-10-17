@@ -38,3 +38,41 @@ AI interpretation, mapping files, chat UI and provider calls have been removed.
 Old AI endpoints return HTTP 410 with a refresh instruction. No Groq key, AI model
 configuration, database migration or new service is needed for paper creation.
 Deploy frontend and backend together.
+
+### Custom question counts and numerical recognition
+
+The quick builder's **Custom counts** mode accepts exact counts of single-correct,
+multiple-correct and numerical questions. Rows can target a subject and chapter;
+their counts determine the total automatically. Zero-count rows are omitted.
+The server validates row scope, total and availability. Shortfalls name the
+missing format/subject and save nothing. Full original papers retain their
+existing mix. Custom rows carry over to the detailed blueprint editor.
+
+New papers use numerical answer boxes: students write one character in each box,
+including a minus sign or decimal point, with no padding or digit bubbles. A
+bundled, checksum-verified MNIST ONNX model runs through existing OpenCV DNN on the
+server. No answer keys, sheets or student information are sent to an AI service.
+It accepts digits only when four normalized views agree above a conservative
+threshold. Signs/decimal points use geometry. Low-confidence or malformed
+answers remain for review; confidence is not an accuracy guarantee.
+The printed instructions specify plain decimals and up to ten characters.
+
+**Score clear uploads automatically** defaults on for new papers. A matched
+roster student/personalised QR and unambiguous detections are required. Clear
+pages are confirmed automatically, and a full result is saved only when every
+page is accounted for. Duplicate uploads cannot create another result. Missing
+IDs, blank templates, unclear answers and online-attempt conflicts stay unscored
+or require review. The existing grader records unranked offline/assigned results,
+with the same marking and audit trail as manual confirmation. Teachers can
+inspect and correct an automatic result; corrections regrade the existing
+attempt and its mastery contribution without adding an attempt.
+
+Legacy printed numerical grids keep layout/QR version 3 and their original
+geometry. New handwritten boxes use version 4; scanning dispatches by version.
+No existing finalized paper changes format or scoring mode. Both reusable and
+personalised sheets, set orders and multi-page grading remain supported.
+
+Paper downloads are disabled while the selected PDF is queued or preparing.
+Errors expose a separate **Retry PDF preparation** action. OMR downloads remain
+available independently. The same readiness guard applies when opening saved
+papers, including when switching between A/B sets.

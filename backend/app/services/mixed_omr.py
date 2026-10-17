@@ -11,18 +11,22 @@ from reportlab.graphics.shapes import Drawing
 
 DIGITS=8
 
+def layout_for(paper):
+    if not needs_mixed(paper.questions):return 2
+    return 4 if paper.settings.get('numerical_response')=='handwritten' else 3
+
 def needs_mixed(questions):
     return any(q['type']!='single_correct' or len(q.get('options',[]))!=4 for q in questions or [])
 
-def pages_for(questions,order):
+def pages_for(questions,order,layout=3):
     lookup={q['question_id']:q for q in questions}
     pages=[];page=[];column=0;y=332
     for number,qid in enumerate(order,1):
-        q=lookup[qid];height=160 if q['type']=='numerical' else 46
+        q=lookup[qid];height=(58 if layout==4 else 160) if q['type']=='numerical' else 46
         if y+height>790:
             column+=1;y=332
             if column==2:pages.append(page);page=[];column=0
-        page.append({'number':number,'question_id':qid,'type':q['type'],'labels':[o['label'] for o in q.get('options',[])],'x':42+270*column,'y':y})
+        page.append({'number':number,'question_id':qid,'type':q['type'],'labels':[o['label'] for o in q.get('options',[])],'x':42+270*column,'y':y,'layout':layout})
         y+=height
     if page:pages.append(page)
     return pages
@@ -35,9 +39,13 @@ def number_cells(item):
     return {'sign':[(x+158,y+9),(x+202,y+9)],'decimal':[(x+28+22*k,y+39) for k in range(9)],
         'digits':[[(x+38+23*c,y+61+8*d) for d in range(10)] for c in range(DIGITS)],'box':(x+31,y+140,210,9)}
 
+def written_cells(item):
+    return [(item['x']+20+21*column,item['y']+13,21,28) for column in range(10)]
+
 def pdf(paper,sheet,name):
     from app.services.teacher_omr import WIDTH,HEIGHT,MARKERS,id_cells
-    pages=pages_for(paper.questions,sheet.question_order)
+    layout=layout_for(paper)
+    pages=pages_for(paper.questions,sheet.question_order,layout)
     out=io.BytesIO();c=canvas.Canvas(out,pagesize=(WIDTH,HEIGHT));c.setTitle('Jee Edge mixed answer sheet - '+paper.title)
     for page_index,items in enumerate(pages):
         for x,y in MARKERS:c.rect(float(x)-5,HEIGHT-float(y)-5,10,10,fill=1,stroke=0)
@@ -45,11 +53,11 @@ def pdf(paper,sheet,name):
         c.setFont('Helvetica',9)
         variant=f'Set {sheet.variant}' if paper.settings.get('sets_enabled',True) else 'Standard paper - no sets'
         lines=[(79,paper.title[:66]),(97,'Name: '+(name[:45] if name else '______________________________________')),
-            (115,f'Paper {paper.id} | {variant} | Page {page_index+1} of {len(pages)}'),(133,'Keep every page. A score is saved only after all pages are reviewed.')]
+            (115,f'Paper {paper.id} | {variant} | Page {page_index+1} of {len(pages)}'),(133,'Upload every page for a score. Unclear answers need review.' if layout==4 else 'Keep every page. A score is saved only after all pages are reviewed.')]
         for y,text in lines:
             while c.stringWidth(text,'Helvetica',9)>400:text=text[:-1]
             c.drawString(42,HEIGHT-y,text)
-        code=QrCodeWidget(f'JEEOMR3:{sheet.id}:{page_index}');x1,y1,x2,y2=code.getBounds()
+        code=QrCodeWidget(f'JEEOMR{layout}:{sheet.id}:{page_index}');x1,y1,x2,y2=code.getBounds()
         d=Drawing(78,78,transform=[78/(x2-x1),0,0,78/(y2-y1),0,0]);d.add(code);renderPDF.draw(d,c,WIDTH-125,HEIGHT-140)
         c.setFont('Helvetica-Bold',8);c.drawString(42,HEIGHT-149,'STUDENT OMR ID - use the same ID on every page')
         for col in range(10):
@@ -58,6 +66,8 @@ def pdf(paper,sheet,name):
         c.setFont('Helvetica',8)
         for digit in range(10):c.drawRightString(40,HEIGHT-(190+12*digit)-3,str(digit))
         instructions=['Print A4 at 100%. Keep all four corner squares.', 'Single: shade one. Multiple: shade every correct choice.', 'Numeric: shade + or -, all 8 digits and decimal places.', 'Example -12.5: minus, 00000125, 1 decimal place.', 'Include leading zeros. 0 decimal places = integer.', 'Also write the answer in the small box below the grid.', 'Longer values: write the full answer for teacher entry.', 'Personalised QR copies do not need the ID bubbles.']
+        if layout==4:
+            instructions=['Single correct: shade one option.', 'Multiple correct: shade every selected option.', 'Numerical: write one character in each answer box.', 'Example -12.5:  - | 1 | 2 | . | 5', 'Leave unused boxes empty. Do not add extra zeros.', 'Use clear digits, a minus sign and a decimal point.', 'Clear answers are read and scored automatically.' if paper.settings.get('auto_score_scans') else 'Numbers are read automatically for teacher review.', 'Unclear handwriting is flagged for review.']
         for i,text in enumerate(instructions):c.drawString(280,HEIGHT-(190+15*i),text)
         for item in items:
             x,y=item['x'],item['y'];c.setFont('Helvetica-Bold',9)
@@ -68,6 +78,11 @@ def pdf(paper,sheet,name):
                     c.circle(cx,HEIGHT-cy,4,stroke=1,fill=0);c.drawString(cx+9,HEIGHT-cy-3,label)
             else:
                 c.drawString(x,HEIGHT-y,f"Q{item['number']} | Numerical")
+                if layout==4:
+                    c.setLineWidth(.6)
+                    for bx,by,bw,bh in written_cells(item):c.rect(bx,HEIGHT-by-bh,bw,bh)
+                    c.setFont('Helvetica',6);c.drawString(x+20,HEIGHT-(y+49),'One character per box. Leave unused boxes empty.')
+                    continue
                 pts=number_cells(item);c.setFont('Helvetica',8)
                 for label,(cx,cy) in zip(['+','-'],pts['sign']):c.circle(cx,HEIGHT-cy,3,stroke=1,fill=0);c.drawString(cx+6,HEIGHT-cy-2,label)
                 c.drawString(x,HEIGHT-(y+24),'Decimal places:')
@@ -79,7 +94,7 @@ def pdf(paper,sheet,name):
                 for digit in range(10):c.drawRightString(x+27,HEIGHT-(y+61+8*digit)-2,str(digit))
                 bx,by,bw,bh=pts['box'];c.rect(bx,HEIGHT-by-bh,bw,bh)
                 c.drawString(x,HEIGHT-by-7,'Write:')
-        c.setFont('Helvetica',8);c.drawString(42,HEIGHT-805,f'Page {page_index+1}/{len(pages)} | Review all detections before scoring. Unclear handwriting is entered by the teacher.')
+        c.setFont('Helvetica',8);c.drawString(42,HEIGHT-805,f'Page {page_index+1}/{len(pages)} | '+('Clear scans are scored automatically. Check flagged answers in your workspace.' if layout==4 else 'Review all detections before scoring. Unclear handwriting is entered by the teacher.'))
         c.showPage()
     c.save();return out.getvalue()
 
@@ -103,6 +118,11 @@ def scan(aligned,items):
     for item in items:
         answer='';status='blank'
         if item['type']=='numerical':
+            if item.get('layout')==4:
+                from app.services.numeric_ocr import read_number
+                result=read_number(gray,written_cells(item))
+                results.append({'number':item['number'],'question_id':item['question_id'],'type':item['type'],'labels':item['labels'],**result})
+                continue
             pts=number_cells(item);groups=[pick(pts['sign']),pick(pts['decimal'])]+[pick(c) for c in pts['digits']]
             if all(len(marked)==1 and not unsure for marked,unsure,_ in groups):
                 sign='-' if groups[0][0][0]==1 else '';decimals=groups[1][0][0]
@@ -123,5 +143,5 @@ def scan(aligned,items):
     return results,encoded.tobytes()
 
 def parse_code(code):
-    match=re.fullmatch(r'JEEOMR3:([0-9a-f]{32}):(\d{1,3})',code)
-    return f'v3:{match[1]}:{int(match[2])}' if match else None
+    match=re.fullmatch(r'JEEOMR([34]):([0-9a-f]{32}):(\d{1,3})',code)
+    return f'v{match[1]}:{match[2]}:{int(match[3])}' if match else None

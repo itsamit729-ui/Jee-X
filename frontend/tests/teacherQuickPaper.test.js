@@ -4,7 +4,7 @@ import path from 'node:path'
 import {fileURLToPath} from 'node:url'
 import Module from 'node:module'
 import {buildSync} from 'esbuild'
-import {defaultMarking,quickPaperBody,quickPaperProblem} from '../src/lib/teacherQuickPaper.js'
+import {defaultMarking,quickPaperBody,quickPaperProblem,mixTotal} from '../src/lib/teacherQuickPaper.js'
 
 const form={exam:'jee_main',scope:'PHY',count:2,duration:10,method:'topics',chapters:[7],reference:'',fullPaper:false,
   level:'balanced',source:'all',type:'',sets:false,title:'',instructions:'',correct:'',wrong:''}
@@ -49,6 +49,34 @@ test('invalid sizes, missing reference and marking are clear before saving',()=>
   assert.deepEqual(defaultMarking('bitsat','all'),{correct:3,wrong:1})
 })
 
+test('custom counts determine the actual total and preserve exact formats, subjects and chapters',()=>{
+  const custom={...form,count:99,scope:'all',customMix:true,type:'numerical',mix:[
+    {subject:'PHY',type:'single_correct',count:'12',chapter_ids:[7]},
+    {subject:'CHEM',type:'multi_correct',count:'4',chapter_ids:[]},
+    {subject:'',type:'numerical',count:'3',chapter_ids:[]},
+    {subject:'',type:'multi_correct',count:0,chapter_ids:[]},
+  ]}
+  assert.equal(mixTotal(custom),19)
+  assert.equal(quickPaperProblem(custom,null),'')
+  const body=quickPaperBody(custom,null,'x')
+  assert.equal(body.count,19)
+  assert.equal(body.question_type,null)
+  assert.equal(body.question_mix.length,3)
+  assert.deepEqual(body.question_mix[0],{subject:'PHY',type:'single_correct',count:12,chapter_ids:[7]})
+  assert.equal(body.question_mix[2].subject,null)
+  assert.equal(body.auto_score_scans,true)
+})
+
+test('invalid custom rows are visible before creation and full papers ignore the custom mix',()=>{
+  const custom={...form,customMix:true,mix:[{subject:'PHY',type:'numerical',count:2}]}
+  assert.match(quickPaperProblem({...custom,mix:[{...custom.mix[0],count:-2}]},null),/1 and 200|whole-number/)
+  assert.match(quickPaperProblem({...custom,mix:[{...custom.mix[0],subject:'CHEM'}]},null),/selected scope/)
+  assert.match(quickPaperProblem({...custom,mix:[{...custom.mix[0],count:2.5}]},null),/1 and 200|whole-number/)
+  const body=quickPaperBody({...custom,method:'reference',fullPaper:true,autoScore:false},{year:2024,shift:'shift-1'},'x')
+  assert.deepEqual(body.question_mix,[])
+  assert.equal(body.auto_score_scans,false)
+})
+
 const filename=fileURLToPath(import.meta.url)
 const output=buildSync({stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import TeacherQuickPaper from './src/components/classroom/TeacherQuickPaper.jsx';import TeacherPaperDownloads from './src/components/classroom/TeacherPaperDownloads.jsx';
 export const entry=renderToStaticMarkup(<TeacherQuickPaper references={{data:{papers:[]},loading:false}} onCreated={()=>{}} onOpen={()=>{}} onAdvanced={()=>{}} onBusy={()=>{}}/>);
@@ -62,15 +90,18 @@ test('manual entry has a single create action, chapter search, presets and colla
   assert.match(entry,/Type a chapter/)
   assert.match(entry,/Quick quiz/)
   assert.match(entry,/Choose questions myself/)
+  assert.match(entry,/Custom counts/)
+  assert.match(entry,/Question mix/)
   assert.match(entry,/<details class="qp-options">/)
   assert.doesNotMatch(entry,/Describe with AI|chat|ai-paper|<select multiple|STEP 1 OF 3/)
   assert.equal((entry.match(/type="submit"/g)||[]).length,1)
 })
 
-test('completion immediately exposes question paper and OMR downloads for each saved set',()=>{
+test('completion locks paper downloads until preparation finishes and keeps OMR available',()=>{
   const {ready}=compiled.exports
   assert.match(ready,/Your paper is ready/)
-  assert.equal((ready.match(/Download paper PDF/g)||[]).length,2)
+  assert.equal((ready.match(/Preparing PDF…/g)||[]).length,4)
+  assert.equal((ready.match(/class="btn btn-primary" disabled=""/g)||[]).length,2)
   assert.equal((ready.match(/Download OMR PDF/g)||[]).length,2)
   assert.match(ready,/Open paper &amp; answer key/)
   assert.doesNotMatch(ready,/confirmation|<input|<select/)

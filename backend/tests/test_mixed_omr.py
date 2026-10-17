@@ -20,7 +20,7 @@ def question(c,kind,**extra):
 def create_mixed(c,numbers=7,sets=False):
     questions=[question(c,'numerical',answer_min=-12.5,answer_max=-12.5) for _ in range(numbers)]
     questions+=[question(c,'multi_correct',options=['First','Second','Third','Fourth'],correct_options=['A','C']),question(c,'single_correct',options=['First','Second'],correct='B')]
-    r=c.post('/api/teacher/papers',json={'title':'Mixed format test','question_ids':[q['question_id'] for q in questions],'sets_enabled':sets,'marks_correct':4,'marks_wrong':1})
+    r=c.post('/api/teacher/papers',json={'title':'Mixed format test','numerical_response':'grid','auto_score_scans':False,'question_ids':[q['question_id'] for q in questions],'sets_enabled':sets,'marks_correct':4,'marks_wrong':1})
     assert r.status_code==201,r.text
     return finish(c,r.json())
 

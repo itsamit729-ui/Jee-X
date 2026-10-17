@@ -21,7 +21,7 @@ def studio(classroom,monkeypatch,tmp_path):
     return client,factory,active,room
 
 def create(client,ids=[100,101]):
-    r=client.post('/api/teacher/papers',json={'title':'Class paper','question_ids':ids})
+    r=client.post('/api/teacher/papers',json={'title':'Class paper','question_ids':ids,'numerical_response':'grid','auto_score_scans':False})
     assert r.status_code==201,r.text
     return r.json()
 

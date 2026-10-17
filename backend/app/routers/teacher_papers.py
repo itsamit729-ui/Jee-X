@@ -44,10 +44,10 @@ def roster(db, uid, classroom_ids=None):
 
 def payload(p):
     return dict(id=p.id, title=p.title, settings=p.settings, questions=p.questions, version=p.version,
-                finalized=p.finalized, assignment_id=p.assignment_id, sets_enabled=sets_enabled(p), variants=['A','B'] if sets_enabled(p) else ['A'], variant_b=order_for(p,'B') if sets_enabled(p) else None, omr=omr_report(p.questions), updated_at=t.stamp(p.updated_at))
+                finalized=p.finalized, assignment_id=p.assignment_id, sets_enabled=sets_enabled(p), variants=['A','B'] if sets_enabled(p) else ['A'], variant_b=order_for(p,'B') if sets_enabled(p) else None, omr=omr_report(p.questions,p.settings), updated_at=t.stamp(p.updated_at))
 
 class Section(BaseModel):
-    subject: Literal['PHY','CHEM','MATH','ENG','LR']
+    subject: Literal['PHY','CHEM','MATH','ENG','LR'] | None = None
     count: int = Field(ge=1, le=200)
     chapter_ids: list[int] = Field(default_factory=list, max_length=100)
     difficulty_min: int = Field(1, ge=1, le=10)
@@ -63,6 +63,7 @@ class Generate(BaseModel):
     shift: str | None = Field(None, max_length=50)
     classroom_ids: list[int] = Field(default_factory=list, max_length=20)
     chapter_ids: list[int] = Field(default_factory=list, max_length=100)
+    subjects: list[Literal['PHY','CHEM','MATH','ENG','LR']] = Field(default_factory=list,max_length=5)
     sections: list[Section] = Field(default_factory=list, max_length=20)
     locked_ids: list[int] = Field(default_factory=list, max_length=200)
     exclude_ids: list[int] = Field(default_factory=list, max_length=400)
@@ -95,6 +96,7 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
         query=query.filter(m.Question.type=='single_correct',m.Question.id.in_(options))
     if b.source != 'all': query = query.filter(m.Question.source_type == b.source)
     if b.chapter_ids: query = query.filter(m.Chapter.id.in_(b.chapter_ids))
+    if b.subjects: query=query.filter(m.Subject.code.in_(b.subjects))
     if b.taught_only:
         if not b.classroom_ids: raise HTTPException(422, 'Select classes to use their taught syllabus.')
         sets=[{x.chapter_id for x in db.query(m.TaughtChapter).filter_by(classroom_id=cid)} for cid in set(b.classroom_ids)]
@@ -171,7 +173,7 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
             requirements = [None] * b.count
         # Locks consume matching requirements, rather than silently increasing the paper size.
         def matches(r, req):
-            if isinstance(req, Section): return r['subject'] == req.subject and (not req.chapter_ids or r['chapter_id'] in req.chapter_ids) and (req.type is None or r['type'] == req.type) and req.difficulty_min <= r['difficulty'] <= req.difficulty_max
+            if isinstance(req, Section): return (req.subject is None or r['subject'] == req.subject) and (not req.chapter_ids or r['chapter_id'] in req.chapter_ids) and (req.type is None or r['type'] == req.type) and req.difficulty_min <= r['difficulty'] <= req.difficulty_max
             if isinstance(req, tuple) and len(req)==2: return r['subject']==req[1]
             if isinstance(req, tuple): return (r['subject'], r['chapter_id'], r['type'], r['difficulty']) == req
             return True
@@ -194,13 +196,15 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
         target = {'easy':3,'balanced':5,'hard':8}[b.level]
         pool.sort(key=lambda r: (-weak[r['subtopic_id']], abs(r['difficulty']-target)))
         shortfalls = []
+        format_names={'single_correct':'Single correct','multi_correct':'Multiple correct','numerical':'Numerical'}
         for req in requirements:
             index = next((i for i,r in enumerate(pool) if matches(r,req)), None)
-            if index is None: shortfalls.append(str(req) if req else 'requested level/syllabus')
+            if index is None: shortfalls.append(f"{req.subject or 'Selected subjects'} / {format_names.get(req.type,'all formats')}" if isinstance(req,Section) else str(req) if req else 'requested level/syllabus')
             else: selected.append(pool.pop(index)['id'])
         if shortfalls:
             images=f' {len(unavailable_diagrams)} matching questions have missing diagram files.' if unavailable_diagrams else ''
-            raise HTTPException(422, f'Bank shortfall: {len(shortfalls)} questions unavailable.{images} Broaden chapters, difficulty or exclusions; no partial paper was saved.')
+            details='; '.join(f'{label}: {number} missing' for label,number in Counter(shortfalls).most_common(8))
+            raise HTTPException(422, f'Bank shortfall: {len(shortfalls)} questions unavailable ({details}).{images} Reduce these counts or broaden the selection; no partial paper was saved.')
     if not selected or len(selected)>200: raise HTTPException(422, 'Paper must contain 1–200 questions.')
     qs={q.id:q for q in bank(db,user.id).filter(m.Question.id.in_(selected)).all()}
     if b.mode == 'exact': selected.sort(key=lambda i: qs[i].ref)
@@ -216,6 +220,8 @@ class PaperIn(BaseModel):
     exam: EXAMS = 'jee_main'
     version: int = Field(1,ge=1)
     sets_enabled: bool = True  # Legacy API clients retain A/B; new UI explicitly opts out.
+    numerical_response: Literal['handwritten','grid'] = 'handwritten'
+    auto_score_scans: bool = True
 
 @router.get('/papers/catalog')
 def paper_catalog(exam: EXAMS = 'jee_main', user=Depends(t.require_teacher), db=Depends(get_db)):
@@ -232,6 +238,14 @@ def retired_ai_papers(user=Depends(t.require_teacher)):
     raise HTTPException(410,'AI paper creation has been removed. Refresh this page and use Create a paper.')
 
 
+class QuestionMix(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    subject: Literal['PHY','CHEM','MATH','ENG','LR'] | None = None
+    type: Literal['single_correct','multi_correct','numerical']
+    count: int = Field(ge=1,le=200)
+    chapter_ids: list[int] = Field(default_factory=list,max_length=100)
+
+
 class QuickPaperRequest(BaseModel):
     model_config = ConfigDict(extra='forbid')
     request_key: UUID
@@ -246,6 +260,8 @@ class QuickPaperRequest(BaseModel):
     level: Literal['easy','balanced','hard'] = 'balanced'
     source: Literal['all','pyq','original'] = 'all'
     question_type: Literal['single_correct','multi_correct','numerical'] | None = None
+    question_mix: list[QuestionMix] = Field(default_factory=list,max_length=30)
+    auto_score_scans: bool = True
     sets_enabled: bool = False
     marks_correct: int | None = Field(None,ge=1,le=10)
     marks_wrong: int | None = Field(None,ge=0,le=10)
@@ -276,7 +292,7 @@ def quick_create(b: QuickPaperRequest, user=Depends(t.require_teacher), db=Depen
         raise HTTPException(422,'Choose Past paper to select a year or shift.')
     if b.selection!='topics' and (b.year is None or b.source=='original'):
         raise HTTPException(422,'Choose an available previous-year paper.')
-    if b.selection=='exact' and (requested or b.chapter_ids or b.question_type is not None):
+    if b.selection=='exact' and (requested or b.chapter_ids or b.question_type is not None or b.question_mix):
         raise HTTPException(422,'The full paper keeps its original subjects, chapters and question formats. Choose a subset to filter it.')
     if b.title is not None and len(b.title.strip())<3:
         raise HTTPException(422,'Use a title of at least three characters, or leave it blank.')
@@ -285,6 +301,14 @@ def quick_create(b: QuickPaperRequest, user=Depends(t.require_teacher), db=Depen
     catalog = {cid:subject for cid,subject in query.with_entities(m.Chapter.id,m.Subject.code).distinct().all()}
     if any(cid not in catalog or (requested and catalog[cid] not in requested) for cid in b.chapter_ids):
         raise HTTPException(422,'Choose chapters available for the selected exam and subject.')
+    if b.question_mix:
+        if b.question_type is not None or sum(row.count for row in b.question_mix)!=b.count:
+            raise HTTPException(422,'The custom question counts must add up to the paper total. Choose a custom mix or one format, not both.')
+        for index,row in enumerate(b.question_mix,1):
+            if row.subject is not None and (row.subject not in allowed or (requested and row.subject not in requested) or (b.chapter_ids and not any(catalog[cid]==row.subject for cid in b.chapter_ids))):
+                raise HTTPException(422,f'Section {index}: choose a subject within the selected scope.')
+            if any(cid not in catalog or (row.subject and catalog[cid]!=row.subject) or (requested and catalog[cid] not in requested) or (b.chapter_ids and cid not in b.chapter_ids) for cid in row.chapter_ids):
+                raise HTTPException(422,f'Section {index}: choose a matching chapter within the selected scope.')
     if b.chapter_ids and requested:
         requested=[subject for subject in requested if subject in {catalog[cid] for cid in b.chapter_ids}]
     if b.selection!='topics':
@@ -296,13 +320,17 @@ def quick_create(b: QuickPaperRequest, user=Depends(t.require_teacher), db=Depen
     if b.question_type is not None: query=query.filter(m.Question.type==b.question_type)
     subjects=requested or sorted({subject for subject, in query.with_entities(m.Subject.code).distinct().all() if subject in allowed})
     if not subjects: raise HTTPException(422,'No published questions match. Choose another exam, subject or source.')
-    if requested and len(subjects)>b.count and b.selection!='exact':
+    if requested and len(subjects)>b.count and b.selection!='exact' and not b.question_mix:
         raise HTTPException(422,'Use at least one question per selected subject, or choose fewer subjects.')
     sections = [] if b.selection=='exact' else [Section(subject=subject,
         count=b.count//len(subjects)+(i<b.count%len(subjects)),type=b.question_type)
         for i,subject in enumerate(subjects) if b.count//len(subjects)+(i<b.count%len(subjects))>0]
+    if b.question_mix:
+        # Allocate specific rows before wildcard rows, so a general section cannot
+        # consume the only questions that fit a subject/chapter-specific section.
+        sections=[Section(**row.model_dump()) for row in sorted(b.question_mix,key=lambda row:(not bool(row.chapter_ids),row.subject is None))]
     result=generate(Generate(exam=b.exam,mode='exact' if b.selection=='exact' else 'blueprint',count=b.count,
-        level=b.level,chapter_ids=b.chapter_ids,sections=sections,source=b.source,
+        level=b.level,chapter_ids=b.chapter_ids,subjects=requested or sorted(allowed),sections=sections,source=b.source,
         year=b.year,shift=b.shift,reference_without_shift=b.selection!='topics' and b.shift is None,
         restrict_to_reference=b.selection=='from_paper',exclude_assigned=False,
         strict_exam=True,published_only=True,printable_only=True),user,db)
@@ -322,7 +350,9 @@ def quick_create(b: QuickPaperRequest, user=Depends(t.require_teacher), db=Depen
     settings=dict(exam=b.exam,duration_minutes=b.duration_minutes,
         marks_correct=b.marks_correct if b.marks_correct is not None else correct,
         marks_wrong=b.marks_wrong if b.marks_wrong is not None else wrong,
-        sets_enabled=b.sets_enabled,instructions=b.instructions,creation_request_key=key,distinct_sets=True)
+        sets_enabled=b.sets_enabled,instructions=b.instructions,creation_request_key=key,distinct_sets=True,
+        numerical_response='handwritten',auto_score_scans=b.auto_score_scans,
+        question_mix=[row.model_dump() for row in b.question_mix])
     db.query(m.User).filter_by(id=user.id).with_for_update().one()
     previous=existing(lock=True)
     if previous: return completed_paper(previous)
@@ -341,7 +371,7 @@ def save_data(b, db, uid):
 
 @router.get('/papers')
 def papers(user=Depends(t.require_teacher),db=Depends(get_db)):
-    return {'papers':[dict(id=p.id,title=p.title,version=p.version,finalized=p.finalized,count=len(p.questions),assignment_id=p.assignment_id,settings=p.settings,sets_enabled=sets_enabled(p),omr=omr_report(p.questions)) for p in db.query(m.TeacherPaper).filter_by(teacher_id=user.id).order_by(m.TeacherPaper.updated_at.desc()).limit(100)]}
+    return {'papers':[dict(id=p.id,title=p.title,version=p.version,finalized=p.finalized,count=len(p.questions),assignment_id=p.assignment_id,settings=p.settings,sets_enabled=sets_enabled(p),omr=omr_report(p.questions,p.settings)) for p in db.query(m.TeacherPaper).filter_by(teacher_id=user.id).order_by(m.TeacherPaper.updated_at.desc()).limit(100)]}
 
 @router.post('/papers',status_code=201)
 def create(b:PaperIn,user=Depends(t.require_teacher),db=Depends(get_db)):
@@ -462,7 +492,7 @@ def sets_enabled(p):
 def check_variant(p,variant):
     if variant=='B' and not sets_enabled(p): raise HTTPException(422,'This paper uses one question order without sets. Choose the standard paper.')
 
-def omr_report(questions):
+def omr_report(questions,settings=None):
     issues=[]
     for index,q in enumerate(questions):
         _,options=presentation(q.get('stem',''),q.get('options',[]));reason=None
@@ -477,7 +507,7 @@ def omr_report(questions):
         if reason:issues.append({'number':index+1,'question_id':q['question_id'],'reason':reason})
     mixed=mixed_omr.needs_mixed(questions)
     return {'eligible':bool(questions) and len(questions)<=200 and not issues,'issues':issues,'eligible_count':len(questions)-len(issues),'total':len(questions),'layout':'mixed' if mixed else 'compact',
-        'page_count':len(mixed_omr.pages_for(questions,[q['question_id'] for q in questions])) if mixed and not issues else 1}
+        'numerical_response':(settings or {}).get('numerical_response','grid'),'page_count':len(mixed_omr.pages_for(questions,[q['question_id'] for q in questions],4 if (settings or {}).get('numerical_response')=='handwritten' else 3)) if mixed and not issues else 1}
 
 
 def order_for(p,variant):
@@ -490,7 +520,7 @@ def order_for(p,variant):
     return ids
 
 def generic_sheet_id(p,variant,layout=2):
-    suffix=':mixed-v3' if layout==3 else ':idgrid-v2' if layout==2 else ''
+    suffix=':mixed-v4' if layout==4 else ':mixed-v3' if layout==3 else ':idgrid-v2' if layout==2 else ''
     return hashlib.sha256(f'jeeedge-reusable-omr:{p.id}:{variant}{suffix}'.encode()).hexdigest()[:32]
 
 
@@ -521,7 +551,7 @@ def blank_sheet_download(pid:int,variant:Literal['A','B']='A',user=Depends(t.req
     from types import SimpleNamespace
     from app.services.teacher_omr import sheet_pdf
     p=owned(db,pid,user);check_omr(p);check_variant(p,variant)
-    sheet=SimpleNamespace(id=generic_sheet_id(p,variant,3 if mixed_omr.needs_mixed(p.questions) else 2),variant=variant,question_order=order_for(p,variant))
+    sheet=SimpleNamespace(id=generic_sheet_id(p,variant,mixed_omr.layout_for(p)),variant=variant,question_order=order_for(p,variant))
     return Response(sheet_pdf(p,sheet,None),media_type='application/pdf',headers={'Content-Disposition':f'attachment; filename="omr-{p.id}-{variant}-print-multiple-copies.pdf"'})
 
 @router.post('/papers/{pid}/sheets')
@@ -595,16 +625,18 @@ def process_scan(identity):
                 scan.state='processing';db.commit()
                 sid,aligned=omr.detect(omr.path(identity,'input').read_bytes())
                 mixed_page=None
-                if sid.startswith('v3:'):
-                    _,sid,page_text=sid.split(':');mixed_page=int(page_text)
+                mixed_layout=0
+                if sid.startswith(('v3:','v4:')):
+                    version,sid,page_text=sid.split(':');mixed_page=int(page_text);mixed_layout=int(version[1:])
                 sh=db.get(m.TeacherSheet,sid);p=db.get(m.TeacherPaper,scan.paper_id)
                 if not p or p.teacher_id!=scan.teacher_id: raise ValueError('Paper is unavailable.')
                 if mixed_omr.needs_mixed(p.questions)!=(mixed_page is not None): raise ValueError('This answer-sheet layout does not match the paper. Download its current sheet.')
-                template=next(((v,layout) for layout in ((3,) if mixed_page is not None else (2,1)) for v in (('A','B') if sets_enabled(p) else ('A',)) if sid==generic_sheet_id(p,v,layout)),None)
+                if mixed_page is not None and mixed_layout!=mixed_omr.layout_for(p): raise ValueError('This numerical layout does not match this saved paper. Upload its matching sheet.')
+                template=next(((v,layout) for layout in ((mixed_layout,) if mixed_page is not None else (2,1)) for v in (('A','B') if sets_enabled(p) else ('A',)) if sid==generic_sheet_id(p,v,layout)),None)
                 template_variant,layout=template if template else (None,0)
                 if template_variant:
                     count=len(p.questions);scan.result={'template_variant':template_variant}
-                    if layout in (2,3):
+                    if layout in (2,3,4):
                         identity_result=omr.read_student_id(aligned)
                         if identity_result['status']=='clear':
                             uid=int(identity_result['digits'])
@@ -622,10 +654,10 @@ def process_scan(identity):
                 else: raise ValueError('This QR code belongs to another paper. Select the matching paper.')
                 if mixed_page is not None:
                     variant=template_variant or sh.variant
-                    pages=mixed_omr.pages_for(p.questions,order_for(p,variant))
+                    pages=mixed_omr.pages_for(p.questions,order_for(p,variant),mixed_layout)
                     if mixed_page>=len(pages): raise ValueError('Invalid page number for this paper.')
                     items=pages[mixed_page]
-                    scan.result={**(scan.result or {}),'layout':3,'page_index':mixed_page,'page_count':len(pages),'question_order':[i['question_id'] for i in items]}
+                    scan.result={**(scan.result or {}),'layout':mixed_layout,'page_index':mixed_page,'page_count':len(pages),'question_order':[i['question_id'] for i in items]}
                     found,preview=mixed_omr.scan(aligned,items)
                 else:
                     found,preview=omr.bubbles(aligned,count,id_grid=layout==2)
@@ -634,6 +666,16 @@ def process_scan(identity):
                     found=[{**d,'question_id':qid,'type':lookup[qid]['type'],'labels':[o['label'] for o in lookup[qid]['options']]} for d,qid in zip(found,question_ids)]
                 omr.path(identity,'jpg').write_bytes(preview)
                 scan.detection=found;scan.state='review';db.commit()
+                if p.settings.get('auto_score_scans') and scan.sheet_id and any(d['status']=='marked' for d in found) and all(d['status'] in ('marked','blank') and d.get('answer') is not None and (d['type']!='numerical' or d.get('confidence',1)>=.999) for d in found):
+                    try:
+                        user=db.get(m.User,scan.teacher_id)
+                        _review_scan(scan.id,ReviewIn(version=scan.version,answers=[d['answer'] for d in found]),user,db,automatic=True)
+                    except HTTPException as error:
+                        db.rollback()
+                        scan=db.get(m.TeacherScan,identity)
+                        if error.status_code==409 and 'already' in str(error.detail).lower():
+                            scan.state='duplicate'
+                        scan.error=str(error.detail)[:300];db.commit()
         except Exception as e:
             with SessionLocal() as db:
                 scan=db.get(m.TeacherScan,identity)
@@ -691,6 +733,9 @@ class ReviewIn(BaseModel):
 
 @router.post('/scans/{sid}/review')
 def review(sid:str,b:ReviewIn,user=Depends(t.require_teacher),db=Depends(get_db)):
+    return _review_scan(sid,b,user,db)
+
+def _review_scan(sid,b,user,db,automatic=False):
     s=own_scan(db,sid,user);p=owned(db,s.paper_id,user)
     if s.version!=b.version or s.state!='review': raise HTTPException(409,'This scan is already reviewed or changed. Reload it.')
     from app.services import teacher_omr as omr
@@ -727,13 +772,13 @@ def review(sid:str,b:ReviewIn,user=Depends(t.require_teacher),db=Depends(get_db)
         if recipient and recipient.attempt_id: raise HTTPException(409,'This student has already started online. Finish or review that attempt instead of adding an offline score.')
     identity_result=page_meta.get('identity')
     full_answers=page_answers
-    if page_meta.get('layout')==3:
-        pages=mixed_omr.pages_for(p.questions,sh.question_order)
+    if page_meta.get('layout') in (3,4):
+        pages=mixed_omr.pages_for(p.questions,sh.question_order,page_meta['layout'])
         previous=db.query(m.TeacherScan).filter_by(paper_id=p.id,sheet_id=sh.id,state='page_reviewed').with_for_update().all()
         confirmed={r.result['page_index']:r for r in previous}
         page_index=page_meta['page_index']
         if page_index in confirmed:raise HTTPException(409,'This page is already confirmed for this student. Duplicate pages cannot change saved answers.')
-        s.answers=page_answers;s.result={**page_meta,'student_id':sh.student_id};s.state='page_reviewed';s.reviewed_at=utcnow();s.version+=1
+        s.answers=page_answers;s.result={**page_meta,'student_id':sh.student_id,'auto_confirmed':automatic};s.state='page_reviewed';s.reviewed_at=utcnow();s.version+=1
         confirmed[page_index]=s
         if len(confirmed)<len(pages):
             db.commit();return {'complete':False,'confirmed_pages':len(confirmed),'page_count':len(pages),'missing_pages':[i+1 for i in range(len(pages)) if i not in confirmed]}
@@ -748,9 +793,10 @@ def review(sid:str,b:ReviewIn,user=Depends(t.require_teacher),db=Depends(get_db)
         page_meta={**page_meta,'confirmed_scan_ids':[r.id for r in confirmed.values()]}
     s.answers=full_answers;s.result=offline_score(p,sh,full_answers)
     if identity_result:s.result={**s.result,'identity':identity_result}
-    if page_meta.get('layout')==3:s.result={**s.result,**{k:page_meta[k] for k in ('layout','page_index','page_count','confirmed_scan_ids')}}
+    if page_meta.get('layout') in (3,4):s.result={**s.result,**{k:page_meta[k] for k in ('layout','page_index','page_count','confirmed_scan_ids')}}
+    if automatic:s.result={**s.result,'auto_scored':True}
     s.state='reviewed';s.reviewed_at=utcnow();s.version+=1
-    db.add(m.AuditLog(actor_id=user.id,action='omr_reviewed',entity='teacher_paper',entity_id=p.id,after={'scan_id':s.id,'student_id':sh.student_id,'variant':sh.variant,'score':s.result['score'],'identity':identity_result},reason='Teacher confirmed all pages and detected answers.'))
+    db.add(m.AuditLog(actor_id=user.id,action='omr_reviewed',entity='teacher_paper',entity_id=p.id,after={'scan_id':s.id,'student_id':sh.student_id,'variant':sh.variant,'score':s.result['score'],'identity':identity_result,'auto_scored':automatic},reason='Clear detections automatically scored after a student identity match.' if automatic else 'Teacher confirmed all pages and detected answers.'))
     if p.assignment_id:
         assignment=db.get(m.TeachingAssignment,p.assignment_id)
         if recipient:
@@ -768,6 +814,58 @@ def offline_score(p,sh,answers):
         details.append(dict(question_id=qid,answer=answer,outcome=outcome,marks=p.settings['marks_correct'] if outcome=='correct' else -p.settings['marks_wrong'] if outcome=='wrong' else 0,topic=q['topic']))
     correct=sum(d['outcome']=='correct' for d in details);attempted=sum(d['outcome']!='skipped' for d in details)
     return dict(score=sum(d['marks'] for d in details),max_score=len(details)*p.settings['marks_correct'],correct=correct,attempted=attempted,accuracy=round(correct*100/attempted,2) if attempted else 0,questions=details)
+
+def _regrade_recipient(db,assignment,recipient,questions,draft=None):
+    """Replace one attempt's grading contribution without adding another attempt."""
+    uid=recipient.user_id
+    attempt=db.get(m.TestAttempt,recipient.attempt_id);submitted=attempt.submitted_at
+    qmap={q['question_id']:q for q in questions}
+    db.query(m.StudentProfile).filter_by(user_id=uid).with_for_update().first()
+    stats={row.subtopic_id:row for row in db.query(m.StudentSubtopicStats).filter_by(user_id=uid).filter(m.StudentSubtopicStats.subtopic_id.in_({q['subtopic_id'] for q in questions})).with_for_update().all()}
+    previous_dates={topic:row.last_attempted_at for topic,row in stats.items()}
+    for old in recipient.result['questions']:
+        if old['outcome']=='skipped':continue
+        stat=stats.get(qmap[old['question_id']]['subtopic_id'])
+        if stat:
+            stat.attempted=max(0,stat.attempted-1);stat.correct=max(0,stat.correct-int(old['outcome']=='correct'))
+            stat.mastery=stat.correct/stat.attempted if stat.attempted else 0
+    db.query(m.QuestionResponse).filter_by(attempt_id=attempt.id).delete(synchronize_session=False)
+    if draft is not None:recipient.draft=draft
+    recipient.result=None;db.flush();t.finalize(db,assignment,recipient,attempt)
+    for topic,last_date in previous_dates.items():
+        db.query(m.StudentSubtopicStats).filter_by(user_id=uid,subtopic_id=topic).one().last_attempted_at=last_date
+    attempt.submitted_at=submitted;recipient.result={**recipient.result,'submitted_at':t.stamp(submitted)}
+
+
+class CorrectScanAnswersIn(BaseModel):
+    model_config=ConfigDict(extra='forbid')
+    version:int=Field(ge=1)
+    answers:list[str]=Field(min_length=1,max_length=200)
+
+
+@router.post('/scans/{sid}/correct-answers')
+def correct_scan_answers(sid:str,b:CorrectScanAnswersIn,user=Depends(t.require_teacher),db=Depends(get_db)):
+    scan=own_scan(db,sid,user);p=owned(db,scan.paper_id,user)
+    if scan.state!='reviewed' or scan.version!=b.version or not (scan.result or {}).get('auto_scored'):
+        raise HTTPException(409,'Reload the automatically scored result before correcting its answers.')
+    sh=db.get(m.TeacherSheet,scan.sheet_id)
+    if not sh or sh.paper_id!=p.id or len(b.answers)!=len(sh.question_order) or any(len(a)>100 for a in b.answers):
+        raise HTTPException(422,'Provide every answer in the saved paper order.')
+    qmap={q['question_id']:q for q in p.questions}
+    answers=[paper_answers.normalize(qmap[qid],value) for qid,value in zip(sh.question_order,b.answers)]
+    before=scan.answers
+    if p.assignment_id:
+        t.lock_user(db,sh.student_id,allow_inactive=True)
+        assignment=db.get(m.TeachingAssignment,p.assignment_id)
+        recipient=db.query(m.AssignmentRecipient).filter_by(assignment_id=assignment.id,user_id=sh.student_id).with_for_update().populate_existing().first()
+        if recipient and recipient.result:
+            _regrade_recipient(db,assignment,recipient,p.questions,[paper_answers.draft(qmap[qid],answer) for qid,answer in zip(sh.question_order,answers)])
+    metadata={key:value for key,value in scan.result.items() if key in ('identity','layout','page_index','page_count','confirmed_scan_ids','auto_scored','recognition_corrected')}
+    scan.answers=answers;scan.result={**offline_score(p,sh,answers),**metadata,'recognition_corrected':True};scan.version+=1
+    db.add(m.AuditLog(actor_id=user.id,action='omr_recognition_corrected',entity='teacher_paper',entity_id=p.id,
+        before={'scan_id':scan.id,'answers':before},after={'answers':answers,'score':scan.result['score']},reason='Teacher corrected automatically recognized answers.'))
+    db.commit();return {'complete':True,'result':scan.result}
+
 
 class KeyCorrection(BaseModel):
     question_id:int
@@ -813,27 +911,10 @@ def correct_key(pid:int,b:CorrectKeyIn,user=Depends(t.require_teacher),db=Depend
             t.lock_user(db,uid,allow_inactive=True)
             r=db.query(m.AssignmentRecipient).filter_by(assignment_id=assignment.id,user_id=uid).with_for_update().populate_existing().first()
             if not r.result: continue
-            attempt=db.get(m.TestAttempt,r.attempt_id)
-            submitted=attempt.submitted_at
-            # Undo only this attempt's mastery contribution, then use the same
-            # authoritative grader. Other practice history is retained.
-            db.query(m.StudentProfile).filter_by(user_id=uid).with_for_update().first()
-            previous_dates={}
-            for old in r.result['questions']:
-                if old['outcome']=='skipped': continue
-                stat=db.query(m.StudentSubtopicStats).filter_by(user_id=uid,subtopic_id=qmap[old['question_id']]['subtopic_id']).with_for_update().first()
-                if stat:
-                    previous_dates.setdefault(stat.subtopic_id,stat.last_attempted_at)
-                    stat.attempted=max(0,stat.attempted-1);stat.correct=max(0,stat.correct-int(old['outcome']=='correct'))
-                    stat.mastery=stat.correct/stat.attempted if stat.attempted else 0
-            db.query(m.QuestionResponse).filter_by(attempt_id=attempt.id).delete(synchronize_session=False)
-            r.result=None;db.flush();t.finalize(db,assignment,r,attempt)
-            for topic_id,last_date in previous_dates.items():
-                db.query(m.StudentSubtopicStats).filter_by(user_id=uid,subtopic_id=topic_id).one().last_attempted_at=last_date
-            attempt.submitted_at=submitted;r.result={**r.result,'submitted_at':t.stamp(submitted)}
+            _regrade_recipient(db,assignment,r,questions)
             online+=1
     for scan,sh in db.query(m.TeacherScan,m.TeacherSheet).join(m.TeacherSheet,m.TeacherSheet.id==m.TeacherScan.sheet_id).filter(m.TeacherScan.paper_id==p.id,m.TeacherScan.state=='reviewed').all():
-        metadata={k:v for k,v in (scan.result or {}).items() if k in ('identity','layout','page_index','page_count','confirmed_scan_ids')}
+        metadata={k:v for k,v in (scan.result or {}).items() if k in ('identity','layout','page_index','page_count','confirmed_scan_ids','auto_scored','recognition_corrected')}
         scan.result={**offline_score(p,sh,scan.answers),**metadata};scan.version+=1;offline+=1
     db.add(m.AuditLog(actor_id=user.id,action='teacher_key_corrected',entity='teacher_paper',entity_id=p.id,
         before={'keys':before,'version':b.version},after={'keys':[c.model_dump() for c in b.corrections],'version':p.version,'online_results':online,'offline_results':offline},reason=b.reason.strip()))
