@@ -25,7 +25,7 @@ export default function FreeTest() {
   const [answers, setAnswers] = useState([])
   const [saveState, setSaveState] = useState('idle')
   const [attemptId, setAttemptId] = useState(null)
-  const { exited: fsExited, resume: fsResume } = useFullscreenLock(phase === 'question')
+  const fullscreen = useFullscreenLock(phase === 'question', () => finishTest())
   const intervalRef = useRef(null)
   const submittedRef = useRef(false)
   const questionHeadingRef = useRef(null)
@@ -70,6 +70,16 @@ export default function FreeTest() {
     setSelected(null)
     setRevealed(false)
     setTimeLeft(SECONDS_PER_QUESTION)
+  }
+
+  const finishTest = () => {
+    clearInterval(intervalRef.current)
+    setAnswers(previous => freeTestQuestions.map((q, i) => previous[i] || {
+      questionId: q.id, selected: i === index && !revealed ? selected : null,
+      correct: i === index && !revealed && selected === q.correctAnswer,
+      timeTaken: i === index ? SECONDS_PER_QUESTION - timeLeft : 0,
+    }))
+    setPhase('results')
   }
 
   const beginTest = () => {
@@ -133,7 +143,7 @@ export default function FreeTest() {
 
   return (
     <div className="crackjee-root">
-      <FullscreenGuard exited={fsExited} onResume={fsResume} />
+      <FullscreenGuard {...fullscreen} onResume={fullscreen.resume} onSubmit={finishTest} />
       <header className="topbar">
         <div className="wrap topbar-row">
           <Logo />

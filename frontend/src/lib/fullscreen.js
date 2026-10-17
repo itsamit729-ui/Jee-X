@@ -1,49 +1,72 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
+export const MAX_FULLSCREEN_EXITS = 3
 function fsElement() {
   return document.fullscreenElement || document.webkitFullscreenElement || null
 }
 
-// Call this synchronously inside the "start test" click handler — browsers
-// only grant full-screen from a direct user gesture, so it can't be deferred
-// into an effect or fired after an `await`.
+// Request synchronously from the start/resume click. Denial is not an exit.
 export function requestFullscreen(el = document.documentElement) {
   const fn = el.requestFullscreen || el.webkitRequestFullscreen
-  if (!fn) return Promise.resolve()
-  return fn.call(el).catch(() => {}) // denied/unsupported — the test still works, just not locked
+  if (!fn) return Promise.resolve(false)
+  try { return Promise.resolve(fn.call(el)).then(() => Boolean(fsElement()), () => false) }
+  catch { return Promise.resolve(false) }
 }
-
 export function exitFullscreen() {
   if (!fsElement()) return Promise.resolve()
   const fn = document.exitFullscreen || document.webkitExitFullscreen
-  return fn ? fn.call(document).catch(() => {}) : Promise.resolve()
+  try { return fn ? Promise.resolve(fn.call(document)).catch(() => {}) : Promise.resolve() }
+  catch { return Promise.resolve() }
 }
 
-// Best-effort full-screen "lock" for test-taking screens. A browser will
-// always let the student press Esc — there's no way for JS to block that —
-// so this can't be a true lock. It detects an exit while `active` and hands
-// back `exited` so the caller can block interaction with a resume prompt,
-// and it exits full-screen automatically the moment `active` turns off
-// (e.g. right when the test is submitted).
-export function useFullscreenLock(active) {
+// Observe real transitions, including browsers emitting both event names.
+// The count belongs to this subscription, which is recreated for each attempt.
+export function observeFullscreen(onState, doc = document) {
+  const current = () => Boolean(doc.fullscreenElement || doc.webkitFullscreenElement)
+  let wasFullscreen = current(), exitCount = 0
+  const onChange = () => {
+    const fullscreen = current()
+    if (wasFullscreen && !fullscreen) {
+      exitCount++
+      onState({ exited: true, exitCount })
+    } else if (!wasFullscreen && fullscreen) onState({ exited: false, exitCount })
+    wasFullscreen = fullscreen
+  }
+  doc.addEventListener('fullscreenchange', onChange)
+  doc.addEventListener('webkitfullscreenchange', onChange)
+  return () => {
+    doc.removeEventListener('fullscreenchange', onChange)
+    doc.removeEventListener('webkitfullscreenchange', onChange)
+  }
+}
+
+export function useFullscreenLock(active, onLimit) {
   const [exited, setExited] = useState(false)
-
+  const [exitCount, setExitCount] = useState(0)
+  const callback = useRef(onLimit)
+  callback.current = onLimit
+  const triggered = useRef(false)
   useEffect(() => {
-    if (!active) return
-    const onChange = () => setExited(!fsElement())
-    document.addEventListener('fullscreenchange', onChange)
-    document.addEventListener('webkitfullscreenchange', onChange)
-    return () => {
-      document.removeEventListener('fullscreenchange', onChange)
-      document.removeEventListener('webkitfullscreenchange', onChange)
+    if (!active) {
+      setExited(false); setExitCount(0); triggered.current = false
+      exitFullscreen()
+      return
     }
+    return observeFullscreen(state => {
+      setExited(state.exited)
+      setExitCount(state.exitCount)
+    })
   }, [active])
-
+  const limitReached = exitCount > MAX_FULLSCREEN_EXITS
   useEffect(() => {
-    if (active) return
-    setExited(false)
-    exitFullscreen()
-  }, [active])
-
-  return { exited, resume: () => requestFullscreen().then(() => setExited(false)) }
+    if (active && limitReached && !triggered.current) {
+      triggered.current = true
+      callback.current?.()
+    }
+  }, [active, limitReached])
+  return { exited, exitCount, limitReached, resume: async () => {
+    const entered = await requestFullscreen()
+    if (entered) setExited(false)
+    return entered
+  } }
 }
