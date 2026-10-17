@@ -72,6 +72,12 @@ test('temporary GET failures retry once; writes never retry', async () => {
   await assert.rejects(request('/api/test-attempts', { method: 'POST', body: {} }))
   assert.equal(calls, 1)
 })
+test('language capacity responses retain retry timing and never repeat the paid request',async()=>{
+  let calls=0
+  globalThis.fetch=async()=>{calls++;return new Response(JSON.stringify({detail:'Language service limited'}),{status:429,headers:{'Retry-After':'60'}})}
+  await assert.rejects(request('/api/teacher/papers/quick-create',{method:'POST',body:{prompt:'custom request'}}),error=>error.status===429&&error.retryAfter===60)
+  assert.equal(calls,1)
+})
 test('401 is not retried and requests time out instead of hanging', async () => {
   let calls = 0, expired = 0
   const listener = () => expired++

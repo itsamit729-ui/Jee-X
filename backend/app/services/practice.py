@@ -1,10 +1,11 @@
 """Evidence-based, fixed practice sessions. No generated claims or answer leakage."""
+import random
 from collections import defaultdict
 from datetime import datetime
 from statistics import median
 
 
-def choose_questions(candidates, history, count, mode='recommended', now=None, focus_chapters=None, milestone=None):
+def choose_questions(candidates, history, count, mode='recommended', now=None, focus_chapters=None, milestone=None, rng=None):
     now = now or datetime.utcnow()
     recent = defaultdict(list)
     seen = set()
@@ -14,6 +15,7 @@ def choose_questions(candidates, history, count, mode='recommended', now=None, f
         seen.add(row.question_id)
         if row.outcome in ('correct', 'wrong') and len(recent[row.subtopic_id]) < 5:
             recent[row.subtopic_id].append(row)
+    rng = rng or random.SystemRandom()
     ranked = []
     for q in candidates:
         rows = recent[q.subtopic_id]
@@ -48,7 +50,7 @@ def choose_questions(candidates, history, count, mode='recommended', now=None, f
                   'milestone_title': milestone['title'] if milestone else None,
                   'path_role': 'Priority chapter in your roadmap' if focus_chapters and getattr(q, 'chapter_id', None) in focus_chapters else 'Broaden your evidence and keep other concepts active',
                   'reason_code': code, 'reason': text, 'learning_goal': goal, 'evidence': evidence, 'repeated': repeated}
-        ranked.append((q, reason, abs(q.difficulty - target), repeated))
+        ranked.append((q, reason, abs(q.difficulty - target), repeated, rng.random()))
     # Aim for 60% support, 20% revision and 20% exploration, using available evidence.
     pattern = ['support', 'support', 'revision', 'support', 'explore']
     groups = {'revisit_weak_concept': 'support', 'build_fluency': 'support', 'spaced_revision': 'revision'}
@@ -60,9 +62,9 @@ def choose_questions(candidates, history, count, mode='recommended', now=None, f
             item[3],
             bool(focus_chapters) and desired == 'support' and getattr(item[0], 'chapter_id', None) not in focus_chapters,
             groups.get(item[1]['reason_code'], 'explore') != desired,
-            used[item[0].subtopic_id], item[2], item[0].id))
+            used[item[0].subtopic_id], item[2], item[4]))
         ranked.remove(best)
-        q, reason, _, _ = best
+        q, reason, _, _, _ = best
         used[q.subtopic_id] += 1
         chosen.append((q.id, reason))
     return chosen

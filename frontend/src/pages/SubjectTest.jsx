@@ -59,7 +59,8 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
   const [answers, setAnswers] = useState({}) // question_id -> { option_ids, numeric_answer }
   const [submitting, setSubmitting] = useState(false)
   const [result, setResult] = useState(null)
-  const { exited: fsExited, resume: fsResume } = useFullscreenLock(Boolean(test) && !result)
+  const submissionInFlight = useRef(false)
+  const fullscreen = useFullscreenLock(Boolean(test) && !result, () => submitTest())
 
   useEffect(() => {
     let active = true
@@ -175,18 +176,22 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
   }
 
   const selectOption = (questionId, optionId) => {
+    if (fullscreen.limitReached || submissionInFlight.current || result) return
     if (timed && remaining <= 0) return
     if (mhtMock && !cetCanAnswer(test.questions.find(q => q.question_id === questionId)?.subject_code, Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))) return
     setAnswers((a) => ({ ...a, [questionId]: { option_ids: [optionId] } }))
   }
 
   const setNumeric = (questionId, value) => {
+    if (fullscreen.limitReached || submissionInFlight.current || result) return
     if (timed && remaining <= 0) return
     if (mhtMock && !cetCanAnswer(test.questions.find(q => q.question_id === questionId)?.subject_code, Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))) return
     setAnswers((a) => ({ ...a, [questionId]: { numeric_answer: value === '' ? null : Number(value) } }))
   }
 
   const submitTest = async () => {
+    if (!test || result || submissionInFlight.current) return
+    submissionInFlight.current = true
     setError('')
     timer.current.pause()
     setSubmitting(true)
@@ -202,6 +207,7 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
     } catch (e) {
       setError(e.message)
     } finally {
+      submissionInFlight.current = false
       setSubmitting(false)
     }
   }
@@ -262,9 +268,10 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
     )
   }
 
-  if (mhtMock && test) return <><FullscreenGuard exited={fsExited} onResume={fsResume}/><MhtExam
+  if (mhtMock && test) return <><FullscreenGuard {...fullscreen} onResume={fullscreen.resume} onSubmit={submitTest} submitting={submitting} error={error}/><MhtExam
     test={test} remaining={remaining} index={index} onIndex={setIndex} answers={answers}
     onAnswer={selectOption} onClear={questionId => {
+      if (fullscreen.limitReached || submissionInFlight.current || result) return
       if (!cetCanAnswer(test.questions.find(q => q.question_id === questionId)?.subject_code, Math.max(0, Math.ceil((deadline - Date.now()) / 1000)))) return
       setAnswers(a => { const next = { ...a }; delete next[questionId]; return next })
     }} onSubmit={submitTest} onExit={exitTest} submitting={submitting} error={error}/></>
@@ -276,7 +283,7 @@ export default function SubjectTest({ initialMode = 'recommended', fullMock = fa
     return (
       <div className="crackjee-root">
         <AppHeader />
-        <FullscreenGuard exited={fsExited} onResume={fsResume} />
+        <FullscreenGuard {...fullscreen} onResume={fullscreen.resume} onSubmit={submitTest} submitting={submitting} error={error} />
         <main className="test-shell">
           <button type="button" className="btn btn-quiet btn-sm back" onClick={exitTest}>
             <ArrowLeft size={16} aria-hidden="true" />Exit test

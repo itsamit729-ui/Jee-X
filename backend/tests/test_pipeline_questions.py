@@ -50,7 +50,7 @@ def test_import_requires_admin_and_the_reviewed_digest(setup):
     app.dependency_overrides[_require_admin]=lambda:'verified-admin'
     assert client.post('/api/admin/pipeline-questions/2024/publish',json={'expected_digest':'0'*64}).status_code==409
     assert client.post('/api/admin/pipeline-questions/2024/publish',json={'expected_digest':data['digest'],'limit':51}).status_code==422
-    assert client.get('/api/admin/pipeline-questions/2023').status_code==404
+    assert client.get('/api/admin/pipeline-questions/2018').status_code==404
     with factory() as db:assert db.query(models.Question).count()==0
 
 
@@ -84,28 +84,28 @@ def test_all_eligible_questions_round_trip_into_current_schema_without_pending_r
                 result=importer.publish_batch(db,data,offset,50)
                 assert not result['conflicts'] and not result['skipped']
                 total+=result['added']
-        assert total==2978 and db.query(models.Question).count()==2978
-        assert db.query(models.Question).filter_by(status='published',exam='jee_main').count()==2978
-        assert db.query(models.QuestionRevision).count()==2978
+        assert total==8519 and db.query(models.Question).count()==8519
+        assert db.query(models.Question).filter_by(status='published',exam='jee_main').count()==8519
+        assert db.query(models.QuestionRevision).count()==8519
         assert db.query(models.Question).filter(models.Question.solution!='').count()==1009
         numerical=db.query(models.Question).filter_by(type='numerical').all()
-        assert len(numerical)==858 and all(q.answer_min is not None and q.answer_min==q.answer_max for q in numerical)
-        assert db.query(models.Asset).count()==301
+        assert len(numerical)==2863 and all(q.answer_min is not None and q.answer_min==q.answer_max for q in numerical)
+        assert db.query(models.Asset).count()==389
         # The entire reviewed bank, including answer-only MCQ/numerical rows,
         # feeds the same catalog used by practice, baselines and topic planning.
         from app.services.question_catalog import candidate_query
         from app.routers.subjects import list_subjects, list_chapters
         from app.routers.teaching import question_query
-        assert candidate_query(db).count()==2978
+        assert candidate_query(db).count()==8519
         assert candidate_query(db,require_solution=True).count()==1009
-        assert sum(s.published_question_count for s in list_subjects(db))==2978
+        assert sum(s.published_question_count for s in list_subjects(db))==8519
         assert sum(c.published_question_count for code in ('PHY','CHEM','MATH')
-                   for c in list_chapters(code,db))==2978
-        assert question_query(db).count()==2978
+                   for c in list_chapters(code,db))==8519
+        assert question_query(db).count()==8519
         from app.routers.pyqs import catalog
         archive=catalog('jee_main',db)
-        assert sum(s['available'] for year in archive['years'] for s in year['subjects'])==2978
-        assert {year['year']:len(year['papers']) for year in archive['years'] if year['papers']}=={2024:20,2025:19}
+        assert sum(s['available'] for year in archive['years'] for s in year['subjects'])==8519
+        assert {year['year']:len(year['papers']) for year in archive['years'] if year['papers']}=={2019:16,2020:16,2021:26,2022:23,2023:24,2024:20,2025:19}
         for year in source.YEARS:
             preview=importer.plan(db,source.dataset(year))
             assert preview['counts']['unchanged']==source.dataset(year)['eligible']
@@ -221,3 +221,38 @@ def test_bulk_import_limits_database_round_trips_and_completed_replay_does_not_r
             assert importer.plan(db,data)['counts']['unchanged']==25
             assert len(statements)<=4,len(statements)
         finally:event.remove(engine,'before_cursor_execute',record)
+
+
+@pytest.mark.parametrize('year,total,eligible,pending,figures,numerical',[
+    (2019,653,650,638,11,0), (2020,642,642,473,13,179),
+    (2021,1373,1373,744,29,642), (2022,1401,1401,457,14,575),
+    (2023,1477,1475,472,21,609),
+])
+def test_new_older_years_are_pinned_keyed_and_have_readable_figures(year,total,eligible,pending,figures,numerical):
+    data=source.dataset(year)
+    assert (data['total'],data['eligible'],data['source_pending'],data['figures'])==(total,eligible,pending,figures)
+    assert data['source_commit']=='3c7ec3ec7a0a70e0b62cefdace7ac41d7f3b4a04'
+    assert data['verified_solutions']==0
+    assert sum(q['type']=='numerical' for q in data['questions'])==numerical
+    assert all(q['year']==year and q['exam']=='jee_main' and q['solution']=='' for q in data['questions'])
+    assert all(q['answer_source'] in {'examsnet','grafite-jee-mains'} for q in data['questions'])
+    assert all('four A–D options' in q['reason'] for q in data['blocked'])
+
+
+def test_admin_exposes_every_reviewed_year_and_imports_new_year_with_resumable_cursor(setup):
+    client,app,factory=setup
+    app.dependency_overrides[_require_admin]=lambda:'verified-admin'
+    response=client.get('/api/admin/pipeline-questions')
+    assert response.status_code==200,response.text
+    assert [y['year'] for y in response.json()['years']]==list(range(2019,2026))
+    assert sum(y['eligible'] for y in response.json()['years'])==8519
+    preview=client.get('/api/admin/pipeline-questions/2021').json()
+    body={'expected_digest':preview['digest'],'offset':0,'limit':25}
+    result=client.post('/api/admin/pipeline-questions/2021/publish',json=body)
+    assert result.status_code==200,result.text
+    assert result.json()['progress']['offset']==25 and result.json()['added']==25
+    replay=client.post('/api/admin/pipeline-questions/2021/publish',json=body)
+    assert replay.json()['already_processed'] is True
+    assert client.get('/api/admin/pipeline-questions/2021/progress').json()['offset']==25
+    with factory() as db:
+        assert db.query(models.Question).filter_by(year=2021,status='published').count()==25

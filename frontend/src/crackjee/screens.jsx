@@ -366,7 +366,8 @@ export function TestInterface({ onFinish, onBack }) {
   const [sel, setSel] = useState(null);
   const [timePerQ, setTimePerQ] = useState({});
   const qTimer = useRef(Date.now());
-  const { exited: fsExited, resume: fsResume } = useFullscreenLock(started);
+  const finished = useRef(false);
+  const fullscreen = useFullscreenLock(started, () => doSubmit());
 
   useEffect(() => { if (!started) return; const t = setInterval(() => setTimeLeft(p => { if (p<=0){clearInterval(t);doSubmit();return 0;} return p-1; }),1000); return ()=>clearInterval(t); }, [started]);
 
@@ -380,6 +381,9 @@ export function TestInterface({ onFinish, onBack }) {
   const clearResp = () => { setSel(null); setAnswers(p=>{const n={...p};delete n[qk];return n;}); setStatuses(p=>({...p,[qk]:"notAnswered"})); };
 
   const doSubmit = () => {
+    if (finished.current) return;
+    finished.current = true;
+    setStarted(false);
     exitFullscreen(); // explicit, since onFinish below navigates away and unmounts this component
     recTime(); let score=0,correct=0,incorrect=0,unattempted=0; const subScores={}; const chapScores={}; const qDets=[];
     SUBJECTS.forEach(sub => { subScores[sub]={correct:0,incorrect:0,unattempted:0,score:0,total:allQ[sub].length,time:0};
@@ -421,7 +425,7 @@ export function TestInterface({ onFinish, onBack }) {
 
   return (
     <div className="exam">
-      <FullscreenGuard exited={fsExited} onResume={fsResume} />
+      <FullscreenGuard {...fullscreen} onResume={fullscreen.resume} onSubmit={doSubmit} />
       <header className="exam-top">
         <div className="exam-title"><LogoMark /><span>JEE Main mock <small>{curSub}</small></span></div>
         <div className={`timer ${timeLeft < 600 ? "is-low" : ""}`} role="timer" aria-label="Time left">{fmt(timeLeft)}</div>

@@ -103,3 +103,15 @@ def test_practice_api_scopes_evidence_snapshots_and_filters_incomplete_content()
             assert all(r.time_taken_sec==42 for r in db.query(models.QuestionResponse).filter_by(user_id=1))
             assert {s.question_id:s.explanation for s in db.query(models.PracticeRecommendation).filter_by(test_id=session['test_id'])}==before
     engine.dispose()
+
+
+def test_equal_candidates_sample_new_publications_without_overriding_learning_priority():
+    def rng(*values):
+        return Row(random=iter(values).__next__)
+    older,newer=q(100),q(15000)
+    assert choose_questions([older,newer],[],1,now=NOW,rng=rng(.9,.1))[0][0]==15000
+    assert choose_questions([older,newer],[],1,now=NOW,rng=rng(.1,.9))[0][0]==100
+    # An unseen question wins over a repeat even when its random tie is worse.
+    assert choose_questions([older,newer],[h(100)],1,now=NOW,rng=rng(.01,.99))[0][0]==15000
+    # Randomness breaks ties only: it cannot displace a better difficulty match.
+    assert choose_questions([q(100,difficulty=3),q(15000,difficulty=9)],[],1,now=NOW,rng=rng(.99,.01))[0][0]==100

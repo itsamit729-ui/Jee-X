@@ -83,3 +83,19 @@ def test_scenarios_use_answer_only_decimal_questions_and_hide_keys(setup):
     result = grade([numeric], {numeric['id']:{'numeric_answer':1.4}})['questions'][0]
     assert result['outcome'] == 'correct'
     assert (result['answer_min'],result['answer_max']) == (1.25,1.5)
+
+
+def test_daily_sampling_can_choose_new_ids_while_excluding_drafts_and_other_exams(setup,monkeypatch):
+    from app.routers import daily_question
+    _,factory,_=setup
+    monkeypatch.setattr(daily_question.random,'choice',lambda ids:max(ids))
+    with factory() as db:
+        db.query(models.Question).update({'status':'draft'})
+        db.get(models.Question,100).status='published'
+        for qid,exam,status in [(15000,'jee_main','published'),(15001,'mht_cet','published'),(15002,'jee_main','draft')]:
+            db.add(models.Question(id=qid,ref=f'NEW-PUBLICATION-{qid}',subtopic_id=1,type='numerical',
+                stem='New publication fixture',solution='',difficulty=3,expected_time_sec=120,
+                answer_min=1.5,answer_max=1.5,source_type='pyq',status=status,exam=exam,year=2019,
+                version=1,content_hash=str(qid)))
+        db.commit()
+        assert daily_question._pick_question(db,models.User(id=1)).id==15000

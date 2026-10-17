@@ -1,4 +1,4 @@
-"""Validate the two pinned JEE Main exports without contacting a database."""
+"""Validate the pinned JEE Main 2019–2025 exports without contacting a database."""
 import hashlib
 import json
 import math
@@ -12,11 +12,17 @@ from pathlib import Path
 from PIL import Image
 
 REPO=Path(__file__).resolve().parents[3]
-YEARS=(2024,2025)
+YEARS=tuple(range(2019,2026))
 SOURCES={'examsnet','grafite-jee-mains','pw-jee-main-math','pipeline-two-solves-checked'}
 SUBJECTS={'Physics':'PHY','Chemistry':'CHEM','Mathematics':'MATH'}
-SOURCE_COMMIT='eb6190d13b1984fd75b26bd2565202bdeefc2c42'
-DIGESTS={2024:'eeef233e3b1852b136de6341979427c4c73822171a5c546adc005ff4f32da731',
+SOURCE_COMMIT='3c7ec3ec7a0a70e0b62cefdace7ac41d7f3b4a04'
+SOURCE_COMMITS={year:SOURCE_COMMIT if year<2024 else 'eb6190d13b1984fd75b26bd2565202bdeefc2c42' for year in YEARS}
+DIGESTS={2019:'57c385547793670bd316081eea41204c48faa6da88cc0d2358eeef8ecceaa750',
+         2020:'a74b5b75f8a34e257dbd269f33c2016f1c0a68fce5df7d768d01d683cf3d5f74',
+         2021:'45c99128733a94065e7f817c15419101caaace7f43bd8912608e8f7c625cdcc3',
+         2022:'34e4773da8c6cd40ccc0b0d5e8c6e7be9957a10e9798f0ca1615fa1c827a6351',
+         2023:'7e71c84882c2f3288b70110259714a8a245e632fc125521ffdffd11f73c01e24',
+         2024:'eeef233e3b1852b136de6341979427c4c73822171a5c546adc005ff4f32da731',
          2025:'b9b492c9f7f1f37c299ff90838404482a1479636d7eae1dd55734665fe9d15b2'}
 
 
@@ -71,7 +77,7 @@ def validate(q,year,public):
 
 
 def load_dataset(year,root=None,public=None):
-    if year not in YEARS:raise ValueError('Only the reviewed 2024 and 2025 exports are supported')
+    if year not in YEARS:raise ValueError('Only the reviewed 2019–2025 exports are supported')
     root=Path(root or os.getenv('PIPELINE_DATA_ROOT',REPO/'datasets'))
     public=Path(public or os.getenv('QUESTION_PUBLIC_ROOT') or os.getenv('FRONTEND_DIST') or REPO/'frontend/public')
     file=root/f'jee-main-{year}'/'questions.jsonl'
@@ -87,7 +93,7 @@ def load_dataset(year,root=None,public=None):
         except (ValueError,KeyError,TypeError,OSError) as error:blocked.append({'ref':ref,'reason':str(error)})
     pending=root/f'jee-main-{year}'/'pending.jsonl'
     pending_count=sum(bool(line.strip()) for line in pending.read_text().splitlines()) if pending.is_file() else 0
-    return {'year':year,'digest':hashlib.sha256(raw).hexdigest(),'source_commit':SOURCE_COMMIT,
+    return {'year':year,'digest':hashlib.sha256(raw).hexdigest(),'source_commit':SOURCE_COMMITS[year],
         'total':len(rows),'eligible':len(eligible),'blocked':blocked,'source_pending':pending_count,
         'verified_solutions':sum(bool(q['solution_verified']) for q in eligible),
         'figures':sum(bool(q['image']) for q in eligible),

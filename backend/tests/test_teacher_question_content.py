@@ -50,3 +50,26 @@ def test_teacher_bank_skips_missing_choices_and_recovers_embedded_choices(classr
     assert 100 not in rows
     assert rows[101]['stem']=='Which statement is correct?'
     assert [o['content'] for o in rows[101]['options']]==['The first statement','The second statement']
+
+
+def test_teacher_can_filter_new_published_years_and_browse_past_old_cap(classroom):
+    from test_teaching import prepare
+    from app import models as m
+    client,factory,active=classroom
+    prepare(classroom);active[0]=3
+    with factory() as db:
+        for qid in range(100,105):
+            row=db.get(m.Question,qid)
+            row.exam='jee_main';row.year=2019;row.source_type='pyq';row.solution=''
+        db.get(m.Question,101).exam='mht_cet'
+        db.get(m.Question,102).year=2020
+        db.get(m.Question,103).source_type='original'
+        db.get(m.Question,104).status='draft';db.get(m.Question,104).created_by=4
+        db.commit()
+    response=client.get('/api/teacher/questions?exam=jee_main&year=2019')
+    assert response.status_code==200,response.text
+    assert [q['question_id'] for q in response.json()['questions']]==[100]
+    assert client.get('/api/teacher/questions?exam=mht_cet&year=2019').json()['questions'][0]['question_id']==101
+    assert client.get('/api/teacher/questions?offset=10020').status_code==200
+    assert client.get('/api/teacher/questions?exam=unknown').status_code==422
+    assert client.get('/api/teacher/questions?year=3000').status_code==422

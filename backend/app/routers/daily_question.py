@@ -35,6 +35,13 @@ def _previously_assigned_question_ids(db: Session, user_id: int) -> set[int]:
     }
 
 
+def _random_question(db, query):
+    # Select only IDs before sampling, so every eligible year can be reached
+    # without loading the whole question bank or sorting it randomly in SQL.
+    ids = [row.id for row in query.with_entities(models.Question.id).all()]
+    return db.get(models.Question, random.choice(ids)) if ids else None
+
+
 def _pick_question(db: Session, user: models.User) -> models.Question | None:
     seen = _previously_assigned_question_ids(db, user.id)
     eligible = candidate_query(db).with_entities(models.Question.id)
@@ -51,7 +58,7 @@ def _pick_question(db: Session, user: models.User) -> models.Question | None:
         query = pool.filter(models.Question.subtopic_id == subtopic_id)
         if seen:
             query = query.filter(models.Question.id.notin_(seen))
-        candidate = query.first()
+        candidate = _random_question(db, query)
         if candidate:
             return candidate
 
@@ -60,7 +67,7 @@ def _pick_question(db: Session, user: models.User) -> models.Question | None:
     fallback = pool
     if seen:
         fallback = fallback.filter(models.Question.id.notin_(seen))
-    return fallback.first()
+    return _random_question(db, fallback)
 
 
 def _create_assignment(db: Session, user: models.User, today) -> models.DailyQuestionAssignment:

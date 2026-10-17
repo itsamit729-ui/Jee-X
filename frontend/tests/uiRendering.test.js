@@ -7,7 +7,8 @@ import { buildSync } from 'esbuild'
 
 const filename=fileURLToPath(import.meta.url)
 const output=buildSync({
-  stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import MathText from './src/components/MathText.jsx';import DeferredDetails from './src/components/DeferredDetails.jsx';import SearchField from './src/components/SearchField.jsx';import StudentOmrId from './src/components/StudentOmrId.jsx';
+  stdin:{contents:`import React from 'react';import {renderToStaticMarkup} from 'react-dom/server';import MathText from './src/components/MathText.jsx';import DeferredDetails from './src/components/DeferredDetails.jsx';import SearchField from './src/components/SearchField.jsx';import StudentOmrId from './src/components/StudentOmrId.jsx';import FullscreenGuard from './src/components/FullscreenGuard.jsx';
+    export const guard=props=>renderToStaticMarkup(<FullscreenGuard {...props}/>);
     export const omr=studentId=>renderToStaticMarkup(<StudentOmrId studentId={studentId}/>);
     export const search=()=>renderToStaticMarkup(<SearchField label="Find a student" placeholder="Find by name, username or OMR ID…" value="Aditi" onChange={()=>{}}/>);
     export const math=text=>renderToStaticMarkup(<MathText text={text}/>);
@@ -17,7 +18,7 @@ const output=buildSync({
 const compiled=new Module(filename)
 compiled.paths=Module._nodeModulePaths(path.dirname(filename))
 compiled._compile(output,filename)
-const {math,report,search,omr}=compiled.exports
+const {math,report,search,omr,guard}=compiled.exports
 
 test('closed report rows defer actual question rendering and opened rows retain maths',()=>{
   const closed=report(false),opened=report(true)
@@ -57,4 +58,21 @@ test('student profile shows the existing ten-digit OMR identity and a copy contr
   assert.match(html,/leading zeros/)
   assert.doesNotMatch(html,/<input/)
   assert.equal(omr(undefined),'')
+})
+
+
+test('fullscreen warning allows resume or early submit, while the fourth exit allows retry only',()=>{
+  assert.equal(guard({exited:false}), '')
+  const warning=guard({exited:true,exitCount:3,onResume:()=>{},onSubmit:()=>{}})
+  assert.match(warning,/Fullscreen exit 3 of 3/)
+  assert.match(warning,/Resume test/)
+  assert.match(warning,/Submit &amp; exit test/)
+  const failed=guard({exited:true,limitReached:true,exitCount:4,onSubmit:()=>{},error:'Network unavailable'})
+  assert.doesNotMatch(failed,/Resume test/)
+  assert.match(failed,/Retry submission/)
+  assert.match(failed,/submission failed/)
+  assert.match(failed,/Network unavailable/)
+  const busy=guard({exited:true,limitReached:true,onSubmit:()=>{},submitting:true})
+  assert.match(busy,/disabled=""/)
+  assert.match(busy,/Submitting…/)
 })

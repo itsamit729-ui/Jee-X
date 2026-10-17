@@ -1,15 +1,33 @@
-// Blocking prompt shown when a student leaves full-screen mid-test (Esc,
-// alt-tab, etc). Browsers won't let JS re-enter full-screen without a fresh
-// click, so this can't auto-resume — it asks for one.
-export default function FullscreenGuard({ exited, onResume }) {
-  if (!exited) return null
+import { useEffect, useRef } from 'react'
+import { MAX_FULLSCREEN_EXITS } from '../lib/fullscreen.js'
+
+export default function FullscreenGuard({ exited, onResume, exitCount = 0, limitReached = false, onSubmit, submitting = false, error = '' }) {
+  const modal = useRef(null)
+  const visible = exited || limitReached
+  useEffect(() => {
+    if (!visible) return
+    const previous = document.activeElement
+    ;(modal.current?.querySelector('button:not(:disabled)') || modal.current)?.focus()
+    return () => { if (previous?.isConnected) previous.focus() }
+  }, [visible, limitReached, submitting])
+  function keepFocus(event) {
+    if (event.key !== 'Tab') return
+    const buttons = [...modal.current.querySelectorAll('button:not(:disabled)')]
+    const first = buttons[0], last = buttons.at(-1)
+    if (!first) { event.preventDefault(); modal.current.focus(); return }
+    if (event.shiftKey && (document.activeElement === first || document.activeElement === modal.current)) { event.preventDefault(); last.focus() }
+    else if (!event.shiftKey && (document.activeElement === last || document.activeElement === modal.current)) { event.preventDefault(); first.focus() }
+  }
+  if (!visible) return null
   return (
     <div className="modal-backdrop" role="alertdialog" aria-modal="true" aria-labelledby="fs-guard-title">
-      <div className="modal">
-        <h2 id="fs-guard-title">You've left full-screen</h2>
-        <p>This test runs in full-screen. Resume to keep going — your answers and the timer are unaffected.</p>
+      <div className="modal" ref={modal} tabIndex={-1} onKeyDown={keepFocus}>
+        <h2 id="fs-guard-title">{limitReached ? 'Fullscreen exit limit reached' : "You've left full-screen"}</h2>
+        <p>{limitReached ? (error ? 'Your test has ended, but submission failed. Retry to submit your saved answers.' : 'You left full-screen more than three times. Your saved answers are being submitted. Keep this page open until your result appears.') : `Fullscreen exit ${exitCount} of ${MAX_FULLSCREEN_EXITS}. Your timer keeps running. The fourth exit automatically submits your saved answers.`}</p>
+        {error && <p role="alert" className="alert">{error}</p>}
         <div className="modal-actions">
-          <button type="button" className="btn btn-primary" onClick={onResume}>Resume test</button>
+          {!limitReached && <button type="button" className="btn btn-primary" disabled={submitting} onClick={onResume}>Resume test</button>}
+          {onSubmit && <button type="button" className="btn btn-secondary" disabled={submitting} onClick={onSubmit}>{submitting ? 'Submitting…' : limitReached ? 'Retry submission' : 'Submit & exit test'}</button>}
         </div>
       </div>
     </div>

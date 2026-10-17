@@ -38,7 +38,7 @@ export default function PipelineQuestions({token,onPublished}) {
   }
   return <section className="adm-panel" aria-labelledby="pipeline-import-title">
     <div className="adm-head"><div><p className="adm-kicker">Reviewed AI pipeline exports</p><h2 id="pipeline-import-title">Publish JEE Main questions</h2></div></div>
-    <p className="adm-description">Bring the 2024 and 2025 exports into the question bank. Preview checks the live database first. Publication runs in small batches and preserves existing solutions, figures and question IDs. Pending and malformed questions stay out.</p>
+    <p className="adm-description">Bring the reviewed 2019–2025 exports into the question bank. Preview checks the live database first. Publication runs in small batches and preserves existing solutions, figures and question IDs. Pending and malformed questions stay out.</p>
     {error&&<Notice error={error}/>}
     <div className="adm-subnav" role="group" aria-label="Review a question dataset">{years.map(year=><button key={year.year} disabled={busy} onClick={()=>review(year.year)}>Review {year.year} · {number(year.eligible)} eligible{year.progress?.offset>0?` · ${number(year.progress.offset)} saved`:''}</button>)}</div>
     {preview&&<div>
