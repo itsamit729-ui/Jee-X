@@ -81,6 +81,8 @@ app.include_router(admin_dashboard.router)
 from app.routers import pipeline_questions
 app.include_router(pipeline_questions.router)
 app.include_router(scenarios.router)
+from app.routers import duels
+app.include_router(duels.router)
 app.include_router(roadmap.router)
 app.include_router(college_insights.router)
 app.include_router(teaching.router)

@@ -123,3 +123,4 @@ from app.models.teacher_profile import TeacherProfile
 from app.models.learning_tools import RevisionCard, RevisionSession, TaughtChapter, TeacherBlueprint, QuestionDoubt
 
 from app.models.question_import_progress import QuestionImportProgress
+from app.models.duels import DuelMatch, DuelPlayer

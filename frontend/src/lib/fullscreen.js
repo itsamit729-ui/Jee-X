@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 
 export const MAX_FULLSCREEN_EXITS = 3
+export function fullscreenSupported() {
+  return typeof document !== 'undefined' && Boolean(document.documentElement?.requestFullscreen || document.documentElement?.webkitRequestFullscreen)
+}
 function fsElement() {
   return document.fullscreenElement || document.webkitFullscreenElement || null
 }
@@ -46,12 +49,18 @@ export function useFullscreenLock(active, onLimit) {
   const callback = useRef(onLimit)
   callback.current = onLimit
   const triggered = useRef(false)
+  const wasActive = useRef(false)
   useEffect(() => {
     if (!active) {
       setExited(false); setExitCount(0); triggered.current = false
-      exitFullscreen()
+      // A route may mount while loading a paper immediately after the user
+      // requested fullscreen. Do not cancel that request on initial mount.
+      if (wasActive.current) exitFullscreen()
+      wasActive.current = false
       return
     }
+    wasActive.current = true
+    setExited(fullscreenSupported() && !fsElement())
     return observeFullscreen(state => {
       setExited(state.exited)
       setExitCount(state.exitCount)

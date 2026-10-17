@@ -73,7 +73,8 @@ def session_data(account, session, db):
     user = db.get(User, account.user_id) if account.user_id else None
     access = user.teacher_access if user else None
     return {'authenticated': True, 'csrf_token': session.csrf_token,
-            'user': {'id': account.id, 'email': account.email, 'name': user.name if user else '',
+            'user': {'id': account.id, 'user_id': user.id if user else None, 'username': user.username if user else None,
+                     'email': account.email, 'name': user.name if user else '',
                      'terms_required': bool(account.terms and not account.terms.accepted_at),
                      'account_type': 'teacher' if access else 'student', 'teacher': bool(access and access.active), 'email_verified': bool(account.verified_at), 'onboarded': bool(account.user_id)}}
 

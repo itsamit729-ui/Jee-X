@@ -22,8 +22,8 @@ export default function FullscreenGuard({ exited, onResume, exitCount = 0, limit
   return (
     <div className="modal-backdrop" role="alertdialog" aria-modal="true" aria-labelledby="fs-guard-title">
       <div className="modal" ref={modal} tabIndex={-1} onKeyDown={keepFocus}>
-        <h2 id="fs-guard-title">{limitReached ? 'Fullscreen exit limit reached' : "You've left full-screen"}</h2>
-        <p>{limitReached ? (error ? 'Your test has ended, but submission failed. Retry to submit your saved answers.' : 'You left full-screen more than three times. Your saved answers are being submitted. Keep this page open until your result appears.') : `Fullscreen exit ${exitCount} of ${MAX_FULLSCREEN_EXITS}. Your timer keeps running. The fourth exit automatically submits your saved answers.`}</p>
+        <h2 id="fs-guard-title">{limitReached ? 'Fullscreen exit limit reached' : exitCount ? "You've left full-screen" : 'Enter full-screen to continue'}</h2>
+        <p>{limitReached ? (error ? 'Your test has ended, but submission failed. Retry to submit your saved answers.' : 'You left full-screen more than three times. Your saved answers are being submitted. Keep this page open until your result appears.') : exitCount ? `Fullscreen exit ${exitCount} of ${MAX_FULLSCREEN_EXITS}. Your timer keeps running. The fourth exit automatically submits your saved answers.` : 'Your browser has not entered full-screen. Press Resume test and allow full-screen when prompted. Your timer keeps running.'}</p>
         {error && <p role="alert" className="alert">{error}</p>}
         <div className="modal-actions">
           {!limitReached && <button type="button" className="btn btn-primary" disabled={submitting} onClick={onResume}>Resume test</button>}

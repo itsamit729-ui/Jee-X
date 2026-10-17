@@ -6,6 +6,7 @@ const routes = {
   '/test': () => import('../pages/MockTest.jsx'),
   '/results': () => import('../pages/AttemptAnalysis.jsx'),
   '/scenarios': () => import('../pages/Scenarios.jsx'),
+  '/duels': () => import('../pages/Duels.jsx'),
   '/daily': () => import('../pages/DailyQuestion.jsx'),
   '/pyq': () => import('../pages/PYQs.jsx'),
   '/pricing': () => import('../pages/Pricing.jsx'),

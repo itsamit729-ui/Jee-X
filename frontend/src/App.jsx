@@ -35,6 +35,7 @@ const Legal = lazy(() => import('./pages/Legal.jsx'))
 const Admin = lazy(() => import('./pages/Admin.jsx'))
 const ImageQuestions = lazy(() => import('./pages/ImageQuestions.jsx'))
 const Scenarios = lazy(() => import('./pages/Scenarios.jsx'))
+const Duels = lazy(() => import('./pages/Duels.jsx'))
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 const MHTCETLanding = lazy(() => import('./pages/MHTCETLanding.jsx'))
 
@@ -82,13 +83,14 @@ export default function App() {
     if (navigationType !== 'POP' && !location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [location.pathname,teacher])
   const isAdmin = location.pathname === '/admin'
+  const examRoute = /^\/(scenarios\/|duels\/|subject-test|practice|ranked-test\/|test(?:\/|$))/.test(location.pathname)
   const isAuthPage = /^\/(login|signup|signup\/terms|terms|privacy|forgot-password|reset-password|verify-email|account\/security)$/.test(location.pathname)
 
   if(isLoading) return <Loader fullScreen label="Opening Jee Edge"/>
   const redirect=teacher?teacherRouteRedirect(location.pathname):null
   if(redirect) return <Navigate replace to={redirect}/>
   return (
-    <>{!teacher && !isAdmin && !isAuthPage && <IITianFactToast />}<Suspense fallback={<Loader fullScreen label={isAdmin ? "Opening admin console" : teacher ? "Opening your teaching workspace" : "Opening your study space"} />}><Routes>
+    <>{!teacher && !isAdmin && !isAuthPage && !examRoute && <IITianFactToast />}<Suspense fallback={<Loader fullScreen label={isAdmin ? "Opening admin console" : teacher ? "Opening your teaching workspace" : "Opening your study space"} />}><Routes>
       <Route path="/login" element={<AuthPage key="login" mode="login" />} />
       <Route path="/signup" element={<AuthPage key="signup" mode="signup" />} />
       <Route path="/signup/terms" element={<TermsPage />} />
@@ -124,6 +126,8 @@ export default function App() {
       <Route path="/recommendations" element={<ProtectedRoute><Navigate replace to={(location.state?.missionTest || new URLSearchParams(location.search).get('assessment') === '1' ? '/practice' : '/plan') + location.search + location.hash} state={location.state} /></ProtectedRoute>} />
       <Route path="/scenarios" element={<ProtectedRoute><Scenarios /></ProtectedRoute>} />
       <Route path="/scenarios/:runId" element={<ProtectedRoute><Scenarios /></ProtectedRoute>} />
+      <Route path="/duels" element={<ProtectedRoute><Duels /></ProtectedRoute>} />
+      <Route path="/duels/:matchId" element={<ProtectedRoute><Duels /></ProtectedRoute>} />
       <Route
         path="/test"
         element={

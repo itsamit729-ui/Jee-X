@@ -134,6 +134,10 @@ def test_fresh_profile_never_links_legacy_email(env):
         assert db.query(models.AuthAccount).one().user_id == response.json()['id']
         assert db.query(models.User).count() == 2
     assert client.get('/api/me').json()['profile']['username'] == 'newstudent'
+    identity = client.get('/api/auth/session').json()['user']
+    assert identity['user_id'] == response.json()['id']
+    assert identity['username'] == 'newstudent'
+    assert identity['id'] != identity['user_id']  # auth account ID remains distinct
     assert client.post('/api/onboarding', json={'name': 'Other', 'username': 'another', 'dob': '2006-01-01', 'class_level': '12'}).status_code == 409
 
 

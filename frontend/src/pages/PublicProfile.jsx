@@ -11,7 +11,7 @@ const dateLabel = value => new Date(value).toLocaleDateString('en-IN', { timeZon
 export default function PublicProfile() {
   const { username } = useParams()
   const navigate = useNavigate()
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated, user } = useAuth()
   const [search, setSearch] = useState('')
   const [profile, setProfile] = useState(null)
   const [history, setHistory] = useState(null)
@@ -48,6 +48,7 @@ export default function PublicProfile() {
       {error && <section className="pp-card" role="alert"><h1>Profile unavailable</h1><p>{error}</p><p className="pp-muted">The account may be unavailable, or the username may have changed.</p><button className="btn btn-secondary" onClick={() => setRetry(x => x+1)}>Try again</button></section>}
       {profile && <>
         <StudentProfileStory profile={profile} onShare={copy} message={message} />
+        {isAuthenticated && user?.username !== profile.username && user?.account_type !== 'teacher' && !user?.teacher && <p><Link className="btn btn-primary" to={`/duels?challenge=${encodeURIComponent(profile.username)}`}>Challenge @{profile.username} · 1v1 →</Link></p>}
         <section className="pp-card"><div className="pp-section-heading"><h2>Rating journey</h2><span className="pp-muted">Latest 100 rated results · {cohort}</span></div>
           {profile.history.length ? <><div className="pp-chart" role="img" aria-label={`Rating journey across ${profile.history.length} contests. Latest rating ${profile.history.at(-1).after}. Exact results are in the contest history below.`}><ResponsiveContainer width="100%" height="100%"><LineChart data={profile.history} margin={{ top: 15, right: 20, bottom: 15, left: 0 }}><CartesianGrid strokeDasharray="3 3" vertical={false}/><XAxis dataKey="date" tickFormatter={value => new Date(value).toLocaleDateString('en-IN',{timeZone:'Asia/Kolkata',month:'short',day:'numeric'})} minTickGap={40}/><YAxis domain={['auto','auto']} width={48}/><Tooltip labelFormatter={dateLabel} formatter={value => [value,'Rating']}/><Line type="linear" dataKey="after" stroke="#d76a32" strokeWidth={3} dot={{r:4}} isAnimationActive={false}/></LineChart></ResponsiveContainer></div><p className="pp-muted">JeeX ratings measure contest performance, not predicted JEE AIR.</p></> : <p className="pp-empty">The first rated contest will start this journey.</p>}
         </section>

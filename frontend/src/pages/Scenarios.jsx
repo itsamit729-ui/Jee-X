@@ -3,6 +3,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import AppHeader from '../components/AppHeader.jsx'
 import MathText from '../components/MathText.jsx'
 import QuestionAssets from '../components/QuestionAssets.jsx'
+import FullscreenGuard from '../components/FullscreenGuard.jsx'
+import { requestFullscreen, exitFullscreen, fullscreenSupported, useFullscreenLock } from '../lib/fullscreen.js'
 import { scenarioService } from '../lib/scenarios.js'
 import './scenarios.css'
 
@@ -45,6 +47,7 @@ function PresetList() {
   const [presets, setPresets] = useState(null)
   const [starting, setStarting] = useState('')
   const [error, setError] = useState('')
+  const [selected, setSelected] = useState(null)
 
   useEffect(() => {
     scenarioService.list().then(setPresets).catch(e => setError(e.message))
@@ -55,9 +58,16 @@ function PresetList() {
     setStarting(preset.key)
     setError('')
     try {
+      const entered = await requestFullscreen()
+      if (fullscreenSupported() && !entered) {
+        setError('Allow full-screen to begin this situation, then try again.')
+        setStarting('')
+        return
+      }
       const run = await scenarioService.start(preset.key)
       navigate(`/scenarios/${run.id}`)
     } catch (e) {
+      await exitFullscreen()
       setError(e.message)
       setStarting('')
     }
@@ -75,9 +85,13 @@ function PresetList() {
       <div className="scenario-card-body"><div className="scenario-card-top"><span>AT MINUTE {p.start_minute} OF 180</span><strong>{p.duration_minutes} MIN PLAY</strong></div>
         <h2>{p.title}</h2><p>{p.pressure}</p><p className="scenario-goal">Your goal: {p.objective}</p>
         <Timeline preset={p} elapsed={0} examMinutes={p.exam_minutes} />
-        <button type="button" className="btn btn-primary" onClick={() => start(p)} disabled={Boolean(starting)}>
-          {starting === p.key ? 'Opening situation…' : 'Enter situation →'}
+        <p className="scenario-goal">{p.question_count} questions · +4 correct / −1 wrong · Answers saved automatically</p>
+        <button type="button" className="btn btn-primary" onClick={() => setSelected(selected?.key === p.key ? null : p)} disabled={Boolean(starting)} aria-expanded={selected?.key === p.key}>
+          Read briefing →
         </button>
+        {selected?.key === p.key && <section className="scenario-briefing"><h3>Your situation briefing</h3><p>Imagine you are {p.start_minute} minutes into the paper, with {p.prior_answered} questions already answered. Those answers are fictional and do not affect your score.</p><p><strong>Decision to practise:</strong> {p.objective}</p><ol><li>Scan the question map and start with questions you can solve confidently.</li><li>Use Mark for review when you want to return; marking does not clear your answer.</li><li>The {p.duration_minutes}-minute server timer keeps running if you disconnect. Reopen this situation to resume saved answers.</li><li>Stay in full-screen. The fourth full-screen exit submits the segment. You can finish early at any time.</li><li>After submission, review your marks, solutions and time allocation. Your contest rating is unaffected.</li></ol><p>{fullscreenSupported() ? 'Begin opens full-screen and starts the segment timer.' : 'This browser does not support full-screen. The segment will fill the browser viewport.'}</p><button type="button" className="btn btn-primary" onClick={() => start(p)} disabled={Boolean(starting)}>
+          {starting === p.key ? 'Opening situation…' : 'Enter situation →'}
+        </button></section>}
       </div>
     </article>)}</div>
     <p className="scenario-footnote">These are practice situations. The earlier part of the paper is a fictional setup; your rating, coins, and mock-test history are unaffected.</p>
@@ -100,6 +114,7 @@ function Session({ runId }) {
   const offset = useRef(0)
   const expireRequested = useRef(false)
   const runRef = useRef(null)
+  const fullscreen = useFullscreenLock(run?.status === 'active', () => { recordCurrent(); finish() })
 
   function loadSession(payload) {
     runRef.current = payload
@@ -212,10 +227,13 @@ function Session({ runId }) {
   const answered = Object.values(answers).filter(a => a.option_ids?.length || a.numeric_answer !== null && a.numeric_answer !== undefined).length
   const elapsed = finished ? run.elapsed_sec : p.duration_minutes * 60 - seconds
 
-  return <div className="crackjee-root"><AppHeader /><main className="scenario-wrap scenario-session">
-    <Link to="/scenarios" className="scenario-back">← All situations</Link>
+  return <div className={`crackjee-root ${finished ? '' : 'scenario-live'}`}>
+    {finished ? <AppHeader /> : <><FullscreenGuard {...fullscreen} onResume={fullscreen.resume} onSubmit={() => { recordCurrent(); finish() }} submitting={busy} error={error}/><header className="scenario-exam-bar"><strong>Exam situations <span>· JEE Main</span></strong><span role="status">{saving ? 'Saving answers…' : error ? 'Save needs attention' : 'Answers saved'}</span><button className="btn btn-secondary btn-sm" disabled={busy} onClick={() => { if(window.confirm('Finish this segment and view your saved results?')) {recordCurrent();finish()} }}>Finish & exit</button></header></>}
+    <main className="scenario-wrap scenario-session">
+    {finished && <Link to="/scenarios" className="scenario-back">← All situations</Link>}
     <header className="scenario-session-head"><div><span className="scenario-eyebrow">EXAM SITUATION · JEE MAIN PRACTICE</span><h1>{p.title}</h1>
       <p>{p.pressure}</p></div><div className={`scenario-clock ${seconds <= 60 && !finished ? 'urgent' : ''}`} role="timer" aria-label="Time left in this segment"><span>SEGMENT TIME LEFT</span><strong>{finished ? 'Done' : clock(seconds)}</strong></div></header>
+    <details className="scenario-live-brief"><summary>Situation, objective & controls</summary><p><strong>Your task:</strong> {p.objective}</p><p>You enter at minute {p.start_minute} of a fictional 180-minute paper, with {p.prior_answered} prior answers. Only these {run.questions.length} questions count. +4 correct, −1 incorrect, 0 unanswered. Select an answer to save automatically; mark questions for review and revisit them using the question map. The server submits when this segment ends. You can reload to resume saved answers. Leaving full-screen a fourth time ends the segment.</p></details>
     <Timeline preset={p} elapsed={elapsed} examMinutes={run.exam_minutes} />
     <div className="scenario-context"><span>Before: {p.prior_answered} questions answered in the fictional setup</span><span>Now: {answered}/{run.questions.length} answered in this segment</span><span>After: {Math.max(0, 180 - p.start_minute - p.duration_minutes)} min of the paper outside this session</span></div>
     {error && <div className="alert" role="alert">{error} {!finished && <button type="button" className="btn btn-secondary btn-sm" onClick={seconds === 0 ? finish : retrySaves} disabled={busy}>{seconds === 0 ? 'View result' : 'Retry saving'}</button>}</div>}
@@ -225,7 +243,7 @@ function Session({ runId }) {
       <h3>Decision review</h3><DecisionReview result={run.result} remaining={Math.max(0, 180 - p.start_minute - p.duration_minutes)} />
       <div className="scenario-result-actions"><Link className="btn btn-secondary" to="/scenarios">Try another situation</Link><button type="button" className="btn btn-primary" disabled={busy} onClick={async () => {
         setBusy(true)
-        try { const next = await scenarioService.start(p.key); window.location.assign(`/scenarios/${next.id}`) }
+        try { await requestFullscreen(); const next = await scenarioService.start(p.key); window.location.assign(`/scenarios/${next.id}`) }
         catch (e) { setError(e.message); setBusy(false) }
       }}>Replay this situation</button></div>
       <h3>Question review</h3>{run.questions.map((question, i) => {
