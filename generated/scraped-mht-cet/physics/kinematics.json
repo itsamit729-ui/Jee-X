@@ -44,10 +44,1586 @@
       "slug": "graph-based-problem",
       "name": "Graph based problem",
       "position": 6
+    },
+    {
+      "slug": "variable-acceleration",
+      "name": "Variable acceleration",
+      "position": 7
+    },
+    {
+      "slug": "relative-motion-in-one-dimension",
+      "name": "Relative motion in one dimension",
+      "position": 8
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-PHY-879abfecb6ca",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "A moving body is covering distances which are proportional to square of the time. Then, the acceleration of the body is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "increasing",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "constant but not zero",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "decreasing",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0b51216219eb",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Two bodies '$\\mathrm{A}$' and '$\\mathrm{B}$' start from the same point at the same instant and move along a straight line. 'A' moves with uniform acceleration (a) and 'B' moves with uniform velocity (V). They meet after time 't'. The value of 't' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2~\\mathrm{V}}{\\mathrm{a}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{V}{a}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{a}{2~\\mathrm{V}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{V}{2a}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ffbec9eb0301",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A cricket player hit a ball like a projectile but the fielder caught the ball after 2 second. The maximum height reached by a ball is (g = 10 m/s$^{2}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5 m",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4 m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3 m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c115596b66d6",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A bomb is dropped by an aeroplane flying horizontally with a velocity $200~\\mathrm{km}/\\mathrm{hr}$ and at a height of $980~\\mathrm{m}$. At the time of dropping a bomb, the distance of the aeroplane from the target on the ground to hit directly is $\\left(g=9.8~\\mathrm{m}/\\mathrm{s}^2\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{2}\\times 10^4}{9}~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{10^4}{9}~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{10^4}{9\\sqrt{2}}~\\mathrm{m}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{10^4}{18}~\\mathrm{m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-db30ce49b3f9",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A body at rest falls through a height 'h' with velocity 'V'. If it has to fall down further for its velocity to become three times, the distance travelled in that interval is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "8 h",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "6 h",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4 h",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "12 h",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e98b47f4906d",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A driver applies the brakes on seeing the red traffic signal $400~\\mathrm{m}$ ahead. At the time of applying the brakes, the vehicle was moving with $15~\\mathrm{m}/\\mathrm{s}$ and retarding at $0.3~\\mathrm{m}/\\mathrm{s}^2$. The distance covered by the vehicle from the traffic light 1 minute after the application of brakes is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "25 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "360 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "40 m",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "375 m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-10d606b7ee5f",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A student is throwing balls vertically upwards such that he throws the $2^{\\text{nd }}$ ball when the $1^{\\text{st }}$ ball reaches maximum height. If he throws balls at an interval of 3 second, the maximum height of the balls is $\\left(\\mathrm{g}=10\\frac{\\mathrm{m}}{\\mathrm{s}^2}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "45 m",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "35 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "25 m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "30 m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-342338ce093e",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "A shell is fired at an angle of $30^{\\circ}$ to the horizontal with velocity $196~\\mathrm{m}/\\mathrm{s}$. The time of flight is\n$\\left[\\sin 30^{\\circ}=\\frac{1}{2}=\\cos 60^{\\circ}\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6.5 s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "20 s",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "16.5 s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "10 s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d69c59520e03",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A body is released from the top of a tower '$\\mathrm{H}$' metre high. It takes $t$ second to reach the ground. The height of the body $\\frac{t}{2}$ second after release is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{H}}{2}$ metre from ground",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{H}}{4}$ metre from ground",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\mathrm{H}}{4}$ metre from ground",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{H}}{6}$ metre from ground",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b8c442874b59",
+      "subtopic": "relative-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two trains, each $30~\\mathrm{m}$ long are travelling in opposite directions with velocities $5~\\mathrm{m}/\\mathrm{s}$ and $10~\\mathrm{m}/\\mathrm{s}$. They will cross after",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4 s",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "3 s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2 s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1 s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-069e021e8662",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A bullet is fired on a target with velocity '$\\mathrm{V}$'. Its velocity decreases from '$\\mathrm{V}$' to '$\\mathrm{V}/2$' when it penetrates $30~\\mathrm{cm}$ in a target. Through what thickness it will penetrate further in the target before coming to rest?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5 cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "8 cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "10 cm",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "20 cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b32da7594f3a",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two cars A and B start from a point at the same time in a straight line and their positions are represented by $\\mathrm{R}_{\\mathrm{A}}(\\mathrm{t})=$ at $+\\mathrm{bt}^2$ and $\\mathrm{R}_{\\mathrm{B}}(\\mathrm{t})=x\\mathrm{t}-\\mathrm{t}^2$. At what time do the cars have same velocity?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{x}-\\mathrm{a}}{2(~\\mathrm{b}+1)}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{x}+\\mathrm{a}}{2(~\\mathrm{b}-1)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{x}-\\mathrm{a}}{\\left(\\mathrm{b}+1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{x}+\\mathrm{a}}{\\left(\\mathrm{b}-1\\right)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dcf6e1123e72",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A ball is projected vertically upwards from ground. It reaches a height '$h$' in time $t_1$, continues its motion and then takes a time $t_2$ to reach ground. The height $h$ in terms of $g,t_1$ and $\\mathrm{t}_2$ is $(\\mathrm{g}=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\frac{\\mathrm{gt}_1}{\\mathrm{t}_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}gt_1t_2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{gt}_1\\mathrm{t}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2~\\mathrm{g}\\mathrm{t}_1\\mathrm{t}_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-754b956f5886",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A large number of bullets are fired in all directions with same speed '$U$'. The maximum area on the ground on which the bullets will spread is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi u^2}{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi\\mathrm{u}^4}{{~\\mathrm{g}}^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi^2u^4}{g^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi^2\\mathrm{u}^2}{{~\\mathrm{g}}^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d0c4a3bf9c09",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Which one of the following statements is Wrong?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A body can have zero velocity and still be accelerated.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "A body can have a constant velocity and still have a varying speed.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "A body can have a constant speed and still have a varying velocity.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "The direction of the velocity of a body can change when its acceleration is constant.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-91f93a544acd",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two bodies $A$ and $B$ start from the same point at the same instant and move along a straight line. Body $A$ moves with uniform acceleration $a$ and body $B$ moves with uniform velocity $v$. They meet after time $t$. The value of $t$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2v}{a}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{a}{2v}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{v}{2a}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{v}{a}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-938685080dc4",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A small steel ball is dropped from a height of $1.5~\\mathrm{m}$ into a glycerine jar. The ball reaches the bottom of the jar $1.5~\\mathrm{s}$ after it was dropped. If the retardation is $2.66~\\mathrm{m}/\\mathrm{s}^2$, the height of the glycerine in the jar is about (acceleration due to gravity $g=9.8~\\mathrm{m}/\\mathrm{s}^2$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "7.0 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "7.5 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5.5 m",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3.2 m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e1e1f48e74fc",
+      "subtopic": "variable-acceleration",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The position '$x$' of a particle varies with a time as $x=at^2-bt^3$ where '$a$' and '$b$' are constants. The acceleration of the particle will be zero at",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\mathrm{a}}{3~\\mathrm{b}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{a}}{\\mathrm{b}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{a}{3b}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-28f15463b0fd",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A vehicle runs on a straight road of length 'L'. It travels half the distance with speed V and the remaining distance with speed $\\frac{\\mathrm{V}}{3}$. Its average speed is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3~\\mathrm{V}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{V}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2V}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3e2dbd851e37",
+      "subtopic": "graph-based-problem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "For the velocity-time graph shown in the figure below, the distance covered by the body in last two second of its motion is ' $\\mathrm{S}_1$ '. What is the ratio of ' $\\mathrm{S}_1$ ' to the total distance covered by it",
+      "image": {
+        "url": "/question-images/mht-cet/physics/kinematics/PYQ-PHY-3e2dbd851e37.png",
+        "alt": "Figure for this Kinematics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c33d0c847b13",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A bullet is fired on a target with velocity V . Its velocity decreases from V to $\\mathrm{V}/2$. When it penetrates 30 cm in a target. Through what thickness it will penetrate further in the target before coming to rest?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5 cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "8 cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "10 cm",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "12 cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-43c4b5afbc2b",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Two cars start from a point at the same time in a straight line and their positions are represented by $x_1(t)=at+bt^2$ and $x_2(t)=Ft-t^2$. At what time do the cars have the same velocity?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{a+F}{2(b-1)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{a-F}{1+b}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{a+F}{2(1+b)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{F-a}{2(1+b)}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9d63c618234d",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A ball is released from the top of a tower of height Hm . It takes T second to reach the ground. The height of the ball from the ground after $\\frac{T}{4}$ second is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{13\\mathrm{H}}{14}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{15\\mathrm{H}}{16}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{11\\mathrm{H}}{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9\\mathrm{H}}{10}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7bed4e8a56b7",
+      "subtopic": "variable-acceleration",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The co-ordinates of a moving particle at any time ' $t$ ' are given by $x=\\alpha t^3$ and $y=\\beta t^3$ where $\\alpha$ and $\\beta$ are constants. The speed of the particle at time ' $t$ ' is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$t\\sqrt{\\alpha^2+\\beta^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3t\\sqrt{\\alpha^2+\\beta^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$t^2\\sqrt{\\alpha^2+\\beta^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3t^2\\sqrt{\\alpha^2+\\beta^2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f39df9365d18",
+      "subtopic": "uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A body travelling with uniform acceleration crosses two points A and B with velocities $20~\\mathrm{m}/\\mathrm{s}$ and $30~\\mathrm{m}/\\mathrm{s}$ respectively. The speed of the body at mid point of A and B is (nearly)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$25~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$25.5~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$24~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10\\sqrt{6}~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-593cd669affa",
+      "subtopic": "graph-based-problem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The acceleration of a moving body can be found from",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "area under velocity - time graph.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "area under distance - time graph.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "slope of the velocity - time graph.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "slope of the distance - time graph.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8a7935655885",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A driver applies the brakes on seeing the red traffic signal 400 m ahead. At the time of applying brakes, the vehicle was moving with $15~\\mathrm{m}/\\mathrm{s}$ and retarding at $0.3~\\mathrm{m}/\\mathrm{s}^2$. The distance of the vehicle from the traffic light one minute after application of brakes is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "375 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "360 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "40 m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "25 m",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9849f94cd572",
+      "subtopic": "relative-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following person is in an inertial frame of reference?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A pilot in an aeroplane which is taking off.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "A child revolving in a merry-go-round.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "A driver in a bus which is moving with constant velocity.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "A man in a train which is slowing down to stop.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d8959c8aaa92",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "For a projectile, the maximum height and horizontal range are same. The angle of projection ' $\\theta$ ' of the projectile is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\tan^{-1}\\left(\\frac{1}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\tan^{-1}(2)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\tan^{-1}\\left(\\frac{1}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\tan^{-1}(4)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e686b6cc3766",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The ratio of weight of a man in a stationary lift and weight when the lift is moving downward with a uniform acceleration ' $a$ ' is $3:2$. Then the value of ' $a$ ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2}g$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{g}}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3}~\\mathrm{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$g$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-28f92a646550",
+      "subtopic": "graph-based-problem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A velocity - time graph of a body is shown below. The distance covered by the body from 6 second to 9 second is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/kinematics/PYQ-PHY-28f92a646550.png",
+        "alt": "Figure for this Kinematics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "22.5 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "90.0 m",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "82.5 m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "120.0 m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b3991c78e04a",
+      "subtopic": "graph-based-problem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The following figures show the variation of displacement with time of a particular object.",
+      "image": {
+        "url": "/question-images/mht-cet/physics/kinematics/PYQ-PHY-b3991c78e04a.png",
+        "alt": "Figure for this Kinematics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Figure (a) and (b) show object at rest and object moving with uniform velocity in positive $x$ direction respectively.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Figure (b) and (c) show object at rest and object moving with uniform velocity in negative $x$ direction respectively.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Figure (c) and (d) show object at rest and object moving with uniform velocity in negative x direction respectively.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Figure (a) and (b) show object at rest.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-07745312b116",
+      "subtopic": "relative-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two bodies A and B move in same straight line starting from same position. Body A moves with constant velocity ' u ' and body B moves with constant acceleration ' $a$ '. When their velocities become equal, the distance between them is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{u}}{2\\mathrm{a}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{u}^2}{4\\mathrm{a}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{u}^2}{\\mathrm{a}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{u}^2}{2\\mathrm{a}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-41bfe2dfb093",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A force acting on a body of mass 5 Kg is $(4\\hat{i}-2\\hat{j}+3\\hat{k})\\mathrm{N}$. If the body is initially at rest then the magnitude of its velocity at the end of 10 second in $\\mathrm{m}/\\mathrm{s}$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\sqrt{35}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\sqrt{29}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{19}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3\\sqrt{23}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-84b5ee34dcb4",
+      "subtopic": "uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A body starts from rest and moves with a uniform acceleration. The ratio of the distance covered by the body in the $n^{\\text{th }}$ second of its motion to the total distance travelled in n second is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{n^2}-\\frac{1}{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{n}-\\frac{1}{n^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\mathrm{n}}-\\frac{1}{\\mathrm{n}^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{\\mathrm{n}^2}+\\frac{1}{\\mathrm{n}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a26a043f4e28",
+      "subtopic": "variable-acceleration",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "At any time ' $t$ ', the co-ordinates of moving particle are $x=at^2$ and $y=bt^2$. The speed of the particle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2t\\sqrt{a^2+b^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2t\\sqrt{a^2-b^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\mathrm{t}(\\mathrm{a}+\\mathrm{b})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2t}{\\sqrt{a^2+b^2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-441393e884fa",
+      "subtopic": "graph-based-problem",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The acceleration (a) - time (T) graph for the body starting from rest is given below. The maximum speed of the body is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/kinematics/PYQ-PHY-441393e884fa.png",
+        "alt": "Figure for this Kinematics question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$40~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$80~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$160~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$200~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-029f3ff26907",
+      "subtopic": "projectile-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A body when projected at an angle ' $\\theta$ ' with the horizontal reaches a maximum height ' $H$ '. The time of flight of the body will be ( $\\mathrm{g}=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}\\sqrt{\\frac{2\\mathrm{H}}{\\mathrm{g}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{g}{2H}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{\\frac{2\\mathrm{H}}{\\mathrm{g}}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{2\\mathrm{H}}{\\mathrm{g}}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-72e5cf362943",
+      "subtopic": "relative-motion-in-two-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Two boys are standing at points A and B on ground, where distance $\\mathrm{AB}=\\mathrm{x}$. The boy at B stars running perpendicular to $AB$ with velocity $\\mathrm{v}_1$. The boy at A starts running simultaneously with velocity v and meets the other boy in time $t$. The value of $t$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left[\\frac{x}{v-v_1}\\right]}^{1/2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${\\left[\\frac{x}{v_1-v}\\right]}^{1/2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${\\left[\\frac{x^2}{v^2-v_1^2}\\right]}^{1/2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "${\\left[\\frac{x^2}{v_1^2-v^2}\\right]}^{1/2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c761b5094aec",
+      "subtopic": "relative-motion-in-two-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two girls are standing at the ends ' $A$ ' and ' $B$ ' of a ground where $\\mathrm{AB}=\\mathrm{b}$. The girl at ' B ' starts running in a direction perpendicular to ' $AB$ ' with velocity ' $\\mathrm{V}_1$ '. The girl at ' A ' starts running simultaneously with velocity ' $\\mathrm{V}_2$ ' and in shortest distance meets the other girl in time ' $t$ '. The value of ' $t$ ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{b}{\\sqrt{V_1{}^2+V_2{}^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{b}{V_1+V_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{b}{V_2-V_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{b}{\\sqrt{V_2{}^2-V_1{}^2}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f95d2c07405e",
+      "subtopic": "motion-under-gravity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A boy throws a ball vertically upwards from a bridge with velocity $5~\\mathrm{m}/\\mathrm{s}$. It strikes water surface after 2 s . The height of the bridge is (Take $\\mathrm{g}=10~\\mathrm{m}/\\mathrm{s}^2$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "20 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "15 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "12 m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "10 m",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bee59dd3f815",
+      "subtopic": "non-uniform-motion-in-one-dimension",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A car moving at a speed ' v ' is stopped in a certain distance when the brakes produce a deceleration ' $a$ '. If the speed of the car is ' $nv$ ', what must be the deceleration of the car to stop it in the same distance and in the same time?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{n}\\cdot a$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$n\\cdot a$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$n^2\\cdot a$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n}^3\\cdot\\mathrm{a}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-PHY-b2dfc9b6a7a4",
       "subtopic": "non-uniform-motion-in-one-dimension",

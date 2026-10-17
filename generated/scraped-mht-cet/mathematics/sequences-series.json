@@ -19,8 +19,172 @@
       "slug": "general",
       "name": "General",
       "position": 99
+    },
+    {
+      "slug": "harmonic-progression",
+      "name": "Harmonic progression",
+      "position": 2
+    },
+    {
+      "slug": "summation-of-series",
+      "name": "Summation of series",
+      "position": 3
+    },
+    {
+      "slug": "arithmetic-progression",
+      "name": "Arithmetic progression",
+      "position": 4
     }
   ],
   "passages": [],
-  "questions": []
+  "questions": [
+    {
+      "ref": "PYQ-MATH-1406b2752ceb",
+      "subtopic": "arithmetic-progression",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "If for an arithmetic progression, 9 times nineth term is equal to 13 times thirteenth term, then value of twenty second term is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-031bc8f14649",
+      "subtopic": "arithmetic-progression",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $x,y,z$ are in A.P. and $\\tan^{-1}x,\\tan^{-1}y$ and $\\tan^{-1}z$ are also in A.P., then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x=y=z$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2x=3y=6z$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6x=3y=2z$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6x=4y=3z$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f05b8b5ba699",
+      "subtopic": "summation-of-series",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "$\\mathrm{S}_1=\\sum_{\\mathrm{r}=1}^{\\mathrm{n}}\\mathrm{r},\\mathrm{S}_2=\\sum_{\\mathrm{r}=1}^{\\mathrm{n}}\\mathrm{r}^2$ and $\\mathrm{S}_3=\\sum_{\\mathrm{r}=1}^{\\mathrm{n}}\\mathrm{r}^3$, then the value of $\\lim_{n\\rightarrow\\infty}\\frac{s_1\\left(1+\\frac{s_3}{4}\\right)}{s_2^2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{9}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{9}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9}{32}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-9a89cea897d3",
+      "subtopic": "harmonic-progression",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The lines $x+2\\mathrm{a}y+\\mathrm{a}=0,x+3~\\mathrm{b}y+\\mathrm{b}=0$, $x+4cy+c=0$ are concurrent then $a,b,c$ are in",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Harmonic progression",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "Geometric progression",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Arithmetic progression",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Arithmetico geometric progression",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
 }

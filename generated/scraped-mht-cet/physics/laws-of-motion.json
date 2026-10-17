@@ -34,10 +34,807 @@
       "slug": "motion-of-connected-bodies",
       "name": "Motion of connected bodies",
       "position": 4
+    },
+    {
+      "slug": "equilibrium-of-a-particle",
+      "name": "Equilibrium of a particle",
+      "position": 5
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-PHY-67b1b067c0c8",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "A body of mass $2~\\mathrm{kg}$ is acted upon by two forces each of magnitude $1~\\mathrm{N}$ and inclined at $60^{\\circ}$ with each other. The acceleration of the body in $\\mathrm{m}/\\mathrm{s}$ is [$\\cos 60^{\\circ}=0.5$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{0.75}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{0.65}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{0.20}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{0.35}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fdee639583bf",
+      "subtopic": "friction-force",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A block of mass $m$ is moving on rough horizontal surface with momentum $p$. The coefficient of friction between the block and surface is $\\mu$. The distance covered by block before it stops is [$g=$ acceleration due to gravity]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\mu M^2g}{p^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{p}{2\\mu Mg}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\mu Mg}{p}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{p^2}{2\\mu M^2g}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bac02931d7ad",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The weight of a man in a lift moving upwards with an acceleration 'a' is 620 N. When the lift moves downwards with the same acceleration, his weight is found to be 340 N. The real weight of the man is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "620 N",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "680 N",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "380 N",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "480 N",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b358cd8a56b7",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A spring balance is attached to the ceiling of a lift. A man hangs his bag on the spring and the spring balance reads $49~\\mathrm{N}$, when the lift is stationary. If the lift moves downward with an acceleration of $5~\\mathrm{m}/\\mathrm{s}^2$, the reading of the spring balance will be $(\\mathrm{g}=9.8~\\mathrm{m}/\\mathrm{s}^2)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "74 N",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "15 N",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "24 N",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "49 N",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-91704c9f9a38",
+      "subtopic": "equilibrium-of-a-particle",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "A door $1.2~\\mathrm{m}$ wide requires a force of $1~\\mathrm{N}$ to be applied perpendicular at the free end to open or close it. The perpendicular force required at a point $0.2~\\mathrm{m}$ distant from the hinges for opening or closing the door is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3.6 N",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2.4 N",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.2 N",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "6.0 N",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fbb15895bb4a",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A spring balance is attached to the ceiling of a lift. A man hangs his bag on the spring and the spring balance reads $49~\\mathrm{N}$, when the lift is stationary. If the lift moves downward with an acceleration of $5~\\mathrm{m}/\\mathrm{s}^2$, the reading of the spring balance will be $\\left(g=9.8~\\mathrm{m}/\\mathrm{s}^2\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "15 N",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "24 N",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "49 N",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "74 N",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6aa8296ec8bc",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A machine gun fires bullets of mass $30~\\mathrm{g}$ with velocity of $1000~\\mathrm{m}/\\mathrm{s}$. The man holding the gun can exert a maximum force of $300~\\mathrm{N}$ on it. How many bullets can he fire per second at most?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "10",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "9",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a07542040659",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Which one of the following is 'NOT' a contact force?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Force of friction.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Normal reaction.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Gravitational force.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Viscous force.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-eb8109f0fbf0",
+      "subtopic": "equilibrium-of-a-particle",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The pulleys and strings shown in figure are smooth and of negligible mass. For the system to remain in equilibrium, angle $\\theta$ should be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/laws-of-motion/PYQ-PHY-eb8109f0fbf0.png",
+        "alt": "Figure for this Laws of Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\cos^{-1}(1)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\cos^{-1}\\left(\\frac{\\sqrt{3}}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\cos^{-1}\\left(\\frac{1}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\cos^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5acad6651ee1",
+      "subtopic": "motion-of-connected-bodies",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two identical blocks each of mass ' M ' attached to the ends of a massless inextensible string which passes over a pulley with a fixed axis as shown below. A small mass ' $m$ ' is now placed on the block B. The acceleration with which the two blocks move together is [g = gravitational acceleration]",
+      "image": {
+        "url": "/question-images/mht-cet/physics/laws-of-motion/PYQ-PHY-5acad6651ee1.png",
+        "alt": "Figure for this Laws of Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{mg}{2M+m}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{Mg}{M+2m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{Mg}}{2\\mathrm{M}+\\mathrm{m}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{mg}{M+2m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-83c95f6ef6a8",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The mass of the lift is 200 kg , when it ascends with an acceleration of $4~\\mathrm{m}/\\mathrm{s}^2$ then the tension in the cable supporting the lift will be [Given: Acceleration due to gravity $g=10~\\mathrm{m}/\\mathrm{s}^2$ ]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "800 N",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2800 N",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4200 N",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2000 N",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-af0b02f08147",
+      "subtopic": "motion-of-connected-bodies",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two blocks of masses 6 kg and 4 kg are placed in contact with each other on a smooth surface as shown. If a force of 5 N is applied on a heavier block, the force on the lighter block is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/laws-of-motion/PYQ-PHY-af0b02f08147.png",
+        "alt": "Figure for this Laws of Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "5N",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4N",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2N",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1N",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3b516e4a1879",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Force is applied to a body of mass 3 kg at rest on a frictionless horizontal surface as shown in the force against time (F-t) graph. The speed of the body after 1 s is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/laws-of-motion/PYQ-PHY-3b516e4a1879.png",
+        "alt": "Figure for this Laws of Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$8~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6306e2c8973c",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Which one of the following person is in an inertial frame of reference?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "A person (man) in a train which is slowing down to stop.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "A person (child) revolving in a merry-go-round.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "A person (driver) in a bus which is moving with constant velocity.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "A person (pilot) in an aeroplane which is taking off.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bea944db5f07",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A child stands on a weighing machine inside a lift. When the lift is going down with acceleration $\\mathrm{g}/3$, the machine shows a reading 20 N . When the lift goes upwards with acceleration $\\mathrm{g}/3$, the reading would be ( $\\mathrm{g}=$ gravitational acceleration)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "40 N",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "30 N",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "20 N",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "50 N",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7580e5605887",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A conveyor belt is moving with constant velocity (V). Sand is being dropped on the belt at the rate of $\\mathrm{M}\\mathrm{kg}/\\mathrm{s}$. The force necessary to keep the belt moving with a constant velocity $\\mathrm{V}\\mathrm{m}/\\mathrm{s}$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{MV}{2}~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2 MV N",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Zero N",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "MV N",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-27c929612551",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A constant force acts on two different masses independently and produces accelerations $\\mathrm{A}_1$ and $A_2$. When the same force acts on their combined mass, the acceleration produced is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad A_1-A_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{A}_1+\\mathrm{A}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{A_1A_2}{A_1+A_2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{A_1^2+A_2^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aa398ef6d864",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The weight of man in a stationary lift is $w_1$ and when it is moving downwards with uniform acceleration ' a ' is $\\mathrm{w}_2$. If the ratio $\\mathrm{w}_1:\\mathrm{w}_2=4:3$, then the value of ' a ' is ( $\\mathrm{g}=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{g}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{g}}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{4}~\\mathrm{g}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{~\\mathrm{g}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1e7abc9900a4",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A machine gun fires a bullet of mass 35 gram with a speed of $600~\\mathrm{m}/\\mathrm{s}$. The person holding the gun can extract a maximum force of 147 N on it. The number of bullets that can be fired from the gun per second is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "7",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "9",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9dcaef0f5be2",
+      "subtopic": "equilibrium-of-a-particle",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A mass ' M ' is suspended by a rope from a rigid support at point ' P ' as shown in figure. Another rope is tied at end ' Q ' and pulled horizontally with a force ' $F$ '. If the rope makes an angle ' $\\theta$ ' with vertical then the tension in the string ' PQ ' is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/laws-of-motion/PYQ-PHY-9dcaef0f5be2.png",
+        "alt": "Figure for this Laws of Motion question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$F\\sin\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{F}{\\sin\\theta}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$F\\cos\\theta$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{F}{\\cos\\theta}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d259f62a7bde",
+      "subtopic": "newtons-laws-of-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "A ball is dropped on the floor from a height of 20 m . It rebounds to a height of 5 m . Ball remains in contact with floor for 1 s . The average acceleration during contact is (acceleration due to gravity $=10~\\mathrm{m}/\\mathrm{s}^2$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30~\\mathrm{m}/\\mathrm{s}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$20~\\mathrm{m}/\\mathrm{s}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$40~\\mathrm{m}/\\mathrm{s}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$35~\\mathrm{m}/\\mathrm{s}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-PHY-dda7edca3a8e",
       "subtopic": "friction-force",

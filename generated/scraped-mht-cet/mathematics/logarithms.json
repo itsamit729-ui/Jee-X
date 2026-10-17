@@ -19,10 +19,422 @@
       "slug": "logarithmic-properties",
       "name": "Logarithmic properties",
       "position": 1
+    },
+    {
+      "slug": "logarithmic-equations",
+      "name": "Logarithmic equations",
+      "position": 2
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-MATH-fc4c9ecf298e",
+      "subtopic": "logarithmic-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If the population grows at the rate of $8\\%$ per year, then the time taken for the population to be doubled is\n(Given $\\log 2=0.6912$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6.8 years",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4.3 years",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "10.27 years",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "8.64 years",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-fab3d856d22d",
+      "subtopic": "logarithmic-properties",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The approximate value of $\\log_{10}998$ is (given that $\\log_{10}\\mathrm{e}=0.4343$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3.0008686",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1.9991314",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2.0008686",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2.9991314",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-dd6beb47784d",
+      "subtopic": "logarithmic-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If $\\log_2x+\\log_4x+\\log_8x+\\log_{16}x=\\frac{25}{36}$ and $x=2^{\\mathrm{k}}$ then $\\mathrm{k}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-5e4186b0beac",
+      "subtopic": "logarithmic-properties",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The approximate value of $3^{2.001}$, if $\\log 3=1.0986$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "9.00898",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "9.0989",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "9.0898",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "9.00989",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-1d00ab8780a5",
+      "subtopic": "logarithmic-properties",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "If $f(x)=\\log_e\\left(\\frac{1-x}{1+x}\\right),|x|<1$, then $f\\left(\\frac{2x}{1+x^2}\\right)$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\mathrm{f}\\left(x^2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-2\\mathrm{f}(x)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(\\mathrm{f}(x))^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\mathrm{f}(x)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7bd8e206fad6",
+      "subtopic": "logarithmic-properties",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The approximate value of $\\log_{10}1002$ is (Given $\\log_{10}\\mathrm{e}=0.4343$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3.0117",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3.0009",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2.9999",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3.1119",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-deaafa7b9f69",
+      "subtopic": "logarithmic-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $x+\\log_{15}\\left(5+3^x\\right)=x\\log_{15}5+\\log_{15}24,$ then $x=$ _________",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "8",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c6fd6a04e4cf",
+      "subtopic": "logarithmic-equations",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\sqrt{\\log_3x^{16}}+9\\log_{27}\\sqrt[\\frac{3}{x}]{3}=5$, then $x=\\ldots$.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "81",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{405}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "27",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "405",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-50c5bf49231b",
+      "subtopic": "logarithmic-properties",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If $y=\\log_3\\left(\\log_3x\\right)$ then $\\frac{\\mathrm{d}y}{~\\mathrm{d}x}$ at $x=3$ is $\\ldots\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}(\\log 3)^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3}(\\log 3)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}\\frac{1}{(\\log 3)^{-3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad\\frac{1}{3}(\\log 3)^{-2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-715d208f88b1",
+      "subtopic": "logarithmic-equations",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The money invested in a company is compounded continuously. If $Rs\\,400$ invested today becomes ₹800 in 6 years, then at the end of 30 years, it will become (in ₹)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "18101.76",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12800",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "9050.88",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "12804",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-f0005f3a4a40",
+      "subtopic": "logarithmic-properties",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $p^3=q^4=r^6=t^7=s^2$, then $\\log_t(pqrs)=\\ldots\\ldots$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{168}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "28",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{31}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{35}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-MATH-9d646428ddc4",
       "subtopic": "logarithmic-properties",

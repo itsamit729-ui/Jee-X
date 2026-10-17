@@ -24,10 +24,353 @@
       "slug": "relation-between-roots-and-coefficients",
       "name": "Relation between roots and coefficients",
       "position": 2
+    },
+    {
+      "slug": "range-of-quadratic-expression",
+      "name": "Range of quadratic expression",
+      "position": 3
+    },
+    {
+      "slug": "greatest-integer-and-fractional-part-functions",
+      "name": "Greatest integer and fractional part functions",
+      "position": 4
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-MATH-1c8f9da3e2ce",
+      "subtopic": "greatest-integer-and-fractional-part-functions",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The rational form of a number 1.$\\bar{41}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{140}{99}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{154}{99}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{41}{99}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{55}{99}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-cac13147accb",
+      "subtopic": "relation-between-roots-and-coefficients",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The quadratic equation whose roots are the numbers having arithmetic mean 34 and geometric mean 16 is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$x^2+68x+256=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$x^2+68x-256=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$x^2-68x+256=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$x^2-68x-256=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ac2617c71b55",
+      "subtopic": "nature-of-roots",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The equation $x^3+x-1=0$ has",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "no real root.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "exactly two real roots.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "exactly one real root.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "more than two real roots.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-7c737462c673",
+      "subtopic": "range-of-quadratic-expression",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The equation $\\mathrm{e}^{\\sin x}-\\mathrm{e}^{-\\sin x}=4$ has _________ solutions.",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "no",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-16bdb4ed2af6",
+      "subtopic": "nature-of-roots",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The equation $(\\mathrm{cosp}-1)x^2+(\\mathrm{cosp})x+\\sin p=0$ in the variable $x$, has real roots. Then p can take any value in the interval",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0,2\\pi)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(-\\pi,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(0,\\pi)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-c68c66a3bb21",
+      "subtopic": "nature-of-roots",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The equation $(\\cos p-1)x^2+(\\cos p)x+\\sin p=0$ in the variable $x$, has real roots. Then p can take any value in the interval",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(0,2\\pi)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$(-\\pi,0)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$(0,\\pi)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-514a7c292bbd",
+      "subtopic": "relation-between-roots-and-coefficients",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Let $\\alpha,\\beta$ be the roots of the equation $x^2-\\mathrm{p}x+\\mathrm{r}=0$ and $\\frac{\\alpha}{2},2\\beta$ be the roots of the equation $x^2-qx+r=0$. Then the value of r is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{9}(\\mathrm{p}-\\mathrm{q})(2\\mathrm{q}-\\mathrm{p})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{9}(\\mathrm{q}-\\mathrm{p})(2\\mathrm{p}-\\mathrm{q})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{9}(q-2p)(2q-p)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{9}(2p-q)(2q-p)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-ff65a820d846",
+      "subtopic": "range-of-quadratic-expression",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The value of 'a' so that the sum of squares of the roots of the equation $x^2-(a-2)x-a+1=0$ assumes the least value is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-MATH-3c3564748d80",
+      "subtopic": "relation-between-roots-and-coefficients",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If $\\mathrm{f}(x)=2x^3+\\mathrm{m}x^2-13x+\\mathrm{n}$ and 2,3 are the roots of the equation $\\mathrm{f}(x)=0$ then the value of $4m+5n$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "30",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "100",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "130",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "150",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-MATH-b197181c3899",
       "subtopic": "relation-between-roots-and-coefficients",

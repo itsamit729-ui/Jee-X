@@ -39,10 +39,3499 @@
       "slug": "electric-energy-stored-by-capacitor",
       "name": "Electric energy stored by capacitor",
       "position": 5
+    },
+    {
+      "slug": "capacitor-in-circuit",
+      "name": "Capacitor in circuit",
+      "position": 6
+    },
+    {
+      "slug": "rc-circuit",
+      "name": "Rc circuit",
+      "position": 7
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-PHY-9b77c2d21a7e",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "The capacitance of a parallel plate capacitor with air as medium is $3\\mu\\mathrm{F}$. With the introduction of a dielectric medium between the plates, the capacitance becomes $15\\mu\\mathrm{F}$. The permittivity of the medium in $\\mathrm{SI}$ unit is $[\\varepsilon_0=8.85\\times 10^{-12}\\mathrm{SI}$ unit]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8.845\\times 10^{-11}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.4425\\times 10^{-10}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "15",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d5775a2d9359",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "Five capacitors each of capacity $C$ are connected as shown in figure. If their resultant capacity is $2\\mu\\mathrm{F}$, then the capacity of each condenser is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-d5775a2d9359.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "5 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2.5 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "10 $\\mu$F",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-79293d54829e",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "Two capacitors of capacities $2\\mu~\\mathrm{F}$ and $4\\mu~\\mathrm{F}$ are connected in parallel. A third capacitor of $6\\mu~\\mathrm{F}$ capacity is connected in series with this combination. A battery of 12 V is connected across this combination. The charge on $2\\mu~\\mathrm{F}$ capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$12\\mu\\mathrm{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$11\\mu\\mathrm{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$14\\mu\\mathrm{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16\\mu\\mathrm{C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2dec5d4497ec",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A parallel plate capacitor filled with oil of a dielectric constant 3 between the plates has capacitance 'C'. If the oil is removed, then the capacitance of the capacitor will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{C}}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}$C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{C}}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6c0fb670e6c8",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate air capacitor is charged upto 100 V. A plate 2 mm thick is inserted between the plates. Then to maintain the same potential difference, the distance between the plates is increased by 1.6 mm. The dielectric constant of the thick plate is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cd0cb17dc6d5",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "In the arrangement of the capacitors as shown in figure, each capacitor is of 6 $\\mu$F, then equivalent capacity between points A and B is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-cd0cb17dc6d5.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "12 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "10 $\\mu$F",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4748e857f89f",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "An air filled parallel plate capacitor has a capacity $2~\\mathrm{pF}$. The sepeartion of the plates is doubled and the interspace between the plates is filled with dielectric material, then the capacity is increased to $6~\\mathrm{pF}$. The dielectric constant of the material is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-eab688ab96b1",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The resultant capacity between points A and B in the given circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-eab688ab96b1.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{C}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3C",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-269acd2122e1",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A condenser of capacity '$\\mathrm{C}_1$' is charged to potential '$\\mathrm{V}_1$' and then disconnected. Uncharged capacitor of capacity '$\\mathrm{C}_2$' is connected in parallel with '$\\mathrm{C}_1$'. The resultant potential '$\\mathrm{V}_2$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{V_1C_2}{C_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{C}_2}{\\mathrm{C}_1+\\mathrm{C}_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{C_1V_1}{C_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{C_1V_1}{C_1+C_2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b95a333e0590",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Two identical parallel plate air capacitors are connected in series to a battery of emf '$\\mathrm{V}$'. If one of the capacitor is inserted in liquid of dielectric constant '$\\mathrm{K}$' then, potential difference of the other capacitor will become",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{K}-1}{\\mathrm{KV}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{K}+1}{\\mathrm{KV}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{\\mathrm{KV}}{\\mathrm{K}+1}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{KV}}{\\mathrm{K}-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-264da6554b1a",
+      "subtopic": "capacitor-in-circuit",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "In the given figure potential at point 'A' is 900 volt and point 'B' is earthed. What will be the potential at point 'P' ?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-264da6554b1a.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "900 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "100 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "300 V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "600 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-40be611e351b",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If the charge on the capacitor is increased by 2 C the energy stored in it increased by 21%. Total original charge on the capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10 C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5 C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "20 C",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "15 C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a4c916d51fe9",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "When the battery across the plates of a charged condenser is disconnected and a dielectric slab is introduced between its plates then the energy stored",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "becomes infinity",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "does not change",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "decreases",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f37b71c02eda",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "In parallel plate capacitor, electric field between the plates is '$E$'. If the charge on the plates is '$Q$' then the force on each plate is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "QE",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{QE}^2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{QE}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{QE}}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6d6d73112c9d",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Two parallel plates with dielectric placed between the plates are as shown in figure. The resultant capacity of capacitor will be [A = area of plate. $t_1,t_2$ and $t_3$ are thickness of dielectric slabs, $\\mathrm{k}_1,\\mathrm{k}_2$ and $\\mathrm{k}_3$ are dielectric constants.]",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-6d6d73112c9d.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{A\\varepsilon_0}{\\left[\\frac{t_1+t_2+t_3}{k_1+k_2+k_3}\\right]}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{A\\varepsilon_0\\left(k_1k_2k_3\\right)}{t_1t_2t_3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$A\\varepsilon_0\\left[\\frac{k_1}{t_1}+\\frac{k_2}{t_2}+\\frac{k_3}{t_3}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{A\\varepsilon_0}{\\left[\\frac{t_1}{k_1}+\\frac{t_2}{k_2}+\\frac{t_3}{k_3}\\right]}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6608f60604d8",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "If the potential difference across a capacitor is increased from $5~\\mathrm{V}$ to $15~\\mathrm{V}$, then the ratio of final energy to initial energy stored in the capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$27:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9f7d2aa16aa2",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The charge on each capacitor when a voltage source os 15 V is connected in the circuit as shown, is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-9f7d2aa16aa2.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "75 $\\mu$C",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "150 $\\mu$C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "30 $\\mu$C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "60 $\\mu$C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cd1c2236e799",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Two identical capacitors have the same capacitance '$\\mathrm{C}$'. One of them is charged to potential '$\\mathrm{V}_1$' and the other to $\\mathrm{V}_2$. The negative ends of the capacitors are connected together. When positive ends are also connected, the decrease in energy of the combined system is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}C{\\left(V_1-V_2\\right)}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}C\\left(v_1^2+v_2^2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}C\\left(V_1^2-V_2^2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}C{\\left(V_1+V_2\\right)}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d171a12fc485",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The plates of a parallel plate capacitor of capacity '$\\mathrm{C}_1$' are moved closer together until they ant half their original separation. The new capacitance '$\\mathrm{C}_2$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{C}_2=\\frac{C_1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{C}_2=\\mathrm{C}_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{C}_2=2\\mathrm{C}_1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{C}_2=3\\mathrm{C}_1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0a2d6df58163",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A battery is used to charge a parallel plate capacitor till the potential difference between the plates becomes equal to the e.m.f. of the battery. The ratio of the energy stored int he capacitor to the work done by the battery will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-626cb443098a",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Capacitors of capacities $\\mathrm{C}_1,\\mathrm{C}_2$ and $\\mathrm{C}_3$ are connected in series. If the combination is connected to a supply of '$\\mathrm{V}$' volt, then potential difference across capacitor '$\\mathrm{C}_1$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{C}_2\\mathrm{C}_3+\\mathrm{C}_1\\mathrm{C}_3+\\mathrm{C}_1\\mathrm{C}_2}{\\mathrm{C}_1\\mathrm{C}_2V}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{C}_2\\mathrm{C}_3+\\mathrm{C}_1\\mathrm{C}_3+\\mathrm{C}_1\\mathrm{C}_2}{\\mathrm{C}_1\\mathrm{C}_2\\mathrm{C}_3\\mathrm{V}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{C}_2\\mathrm{C}_3\\mathrm{V}}{\\mathrm{C}_2\\mathrm{C}_3+\\mathrm{C}_1\\mathrm{C}_3+\\mathrm{C}_1\\mathrm{C}_2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{C}_1\\mathrm{C}_2\\mathrm{C}_3\\mathrm{V}}{\\mathrm{C}_2\\mathrm{C}_3+\\mathrm{C}_1\\mathrm{C}_3+\\mathrm{C}_1\\mathrm{C}_2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5eb3da761eed",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "The force between the plates of a parallel plate capacitor of capacitance '$\\mathrm{C}$' and distance of separation of the plates '$\\mathrm{d}$' with a potential difference '$\\mathrm{V}$' between the plates is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{V}^2~\\mathrm{d}}{\\mathrm{C}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{C}^2{~\\mathrm{V}}^2}{{~\\mathrm{d}}^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{CV}^2}{2~\\mathrm{d}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{C}^2{~\\mathrm{V}}^2}{2{~\\mathrm{d}}^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b7922701911f",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate air capacitor has a uniform electric field 'E' in the space between the plates. Area of each plate is A and the distance between the plates is '$\\mathrm{d}$'. The energy stored in the capacitor is $\\left[\\varepsilon_0=\\right.$ permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\varepsilon_0\\mathrm{EAd}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\varepsilon_0\\mathrm{E}^2\\mathrm{Ad}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\varepsilon_0\\mathrm{E}^2}{2\\mathrm{Ad}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{E}^2\\mathrm{Ad}}{2\\varepsilon_0}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-df5949f06ebe",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate capacitor is charged and then disconnected from the charging battery. If the plates are now moved further apart by pulling them by means of insulating handles, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the capacitance of the capacitor increases",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the charge on the capacitor decreases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the voltage across the capacitor increases",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "the energy stored in the capacitor decreases",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-01149f680584",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Two capacitors $\\mathrm{C}_1=3\\mu\\mathrm{F}$ and $\\mathrm{C}_2=2\\mu\\mathrm{F}$ are connected in series across d.c. source of $100~\\mathrm{V}$. The ratio of the potential across $C_2$ to $C_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6:5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5:6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0de6ee055c12",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The mean electrical energy density between plates of a charged air capacitor is (where $\\mathrm{q}=$ charge on capacitor, $\\mathrm{A}=$ Area of capacitor plate)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{q^2}{2\\varepsilon_0A^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{q}}{2\\varepsilon_0{~\\mathrm{A}}^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{q}^2}{2\\varepsilon_0~\\mathrm{A}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\varepsilon_0~\\mathrm{A}}{\\mathrm{q}^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-18ce0f9ae316",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A parallel plate capacitor has plate area '$\\mathrm{A}$' and separation between plates is '$d$'. It is charged to a potential difference of $\\mathrm{V}_0$ volt. The charging battery is then disconnected and plates are pulled apart three times the initial distance. The work done to increase the distance between the plates is $\\left(\\varepsilon_0=\\right.$ permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3\\varepsilon_0\\mathrm{AV}_0{}^2}{~\\mathrm{d}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\varepsilon_0\\mathrm{AV}_0^2}{2~\\mathrm{d}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\varepsilon_0\\mathrm{AV}_0{}^2}{3~\\mathrm{d}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\varepsilon_0\\mathrm{AV}_0{}^2}{~\\mathrm{d}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5070767b8d98",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If a capacitor of capacity $900~\\mu\\mathrm{F}$ is charged to $100~\\mathrm{V}$ and its total energy is transferred to a capacitor of capacity $100~\\mu\\mathrm{F}$, then its potential will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$30~\\mathrm{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$200~\\mathrm{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$300~\\mathrm{V}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$400~\\mathrm{V}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e1d3c23bf744",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two dielectric slabs having dielectric constant '$\\mathrm{K}_1$' and '$\\mathrm{K}_2$' of thickness $\\frac{\\mathrm{d}}{4}$ and $\\frac{3~\\mathrm{d}}{4}$ are inserted between the plates as shown in figure. The net capacitance between $A$ and $B$ is $\\left[\\varepsilon_0\\right.$ is permittivity of free space]",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-e1d3c23bf744.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2~\\mathrm{A}\\varepsilon_0}{~\\mathrm{d}}\\left[\\frac{\\mathrm{K}_1{~\\mathrm{K}}_2}{3{~\\mathrm{K}}_1+\\mathrm{K}_2}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3~\\mathrm{A}\\varepsilon_0}{~\\mathrm{d}}\\left[\\frac{\\mathrm{K}_1+\\mathrm{K}_2}{{~\\mathrm{K}}_1{~\\mathrm{K}}_2}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3{~\\mathrm{A}}_0}{2~\\mathrm{d}}\\left[\\frac{\\mathrm{K}_1+\\mathrm{K}_2}{{~\\mathrm{K}}_1{~\\mathrm{K}}_2}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4A\\varepsilon_0}{d}\\left[\\frac{K_1K_2}{3K_1+K_2}\\right]$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3bd8be398012",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Two identical capacitors have the same capacitance '$C$'. One of them is charged to a potential $V_1$ and the other to $V_2$. The negative ends of the capacitors are connected together. When the positive ends are also connected, the decrease in energy of the combined system is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}\\mathrm{C}\\left(\\mathrm{V}_1^2-\\mathrm{V}_2^2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4}\\mathrm{C}\\left(\\mathrm{V}_1^2+\\mathrm{V}_2^2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}\\mathrm{C}{\\left(\\mathrm{V}_1-\\mathrm{V}_2\\right)}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}\\mathrm{C}{\\left(\\mathrm{V}_1+\\mathrm{V}_2\\right)}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0b41a2f10c34",
+      "subtopic": "capacitance",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two spherical conductors of capacities $3\\mu\\mathrm{F}$ and $2\\mu\\mathrm{F}$ are charged to same potential having radii $3~\\mathrm{cm}$ and $2~\\mathrm{cm}$ respectively. If '$\\sigma_1$' and '$\\sigma_2$' represent surface density of charge on respective conductors then $\\frac{\\sigma_1}{\\sigma_2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-36299199f620",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Three identical capacitors of capacitance '$\\mathrm{C}$' each are connected in series and this connection is connected in parallel with one more such identical capacitor. Then the capacitance of whole combination is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\mathrm{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\mathrm{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4}{3}\\mathrm{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}\\mathrm{C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ba8f899b7390",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate capacitor is charged by a battery and battery remains connected. The dielectric slab of constant '$\\mathrm{K}$' is inserted between the plates and then taken out. Then electric field between the plates",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "remains the same",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "decreases",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "becomes zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-92ceda0af0a1",
+      "subtopic": "capacitance",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The potential on the plates of capacitor are $+20~\\mathrm{V}$ and $-20~\\mathrm{V}$. The charge on the plate is $40\\mathrm{C}$. The capacitance of the capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2 F",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1 F",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4 F",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.5 F",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ced12b318da3",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "In the given capacitive network the resultant capacitance between point $\\mathrm{A}$ and $\\mathrm{B}$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-ced12b318da3.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "8 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4 $\\mu$F",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "16 $\\mu$F",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e399012b82a2",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The equivalent capacity between terminal $\\mathrm{A}$ and $\\mathrm{B}$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-e399012b82a2.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{C}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\mathrm{C}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{C}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4\\mathrm{C}}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6c3e29daf778",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "If the charge on the capacitor is increased by 3 coulombs, the energy stored in it increases by $44\\%$. The original charge on the capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10 C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "15 C",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "20 C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "25 C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8c0c75a43189",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "In the given figure, the equivalent capacitance between points A and B is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-8c0c75a43189.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1.5 C",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "2 C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3 C",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "6 C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b7d6ee0eeb04",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "In a parallel plate capacitor with air between the plates, the distance $d$ between the plates is changed and the space is filled with dielectric constant 8. The capacity of the capacitor is increased 16 times, the distance between the plates is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2d",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4d",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "d/2",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "d/4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b1791dd302d9",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Which of the following combination of 7 identical capacitors each of $2\\mu\\mathrm{F}$ gives a capacitance of $\\frac{10}{11}\\mu\\mathrm{F}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5 in parallel and 2 in series",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "4 in parallel and 3 in series",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3 in parallel and 4 in series",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2 in parallel and 5 in series",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3023b0bd61e1",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two condensers one of capacity $\\frac{\\mathrm{C}}{2}$ and other capacity $\\mathrm{C}$ are connected to a battery of voltage $\\mathrm{V}$ as shown. The work done in charging fully both the condensers is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-3023b0bd61e1.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$ CV${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{4}$ CV${}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{2}$ CV${}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2$ CV${}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3afa7448573a",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate capacitor with air medium between the plates has a capacitance of $10\\mu\\mathrm{F}$. The area of capacitor is divided into two equal halves and filled with two media (as shown in figure) having dielectric constant $K_1=2$ and $\\mathrm{K}_2=4$. The capacitance of the system will be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-3afa7448573a.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "10 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "20 $\\mu$F",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "30 $\\mu$F",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "40 $\\mu$F",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-57f333dc6ebe",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The potential energy of charged parallel plate capacitor is $v_0$. If a slab of dielectric constant $\\mathrm{K}$ is inserted between the plates, then the new potential energy will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{v_0}{~\\mathrm{K}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$v_0{~\\mathrm{K}}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{v_0}{{~\\mathrm{K}}^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{v}_0^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7b77d6239103",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The ratio of potential difference that must be applied across parallel and series combination of two capacitors $C_1$ and $C_2$ with their capacitance in the ratio $1:2$ so that energy stored in these two cases becomes same is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3:\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}:3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2:9$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ae1257b17658",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The capacitance of a parallel plate capacitor is $2.5~\\mu\\mathrm{F}$. When it is half filled with a dielectric as shown in figure, its capacitance becomes $5~\\mu\\mathrm{F}$. The dielectric constant of the dielectric is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-ae1257b17658.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "7.5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-400e2300ff8f",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A parallel combination of two capacitors of capacities '$2~\\mathrm{C}$' and '$\\mathrm{C}$' is connected across $5~\\mathrm{V}$ battery. When they are fully charged, the charges and energies stored in them be '$\\mathrm{Q}_1$', '$Q_2$' and '$E_1$', '$E_2$' respectively. Then $\\frac{E_1-E_2}{Q_1-Q_2}$ in $\\mathrm{J}/\\mathrm{C}$ is (capacity is in Farad, charge in Coulomb and energy in J)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-15498542d758",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two identical capacitors have the same capacitance ' $C$ '. One of them is charged to potential $\\mathrm{V}_1$ and other to $\\mathrm{V}_2$. The negative ends of capacitors are connected together. When positive ends are also connected, the decrease in energy of the combined system is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}\\mathrm{C}\\left(\\mathrm{V}_1^2+\\mathrm{V}_2^2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4}\\mathrm{C}\\left(\\mathrm{V}_1^2-\\mathrm{V}_2^2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}C{\\left(V_1+V_2\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{4}\\mathrm{C}{\\left(\\mathrm{V}_1-\\mathrm{V}_2\\right)}^2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5e5737089373",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Seven capacitors each of capacitance $2\\mu~\\mathrm{F}$ are connected in a configuration to obtain an effective capacitance $\\frac{6}{13}\\mu~\\mathrm{F}$. The combination which will achieve this will have",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5 capacitors in parallel and then 2 capacitors series.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4 capacitors in parallel and then 3 capacitors series.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3 capacitors in parallel and then 4 capacitors in series.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2 capacitors in parallel and then 5 capacitors in series.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5dafa5cdf414",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "When three capacitors of equal capacities are connected in parallel and one of the same capacity, capacitor is connected in series with the combination. The resultant capacity is $4.5\\mu~\\mathrm{F}$. The capacity of each capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5\\mu~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7\\mu~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6\\mu~\\mathrm{F}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8\\mu~\\mathrm{F}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cc8aab119755",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two parallel plate air capacitors of same capacity ' C ' are connected in series to a battery of emf ' $E$ '. Then one of the capacitors is completely filled with dielectric material of constant ' K '. The change in the effective capacity of the series combination is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{C}}{2}\\left[\\frac{~\\mathrm{K}+1}{~\\mathrm{K}-1}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{\\mathrm{C}}\\left[\\frac{\\mathrm{K}-1}{~\\mathrm{K}+1}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{C}}{2}\\left[\\frac{~\\mathrm{K}-1}{~\\mathrm{K}+1}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{C}}{2}{\\left[\\frac{~\\mathrm{K}-1}{~\\mathrm{K}+1}\\right]}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1f3219bece7e",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Three condensers of capacities ' $\\mathrm{C}_1$ ', ' $\\mathrm{C}_2$ ', ' $\\mathrm{C}_3$ ' are connected in series with a source of e.m.f. ' $V$ '. The potentials across the three condensers are in the ratio",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{C}_1:\\mathrm{C}_2:\\mathrm{C}_3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{C}_1^2:\\mathrm{C}_2^2:\\mathrm{C}_3^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\mathrm{C}_1}:\\frac{1}{\\mathrm{C}_2}:\\frac{1}{\\mathrm{C}_3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d71a5e4f2ac7",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In the circuit shown in the following figure, the potential difference cross $3\\mu~\\mathrm{F}$ capacitor is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-d71a5e4f2ac7.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "4 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "10 V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "16 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3560411dea53",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A series combination of $n_1$ capacitors, each of value $C_1$ is charged by a source of potential difference 6 V . Another parallel combination of $\\mathrm{n}_2$ capacitors, each of value $\\mathrm{C}_2$ is charged by a source of potential difference 2 V . Total energy of both the combinations is same. The value of $\\mathrm{C}_2$ in terms of $\\mathrm{C}_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3C_1}{n_1n_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{9\\mathrm{n}_2}{\\mathrm{n}_1}\\mathrm{C}_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\mathrm{n}_2}{\\mathrm{n}_1}\\mathrm{C}_1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9C_1}{n_1n_2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3bb120159313",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two identical capacitors A and B are connected in series to a battery of E.M.F., 'E'. Capacitor B contains a slab of dielectric constant $\\mathrm{K}.\\mathrm{Q}_{\\mathrm{A}}$ and $\\mathrm{Q}_{\\mathrm{B}}$ are the charges stored in A and B . When the dielectric slab is removed, the corresponding charges are $\\mathrm{Q}'_{\\mathrm{A}}$ and $\\mathrm{Q}'_{\\mathrm{B}}$. Then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{Q}'_{\\mathrm{A}}}{\\mathrm{Q}_{\\mathrm{A}}}=\\frac{\\mathrm{K}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{Q}'_{\\mathrm{B}}}{\\mathrm{Q}_{\\mathrm{B}}}=\\frac{\\mathrm{K}+1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{Q}'_{\\mathrm{A}}}{\\mathrm{Q}_{\\mathrm{A}}}=\\frac{\\mathrm{K}+1}{~\\mathrm{K}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{Q}'_{\\mathrm{B}}}{\\mathrm{Q}_{\\mathrm{B}}}=\\frac{\\mathrm{K}+1}{2~\\mathrm{K}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8cff163d45b4",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Air capacitor has capacitance ' $\\mathrm{C}_1$ '. The space between two plates of capacitor is filled with two dielectrics as shown in figure. The new capacitance of the capacitor is ' $\\mathrm{C}_2$ '. The ratio $\\frac{C_1}{C_2}$ is $(d=$ distance between two plates of capacitor, $\\mathrm{K}_1$ and $\\mathrm{K}_2$ are dielectric constants of two dielectrics respectively)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-8cff163d45b4.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{K}_1+\\mathrm{K}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{K}_1+\\mathrm{K}_2}{{~\\mathrm{K}}_1-\\mathrm{K}_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2{~\\mathrm{K}}_1{~\\mathrm{K}}_2}{{~\\mathrm{K}}_1+\\mathrm{K}_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{K}_1+\\mathrm{K}_2}{2{~\\mathrm{K}}_1{~\\mathrm{K}}_2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a964c29c4fc2",
+      "subtopic": "capacitance",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The graph shows the variation of voltage ' V ' across the plates of two capacitors $A$ and $B$ versus increase in charge ' $Q$ ' stored in them. Then",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-a964c29c4fc2.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "capacitance A has high capacity.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "capacitance B has high capacity.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "both have same capacity.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "capacity of $A=2$ times capacity of $B$.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-67414863ed03",
+      "subtopic": "capacitor-in-circuit",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A circuit having a self inductance of 1 henry carries a current of 1 A . To prevent the sparking when the circuit is broken, a capacitor which can withstand 500 V is connected across the switch. What is the minimum value of the capacitance of the capacitor?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\mu~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\mu~\\mathrm{F}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$6\\mu~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8\\mu~\\mathrm{F}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-39d37d35f94a",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The amount of work done in increasing the voltage across the plates of a capacitor form 5 V to 10 V is ' W '. The work done in increasing it from 10 V to 15 V will be (nearly)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.6 W",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "W",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.25 W",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1.67 W",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-860470d1a4db",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Charge on a parallel plate capacitor of capacity C is Q , the electric field intensity between its two plates separated by a distance of $t$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{Qt}}{\\mathrm{C}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{Q}}{\\mathrm{Ct}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{C}}{\\mathrm{Qt}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{Ct}}{\\mathrm{Q}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a873974bb34f",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two circular metal plates each of radius ' $r$ ' are kept parallel to each other distance ' $d$ ' apart. The capacitance of the capacitor formed is ' $\\mathrm{C}_1$ '. If the radius of each of the plates is increased to $\\sqrt{2}$ times the earlier radius and their distance of separation decreased to half the initial value, the capacitance now becomes ' $\\mathrm{C}_2$ '. The ratio of the capacitances $\\mathrm{C}_1:\\mathrm{C}_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:4$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ab1cdf876ad4",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate capacitor is charged and then isolated. If the separation between the plates is increased, which one of the following statement is NOT correct?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Charge remains constant after it is isolated.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Potential difference across the plates decreases.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Potential difference across the plates increases.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Capacitance of capacitor decreases.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-78385a2b55f7",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A parallel plate air capacitor, with plate separation ' d ' has a capacitance of 9 pF . The space between the plates is now filled with two dielectrics, the first having $\\mathrm{K}_1=3$ and thickness $\\mathrm{d}_1=\\mathrm{d}/3$, while the $2^{\\text{nd }}$ has $\\mathrm{K}_2=6$ and thickness $d_2=2~\\mathrm{d}/3$. The capacitance of the new capacitor is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3.8 pF",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "20.25 pF",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "40.5 pF",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "45 pF",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ee62b8788644",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A parallel plate capacitor has plate area $40{~\\mathrm{cm}}^2$ and plate separation 2 mm . The space between the plates is filled with a dielectric medium of thickness 1 mm and dielectric constant 5 . The capacitance of the system is ( $\\varepsilon_0=$ permittivity of vacuum)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$24\\varepsilon_0~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{10}\\varepsilon_0~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{10}{3}\\varepsilon_0~\\mathrm{F}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$10\\varepsilon_0~\\mathrm{F}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-69f4b849244f",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A parallel plate capacitor of capacitance ' $C$ ' is connected to a battery and charged to a potential difference ' $V$ '. Another capacitor of capacitance 3 C is similarly charged to a potential difference 3 V . The charging battery is then disconnected and capacitors are connected in parallel to each other in such a way that positive terminal of one is connected to the negative terminal of the other. The final energy of the configuration is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{2}{~\\mathrm{CV}}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8{~\\mathrm{CV}}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{13}{2}{~\\mathrm{CV}}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$18{~\\mathrm{CV}}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8827177b9ecd",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The function of dielectric in a capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "to reduce the effective potential on plates.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "to increase the effective potential on plates.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "to decrease the capacitance.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "to reduce the plate area of capacitor.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-de1cf0e7c04a",
+      "subtopic": "rc-circuit",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In the given circuit diagram, in the steady state the current through the battery and the charge on the capacitor respectively are",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-de1cf0e7c04a.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "2 A and $3\\mu\\mathrm{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{6}{11}~\\mathrm{A}$ and $\\frac{12}{7}\\mu\\mathrm{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "11 A and $3\\mu\\mathrm{C}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "zero ampere and $3\\mu\\mathrm{C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cf1dba57e8b9",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Air capacitor has capacitance of $1\\mu~\\mathrm{F}$. Now the space between two plates of capacitor is filled with two dielectrics as shown in figure. The capacitance of the capacitor is [ $\\mathrm{d}=$ distance between two plates of capacitor, $\\mathrm{K}_1$ and $\\mathrm{K}_2$ are dielectric constants of first dielectric and second dielectric respectively]",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-cf1dba57e8b9.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\mu~\\mathrm{F}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$6\\mu~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$8\\mu~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12\\mu~\\mathrm{F}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-da2d4c83d6f5",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The potential difference that must be applied across the series and parallel combination of 4 identical capacitors is such that the energy stored in them becomes the same. The ratio of potential difference in series to parallel combination is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fb90bfd4c3f7",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The plates of a parallel plate capacitor are separated by a distance 'd' with air as the medium between them. A dielectric slab of dielectric constant 3 is introduced between the plates so as to increase the capacity by $50\\%$. The thickness of the dielectric slab is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{d}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{d}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{d}}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5~\\mathrm{d}}{6}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-10062cb50a78",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two parallel plate air capacitors of same capacity ' C ' are connected in parallel to a battery of e.m.f. ' $E$ '. Then one of the capacitors is completely filled with dielectric material of constant ' K '. The change in the effective capacity of the parallel combination is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{C}}{\\left(\\mathrm{K}-1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{KC}}{\\mathrm{K}-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{KC}+1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{C}(\\mathrm{K}-1)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-28ecbdce70ee",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate air capacitor has capacitance $C_P$. It is equally filled with parallel layers of materials of dielectric constants $\\mathrm{K}_1$ and $\\mathrm{K}_2$. Now its capacity becomes $C_K$. The ratio $C_P$ to $C_K$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{K}_1+\\mathrm{K}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{K_1+K_2}{K_1K_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{K_1+K_2}{2K_1K_2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2K_1K_2}{K_1+K_2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7cc760d5775d",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate capacitor with plate area A and plate separation $d$ is charged by constant current $I$. A plane surface of area $\\frac{\\mathrm{A}}{2}$, parallel to the plates is drawn simultaneously between the plates. The displacement current through this area is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "I",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{I}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{I}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-690497f5c342",
+      "subtopic": "capacitor-in-circuit",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The voltage between the plates of a parallel plate capacitor of capacity $1\\mu~\\mathrm{F}$ is changing at the rate of $4~\\mathrm{V}/\\mathrm{s}$. the displacement current in the capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\mu~\\mathrm{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3\\mu~\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1\\mu~\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6\\mu~\\mathrm{A}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f4d5937d885b",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The equivalent capacitance between plates ' A ' and ' B ' ( A -area of each plate, d-separation between plates) ( $\\varepsilon_0$ - permittivity of free space) is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-f4d5937d885b.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{A}\\varepsilon_0}{~\\mathrm{d}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2~\\mathrm{A}\\varepsilon_0}{~\\mathrm{d}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4~\\mathrm{A}\\varepsilon_0}{~\\mathrm{d}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{8~\\mathrm{A}\\varepsilon_0}{~\\mathrm{d}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-06cd1a25725e",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If the charge on the capacitor is increased by 3C, the energy stored in it increases by $21\\%$. The original charge on the capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6 C",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "30 C",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "90 C",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-38844086c55b",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate capacitor has plate area $50{~\\mathrm{cm}}^2$ and plate separation 3 mm . The space between the plates is filled with a dielectric medium of thickness 1 mm and dielectric constant 4 . The capacitance becomes ( $\\varepsilon_0=$ permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{18\\varepsilon_0}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{20\\varepsilon_0}{9}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{16\\varepsilon_0}{7}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{14\\varepsilon_0}{5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-71c3b8757fa0",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A parallel plate capacitor having plate area ' $A$ ' and separation ' $d$ ' is charged to a potential difference ' $V$ '. The charging battery is disconnected and the plates are pulled apart to four times the initial separation. The work required to increase the distance between the plates is ( $\\varepsilon_0=$ permittivity of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\varepsilon_0AV^2}{3d}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\varepsilon_0AV^2}{4d}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\varepsilon_0AV^2}{d}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3\\varepsilon_0AV^2}{2d}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a2627ddbf3f5",
+      "subtopic": "capacitance",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The graph shows the variation of voltage (v) across the plates of two parallel plate capacitos $A$ and $B$ versus increase of charge $Q$ stored in them. Then",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-a2627ddbf3f5.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "capacity of both capacitors is same.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "capacity of $A$ is higher than $B$.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "capacity of $B$ is higher than $A$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "capacity of both is zero.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a7f4cf05e6fc",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Three capacitors each of capacitance ' C ' and breakdown voltage ' $V$ ' are connected in series. The capacitance and breakdown voltage of the series combination will be respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\mathrm{C},3~\\mathrm{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{C}}{3},\\frac{~\\mathrm{V}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\mathrm{C},\\frac{\\mathrm{V}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{C}}{3},3~\\mathrm{V}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-abf1bd820078",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A series combination of 10 capacitors, each of value ' $\\mathrm{C}_1$ ' is charged by a source of potential difference ' 4 V '. When another parallel combination of 8 capacitors, each of value ' $\\mathrm{C}_2$ ' is charged by a source of potential difference ' V ', it has the same total energy stored in it as in the first combination. The value of ' $\\mathrm{C}_2$ ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{C}_1}{5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{8}{5}\\mathrm{C}_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{64}{5}C_1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{C}_1}{40}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-63a642d6b6ae",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Initially $n$ identical capacitors are joined in parallel and are charged to potential V. Now they are separated and joined in series. Then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "potential difference and total energy of the combination remain the same.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "potential difference remains the same and energy increases n times.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "potential difference becomes nV and energy remains the same.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "potential difference is nV and energy increases n times.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e2ba5a4e980e",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A parallel plate air capacitor has capacity ' $C$ ' and distance of separation between plates is ' $d$ '. If a conducting sheet of thickness $\\frac{2d}{3}$ is inserted in between the plates, the capacitance becomes $C_1$. The ratio of $\\frac{C_1}{C}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0e39a67d3b2d",
+      "subtopic": "electric-energy-stored-by-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A $4\\mu~\\mathrm{F}$ capacitor is charged to 10 V . The battery is then disconnected and a pure 10 mH coil is connected across the capacitor so that LC oscillations are set up. The maximum current in the coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.2 A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0.1 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.4 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.25 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-57b3888212b6",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two capacitors of $100\\mu~\\mathrm{F}$ and $50\\mu~\\mathrm{F}$ are connected in parallel. If the potential difference across $100\\mu~\\mathrm{F}$ is 20 V and across $50\\mu~\\mathrm{F}$ is 40 V , then the common potential of the parallel combination will be (same polarities of the capacitor connected together)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "20 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "60 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{80}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{80}{3}~\\mathrm{V}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e5850b5e84b2",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Five capacitors, each of capacity ' $C$ ' are connected as shown in the figure. The resultant capacity between A and B is $14\\mu~\\mathrm{F}$. The capacity of each capacitor is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-e5850b5e84b2.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\mu~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3.5\\mu~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\mu~\\mathrm{F}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2.8\\mu~\\mathrm{F}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-84e0706b5cee",
+      "subtopic": "parallel-plate-capacitor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two identical metal plates are given charges $q_1$ and $q_2\\left(q_2<q_1\\right)$ respectively. If they are now brought close together to form a parallel plate capacitor with capacitance ' C ', the potential difference ' $V$ ' between the plates is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{q_1-q_2}{c}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{q_1+q_2}{C}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{q_1-q_2}{2C}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{q_1+q_2}{2C}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1c515d51e569",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The capacity of air filled parallel plate capacitor is $\\mathrm{C}_0$. One-half of the space between the plates is filled with a dielectric constant ' K ' as shown in figure. The new capacity becomes $\\mathrm{C}_{\\mathrm{n}}$. The ratio $\\mathrm{C}_{\\mathrm{n}}$ to $\\mathrm{C}_0$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-1c515d51e569.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\frac{\\mathrm{K}+1}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\frac{\\mathrm{K}+1}{3}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{\\mathrm{K}+1}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4(~\\mathrm{K}+1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8506d1fabf0f",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Three capacitors are connected to a battery as shown in figure. The ratio of charge on capacitors $\\mathrm{C}_3$ and $\\mathrm{C}_1$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-8506d1fabf0f.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1.5",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2.5",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3.5",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4.5",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-11474f500db5",
+      "subtopic": "capacitors-with-dielectric",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The function of a dielectric in a capacitor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "to reduce the effective potential on plates,",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "to increase the effective potential on plates.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "to decrease the capacity of capacitance.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "to reduce the plate area of the capacitor.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7f0748d7b162",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Five capacitors, each of capacitance ' $C$ ' are connected as shown in the figure. The ratio of equivalent capacitance between P and R and the equivalent capacitance between P and Q is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-7f0748d7b162.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d870ad7adcc3",
+      "subtopic": "capacitance",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A capacitor of unknown capacity is connected across a battery of V volt. The charge stored in it is Q coulomb. When potential across the capacitor is reduced by $\\mathrm{V}_1$ volt, the charge stored in it becomes $\\mathrm{Q}_1$ coulomb. The potential V is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{QV}_1}{\\mathrm{Q}-\\mathrm{Q}_1}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{Q_1V_1}{Q+Q_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{Q_1}{Q}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{Q}{Q_1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-de5ade3f4c03",
+      "subtopic": "combination-of-capacitors",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "The potential difference across the 4 μF capacitor in the following circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/capacitance/PYQ-PHY-de5ade3f4c03.png",
+        "alt": "Figure for this Capacitance question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3.4 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4.6 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5.4 V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "6.2 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-PHY-90929a5ad084",
       "subtopic": "capacitors-with-dielectric",

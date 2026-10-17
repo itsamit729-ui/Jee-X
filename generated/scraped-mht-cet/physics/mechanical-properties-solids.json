@@ -19,8 +19,293 @@
       "slug": "general",
       "name": "General",
       "position": 99
+    },
+    {
+      "slug": "longitudinal-stress-and-strain-and-youngs-modulus",
+      "name": "Longitudinal stress and strain and youngs modulus",
+      "position": 2
+    },
+    {
+      "slug": "elastic-energy-stored-by-wire",
+      "name": "Elastic energy stored by wire",
+      "position": 3
+    },
+    {
+      "slug": "volume-stress-and-strain-and-bulk-modulus",
+      "name": "Volume stress and strain and bulk modulus",
+      "position": 4
+    },
+    {
+      "slug": "strain",
+      "name": "Strain",
+      "position": 5
+    },
+    {
+      "slug": "stress",
+      "name": "Stress",
+      "position": 6
     }
   ],
   "passages": [],
-  "questions": []
+  "questions": [
+    {
+      "ref": "PYQ-PHY-1af2a09235a8",
+      "subtopic": "longitudinal-stress-and-strain-and-youngs-modulus",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "Two rods of same material and volume having circular cross-section are subjected to tension $T$. Within the elastic limit, same force is applied to both the rods. Diameter of the first rod is half of the second rod, then the extensions of first rod to second rod will be in the ratio",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$32:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$16:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-adb6eecf1e13",
+      "subtopic": "volume-stress-and-strain-and-bulk-modulus",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "The density of a metal at normal pressure $p$ is $\\rho$. When it is subjected to an excess pressure, the density becomes $\\rho'$. If $K$ is the bulk modulus of the metal, then the ratio $\\frac{\\rho'}{\\rho}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{1-\\frac{K}{p}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1+\\frac{K}{p}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{1-\\frac{p}{K}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1+\\frac{p}{K}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-348f2bd8f5ac",
+      "subtopic": "stress",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "Two wires $A$ and $B$ are stretched by the same load. The radius of wire $A$ is double the radius of wire $B$. The stress on the wire $B$ as compared to the stress on the wire $A$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "half",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "equal",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "twice",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "four times",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9153387f5dd3",
+      "subtopic": "strain",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "Two wires of different materials have same length $L$ and same diameter $d$. The second wire is connected at the end of the first wire and forms one single wire of double the length. This wire is subjected to stretching force $F$ to produce the elongation I. The two wires have",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "different stress but same strain",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "different stress and different strain",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "same stress but different strain",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "same stress and same strain",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-75a5f5dd3ee9",
+      "subtopic": "elastic-energy-stored-by-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A metal rod has length, cross-sectional area and Young's modulus as $L,A$ and $Y$, respectively. If the elongation in the rod produced is $\\mathcal{l}$, then work done is proportional to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathcal{l}^4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathcal{l}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathcal{l}^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathcal{l}^2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aaccb3efc5e0",
+      "subtopic": "volume-stress-and-strain-and-bulk-modulus",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The compressibility of water is $5\\times 10^{-10}{~\\mathrm{m}}^2/\\mathrm{N}$. Pressure of $15\\times 10^6~\\mathrm{Pa}$ is applied on 100 mL volume of water. The change in the volume of water is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.75 mL decrease",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.75 mL increase",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1.50 mL increase",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f4365f6a1fda",
+      "subtopic": "longitudinal-stress-and-strain-and-youngs-modulus",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A spring has length L and force constant K . It is cut into two springs of length $L_1$ and $L_2$ such that $\\mathrm{L}_1=\\mathrm{NL}_2$ ( N is an integer). The force constant of spring of length $L_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(\\mathrm{N}+1)\\mathrm{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{K}}{\\mathrm{N}}(1+\\mathrm{N})$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{K}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{K}}{\\mathrm{N}+1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    }
+  ]
 }

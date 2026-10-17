@@ -59,10 +59,4608 @@
       "slug": "wheatstone-bridge",
       "name": "Wheatstone bridge",
       "position": 9
+    },
+    {
+      "slug": "ohms-law",
+      "name": "Ohms law",
+      "position": 10
+    },
+    {
+      "slug": "electric-power-and-heating-effect-of-current",
+      "name": "Electric power and heating effect of current",
+      "position": 11
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-PHY-0baa129146ad",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "An ammeter of resistance $20\\Omega$ gives full scale deflection, when $1~\\mathrm{mA}$ current flows through it. What is the maximum current that can be measured by connecting 4 resistors each of $16\\Omega$ in parallel with the ammeter?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6 mA",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "4 mA",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8 mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2 mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-64a373b645c2",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "Two wires $A$ and $B$ of equal lengths are connected in left and right gap of a meter bridge, null point is obtained at $40~\\mathrm{cm}$ from left end. Diameters of the wire $A$ and $B$ are in that ratio $3:1$. The ratio of specific resistance of $A$ to the of $B$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-93bdfb584f28",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "A potentiometer wire is $4~\\mathrm{m}$ long and potential difference of $3~\\mathrm{V}$ is maintained between the ends. The emf of the cell, which balances against a length of $100~\\mathrm{cm}$ of the potentiometer wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.60 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.50 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.25 V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.75 V",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-694265c09de3",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "Which of the following instruments is not a direct reading instrument?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Electronic balance",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Potentiometer",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "Ammeter",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Voltmeter",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c81edc6fbcfb",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "In conversion of moving coil galvanometer into an ammeter of required range, the resistance of ammeter, so formed is\n[$S=$ shunt and $G=$ resistance of galvanometer]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{S+G}{SG}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{SG}{S+G}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{S-G}{SG}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{SG}{S-G}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ea2129a88cee",
+      "subtopic": "combination-of-resistances",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A circular coil of radius $R$ has a resistance of $40\\Omega$. Figure shows two points $P$ and $Q$ on the circumference separated by a distance $\\frac{\\pi R}{2}$ which are connected to a 16 V battery with internal resistance of $0.5\\Omega$. What is the value of current $I$ flowing through the circuit?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-ea2129a88cee.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.5A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-03a00e79a48b",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "Two galvanometers $A$ and $B$ require currents of 4 mA and 7 mA , respectively to produce the same deflection of 20 divisions. If $S_A$ and $S_B$ are their sensitivities respectively, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$S_A<S_B$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$S_A>S_B$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$S_B=\\frac{7}{4}=S_A$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$S_A=S_B=\\frac{4}{7}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3490ee33f718",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "Two cells having unknown emfs $E_1$ and $E_2$ $\\left(E_1>E_2\\right)$ are connected in potentiometer circuit, so as to assist each other. The null point obtained is at 490 cm from the higher potential end. When cell $E_2$ is connected, so as to oppose cell $E_1$, the null point is obtained at 90 cm from the same end. The ratio of the emfs of two cells $\\left(\\frac{E_1}{E_2}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.689",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "5.33",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.45",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "0.182",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3cf0f84e8c5a",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A 10 m long wire of resistance $20\\Omega$ is connected in series with a battery of emf 3 V and a resistance of $10\\Omega$. The potential gradient along the wire in $\\mathrm{V}/\\mathrm{m}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.10",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.02",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.20",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ce161a3c0d69",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A milliammeter of resistance $40\\Omega$ has a range $0-30~\\mathrm{mA}$. What will be the resistance used in series to convert it into voltmeter of range $0-15~\\mathrm{V}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$460\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$920\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$640\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$560\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-47b7cdbb7f3b",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Consider the circuit shown in the figure. The value of current 'I' is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-47b7cdbb7f3b.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$-\\frac{7}{18}$A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "5A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-3$A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b6fd410ac834",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A galvanometer of resistance $50\\Omega$ is converted to an ammeter. After shunting, the effective resistance of ammeter is $2.5\\Omega$. The value of shunt is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{100}{19}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{50}{19}\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{25}{19}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{75}{19}\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1cafb2d6bc62",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "In potentiometer experiment, null point is obtained at a particular point for a cell on potentiometer wire '$\\mathrm{x}$' cm long. If length of potentiometer wire is increased by few centimeter without changing the cell, the balancing length will [Driving source is not changed]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "will net change.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "increase",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "decrease",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "become zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8aca9671c809",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A galvanometer has resistance '$\\mathrm{G}$' $\\Omega$ and '$\\mathrm{I}_{\\mathrm{g}}$' is current flowing through it which produces full scale deflection. '$\\mathrm{S}_1$' is the value of shunt which converts it into an ammeter of range 0 to '$3\\mathrm{I}$' and '$\\mathrm{S}_2$' is the shunt value which converts it into an ammeter of range 0 to '$4\\mathrm{I}$', the ratio $\\mathrm{S}_2:\\mathrm{S}_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\mathrm{I}-\\mathrm{I}_{\\mathrm{g}}}{4\\mathrm{I}-\\mathrm{I}_{\\mathrm{g}}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4I-I_g}{3I-I_g}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-960f5f996dc9",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "In a meter bridge experiment, the balance point is obtained at length $\\mathcal{l}_1~\\mathrm{cm}$ from left end when resistances in the left gap and right gap are $5\\Omega$ and $R\\Omega$ respectively. When the resistance $R$ is shunted with equal resistance, the new balance point is at $1.6\\mathcal{l}_1$. The resitance $R$ in ohm is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "25",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "15",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "20",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d91b18e8f618",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Two wires '$\\mathrm{A}$' and '$\\mathrm{B}$' of equal length are connected in left and right gap respectively of meter bridge, null point is obtained at $40~\\mathrm{cm}$, from the left end. Diameters of the wires '$A$' and '$B$' are in the ratio $3:1$ respectively, the ratio of specific resistance of 'A' to that of 'B' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6:1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$8:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$16:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$12:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d7db0166a838",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A moving coil galvanometer is converted into an ammeter, reading upto $0.04~\\mathrm{A}$ by connecting a shunt of resistance '$3\\mathrm{r}$' across it and then into an ammeter reading upto $0.08~\\mathrm{A}$, when a shunt of resistance '$r$' is connected across it. What is the maximum current which can be sent through this galvanometer if no shunt is used?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.02~\\mathrm{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.04~\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.08~\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.01~\\mathrm{A}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ddd0bfbeaa3f",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A current through 1 $\\Omega$ resistance in the following circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-ddd0bfbeaa3f.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1.8 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1.2 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.5 A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-214d1d34c721",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The Kirchhoff's current law and voltage law are respectively based upon the conservation of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "charge, energy",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "charge, momentum",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "energy, charge",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "momentum, charge",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5abde04ca4b0",
+      "subtopic": "electric-power-and-heating-effect-of-current",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If a current flowing in a coil is reduced to half of its initial value, the relation between the new energy $\\left(E_2\\right)$ and the original energy $\\left(E_1\\right)$ stored in the coil will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$E_2=\\frac{E_1}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{E}_2=\\frac{\\mathrm{E}_1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{E}_2=\\mathrm{E}_1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{E}_2=4\\mathrm{E}_1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-65fa5285a0d1",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "In a wheatstone's bridge, three resistances $\\mathrm{P},\\mathrm{Q}$ and $\\mathrm{R}$ are connected in the three arms and the fourth arm is formed by two resistances $S_1$ and $S_2$ connected in parallel. The condition for the bridge to be balanced is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{P}{Q}=\\frac{2R}{S_1+S_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{P}{Q}=\\frac{R\\left(S_1+S_2\\right)}{2S_1S_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{P}{Q}=\\frac{R\\left(S_1+S_2\\right)}{S_1S_2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{P}{Q}=\\frac{R\\left(S_1S_2\\right)}{S_1+S_2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2dfed973713d",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Kirchhoff's current and voltage law are respectively based on the conservation of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "momentum, charge",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "energy, charge",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "charge, energy",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "charge, momentum",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8d4dac90e099",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "In a potentiometer experiment, the balancing length for a cell is $240~\\mathrm{cm}$. On shunting the cell with a resistance of $2\\Omega$, the balancing length becomes half the initial balancing length. The internal resistance of the cell is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.5\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.5\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-688362e02fdc",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A balanced bridge is shown in the circuit diagram. The metre bridge wire has resistance $1\\Omega\\mathrm{cm}^{-1}$. The current drawn from the battery is (Internal resistance of battery is negligible)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-688362e02fdc.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "0.44 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.66 A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.88 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.22 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f93384bbccb3",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "In potentiometer experiment, cells of e.m.f. '$E_1$' and '$E_2$' are connected in series $\\left(E_1>E_2\\right)$ the balancing length is $64~\\mathrm{cm}$ of the wire. If the polarity of $E_2$ is reversed, the balancing length becomes $32~\\mathrm{cm}$. The ratio $\\frac{E_1}{E_2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4f7cfa8946e5",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "To determine the internal resistance of a cell by using a potentiometer, the null point is at $1~\\mathrm{m}$ when shunted by $3\\Omega$ resistance and at a length $1.5~\\mathrm{m}$, when cell is shunted by $6\\Omega$ resistance The internal resistance of the cell is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-63ba04d4aef8",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "In the given circuit, the current in 8$\\Omega$ resistance is 1.5 A. The total current (I) flowing in the circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-63ba04d4aef8.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "5 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4.5 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5.5 A",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-606798af2295",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "In a potentiometer experiment, when three cells $\\mathrm{A},\\mathrm{B}$ and $\\mathrm{C}$ are connected in series, the balancing length is found to be $420~\\mathrm{cm}$. If cells $\\mathrm{A}$ and $\\mathrm{B}$ are connected in series the balancing length is $220~\\mathrm{cm}$ and for cells $\\mathrm{B}$ and $\\mathrm{C}$ connected in series the balancing length is $320~\\mathrm{cm}$. The emf of cells $\\mathrm{A},\\mathrm{B}$ and $\\mathrm{C}$ are respectively in the ratio of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:3:5$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5:4:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:1.2:2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1.2:1:2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2a43d72effb9",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "In the following electrical network, the value of I is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-2a43d72effb9.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1.5 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3.0 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3.4 A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "2.5 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fedc75c67c54",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The current drawn from the battery in the given network is (Internal resistance of the battery is negligible)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-fedc75c67c54.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "2.4 A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "1.6 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2.0 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3.0 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-181775731d61",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "A galvanometer of resistance $200\\Omega$ is to be converted into an ammeter. The value of shunt resistance which allows $3\\%$ of the mains current through the galvanometer is equal to (nearly)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$6\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$7\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6e20d16d1bd4",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "In the following network, the current through galvanometer will",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-6e20d16d1bd4.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "be zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "flow from $\\mathrm{Q}$ to $\\mathrm{S}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "flow in a direction which depends on value of $\\mathrm{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "flow from $\\mathrm{S}$ to $\\mathrm{Q}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-28f194a3b0c1",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "If only $1\\%$ of total current is passed through a galvanometer of resistance '$G$' then the resistance of the shunt is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{G}{25}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{G}}{49}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{G}}{2}\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{G}}{99}\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a790a739e5df",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A voltmeter of resistance $150\\Omega$ connected across a cell of e.m.f. $3~\\mathrm{V}$ reads $2.5~\\mathrm{V}$. What is the internal resistance of the cell?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$15\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$20\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$30\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-555d729fc4c4",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "In meter bridge experiment, null point was obtained at a distance '$l$' from left end. The values of resistances in the left and right gap are doubled and then interchanged. The new position of the null point is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(100-l)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$(100-2l)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$(100-3l)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(100-\\frac{l}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-95f10b94b18b",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A galvanometer has resistance '$\\mathrm{G}$' and range '$\\mathrm{V}g$'. How much resistance is required to read voltage upto '$\\mathrm{V}$' volt?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{G}\\left(\\frac{\\mathrm{V}}{\\mathrm{V}_{\\mathrm{g}}}-1\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{G}\\left(\\frac{\\mathrm{V}+\\mathrm{V}_{\\mathrm{g}}}{\\mathrm{V}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{G}\\left(\\frac{\\mathrm{V}-\\mathrm{V}_{\\mathrm{g}}}{\\mathrm{V}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{GV}_{\\mathrm{g}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c205424a1ced",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "In potentiometer experiments, two cells of e. m. f. '$E_1$' and '$E_2$' are connected in series $\\left(E_1>E_2\\right)$, the balancing length is $64~\\mathrm{cm}$ of the wire. If the polarity of $E_2$ is reversed, the balancing length becomes $32~\\mathrm{cm}$. The ratio $\\mathrm{E}_1/\\mathrm{E}_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f0e09df7e029",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Potential difference between the points P and Q is nearly",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-f0e09df7e029.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "6 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "8 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "17 V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "21 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-322cd20a5b7f",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Potential difference between the points P and Q is nearly",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-322cd20a5b7f.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "17 V",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "14 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "12 V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "8 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-96724fa0c295",
+      "subtopic": "electric-cell-or-battery",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two batteries, one of e.m.f. $12~\\mathrm{V}$ and internal resistance $2\\Omega$ and other of e.m.f. $6~\\mathrm{V}$ and internal resistance $1\\Omega$, are connected as shown in the figure. What will be the reading of the voltmeter 'V'?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-96724fa0c295.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "12 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "8 V",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "6 V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-35228559ec35",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Resistance of a potentiometer wire is $2\\Omega/\\mathrm{m}$. A cell of e.m.f. $1.5~\\mathrm{V}$ balances at $300~\\mathrm{cm}$. The current through the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2.5~\\mathrm{mA}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$7.5~\\mathrm{mA}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$250~\\mathrm{mA}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$750~\\mathrm{mA}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fd9a6781a777",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A potentiometer wire has length of $5~\\mathrm{m}$ and resistance of $16\\Omega$. The driving cell has an e.m.f. of $5~\\mathrm{V}$ and an internal resistance of $4\\Omega$. When the two cells of e.m.f.s $1.3~\\mathrm{V}$ and $1.1~\\mathrm{V}$ are connected so as to assist each other and then oppose each other, the balancing lengths are respectively",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3~\\mathrm{m},0.25~\\mathrm{m}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.25~\\mathrm{m},3~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.5~\\mathrm{m},0.3~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.3~\\mathrm{m},2.5~\\mathrm{m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-44ef8ac74ff8",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A potentiometer wire of length $4~\\mathrm{m}$ and resistance $5~\\Omega$ is connected in series with a resistance of $992~\\Omega$ and a cell of e.m.f. $4~\\mathrm{V}$ with internal resistance $3~\\Omega$. The length of $0.75~\\mathrm{m}$ on potentiometer wire balances the e.m.f. of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4.00 mV",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3.75 mV",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3.00 mV",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2.50 mV",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9cea0ecd981e",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two resistance $\\mathrm{X}$ and $\\mathrm{Y}$ are connected in the two gaps of a meterbridge and the null points is obtained at $20~\\mathrm{cm}$ from zero end. When the resistance of $20\\Omega$ is connected in series with the smaller of the two resistance $\\mathrm{X}$ and $\\mathrm{Y}$, the null point shifts to $40~\\mathrm{cm}$ from left end. The value of smaller resistance in ohm is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "12",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "15",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-25b3611b4ce7",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "In a given meter bridge, the current flowing through $40\\Omega$ resistor is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-25b3611b4ce7.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{I}_2+\\mathrm{I}_{\\mathrm{g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{I}_{\\mathrm{g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{I}_2-\\mathrm{I}_{\\mathrm{g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{I}_2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-779b86f6a128",
+      "subtopic": "electric-cell-or-battery",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Two cells $E_1$ and $E_2$ having equal EMF '$E$' and internal resistances $r_1$ and $r_2\\left(r_1>r_2\\right)$ respectively are connected in series. This combination is connected to an external resistance '$R$'. It is observed that the potential difference across the cell $\\mathrm{E}_1$ becomes zero. The value of '$R$' will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$r_1-r_2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{r}_1+\\mathrm{r}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{r_1-r_2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{r_1+r_2}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-00ac446cb2a4",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Only $4\\%$ of the total current in the circuit passes through a galvanometer. If the resistance of the galvanometer is $G$, then the shunt resistance connected to the galvanometer is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{G}{25}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{G}{24}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "24G",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "25G",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ff98f6f9c9b7",
+      "subtopic": "combination-of-resistances",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A $10~\\mathrm{m}$ long wire of resistance $20\\Omega$ is connected in series with a battery of emf $3~\\mathrm{V}$ (negligible internal resistance) and a resistance of $10\\Omega$. The potential gradient along the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3~\\mathrm{V}/\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.1~\\mathrm{V}/\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.2~\\mathrm{V}/\\mathrm{m}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.3~\\mathrm{V}/\\mathrm{m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-814d4311fe76",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Five current carrying conductors meet at point $\\mathrm{P}$. What is the magnitude and direction of the current in conductor $\\mathrm{PQ}$?",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-814d4311fe76.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1 A form Q to P",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1 A form P to Q",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3 A form P to Q",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2 A form Q to P",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-92f4d39c778e",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A wire of length $3~\\mathrm{m}$ connected in the left gap of a meter-bridge balances $8\\Omega$ resistance in the right gap at a point, which divides the bridge wire in the ratio $3:2$. The length of the wire corresponding to resistance of $1\\Omega$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.75~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.5~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.25~\\mathrm{m}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-314b052e9236",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "In potentiometer experiment, the balancing length is $8~\\mathrm{m}$ when two cells $E_1$ and $E_2$ are joined in series. When two cells are connected in opposition the balancing length is $4~\\mathrm{m}$. The ratio of the e.m.f. of the two cells $\\left(\\frac{E_1}{E_2}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-66c9076b7741",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "When moving coil galvanometer (MCG) is converted into a voltmeter, the series resistance is '$n$' times the resistance of galvanometer. How many times that of MCG the voltmeter is now capable of measuring voltage?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{n}+1}{\\mathrm{n}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{n}+1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n}-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1907908d3e5c",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A galvanometer of resistance $\\mathrm{G}$ is shunted with a resistance of $10\\%$ of $\\mathrm{G}$. The part of the total current that flows through the galvanometer is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{11}\\mathrm{I}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{11}\\mathrm{I}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{10}\\mathrm{I}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{5}\\mathrm{I}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4340fe106879",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "In a meter bridge experiment null point is obtained at $l~\\mathrm{cm}$ from the left end. If the meter bridge wire is replaced by a wire of same material but twice the area of across-section, then the null point is obtained at a distance",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2l~\\mathrm{cm}$ from left end.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$l~\\mathrm{cm}$ from left end.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$l/2~\\mathrm{cm}$ from left end.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$l/4~\\mathrm{cm}$ from left end.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-42eae79c1c23",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Five current carrying conductors meet at a point '$\\mathrm{O}$' as shown in figure. The magnitude and direction of the current in conductor '$OP$' is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-42eae79c1c23.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$6.5~\\mathrm{A}$ from $\\mathrm{O}$ to $\\mathrm{P}$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$9~\\mathrm{A}$ from $\\mathrm{P}$ to $\\mathrm{O}$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10.5~\\mathrm{A}$ from $\\mathrm{P}$ to $\\mathrm{O}$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$11.5~\\mathrm{A}$ from $\\mathrm{O}$ to $\\mathrm{P}$.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6aaf30d210f4",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A galvanometer of resistance $20~\\Omega$ gives a deflection of 5 divisions when $1~\\mathrm{mA}$ current flows through it. The galvanometer scale has 50 divisions. To convert the galvanometer into a voltmeter of range 25 volt, we should connect a resistance of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1240~\\Omega$ in series.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2480~\\Omega$ in series.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2480~\\Omega$ in parallel.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$20~\\Omega$ in parallel.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-59997197a671",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In the circuit, current flowing through the circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-59997197a671.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "2A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5A",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f7bd84366495",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In potentiometer experiment, cells of e.m.f. $E_1$ and $E_2$ are connected in series $\\left(E_1>E_2\\right)$ the balancing length is 80 cm of the wire. If the polarity of $E_2$ is reversed, the balancing length becomes 20 cm. The ratio $\\mathrm{E}_1/\\mathrm{E}_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:4$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5:3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-44a9000771b4",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The potential difference $\\left(V_A-V_B\\right)$ between the points ' $A$ ' and ' $B$ ' in the given part of the circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-44a9000771b4.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$-$3 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "6 V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "9 V",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d10f0d3e401c",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In an ammeter, $0.25\\%$ of main current passes through the galvanometer. If the resistance of the galvanometer is ' G ', the resistance of ammeter will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{399}{400}\\mathrm{G}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{400}\\mathrm{G}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{499}{500}\\mathrm{G}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{500}\\mathrm{G}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-202579950eef",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In the following electrical network, the value of I is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-202579950eef.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "3 A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "4 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-94db2e000079",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The current drawn from the battery in the given network is (Internal resistance of the battery is negligible)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-94db2e000079.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1.2 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2.4 A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4.8 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-204b2089d6ac",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Kirchhoff's second law is based on the law of conservation of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "charge",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "energy",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "momentum",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "inter conversion of mass into energy",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f614668a9d3f",
+      "subtopic": "resistance-and-resistivity",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A battery of 6 V is connected to the ends of uniform wire 3 m long and of resistance $100\\Omega$. The difference of potential between two points 50 cm apart on the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1 V",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "1.5 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2 V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-656f21fb9472",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A galvanometer has resistance $80\\Omega$ and it is shunted with resistance $20\\Omega$. If $20\\%$ of the main current flows through galvanometer, then what is the value of main current?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.2 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.8 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1 A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1.2 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e5c46067f025",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A cell balances against a length of 150 cm on a potentiometer wire when it is shunted by a resistance of $5\\Omega$. But when it is shunted by a resistance of $10\\Omega$, then balancing length increases by 25 cm . The balancing length when the cell is in an open circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "200 cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "210 cm",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "225 cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "250 cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-62057bc1edf3",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The figure shows currents in a part of electric circuit. Then current I is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-62057bc1edf3.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3.5 A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "1.5 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2.5 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-89a66df0f3bc",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A galvanometer may be converted into ammeter or a voltmeter. In which of the following cases the resistance of the device so obtained will be the largest?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Ammeter of range 1 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Ammeter of range 10 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Voltmeter of range 1 V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Voltmeter of range 10 V",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-60d765aea70f",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "When a resistance of $100\\Omega$ is connected in series with a galvanometer of resistance G , its range is V . To double its range a resistance of $1000\\Omega$ is connected in series. The value of G is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$800\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$300\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$200\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$100\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-af935db9aa73",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The potential difference $\\left(V_A-V_B\\right)$ between the points A and B in the given part of the circuit",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-af935db9aa73.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$-$13V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "13V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-$23V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "23V",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5468d365ed1b",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Two identical galvanometers are converted into an ammeter and into milliammeter. For the same current, the value of shunt of the ammeter as compared to that of milliammeter is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "less",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "equal",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "more",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f95610fce505",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "When a resistance of $200\\Omega$ is connected in series with a galvanometer of resistance ' $G$ ', its range is ' $V$ '. To triple its range, a resistance of $2000\\Omega$ is connected in series. The value of ' $G$ ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$200\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$400\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$600\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$700\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b476503d96e1",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The resistances in the left and right gap of a metre bridge are $40\\Omega$ and $60\\Omega$ respectively. When the bridge is balanced, the distance of the null point from the centre of the wire towards left is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "5 cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "10 cm",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "15 cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "20 cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d3289bc1947a",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A galvanometer of resistance ' $G$ ' is shunted by resistance of 'S' ohm. To keep the main current in the circuit unchanged the resistance to be put in series with Galvanometer is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{G}^2}{\\mathrm{S}+\\mathrm{G}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{G}}{\\mathrm{S}+\\mathrm{G}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{S}^2}{\\mathrm{G}+\\mathrm{S}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{G}\\mathrm{S}}{\\mathrm{S}+\\mathrm{G}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1f647cbe97ca",
+      "subtopic": "electric-power-and-heating-effect-of-current",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The current flowing in a coil is 3 A and the power consumed is 108 W . If the a.c. source is of $120~\\mathrm{V},50~\\mathrm{Hz}$, the resistance in the circuit is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$24\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$36\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$12\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$6\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2beac5c04a79",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In the following circuit, the current flowing through zener diode is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-2beac5c04a79.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "35 mA",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "25 mA",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "15 mA",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5 mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3777c2c9dc1f",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "When cell of E.M.F. ' $E_1$ ' is connected to potentiometer wire, the balancing length is $l_1$. Another cell of E.M.F. ' $E_2$ ' $\\left(E_1>E_2\\right)$ is connected so that two cells oppose each other, then the balancing length is $l_2$. The ratio $\\mathrm{E}_1:\\mathrm{E}_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{l_1}{l_1+l_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{l_1}{l_1-l_2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{l_1+l_2}{l_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{l_1+l_2}{l_1-l_2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9d11678a0623",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In the following circuit, the current $\\mathrm{I}_3$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-9d11678a0623.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "5 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-$3A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{5}{6}$ A",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cffe9591be8d",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The range of voltmeter of resistance ' $G$ ' $\\Omega$ is ' $V$ ' volt. The resistance required to be connected in series with it in order to convert it into a voltmeter of range ' $nV$ ' volt, will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$(\\mathrm{n}-1)\\mathrm{G}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{G}/\\mathrm{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{nG}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{G}}{\\mathrm{n}}-1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f3fa36e41bcd",
+      "subtopic": "electric-power-and-heating-effect-of-current",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In the following circuit, a power of 50 watt is absorbed in the section AB of the circuit. The value of resistance ' $x$ ' is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-f3fa36e41bcd.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$10\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$8\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7e05f416b327",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Resistances in the left gap and right gap of a meter bridge are $10\\Omega$ and $30\\Omega$ respectively. If the resistances in the two gaps are interchanged, the balance point will shift to right by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "30 cm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "40 cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "50 cm",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "60 cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d0f4bda179cf",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "When a galvanometer is shunted by a resistance ' $S$ ', its current capacity increases ' $n$ ' times. If the same galvanometer is shunted by another resistance $\\mathrm{S}'$, its current capacity increases to $\\mathrm{n}'$. The value of $n'$ in terms of $n,S$ and $S'$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{n}+\\mathrm{S}}{\\mathrm{S}'}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{S}(\\mathrm{n}-1)-\\mathrm{S}'}{\\mathrm{S}'}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{(\\mathrm{n}+1)\\mathrm{S}}{\\mathrm{S}'}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{S}(\\mathrm{n}-1)+\\mathrm{S}'}{\\mathrm{S}'}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-21f4175c2e3f",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In a meter bridge experiment, the balance point is obtained if the gaps are closed by $2\\Omega$ and $3\\Omega$. A shunt of $\\mathrm{X}\\Omega$ is added to $3\\Omega$ resistor to shift the null point by 22.5 cm. The value of ' $x$ ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a4de0167501f",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A potentiometer wire of length 1 m is connected in series with $495\\Omega$ resistance and 2 V battery. If $0.2\\mathrm{mV}/\\mathrm{cm}$ is the potential gradient, then the resistance of the potentiometer wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$7\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5\\Omega$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-01d98212985e",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "When a galvanometer is shunted by a resistance ' $s$ ', its current capacity increases ' $n$ ' times. If the same galvanometer is shunted by another resistance ' $s_1$ ', its capacity will increase to ' $n_1$ ' times original current. The value of ' $n_1$ ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\left(\\mathrm{n}+\\mathrm{s}\\right)}{\\mathrm{s}_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{s_1(n-s)-s_1}{s_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{(n+1)s}{s_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{s}(\\mathrm{n}-1)+\\mathrm{s}_1}{{~\\mathrm{s}}_1}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3dbc47dafdb2",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In a Wheatstone's bridge, the resistances in four arms are as shown in the figure. The balancing condition of the bridge is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-3dbc47dafdb2.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{P}}{\\mathrm{Q}}=\\frac{\\mathrm{R}}{\\mathrm{S}_1+\\mathrm{S}_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{P}{Q}=\\frac{R\\left(S_1S_2\\right)}{S_1+S_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{P}{Q}=\\frac{R\\left(S_1+S_2\\right)}{2S_1S_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{P}}{\\mathrm{Q}}=\\frac{\\mathrm{R}\\left(\\mathrm{S}_1+\\mathrm{S}_2\\right)}{\\mathrm{S}_1{~\\mathrm{S}}_2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3e619ab4c7ec",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "When the two known resistances ' $R$ ' and ' $S$ ' are connected in the left and right gaps of a meter bridge respectively, the null point is found at a distance ' $l_1$ ' from the zero end of a meter bridge wire. An unknown resistance ' X ' is now connected in parallel with ' S ' and null point is found at a distance ' $l_2$ ' from zero end of meter bridge wire. The unknown resistance ' X ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{S}l_1\\left(100-l_2\\right)}{100\\left(l_2-l_1\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{S}l_2\\left(100-l_1\\right)}{100\\left(l_1-l_2\\right)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{100\\left(l_2-l_1\\right)}{\\mathrm{Sl}_1\\left(100-l_2\\right)}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{100\\left(l_2-l_1\\right)}{\\mathrm{S}l_2\\left(100-l_1\\right)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7f2f86c64f2e",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In an ammeter, $4\\%$ of the main current is passing through the galvanometer, If shunt resistance is $5\\Omega$, then resistance of galvanometer will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$60\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$120\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$240\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$480\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4ec5f3a0e177",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "In the following circuit, the reading in the ammeter is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-4ec5f3a0e177.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "25.1 mA",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "22.5 mA",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "21.5 mA",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "21.25 mA",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9efbb9ac97d5",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Two identical galvanometers are converted into voltmeter and millivoltmeter. As compared to the series resistance of voltmeter, the series resistance of millivoltmeter will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "equal",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "more",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "less",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d3055d1bdee4",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Potential difference between the points A and B is nearly",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-d3055d1bdee4.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "10 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "14 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "18 V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "20 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ac238b54d0f2",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The scale of a galvanometer is divided into 160 equal divisions. The galvanometer shows full scale deflection of 16 mA and maximum voltage is 80 mV . Now the range is changed so that galvanometer reads 160 V . The required resistance to be connected is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9995\\Omega$ in series.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$4995\\Omega$ in series.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9.5\\times 10^{-3}\\Omega$ in parallel.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4.95\\times 10^{-3}\\Omega$ in parallel.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bcda9a1ffa5e",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If only $5\\%$ of the total current is to be passed through galvanometer of resistance G , then the resistance of the shunt will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{G}}{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{G}}{17}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{G}}{19}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{G}}{21}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4aaba25ad437",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "To determine the internal resistance of a cell with potentiometer, when the cell is shunted by a resistance of $5\\Omega$ the balancing length is 250 cm . When the cell is shunted by $20\\Omega$, the balancing length of potentiometer wire is 400 cm . The internal resistance , of the cell is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$6\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b29d0303ac69",
+      "subtopic": "electric-cell-or-battery",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two cells $E_1$ and $E_2$ having equal e.m.f ' $E$ ' and internal resistances $r_1$ and $r_2\\left(r_1>r_2\\right)$ respectively are connected in series. This combination is connected to an external resistance ' R '. It is observed that the potential difference across the cell $E_1$ becomes zero. The value of $R$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{r}_1-\\mathrm{r}_2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$r_1+r_2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{r_1-r_2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{r_1+r_2}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-786b0d4ef14a",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A null point is obtained at 200 cm on potentiometer wire when cell in secondary circuit is shunted by $5\\Omega$. When a resistance of $15\\Omega$ is used for shunting, null point moves to 300 cm . The internal resistance of the cell is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$6\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f6f8dd52f145",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The potential difference $\\left(V_A-V_B\\right)$ between the points A and B in the given figure is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-f6f8dd52f145.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "6 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "-3 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "9 V",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "3 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-05be1c7f429b",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If the length of the potentiometer wire is increased by keeping constant potential difference across the wire, then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "the null point is obtained at shorter distance.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "the potential gradient is increased.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "the null point is obtained at larger distance.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "there is no change in the null point.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aa4d8311d8ba",
+      "subtopic": "ohms-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The reading of the ammeter in the following circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-aa4d8311d8ba.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6 A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "12 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "9 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fd18d38b9580",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Only $4\\%$ of the total current in the circuit passes through a galvanometer. If the resistance of the galvanometer is G , then the shunt resistance connected to the galvanometer is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{G}}{25}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{G}}{24}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "24 G",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "25 G",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-485b3a1bbcc9",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The length of a potentiometer wire is ' $L$ ' . A cell of e.m.f. $E$ is balanced at a length $\\frac{L}{5}$ from the positive end of the wire. If the length of the wire is increased by $\\frac{L}{2}$, the same cell will give balance point at distance ' $x$ '. The value of ' $x$ ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{5~\\mathrm{L}}{12}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4~\\mathrm{L}}{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3~\\mathrm{L}}{10}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2~\\mathrm{L}}{15}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-893f181fc916",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "$\\text{ The value of current I in the given circuit is }$",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-893f181fc916.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "7 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "8 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "18 A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "10 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-02646ebf4154",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In the circuit shown in the figure, $P\\ne R$. The reading of the galvanometer remains the same with switch ' $S$ ' open or closed. Then",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-02646ebf4154.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{I}_{\\mathrm{Q}}=\\mathrm{I}_{\\mathrm{G}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\mathrm{I}_{\\mathrm{Q}}=\\mathrm{I}_{\\mathrm{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{I}_{\\mathrm{R}}=\\mathrm{I}_{\\mathrm{G}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{I}_{\\mathrm{P}}=\\mathrm{I}_{\\mathrm{G}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8b6af758d3fe",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If an ammeter is to be used in place of a galvanometer then we must connect",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "low resistance in parallel.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "high resistance in series.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "high resistance in parallel.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "low resistance in series.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b81facf72530",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The voltmeter has range 10 V and its internal resistance is $50\\Omega$. To increase the range of voltmeter to 15 V , the resistance which is to be connected is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$125\\Omega$ resistance in parallel",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$125\\Omega$ resistance in series",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25\\Omega$ resistance in parallel",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$25\\Omega$ resistance in series",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b98d59723336",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In the given electrical network, the value of resistance ' $R$ ' when the current in the galvanometer will be zero, is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-b98d59723336.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$7\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ce02955cf730",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "When cell of e.m.f. ' $E_1$ ' is connected to potentiometer wire, the balancing length is ' $l_1$ '. Another cell of e.m.f. ' $E_2$ ' $\\left(E_1>E_2\\right)$ is connected so that two cells oppose each other, the balancing length is ' $l_2$ '. The ratio $E_1:E_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{l_1}{l_1+l_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{l_1}{l_1-l_2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{l_1-l_2}{l_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{l_1+l_2}{l_1-l_2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d2e0d0593146",
+      "subtopic": "combination-of-resistances",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In the given circuit, current flowing through the circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-d2e0d0593146.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "2 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2.5 A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5 A",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "4 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-06d93a8b57f9",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "In the following circuit, the current through $6\\Omega$ resistor is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-06d93a8b57f9.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{5}~\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{5}~\\mathrm{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}~\\mathrm{A}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3}{4}~\\mathrm{A}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-db8afb37ee66",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The equivalent resistance of the following circuit when no current flows in the resistance of $5\\Omega$ is nearly",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-db8afb37ee66.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$13\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$17\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$19\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$21\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-78750c0565be",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The length of a potentiometer wire is ' $L$ '. A cell of e.m.f. ' $E$ ' is balanced at a length $\\frac{L}{4}$ from the positive end of the wire. If the length of the original wire is increased by $\\frac{\\mathrm{L}}{3}$, then using the same cell null point is obtained at",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{L}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{L}}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{L}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3L}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c3ad7adafeaa",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The value of the shunt resistance that allows $10\\%$ of the main current through the galvanometer of $99\\Omega$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$9\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$11\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$13\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$15\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-feaf4a1d12b1",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The current (I) drawn from the battery in the given circuit is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-feaf4a1d12b1.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "0.2 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.5 A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.6 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.8 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d14eb0757676",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two batteries of e.m.f 4 V and 8 V with internal resistance $1\\Omega$ and $2\\Omega$ respectively are connected in a circuit with a resistance of $9\\Omega$ as shown in the figure. The current and potential difference between the points ' P ' and ' Q ' is $\\mathrm{R}=9\\Omega$",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-d14eb0757676.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{3}~\\mathrm{A}$ and 4 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{3}$ A and 3 V",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}$ A and 5 V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{6}~\\mathrm{A}$ and 3 V",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e144e2a93c9e",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "With a resistance ' X ' connected in series with a galvanometer of resistance $100\\Omega$, it acts as a voltmeter of range $0-15~\\mathrm{V}$. To double the range, a resistance of $1500\\Omega$ is to be connected in series with ' X '. The value of ' X ' in ohm is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "900",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1100",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1400",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1600",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-019b35d36630",
+      "subtopic": "galvanometer-voltmeter-and-ammeter",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "When a resistance of $100\\Omega$ is connected in series with a galvanometer of resistance ' G ', its range is ' $V$ '. To double its range, a resistance of $1000\\Omega$ is connected in series. The value of ' $G$ ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$400\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$800\\Omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1000\\Omega$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1200\\Omega$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6d548c79458d",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The potentiometer wire is 5 m long and potential difference of 4 V is maintained between the ends. The e.m.f. of the cell which balances against a length of 200 cm of the potentiometer wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.4 V",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.8 V",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.2 V",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1.6 V",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-281baafbdc88",
+      "subtopic": "kirchhoffs-circuit-laws",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Kirchhoff's voltage law and current law are based (respectively) on the conservation of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "momentum, charge",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "energy, charge",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "charge, momentum",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "charge, energy",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-82fc4338443e",
+      "subtopic": "wheatstone-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In the following circuit, current through ACB if each resistance $\\mathrm{R}=4\\Omega$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/current-electricity/PYQ-PHY-82fc4338443e.png",
+        "alt": "Figure for this Current Electricity question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2 A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "3 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5bb6348dcba7",
+      "subtopic": "meter-bridge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "In metre-bridge experiment the balance point is obtained if the gaps are closed by $2\\Omega$ and $3\\Omega$. A shunt of $\\mathrm{x}\\Omega$ is added to $3\\Omega$ resistor to shift the balance point by 22.5 cm . The value of x is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-906234697204",
+      "subtopic": "potentiometer",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "A 2.5 V battery is connected to a potentiometer wire. A cell of e.m.f. 1.08 V is balanced by the voltage drop across 2.16 m of wire. The length of the potentiometer wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2.5 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5 m",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "6 m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-PHY-7e044de1e281",
       "subtopic": "meter-bridge",

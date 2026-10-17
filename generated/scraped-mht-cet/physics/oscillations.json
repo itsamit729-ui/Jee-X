@@ -24,10 +24,5188 @@
       "slug": "some-systems-of-executing-shm",
       "name": "Some systems of executing shm",
       "position": 2
+    },
+    {
+      "slug": "forced-damped-oscillations-and-resonance",
+      "name": "Forced damped oscillations and resonance",
+      "position": 3
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-PHY-6acfc3c274e3",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "A simple pendulum of length $L$ has mass $m$ and it oscillates freely with amplitude $A$. At extreme position, its potential energy is ($g=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{mgA}{L}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{mgA}{2l}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{mgA^2}{L}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{mgA^2}{2L}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a90cb7041c56",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "For a particle performing SHM when displacement is $x$, the potential energy and restoring force acting on it is denoted by $E$ and $F$, respectively. The relation between $x,E$ and $F$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{E}{F}+x=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2E}{F}-x=0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2E}{F}+x=0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{E}{F}-x=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-144d3964e6ab",
+      "subtopic": "forced-damped-oscillations-and-resonance",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "The damping force of an oscillator is directly proportional to the velocity. The unit of constant of proportionality is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{kg}~\\mathrm{ms}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{kg}~\\mathrm{s}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{kg}~\\mathrm{ms}^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "kg-s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-31f88d3d257b",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A particle performs simple harmonic motion with period of 3 s . The time taken by it to cover a distance equal to half the amplitude from mean position is [$\\sin 30^{\\circ}=0.5$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}~\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{4}~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}~\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4c1740d4200d",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A simple pendulum of length $I$ has a bob of mass $m$. It executes SHM of small amplitude A. The maximum tension in the string is ($g=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$mg$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$mg\\left(\\frac{A^2}{I^2}+1\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2 mg",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$mg\\left(\\frac{A}{I}+1\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-56e55426498e",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A block of mass $m$ attached to one end of the vertical spring produces extension $x$. If the block is pulled and released, the periodic time of oscillation is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi\\sqrt{\\frac{x}{4g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi\\sqrt{\\frac{2x}{g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi\\sqrt{\\frac{x}{2g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi\\sqrt{\\frac{x}{g}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-48e0b8c6ec27",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "Two bodies $A$ and $B$ of equal mass are suspended from two separate massles springs of force constant $k_1$ and $k_2$, respectively. The bodies oscillate vertically such that their maximum velocities are equal. The ratio of the amplitudes of body $A$ to that of body $B$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{k_2}{k_1}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{k_2}{k_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{k_1}{k_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{k_1}{k_2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7f4617193a0a",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A body of mass 64 g is made to oscillate turn by turn on two different springs $A$ and $B$. Spring $A$ and $B$ has force constant $4\\frac{~\\mathrm{N}}{~\\mathrm{m}}$ and $16\\frac{~\\mathrm{N}}{~\\mathrm{m}}$ respectively. If $T_1$ and $T_2$ are period of oscillations of springs $A$ and $B$ respectively, then $\\frac{T_1+T_2}{T_1-T_2}$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:1$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fed1ce209584",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A bob of a simple pendulum has mass $m$ and is oscillating with an amplitude $a$. If the length of the pendulum is $L$, then the maximum tension in the string is $\\left[\\cos 0^{\\circ}=1\\right.$, $g=$ acceleration due to gravity]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$mg\\left[1+{\\left(\\frac{a}{L}\\right)}^2\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$mg\\left[1-{\\left(\\frac{L}{a}\\right)}^2\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$mg\\left[1+{\\left(\\frac{L}{a}\\right)}^2\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$mg\\left[1-{\\left(\\frac{a}{L}\\right)}^2\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4c6e45f0d014",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Two particles $\\mathrm{P}$ and $\\mathrm{Q}$ performs S.H.M. of same amplitude and frequency along the same straight line. At a particular instant, maximum distance between two particles is $\\sqrt{2}$ a. The initial phase difference between them is\n$\\left[\\sin^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)=\\cos^{-1}\\left(\\frac{1}{\\sqrt{2}}\\right)=\\frac{\\pi}{4}\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-93d61d9f59eb",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A particle of mass 5 g is executing S.H.M. with an amplitude 0.3 m and time period $\\frac{\\pi}{5}$s. The maximum value of the force acting on the particle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.15 N",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "4 N",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5 N",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.3 N",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-962c3113c0d3",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A mass '$\\mathrm{m}_1$' is suspended from a spring of negligible mass. A spring is pulled slightly in downward direction and released, mass performs S.H.M. of period '$\\mathrm{T}_1$'. If the mass is increased by '$\\mathrm{m}_2$', the time period becomes '$\\mathrm{T}_2$'. The ratio $\\frac{\\mathrm{m}_2}{{~\\mathrm{m}}_1}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{T}_1^2+\\mathrm{T}_2^2}{{~\\mathrm{T}}_1^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{T}_1-\\mathrm{T}_2}{{~\\mathrm{T}}_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{T}_2^2-\\mathrm{T}_1^2}{{~\\mathrm{T}}_1^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{T_1^2-T_2^2}{T_1^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-089cae40e14f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A particle executes S.H.M. of period $\\frac{2\\pi}{\\sqrt{3}}$ second along a straight line $4~\\mathrm{cm}$ long. The displacement of the particle at which the velocity is numerically equal to the acceleration is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1~\\mathrm{cm}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3~\\mathrm{cm}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-802bf6f9801b",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A particle is suspended from a vertical spring which is executing S.H.M. of frequency $5~\\mathrm{Hz}$. The spring is unstretched at the highest point of oscillation. Maximum speed of the particle is $(\\mathrm{g}=10~\\mathrm{m}/\\mathrm{s}^2)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\pi}\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{4\\pi}\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2\\pi}\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pi~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fcd8a79adf5e",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A body performs S.H.M. under the action of force '$\\mathrm{F}_1$' with period '$\\mathrm{T}_1$' second. If the force is changed to '$\\mathrm{F}_2$' it performs S.H.M. with period '$\\mathrm{T}_2$' second. If both forces '$\\mathrm{F}_1$' and '$\\mathrm{F}_2$' act simultaneously in the same direction on the body, the period in second will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{T_1+T_2}{T_1T_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{T_1^2+T_2^2}{T_1T_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{T}_1{~\\mathrm{T}}_2}{\\sqrt{\\mathrm{T}_1^2+\\mathrm{T}_2^2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{T_1T_2}{T_1+T_2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1672b0bb8d17",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A particle is performing S.H.M. with maximum velocity '$v$'. If the amplitude is tripled and periodic time is doubled then maximum velocity will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1.5~\\mathrm{v}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$3~\\mathrm{v}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2~\\mathrm{v}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{v}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b1c9b175bd3c",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A pendulum clock is running fast. To correct its time, we should",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "reduce the mass of the bob.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "reduce the amplitude of oscillation.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increase the length of the pendulum.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "reduce the length of the pendulum.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fc839cde5bd7",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A child is sitting on a swing which performs S.H.M. It has minimum and maximum heights from ground $0.75~\\mathrm{m}$ and $2~\\mathrm{m}$ respectively. Its maximum speed will be $\\left[\\mathrm{g}=10\\frac{\\mathrm{m}}{\\mathrm{s}^2}\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{1.25}~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{12.5}~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$25~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bfb867c3a0d4",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A mass $0.4~\\mathrm{kg}$ performs S.H.M. with a frequency $\\frac{16}{\\pi}\\mathrm{Hz}$. At a certain displacement it has kinetic energy $2~\\mathrm{J}$ and potential energy $1.2~\\mathrm{J}$. The amplitude of oscillation is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.15~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.125~\\mathrm{m}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$0.075~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.1~\\mathrm{m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f85f09f8e95c",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If the amplitude of linear S.H.M. is decreased then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "its period and total energy will increase.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "its period will increase and total energy will decrease",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "its period and total energy will decrease.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "its period will not change but total energy will decrease",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-25712146ca39",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "'$n$' waves are produced on a string in 1 second. When the radius of the string is doubled, keeping tension same, the number of waves produced in 1 second for the same harmonic will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\mathrm{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{n}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{n}}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2}\\mathrm{n}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-59336284f0ed",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A body of mass '$m$' performs linear S.H.M. given by equation $x=P\\sin\\omega t+Q\\sin\\left(\\omega t+\\frac{\\pi}{2}\\right)$. The total energy of the particle at any instant is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}~\\mathrm{m}\\omega^2\\mathrm{PQ}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2}\\frac{\\mathrm{m}\\omega^2}{\\mathrm{P}^2\\mathrm{Q}^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2}m\\omega^2\\left(P^2+Q^2\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}m\\omega^2p^2Q^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9792a131fd88",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A particle connected to the end of a spring executes S.H.M. with period '$T_1$'. While the corresponding period for another spring is '$\\mathrm{T}_2$'. If the period of oscillation with two springs in series is 'T', then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{T}=\\sqrt{\\mathrm{T}_1^2+\\mathrm{T}_2^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{T}=\\sqrt{\\mathrm{T}_2^2-\\mathrm{T}_1^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{T}=\\mathrm{T}_1+\\mathrm{T}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{T}=\\mathrm{T}_1-\\mathrm{T}_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0e1425061777",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A body is performing S.H.M. of amplitude 'A'. The displacement of the body from a point where kinetic energy is maximum to a point where potential energy is maximum, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm\\mathrm{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\pm\\frac{\\mathrm{A}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pm\\frac{\\mathrm{A}}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3f0fce8f9b4f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A particle performing S.H.M. when displacement is '$x$', the potential energy and restoring force acting on it are denoted by '$E$' and '$F$' respectively. The relation between $x,E$ and $F$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2E}{F}-x^2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\mathrm{E}}{\\mathrm{F}}+\\mathrm{x}^2=0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2E}{F}+x=0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2E}{F}-x=0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dc85c85ce6d7",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A particle executing S.H.M starts from the mean position. Its amplitude is 'A' and time period '$\\mathrm{T}$'. At what displacement its speed is one-fourth of the maximum speed?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{A}}{\\sqrt{15}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{A}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4~\\mathrm{A}}{15}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{A}\\sqrt{15}}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1aab9013745b",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A body executes SHM under the action of force '$\\mathrm{F}_1$' with time period '$\\mathrm{T}_1$'. If the force is changed to '$\\mathrm{F}_2$', it executes SHM with period '$\\mathrm{T}_2$'. If both the forces '$\\mathrm{F}_1$' and '$\\mathrm{F}_2$' act simultaneously in the same direction on the body, its time period is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{\\mathrm{T}_1^2-\\mathrm{T}_2^2}}{{~\\mathrm{T}}_1{~\\mathrm{T}}_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{T_1T_2}{\\sqrt{T_1^2-T_2^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\sqrt{T_1^2+\\mathrm{T}_2^2}}{{~\\mathrm{T}}_1{~\\mathrm{T}}_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{T}_1{~\\mathrm{T}}_2}{\\sqrt{\\mathrm{T}_1^2+\\mathrm{T}_2^2}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1eb27afc7d3f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A bob of simple pendulum of mass 'm' perform $\\mathrm{SHM}$ with amplitude '$\\mathrm{A}$' and period 'T'. Kinetic energy of pendulum of displacement $x=\\frac{A}{2}$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2~\\mathrm{m}\\pi^2A}{3{~\\mathrm{T}}^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\mathrm{m}\\pi^2\\mathrm{A}}{2\\mathrm{T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2~\\mathrm{m}\\pi\\mathrm{A}^2}{3~\\mathrm{T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3~\\mathrm{m}\\pi^2{~\\mathrm{A}}^2}{2{~\\mathrm{T}}^2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-774d24427a5e",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "An object executes SHM along $x$-axis with amplitude $0.06~\\mathrm{m}$. At certain distance '$\\mathrm{x}$' metre from mean position, it has kinetic energy $10~\\mathrm{J}$ and potential energy $8~\\mathrm{J}$. the distance '$\\mathrm{x}$' will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.08 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.02 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.04 m",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "0.06 m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-305e4fdbce77",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A particle performing linear S.H.M. of amplitude $0.1~\\mathrm{m}$ has displacement $0.02~\\mathrm{m}$ and acceleration $0.5~\\mathrm{m}/\\mathrm{s}^2$. The maximum velocity of the particle in $\\mathrm{m}/\\mathrm{s}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.05",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.50",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.01",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.25",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d7c53b428f1b",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Two identical springs of constant '$\\mathrm{K}$' are connected in series and parallel in shown in figure. A mass '$\\mathrm{M}$' is suspended from them. The ratio of their frequencies is series to parallel combination will be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-d7c53b428f1b.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:\\sqrt{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f3e3d0912e84",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A body is executing S.H.M. under the action of force having maximum magntude $50~\\mathrm{N}$. When its energy is half kinetic and half potential; the magnitude of the force acting on the particle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{25}{\\sqrt{2}}~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$50~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$25~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$25\\sqrt{2}~\\mathrm{N}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-059fa1da49f3",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The displacement of a particle performing S.H.M. is given by $x=5\\sin(3t+3)$, where $x$ is in $\\mathrm{cm}$ and $t$ is in second. The maximum acceleration of the particle will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$15~\\mathrm{cm}{~\\mathrm{s}}^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$30~\\mathrm{cm}{~\\mathrm{s}}^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$45~\\mathrm{cm}{~\\mathrm{s}}^{-2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$90~\\mathrm{cm}{~\\mathrm{s}}^{-2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0c907d54543b",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "In a medium, the phase difference between two particles separated by a distance '$x$' is ${\\left(\\frac{\\pi}{5}\\right)}^{\\text{c }}$. If the frequency of the oscillation of particles is $25~\\mathrm{Hz}$ and the velocity of propagation of the waves is $75~\\mathrm{m}/\\mathrm{s}$, then the value of $x$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.4 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.1 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.2 m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.3 m",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bf6ee3f41d5f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "A particle starts oscillating simple harmonically from its mean position with time period '$T$'. At time $t=\\frac{T}{12}$, the ratio of the potential energy to kinetic energy of the particle is $\\left(\\sin 30^{\\circ}=\\cos 60^{\\circ}=0.5,\\cos 30^{\\circ}=\\sin 60^{\\circ}=\\sqrt{3}/2\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:3$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f19d2ea9e141",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "The time taken by a particle executing simple harmonic motion of period '$\\mathrm{T}$', to move from the mean position to half the maximum displacement is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{T}}{12}~\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{T}}{2}~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{T}}{4}~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{T}}{6}~\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-69227428d814",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The amplitude of a particle executing S.H.M. is $3~\\mathrm{cm}$. The displacement at which its kinetic energy will be $25\\%$ more than the potential energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2~\\mathrm{cm}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4~\\mathrm{cm}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-937d1dfe1cc2",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A simple harmonic progressive wave is represented by $y=A\\sin(100\\pi t+3x)$. The distance between two points on the wave at a phase difference of $\\frac{\\pi}{3}$ radian is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{8}~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{9}~\\mathrm{m}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{6}~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{3}~\\mathrm{m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a7cdf634d2c6",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A body is executing a linear S.H.M. Its potential energies at the displacement '$\\mathrm{x}$' and '$\\mathrm{y}$' are '$\\mathrm{E}_1$' and '$E_2$' respectively. Its potential energy at displacement $(\\mathrm{x}+\\mathrm{y})$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{E}_1+\\mathrm{E}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${\\left(\\sqrt{\\mathrm{E}_1}+\\sqrt{\\mathrm{E}_2}\\right)}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\quad\\mathrm{E}_1-\\mathrm{E}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\sqrt{\\mathrm{E}_2}-\\sqrt{\\mathrm{E}_1}\\right)}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9898178a0df5",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The time period of a simple pendulum inside a stationary lift is '$T$'. When the lift starts accelerating upwards with an acceleration $\\left(\\frac{\\mathrm{g}}{3}\\right)$, the time period of the pendulum will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{5}}{2}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{3}}{2}~\\mathrm{T}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2~\\mathrm{T}}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2~\\mathrm{T}}{\\sqrt{5}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f1dd38090c10",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "For a particle executing S.H.M., its potential energy is 8 times its kinetic energy at certain displacement '$x$' from the mean position. If '$A$' is the amplitude of S.H.M the value of '$x$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{A}\\sqrt{2}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{A}\\sqrt{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\sqrt{2}~\\mathrm{A}}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{A}}{\\sqrt{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2712729d88d2",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The upper end of the spring is fixed and a mass '$m$' is attached to its lower end. When mass is slightly pulled down and released, it oscillates with time period 3 second. If mass '$\\mathrm{m}$' is increased by $1~\\mathrm{kg}$, the time period becomes 5 second. The value of '$\\mathrm{m}$' is (mass of spring is negligible)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{8}~\\mathrm{kg}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{5}{9}~\\mathrm{kg}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{8}{13}~\\mathrm{kg}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9}{16}~\\mathrm{kg}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-22f4b59eef85",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Four massless springs whose force constants are $2~\\mathrm{K},2~\\mathrm{K},~\\mathrm{K}$ and $2~\\mathrm{K}$ respectively are attached to a mass $\\mathrm{M}$ kept on a frictionless plane as shown in figure. If mass $M$ is displaced in horizontal direction then frequency of oscillating system is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-22f4b59eef85.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2\\pi}\\sqrt{\\frac{\\mathrm{K}}{4\\mathrm{M}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2\\pi}\\sqrt{\\frac{4~\\mathrm{K}}{\\mathrm{M}}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2\\pi}\\sqrt{\\frac{\\mathrm{K}}{7\\mathrm{M}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2\\pi}\\sqrt{\\frac{7~\\mathrm{K}}{\\mathrm{M}}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c3ee4c2e27ec",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A simple pendulum performs simple harmonic motion about $\\mathrm{x}=0$ with an amplitude '$\\mathrm{a}$' and time period '$T$'. The speed of the pendulum at $x=\\frac{a}{2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi\\mathrm{a}}{\\mathrm{T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\pi^2\\mathrm{a}}{\\mathrm{T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi\\mathrm{a}\\sqrt{3}}{~\\mathrm{T}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi\\mathrm{a}\\sqrt{3}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9aebdecc5ccb",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "In a stationary lift, time period of a simple pendulum is '$\\mathrm{T}$'. The lift starts accelerating downwards with acceleration $\\left(\\frac{\\mathrm{g}}{4}\\right)$, then the time period of the pendulum will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\sqrt{3}}{2}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2}{\\sqrt{3}}~\\mathrm{T}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3}{4}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4}{3}~\\mathrm{T}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a937bc2aceed",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A particle starts from mean position and performs S.H.M. with period 4 second. At what time its kinetic energy is $50\\%$ of total energy?\n$\\left(\\cos 45^{\\circ}=\\frac{1}{\\sqrt{2}}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.1 s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.2 s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.4 s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.5 s",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2b2ed872ab81",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A body of mass $0.04~\\mathrm{kg}$ executes simple harmonic motion (SHM) about $\\mathrm{x}=0$ under the influence of force $\\mathrm{F}$ as shown in graph. The period of oscillation is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-2b2ed872ab81.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.2\\pi\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{2}~\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4d0e2a7c787f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A simple pendulum has a time period '$T$' in air. Its time period when it is completely immersed in a liquid of density one eighth the density of the material of bob is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\left(\\sqrt{\\frac{7}{8}}\\right)\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\left(\\sqrt{\\frac{5}{8}}\\right)\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\sqrt{\\frac{3}{8}}\\right)\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\left(\\sqrt{\\frac{8}{7}}\\right)\\mathrm{T}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b86cfde55c93",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Under the influence of force $F_1$ the body oscillates with a period $T_1$ and due to another force $F_2$ body oscillates with period $T_2$. If both forces acts simultaneously, then the resultant period is (consider displacement is same in all three cases)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$T=\\sqrt{\\frac{T_1^2+T_2^2}{T_1^2T_2^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$T=\\sqrt{\\frac{T_1^2T_2^2}{T_1^2+T_2^2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$T=\\sqrt{\\frac{T_1^2}{T_2^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$T=\\sqrt{T_1^2+T_2^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bf8b7ea1a317",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A mass $M$ is suspended from a light spring. An additional mass $M_1$ added extends the spring further by a distance $x$. Now, the combined mass will oscillate on the spring with period $T=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi{\\left[\\left(\\frac{M_1g}{x\\left(M+M_1\\right)}\\right)\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi{\\left[\\frac{\\left(M+M_1\\right)x}{M_1g}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\left(\\frac{\\pi}{2}\\right){\\left[\\left(\\frac{M_1g}{x\\left(M+M_1\\right)}\\right)\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi{\\left[\\left(\\frac{M+M_1}{M_1gx}\\right)\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2974063ba6b6",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The bob of simple pendulum of length '$L$' is released from a position of small angular displacement $\\theta$. Its linear displacement at time '$\\mathrm{t}$' is ( $\\mathrm{g}=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$L\\theta\\cos\\left[\\sqrt{\\frac{g}{L}}\\cdot t\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$L\\theta\\sin\\left[2\\pi\\sqrt{\\frac{g}{L}}\\cdot t\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$L\\theta\\cos\\left[2\\pi\\sqrt{\\frac{g}{L}}\\cdot t\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$L\\theta\\sin\\left[\\sqrt{\\frac{g}{L}}\\cdot t\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8943b1161953",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The displacement of a particle executing S.H.M. is $x=\\mathrm{a}\\sin(\\omega t-\\varphi)$. Velocity of the particle at time $\\mathrm{t}=\\frac{\\varphi}{\\omega}$ is $\\left(\\cos 0^{\\circ}=1\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\omega\\cos\\varphi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{a}\\omega$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\omega\\cos 2\\varphi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\mathrm{a}\\omega\\cos 2\\varphi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8b3f55e38b81",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A simple pendulum of length '$l$' and a bob of mass '$\\mathrm{m}$' is executing S.H.M. of small amplitude '$A$'. The maximum tension in the string will be ($\\mathrm{g}=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2~\\mathrm{mg}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{mg}\\left[1+{\\left(\\frac{\\mathrm{A}}{\\mathcal{l}}\\right)}^2\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{mg}{\\left[1+\\left(\\frac{\\mathrm{A}}{\\mathcal{l}}\\right)\\right]}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$mg\\left[1+\\left(\\frac{\\mathrm{A}}{\\mathcal{l}}\\right)\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a8c17a44dfc6",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A uniform circular disc of mass $12~\\mathrm{kg}$ is held by two identical springs. When the disc is slightly pressed down and released, it executes S.H.M. of period 2 second. The force constant of each spring is (nearly) (Take $\\pi^2=10$ )",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-a8c17a44dfc6.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "230 Nm${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "120 Nm${}^{-1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "60 Nm${}^{-1}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "30 Nm${}^{-1}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bc2ca1d1f877",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A block of mass '$M$' rests on a piston executing S.H.M. of period one second. The amplitude of oscillations, so that the mass is separated from the piston, is (acceleration due to gravity, $\\mathrm{g}=10{~\\mathrm{ms}}^{-2},\\pi^2=10$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.25 m",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "0.5 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1 m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\infty$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f6e1bc97e7ac",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A light spring is suspended with mass $m_1$ at its lower end and its upper end fixed to a rigid support. The mass is pulled down a short distance and then released. The period of oscillation is $T$ second. When a mass $m_2$ is added to $m_1$ and the system is made to oscillate, the period is found to be $\\frac{3}{2}T$. The ratio $m_1:m_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4:5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$5:6$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-29cbcac1b856",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The maximum velocity of a particle performing S.H.M. is '$\\mathrm{V}$'. If the periodic time is made ${\\left(\\frac{1}{3}\\right)}^{\\text{rd }}$ and the amplitude is doubled, then the new maximum velocity of the particle will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{V}}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3~\\mathrm{V}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3~\\mathrm{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6~\\mathrm{V}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-94c664536b8d",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A rubber ball filled with water, having a small hole is used as the bob of a simple pendulum. The time period of such a pendulum",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "is a constant.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "decreases with time.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "increases with time.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "first increases and then decreases, finally having same value as at the beginning.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1c03220cee7e",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two S.H.Ms. are represented by equations $\\mathrm{y}_1=0.1\\sin\\left(100\\pi\\mathrm{t}+\\frac{\\pi}{3}\\right)$ and $\\mathrm{y}_2=0.1\\cos(100\\pi\\mathrm{t})$ The phase difference between the speeds of the two particles is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\frac{\\pi}{6}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$+\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$-\\frac{\\pi}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-65afd8f0b687",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A particle is vibrating in S.H.M. with an amplitude of $4~\\mathrm{cm}$. At what displacement from the equilibrium position is its energy half potential and half kinetic?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{2}~\\mathrm{cm}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e36f34134cd1",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A spring has a certain mass suspended from it and its period for vertical oscillations is '$T_1$'. The spring is now cut in to two equal halves and the same mass is suspended from one of the halves. The period of vertical oscillations is now '$\\mathrm{T}_2$'. The ratio $\\mathrm{T}_1/\\mathrm{T}_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-89615dbdc00a",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A particle performing S.H.M. with maximum velocity ' $V$ '. If the amplitude double and periodic time is made, ${\\left(\\frac{1}{3}\\right)}^{\\text{rd }}$ then the maximum velocity is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6V",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{V}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3V}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2~\\mathrm{V}}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a20da7e3f82d",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Let ' $l_1$ ' be the length of simple pendulum. Its length changes to ' $l_2$ ' to increase the periodic time by $20\\%$. The ratio $\\frac{l_2}{l_1}=$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.22",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1.33",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "1.44",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1.55",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-031d6e6cd27a",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A particle starts oscillating simple harmonically from its equilibrium position with time period ' T '. What is the ratio of potential energy to kinetic energy of the particle at time $t=\\frac{T}{12}$ ? $\\left(\\sin\\left(\\frac{\\pi}{6}\\right)=\\frac{1}{2}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:3$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b37f5561aecd",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A particle performs linear S.H.M. When the displacement of the particle from mean position is 3 cm and 4 cm , corresponding velocities are $8~\\mathrm{cm}/\\mathrm{s}$ and $6~\\mathrm{cm}/\\mathrm{s}$ respectively. Its periodic time is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pi\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4\\pi~\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d4febcfebe0d",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A simple pendulum of length ' $l$ ' has a brass bob attached at its lower end. It's period is ' T '. A steel bob of the same size, having density ' $x$ ' times that of brass, replaces the brass bob. Its length is then so changed that the period becomes ' 2 T '. What is the new length?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4lx$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4l}{\\mathrm{x}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4l$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2l$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1594e13d01cd",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A simple pendulum of length ' $L$ ' has mass ' $M$ ' and it oscillates freely with amplitude ' $A$ '. At extreme position, its potential energy is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{MgA}^2}{~\\mathrm{L}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\mathrm{MgA}^2}{~\\mathrm{L}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{MgA}}{2~\\mathrm{L}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{MgA}^2}{2~\\mathrm{L}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8a9dfabd65cf",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A particle performing S.H.M. starts from equilibrium position and its time period is 12 second. After 2 seconds its velocity is $\\pi\\mathrm{m}/\\mathrm{s}$. Amplitude of the oscillation is $\\left[\\sin 30^{\\circ}=\\cos 60^{\\circ}=0\\cdot 5,\\sin 60^{\\circ}=\\cos 30^{\\circ}=\\sqrt{3}/2\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "6 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "12 m",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$12\\sqrt{3}~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6\\sqrt{3}~\\mathrm{m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e0e67c8aa895",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A particle performs linear S.H.M. At a particular instant, velocity of the particle is ' $u$ ' and acceleration is ' $\\mathrm{a}_1$ ' while at another instant velocity is ' $v$ ' and acceleration is ' $a_2$ ' $\\left(0<a_1<a_2\\right)$. The distance between the two positions is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{v^2-u^2}{a_1-a_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{v^2+u^2}{a_1+a_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{u^2+v^2}{a_1-a_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{u^2-v^2}{a_1+a_2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8268be47bb55",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "All the springs in fig. (a), (b) and (c) are identical, each having force constant K . Mass attached to each system is ' $m$ '. If $T_a,T_b$ and $T_c$ are the time periods of oscillations of the three systems respectively, then",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-8268be47bb55.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{T}_{\\mathrm{a}}=\\sqrt{2}{~\\mathrm{T}}_{\\mathrm{b}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{T}_{\\mathrm{a}}=\\frac{\\mathrm{T}_{\\mathrm{c}}}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$T_b=2T_a$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$T_b=2T_c$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c06e6caee221",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A particle is performing S.H.M. about its mean position with an amplitude ' $a$ ' and periodic time ' $T$ '. The speed of the particle when its displacement from mean position is $\\frac{a}{3}$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\pi\\mathrm{a}}{\\mathrm{T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4\\sqrt{2}\\pi\\mathrm{a}}{3~\\mathrm{T}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4\\pi^2a}{3~\\mathrm{T}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}\\pi^2a}{2~\\mathrm{T}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c6952c873d40",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A piece of wood has length, breadth and height, ' $a$ ', ' $b$ ' and ' $c$ ' respectively. Its relative density, is ' $d$ '. It is floating in water such that the side ' $a$ ' is vertical. It is pushed down a little and released. The time period of S.H.M. executed by it is ($\\mathrm{g}=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi\\sqrt{\\frac{abc}{g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi\\sqrt{\\frac{\\mathrm{bc}}{\\mathrm{dg}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi\\sqrt{\\frac{g}{da}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi\\sqrt{\\frac{\\mathrm{ad}}{\\mathrm{g}}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2db4a618b7b4",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Starting from mean position, a body oscillates simple harmonically with a period ' $T$ '. After what time will its kinetic energy be $75\\%$ of the total energy? $\\left(\\sin 30^{\\circ}=0.5\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{T}}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{T}}{12}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{T}}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{T}}{24}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3a2e66aa62f1",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A horizontal platform with a small object placed on it executes a linear S.H.M. in the vertical direction. The amplitude of oscillation is 40 cm . What should be the least period of these oscillations, so that the object is not detached from the platform? [Take $\\mathrm{g}=10~\\mathrm{m}/\\mathrm{s}^2$]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.2\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.3\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.4\\pi~\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.5\\pi~\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-52dc2566be68",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The maximum velocity of a particle, executing S.H.M. with an amplitude 7 mm is $4.4{~\\mathrm{ms}}^{-1}$ The period of oscillation is $\\left[\\pi=\\frac{22}{7}\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "100 s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "10 s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.1 s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.01 s",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5363aa7c5326",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The motion of a particle is described by the equation $a=-bx$ where ' $a$ ' is the acceleration, x is the displacement from the equilibrium position and b is a constant. The periodic time will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\pi}{~\\mathrm{b}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\pi}{\\sqrt{b}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi\\sqrt{b}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{\\frac{\\pi}{b}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-cc983e204fbb",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For a particle executing S.H.M. having amplitude A, the speed of the particle is ${\\left(\\frac{1}{3}\\right)}^{\\text{rd }}$ of its maximum speed when the displacement from the mean position is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3~\\mathrm{A}}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2~\\mathrm{A}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\sqrt{2}}{3}~\\mathrm{A}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{2}}{3}~\\mathrm{A}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-519888f2ae16",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A particle executing S.H.M. has velocities ' $\\mathrm{V}_1$ ' and ' $\\mathrm{V}_2$ ' at distances ' $x_1$ ' and ' $x_2$ ' respectively, from the mean position. Its frequency is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2\\pi}\\sqrt{\\frac{V_1^2-V_2^2}{x_1^2-x_2^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi\\sqrt{\\frac{x_1^2-x_2^2}{v_1^2-V_2^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{2\\pi}\\sqrt{\\frac{V_2^2-V_1^2}{x_1^2-x_2^2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi\\sqrt{\\frac{\\mathrm{x}_1^2-\\mathrm{x}_2^2}{{~\\mathrm{V}}_2^2-\\mathrm{V}_1^2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2aaae9dcd9fe",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The bob of a pendulum of length ' $l$ ' is pulled aside from its equilibrium position through an angle ' $\\theta$ ' and then released. The bob will then pass through its equilibrium position with speed ' $v$ ', where ' $v$ ' equal to ( $g=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{2gl(1-\\cos\\theta)}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2~\\mathrm{g}l(1+\\sin\\theta)}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2gl(1-\\sin\\theta)}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2~\\mathrm{g}l(1+\\cos\\theta)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6f5c0c7f6526",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The kinetic energy of a particle, executing simple harmonic motion is 16 J when it is in mean position. If amplitude of motion is 25 cm and the mass of the particle is 5.12 kg , the period of oscillation is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{5}~\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$20\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$5\\pi~\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a5d0065fe10d",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A particle performs linear S.H.M. At a particular instant, velocity of the particle is ' $u$ ' and acceleration is ' $\\alpha$ ' while at another instant, velocity is ' $v$ ' and acceleration is ' $\\beta$ ' $(0<\\alpha<\\beta)$. The distance between the two positions is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{u^2-v^2}{\\alpha+\\beta}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{u^2+v^2}{\\alpha+\\beta}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{u^2-v^2}{\\alpha-\\beta}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{u^2+v^2}{\\alpha-\\beta}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5bbec0c26279",
+      "subtopic": "forced-damped-oscillations-and-resonance",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A particle is performing simple harmonic motion and if the oscillations are damped oscillations then the angular frequency is given by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{k}{m}+{\\left(\\frac{b}{2m}\\right)}^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{k}}{\\mathrm{m}}+{\\left(\\frac{\\mathrm{b}}{2~\\mathrm{m}}\\right)}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{k}{m}-{\\left(\\frac{b}{2m}\\right)}^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{k}}{\\mathrm{m}}-{\\left(\\frac{\\mathrm{b}}{2~\\mathrm{m}}\\right)}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8419d7cf37a7",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Choose the correct answer. When a point of suspension of pendulum is moved vertically upward with acceleration ' $a$ ', its period of oscillation",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "decreases",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "increases",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "remains same",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "some times increases and some times decreases",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8c9aff3f5d8b",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Three masses $500~\\mathrm{g},300~\\mathrm{g}$ and 100 g are suspended at the end of spring as shown in figure and are in equilibrium. When the 500 g mass is removed, the system oscillates with a period of 3 second. When the 300 g mass is also removed it will oscillate with a period of",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-8c9aff3f5d8b.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "1 s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1.5 s",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2 s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "2.5 s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-475b7a279aff",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The displacement of a particle performing S.H.M. is given by $Y=A\\cos[\\pi(t+\\varphi)]$. If at $\\mathrm{t}=0$, the displacement is $\\mathrm{y}=2~\\mathrm{cm}$ and velocity is $2\\pi~\\mathrm{cm}/\\mathrm{s}$, the value of amplitude $A$ in cm is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{\\sqrt{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f37bc25ed1bd",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A spring has a certain mass suspended from it and its period of vertical oscillations is $T_1$. The spring is now cut into two equal halves and the same mass is suspended from one of the halves. The period of vertical oscillations is now $\\mathrm{T}_2$. The ratio of $T_2/T_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:\\sqrt{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{2}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f4e87e56e72e",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "For a body performing simple harmonic motion, its potential energy is $\\mathrm{E}_{\\mathrm{x}}$ at displacement x and $\\mathrm{E}_{\\mathrm{y}}$ at displacement y from mean position. The potential energy $E_0$ at displacement $(x+y)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\mathrm{E}_{\\mathrm{x}}^2+\\mathrm{E}_{\\mathrm{y}}^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{E_x-E_y}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$E_x+E_y$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$E_x+E_y+2\\sqrt{E_xE_y}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0f641c438628",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A tube of uniform bore of cross-sectional area ' $A$ ' has been set up vertically with open end facing up. Now ' $M$ ' gram of a liquid of density ' $d$ ' is poured into it. The column of liquid in this tube will oscillate with a period ' T ', which is equal to [ $g=$ acceleration due to gravity]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi\\sqrt{\\frac{\\mathrm{MA}}{\\mathrm{gd}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi\\sqrt{\\frac{\\mathrm{M}}{2\\mathrm{Adg}}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi\\sqrt{\\frac{M}{g}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi\\sqrt{\\frac{M}{gdA}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5e9a6ee0d769",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A small sphere oscillates simple harmonically in a watch glass whose radius of curvature is 1.6 m . The period of oscillation of the sphere in second is (acceleration due to gravity, $\\mathrm{g}=10~\\mathrm{m}/\\mathrm{s}^2$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.8\\pi$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$0.6\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.4\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0\\cdot 2\\pi$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1db083505317",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Frequency of a particle performing S.H.M. is 10 Hz . The particle is suspended from a vertical spring. At the highest point of its oscillation the spring is unstretched. Maximum speed of the particle is $\\left(\\mathrm{g}=10~\\mathrm{m}/\\mathrm{s}^2\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\pi}~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{2\\pi}~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4\\pi}~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a2ebdfc24fac",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The period of a simple pendulum gets doubled when",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "its length is doubled.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "its length is made four times.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "its length is made half.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "the mass of the bob is doubled.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c7a642805a65",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "When a particle in linear S.H.M. completes two oscillations, its phase increases by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi~\\mathrm{rad}$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi~\\mathrm{rad}$.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\pi~\\mathrm{rad}$.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$4\\pi~\\mathrm{rad}$.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-289b9ce7f57c",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The velocity of particle executing S.H.M. varies with displacement $(\\mathrm{x})$ as $4{~\\mathrm{V}}^2=50-\\mathrm{x}^2$. The time period of oscillation is $\\frac{x}{7}$ second. The value of ' $x$ ' is (Take $\\pi=\\frac{22}{7}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "22",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "44",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "66",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "88",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9504c5e8ab7c",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A simple pendulum of length $l_1$ has time period $\\mathrm{T}_1$. Another simple pendulum of length $l_2\\left(l_1>l_2\\right)$ has time period $T_2$. Then the time period of the pendulum of length $\\left(l_1-l_2\\right)$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$T_1-T_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{T_1}{T_2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\mathrm{T}_1^2-\\mathrm{T}_2^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{T_2}{T_1}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a0d577ae452f",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two bodies A and B of equal mass are suspended from two separate massless springs of spring constants $\\mathrm{K}_1$ and $\\mathrm{K}_2$ respectively. The two bodies oscillate vertically such that their maximum velocities are equal. The ratio of the amplitude of $B$ to that of $A$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{K}_1}{{~\\mathrm{K}}_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{K}_2}{{~\\mathrm{K}}_1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{\\mathrm{K}_1}{{~\\mathrm{K}}_2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{\\mathrm{K}_2}{{~\\mathrm{K}}_1}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0041aac31701",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The maximum velocity and maximum acceleration of a particle performing a linear S.H.M. is ' $\\alpha$ ' and ' $\\beta$ ' respectively. Then the path length of the particle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\alpha^2}{\\beta}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\beta\\alpha^2}{2\\alpha^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2\\alpha^2}{\\beta}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\beta}{\\alpha^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dc435aecc5d6",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A mass ' $m$ ' attached to a spring oscillates with a period of 3 second. If the mass is increased by 0.6 kg , the period increases by 3 second. The initial mass ' $m$ ' is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.1 kg",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.2 kg",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.3 kg",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.4 kg",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0bb02ce9fd0c",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A particle is performing S.H.M. with an amplitude 4 cm . At the mean position the velocity of the particle is $12~\\mathrm{cm}/\\mathrm{s}$. When the speed of the particle becomes $6~\\mathrm{cm}/\\mathrm{s}$, the distance of the particle from mean position is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{3}~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{6}~\\mathrm{cm}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{3}~\\mathrm{cm}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{6}~\\mathrm{cm}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d94d114d9e36",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "In S.H.M. the displacement of a particle at an instant is $Y=A\\cos 30^{\\circ}$, where $A=40~\\mathrm{cm}$ and kinetic energy is 200 J . If force constant is $1\\times 10^x\\mathrm{N}/\\mathrm{m}$, then x will be $\\left(\\cos 30^{\\circ}=\\sqrt{3}/2\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "1",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6993b3989268",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A particle is executing a linear simple harmonic motion. Let ' $\\mathrm{V}_1$ ' and ' $\\mathrm{V}_2$ ' are its speed at distance ' $x_1$ ' and ' $x_2$ ' from the equilibrium position. The amplitude of oscillation is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{V_1^2x_2^2-V_2^2x_2^2}{V_1^2-V_2^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{V_1^2-V_2^2}{V_1^2x_2^2-V_2^2x_1^2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{V_1^2x_2^2-V_2^2x_1^2}{V_1^2-V_2^2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{V_1^2x_1^2-V_2^2x_2^2}{V_1^2-V_2^2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-395b77847689",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The time period of a simple pendulum inside a stationary lift is $\\sqrt{3}$ second. When the lift moves upwards with an acceleration $g/3$, the time period will be ( $\\mathrm{g}=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.5 s",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "2 s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3 s",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a5c314a4b730",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A mass suspended from a vertical spring performs S.H.M. of period 0.1 second. The spring is unstretched at the highest point of suspension. Maximum speed of the mass is (Gravitational acceleration $\\mathrm{g}=10~\\mathrm{m}/\\mathrm{s}^2$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2\\pi}~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{\\pi}~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2}{\\pi}~\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pi\\mathrm{m}/\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ce40aea40a97",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "' $P$ ' and ' $Q$ ' are fixed points in same plane and mass ' $m$ ' is tied by string as shown in figure. If the mass is displaced slightly out of this plane and released, it will oscillate with time period $(\\mathrm{PQ}=2~\\mathrm{d},\\mathrm{PR}=\\mathrm{QR}=\\mathrm{L})(\\mathrm{g}=$ gravitational acceleration)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-ce40aea40a97.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\pi\\sqrt{\\frac{~\\mathrm{L}}{~\\mathrm{g}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi\\sqrt{\\frac{{~\\mathrm{L}}^2}{~\\mathrm{g}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi\\sqrt{\\frac{{\\left(L^2-d^2\\right)}^{1/2}}{g}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi\\sqrt{\\frac{{\\left(L^2+d^2\\right)}^{1/2}}{g}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d9b58e3f7b8e",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A vertical spring oscillates with period 6 second with mass $m$ is suspended from it. When the mass is at rest, the spring is stretched through a distance of (Take, acceleration due to gravity, $\\mathrm{g}=\\pi^2=10~\\mathrm{m}/\\mathrm{s}^2$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "10 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "6 m",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "9 m",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e6d039691597",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "If the length of the oscillating simple pendulum is made $\\frac{1}{3}$ times the original keeping amplitude same then increase in its total energy at a place will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3 times",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2 times",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "9 times",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "5 times",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3e05872c13b0",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A particle oscillates in straight line simple harmonically with period 8 second and amplitude $4\\sqrt{2}~\\mathrm{m}$. Particle starts from mean position. The ratio of the distance travelled by it in $1^{\\text{st }}$ second of its motion to that in $2^{\\text{nd }}$ second is $\\left(\\sin 45^{\\circ}=1/\\sqrt{2},\\sin\\frac{\\pi}{2}=1\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:8$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:(\\sqrt{2}-1)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4f41b1f00a00",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "If the period of a oscillation of mass ' m ' suspended from a spring is 2 s , then the period of suspended mass ' 4 m ' with the same spring will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1 s",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 s",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2 s",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4 s",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6a7e95f5ab7a",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The period of S. H.M. of a particle is 16 second. The phase difference between the positions at $\\mathrm{t}=2~\\mathrm{s}$ and $\\mathrm{t}=4~\\mathrm{s}$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{8}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1ae61f450444",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A mass $x$ gram is suspended from a light spring. It is pulled in downward direction and released so that mass performs S.H.M. of period T. If mass is increased by Y gram, the period becomes $\\frac{4~\\mathrm{T}}{3}$. The ratio of $\\mathrm{Y}/\\mathrm{x}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$7:9$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$5:4$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8:7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-efa3a98ae801",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A particle executes a linear S.H.M. In two of its positions the velocities are $\\mathrm{V}_1,{~\\mathrm{V}}_2$ and accelerations are $\\mathrm{a}_1$ and $\\mathrm{a}_2$ respectively $\\left(0<a_1<a_2\\right)$. The distance between the positions is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{V_1^2-V_2^2}{a_1-a_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{V_2^2-V_1^2}{a_1-a_2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{V_1^2-V_2^2}{a_1+a_2}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{v_2^2-v_1^2}{\\left(a_1^2+a_2^2\\right)}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fa62db11700f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A mass attached to a spring performs S.H.M. whose displacement is $\\mathrm{x}=3\\times 10^{-3}\\cos 2\\pi\\mathrm{t}$ metre. The time taken to obtain maximum speed for the first time is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{12}~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{1}{8}~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}~\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}~\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-00b4a6b959e6",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Two simple harmonic motions of angular frequency $300\\mathrm{rad}/\\mathrm{s}$ and $3000\\mathrm{rad}/\\mathrm{s}$ have same amplitude. The ratio of their maximum accelerations is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:10$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:10^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$1:10^3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:10^4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5eefd382abc1",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A mass $m$ is suspended from a spring of negligible mass. The spring is pulled a little and then released, so that mass executes S.H.M. of time period $T$. If the mass is increased by $m_0$, the periodic time becomes $\\frac{5~\\mathrm{T}}{4}$. The ratio $\\frac{\\mathrm{m}_0}{\\mathrm{M}}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{4}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{9}{16}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{16}{9}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f3735df820ff",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A simple pendulum has time period ' $\\mathrm{T}_1$ '. The point of suspension is now moved upward according to equation $\\mathrm{y}=\\mathrm{kt}^2$ where $\\mathrm{k}=1~\\mathrm{m}/\\mathrm{s}^2$. If new time period is ' $\\mathrm{T}_2$ ' then $\\mathrm{T}_1^2/\\mathrm{T}_2^2$ will be ( $\\mathrm{g}=10~\\mathrm{m}/\\mathrm{s}^2$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2/3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5/6$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6/5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3/2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-065df83bb18a",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The length of the simple pendulum is made 3 times the original length. If ' T ' is its original time period, then the new time period will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3 T",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\sqrt{3}~\\mathrm{T}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{T}}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{T}}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a5b5262c217f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "For a particle performing S.H.M.; the total energy is ' $n$ ' times the kinetic energy, when the displacement of a particle from mean position is $\\frac{\\sqrt{3}}{2}~\\mathrm{A}$, where A is the amplitude of S.H.M. The value of ' $n$ ' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-65b0a60697b3",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A small spherical ball of radius ' $r$ ' is rolling on a curved surface which is frictionless and has a radius of curvature ' R '. Its motion is simple harmonic. Then its time period of oscillation is proportional to ( $\\mathrm{g}=$ acceleration due to gravity)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-65b0a60697b3.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{\\frac{\\mathrm{R}}{\\mathrm{g}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{\\frac{\\mathrm{r}}{\\mathrm{g}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{\\frac{R-r}{g}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{\\frac{R+r}{g}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-971488a0d57f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A particle executes S.H.M. starting from the mean position. Its amplitude is ' a ' and its periodic time is ' $T$ '. At a certain instant, its speed ' $u$ ' is half that of maximum speed $\\mathrm{V}_{\\text{max }}$. The displacement of the particle at that instant is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\mathrm{a}}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{2}\\mathrm{a}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\mathrm{a}}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}\\mathrm{a}}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d72895accbd7",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A particle performing linear S.H.M. has period 8 seconds. At time $\\mathrm{t}=0$, it is in the mean position. The ratio of the distances travelled by the particle in the $1^{\\text{st }}$ and $2^{\\text{nd }}$ second is $\\left(\\cos 45^{\\circ}=1/\\sqrt{2}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:(\\sqrt{2}-1)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:(\\sqrt{2}+1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b37597377e80",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A particle is executing linear S.H.M. starting from mean position. The ratio of the kinetic energy to the potential energy of the particle at a point of half the amplitude is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3:1$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$4:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$8:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-daead3ae5419",
+      "subtopic": "forced-damped-oscillations-and-resonance",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The amplitude of a damped oscillator becomes ${\\left(\\frac{1}{3}\\right)}^{\\mathrm{rd}}$ of original amplitude in 2 seconds. If its amplitude after 6 second become $\\left(\\frac{1}{n}\\right)$ times the original amplitude, the value of $n$ is ( $n$ is non zero integer)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "9",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "81",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "27",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a8a427dbc0ab",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The motion of the particle is given by the equation $\\mathrm{x}=\\mathrm{A}\\sin\\omega\\mathrm{t}+\\mathrm{B}\\cos\\omega\\mathrm{t}$.\nThe motion of the particle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "simple harmonic with amplitude $(\\mathrm{A}+\\mathrm{B})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "simple harmonic with amplitude $(A-B)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "simple harmonic with amplitude ${\\left(A^2+B^2\\right)}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "not simple harmonic",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-da5180f0c7a6",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "An object of mass 0.2 kg executes simple harmonic oscillations along the x -axis with frequency of $\\left(\\frac{25}{\\pi}\\right)\\mathrm{Hz}$. At the position $x=0.04~\\mathrm{m}$, the object has kinetic energy 1 J and potential energy 0.6 J . The amplitude of oscillation is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.06 m",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.6 m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.08 m",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "0.8 m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e550db071caa",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A particle is executing S.H.M. of amplitude ' $A$ '. When the potential energy of the particle is half of its maximum value during the oscillation, its displacement from the equilibrium position is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pm\\frac{\\mathrm{A}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\pm\\frac{A}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\pm\\frac{\\mathrm{A}}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\pm\\frac{A}{\\sqrt{2}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7d20bb4aa28d",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A small sphere oscillates simple harmonically in a watch glass whose radius of curvature is 1.6 m . The period of oscillation of the sphere is (acceleration due to gravity $\\mathrm{g}=10~\\mathrm{m}/\\mathrm{s}^2$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.2\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.4\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.6\\pi~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.8\\pi~\\mathrm{s}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-af2f5ce21a1a",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Two particles ' $A$ ' and ' $B$ ' execute SHMs of periods ' $T$ ' and $\\frac{3T}{2}$. If they start from the mean position then the phase difference between them, when the particle ' $A$ ' completes two oscillations will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{6}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{4\\pi}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{4}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c6b1f15ae06f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The displacement of particle in S.H.M. is $\\mathrm{x}=\\mathrm{A}\\cos(\\omega\\mathrm{t}+\\pi/6)$. Its speed will be maximum at time $\\left(\\sin 90^{\\circ}=1\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\pi}{3\\omega}~\\mathrm{s}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2\\omega}~\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{\\omega}\\mathrm{s}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi}{4\\omega}~\\mathrm{s}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-823af9d2aa18",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "As shown in the figure, $S_1$ and $S_2$ are identical springs with spring constant K each. The oscillation frequency of the mass ' $m$ ' is ' $f$ '. If the spring $\\mathrm{S}_2$ is removed, the oscillation frequency will become",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-823af9d2aa18.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "f",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2 f",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{f}}{\\sqrt{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2}\\cdot\\mathrm{f}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ab71c3af9e27",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A particle starts oscillating simple harmonically from its mean position with time period ' $T$ '. At time $\\mathrm{t}=\\frac{\\mathrm{T}}{6}$, the ratio of the potential energy to kinetic energy of the particle is\n$\\left[\\sin 30^{\\circ}=\\cos 60^{\\circ}=0\\cdot 5,\\cos 30^{\\circ}=\\sin 60^{\\circ}=\\sqrt{3}/2\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:1$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d73f860df83f",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two simple pendulums have first (A) bob of mass ' $M_1$ ' and length ' $L_1$ ', second (B) of mass ' $\\mathrm{M}_2$ ' and length ' $\\mathrm{L}_2$ '. $\\mathrm{M}_1=\\mathrm{M}_2$ and $\\mathrm{L}_1=2{~\\mathrm{L}}_2$. If their total energies are same then the correct statement is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "amplitude of B is greater than amplitude of $A$.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "amplitude of B is smaller than amplitude of $A$.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "amplitude of both will be same.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "amplitude of B is twice that of A .",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-11d2ab09138f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A spring executes S.H.M. with mass 1 kg attached to it. The force constant of the spring is $4~\\mathrm{N}/\\mathrm{m}$. If at any instant its velocity is $20~\\mathrm{cm}/\\mathrm{s}$, the displacement at that instant is (Amplitude of S.H.M. is 0.4 m )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{0.11}~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{0.15}~\\mathrm{m}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{0.17}~\\mathrm{m}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{0.19}~\\mathrm{m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-40f9b95017e4",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The ratio of the frequencies of two simple pendulums is $4:3$ at the same place. The ratio of their respective lengths is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$9:16$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$16:9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9bc3e8ee74fa",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "At a place, the length of the oscillating simple pendulum is made $\\frac{1}{4}$ times keeping amplitude same then the total energy will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2 times",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4 times",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "8 times",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "16 times",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1d975b102eee",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A mass ' $M$ ' attached to a horizontal spring executes S.H.M. of amplitude $A_1$. When the mass M passes through its mean position, then a smaller mass ' $m$ ' is placed over it and both of them move together with amplitude $\\mathrm{A}_2$. The ratio $\\left(\\frac{A_1}{A_2}\\right)$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{M+m}{M}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{M}}{\\mathrm{M}+\\mathrm{m}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${\\left(\\frac{M+m}{M}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\frac{M}{M+m}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ca2a2683ccdd",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A particle is performing S.H.M. starting from extreme position. Graphical representation shows that between displacement and acceleration, there is a phase difference of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\pi\\mathrm{rad}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{2}\\mathrm{rad}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{4}\\mathrm{rad}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0 rad",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f2a1d0caeb83",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A simple pendulum is suspended from ceiling of a lift when lift is at rest its period is ' T '. With what acceleration ' $a$ ' should lift be accelerated upward in order to reduce the period to ' $T/2$ '? (take ' g ' as acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2 g",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 g",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "4 g",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "g",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-787350dfe567",
+      "subtopic": "some-systems-of-executing-shm",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "All the springs in fig. (a), (b) and (c) are identical, each having force constant K each. Mass m is attached to each system. If $\\mathrm{T}_a,{~\\mathrm{T}}_b$ and $\\mathrm{T}_{\\mathrm{c}}$ are the time periods of oscillations of the three systems in fig. (a), (b) and (c) respectively, then",
+      "image": {
+        "url": "/question-images/mht-cet/physics/oscillations/PYQ-PHY-787350dfe567.png",
+        "alt": "Figure for this Oscillations question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad\\mathrm{T}_{\\mathrm{a}}=\\sqrt{2}{~\\mathrm{T}}_{\\mathrm{b}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\mathrm{T}_{\\mathrm{a}}=\\frac{\\mathrm{T}_{\\mathrm{c}}}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{T}_{\\mathrm{b}}=2{~\\mathrm{T}}_{\\mathrm{a}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad\\mathrm{T}_{\\mathrm{b}}=2{~\\mathrm{T}}_{\\mathrm{c}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bbde3f304f5b",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "A point particle of mass 200 gram is executing S.H.M. of amplitude 0.2 m . When the particle passes through the mean position, its kinetic energy is $16\\times 10^{-3}~\\mathrm{J}$. The equation of motion of this particle is (Initial phase of oscillation $=0^{\\circ}$ )",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{Y}=0.2\\sin(4\\mathrm{t})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{Y}=0.2\\sin\\left(\\frac{\\mathrm{t}}{4}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{Y}=0.2\\sin\\left(\\frac{\\mathrm{t}}{2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{Y}=0.2\\sin(2\\mathrm{t})$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c1605778930f",
+      "subtopic": "simple-harmonic-motion",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "A simple pendulum starts oscillating simple harmonically from its mean position ( $\\mathrm{x}=0$ ) with amplitude ' $a$ ' and periodic time ' $T$ '. The magnitude of velocity of pendulum at $x=\\frac{a}{2}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{3\\pi^2a}{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{3}\\pi a}{2T}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi a}{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{3}\\pi\\mathrm{a}}{\\mathrm{T}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-PHY-96524143d59f",
       "subtopic": "some-systems-of-executing-shm",

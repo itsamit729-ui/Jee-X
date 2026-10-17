@@ -49,10 +49,5172 @@
       "slug": "amperes-circuital-law",
       "name": "Amperes circuital law",
       "position": 7
+    },
+    {
+      "slug": "magnetic-field-of-moving-charge",
+      "name": "Magnetic field of moving charge",
+      "position": 8
     }
   ],
   "passages": [],
   "questions": [
+    {
+      "ref": "PYQ-PHY-d6a2cb3a99e5",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "A charged particle is moving in a uniform magnetic field in a circular path of radius $R$. When the energy of the particle becomes three times the original, the new radius will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$R$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{3}R$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$3R$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{R}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d8e838f9195a",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "A charge $q$ moves with velocity $v$ through electric field $\\mathrm{E}$ as well as magnetic field (B). Then, the force acting on it is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$q(E\\times v)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$q(B\\times v)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$qE+q(v\\times B)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$q(v\\times B)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f1f532c61357",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 1",
+      "status": "draft",
+      "stem": "An electron $(e)$ is revolving in a circular orbit of radius $r$ in hydrogen atom. The angular momentum of the electron is ($M=$ magnetic dipole moment associated with it and $m=$ mass of electron)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{mM}{e}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3Mm}{e}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2mM}{e}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{4mM}{e}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5204af6ee7f6",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "A circular coil of radius $R$ is carrying a current $I_1$ in anti-clockwise sense. A long straight wire is carrying current $I_2$ in the negative direction of $X$-axis. Both are placed in the same plane and the distance between centre of coil and straight wire is $d$. The magnetic field at the centre of coil will be zero for the value of $d$ equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{R}{\\pi}\\left(\\frac{l_2}{l_1}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\pi}{R}\\left(\\frac{l_2}{l_1}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi}{R}\\left(\\frac{l_1}{l_2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{R}{\\pi}\\left(\\frac{l_1}{l_2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a5e2c78ea2ea",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "16 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "An $\\alpha$-particle of energy 10 eV is moving in a circular path in uniform magnetic field. The energy of proton moving in the same path and same magnetic field will be [mass of $\\alpha$-particle $=4$ times mass of proton]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "8 eV",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "16 eV",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4 eV",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "10 eV",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-aef6e8674253",
+      "subtopic": "magnetic-field-of-moving-charge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2020,
+      "shift": "19 Oct 2020, Shift 2",
+      "status": "draft",
+      "stem": "An electron moves in a circular orbit with uniform speed $v$. It produces a magnetic field $B$ at the centre of the circle. The radius of the circle is [ $\\mu_0=$ permeability of free space, $e=$ electronic charge]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "${\\left(\\frac{\\mu_0ev}{4\\pi B}\\right)}^{1/2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0eB}{4\\pi v}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0eV}{4\\pi B}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "${\\left(\\frac{\\mu_0ev}{B}\\right)}^{1/2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-04684c17acc7",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "If the charge to mass ratio of an electron is 'A' C/kg, then the gyromagnetic ratio of an orbital electron in C/kg is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{A}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "A",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "2A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{A}}{2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-06156b6cf32c",
+      "subtopic": "magnetic-field-of-moving-charge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "An electron (e) moves in circular orbit of radius 'r' with uniform speed 'V'. It produces magnetic field 'B' at the centre of circle. The magnetic field B is $\\left(\\mu_0=\\right.$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{e}}{4\\pi}\\left(\\frac{\\mathrm{V}}{\\mathrm{r}^2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\mathrm{e}}{4\\pi}\\mathrm{Vr}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\mathrm{e}}{4\\pi}\\left(\\frac{\\mathrm{V}}{\\mathrm{r}}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\mathrm{e}}{4\\pi}\\mathrm{Vr}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dd72573b49b2",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic field intensity 'H' at the centre of a long solenoid having 'n' turns per unit length and carrying a current 'I', when no material is kept in it, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{\\mathrm{n}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{n}}{1}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{nI}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n}^2\\mathrm{I}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-09af0a61989e",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Two wires carrying currents $5~\\mathrm{A}$ and $2~\\mathrm{A}$ are enclosed in a circular loop as shown in the figure. Another wire carrying a current of $3~\\mathrm{A}$ is situated outside the loop. The value of $\\oint\\overrightarrow{\\mathrm{B}}\\overrightarrow{\\mathrm{d}l}$ around the loop is ( $\\mu_0=$ permeability of free space, $\\overrightarrow{\\mathrm{d}l}$ is the length of the element on the Amperion loop)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-09af0a61989e.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3\\mu_0$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mu_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-459908784bc1",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A metal conductor of length $1~\\mathrm{m}$ rotates vertically about one of its ends at an angular velocity of $5~\\mathrm{rad}/\\mathrm{s}$. If horizontal component of earth's magnetic field is $0.2\\times 10^{-4}~\\mathrm{T}$, then the e.m.f. developed between the two ends of the conductor is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$5~\\mu\\mathrm{V}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$50~\\mathrm{mV}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5~\\mathrm{mV}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$50~\\mu\\mathrm{V}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a65d528605d3",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic field at the centre of a current carrying circular coil of area 'A' is 'B'. The magnetic moment of the coil is ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\mathrm{BA}^{3/2}}{\\mu_0\\sqrt{\\pi}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{BA}^{3/2}}{\\mu_0\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\sqrt{\\pi}}{2\\mathrm{BA}^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\mathrm{BA}^2}{\\mu_0\\sqrt{\\pi}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c35803e073ce",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "20 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The relation between magnetic moment 'M' of revolving electron and principle quantum number 'n' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{M}\\propto\\frac{1}{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$M\\propto n$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$M\\propto n^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$M\\propto\\mathrm{n}^3$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ec08013cf323",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A charge moves with velocity '$V$' through electric field $(E)$ as well as magnetic field (B). then the force acting on it is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$q(\\vec{B}\\times\\vec{V})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{q}(\\overrightarrow{\\mathrm{V}}\\times\\overrightarrow{\\mathrm{B}})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$q\\overrightarrow{\\mathrm{E}}+q(\\vec{V}\\times\\vec{B})$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$q(\\vec{E}\\times\\vec{V})$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f0f2ef2f54cb",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A long solenoid carrying a current produces a magnetic field B along its axis. If the number of turns per $\\mathrm{cm}$ is doubled and the current is made ${\\left(\\frac{1}{3}\\right)}^{\\text{rd }}$ then the new value of the magnetic field will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{B}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3B",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2~\\mathrm{B}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2~\\mathrm{B}}{3}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0a4417456c2a",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A, B and C are three parallel conductors of equal lengths carrying currents $\\mathrm{I},\\mathrm{I}$ and $2\\mathrm{I}$ respectively. Distance between A and B is '$x$' and that between B and C is also '$x$'. $F_1$ is the force exerted by conductor $\\mathrm{B}$ on $\\mathrm{A}$. $\\mathrm{F}_2$ is the force exerted by conductor $\\mathrm{C}$ on $\\mathrm{A}$. Current $\\mathrm{I}$ in $\\mathrm{A}$ and $\\mathrm{I}$ in $\\mathrm{B}$ are in same direction and current $2\\mathrm{I}$ in $\\mathrm{C}$ is in opposite direction. Then",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{F}_1=\\mathrm{F}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{F}_2=2\\mathrm{F}_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$F_1=2F_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$F_1=-F_2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9b7508359d48",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic flux near the axis and inside the air core solenoid of length $60~\\mathrm{cm}$ carrying current '$\\mathrm{I}$' is $1.57\\times 10^{-6}~\\mathrm{Wb}$. Its magnetic moment will be $\\left[\\mu_0=4\\pi\\times 10^{-7}\\right.$, SI unit and cross-sectional area is very small as compared to length of solenoid.]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1~\\mathrm{Am}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.25~\\mathrm{Am}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.5~\\mathrm{Am}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.75~\\mathrm{Am}^2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d2a1b48f6b29",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "21 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "Magnetic moment of revolving electron of charge (e) and mass (m) in terms of angular momentum (L) of electron is :",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{eL}{8m}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{eL}}{4~\\mathrm{m}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{eL}}{2~\\mathrm{m}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{eL}}{\\mathrm{m}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4407e1a8cfba",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "When a battery is connected to the two ends of a diagonal of a square conductor frame of side '$a$', the magnitude of magnetic field at the centre will be ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0}{\\sqrt{2}\\pi\\mathrm{a}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\sqrt{2}\\mu_0}{\\pi\\mathrm{a}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0}{\\pi\\mathrm{a}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6d23d664fe35",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Two concentric coplanar circular loops of radii '$r{}_1$' and '$r_2$' respectively carry currents '$i_1$' and '$\\mathrm{i}_2$' in opposite directions (one clockwise and other anticlockwise). The magnetic induction at the centre of the loops is half that due to '$i_1$' alone at the centre. If $r_2=2r_1$, the value of $\\frac{i_2}{i_1}$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "1",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6eee30561cfc",
+      "subtopic": "magnetic-field-of-moving-charge",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Assuming the atom is in the ground state, the expression for the magnetic field at a point nucleus in hydrogen atom due to circular motion of electron is [$\\mu_0=$ permeability of free space, $\\mathrm{m}=$ mass of electron, $\\varepsilon_0=$ permittivity of free space, $\\mathrm{h}=$ Planck's constant ]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{e}^7\\pi\\mathrm{m}^2}{8\\in_0^3{~\\mathrm{h}}^5}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\mathrm{e}^5\\pi\\mathrm{m}^3}{8\\varepsilon_0^3{~\\mathrm{h}}^5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\mathrm{e}^5\\pi^2{~\\mathrm{m}}^2}{8\\varepsilon_0^2{~\\mathrm{h}}^4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\mathrm{e}^7\\pi^2{~\\mathrm{m}}^2}{8\\varepsilon_0^3{~\\mathrm{h}}^5}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0503236e5a59",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic field inside a current carrying toroidal solenoid is $0.2~\\mathrm{mT}$. What is the magnetic field inside the toroid if the current through it is tripled and radius is made ${\\frac{1}{3}}^{\\text{rd}}$ ?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.2 mT",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.6 mT",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.8 mT",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.9 mT",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-871e9e99077f",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "22 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A particle having a charge $100\\mathrm{e}$ is revolving in a circular path of radius $0.8~\\mathrm{m}$ with 1. r.p.s The magnetic field produced at the centre of the circle in SI unit is $\\left(\\mu_0=\\right.$ permeability of vacuum, $e=\\left.1.6\\times 10^{-19}\\mathrm{C}\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{-17}\\mu_0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$10^{-3}\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10^{-7}\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^{-11}\\mu_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-377c2ca2592e",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "An electron is projected along the axis of circular conductor carrying current '$\\mathrm{I}$' The electron will experience",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "a force perpendicular to axis",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "a force along the axis",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a force at angle $30^{\\circ}$ with the axis",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "no force",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f08e79c0c238",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A thin ring of radius '$R$' meter has charge '$q$' coulomb uniformly spread on it. The ring rotates about its axis with a constant frequency of $f$ revolution/s. The value of magnetic induction in $\\mathrm{Wb}\\mathrm{m}^{-2}$ at the center of the ring is ($\\mu_0=$ Permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{qf}}{2\\pi\\mathrm{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0q}{2\\pi R}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0qf}{2R}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0q}{2\\pi fR}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-18f852675a6c",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A long solenoid carrying current $\\mathrm{I}_1$ produces magnetic field $\\mathrm{B}_1$ along its axis. If the current is reduced to $20\\%$ and number of turns per $\\mathrm{cm}$ are increased five times then new magnetic field B${}_2$ is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{B}_1$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{B_1}{5}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\mathrm{B}_1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$0.25\\mathrm{B}_1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-999bceab5cc8",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "An electron in a circular orbit of radius $0.05~\\mathrm{nm}$ performs $10^{16}$ revolutions/second. What is the magnetic moment due to the rotation of electron? $(\\mathrm{e}=1.6\\times 10^{-19}\\mathrm{C})$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3.21\\times 10^{-23}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2.16\\times 10^{-23}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3.21\\times 10^{-22}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1.26\\times 10^{-23}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bf34b74081bf",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "23 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A straight wire of diameter $0.4~\\mathrm{mm}$ carrying a current of $2~\\mathrm{A}$ is replaced by another wire of 0.8 $\\mathrm{mm}$ diameter carrying the same current. The magnetic field at distance $(\\mathrm{R})$ from both the wires is 'B${}_1$' and 'B${}_2$' respectively. The relation between B${}_1$ and B${}_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$B_1=\\frac{B_2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$B_1=B_2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{B}_1=2{~\\mathrm{B}}_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{B}_1=\\frac{\\mathrm{B}_2}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a21f7e30d69f",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "Two long conductors, separated by a distance '$\\mathrm{d}$' carry currents '$\\mathrm{I}_1$' and '$\\mathrm{I}_2$' in the same directions. They exert a force '$\\mathrm{F}$' on each other. Now the current in one of them is increased to two times and its direction is reversed. The distance is also increased to '$3~\\mathrm{d}$'. The new value of the force between them is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$-\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$-\\frac{2~\\mathrm{F}}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{F}}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bc5f943deed3",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 1",
+      "status": "draft",
+      "stem": "A current carrying loop is placed in a uniform magnetic field. The torque acting on the loop does not depend upon",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "area of loop",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "number of turns in the loop",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "shape of the loop",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "strength of the magnetic field",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-803d33bea3ee",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A solenoid 2 m long and 4 cm in diameter has 4 layers of windings of 1000 turns each and carries a current of 5 A. What is the magnetic field at its centre along the axis? [$\\mu_0=4\\pi\\times 10^{-7}$ Wb/Am]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{-3}$ T",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi\\times 10^{-3}$ T",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\pi\\times 10^{-3}$ T",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$8\\pi\\times 10^{-3}$ T",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e0a311b3fe23",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2021,
+      "shift": "24 Sep 2021, Shift 2",
+      "status": "draft",
+      "stem": "A particle of charge 'q' and mass 'm' moves in a circular orbit of radius 'r' with angular speed '$\\omega$'. The ratio of the magnitude of its magnetic moment to that of its angular momentum depends on",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\omega$ and q",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\omega$ and m",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "q and m",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\omega$, q and m",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3ed8ad950179",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "Two parallel conducting wires of equal length are placed distance 'd' apart, carry currents '$\\mathrm{I}_1$' and '$\\mathrm{I}_2$' respectively in opposite directions. The resultant magnetic field at the midpoint of the distance between both the wires is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\left(I_1-I_2\\right)}{\\pi\\mathrm{d}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\left(I_1+I_2\\right)}{2\\pi d}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\left(I_1-I_2\\right)}{2\\pi\\mathrm{d}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\left(I_1+I_2\\right)}{\\pi d}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6abbc219511f",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2022,
+      "shift": "11 Aug 2022, Shift 2",
+      "status": "draft",
+      "stem": "An electron and a proton having the same momenta enter perpendicularly into a magnetic field. What are their trajectories in the field?",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Path of the electron is more curved than that of proton",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "They will travel undeflected",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Path of the proton is more curved than that of the electron",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "Both the electron and the proton will move along the same curved path but they will move in opposite directions",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-db17b87581a7",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Two long parallel wires carrying currents $8~\\mathrm{A}$ and $15~\\mathrm{A}$ in opposite directions are placed at a distance of $7~\\mathrm{cm}$ from each other. A point '$\\mathrm{P}$' is at equidistant from both the wires such that the lines joining the point to the wires are perpendicular to each other. The magnitude of magnetic field at point '$\\mathrm{P}$' is $(\\sqrt{2}=1.4)(\\mu_0=4\\pi\\times 10^{-7}$ SI units)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$68\\times 10^{-6}~\\mathrm{T}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$48\\times 10^{-6}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$32\\times 10^{-6}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$16\\times 10^{-6}~\\mathrm{T}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f930abe68eac",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Electron of mass '$\\mathrm{m}$' and charge '$\\mathrm{q}$' is travelling with speed '$v$' along a circular path of radius '$R$', at right angles to a uniform magnetic field of intensity '$B$'. If the speed of the electron is halved and the magnetic field is doubled, the resulting path would have radius",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\mathrm{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\mathrm{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{R}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{R}}{4}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2cde7bb7daa2",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic field at the centre of a circular coil of radius '$R$', carrying current $2A$ is '$B_1$'. The magnetic field at the centre of another coil of radius '$3R$' carrying current $4A$ is '$B_2$'. The ratio $B_1:B_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3:2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6a0b5f0866cd",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "10 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two wires $2~\\mathrm{mm}$ apart supply current to a $100~\\mathrm{V},1~\\mathrm{kW}$ heater. The force per metre between the wires is ( $\\mu_0=4\\pi\\times 10^{-7}$ SI unit)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\times 10^{-2}~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4\\times 10^{-3}~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\times 10^2~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^{-2}~\\mathrm{N}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-07f262b4241d",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A cylindrical magnetic rod has length $5~\\mathrm{cm}$ and diameter $1~\\mathrm{cm}$. It has uniform magnetization $5.3\\times 10^3~\\mathrm{A}/\\mathrm{m}^3$. Its net magnetic dipole moment is nearly",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1\\times 10^{-2}~\\mathrm{J}/\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.5\\times 10^{-2}~\\mathrm{J}/\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2.5\\times 10^{-2}~\\mathrm{J}/\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\times 10^{-2}~\\mathrm{J}/\\mathrm{T}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-34b07d8eba28",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "An electron is projected along the axis of circular conductor carrying current I. Electron will experience",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "no force.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "a force along the axis.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "a force at angle $30^{\\circ}$ with the axis.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "a force perpendicular to axis.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fda309d2f655",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Two parallel wires of equal lengths are separated by a distance of $3~\\mathrm{m}$ from each other. The currents flowing through $1^{\\text{st }}$ and $2^{\\text{nd }}$ wire is $3~\\mathrm{A}$ and 4.5 A respectively in opposite directions. The resultant magnetic field at mid point between the wires $\\left(\\mu_0=\\right.$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0}{2\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\mu_0}{2\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{7\\mu_0}{2\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{5\\mu_0}{2\\pi}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-75be3f17e954",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A circular arc of radius '$r$' carrying current '$\\mathrm{I}$' subtends an angle $\\frac{\\pi}{16}$ at its centre. The radius of a metal wire is uniform. The magnetic induction at the centre of circular arc is $\\left[\\mu_0=\\right.$ permeability of free space]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{32\\mathrm{r}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{16\\mathrm{r}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{64\\mathrm{r}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{8\\mathrm{r}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ea75f9bd627f",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "11 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two long conductors separated by a distance '$\\mathrm{d}$' carry currents $I_1$ and $I_2$ in the same direction. They exert a force '$F$' on each other. Now the current in one of them is increased to two times and its direction is reversed. The distance between them is also increased to $3~\\mathrm{d}$. The new value of force between them is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$-2~\\mathrm{F}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{F}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{-2~\\mathrm{F}}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{-\\mathrm{F}}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0b6db60fefef",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "$\\mathrm{A},\\mathrm{B}$ and $\\mathrm{C}$ are three parallel conductors of equal lengths and carry currents I, I and 2I respectively as shown in figure. Distance $AB$ and $BC$ is same as '$d$'. If '$F_1$' is the force exerted by $\\mathrm{B}$ on $\\mathrm{A}$ and $\\mathrm{F}_2$ is the force exerted by $\\mathrm{C}$ on $\\mathrm{A}$, then",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-0b6db60fefef.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$F_1=F_2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$F_1=-F_2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$F_1=2F_2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{F}_1=\\frac{1}{2}{~\\mathrm{F}}_2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-121a04a2576d",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic moment of a current (I) carrying circular coil of radius '$r$' and number of turns '$n$' depends on",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "n only",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "I only",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "r only",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n},\\mathrm{I}$ and $\\mathrm{r}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-44efdda81610",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Two similar coils each of radius $\\mathrm{R}$ are lying concentrically with their planes at right angles to each other. The current flowing in them are I and 2I. The resultant magnetic field of induction at the centre will be $\\left(\\mu_0=\\right.$ Permeability of vacuum)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-44efdda81610.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{2\\mathrm{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{\\mathrm{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\mu_0\\mathrm{I}}{2\\mathrm{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\sqrt{5}\\mu_0\\mathrm{I}}{2\\mathrm{R}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b7382c1af0ed",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A single turn current loop in the shape of a right angle triangle with side $5~\\mathrm{cm},12~\\mathrm{cm},13~\\mathrm{cm}$ is carrying a current of $2~\\mathrm{A}$. The loop is in a uniform magnetic field of magnitude $0.75~\\mathrm{T}$ whose direction is parallel to the current in the $13~\\mathrm{cm}$ side of the loop. The magnitude of the magnetic force on the $5~\\mathrm{cm}$ side will be $\\frac{\\mathrm{x}}{130}~\\mathrm{N}$. The value of '$x$' is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "9",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "12",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "15",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-38981a8fd53b",
+      "subtopic": "magnetic-field-of-moving-charge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "An electron makes a full rotation in a circle of radius $0.8~\\mathrm{m}$ in one second. The magnetic field at the centre of the circle is $\\left(\\mu_0=4\\pi\\times 10^{-7}\\right.$ SI units)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\pi\\times 10^{-26}~\\mathrm{T}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2\\pi\\times 10^{-26}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\pi\\times 10^{-19}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\pi\\times 10^{-19}~\\mathrm{T}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3ff36599a223",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Two concentric circular coils of 10 turns each are situated in the same plane. Their radii are $20~\\mathrm{cm}$ and $40~\\mathrm{cm}$ and they carry respectively $0.2~\\mathrm{A}$ and $0.3~\\mathrm{A}$ current in opposite direction. The magnetic field at the centre is ($\\mu_0=4\\pi\\times 10^{-7}$ SI units)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\pi\\times 10^{-7}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$5\\pi\\times 10^{-7}~\\mathrm{T}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2\\pi\\times 10^{-5}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$7\\pi\\times 10^{-6}~\\mathrm{T}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-8482c1cd7ce3",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "12 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A coil of '$n$' turns and radius '$R$' carries a current '$I$'. It is unwound and rewound again to make another coil of radius $\\left(\\frac{\\mathrm{R}}{3}\\right)$, current remaining the same. The ratio of magnetic moment of the new coil to that of original coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3:1$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:3$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$9:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$1:9$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4d90f00747b1",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Two concentric circular coils A and B have radii $20~\\mathrm{cm}$ and $10~\\mathrm{cm}$ respectively lie in the same plane. The current in coil A is $0.5~\\mathrm{A}$ in anticlockwise direction. The current in coil B so that net field at the common centre is zero, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5~\\mathrm{A}$ in anticlockwise direction",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.25~\\mathrm{A}$ in anticlockwise direction.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$0.25~\\mathrm{A}$ in clockwise direction.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.125~\\mathrm{A}$ in clockwise direction.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9a2da3b897ed",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A circular coil of radius '$r$' and number of turns ' $n$ ' carries a current '$I$'. The magnetic fields at a small distance '$h$' along the axis of the coil $\\left(B_a\\right)$ and at the centre of the coil $\\left(\\mathrm{B}_{\\mathrm{c}}\\right)$ are measured. The relation between $B_c$ and $B_a$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{B}_{\\mathrm{c}}=\\mathrm{B}_{\\mathrm{a}}\\left(1+\\frac{\\mathrm{h}^2}{\\mathrm{r}^2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{B}_{\\mathrm{c}}=\\mathrm{B}_{\\mathrm{a}}{\\left(1+\\frac{\\mathrm{h}^2}{\\mathrm{r}^2}\\right)}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{B}_{\\mathrm{c}}=\\mathrm{B}_{\\mathrm{a}}{\\left(1+\\frac{\\mathrm{h}^2}{\\mathrm{r}^2}\\right)}^{\\frac{3}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{B}_{\\mathrm{c}}=\\mathrm{B}_{\\mathrm{a}}{\\left(1+\\frac{\\mathrm{h}^2}{\\mathrm{r}^2}\\right)}^{-\\frac{3}{2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6a79ad18b05a",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A circular current carrying coil has radius $R$. The magnetic induction at the centre of the coil is $B_C$. The magnetic induction of the coil at a distance $\\sqrt{3}R$ from the centre along the axis is $B_A$. The ratio $B_A:B_C$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:3$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$1:8$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$8:1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$27:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-85b8773b7355",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "13 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The ratio of magnetic field at the centre of the current carrying circular loop and magnetic moment is $X$. When both the current and radius are doubled, then the ratio will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2X$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{X}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{X}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{X}{8}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3bc56162169e",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A horizontal wire of mass '$m$', length '$l$' and resistance '$R$' is sliding on the vertical rails on which uniform magnetic field '$B$' is directed perpendicular. The terminal speed of the wire as it falls under the force of gravity is ( $\\mathrm{g}=$ acceleration due to gravity)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{mg}l}{\\mathrm{BR}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{B}^2l^2}{\\mathrm{mgR}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{mgR}}{\\mathrm{Bl}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{mgR}}{\\mathrm{B}^2l^2}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-58a64dda5a63",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A solenoid of length $0.4~\\mathrm{m}$ and having 500 turns of wire carries a current $3~\\mathrm{A}$. A thin coil having 10 turns of wire and radius $0.1~\\mathrm{m}$ carries current $0.4~\\mathrm{A}$. the torque required to hold the coil in the middle of the solenoid with its axis perpendicular to the axis of the solenoid is $\\left(\\mu_0=4\\pi\\times 10^{-7}\\right.$ SI units, $\\left.\\pi^2=10\\right)\\left(\\sin 90^{\\circ}=1\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\times 10^{-6}~\\mathrm{Nm}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$12\\times 10^{-6}~\\mathrm{Nm}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$6\\times 10^{-4}~\\mathrm{Nm}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$24\\times 10^{-6}~\\mathrm{Nm}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9541ebb7db1d",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "Two circular coils made from same wire but radius of $1^{\\text{st }}$ coil is twice that of $2^{\\text{nd }}$ coil. If magnetic field at their centres is same then ratio of potential difference applied across them is ($1^{\\text{st }}$ to $2^{\\text{nd }}$ coil)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "4",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "6",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b5ae3f488382",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A straight wire carrying a current (I) is turned into a circular loop. If the magnitude of the magnetic moment associated with it is '$M$', then the length of the wire will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{M}\\pi}{4\\mathrm{I}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "${\\left[\\frac{4\\pi I}{M}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "${\\left[\\frac{4\\mathrm{M}\\pi}{\\mathrm{I}}\\right]}^{\\frac{1}{2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$4\\pi\\mathrm{MI}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-849b8141f294",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "Figure shows two semicircular loops of radii $R_1$ and $R_2$ carrying current $I$. The magnetic field at the common centre '$\\mathrm{O}$' is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-849b8141f294.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{4}\\left(\\frac{1}{\\mathrm{R}_1}+\\frac{1}{\\mathrm{R}_2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{4}\\left(\\frac{1}{\\mathrm{R}_1}-\\frac{1}{\\mathrm{R}_2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{2\\pi}\\left(\\frac{1}{\\mathrm{R}_1}+\\frac{1}{\\mathrm{R}_2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0I}{2\\pi}\\left(\\frac{1}{R_1}-\\frac{1}{R_2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d3230230e1e5",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "14 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "A long wire is bent into a circular coil of one turn and then into a circular coil of smaller radius having $\\mathrm{n}$ turns. If the same current passes in both the cases, the ratio of magnetic fields produced at the centre for one turn to that of $n$ turns is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:\\mathrm{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{n}:1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1:\\mathrm{n}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n}^2:1$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-50ce8e051303",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 1",
+      "status": "draft",
+      "stem": "A long straight wire carrying a current of $25~\\mathrm{A}$ rests on the table. Another wire PQ of length $1~\\mathrm{m}$ and mass $2.5~\\mathrm{g}$ carries the same current but in the opposite direction. The wire PQ is free to slide up and down. To what height will wire PQ rise? ($\\mu_0=4\\pi\\times 10^{-7}$ SI unit)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-50ce8e051303.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "3 mm",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "4 mm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5 mm",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "8 mm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-274e1d9b1441",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic field at a point $\\mathrm{P}$ situated at perpendicular distance '$R$' from a long straight wire carrying a current of $12~\\mathrm{A}$ is $3\\times 10^{-5}~\\mathrm{Wb}/\\mathrm{m}^2$. The value of '$\\mathrm{R}$' in $\\mathrm{mm}$ is $\\left[\\mu_0=4\\pi\\times 10^{-7}~\\mathrm{Wb}/\\mathrm{Am}\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.08",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.8",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "80",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d894a0f42f97",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2023,
+      "shift": "9 May 2023, Shift 2",
+      "status": "draft",
+      "stem": "10 A current is flowing in two straight parallel wires in the same direction. Force of attraction between them is $1\\times 10^{-3}~\\mathrm{N}$. If the current is doubled in both the wires the force will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1\\times 10^{-3}~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2\\times 10^{-3}~\\mathrm{N}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\times 10^{-3}~\\mathrm{N}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$0.25\\times 10^{-3}~\\mathrm{N}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-be32806691d9",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Electron of mass ' $m$ ' and charge ' $q$ ' is travelling with speed ' $v$ ' along a circular path of radius ' $R$ ' at right angles to a uniform magnetic field of intensity ' B '. If the speed of the electron is halved and the magnetic field is doubled, the resulting path would have radius",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{R}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{R}}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "2R",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "4R",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dba493e55aeb",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A circular arc of radius r carrying current ' I ' subtends an angle $\\frac{\\pi}{8}$ at its centre. The radius of a metal wire is uniform. The magnetic induction at the centre of circular arc is ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{8\\mathrm{r}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0I}{32r}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0I}{64r}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0I}{16r}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-36551d9e1346",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The magnitude of magnetic field at point 'O' in the following figure will be",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-36551d9e1346.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{\\mathrm{I}}{\\mathrm{r}}\\left(\\frac{2}{\\pi}+2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{\\mathrm{I}}{\\mathrm{r}}\\left(\\frac{2}{\\pi}-2\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{\\mathrm{I}}{\\mathrm{r}}\\left(2+\\frac{\\pi}{2}\\right)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{\\mathrm{I}}{\\mathrm{r}}\\left(2-\\frac{\\pi}{2}\\right)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5a07e0919be1",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A charged particle is moving in a uniform magnetic field in a circular path of radius ' $R$ '. When the kinetic energy of the particle is increased to three times, then the new radius will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{R}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{R}}{\\sqrt{3}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\sqrt{3}\\cdot\\mathrm{R}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3\\cdot\\mathrm{R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a3aac3918726",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "10 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A coil of ' $n$ ' turns and radius ' $R$ ' carries a current 'I'. It is unwound and rewound to make a new coil of radius $\\frac{R}{3}$ and the same current is passed through it. The ratio of the magnetic moment of the new coil to that of the original coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "3",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{3}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-271b7f62df1c",
+      "subtopic": "magnetic-field-of-moving-charge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A boat is moving due east in a region where the earth's magnetic field is $3.6\\times 10^{-5}~\\mathrm{N}/\\mathrm{Am}$ due north and horizontal. The boat carries a vertical conducting rod 2 m long. If the speed of the boat is $2.00~\\mathrm{m}/\\mathrm{s}$, the magnitude of the induced e.m.f. in the rod is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1.4 mV",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.72 mV",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.54 mV",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.144 mV",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9bfa47847f8f",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic flux near the axis and inside the air core solenoid of length 80 cm carrying current ' I ' is $1.57\\times 10^{-6}~\\mathrm{Wb}$. Its magnetic moment will be [cross-sectional area of a solenoid is very small as compared to its length, $\\mu_0=4\\pi\\times 10^{-7}$ SI unit $](\\pi=3.14)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.25{~\\mathrm{Am}}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$0.50{~\\mathrm{Am}}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$1{~\\mathrm{Am}}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$1.2{~\\mathrm{Am}}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f8a1867d94f6",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two long straight parallel wires are separated by a distance '2d'. Each wire carries a current 'I' in the same direction. The magnetic field at a point 'P' midway between them is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\mu_0I}{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "zero",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0I}{4r}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0I}{2r}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-94c5b76cd4ea",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "An infinitely long straight conductor carrying current 'I' is bent in a shape as shown in figure. The radius of the circular part of loop is 'r'. The magnetic induction at the centre 'C' is ($\\mu=$ permeability of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-94c5b76cd4ea.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "Zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{2I}{r}(1+\\pi)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{\\mathrm{I}}{\\mathrm{r}}(1+\\pi)$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\frac{2I}{r}(\\pi-1)$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9707e7f576d8",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A current carrying circular loop of radius ' $R$ ' and current carrying long straight wire are placed in the same plane. The current through circular loop and long straight wire are ' $I_c$ ' and ' $\\mathrm{I}_{\\mathrm{w}}$ ' respectively. The perpendicular distance between centre of the circular loop and wire is ' d '. The magnetic field at the centre of the loop will be zero when separation ' $d$ ' is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{RI}_{\\mathrm{w}}}{\\pi\\mathrm{I}_{\\mathrm{c}}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{RI}_{\\mathrm{c}}}{\\pi\\mathrm{I}_{\\mathrm{w}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi\\mathrm{I}_{\\mathrm{c}}}{\\mathrm{RI}_{\\mathrm{w}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi\\mathrm{I}_{\\mathrm{w}}}{\\mathrm{RI}_{\\mathrm{c}}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9fdb15d7fc80",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "11 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Magnetic field at the centre of a circular loop of area ' $A$ ' is ' $B$ '. The magnetic moment of the loop will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{BA}^2}{\\mu_0\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\mathrm{BA}^{3/2}}{\\mu_0\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{BA}^{1/2}}{\\mu_0\\pi^{1/2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\mathrm{BA}^{3/2}}{\\mu_0\\pi^{1/2}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7a7aa6f64f59",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two parallel wires separated by distance 'b' are carrying equal current ' $I$ ' in the same direction. The force per unit length of the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\left(\\frac{I}{b^2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\left(\\frac{\\mathrm{I}^2}{{~\\mathrm{b}}^2}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\left(\\frac{\\mathrm{I}^2}{b}\\right)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0}{4\\pi}\\left(\\frac{2I^2}{b}\\right)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a3fdbcdafce5",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The strength of magnetic field at a perpendicular distance ' $x$ ' near a long straight conductor carrying current ' I ' is ' B '. The magnetic field at a distance $\\frac{x}{3}$ from straight conductor will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{B}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "3 B",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{B}^2}{9}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$9{~\\mathrm{B}}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a726e378f9e6",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Magnetic induction produced at the centre of a circular loop of radius ' $R$ ' carrying a current is ' B '. The magnetic moment of the loop is ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{BR}^3}{2\\pi\\mu_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\pi\\mathrm{BR}^3}{\\mu_0}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{BR}^2}{2\\pi\\mu_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\pi\\mathrm{BR}^2}{\\mu_0}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9c6bd27534d7",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "An electron is revolving in a circular orbit of radius $r$ in a hydrogen atom. The angular momentum of the electron is L . The relation between dipole moment (m) associated with it, gyromagnetic ratio ( R ) and L is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{m}=-\\frac{\\mathrm{L}}{\\mathrm{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{m}=-\\mathrm{RL}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{m}=-\\mathrm{RL}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{m}=\\frac{\\mathrm{R}}{\\mathrm{L}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c4f74950a70a",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Two concentric circular coils A and B having radii 20 cm and 10 cm respectively lie in the same plane. The current in coil A is 0.5 A in anticlockwise direction. The current in coil B , so that net magnetic field at the common centre is zero, is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$0.5~\\mathrm{A}$ in anticlockwise direction.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.25 A in anticlockwise direction.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.25 A in clockwise direction.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "0.125 A in clockwise direction.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-e6ebd587f542",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "15 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Three infinite straight wires $\\mathrm{A},\\mathrm{B}$ and C carry currents as shown in figure. The resultant force on wire $B$ is directed",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-e6ebd587f542.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "towards A",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "towards C",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "perpendicular to the plane of page",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "upwards",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0b3fb3e3e8a8",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two coils P and Q each of radius R carry currents I and $\\sqrt{8}\\mathrm{I}$ respectively in same direction. Those coils are lying in perpendicular planes such that they have a common centre. The magnitude of the magnetic field at the common centre of the two coils is ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0I}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\mu_0I}{2R}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5\\mu_0I}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{7\\mu_0\\mathrm{I}}{2\\mathrm{R}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-db8e445c4a82",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic induction along the axis of a toroidal solenoid is independent of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "number of turns per unit length.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "current passing through it.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "radius of the toroidal solenoid.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "permeability",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5d9960e57ed5",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A current 'I' flows in anticlockwise direction in a circular arc of a wire having ${\\left(\\frac{3}{4}\\right)}^{\\text{th }}$ of circumference of a circle of radius R. The magnetic field ' $B$ ' at the centre of circle is ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{3\\mathrm{R}}$ in upward direction",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0I}{2R}$ in downward direction",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\mu_0\\mathrm{I}}{8\\mathrm{R}}$ in downward direction",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{3\\mu_0\\mathrm{I}}{8\\mathrm{R}}$ in upward direction",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-db80c4f081c8",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "16 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "An arc of a circle of radius ' $R$ ' subtends an angle $\\frac{\\pi}{2}$ at the centre. It carries a current $I$. The magnetic field at the centre will be ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0I}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0I}{8R}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0I}{4R}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2\\mu_0I}{5R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1ce24422603d",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "Two identical current carrying coils with same centre are placed with their planes perpendicular to each other. If current $\\mathrm{I}=\\sqrt{2}~\\mathrm{A}$ and radius of the coil is $R=1~\\mathrm{m}$, then magnetic field at centre is equal to ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mu_0$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2}\\mu_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f2410c6ee8aa",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic field at the centre of a current carrying circular coil of area ' $A$ ' is ' $B$ '. The magnetic moment of the coil is ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2\\mu_0\\pi^{1/2}}{\\mathrm{BA}^{3/2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{BA}^{3/2}}{\\mu_0\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{2~\\mathrm{B}{~\\mathrm{A}}^{3/2}}{\\mu_0\\pi^{1/2}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{B}\\mathrm{A}^2}{\\mu_0\\pi}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-301859d72313",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Three long, straight parallel wires carrying currents are arranged as shown. The wire C which carries a current of 5.0 A is so placed that it experiences no force. The distance of wire C from wire $D$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-301859d72313.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "9 cm",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "7 cm",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "5 cm",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "3 cm",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-9c899c685467",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "2 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "Cyclotron is used to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "accelerate neutrons.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "accelerate positively charged particles only.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "accelerate negatively charged particles only.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "accelerate positively and negatively charged particles.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ce32c5c2db93",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A particle having a charge 50 e is revolving in a circular path of radius 0.4 m with $1\\mathrm{r}.\\mathrm{p}.\\mathrm{s}$. The magnetic field produced at the centre of the circle is $\\left(\\mu_0=4\\pi\\times 10^{-7}\\right.$ SI units and $e=1.6\\times 10^{-19}\\mathrm{c}$)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$10^{-7}\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{-10}\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$10^{-14}\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^{-17}\\mu_0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-fcefd5e8f257",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A current of 5 A flows through a toroid having a core of mean radius 20 cm . If 4000 turns of the conducting wire are wound on the core, then the magnetic field inside the core of the toroid is [permeability of free space $=4\\pi\\times 10^{-7}$ SI units]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$8\\times 10^{-2}~\\mathrm{Wb}/\\mathrm{m}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$6\\times 10^{-2}~\\mathrm{Wb}/\\mathrm{m}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$5\\times 10^{-2}~\\mathrm{Wb}/\\mathrm{m}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\times 10^{-2}~\\mathrm{Wb}/\\mathrm{m}^2$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-83ee90e6718b",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A thin ring of radius ' $R$ ' carries a uniformly distributed charge. The ring rotates at constant speed ' $N$ ' r.p.s. about its axis perpendicular to the plane. If ' $B$ ' is the magnetic field at the centre, the charge on the ring is ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0~\\mathrm{N}}{2\\mathrm{RB}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{RB}{2\\mu_0~\\mathrm{N}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0N}{RB}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2RB}{\\mu_0~\\mathrm{N}}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b121183d3b9a",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "3 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A charged particle is moving along a magnetic field line. What is the magnetic force acting on the particle? $\\left(\\sin 0^{\\circ}=0,\\sin\\frac{\\pi}{2}=1\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "Opposite to its velocity.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "Perpendicular to its velocity.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "Zero.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "Along its velocity.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-89beb876ed31",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A charged particle of charge ' $q$ ' is accelerated by a potential difference ' $V$ ' enters a region of uniform magnetic field ' $B$ ' at right angles to the direction of field. The charged particle completes semicircle of radius ' $r$ ' inside magnetic field. The mass of the charged particle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{r}^2qB^2}{2~\\mathrm{V}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{r^2q^2B^2}{\\sqrt{2}V}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{qrB}}{2~\\mathrm{V}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{q}^2\\mathrm{r}^2{~\\mathrm{B}}^2}{~\\mathrm{V}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b3aa5ac0d59e",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A charged particle is moving in a uniform magnetic field in a circular path with radius ' $R$ '. When the energy of the particle is doubled, then the new radius will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{R}}{\\sqrt{2}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{R}}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2}R$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b94cb42ea969",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "A massless square loop of wire of resistance ' $R$ ' supporting a mass ' M ' hangs vertically with one of its sides in a uniform magnetic field ' B ' directed outwards in the shaded region. A d.c. voltage ' V ' is applied to the loop. For what value of ' $V$ ' the magnetic force will exactly balance the weight of the supporting mass ' M '? (side of loop = L, $\\mathrm{g}=$ acceleration due to gravity)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-b94cb42ea969.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{Mg}}{\\mathrm{LBR}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{LB}}{\\mathrm{MgR}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{MgR}}{\\mathrm{LB}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{LR}}{\\mathrm{MgB}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0f5d60c5b4ac",
+      "subtopic": "magnetic-field-of-moving-charge",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "4 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A particle carrying a charge equal to 100 times the charge on an electron is rotating one rotation per second in a circular path of radius 0.8 m . The value of magnetic field produced at the centre will be ( $\\mu_0=$ permeability of vacuum)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{10^{-7}}{\\mu_0}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{-17}\\mu_0$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$10^{-6}\\mu_0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$10^{-7}\\mu_0$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3587be4912a3",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic induction due to an ideal solenoid is independent of",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "total number of turns of the wire.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "length of the solenoid.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "radius of the wire.",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "current carried by the wire.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3caef753d836",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic field intensity inside current carrying solenoid is $\\mathrm{H}=2.4\\times 10^3~\\mathrm{A}/\\mathrm{m}$. If length and number of turns of a solenoid is 15 cm and 60 turns respectively. The current flowing in the solenoid is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "4 A",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "6 A",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "0.6 A",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "60 A",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6e3c1c4980c0",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A current carrying circular loop of radius ' $R$ ' and current carrying long straight wire are placed in the same plane. $I_c$ and $I_w$ are the currents through circular loop and long straight wire respectively. The perpendicular distance between centre of the circular loop and wire is ' d '. The magnetic field at the centre of the loop will be zero when separation ' $d$ ' is equal to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{RI}_w}{\\pi\\mathrm{I}_{\\mathrm{c}}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{RI}_{\\mathrm{c}}}{\\pi\\mathrm{I}_{\\mathrm{w}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\pi\\mathrm{I}_{\\mathrm{c}}}{R\\mathrm{I}_{\\mathrm{w}}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\pi\\mathrm{I}_{\\mathrm{w}}}{\\mathrm{R}_{\\mathrm{c}}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-87879a249b85",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "The magnetic potential energy stored in certain inductor is $64\\times 10^{-3}~\\mathrm{J}$, when the current in the inductor is 80 mA . This inductor is of inductance",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.20 H",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "2.0 H",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "20 H",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "200 H",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-ddd554f1371b",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2024,
+      "shift": "9 May 2024, Shift 2",
+      "status": "draft",
+      "stem": "A long solenoid carrying a current produces magnetic field B along its axis. If the number of turns per cm are tripled and the current is made ${\\left(\\frac{1}{4}\\right)}^{\\text{th }}$ then the new value of magnetic field will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{B}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{B}}{4}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3B}{4}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2~\\mathrm{B}}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-028a8cd3edf0",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Two long parallel wires carrying currents 4 A and 3 A in opposite directions are placed at a distance of 5 cm from each other. A point P is at equidistance from both the wires such that the line joining the point P to the wires are perpendicular to each other. The magnitude of magnetic field at point $P$ is ( $\\mu_0=$ permeability of free space $=4\\pi\\times 10^{-7}$ SI unit)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$4\\times 10^{-5}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\sqrt{2}\\times 10^{-5}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\times 10^{-5}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$2\\sqrt{2}\\times 10^{-5}~\\mathrm{T}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-23646d3eb938",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The ratio of angular momentum $L$ of an electron to the magnetic dipole moment ${\\overrightarrow{\\mathrm{m}}}_{\\text{orb }}$ is ( ' $m$ ' is mass of electron, ' $e$ ' is charge on electron)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{e}}{\\mathrm{m}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2m}{e}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{e}}{2~\\mathrm{m}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{m}}{\\mathrm{e}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-879ce4fef71a",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Two long straight wires A and B carrying equal current 'I' were kept parallel to each other at distance ' $d$ ' apart. Magnitude of magnetic force experienced by length $L$ of wire $A$ is ' $F$ '. If the distance between the wires is made half and currents are doubled, force $F_2$ on length $L$ of wire $A$ will be",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "2F",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "F",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "8F",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "4F",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2799a5f30fdf",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two long conductors separated by a distance ' d ' carry currents ' $\\mathrm{I}_1$ ' and ' $\\mathrm{I}_2$ ' in the same directions. They exert a force ' $F$ ' on each other. The distance between them is increased to ' 3 d '. If new repulsive force of magnitude ' $\\frac{2}{3}~\\mathrm{F}$ ' is found between these conductors, the required change in the magnitude and direction of one of the currents in the conductor is respectively [length of the conductors is constant]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "same, reversed.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "twice, reversed.",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "thrice, same.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "twice, same.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-4a56920e2161",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A particle carrying a charge equal to 1000 times the charge on an electron, is rotating one rotation per second in a circular path of radius ' $r$ ' $m$. If the magnetic field produced at the centre of the path is $x$ times the permeability of vacuum, the radius ' r ' in m is $\\left[\\mathrm{e}=1.6\\times 10^{-19}\\mathrm{C}\\right]\\left[\\mathrm{x}=2\\times 10^{-16}\\right]$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "0.04",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "0.02",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "0.2",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "0.4",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b65a454b6d47",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 7,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "19 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Bohr model is applied to a particle of mass m and charge $q$ is moving in a plane under the influence of a transverse magnetic field (B). The energy of the charged particle in the second level will be ( $\\mathrm{h}=$ Planck's constant)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{qBh}}{\\pi\\mathrm{m}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{q}^2{~\\mathrm{B}}^2{~\\mathrm{h}}^2}{4\\pi~\\mathrm{m}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{qBh}}{2\\pi~\\mathrm{m}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2q\\mathrm{Bh}}{\\pi m}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-40e1e4773c1a",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A wire has three different sections as shown in figure. The magnitude of the magnetic field produced at the centre ' $O$ ' of the semicircle by three sections together is ( $\\mu_0=$ permeability of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-40e1e4773c1a.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{4\\mathrm{R}}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{2\\mathrm{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{4\\pi\\mathrm{R}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0I}{2\\pi R}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-c463da0b5383",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A long wire carrying a steady current is bent into a circle of single turn. The magnetic field at the centre of the coil is ' B '. If it is bent into a circular loop of radius ' $\\mathrm{r}_1$ ' having ' n ' turns, the magnetic field at the centre of the coil for same current is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{B}{n^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{B}{n}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$n^2B$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "nB",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-5cec9d244707",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "An element $\\overrightarrow{\\Delta l}=\\Delta\\mathrm{xi}$ is placed at the origin and carries a current of 10 A . The magnitude of magnetic field on the Y axis at a distance of 0.5 m if $\\Delta x=1~\\mathrm{cm}$ is $\\left(\\frac{\\mu_0}{4\\pi}=10^{-7}\\right.$ SI unit $)\\left(\\sin 90^{\\circ}=1\\right)$",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$2\\times 10^{-7}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$10^{-8}~\\mathrm{T}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$4\\times 10^{-8}~\\mathrm{T}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2\\times 10^{-8}~\\mathrm{T}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-91402f48388d",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "20 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A current ' I ' is flowing in a conductor PQRST as shown in figure. The radius of curved path QRS is ' R ' and length of straight portion PQ and ST is very large. The magnetic field at the centre $[\\mathrm{O}]$ of the curved part is ( $\\mu_0=$ permeability of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-91402f48388d.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\quad\\frac{\\mu_0\\mathrm{i}}{4\\pi\\mathrm{r}}\\left(\\frac{3\\pi}{2}+1\\right)(-\\hat{\\mathrm{k}})$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\frac{\\mu_0\\mathrm{i}}{4\\pi\\mathrm{r}}\\left(\\frac{3\\pi}{2}+1\\right)\\hat{\\mathrm{k}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\mathrm{i}}{4\\pi\\mathrm{r}}\\left[\\frac{3\\pi}{2}-1\\right](-\\hat{\\mathrm{k}})$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad\\frac{\\mu_0\\mathrm{i}}{4\\pi\\mathrm{r}}\\left[\\frac{3\\pi}{2}-1\\right]\\hat{\\mathrm{k}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-51c3991839b7",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Two identical long parallel wires carry currents ' $\\mathrm{I}_1$ ' and ' $\\mathrm{I}_2$ ' such that $\\mathrm{I}_1>\\mathrm{I}_2$. When the currents are in the same direction, the magnetic field at a point midway between the wires is $8\\times 10^{-6}~\\mathrm{T}$. If the direction of $\\mathrm{I}_2$ is reversed, the field becomes $3.2\\times 10^{-5}~\\mathrm{T}$. The ratio of $\\mathrm{I}_2$ to $\\mathrm{I}_1$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$1:4$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$2:5$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:5$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$3:4$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-539dd6a4c93d",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Two very long straight conductors (wires) are set parallel to each other. Each carries a current ' I ' in the same direction and the separation between them is ' 2 r '. The intensity of the magnetic field at point ' P ' (as shown in the figure) ( $\\mu_0=$ permeability of free space) is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-539dd6a4c93d.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{2}{3}\\frac{\\mu_0I}{\\pi r}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\frac{3}{8}\\frac{\\mu_0I}{\\pi\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{1}{4}\\frac{\\mu_0\\mathrm{I}}{\\pi\\mathrm{r}}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0I}{2\\pi r}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0032a86b8e47",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "An electron moves in Bohr orbit. The magnetic field at the centre is proportional to",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{n}^{-2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{n}^{-3}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{n}^{-4}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{n}^{-5}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-17945e0e088f",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two long parallel wires carry currents $I_1$ and $\\mathrm{I}_2\\left(\\mathrm{I}_1>\\mathrm{I}_2\\right)$. When currents are flowing in the same direction, the magnetic field at a point midway between the wires is $6\\times 10^{-6}~\\mathrm{T}$. If the direction of $\\mathrm{I}_2$ is reversed the field at midpoint becomes $3\\times 10^{-5}~\\mathrm{T}$. The ratio $\\mathrm{I}_1:\\mathrm{I}_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3:2$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$2:3$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3:5$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$6:7$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-3bc4de830e4e",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "21 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A coil having 9 turns carrying current produces magnetic field $B_1$ at the centre. Now that coil is rewounded into 3 turns carrying same current. Then magnetic field at the centre $B_2$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{B_1}{9}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$9B_1$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$3{~\\mathrm{B}}_1$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{B_1}{3}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-694aaa6346c0",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The wire loop PQRSP formed by joining two semicircular wire of radii $R_1$ and $R_2$ carries a current $I$ as shown. The magnitude of the magnetic field at the centre ' O ' is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-694aaa6346c0.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0I}{4}\\left[\\frac{1}{R_1}-\\frac{1}{R_2}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{4}\\left[\\frac{1}{\\mathrm{R}_2}-\\frac{1}{\\mathrm{R}_1}\\right]$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0I}{2\\pi}\\left[\\frac{1}{R_1}-\\frac{1}{R_2}\\right]$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{2\\pi}\\left[\\frac{1}{\\mathrm{R}_2}-\\frac{1}{\\mathrm{R}_1}\\right]$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-80a1bd140e11",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A circular coil of wire consisting of ' $n$ ' tums each of radius 8 cm carries a current of 0.4 A . The magnitude of the magnetic field at the centre of coil is $3.14\\times 10^{-4}~\\mathrm{T}$. The value of ' $n$ ' is\n[Take $\\mu_0=12.56\\times 10^{-7}$ SI unit]",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "1",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "10",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "100",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "1000",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-612ec7d22c6d",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A wire of length $L$ carries current $I$ along x - axis. A magnetic field $\\overrightarrow{\\mathrm{B}}=\\mathrm{B}_0(\\hat{\\mathrm{i}}-\\hat{\\mathrm{j}}-\\hat{\\mathrm{k}})\\mathrm{T}$ acts on the wire. The magnitude of magnetic force acting on the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{ILB}_0}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\quad\\mathrm{ILB}_0$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\quad 2ILB_0$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\quad\\sqrt{2}\\mathrm{ILB}_0$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b2d2a5012437",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A particle of charge $q$ moves with a velocity $\\overrightarrow{\\mathrm{V}}=a\\hat{\\mathrm{i}}$ in a magnetic field $\\overrightarrow{\\mathrm{B}}=b\\hat{\\mathrm{j}}+c\\hat{\\mathrm{k}}$, where ' $a$ ', ' b ' and ' c ' are constants. The magnitude of force experienced by particle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$qa\\sqrt{b^2+c^2}$",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{qa}(\\mathrm{b}+\\mathrm{c})$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$qa\\sqrt{b^2-c^2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "zero",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dffdccdf7aa1",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "22 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two similar wires of equal lengths are bent in the form of a square and a circular loop. They are suspended in a uniform magnetic field and same current is passed through them. Torque experienced by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "circular loop is greater.",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "square loop is greater.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "both loops is same.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "both will be zero.",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-033bbef6c9a6",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A square coil ABCD of side ' L ' is carrying a current in clockwise direction. A straight conductor carrying current $\\mathrm{I}_2$ (upward direction) is kept parallel to side AB at a distance $\\frac{\\mathrm{L}}{3}$ in the plane of $ABCD$. The net force on the coil ABCD is ( $\\mu_0=$ magnetic permeability)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{I}_1\\mathrm{I}_2}{3\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3\\mu_0\\mathrm{I}_1\\mathrm{I}_2}{4\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{3\\mu_0\\mathrm{I}_1\\mathrm{I}_2}{8\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{9\\mu_0\\mathrm{I}_1\\mathrm{I}_2}{8\\pi}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-2d96e42620d0",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic field at the centre of a current carrying circular coil of area ' $A$ ' is ' $B$ '. The magnetic moment ( M ) of the coil is ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{BA}^2}{\\mu_0\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2BA^{3/2}}{\\mu_0\\sqrt{\\pi}}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{BA^{3/2}}{\\mu_0\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\sqrt{\\pi}}{\\mathrm{BA}^{3/2}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-b7446af0d6b7",
+      "subtopic": "magnetic-field-of-moving-charge",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Let the current ' $I$ ' be associated with an electron of charge ' $e$ ' moving in a circular orbit of radius ' $r$ ' with speed ' $v$ ' around the positively charged nucleus. The ratio $\\frac{r}{v}$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{eI}}{2\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{2\\pi}{\\mathrm{eI}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{e}}{2\\pi\\mathrm{I}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{2e\\mathrm{I}}{\\pi}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-1587b68a7beb",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "The relation between magnetic moment $(\\mathrm{M})$ of a current carrying circular coil and length (L) of the wire used is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mathrm{M}\\propto\\mathrm{L}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\mathrm{M}\\propto\\frac{1}{~\\mathrm{L}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\mathrm{M}\\propto\\mathrm{L}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{M}\\propto\\frac{1}{{~\\mathrm{L}}^2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-7ed8e50d139a",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In hydrogen atom, an electron of charge 'e' revolves in an orbit of radius ' $r$ ' with speed ' $v$ '. The magnetic moment associated with electron is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{evr}}{3}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{evr}}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "evr",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\sqrt{2}\\mathrm{evr}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-d8a278c78413",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "23 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two current carrying identical coils are kept as shown in figure. The magnetic field at centre ' O ' is ( N and R represent the number of turns and radius of each coil respectively, $\\mu_0=$ permeability of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-d8a278c78413.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{NI}}{2R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0NI}{\\sqrt{2}R}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0NI}{2\\sqrt{2}R}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0~\\mathrm{N}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-56c691280971",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "Current $I$ is carried in a wire of length ' $L$ '. If wire is bent into a circular coil of single turn, the maximum torque in a given magnetic field $B$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{L}^2~\\mathrm{B}}{4\\pi}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{L}^2\\mathrm{IB}}{4\\pi}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{L}^2{~\\mathrm{B}}^2}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{L}^2\\mathrm{IB}}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-a6e9ba04520b",
+      "subtopic": "magnetic-moment",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A square of side ' $L$ ' metre lies in $x-y$ plane in a region where the magnetic field is $\\bar{\\mathrm{B}}$ and $\\vec{B}=B_0(2\\hat{i}+3\\hat{j}+4\\hat{k})$, where $B_0$ is constant. The magnitude of flux passing through the square (in weber) is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\sqrt{29}{~\\mathrm{B}}_0{~\\mathrm{L}}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$4{~\\mathrm{B}}_0{~\\mathrm{L}}^2$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$2{~\\mathrm{B}}_0{~\\mathrm{L}}^2$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$3{~\\mathrm{B}}_0{~\\mathrm{L}}^2$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-bdc33e15dba4",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "A long straight wire of radius ' $r$ ' carries a steady current ' $I$ '. The current is uniformly distributed over its cross-section. The ratio $\\left(\\frac{B}{B_1}\\right)$ of the magnetic field ' B ' and ' $\\mathrm{B}_1$ ' at radial distances ' $\\frac{r}{2}$ ' and ' $3r$ ' respectively, from the axis of the wire is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{3}{2}$",
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{5}{2}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{1}{2}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-dfb2794d16d4",
+      "subtopic": "amperes-circuital-law",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "The magnetic field intensity H at the centre of a long solenoid having $n$ turns per unit length and carrying a current I, when no material is kept in it is ( $\\mu_0=$ permeability of free space)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\mu_0\\mathrm{nI}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{n}}{\\mathrm{I}}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "nI",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0}{\\mathrm{nI}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-6b12816562af",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "In the following figure magnitude of the magnetic field at the point $p$ is",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-6b12816562af.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0I}{4\\pi r}+\\frac{\\mu_0I}{r}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0I}{4\\pi r}+\\frac{\\mu_0I}{2r}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{4\\pi\\mathrm{r}}+\\frac{\\mu_0\\mathrm{I}}{4\\mathrm{r}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{4\\pi\\mathrm{r}}-\\frac{\\mu_0\\mathrm{I}}{4\\mathrm{r}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-72741e36b6ea",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "25 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "A circular coil carrying current ' I ' has a radius ' $r$ ' and ' $n$ ' turns. The magnetic field along the axis of a coil at a distance ' $2\\sqrt{2}r$ ', from its centre is ( $\\mu_0=$ permeability of free space, $n$ is very small)",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mu_0\\mathrm{nI}}{9\\mathrm{r}}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0nI}{18r}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\mathrm{nI}}{54\\mathrm{r}}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\mathrm{nI}}{27\\mathrm{r}}$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-20be53c65ccf",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 1",
+      "status": "draft",
+      "stem": "An infinitely long straight conductor carrying current ' $I$ ' is bent into a shape as shown in figure. The radius of the circular loop is ' $r$ '. The magnetic induction at the centre of the loop at point ' O ' is\n( $\\mu_0=$ permeability of free space)",
+      "image": {
+        "url": "/question-images/mht-cet/physics/moving-charges-magnetism/PYQ-PHY-20be53c65ccf.png",
+        "alt": "Figure for this Moving Charges and Magnetism question"
+      },
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{4\\pi\\mathrm{r}}(\\pi-1)$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{2\\pi\\mathrm{r}}(\\pi+1)$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mu_0\\mathrm{I}}{2\\pi\\mathrm{r}}(\\pi-1)$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-0cc823c4fceb",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Two wires of equal lengths are bent in the form of a square and a circular loop. They are suspended in a uniform magnetic field and same current is passed through them. Torque experienced by",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "square loop is greater.",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "both the loops is same but not zero.",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "both the loops is zero.",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "circular loop is maximum.",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-f308245d2616",
+      "subtopic": "motion-of-charged-particle-inside-magnetic-field",
+      "type": "single_correct",
+      "difficulty": 3,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "26 Apr 2025, Shift 2",
+      "status": "draft",
+      "stem": "Lorentz magnetic force is acting on a particle of charge q moving with velocity $\\vec{V}$ in a magnetic field $\\vec{B}$. The work done by this force on the charged particle is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "zero",
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "content": "one",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "infinity",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\mathrm{qB}\\sin\\theta$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-81a0ab899d0a",
+      "subtopic": "force-and-torque-on-current-carrying-conductor",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "A wire of length ' $L$ ' carries a current ' $I$ '. If the wire is turned into a square coil of single turn, the maximum magnitude of the torque in a given magnetic field $(\\overrightarrow{\\mathrm{B}})$ is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$\\frac{\\mathrm{IBL}}{16}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$\\frac{\\mathrm{IBL}}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$\\frac{\\mathrm{IBL}^2}{8}$",
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "content": "$\\frac{\\mathrm{IBL}^2}{16}$",
+          "is_correct": true
+        }
+      ],
+      "solution": ""
+    },
+    {
+      "ref": "PYQ-PHY-84b3ed7c5064",
+      "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
+      "type": "single_correct",
+      "difficulty": 5,
+      "expected_time_sec": 120,
+      "source_type": "pyq",
+      "exam": "mht_cet",
+      "year": 2025,
+      "shift": "5 May 2025, Shift 2",
+      "status": "draft",
+      "stem": "A circular coil carrying current has radius ' $R$ '. The distance from the centre of the coil on the axis where the magnetic induction will be $\\frac{1}{27}$ th of its value at the centre of the coil is",
+      "image": null,
+      "options": [
+        {
+          "label": "A",
+          "content": "$3\\sqrt{2}\\mathrm{R}$",
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "content": "$3R$",
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "content": "$2\\sqrt{2}\\mathrm{R}$",
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "content": "$2R$",
+          "is_correct": false
+        }
+      ],
+      "solution": ""
+    },
     {
       "ref": "PYQ-PHY-a13fd22344f4",
       "subtopic": "biot-savarts-law-and-magnetic-field-due-to-current-carrying-wire",
