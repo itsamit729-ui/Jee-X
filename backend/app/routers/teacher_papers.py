@@ -206,7 +206,7 @@ def generate(b: Generate, user=Depends(t.require_teacher), db=Depends(get_db)):
     return {'questions':[t.freeze(qs[i],qs[i].version) for i in selected], 'warning':warning}
 
 class AIRequest(BaseModel):
-    prompt: str = Field(min_length=10, max_length=6000)
+    prompt: str = Field(min_length=1, max_length=6000)
     defaults: dict = Field(default_factory=dict)
     exam: EXAMS | None = 'jee_main'
 
@@ -218,34 +218,42 @@ def ai_draft(b: AIRequest, user=Depends(t.require_teacher), db=Depends(get_db)):
     import os
     if os.getenv('TEACHER_AI_ENABLED', 'true').lower() != 'true':
         raise HTTPException(503, 'AI paper creation is unavailable. Use Generate questions or Choose from bank.')
-    if len(b.prompt.strip()) < 10:
-        raise HTTPException(422, 'Describe the paper in at least 10 characters.')
+    if not b.prompt.strip():
+        raise HTTPException(422, 'Describe the paper or reply with the missing detail.')
     def plan_for(catalog):
         from app.services.teacher_direct_request import direct_request
         direct=direct_request(b.prompt.strip(),b.exam,catalog)
         if direct is not None: return direct
         if not os.getenv('GROQ_API_KEY','').strip():
             raise HTTPException(503,'AI interpretation is unavailable. Use a clear request with exam, question count, chapter and duration, or use the manual builder.')
-        throttle(db, 'teacher_ai:minute', str(user.id), 3, 60)
-        throttle(db, 'teacher_ai:day', str(user.id), 30, 86400)
-        throttle(db, 'teacher_ai:global', 'all', 100, 86400)
+        try:
+            throttle(db, 'teacher_ai:minute', str(user.id), 3, 60)
+            throttle(db, 'teacher_ai:day', str(user.id), 30, 86400)
+            throttle(db, 'teacher_ai:global', 'all', 100, 86400)
+        except HTTPException as error:
+            if error.status_code==429:
+                raise HTTPException(429,'The language interpretation limit has been reached. This is unrelated to your question count. Standard requests with exam, subjects or chapters, question count and duration still work here without AI quota. Your conversation is kept; no paper was created.',headers=error.headers) from None
+            raise
         db.rollback()
         return teacher_ai.interpret(b.prompt.strip(),b.exam,catalog)
-    if b.exam is None:
-        db.rollback()
-        plan=plan_for({'papers':[],'chapters':[],'paper_defaults':{'require_details':True}})
-        teacher_ai.check_plan_details(plan,None,strict=True)
-        raise HTTPException(422,'Which exam should I use: JEE Main, JEE Advanced, MHT-CET or BITSAT?')
     # Only metadata from the visible, published bank is shared, never question content or student data.
-    query = bank(db, user.id).filter(m.Question.status == 'published', m.Question.exam == b.exam)
+    query = bank(db, user.id).filter(m.Question.status == 'published')
+    if b.exam is not None: query=query.filter(m.Question.exam == b.exam)
     years = {int(y) for y in re.findall(r'\b20\d{2}\b', b.prompt)}
     refs = query.filter(m.Question.source_type == 'pyq', m.Question.year.isnot(None))
     if years: refs = refs.filter(m.Question.year.in_(years))
     papers = [dict(index=i, year=y, shift=s, count=n) for i, (y,s,n) in enumerate(
         refs.with_entities(m.Question.year, m.Question.shift, func.count(m.Question.id))
-        .group_by(m.Question.year, m.Question.shift).order_by(m.Question.year, m.Question.shift).all())]
+        .group_by(m.Question.year, m.Question.shift).order_by(m.Question.year, m.Question.shift).all())] if b.exam is not None else []
     chapters = [dict(id=cid, subject=sub, name=name, slug=slug) for cid,sub,name,slug in query.join(m.Subtopic).join(m.Chapter).join(m.Subject)
                 .with_entities(m.Chapter.id, m.Subject.code, m.Chapter.name, m.Chapter.slug).distinct().order_by(m.Chapter.id).all()]
+    if b.exam is None:
+        from app.services.teacher_direct_request import direct_request
+        # Recognise supplied topics before asking for an exam; no provider call is
+        # needed just to collect required fields, even for a complex request.
+        plan=direct_request(b.prompt.strip(),None,{'papers':[],'chapters':chapters,'paper_defaults':{'require_details':True}})
+        teacher_ai.check_plan_details(plan or teacher_ai.AIPlan(intent='needs_details'),None,strict=True)
+        raise HTTPException(422,'Which exam should I use: JEE Main, JEE Advanced, MHT-CET or BITSAT?')
     # Return the connection to the pool while waiting on the external provider.
     db.rollback()
     plan = plan_for({'papers': papers, 'chapters': chapters, 'paper_defaults': b.defaults})
@@ -317,7 +325,7 @@ class AIPaperDefaults(BaseModel):
 
 
 class AICompleteRequest(BaseModel):
-    prompt: str = Field(min_length=10, max_length=6000)
+    prompt: str = Field(min_length=1, max_length=6000)
     exam: EXAMS | None = None
     strict_details: bool = False
     request_key: str = Field(min_length=36, max_length=36, pattern=r'^[a-fA-F0-9-]{36}$')
@@ -366,7 +374,7 @@ def ai_create(b: AICompleteRequest, user=Depends(t.require_teacher), db=Depends(
     db.query(m.User).filter_by(id=user.id).with_for_update().one()
     previous=existing(lock=True)
     if previous: return completed_ai_paper(previous)
-    settings.update(exam=b.exam,ai_request_key=b.request_key)
+    settings.update(exam=b.exam,ai_request_key=b.request_key,ai_distinct_sets=True)
     p=m.TeacherPaper(teacher_id=user.id,title=title,questions=draft['questions'],settings=settings,
                      finalized=True,version=1,created_at=utcnow(),updated_at=utcnow())
     db.add(p);db.commit()
@@ -523,7 +531,12 @@ def omr_report(questions):
 
 def order_for(p,variant):
     ids=[q['question_id'] for q in p.questions]
-    if variant=='B': random.Random(f'paper-{p.id}').shuffle(ids)
+    if variant=='B':
+        original=ids[:]
+        random.Random(f'paper-{p.id}').shuffle(ids)
+        # New AI papers promise a different order. Preserve existing printed
+        # orders by applying this only to snapshots created with this setting.
+        if p.settings.get('ai_distinct_sets') and len(ids)>1 and ids==original: ids=ids[1:]+ids[:1]
     return ids
 
 def generic_sheet_id(p,variant,layout=2):

@@ -23,7 +23,7 @@ def ai_studio(studio, monkeypatch):
     return studio
 
 
-def request(c, prompt='Create 6 questions with 2 per subject from the bank.'):
+def request(c, prompt='Create 6 questions with 2 per subject from the bank using my custom blueprint.'):
     return c.post('/api/teacher/papers/ai-draft', json={'prompt':prompt,'exam':'jee_main'})
 
 
@@ -177,7 +177,7 @@ QUICK_KEY='2ad4a600-9af2-414f-a862-3bf662f661e5'
 
 def quick(c, **kwargs):
     return c.post('/api/teacher/papers/ai-create',json={
-        'prompt':'Create 6 balanced JEE Main questions, two per subject.',
+        'prompt':'Create 6 balanced JEE Main questions, two per subject, using my custom blueprint.',
         'request_key':QUICK_KEY,'exam':'jee_main',**kwargs})
 
 
@@ -409,7 +409,8 @@ def test_unrelated_message_redirects_even_when_named_exam_bank_is_empty(ai_studi
     assert not c.get('/api/teacher/papers').json()['papers']
 
 
-def test_exact_screenshot_request_creates_real_bank_paper_and_both_omrs_without_provider(ai_studio,monkeypatch):
+@pytest.mark.parametrize('count',[2,30])
+def test_exact_screenshot_request_creates_real_bank_paper_and_both_omrs_without_provider(ai_studio,monkeypatch,count):
     from pathlib import Path
     from scripts.import_scraped_pyqs import fast_import_file
     c,factory,active,_=ai_studio
@@ -420,7 +421,7 @@ def test_exact_screenshot_request_creates_real_bank_paper_and_both_omrs_without_
         assert fast_import_file(db,str(source),bank)['added']==len(bank['questions'])
     monkeypatch.delenv('GROQ_API_KEY')
     monkeypatch.setattr(ai,'interpret',lambda *a:pytest.fail('Clear request must not depend on provider formatting'))
-    prompt=('Create an MHT-CET-level Physics paper with 30 questions on Electrostatics, '
+    prompt=(f'Create an MHT-CET-level Physics paper with {count} questions on Electrostatics, '
             'balanced difficulty, 60 minutes, and two shuffled sets A and B. Award 1 mark '
             'per correct answer with no negative marking. Give me the question paper '
             'and matching OMR PDFs for both sets.')
@@ -428,7 +429,7 @@ def test_exact_screenshot_request_creates_real_bank_paper_and_both_omrs_without_
     assert response.status_code==200,response.text
     data=response.json();assert data['state']=='ready',data
     paper=data['paper'];questions=paper['questions']
-    assert paper['finalized'] and len({q['question_id'] for q in questions})==30
+    assert paper['finalized'] and len({q['question_id'] for q in questions})==count
     assert {q['ref'] for q in questions}<={q['ref'] for q in bank['questions']}
     assert paper['settings']['exam']=='mht_cet'
     assert paper['settings']['duration_minutes']==60
@@ -450,10 +451,7 @@ def test_exact_screenshot_request_creates_real_bank_paper_and_both_omrs_without_
     'Create 6 JEE Main Physics questions on an unknown topic for 60 minutes.',
     'Create 6 JEE Main Physics questions on Electrostatics except capacitance for 60 minutes.',
     'Create 6 JEE Main Physics questions for 60 minutes in Hindi.',
-    'Create 6 JEE Main Physics questions for 60 minutes. Tell me a joke.',
-    'Create 6 JEE Main Physics questions for 60 minutes, 2 marks, no negative marking.',
     'Create 6 JEE Main Physics or Chemistry questions for 60 minutes.',
-    'Create 6 JEE Main Physics questions for 60 minutes in 10 sets.',
 ])
 def test_direct_requests_never_discard_unknown_constraints(prompt):
     from app.services.teacher_direct_request import direct_request

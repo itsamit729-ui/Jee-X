@@ -49,6 +49,8 @@ async function networkRequest(path, { token, method, body, raw = false, timeoutM
           ? detail.map(d => d.msg).join(' ') : 'Something went wrong. Please try again.'
         const error = new Error(message)
         error.status = res.status
+        const retryHeader=res.headers.get('Retry-After')
+        if(retryHeader){const seconds=/^\d+$/.test(retryHeader)?Number(retryHeader):Math.ceil((Date.parse(retryHeader)-Date.now())/1000);if(Number.isFinite(seconds)&&seconds>0)error.retryAfter=Math.min(seconds,86400)}
         throw error
       }
       if (data === null && res.status !== 204) throw new Error('The server returned an invalid response. Please try again.')

@@ -100,7 +100,16 @@ def interpret(prompt, exam, catalog):
     key = os.getenv('GROQ_API_KEY', '').strip()
     if not key or os.getenv('TEACHER_AI_ENABLED', 'true').lower() != 'true':
         raise HTTPException(503, 'AI paper creation is unavailable. Use Generate questions or Choose from bank.')
-    context = json.dumps({'exam': exam, **catalog}, separators=(',', ':'))
+    # The local parser needs slugs and all bank references; the provider usually
+    # needs neither. Avoid spending a full catalog's tokens on a small request.
+    from app.services.teacher_direct_request import teacher_turns, SUBJECTS
+    text=' '.join(teacher_turns(prompt))
+    subjects={code for code,pattern in SUBJECTS.items() if re.search(pattern,text)}
+    reference=bool(re.search(r'\b(year|shift|similar|original|previous)\b|\b20\d{2}\b',text))
+    chapters=[{k:v for k,v in chapter.items() if k!='slug'} for chapter in catalog.get('chapters',[])
+              if not subjects or chapter['subject'] in subjects]
+    compact={**catalog,'chapters':chapters,'papers':catalog.get('papers',[]) if reference else []}
+    context = json.dumps({'exam': exam, **compact}, separators=(',', ':'))
     # Bound spend and latency, including output/reasoning; no automatic paid fallback or retry.
     if len(context) > 20000:
         raise HTTPException(422, 'Please specify a year to narrow the paper catalog, or use the manual builder.')
@@ -117,7 +126,7 @@ def interpret(prompt, exam, catalog):
         response = requests.post('https://api.groq.com/openai/v1/chat/completions',
                                  headers={'Authorization': 'Bearer ' + key}, json=body, timeout=(4, 20))
         if response.status_code == 429:
-            raise HTTPException(429, 'AI capacity is busy. Try again shortly or use the manual builder.', headers={'Retry-After': '60'})
+            raise HTTPException(429, 'The language service is temporarily rate-limited; your question count is not the limit. Your conversation is kept and no paper was created. Standard requests with exam, subjects or chapters, question count and duration can still be processed here without this service.', headers={'Retry-After': '60'})
         if response.status_code != 200:
             code = 'unknown'
             try:
@@ -170,7 +179,12 @@ def check_plan_details(plan, exam, strict=False):
         if plan.duration_minutes is None and 'duration' not in missing: missing.append('duration')
     if missing:
         names={'exam':'exam (JEE Main, JEE Advanced, MHT-CET or BITSAT)','count':'number of questions','scope':'subjects, chapters/topics, full syllabus or a reference shift','duration':'duration in minutes'}
-        raise HTTPException(422, 'Please specify: ' + '; '.join(names[key] for key in dict.fromkeys(missing)) + '.')
+        known=[]
+        if plan.count is not None: known.append(f'{plan.count} questions')
+        if exam: known.append({'mht_cet':'MHT-CET','jee_main':'JEE Main','jee_advanced':'JEE Advanced','bitsat':'BITSAT'}[exam])
+        if plan.duration_minutes is not None: known.append(f'{plan.duration_minutes} minutes')
+        prefix='I have '+', '.join(known)+'. ' if known else ''
+        raise HTTPException(422, prefix+'Please specify: ' + '; '.join(names[key] for key in dict.fromkeys(missing)) + '.')
     if plan.clarification:
         raise HTTPException(422, plan.clarification)
     if plan.intent == 'needs_details':
