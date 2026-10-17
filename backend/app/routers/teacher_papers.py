@@ -20,6 +20,7 @@ from app.auth import utcnow
 from app.routers import teaching as t
 from app.services import mixed_omr, paper_answers
 from app.services.teacher_question_content import presentation
+from app.services.teacher_paper_conversation import PaperConversation
 
 router = APIRouter(prefix='/api/teacher', tags=['teacher papers'])
 EXAMS = Literal['jee_main', 'jee_advanced', 'mht_cet', 'bitsat']
@@ -330,6 +331,7 @@ class AICompleteRequest(BaseModel):
     strict_details: bool = False
     request_key: str = Field(min_length=36, max_length=36, pattern=r'^[a-fA-F0-9-]{36}$')
     defaults: AIPaperDefaults = Field(default_factory=AIPaperDefaults)
+    conversation: PaperConversation | None = None
 
 
 def completed_ai_paper(p):
@@ -346,9 +348,37 @@ def ai_create(b: AICompleteRequest, user=Depends(t.require_teacher), db=Depends(
         return (query.with_for_update() if lock else query).order_by(m.TeacherPaper.id).first()
     previous=existing()
     if previous: return completed_ai_paper(previous)
+    conversation = None
+    def followup(question):
+        result = {'state':'needs_details', 'question':question}
+        if conversation is not None:
+            from app.services.teacher_ai import UNRELATED_MESSAGE
+            if b.strict_details and question != UNRELATED_MESSAGE and 'Please specify:' not in str(question):
+                fields = [('exam','exam'), ('count','number of questions'), ('scope','subjects or chapters'), ('duration','duration in minutes')]
+                missing = [name for key,name in fields if not conversation.slots.get(key) and
+                    not (key=='count' and conversation.slots.get('quotas')) and name not in str(question)]
+                if missing: result['question'] = str(question) + ' Also specify: ' + '; '.join(missing) + '.'
+            conversation.question = str(result['question'])[:2000]
+            result['conversation'] = conversation.model_dump()
+        return result
+    if b.conversation is not None:
+        from app.services.teacher_paper_conversation import advance
+        # Textual state carries no permissions or IDs. Re-resolve every scope
+        # against the authenticated teacher's currently visible published bank.
+        chapters = [dict(id=cid, subject=sub, name=name, slug=slug) for cid,sub,name,slug in
+            bank(db,user.id).filter(m.Question.status=='published').join(m.Subtopic).join(m.Chapter).join(m.Subject)
+            .with_entities(m.Chapter.id,m.Subject.code,m.Chapter.name,m.Chapter.slug).distinct().all()]
+        try:
+            conversation, prompt = advance(b.conversation, b.prompt, chapters)
+        except HTTPException as error:
+            if error.status_code != 422: raise
+            conversation = b.conversation
+            return followup(error.detail)
+        if prompt is None: return followup(conversation.question)
+        b.prompt = prompt
     from app.services.teacher_ai import resolve_request
     requested_exam, question = resolve_request(b.prompt, None if b.strict_details else b.exam)
-    if question: return {'state':'needs_details','question':question}
+    if question: return followup(question)
     b.exam = requested_exam
     settings=b.defaults.model_dump()
     if b.strict_details: settings={'require_details':True}
@@ -357,19 +387,19 @@ def ai_create(b: AICompleteRequest, user=Depends(t.require_teacher), db=Depends(
         draft=ai_draft(AIRequest(prompt=b.prompt,exam=b.exam,defaults=settings),user,db)
     except HTTPException as error:
         if error.status_code==422:
-            return {'state':'needs_details','question':error.detail}
+            return followup(error.detail)
         raise
     if b.strict_details:
         subjects={q['subject'] for q in draft['questions']}
         if b.exam=='mht_cet' and 'MATH' in subjects and len(subjects)>1 and 'marks_correct' not in draft['settings']:
-            return {'state':'needs_details','question':'This builder uses one correct-answer mark value for the whole paper. For mixed MHT-CET subjects, specify that value or request separate Mathematics and Physics/Chemistry papers.'}
+            return followup('This builder uses one correct-answer mark value for the whole paper. For mixed MHT-CET subjects, specify that value or request separate Mathematics and Physics/Chemistry papers.')
         correct,wrong=(2 if subjects=={'MATH'} else 1,0) if b.exam=='mht_cet' else (3,1) if b.exam=='bitsat' else (4,1)
         settings={'marks_correct':correct,'marks_wrong':wrong,'sets_enabled':False,'instructions':''}
     settings.update(draft['settings'])
     title=settings.pop('title', None) or f"{b.exam.replace('_',' ').upper()} - {len(draft['questions'])} questions"
     settings.pop('exam',None)
     if not omr_report(draft['questions'])['eligible']:
-        return {'state':'needs_details','question':'Some matching questions cannot be used on an OMR sheet. Should we use a different topic or paper? Please describe the revised selection.'}
+        return followup('Some matching questions cannot be used on an OMR sheet. Should we use a different topic or paper? Please describe the revised selection.')
     # Serialize only persistence, not the provider call. Replays return the same saved paper.
     db.query(m.User).filter_by(id=user.id).with_for_update().one()
     previous=existing(lock=True)

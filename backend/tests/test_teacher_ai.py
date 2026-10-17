@@ -455,7 +455,13 @@ def test_exact_screenshot_request_creates_real_bank_paper_and_both_omrs_without_
 ])
 def test_direct_requests_never_discard_unknown_constraints(prompt):
     from app.services.teacher_direct_request import direct_request
-    assert direct_request(prompt,'jee_main',{'chapters':[]}) is None
+    from fastapi import HTTPException
+    try:
+        assert direct_request(prompt,'jee_main',{'chapters':[]}) is None
+    except HTTPException as error:
+        # Unknown chapter names now receive a specific local follow-up instead
+        # of being delegated to the provider, which could invent a chapter.
+        assert error.status_code == 422 and 'could not find' in error.detail
 
 
 def test_ai_selection_excludes_missing_question_and_passage_diagrams(ai_studio,monkeypatch,tmp_path):

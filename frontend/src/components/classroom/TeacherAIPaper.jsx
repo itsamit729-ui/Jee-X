@@ -14,6 +14,7 @@ export default function TeacherAIPaper({onCreated, onOpen, onBusy}) {
   const [input,setInput]=useState(''),[messages,setMessages]=useState([]),[result,setResult]=useState(null),[pending,setPending]=useState(null)
   const [busy,setBusy]=useState(false),[error,setError]=useState(''),[pdfs,setPdfs]=useState({}),[downloading,setDownloading]=useState(''),[omrBusy,setOmrBusy]=useState('')
   const [retryWait,setRetryWait]=useState(0)
+  const [conversationState,setConversation]=useState({})
   const waiting=retryWait>0
   useEffect(()=>{if(!waiting)return;const timer=setInterval(()=>setRetryWait(value=>Math.max(0,value-1)),1000);return()=>clearInterval(timer)},[waiting])
   const paper=result?.paper
@@ -46,14 +47,14 @@ export default function TeacherAIPaper({onCreated, onOpen, onBusy}) {
 
   async function submit(retry=false) {
     const turns=retry?pending?.messages:[...messages,{role:'teacher',text:input.trim()}]
-    const request=retry?pending:{messages:turns,key:crypto.randomUUID(),prompt:turns.map(m=>`${m.role}: ${m.text}`).join('\n')}
+    const request=retry?pending:{messages:turns,key:crypto.randomUUID(),prompt:input.trim(),conversation:conversationState}
     if(!request||busy||(retry&&waiting))return
     if(request.prompt.length>6000){setError('This conversation is too long. Start a new request with the complete paper requirements.');return}
     if(!retry){setMessages(turns);setInput('');setPending(request)}
     setBusy(true);onBusy(true);setError('');setRetryWait(0)
     try {
-      const next=await classApi('/teacher/papers/ai-create',{method:'POST',body:{prompt:request.prompt,strict_details:true,request_key:request.key},timeoutMs:40_000})
-      if(next.state==='needs_details'){setMessages([...turns,{role:'assistant',text:next.question}]);setPending(null)}
+      const next=await classApi('/teacher/papers/ai-create',{method:'POST',body:{prompt:request.prompt,conversation:request.conversation,strict_details:true,request_key:request.key},timeoutMs:40_000})
+      if(next.state==='needs_details'){setConversation(next.conversation||request.conversation);setMessages([...turns,{role:'assistant',text:next.question}]);setPending(null)}
       else{setResult(next);setPending(null);onCreated(next.paper)}
     } catch(e){setError(e.message);if(e.status===429)setRetryWait(e.retryAfter||60)}
     finally{setBusy(false);onBusy(false)}
@@ -72,7 +73,7 @@ export default function TeacherAIPaper({onCreated, onOpen, onBusy}) {
     } catch(e){if(currentPaper.current===saved)setError(e.message)}
     finally{if(currentPaper.current===saved){if(omr)setOmrBusy('');else setDownloading('')}}
   }
-  function reset(){setInput('');setMessages([]);setResult(null);setPending(null);setError('');setPdfs({});setDownloading('');setOmrBusy('');setRetryWait(0)}
+  function reset(){setInput('');setMessages([]);setConversation({});setResult(null);setPending(null);setError('');setPdfs({});setDownloading('');setOmrBusy('');setRetryWait(0)}
   function editRequest(){if(!pending)return;setMessages(pending.messages.slice(0,-1));setInput(pending.messages.at(-1).text);setPending(null);setError('');setRetryWait(0);inputRef.current?.focus()}
   const variants=paper?.sets_enabled?['A','B']:['A'],counts={}
   paper?.questions.forEach(q=>{counts[q.subject]=(counts[q.subject]||0)+1})

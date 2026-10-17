@@ -10,6 +10,8 @@ TEN = '(?:' + '|'.join(TENS) + ')'
 NUMBER_WORDS = re.compile(r'\b(?:(?:one|two) hundred(?:[ -]+(?:and[ -]+)?(?:' + TEN + r'(?:[ -]+' + UNIT + r')?|' + UNIT + r'))?|' + TEN + r'(?:[ -]+' + UNIT + r')?|' + UNIT + r')\b')
 
 
+REQUEST_GRAMMAR = set("create generate make build prepare give want need i i'd would like can could you me my us an a b the level pattern paper papers test tests mock mocks with using exam questions question count q mcq mcqs on from of and balanced difficulty easy foundation hard challenging minutes time duration for within shuffled shuffle sets set standard award per correct answer answers no negative marking matching omr pdf pdfs both download downloads please pls full complete entire syllabus in actually change to use now it at about based chapter chapters topic topics covering include including each subject only single multiple choice numerical multi just as well thanks thank let's lets we our there should be have has this that is are total all do questionpaper questionpapers also then ready together same yes ok okay bank available published quick short small practice quiz deduct incorrect deduction .".split())
+
 def normalize(text):
     text = text.lower().replace('−', '-').replace('–', '-').replace('’', "'")
     def number(match):
@@ -19,6 +21,8 @@ def normalize(text):
             if word == 'hundred': value *= 100
             else: value += SMALL.get(word, TENS.get(word, 0))
         return str(value)
+    from app.services.teacher_paper_language import normalize_terms
+    text = normalize_terms(text)
     text = NUMBER_WORDS.sub(number, text)
     text = re.sub(r'(?<=\d)(?=[a-z])', ' ', text)
     replacements = [(r'\b(?:phy|phys)\b', 'physics'), (r'\bchem\b', 'chemistry'),
@@ -59,9 +63,25 @@ def direct_request(prompt, exam, catalog):
     latest = turns[-1] if turns else ''
     # Unrelated turns never consume provider quota, including within an old request.
     if unrelated(latest): return AIPlan(intent='unrelated')
+    if re.search(r'\b(?:neet|upsc)\b', latest):
+        from fastapi import HTTPException
+        raise HTTPException(422, 'This bank supports JEE Main, JEE Advanced, MHT-CET and BITSAT. Which exam should I use?')
     turns = [turn for turn in turns if not unrelated(turn)]
     text = ' '.join(turns)
+    source_pattern = r'\b(?:pyqs?|previous year questions?|original questions?|all sources)\b'
+    sources = list(re.finditer(source_pattern, text))
+    source = 'all' if not sources or sources[-1][0] == 'all sources' else 'original' if sources[-1][0].startswith('original') else 'pyq'
+    reference_pattern = r'\b(?:from|of|in)\s+(?:the\s+)?(20\d{2})(?:\s+papers?)?\b'
+    years = re.findall(reference_pattern, text)
     chapters = catalog.get('chapters', [])
+    from app.services.teacher_paper_language import expand_chapter_aliases, topic_question
+    question = topic_question(latest, chapters)
+    if question:
+        from fastapi import HTTPException
+        raise HTTPException(422, question)
+    turns = [expand_chapter_aliases(turn, chapters) for turn in turns]
+    latest = turns[-1] if turns else ''
+    text = ' '.join(turns)
     has_paper = bool(re.search(r'\b(papers?|tests?|mocks?|questions?|mcqs?|omr)\b', text))
     has_subject = any(re.search(pattern, text) for pattern in SUBJECTS.values())
     has_exam = bool(exam or re.search(r'\b(mht cet|jee main|jee advanced|bitsat)\b', text))
@@ -94,6 +114,7 @@ def direct_request(prompt, exam, catalog):
         for alias in {chapter['name'].lower(), chapter.get('slug', '').replace('-', ' ').replace('_', ' ').lower()}:
             if len(alias) >= 4:
                 cleaned = re.sub(r'\b' + re.escape(alias[:-1] if alias.endswith('s') else alias) + r's?\b', ' ', cleaned)
+    if years: scope = True
 
     # Subject quotas work without a model, including a total derived from "2 each".
     subject_pattern = '(?:physics|chemistry|mathematics|english|logical reasoning)'
@@ -112,7 +133,7 @@ def direct_request(prompt, exam, catalog):
     question_count = (r'\b(\d+)\s*(?:(?:balanced|easy|hard|challenging|foundation)\s+)?'
                       r'(?:(?:jee[ -]*(?:main|advanced)|mht cet|bitsat)(?:[ -]*level)?\s*)?'
                       r'(?:(?:physics|chemistry|mathematics|english|logical reasoning|and|,)\s+)*'
-                      r'(?:questions?|mcqs?)\b')
+                      r'(?:questions?|mcqs?|pyqs?|previous year questions?)\b')
     counts = re.findall(question_count+r'|\b(?:question count|questions|count)\s*[:=]\s*(\d+)\b', count_text)
     counts = [a or b for a, b in counts]
     if re.search(r'(?<!\w)-\s*'+question_count, text) or re.search(question_count.replace(r'(\d+)',r'\d+\.\d+'),text):
@@ -125,6 +146,7 @@ def direct_request(prompt, exam, catalog):
     if duration_value is not None and duration_value != int(duration_value):
         return ask('Please use a whole number of minutes for the duration.')
     duration = int(duration_value) if duration_value is not None else None
+    if re.search(r'(?<!\w)-\s*\d+\s*minutes', latest): return ask('Choose a duration between 1 and 240 minutes.')
     # Only infer a bare number when the preceding question asks for one field.
     replies = re.findall(r'\nassistant:([^\n]+)\nteacher:\s*([^\n]+)', prompt, re.I)
     if replies and re.fullmatch(r'\d+[.! ]*', latest):
@@ -150,7 +172,8 @@ def direct_request(prompt, exam, catalog):
     pair_matches = list(re.finditer(r'\+(\d+)\s*(?:/|,)\s*-(\d+)\b', text))
     pair = [match.groups() for match in pair_matches]
     ambiguous_marking |= 'negative' in text and 'no negative marking' not in text and not pair
-    wrong_values = [(match.start(),0) for match in re.finditer(r'\bno negative marking\b',text)] + [(match.start(),int(match[2])) for match in pair_matches]
+    deductions = list(re.finditer(r'\bdeduct (\d+) for incorrect answers?\b', text))
+    wrong_values = [(match.start(),int(match[1])) for match in deductions] + [(match.start(),0) for match in re.finditer(r'\bno negative marking\b',text)] + [(match.start(),int(match[2])) for match in pair_matches]
     correct_values = [(match.start(),int(match[1])) for match in correct_matches + pair_matches]
     wrong = max(wrong_values)[1] if wrong_values else None
     correct = max(correct_values)[1] if correct_values else None
@@ -173,17 +196,21 @@ def direct_request(prompt, exam, catalog):
                     chapter_ids=[c['id'] for c in chapters if c['id'] in scope_ids and c['subject'] == s], type=question_type)
                     for i, s in enumerate(subjects)]
     plan = AIPlan(intent='paper', scope_specified=scope, count=count, duration_minutes=duration,
-                  chapter_ids=scope_ids, sections=sections, level=level, marks_correct=correct, marks_wrong=wrong, sets_enabled=sets)
+                  chapter_ids=scope_ids, sections=sections, level=level, marks_correct=correct, marks_wrong=wrong, sets_enabled=sets,
+                  source=source, year=int(years[-1]) if years else None, selection='from_paper' if years else 'bank')
 
     # Remove only grammar we can represent; unfamiliar requirements still need AI.
     cleaned = re.sub(marking, ' ', cleaned)
+    cleaned = re.sub(source_pattern, ' ', cleaned)
+    cleaned = re.sub(reference_pattern, ' ', cleaned)
     cleaned = re.sub(r'\+\d+\s*(?:/|,)\s*-\d+\b', ' ', cleaned)
     for pattern in SUBJECTS.values(): cleaned = re.sub(pattern, ' ', cleaned)
     cleaned = re.sub(r'\bmht cet\b|\bbitsat\b|\bjee[ -]*(?:main|adv(?:anced)?)\b', ' ', cleaned)
-    filler = set("create generate make build prepare give want need i i'd would like can could you me my us an a b the level pattern paper papers test tests mock mocks with using exam questions question count q mcq mcqs on from of and balanced difficulty easy foundation hard challenging minutes time duration for within shuffled shuffle sets set standard award per correct answer answers no negative marking matching omr pdf pdfs both download downloads please pls full complete entire syllabus in actually change to use now it at about based chapter chapters topic topics covering include including each subject only single multiple choice numerical multi just as well thanks thank let's lets we our there should be have has this that is are total all do questionpaper questionpapers also then ready together same yes ok okay bank available published quick short small practice quiz .".split())
+    filler = REQUEST_GRAMMAR
     words = re.findall(r'[a-z]+', cleaned)
     unknown = [word for word in words if word not in filler]
-    relational = bool(re.search(r'\b(except|exclude|excluding|without|avoid|not|or|respectively|shift|year|similar|original|previous|taught|unseen|title|named|called|percent|ratio)\b|\bno\s+(?!negative marking\b|sets?\b)|%|\b20\d{2}\b', text))
+    relation_text = re.sub(reference_pattern, ' ', re.sub(source_pattern, ' ', text))
+    relational = bool(re.search(r'\b(except|exclude|excluding|without|avoid|not|or|respectively|shift|year|similar|original|previous|taught|unseen|title|named|called|percent|ratio)\b|\bno\s+(?!negative marking\b|sets?\b)|%|\b20\d{2}\b', relation_text)) or len(set(years)) > 1
     ambiguous = ambiguous_marking or len(question_types) > 1 or len(set(re.findall(r'\b(easy|foundation|balanced|hard|challenging)\b', latest))) > 1
     if unknown or relational or ambiguous:
         # Follow-ups for missing basics are local even when the eventual request
